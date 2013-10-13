@@ -17,374 +17,374 @@ lib_LTLIBRARIES = libcblapack.la
 # BLAS components
 #
 
-ALLBLAS = BLAS/SRC/lsame.o BLAS/SRC/xerbla.o BLAS/SRC/xerbla_array.o
+ALLBLAS = BLAS/SRC/lsame.c BLAS/SRC/xerbla.c BLAS/SRC/xerbla_array.c
 
-BLAS1 = BLAS/SRC/isamax.o BLAS/SRC/sasum.o BLAS/SRC/saxpy.o	\
-	BLAS/SRC/scopy.o BLAS/SRCs/dot.o BLAS/SRC/snrm2.o	\
-	BLAS/SRC/srot.o BLAS/SRC/srotg.o BLAS/SRC/sscal.o	\
-	BLAS/SRC/sswap.o BLAS/SRC/sdsdot.o BLAS/SRC/srotmg.o	\
-	BLAS/SRC/srotm.o BLAS/SRC/scabs1.o BLAS/SRC/scasum.o	\
-	BLAS/SRC/scnrm2.o BLAS/SRC/icamax.o BLAS/SRC/caxpy.o	\
-	BLAS/SRC/ccopy.o BLAS/SRC/cdotc.o BLAS/SRC/cdotu.o	\
-	BLAS/SRC/csscal.o BLAS/SRC/crotg.o BLAS/SRC/cscal.o	\
-	BLAS/SRC/cswap.o BLAS/SRC/csrot.o BLAS/SRC/idamax.o	\
-	BLAS/SRC/dasum.o BLAS/SRC/daxpy.o BLAS/SRC/dcopy.o	\
-	BLAS/SRC/ddot.o BLAS/SRC/dnrm2.o BLAS/SRC/drot.o	\
-	BLAS/SRC/drotg.o BLAS/SRC/dscal.o BLAS/SRC/dsdot.o	\
-	BLAS/SRC/dswap.o BLAS/SRC/drotmg.o BLAS/SRC/drotm.o	\
-	BLAS/SRC/dcabs1.o BLAS/SRC/dzasum.o BLAS/SRC/dznrm2.o	\
-	BLAS/SRC/izamax.o BLAS/SRC/zaxpy.o BLAS/SRC/zcopy.o	\
-	BLAS/SRC/zdotc.o BLAS/SRC/zdotu.o BLAS/SRC/zdscal.o	\
-	BLAS/SRC/zrotg.o BLAS/SRC/zscal.o BLAS/SRC/zswap.o	\
-	BLAS/SRC/zdroto.o BLAS/SRC/isamax.o BLAS/SRC/sasum.o	\
-	BLAS/SRC/saxpy.o BLAS/SRC/scopy.o BLAS/SRC/snrm2.o	\
-	BLAS/SRC/sscal.o BLAS/SRC/idamax.o BLAS/SRC/dasum.o	\
-	BLAS/SRC/daxpy.o BLAS/SRC/dcopy.o BLAS/SRC/dnrm2.o	\
-	BLAS/SRC/dscal.o
+BLAS1 = BLAS/SRC/isamax.c BLAS/SRC/sasum.c BLAS/SRC/saxpy.c	\
+	BLAS/SRC/scopy.c BLAS/SRCs/dot.c BLAS/SRC/snrm2.c	\
+	BLAS/SRC/srot.c BLAS/SRC/srotg.c BLAS/SRC/sscal.c	\
+	BLAS/SRC/sswap.c BLAS/SRC/sdsdot.c BLAS/SRC/srotmg.c	\
+	BLAS/SRC/srotm.c BLAS/SRC/scabs1.c BLAS/SRC/scasum.c	\
+	BLAS/SRC/scnrm2.c BLAS/SRC/icamax.c BLAS/SRC/caxpy.c	\
+	BLAS/SRC/ccopy.c BLAS/SRC/cdotc.c BLAS/SRC/cdotu.c	\
+	BLAS/SRC/csscal.c BLAS/SRC/crotg.c BLAS/SRC/cscal.c	\
+	BLAS/SRC/cswap.c BLAS/SRC/csrot.c BLAS/SRC/idamax.c	\
+	BLAS/SRC/dasum.c BLAS/SRC/daxpy.c BLAS/SRC/dcopy.c	\
+	BLAS/SRC/ddot.c BLAS/SRC/dnrm2.c BLAS/SRC/drot.c	\
+	BLAS/SRC/drotg.c BLAS/SRC/dscal.c BLAS/SRC/dsdot.c	\
+	BLAS/SRC/dswap.c BLAS/SRC/drotmg.c BLAS/SRC/drotm.c	\
+	BLAS/SRC/dcabs1.c BLAS/SRC/dzasum.c BLAS/SRC/dznrm2.c	\
+	BLAS/SRC/izamax.c BLAS/SRC/zaxpy.c BLAS/SRC/zcopy.c	\
+	BLAS/SRC/zdotc.c BLAS/SRC/zdotu.c BLAS/SRC/zdscal.c	\
+	BLAS/SRC/zrotg.c BLAS/SRC/zscal.c BLAS/SRC/zswap.c	\
+	BLAS/SRC/zdroto.c BLAS/SRC/isamax.c BLAS/SRC/sasum.c	\
+	BLAS/SRC/saxpy.c BLAS/SRC/scopy.c BLAS/SRC/snrm2.c	\
+	BLAS/SRC/sscal.c BLAS/SRC/idamax.c BLAS/SRC/dasum.c	\
+	BLAS/SRC/daxpy.c BLAS/SRC/dcopy.c BLAS/SRC/dnrm2.c	\
+	BLAS/SRC/dscal.c
 
-BLAS2 = BLAS/SRC/sgemv.o BLAS/SRC/sgbmv.o BLAS/SRC/ssymv.o		\
-	BLAS/SRC/ssbmv.o BLAS/SRC/sspmv.o BLAS/SRC/strmv.o		\
-	BLAS/SRC/stbmv.o BLAS/SRC/stpmv.o BLAS/SRC/strsv.o		\
-	BLAS/SRC/stbsv.o BLAS/SRC/stpsv.o BLAS/SRC/sger.o		\
-	BLAS/SRC/ssyr.o BLAS/SRC/sspr.o BLAS/SRC/ssyr2.o		\
-	BLAS/SRC/sspr2.o BLAS/SRC/cgemv.o BLAS/SRC/cgbmv.o		\
-	BLAS/SRC/chemv.o BLAS/SRC/chbmv.o BLAS/SRC/chpmv.o		\
-	BLAS/SRC/ctrmv.o BLAS/SRC/ctbmv.o BLAS/SRC/ctpmv.o		\
-	BLAS/SRC/ctrsv.o BLAS/SRC/ctbsv.o BLAS/SRC/ctpsv.o		\
-	BLAS/SRC/cgerc.o BLAS/SRC/cgeru.o BLAS/SRC/cher.o		\
-	BLAS/SRC/chpr.o BLAS/SRC/cher2.o BLAS/SRC/chpr2.o		\
-	BLAS/SRC/dgemv.o BLAS/SRC/dgbmv.o BLAS/SRC/dsymv.o		\
-	BLAS/SRC/dsbmv.o BLAS/SRC/dspmv.o BLAS/SRC/dtrmv.o		\
-	BLAS/SRC/dtbmv.o BLAS/SRC/dtpmv.o BLAS/SRC/dtrsv.o		\
-	BLAS/SRC/dtbsv.o BLAS/SRC/dtpsv.o BLAS/SRC/dger.o		\
-	BLAS/SRC/dsyr.o BLAS/SRC/dspr.o BLAS/SRC/dsyr2.o		\
-	BLAS/SRC/dspr2.o BLAS/SRC/zgemv.o BLAS/SRC/zgbmv.o		\
-	BLAS/SRC/zhemv.o BLAS/SRC/zhbmv.o BLAS/SRC/zhpmv.o		\
-	BLAS/SRC/ztrmv.o BLAS/SRC/ztbmv.o BLAS/SRC/ztpmv.o		\
-	BLAS/SRC/ztrsv.o BLAS/SRC/ztbsv.o BLAS/SRC/ztpsv.o		\
-	BLAS/SRC/zgerc.o BLAS/SRC/zgeru.o BLAS/SRC/zher.o		\
-	BLAS/SRC/zhpr.o BLAS/SRC/zher2.o BLAS/SRC/zhpr2.o
+BLAS2 = BLAS/SRC/sgemv.c BLAS/SRC/sgbmv.c BLAS/SRC/ssymv.c		\
+	BLAS/SRC/ssbmv.c BLAS/SRC/sspmv.c BLAS/SRC/strmv.c		\
+	BLAS/SRC/stbmv.c BLAS/SRC/stpmv.c BLAS/SRC/strsv.c		\
+	BLAS/SRC/stbsv.c BLAS/SRC/stpsv.c BLAS/SRC/sger.c		\
+	BLAS/SRC/ssyr.c BLAS/SRC/sspr.c BLAS/SRC/ssyr2.c		\
+	BLAS/SRC/sspr2.c BLAS/SRC/cgemv.c BLAS/SRC/cgbmv.c		\
+	BLAS/SRC/chemv.c BLAS/SRC/chbmv.c BLAS/SRC/chpmv.c		\
+	BLAS/SRC/ctrmv.c BLAS/SRC/ctbmv.c BLAS/SRC/ctpmv.c		\
+	BLAS/SRC/ctrsv.c BLAS/SRC/ctbsv.c BLAS/SRC/ctpsv.c		\
+	BLAS/SRC/cgerc.c BLAS/SRC/cgeru.c BLAS/SRC/cher.c		\
+	BLAS/SRC/chpr.c BLAS/SRC/cher2.c BLAS/SRC/chpr2.c		\
+	BLAS/SRC/dgemv.c BLAS/SRC/dgbmv.c BLAS/SRC/dsymv.c		\
+	BLAS/SRC/dsbmv.c BLAS/SRC/dspmv.c BLAS/SRC/dtrmv.c		\
+	BLAS/SRC/dtbmv.c BLAS/SRC/dtpmv.c BLAS/SRC/dtrsv.c		\
+	BLAS/SRC/dtbsv.c BLAS/SRC/dtpsv.c BLAS/SRC/dger.c		\
+	BLAS/SRC/dsyr.c BLAS/SRC/dspr.c BLAS/SRC/dsyr2.c		\
+	BLAS/SRC/dspr2.c BLAS/SRC/zgemv.c BLAS/SRC/zgbmv.c		\
+	BLAS/SRC/zhemv.c BLAS/SRC/zhbmv.c BLAS/SRC/zhpmv.c		\
+	BLAS/SRC/ztrmv.c BLAS/SRC/ztbmv.c BLAS/SRC/ztpmv.c		\
+	BLAS/SRC/ztrsv.c BLAS/SRC/ztbsv.c BLAS/SRC/ztpsv.c		\
+	BLAS/SRC/zgerc.c BLAS/SRC/zgeru.c BLAS/SRC/zher.c		\
+	BLAS/SRC/zhpr.c BLAS/SRC/zher2.c BLAS/SRC/zhpr2.c
 
-BLAS3 = BLAS/SRC/sgemm.o BLAS/SRC/ssymm.o BLAS/SRC/ssyrk.o	\
-	BLAS/SRC/ssyr2k.o BLAS/SRC/strmm.o BLAS/SRC/strsm.o	\
-	BLAS/SRC/cgemm.o BLAS/SRC/csymm.o BLAS/SRC/csyrk.o	\
-	BLAS/SRC/csyr2k.o BLAS/SRC/ctrmm.o BLAS/SRC/ctrsm.o	\
-	BLAS/SRC/chemm.o BLAS/SRC/cherk.o BLAS/SRC/cher2k.o	\
-	BLAS/SRC/dgemm.o BLAS/SRC/dsymm.o BLAS/SRC/dsyrk.o	\
-	BLAS/SRC/dsyr2k.o BLAS/SRC/dtrmm.o BLAS/SRC/dtrsm.o	\
-	BLAS/SRC/zgemm.o BLAS/SRC/zsymm.o BLAS/SRC/zsyrk.o	\
-	BLAS/SRC/zsyr2k.o BLAS/SRC/ztrmm.o BLAS/SRC/ztrsm.o	\
-	BLAS/SRC/zhemm.o BLAS/SRC/zherk.o BLAS/SRC/zher2k.o
+BLAS3 = BLAS/SRC/sgemm.c BLAS/SRC/ssymm.c BLAS/SRC/ssyrk.c	\
+	BLAS/SRC/ssyr2k.c BLAS/SRC/strmm.c BLAS/SRC/strsm.c	\
+	BLAS/SRC/cgemm.c BLAS/SRC/csymm.c BLAS/SRC/csyrk.c	\
+	BLAS/SRC/csyr2k.c BLAS/SRC/ctrmm.c BLAS/SRC/ctrsm.c	\
+	BLAS/SRC/chemm.c BLAS/SRC/cherk.c BLAS/SRC/cher2k.c	\
+	BLAS/SRC/dgemm.c BLAS/SRC/dsymm.c BLAS/SRC/dsyrk.c	\
+	BLAS/SRC/dsyr2k.c BLAS/SRC/dtrmm.c BLAS/SRC/dtrsm.c	\
+	BLAS/SRC/zgemm.c BLAS/SRC/zsymm.c BLAS/SRC/zsyrk.c	\
+	BLAS/SRC/zsyr2k.c BLAS/SRC/ztrmm.c BLAS/SRC/ztrsm.c	\
+	BLAS/SRC/zhemm.c BLAS/SRC/zherk.c BLAS/SRC/zher2k.c
 
 BLAS = $(ALLBLAS) $(BLAS1) $(BLAS2) $(BLAS3)
 
 #
 # LAPACK component
 #
-ALLAUX = SRC/maxloc.o SRC/ilaenv.o SRC/ieeeck.o SRC/lsamen.o	\
-    SRC/xerbla.o xerbla_array.o SRC/iparmq.o SRC/ilaprec.o	\
-    SRC/ilatrans.o SRC/ilauplo.o SRC/iladiag.o chla_transtype.o	\
-    ../INSTALL/ilaver.o ../INSTALL/lsame.o
+ALLAUX = SRC/maxloc.c SRC/ilaenv.c SRC/ieeeck.c SRC/lsamen.c	\
+    SRC/xerbla.c xerbla_array.c SRC/iparmq.c SRC/ilaprec.c	\
+    SRC/ilatrans.c SRC/ilauplo.c SRC/iladiag.c chla_transtype.c	\
+    ../INSTALL/ilaver.c ../INSTALL/lsame.c
 
 ALLXAUX =
 
-SCLAUX = SRC/sbdsdc.o SRC/sbdsqr.o SRC/sdisna.o SRC/slabad.o		\
-   SRC/slacpy.o SRC/sladiv.o SRC/slae2.o SRC/slaebz.o SRC/slaed0.o	\
-   SRC/slaed1.o SRC/slaed2.o SRC/slaed3.o SRC/slaed4.o SRC/slaed5.o	\
-   SRC/slaed6.o SRC/slaed7.o SRC/slaed8.o SRC/slaed9.o SRC/slaeda.o	\
-   SRC/slaev2.o SRC/slagtf.o SRC/slagts.o SRC/slamrg.o SRC/slanst.o	\
-   SRC/slapy2.o SRC/slapy3.o SRC/slarnv.o SRC/slarra.o SRC/slarrb.o	\
-   SRC/slarrc.o SRC/slarrd.o SRC/slarre.o SRC/slarrf.o SRC/slarrj.o	\
-   SRC/slarrk.o SRC/slarrr.o SRC/slaneg.o SRC/slartg.o SRC/slaruv.o	\
-   SRC/slas2.o SRC/slascl.o SRC/slasd0.o SRC/slasd1.o SRC/slasd2.o	\
-   SRC/slasd3.o SRC/slasd4.o SRC/slasd5.o SRC/slasd6.o SRC/slasd7.o	\
-   SRC/slasd8.o SRC/slasda.o SRC/slasdq.o SRC/slasdt.o SRC/slaset.o	\
-   SRC/slasq1.o SRC/slasq2.o SRC/slasq3.o SRC/slasq4.o SRC/slasq5.o	\
-   SRC/slasq6.o SRC/slasr.o SRC/slasrt.o SRC/slassq.o SRC/slasv2.o	\
-   SRC/spttrf.o SRC/sstebz.o SRC/sstedc.o SRC/ssteqr.o SRC/ssterf.o	\
-   SRC/slaisnan.o SRC/sisnan.o ../INSTALL/slamch.o ../INSTALL/second.o
+SCLAUX = SRC/sbdsdc.c SRC/sbdsqr.c SRC/sdisna.c SRC/slabad.c		\
+   SRC/slacpy.c SRC/sladiv.c SRC/slae2.c SRC/slaebz.c SRC/slaed0.c	\
+   SRC/slaed1.c SRC/slaed2.c SRC/slaed3.c SRC/slaed4.c SRC/slaed5.c	\
+   SRC/slaed6.c SRC/slaed7.c SRC/slaed8.c SRC/slaed9.c SRC/slaeda.c	\
+   SRC/slaev2.c SRC/slagtf.c SRC/slagts.c SRC/slamrg.c SRC/slanst.c	\
+   SRC/slapy2.c SRC/slapy3.c SRC/slarnv.c SRC/slarra.c SRC/slarrb.c	\
+   SRC/slarrc.c SRC/slarrd.c SRC/slarre.c SRC/slarrf.c SRC/slarrj.c	\
+   SRC/slarrk.c SRC/slarrr.c SRC/slaneg.c SRC/slartg.c SRC/slaruv.c	\
+   SRC/slas2.c SRC/slascl.c SRC/slasd0.c SRC/slasd1.c SRC/slasd2.c	\
+   SRC/slasd3.c SRC/slasd4.c SRC/slasd5.c SRC/slasd6.c SRC/slasd7.c	\
+   SRC/slasd8.c SRC/slasda.c SRC/slasdq.c SRC/slasdt.c SRC/slaset.c	\
+   SRC/slasq1.c SRC/slasq2.c SRC/slasq3.c SRC/slasq4.c SRC/slasq5.c	\
+   SRC/slasq6.c SRC/slasr.c SRC/slasrt.c SRC/slassq.c SRC/slasv2.c	\
+   SRC/spttrf.c SRC/sstebz.c SRC/sstedc.c SRC/ssteqr.c SRC/ssterf.c	\
+   SRC/slaisnan.c SRC/sisnan.c ../INSTALL/slamch.c ../INSTALL/second.c
 
-DZLAUX = SRC/dbdsdc.o SRC/dbdsqr.o SRC/ddisna.o SRC/dlabad.o		\
-   SRC/dlacpy.o SRC/dladiv.o SRC/dlae2.o SRC/dlaebz.o SRC/dlaed0.o	\
-   SRC/dlaed1.o SRC/dlaed2.o SRC/dlaed3.o SRC/dlaed4.o SRC/dlaed5.o	\
-   SRC/dlaed6.o SRC/dlaed7.o SRC/dlaed8.o SRC/dlaed9.o SRC/dlaeda.o	\
-   SRC/dlaev2.o SRC/dlagtf.o SRC/dlagts.o SRC/dlamrg.o SRC/dlanst.o	\
-   SRC/dlapy2.o SRC/dlapy3.o SRC/dlarnv.o SRC/dlarra.o SRC/dlarrb.o	\
-   SRC/dlarrc.o SRC/dlarrd.o SRC/dlarre.o SRC/dlarrf.o SRC/dlarrj.o	\
-   SRC/dlarrk.o SRC/dlarrr.o SRC/dlaneg.o SRC/dlartg.o SRC/dlaruv.o	\
-   SRC/dlas2.o SRC/dlascl.o SRC/dlasd0.o SRC/dlasd1.o SRC/dlasd2.o	\
-   SRC/dlasd3.o SRC/dlasd4.o SRC/dlasd5.o SRC/dlasd6.o SRC/dlasd7.o	\
-   SRC/dlasd8.o SRC/dlasda.o SRC/dlasdq.o SRC/dlasdt.o SRC/dlaset.o	\
-   SRC/dlasq1.o SRC/dlasq2.o SRC/dlasq3.o SRC/dlasq4.o SRC/dlasq5.o	\
-   SRC/dlasq6.o SRC/dlasr.o SRC/dlasrt.o SRC/dlassq.o SRC/dlasv2.o	\
-   SRC/dpttrf.o SRC/dstebz.o SRC/dstedc.o SRC/dsteqr.o SRC/dsterf.o	\
-   SRC/dlaisnan.o SRC/disnan.o ../INSTALL/dlamch.o ../INSTALL/dsecnd.o
+DZLAUX = SRC/dbdsdc.c SRC/dbdsqr.c SRC/ddisna.c SRC/dlabad.c		\
+   SRC/dlacpy.c SRC/dladiv.c SRC/dlae2.c SRC/dlaebz.c SRC/dlaed0.c	\
+   SRC/dlaed1.c SRC/dlaed2.c SRC/dlaed3.c SRC/dlaed4.c SRC/dlaed5.c	\
+   SRC/dlaed6.c SRC/dlaed7.c SRC/dlaed8.c SRC/dlaed9.c SRC/dlaeda.c	\
+   SRC/dlaev2.c SRC/dlagtf.c SRC/dlagts.c SRC/dlamrg.c SRC/dlanst.c	\
+   SRC/dlapy2.c SRC/dlapy3.c SRC/dlarnv.c SRC/dlarra.c SRC/dlarrb.c	\
+   SRC/dlarrc.c SRC/dlarrd.c SRC/dlarre.c SRC/dlarrf.c SRC/dlarrj.c	\
+   SRC/dlarrk.c SRC/dlarrr.c SRC/dlaneg.c SRC/dlartg.c SRC/dlaruv.c	\
+   SRC/dlas2.c SRC/dlascl.c SRC/dlasd0.c SRC/dlasd1.c SRC/dlasd2.c	\
+   SRC/dlasd3.c SRC/dlasd4.c SRC/dlasd5.c SRC/dlasd6.c SRC/dlasd7.c	\
+   SRC/dlasd8.c SRC/dlasda.c SRC/dlasdq.c SRC/dlasdt.c SRC/dlaset.c	\
+   SRC/dlasq1.c SRC/dlasq2.c SRC/dlasq3.c SRC/dlasq4.c SRC/dlasq5.c	\
+   SRC/dlasq6.c SRC/dlasr.c SRC/dlasrt.c SRC/dlassq.c SRC/dlasv2.c	\
+   SRC/dpttrf.c SRC/dstebz.c SRC/dstedc.c SRC/dsteqr.c SRC/dsterf.c	\
+   SRC/dlaisnan.c SRC/disnan.c ../INSTALL/dlamch.c ../INSTALL/dsecnd.c
 
-SLASRC = SRC/sgbbrd.o SRC/sgbcon.o SRC/sgbequ.o SRC/sgbrfs.o		\
-   SRC/sgbsv.o SRC/sgbsvx.o SRC/sgbtf2.o SRC/sgbtrf.o SRC/sgbtrs.o	\
-   SRC/sgebak.o SRC/sgebal.o SRC/sgebd2.o SRC/sgebrd.o SRC/sgecon.o	\
-   SRC/sgeequ.o SRC/sgees.o SRC/sgeesx.o SRC/sgeev.o SRC/sgeevx.o	\
-   SRC/sgegs.o SRC/sgegv.o SRC/sgehd2.o SRC/sgehrd.o SRC/sgelq2.o	\
-   SRC/sgelqf.o SRC/sgels.o SRC/sgelsd.o SRC/sgelss.o SRC/sgelsx.o	\
-   SRC/sgelsy.o SRC/sgeql2.o SRC/sgeqlf.o SRC/sgeqp3.o SRC/sgeqpf.o	\
-   SRC/sgeqr2.o SRC/sgeqrf.o SRC/sgerfs.o SRC/sgerq2.o SRC/sgerqf.o	\
-   SRC/sgesc2.o SRC/sgesdd.o SRC/sgesv.o SRC/sgesvd.o SRC/sgesvx.o	\
-   SRC/sgetc2.o SRC/sgetf2.o SRC/sgetrf.o SRC/sgetri.o SRC/sgetrs.o	\
-   SRC/sggbak.o SRC/sggbal.o SRC/sgges.o SRC/sggesx.o SRC/sggev.o	\
-   SRC/sggevx.o SRC/sggglm.o SRC/sgghrd.o SRC/sgglse.o SRC/sggqrf.o	\
-   SRC/sggrqf.o SRC/sggsvd.o SRC/sggsvp.o SRC/sgtcon.o SRC/sgtrfs.o	\
-   SRC/sgtsv.o SRC/sgtsvx.o SRC/sgttrf.o SRC/sgttrs.o SRC/sgtts2.o	\
-   SRC/shgeqz.o SRC/shsein.o SRC/shseqr.o SRC/slabrd.o SRC/slacon.o	\
-   SRC/slacn2.o SRC/slaein.o SRC/slaexc.o SRC/slag2.o SRC/slags2.o	\
-   SRC/slagtm.o SRC/slagv2.o SRC/slahqr.o SRC/slahrd.o SRC/slahr2.o	\
-   SRC/slaic1.o SRC/slaln2.o SRC/slals0.o SRC/slalsa.o SRC/slalsd.o	\
-   SRC/slangb.o SRC/slange.o SRC/slangt.o SRC/slanhs.o SRC/slansb.o	\
-   SRC/slansp.o SRC/slansy.o SRC/slantb.o SRC/slantp.o SRC/slantr.o	\
-   SRC/slanv2.o SRC/slapll.o SRC/slapmt.o SRC/slaqgb.o SRC/slaqge.o	\
-   SRC/slaqp2.o SRC/slaqps.o SRC/slaqsb.o SRC/slaqsp.o SRC/slaqsy.o	\
-   SRC/slaqr0.o SRC/slaqr1.o SRC/slaqr2.o SRC/slaqr3.o SRC/slaqr4.o	\
-   SRC/slaqr5.o SRC/slaqtr.o SRC/slar1v.o SRC/slar2v.o SRC/ilaslr.o	\
-   SRC/ilaslc.o SRC/slarf.o SRC/slarfb.o SRC/slarfg.o SRC/slarft.o	\
-   SRC/slarfx.o SRC/slargv.o SRC/slarrv.o SRC/slartv.o SRC/slarfp.o	\
-   SRC/slarz.o SRC/slarzb.o SRC/slarzt.o SRC/slaswp.o SRC/slasy2.o	\
-   SRC/slasyf.o SRC/slatbs.o SRC/slatdf.o SRC/slatps.o SRC/slatrd.o	\
-   SRC/slatrs.o SRC/slatrz.o SRC/slatzm.o SRC/slauu2.o SRC/slauum.o	\
-   SRC/sopgtr.o SRC/sopmtr.o SRC/sorg2l.o SRC/sorg2r.o SRC/sorgbr.o	\
-   SRC/sorghr.o SRC/sorgl2.o SRC/sorglq.o SRC/sorgql.o SRC/sorgqr.o	\
-   SRC/sorgr2.o SRC/sorgrq.o SRC/sorgtr.o SRC/sorm2l.o SRC/sorm2r.o	\
-   SRC/sormbr.o SRC/sormhr.o SRC/sorml2.o SRC/sormlq.o SRC/sormql.o	\
-   SRC/sormqr.o SRC/sormr2.o SRC/sormr3.o SRC/sormrq.o SRC/sormrz.o	\
-   SRC/sormtr.o SRC/spbcon.o SRC/spbequ.o SRC/spbrfs.o SRC/spbstf.o	\
-   SRC/spbsv.o SRC/spbsvx.o SRC/spbtf2.o SRC/spbtrf.o SRC/spbtrs.o	\
-   SRC/spocon.o SRC/spoequ.o SRC/sporfs.o SRC/sposv.o SRC/sposvx.o	\
-   SRC/spotf2.o SRC/spotrf.o SRC/spotri.o SRC/spotrs.o SRC/spstrf.o	\
-   SRC/spstf2.o SRC/sppcon.o SRC/sppequ.o SRC/spprfs.o SRC/sppsv.o	\
-   SRC/sppsvx.o SRC/spptrf.o SRC/spptri.o SRC/spptrs.o SRC/sptcon.o	\
-   SRC/spteqr.o SRC/sptrfs.o SRC/sptsv.o SRC/sptsvx.o SRC/spttrs.o	\
-   SRC/sptts2.o SRC/srscl.o SRC/ssbev.o SRC/ssbevd.o SRC/ssbevx.o	\
-   SRC/ssbgst.o SRC/ssbgv.o SRC/ssbgvd.o SRC/ssbgvx.o SRC/ssbtrd.o	\
-   SRC/sspcon.o SRC/sspev.o SRC/sspevd.o SRC/sspevx.o SRC/sspgst.o	\
-   SRC/sspgv.o SRC/sspgvd.o SRC/sspgvx.o SRC/ssprfs.o SRC/sspsv.o	\
-   SRC/sspsvx.o SRC/ssptrd.o SRC/ssptrf.o SRC/ssptri.o SRC/ssptrs.o	\
-   SRC/sstegr.o SRC/sstein.o SRC/sstev.o SRC/sstevd.o SRC/sstevr.o	\
-   SRC/sstevx.o SRC/ssycon.o SRC/ssyev.o SRC/ssyevd.o SRC/ssyevr.o	\
-   SRC/ssyevx.o SRC/ssygs2.o SRC/ssygst.o SRC/ssygv.o SRC/ssygvd.o	\
-   SRC/ssygvx.o SRC/ssyrfs.o SRC/ssysv.o SRC/ssysvx.o SRC/ssytd2.o	\
-   SRC/ssytf2.o SRC/ssytrd.o SRC/ssytrf.o SRC/ssytri.o SRC/ssytrs.o	\
-   SRC/stbcon.o SRC/stbrfs.o SRC/stbtrs.o SRC/stgevc.o SRC/stgex2.o	\
-   SRC/stgexc.o SRC/stgsen.o SRC/stgsja.o SRC/stgsna.o SRC/stgsy2.o	\
-   SRC/stgsyl.o SRC/stpcon.o SRC/stprfs.o SRC/stptri.o SRC/stptrs.o	\
-   SRC/strcon.o SRC/strevc.o SRC/strexc.o SRC/strrfs.o SRC/strsen.o	\
-   SRC/strsna.o SRC/strsyl.o SRC/strti2.o SRC/strtri.o SRC/strtrs.o	\
-   SRC/stzrqf.o SRC/stzrzf.o SRC/sstemr.o SRC/slansf.o SRC/spftrf.o	\
-   SRC/spftri.o SRC/spftrs.o SRC/ssfrk.o SRC/stfsm.o SRC/stftri.o	\
-   SRC/stfttp.o SRC/stfttr.o SRC/stpttf.o SRC/stpttr.o SRC/strttf.o	\
-   SRC/strttp.o SRC/sgejsv.o SRC/sgesvj.o SRC/sgsvj0.o SRC/sgsvj1.o	\
-   SRC/sgeequb.o SRC/ssyequb.o SRC/spoequb.o SRC/sgbequb.o
+SLASRC = SRC/sgbbrd.c SRC/sgbcon.c SRC/sgbequ.c SRC/sgbrfs.c		\
+   SRC/sgbsv.c SRC/sgbsvx.c SRC/sgbtf2.c SRC/sgbtrf.c SRC/sgbtrs.c	\
+   SRC/sgebak.c SRC/sgebal.c SRC/sgebd2.c SRC/sgebrd.c SRC/sgecon.c	\
+   SRC/sgeequ.c SRC/sgees.c SRC/sgeesx.c SRC/sgeev.c SRC/sgeevx.c	\
+   SRC/sgegs.c SRC/sgegv.c SRC/sgehd2.c SRC/sgehrd.c SRC/sgelq2.c	\
+   SRC/sgelqf.c SRC/sgels.c SRC/sgelsd.c SRC/sgelss.c SRC/sgelsx.c	\
+   SRC/sgelsy.c SRC/sgeql2.c SRC/sgeqlf.c SRC/sgeqp3.c SRC/sgeqpf.c	\
+   SRC/sgeqr2.c SRC/sgeqrf.c SRC/sgerfs.c SRC/sgerq2.c SRC/sgerqf.c	\
+   SRC/sgesc2.c SRC/sgesdd.c SRC/sgesv.c SRC/sgesvd.c SRC/sgesvx.c	\
+   SRC/sgetc2.c SRC/sgetf2.c SRC/sgetrf.c SRC/sgetri.c SRC/sgetrs.c	\
+   SRC/sggbak.c SRC/sggbal.c SRC/sgges.c SRC/sggesx.c SRC/sggev.c	\
+   SRC/sggevx.c SRC/sggglm.c SRC/sgghrd.c SRC/sgglse.c SRC/sggqrf.c	\
+   SRC/sggrqf.c SRC/sggsvd.c SRC/sggsvp.c SRC/sgtcon.c SRC/sgtrfs.c	\
+   SRC/sgtsv.c SRC/sgtsvx.c SRC/sgttrf.c SRC/sgttrs.c SRC/sgtts2.c	\
+   SRC/shgeqz.c SRC/shsein.c SRC/shseqr.c SRC/slabrd.c SRC/slacon.c	\
+   SRC/slacn2.c SRC/slaein.c SRC/slaexc.c SRC/slag2.c SRC/slags2.c	\
+   SRC/slagtm.c SRC/slagv2.c SRC/slahqr.c SRC/slahrd.c SRC/slahr2.c	\
+   SRC/slaic1.c SRC/slaln2.c SRC/slals0.c SRC/slalsa.c SRC/slalsd.c	\
+   SRC/slangb.c SRC/slange.c SRC/slangt.c SRC/slanhs.c SRC/slansb.c	\
+   SRC/slansp.c SRC/slansy.c SRC/slantb.c SRC/slantp.c SRC/slantr.c	\
+   SRC/slanv2.c SRC/slapll.c SRC/slapmt.c SRC/slaqgb.c SRC/slaqge.c	\
+   SRC/slaqp2.c SRC/slaqps.c SRC/slaqsb.c SRC/slaqsp.c SRC/slaqsy.c	\
+   SRC/slaqr0.c SRC/slaqr1.c SRC/slaqr2.c SRC/slaqr3.c SRC/slaqr4.c	\
+   SRC/slaqr5.c SRC/slaqtr.c SRC/slar1v.c SRC/slar2v.c SRC/ilaslr.c	\
+   SRC/ilaslc.c SRC/slarf.c SRC/slarfb.c SRC/slarfg.c SRC/slarft.c	\
+   SRC/slarfx.c SRC/slargv.c SRC/slarrv.c SRC/slartv.c SRC/slarfp.c	\
+   SRC/slarz.c SRC/slarzb.c SRC/slarzt.c SRC/slaswp.c SRC/slasy2.c	\
+   SRC/slasyf.c SRC/slatbs.c SRC/slatdf.c SRC/slatps.c SRC/slatrd.c	\
+   SRC/slatrs.c SRC/slatrz.c SRC/slatzm.c SRC/slauu2.c SRC/slauum.c	\
+   SRC/sopgtr.c SRC/sopmtr.c SRC/sorg2l.c SRC/sorg2r.c SRC/sorgbr.c	\
+   SRC/sorghr.c SRC/sorgl2.c SRC/sorglq.c SRC/sorgql.c SRC/sorgqr.c	\
+   SRC/sorgr2.c SRC/sorgrq.c SRC/sorgtr.c SRC/sorm2l.c SRC/sorm2r.c	\
+   SRC/sormbr.c SRC/sormhr.c SRC/sorml2.c SRC/sormlq.c SRC/sormql.c	\
+   SRC/sormqr.c SRC/sormr2.c SRC/sormr3.c SRC/sormrq.c SRC/sormrz.c	\
+   SRC/sormtr.c SRC/spbcon.c SRC/spbequ.c SRC/spbrfs.c SRC/spbstf.c	\
+   SRC/spbsv.c SRC/spbsvx.c SRC/spbtf2.c SRC/spbtrf.c SRC/spbtrs.c	\
+   SRC/spocon.c SRC/spoequ.c SRC/sporfs.c SRC/sposv.c SRC/sposvx.c	\
+   SRC/spotf2.c SRC/spotrf.c SRC/spotri.c SRC/spotrs.c SRC/spstrf.c	\
+   SRC/spstf2.c SRC/sppcon.c SRC/sppequ.c SRC/spprfs.c SRC/sppsv.c	\
+   SRC/sppsvx.c SRC/spptrf.c SRC/spptri.c SRC/spptrs.c SRC/sptcon.c	\
+   SRC/spteqr.c SRC/sptrfs.c SRC/sptsv.c SRC/sptsvx.c SRC/spttrs.c	\
+   SRC/sptts2.c SRC/srscl.c SRC/ssbev.c SRC/ssbevd.c SRC/ssbevx.c	\
+   SRC/ssbgst.c SRC/ssbgv.c SRC/ssbgvd.c SRC/ssbgvx.c SRC/ssbtrd.c	\
+   SRC/sspcon.c SRC/sspev.c SRC/sspevd.c SRC/sspevx.c SRC/sspgst.c	\
+   SRC/sspgv.c SRC/sspgvd.c SRC/sspgvx.c SRC/ssprfs.c SRC/sspsv.c	\
+   SRC/sspsvx.c SRC/ssptrd.c SRC/ssptrf.c SRC/ssptri.c SRC/ssptrs.c	\
+   SRC/sstegr.c SRC/sstein.c SRC/sstev.c SRC/sstevd.c SRC/sstevr.c	\
+   SRC/sstevx.c SRC/ssycon.c SRC/ssyev.c SRC/ssyevd.c SRC/ssyevr.c	\
+   SRC/ssyevx.c SRC/ssygs2.c SRC/ssygst.c SRC/ssygv.c SRC/ssygvd.c	\
+   SRC/ssygvx.c SRC/ssyrfs.c SRC/ssysv.c SRC/ssysvx.c SRC/ssytd2.c	\
+   SRC/ssytf2.c SRC/ssytrd.c SRC/ssytrf.c SRC/ssytri.c SRC/ssytrs.c	\
+   SRC/stbcon.c SRC/stbrfs.c SRC/stbtrs.c SRC/stgevc.c SRC/stgex2.c	\
+   SRC/stgexc.c SRC/stgsen.c SRC/stgsja.c SRC/stgsna.c SRC/stgsy2.c	\
+   SRC/stgsyl.c SRC/stpcon.c SRC/stprfs.c SRC/stptri.c SRC/stptrs.c	\
+   SRC/strcon.c SRC/strevc.c SRC/strexc.c SRC/strrfs.c SRC/strsen.c	\
+   SRC/strsna.c SRC/strsyl.c SRC/strti2.c SRC/strtri.c SRC/strtrs.c	\
+   SRC/stzrqf.c SRC/stzrzf.c SRC/sstemr.c SRC/slansf.c SRC/spftrf.c	\
+   SRC/spftri.c SRC/spftrs.c SRC/ssfrk.c SRC/stfsm.c SRC/stftri.c	\
+   SRC/stfttp.c SRC/stfttr.c SRC/stpttf.c SRC/stpttr.c SRC/strttf.c	\
+   SRC/strttp.c SRC/sgejsv.c SRC/sgesvj.c SRC/sgsvj0.c SRC/sgsvj1.c	\
+   SRC/sgeequb.c SRC/ssyequb.c SRC/spoequb.c SRC/sgbequb.c
 
-CLASRC = SRC/cbdsqr.o SRC/cgbbrd.o SRC/cgbcon.o SRC/cgbequ.o		\
-   SRC/cgbrfs.o SRC/cgbsv.o SRC/cgbsvx.o SRC/cgbtf2.o SRC/cgbtrf.o	\
-   SRC/cgbtrs.o SRC/cgebak.o SRC/cgebal.o SRC/cgebd2.o SRC/cgebrd.o	\
-   SRC/cgecon.o SRC/cgeequ.o SRC/cgees.o SRC/cgeesx.o SRC/cgeev.o	\
-   SRC/cgeevx.o SRC/cgegs.o SRC/cgegv.o SRC/cgehd2.o SRC/cgehrd.o	\
-   SRC/cgelq2.o SRC/cgelqf.o SRC/cgels.o SRC/cgelsd.o SRC/cgelss.o	\
-   SRC/cgelsx.o SRC/cgelsy.o SRC/cgeql2.o SRC/cgeqlf.o SRC/cgeqp3.o	\
-   SRC/cgeqpf.o SRC/cgeqr2.o SRC/cgeqrf.o SRC/cgerfs.o SRC/cgerq2.o	\
-   SRC/cgerqf.o SRC/cgesc2.o SRC/cgesdd.o SRC/cgesv.o SRC/cgesvd.o	\
-   SRC/cgesvx.o SRC/cgetc2.o SRC/cgetf2.o SRC/cgetrf.o SRC/cgetri.o	\
-   SRC/cgetrs.o SRC/cggbak.o SRC/cggbal.o SRC/cgges.o SRC/cggesx.o	\
-   SRC/cggev.o SRC/cggevx.o SRC/cggglm.o SRC/cgghrd.o SRC/cgglse.o	\
-   SRC/cggqrf.o SRC/cggrqf.o SRC/cggsvd.o SRC/cggsvp.o SRC/cgtcon.o	\
-   SRC/cgtrfs.o SRC/cgtsv.o SRC/cgtsvx.o SRC/cgttrf.o SRC/cgttrs.o	\
-   SRC/cgtts2.o SRC/chbev.o SRC/chbevd.o SRC/chbevx.o SRC/chbgst.o	\
-   SRC/chbgv.o SRC/chbgvd.o SRC/chbgvx.o SRC/chbtrd.o SRC/checon.o	\
-   SRC/cheev.o SRC/cheevd.o SRC/cheevr.o SRC/cheevx.o SRC/chegs2.o	\
-   SRC/chegst.o SRC/chegv.o SRC/chegvd.o SRC/chegvx.o SRC/cherfs.o	\
-   SRC/chesv.o SRC/chesvx.o SRC/chetd2.o SRC/chetf2.o SRC/chetrd.o	\
-   SRC/chetrf.o SRC/chetri.o SRC/chetrs.o SRC/chgeqz.o SRC/chpcon.o	\
-   SRC/chpev.o SRC/chpevd.o SRC/chpevx.o SRC/chpgst.o SRC/chpgv.o	\
-   SRC/chpgvd.o SRC/chpgvx.o SRC/chprfs.o SRC/chpsv.o SRC/chpsvx.o	\
-   SRC/chptrd.o SRC/chptrf.o SRC/chptri.o SRC/chptrs.o SRC/chsein.o	\
-   SRC/chseqr.o SRC/clabrd.o SRC/clacgv.o SRC/clacon.o SRC/clacn2.o	\
-   SRC/clacp2.o SRC/clacpy.o SRC/clacrm.o SRC/clacrt.o SRC/cladiv.o	\
-   SRC/claed0.o SRC/claed7.o SRC/claed8.o SRC/claein.o SRC/claesy.o	\
-   SRC/claev2.o SRC/clags2.o SRC/clagtm.o SRC/clahef.o SRC/clahqr.o	\
-   SRC/clahrd.o SRC/clahr2.o SRC/claic1.o SRC/clals0.o SRC/clalsa.o	\
-   SRC/clalsd.o SRC/clangb.o SRC/clange.o SRC/clangt.o SRC/clanhb.o	\
-   SRC/clanhe.o SRC/clanhp.o SRC/clanhs.o SRC/clanht.o SRC/clansb.o	\
-   SRC/clansp.o SRC/clansy.o SRC/clantb.o SRC/clantp.o SRC/clantr.o	\
-   SRC/clapll.o SRC/clapmt.o SRC/clarcm.o SRC/claqgb.o SRC/claqge.o	\
-   SRC/claqhb.o SRC/claqhe.o SRC/claqhp.o SRC/claqp2.o SRC/claqps.o	\
-   SRC/claqsb.o SRC/claqr0.o SRC/claqr1.o SRC/claqr2.o SRC/claqr3.o	\
-   SRC/claqr4.o SRC/claqr5.o SRC/claqsp.o SRC/claqsy.o SRC/clar1v.o	\
-   SRC/clar2v.o SRC/ilaclr.o SRC/ilaclc.o SRC/clarf.o SRC/clarfb.o	\
-   SRC/clarfg.o SRC/clarft.o SRC/clarfp.o SRC/clarfx.o SRC/clargv.o	\
-   SRC/clarnv.o SRC/clarrv.o SRC/clartg.o SRC/clartv.o SRC/clarz.o	\
-   SRC/clarzb.o SRC/clarzt.o SRC/clascl.o SRC/claset.o SRC/clasr.o	\
-   SRC/classq.o SRC/claswp.o SRC/clasyf.o SRC/clatbs.o SRC/clatdf.o	\
-   SRC/clatps.o SRC/clatrd.o SRC/clatrs.o SRC/clatrz.o SRC/clatzm.o	\
-   SRC/clauu2.o SRC/clauum.o SRC/cpbcon.o SRC/cpbequ.o SRC/cpbrfs.o	\
-   SRC/cpbstf.o SRC/cpbsv.o SRC/cpbsvx.o SRC/cpbtf2.o SRC/cpbtrf.o	\
-   SRC/cpbtrs.o SRC/cpocon.o SRC/cpoequ.o SRC/cporfs.o SRC/cposv.o	\
-   SRC/cposvx.o SRC/cpotf2.o SRC/cpotrf.o SRC/cpotri.o SRC/cpotrs.o	\
-   SRC/cpstrf.o SRC/cpstf2.o SRC/cppcon.o SRC/cppequ.o SRC/cpprfs.o	\
-   SRC/cppsv.o SRC/cppsvx.o SRC/cpptrf.o SRC/cpptri.o SRC/cpptrs.o	\
-   SRC/cptcon.o SRC/cpteqr.o SRC/cptrfs.o SRC/cptsv.o SRC/cptsvx.o	\
-   SRC/cpttrf.o SRC/cpttrs.o SRC/cptts2.o SRC/crot.o SRC/cspcon.o	\
-   SRC/cspmv.o SRC/cspr.o SRC/csprfs.o SRC/cspsv.o SRC/cspsvx.o		\
-   SRC/csptrf.o SRC/csptri.o SRC/csptrs.o SRC/csrscl.o SRC/cstedc.o	\
-   SRC/cstegr.o SRC/cstein.o SRC/csteqr.o SRC/csycon.o SRC/csymv.o	\
-   SRC/csyr.o SRC/csyrfs.o SRC/csysv.o SRC/csysvx.o SRC/csytf2.o	\
-   SRC/csytrf.o SRC/csytri.o SRC/csytrs.o SRC/ctbcon.o SRC/ctbrfs.o	\
-   SRC/ctbtrs.o SRC/ctgevc.o SRC/ctgex2.o SRC/ctgexc.o SRC/ctgsen.o	\
-   SRC/ctgsja.o SRC/ctgsna.o SRC/ctgsy2.o SRC/ctgsyl.o SRC/ctpcon.o	\
-   SRC/ctprfs.o SRC/ctptri.o SRC/ctptrs.o SRC/ctrcon.o SRC/ctrevc.o	\
-   SRC/ctrexc.o SRC/ctrrfs.o SRC/ctrsen.o SRC/ctrsna.o SRC/ctrsyl.o	\
-   SRC/ctrti2.o SRC/ctrtri.o SRC/ctrtrs.o SRC/ctzrqf.o SRC/ctzrzf.o	\
-   SRC/cung2l.o SRC/cung2r.o SRC/cungbr.o SRC/cunghr.o SRC/cungl2.o	\
-   SRC/cunglq.o SRC/cungql.o SRC/cungqr.o SRC/cungr2.o SRC/cungrq.o	\
-   SRC/cungtr.o SRC/cunm2l.o SRC/cunm2r.o SRC/cunmbr.o SRC/cunmhr.o	\
-   SRC/cunml2.o SRC/cunmlq.o SRC/cunmql.o SRC/cunmqr.o SRC/cunmr2.o	\
-   SRC/cunmr3.o SRC/cunmrq.o SRC/cunmrz.o SRC/cunmtr.o SRC/cupgtr.o	\
-   SRC/cupmtr.o SRC/icmax1.o SRC/scsum1.o SRC/cstemr.o SRC/chfrk.o	\
-   SRC/ctfttp.o SRC/clanhf.o SRC/cpftrf.o SRC/cpftri.o SRC/cpftrs.o	\
-   SRC/ctfsm.o SRC/ctftri.o SRC/ctfttr.o SRC/ctpttf.o SRC/ctpttr.o	\
-   SRC/ctrttf.o SRC/ctrttp.o SRC/cgeequb.o SRC/cgbequb.o SRC/csyequb.o	\
-   SRC/cpoequb.o SRC/cheequb.o
+CLASRC = SRC/cbdsqr.c SRC/cgbbrd.c SRC/cgbcon.c SRC/cgbequ.c		\
+   SRC/cgbrfs.c SRC/cgbsv.c SRC/cgbsvx.c SRC/cgbtf2.c SRC/cgbtrf.c	\
+   SRC/cgbtrs.c SRC/cgebak.c SRC/cgebal.c SRC/cgebd2.c SRC/cgebrd.c	\
+   SRC/cgecon.c SRC/cgeequ.c SRC/cgees.c SRC/cgeesx.c SRC/cgeev.c	\
+   SRC/cgeevx.c SRC/cgegs.c SRC/cgegv.c SRC/cgehd2.c SRC/cgehrd.c	\
+   SRC/cgelq2.c SRC/cgelqf.c SRC/cgels.c SRC/cgelsd.c SRC/cgelss.c	\
+   SRC/cgelsx.c SRC/cgelsy.c SRC/cgeql2.c SRC/cgeqlf.c SRC/cgeqp3.c	\
+   SRC/cgeqpf.c SRC/cgeqr2.c SRC/cgeqrf.c SRC/cgerfs.c SRC/cgerq2.c	\
+   SRC/cgerqf.c SRC/cgesc2.c SRC/cgesdd.c SRC/cgesv.c SRC/cgesvd.c	\
+   SRC/cgesvx.c SRC/cgetc2.c SRC/cgetf2.c SRC/cgetrf.c SRC/cgetri.c	\
+   SRC/cgetrs.c SRC/cggbak.c SRC/cggbal.c SRC/cgges.c SRC/cggesx.c	\
+   SRC/cggev.c SRC/cggevx.c SRC/cggglm.c SRC/cgghrd.c SRC/cgglse.c	\
+   SRC/cggqrf.c SRC/cggrqf.c SRC/cggsvd.c SRC/cggsvp.c SRC/cgtcon.c	\
+   SRC/cgtrfs.c SRC/cgtsv.c SRC/cgtsvx.c SRC/cgttrf.c SRC/cgttrs.c	\
+   SRC/cgtts2.c SRC/chbev.c SRC/chbevd.c SRC/chbevx.c SRC/chbgst.c	\
+   SRC/chbgv.c SRC/chbgvd.c SRC/chbgvx.c SRC/chbtrd.c SRC/checon.c	\
+   SRC/cheev.c SRC/cheevd.c SRC/cheevr.c SRC/cheevx.c SRC/chegs2.c	\
+   SRC/chegst.c SRC/chegv.c SRC/chegvd.c SRC/chegvx.c SRC/cherfs.c	\
+   SRC/chesv.c SRC/chesvx.c SRC/chetd2.c SRC/chetf2.c SRC/chetrd.c	\
+   SRC/chetrf.c SRC/chetri.c SRC/chetrs.c SRC/chgeqz.c SRC/chpcon.c	\
+   SRC/chpev.c SRC/chpevd.c SRC/chpevx.c SRC/chpgst.c SRC/chpgv.c	\
+   SRC/chpgvd.c SRC/chpgvx.c SRC/chprfs.c SRC/chpsv.c SRC/chpsvx.c	\
+   SRC/chptrd.c SRC/chptrf.c SRC/chptri.c SRC/chptrs.c SRC/chsein.c	\
+   SRC/chseqr.c SRC/clabrd.c SRC/clacgv.c SRC/clacon.c SRC/clacn2.c	\
+   SRC/clacp2.c SRC/clacpy.c SRC/clacrm.c SRC/clacrt.c SRC/cladiv.c	\
+   SRC/claed0.c SRC/claed7.c SRC/claed8.c SRC/claein.c SRC/claesy.c	\
+   SRC/claev2.c SRC/clags2.c SRC/clagtm.c SRC/clahef.c SRC/clahqr.c	\
+   SRC/clahrd.c SRC/clahr2.c SRC/claic1.c SRC/clals0.c SRC/clalsa.c	\
+   SRC/clalsd.c SRC/clangb.c SRC/clange.c SRC/clangt.c SRC/clanhb.c	\
+   SRC/clanhe.c SRC/clanhp.c SRC/clanhs.c SRC/clanht.c SRC/clansb.c	\
+   SRC/clansp.c SRC/clansy.c SRC/clantb.c SRC/clantp.c SRC/clantr.c	\
+   SRC/clapll.c SRC/clapmt.c SRC/clarcm.c SRC/claqgb.c SRC/claqge.c	\
+   SRC/claqhb.c SRC/claqhe.c SRC/claqhp.c SRC/claqp2.c SRC/claqps.c	\
+   SRC/claqsb.c SRC/claqr0.c SRC/claqr1.c SRC/claqr2.c SRC/claqr3.c	\
+   SRC/claqr4.c SRC/claqr5.c SRC/claqsp.c SRC/claqsy.c SRC/clar1v.c	\
+   SRC/clar2v.c SRC/ilaclr.c SRC/ilaclc.c SRC/clarf.c SRC/clarfb.c	\
+   SRC/clarfg.c SRC/clarft.c SRC/clarfp.c SRC/clarfx.c SRC/clargv.c	\
+   SRC/clarnv.c SRC/clarrv.c SRC/clartg.c SRC/clartv.c SRC/clarz.c	\
+   SRC/clarzb.c SRC/clarzt.c SRC/clascl.c SRC/claset.c SRC/clasr.c	\
+   SRC/classq.c SRC/claswp.c SRC/clasyf.c SRC/clatbs.c SRC/clatdf.c	\
+   SRC/clatps.c SRC/clatrd.c SRC/clatrs.c SRC/clatrz.c SRC/clatzm.c	\
+   SRC/clauu2.c SRC/clauum.c SRC/cpbcon.c SRC/cpbequ.c SRC/cpbrfs.c	\
+   SRC/cpbstf.c SRC/cpbsv.c SRC/cpbsvx.c SRC/cpbtf2.c SRC/cpbtrf.c	\
+   SRC/cpbtrs.c SRC/cpocon.c SRC/cpoequ.c SRC/cporfs.c SRC/cposv.c	\
+   SRC/cposvx.c SRC/cpotf2.c SRC/cpotrf.c SRC/cpotri.c SRC/cpotrs.c	\
+   SRC/cpstrf.c SRC/cpstf2.c SRC/cppcon.c SRC/cppequ.c SRC/cpprfs.c	\
+   SRC/cppsv.c SRC/cppsvx.c SRC/cpptrf.c SRC/cpptri.c SRC/cpptrs.c	\
+   SRC/cptcon.c SRC/cpteqr.c SRC/cptrfs.c SRC/cptsv.c SRC/cptsvx.c	\
+   SRC/cpttrf.c SRC/cpttrs.c SRC/cptts2.c SRC/crot.c SRC/cspcon.c	\
+   SRC/cspmv.c SRC/cspr.c SRC/csprfs.c SRC/cspsv.c SRC/cspsvx.c		\
+   SRC/csptrf.c SRC/csptri.c SRC/csptrs.c SRC/csrscl.c SRC/cstedc.c	\
+   SRC/cstegr.c SRC/cstein.c SRC/csteqr.c SRC/csycon.c SRC/csymv.c	\
+   SRC/csyr.c SRC/csyrfs.c SRC/csysv.c SRC/csysvx.c SRC/csytf2.c	\
+   SRC/csytrf.c SRC/csytri.c SRC/csytrs.c SRC/ctbcon.c SRC/ctbrfs.c	\
+   SRC/ctbtrs.c SRC/ctgevc.c SRC/ctgex2.c SRC/ctgexc.c SRC/ctgsen.c	\
+   SRC/ctgsja.c SRC/ctgsna.c SRC/ctgsy2.c SRC/ctgsyl.c SRC/ctpcon.c	\
+   SRC/ctprfs.c SRC/ctptri.c SRC/ctptrs.c SRC/ctrcon.c SRC/ctrevc.c	\
+   SRC/ctrexc.c SRC/ctrrfs.c SRC/ctrsen.c SRC/ctrsna.c SRC/ctrsyl.c	\
+   SRC/ctrti2.c SRC/ctrtri.c SRC/ctrtrs.c SRC/ctzrqf.c SRC/ctzrzf.c	\
+   SRC/cung2l.c SRC/cung2r.c SRC/cungbr.c SRC/cunghr.c SRC/cungl2.c	\
+   SRC/cunglq.c SRC/cungql.c SRC/cungqr.c SRC/cungr2.c SRC/cungrq.c	\
+   SRC/cungtr.c SRC/cunm2l.c SRC/cunm2r.c SRC/cunmbr.c SRC/cunmhr.c	\
+   SRC/cunml2.c SRC/cunmlq.c SRC/cunmql.c SRC/cunmqr.c SRC/cunmr2.c	\
+   SRC/cunmr3.c SRC/cunmrq.c SRC/cunmrz.c SRC/cunmtr.c SRC/cupgtr.c	\
+   SRC/cupmtr.c SRC/icmax1.c SRC/scsum1.c SRC/cstemr.c SRC/chfrk.c	\
+   SRC/ctfttp.c SRC/clanhf.c SRC/cpftrf.c SRC/cpftri.c SRC/cpftrs.c	\
+   SRC/ctfsm.c SRC/ctftri.c SRC/ctfttr.c SRC/ctpttf.c SRC/ctpttr.c	\
+   SRC/ctrttf.c SRC/ctrttp.c SRC/cgeequb.c SRC/cgbequb.c SRC/csyequb.c	\
+   SRC/cpoequb.c SRC/cheequb.c
 
-DLASRC = SRC/dgbbrd.o SRC/dgbcon.o SRC/dgbequ.o SRC/dgbrfs.o		\
-   SRC/dgbsv.o SRC/dgbsvx.o SRC/dgbtf2.o SRC/dgbtrf.o SRC/dgbtrs.o	\
-   SRC/dgebak.o SRC/dgebal.o SRC/dgebd2.o SRC/dgebrd.o SRC/dgecon.o	\
-   SRC/dgeequ.o SRC/dgees.o SRC/dgeesx.o SRC/dgeev.o SRC/dgeevx.o	\
-   SRC/dgegs.o SRC/dgegv.o SRC/dgehd2.o SRC/dgehrd.o SRC/dgelq2.o	\
-   SRC/dgelqf.o SRC/dgels.o SRC/dgelsd.o SRC/dgelss.o SRC/dgelsx.o	\
-   SRC/dgelsy.o SRC/dgeql2.o SRC/dgeqlf.o SRC/dgeqp3.o SRC/dgeqpf.o	\
-   SRC/dgeqr2.o SRC/dgeqrf.o SRC/dgerfs.o SRC/dgerq2.o SRC/dgerqf.o	\
-   SRC/dgesc2.o SRC/dgesdd.o SRC/dgesv.o SRC/dgesvd.o SRC/dgesvx.o	\
-   SRC/dgetc2.o SRC/dgetf2.o SRC/dgetrf.o SRC/dgetri.o SRC/dgetrs.o	\
-   SRC/dggbak.o SRC/dggbal.o SRC/dgges.o SRC/dggesx.o SRC/dggev.o	\
-   SRC/dggevx.o SRC/dggglm.o SRC/dgghrd.o SRC/dgglse.o SRC/dggqrf.o	\
-   SRC/dggrqf.o SRC/dggsvd.o SRC/dggsvp.o SRC/dgtcon.o SRC/dgtrfs.o	\
-   SRC/dgtsv.o SRC/dgtsvx.o SRC/dgttrf.o SRC/dgttrs.o SRC/dgtts2.o	\
-   SRC/dhgeqz.o SRC/dhsein.o SRC/dhseqr.o SRC/dlabrd.o SRC/dlacon.o	\
-   SRC/dlacn2.o SRC/dlaein.o SRC/dlaexc.o SRC/dlag2.o SRC/dlags2.o	\
-   SRC/dlagtm.o SRC/dlagv2.o SRC/dlahqr.o SRC/dlahrd.o SRC/dlahr2.o	\
-   SRC/dlaic1.o SRC/dlaln2.o SRC/dlals0.o SRC/dlalsa.o SRC/dlalsd.o	\
-   SRC/dlangb.o SRC/dlange.o SRC/dlangt.o SRC/dlanhs.o SRC/dlansb.o	\
-   SRC/dlansp.o SRC/dlansy.o SRC/dlantb.o SRC/dlantp.o SRC/dlantr.o	\
-   SRC/dlanv2.o SRC/dlapll.o SRC/dlapmt.o SRC/dlaqgb.o SRC/dlaqge.o	\
-   SRC/dlaqp2.o SRC/dlaqps.o SRC/dlaqsb.o SRC/dlaqsp.o SRC/dlaqsy.o	\
-   SRC/dlaqr0.o SRC/dlaqr1.o SRC/dlaqr2.o SRC/dlaqr3.o SRC/dlaqr4.o	\
-   SRC/dlaqr5.o SRC/dlaqtr.o SRC/dlar1v.o SRC/dlar2v.o SRC/iladlr.o	\
-   SRC/iladlc.o SRC/dlarf.o SRC/dlarfb.o SRC/dlarfg.o SRC/dlarft.o	\
-   SRC/dlarfx.o SRC/dlargv.o SRC/dlarrv.o SRC/dlartv.o SRC/dlarfp.o	\
-   SRC/dlarz.o SRC/dlarzb.o SRC/dlarzt.o SRC/dlaswp.o SRC/dlasy2.o	\
-   SRC/dlasyf.o SRC/dlatbs.o SRC/dlatdf.o SRC/dlatps.o SRC/dlatrd.o	\
-   SRC/dlatrs.o SRC/dlatrz.o SRC/dlatzm.o SRC/dlauu2.o SRC/dlauum.o	\
-   SRC/dopgtr.o SRC/dopmtr.o SRC/dorg2l.o SRC/dorg2r.o SRC/dorgbr.o	\
-   SRC/dorghr.o SRC/dorgl2.o SRC/dorglq.o SRC/dorgql.o SRC/dorgqr.o	\
-   SRC/dorgr2.o SRC/dorgrq.o SRC/dorgtr.o SRC/dorm2l.o SRC/dorm2r.o	\
-   SRC/dormbr.o SRC/dormhr.o SRC/dorml2.o SRC/dormlq.o SRC/dormql.o	\
-   SRC/dormqr.o SRC/dormr2.o SRC/dormr3.o SRC/dormrq.o SRC/dormrz.o	\
-   SRC/dormtr.o SRC/dpbcon.o SRC/dpbequ.o SRC/dpbrfs.o SRC/dpbstf.o	\
-   SRC/dpbsv.o SRC/dpbsvx.o SRC/dpbtf2.o SRC/dpbtrf.o SRC/dpbtrs.o	\
-   SRC/dpocon.o SRC/dpoequ.o SRC/dporfs.o SRC/dposv.o SRC/dposvx.o	\
-   SRC/dpotf2.o SRC/dpotrf.o SRC/dpotri.o SRC/dpotrs.o SRC/dpstrf.o	\
-   SRC/dpstf2.o SRC/dppcon.o SRC/dppequ.o SRC/dpprfs.o SRC/dppsv.o	\
-   SRC/dppsvx.o SRC/dpptrf.o SRC/dpptri.o SRC/dpptrs.o SRC/dptcon.o	\
-   SRC/dpteqr.o SRC/dptrfs.o SRC/dptsv.o SRC/dptsvx.o SRC/dpttrs.o	\
-   SRC/dptts2.o SRC/drscl.o SRC/dsbev.o SRC/dsbevd.o SRC/dsbevx.o	\
-   SRC/dsbgst.o SRC/dsbgv.o SRC/dsbgvd.o SRC/dsbgvx.o SRC/dsbtrd.o	\
-   SRC/dspcon.o SRC/dspev.o SRC/dspevd.o SRC/dspevx.o SRC/dspgst.o	\
-   SRC/dspgv.o SRC/dspgvd.o SRC/dspgvx.o SRC/dsprfs.o SRC/dspsv.o	\
-   SRC/dspsvx.o SRC/dsptrd.o SRC/dsptrf.o SRC/dsptri.o SRC/dsptrs.o	\
-   SRC/dstegr.o SRC/dstein.o SRC/dstev.o SRC/dstevd.o SRC/dstevr.o	\
-   SRC/dstevx.o SRC/dsycon.o SRC/dsyev.o SRC/dsyevd.o SRC/dsyevr.o	\
-   SRC/dsyevx.o SRC/dsygs2.o SRC/dsygst.o SRC/dsygv.o SRC/dsygvd.o	\
-   SRC/dsygvx.o SRC/dsyrfs.o SRC/dsysv.o SRC/dsysvx.o SRC/dsytd2.o	\
-   SRC/dsytf2.o SRC/dsytrd.o SRC/dsytrf.o SRC/dsytri.o SRC/dsytrs.o	\
-   SRC/dtbcon.o SRC/dtbrfs.o SRC/dtbtrs.o SRC/dtgevc.o SRC/dtgex2.o	\
-   SRC/dtgexc.o SRC/dtgsen.o SRC/dtgsja.o SRC/dtgsna.o SRC/dtgsy2.o	\
-   SRC/dtgsyl.o SRC/dtpcon.o SRC/dtprfs.o SRC/dtptri.o SRC/dtptrs.o	\
-   SRC/dtrcon.o SRC/dtrevc.o SRC/dtrexc.o SRC/dtrrfs.o SRC/dtrsen.o	\
-   SRC/dtrsna.o SRC/dtrsyl.o SRC/dtrti2.o SRC/dtrtri.o SRC/dtrtrs.o	\
-   SRC/dtzrqf.o SRC/dtzrzf.o SRC/dstemr.o SRC/dsgesv.o SRC/dsposv.o	\
-   SRC/dlag2s.o SRC/slag2d.o SRC/dlat2s.o SRC/dlansf.o SRC/dpftrf.o	\
-   SRC/dpftri.o SRC/dpftrs.o SRC/dsfrk.o SRC/dtfsm.o SRC/dtftri.o	\
-   SRC/dtfttp.o SRC/dtfttr.o SRC/dtpttf.o SRC/dtpttr.o SRC/dtrttf.o	\
-   SRC/dtrttp.o SRC/dgejsv.o SRC/dgesvj.o SRC/dgsvj0.o SRC/dgsvj1.o	\
-   SRC/dgeequb.o SRC/dsyequb.o SRC/dpoequb.o SRC/dgbequb.o
+DLASRC = SRC/dgbbrd.c SRC/dgbcon.c SRC/dgbequ.c SRC/dgbrfs.c		\
+   SRC/dgbsv.c SRC/dgbsvx.c SRC/dgbtf2.c SRC/dgbtrf.c SRC/dgbtrs.c	\
+   SRC/dgebak.c SRC/dgebal.c SRC/dgebd2.c SRC/dgebrd.c SRC/dgecon.c	\
+   SRC/dgeequ.c SRC/dgees.c SRC/dgeesx.c SRC/dgeev.c SRC/dgeevx.c	\
+   SRC/dgegs.c SRC/dgegv.c SRC/dgehd2.c SRC/dgehrd.c SRC/dgelq2.c	\
+   SRC/dgelqf.c SRC/dgels.c SRC/dgelsd.c SRC/dgelss.c SRC/dgelsx.c	\
+   SRC/dgelsy.c SRC/dgeql2.c SRC/dgeqlf.c SRC/dgeqp3.c SRC/dgeqpf.c	\
+   SRC/dgeqr2.c SRC/dgeqrf.c SRC/dgerfs.c SRC/dgerq2.c SRC/dgerqf.c	\
+   SRC/dgesc2.c SRC/dgesdd.c SRC/dgesv.c SRC/dgesvd.c SRC/dgesvx.c	\
+   SRC/dgetc2.c SRC/dgetf2.c SRC/dgetrf.c SRC/dgetri.c SRC/dgetrs.c	\
+   SRC/dggbak.c SRC/dggbal.c SRC/dgges.c SRC/dggesx.c SRC/dggev.c	\
+   SRC/dggevx.c SRC/dggglm.c SRC/dgghrd.c SRC/dgglse.c SRC/dggqrf.c	\
+   SRC/dggrqf.c SRC/dggsvd.c SRC/dggsvp.c SRC/dgtcon.c SRC/dgtrfs.c	\
+   SRC/dgtsv.c SRC/dgtsvx.c SRC/dgttrf.c SRC/dgttrs.c SRC/dgtts2.c	\
+   SRC/dhgeqz.c SRC/dhsein.c SRC/dhseqr.c SRC/dlabrd.c SRC/dlacon.c	\
+   SRC/dlacn2.c SRC/dlaein.c SRC/dlaexc.c SRC/dlag2.c SRC/dlags2.c	\
+   SRC/dlagtm.c SRC/dlagv2.c SRC/dlahqr.c SRC/dlahrd.c SRC/dlahr2.c	\
+   SRC/dlaic1.c SRC/dlaln2.c SRC/dlals0.c SRC/dlalsa.c SRC/dlalsd.c	\
+   SRC/dlangb.c SRC/dlange.c SRC/dlangt.c SRC/dlanhs.c SRC/dlansb.c	\
+   SRC/dlansp.c SRC/dlansy.c SRC/dlantb.c SRC/dlantp.c SRC/dlantr.c	\
+   SRC/dlanv2.c SRC/dlapll.c SRC/dlapmt.c SRC/dlaqgb.c SRC/dlaqge.c	\
+   SRC/dlaqp2.c SRC/dlaqps.c SRC/dlaqsb.c SRC/dlaqsp.c SRC/dlaqsy.c	\
+   SRC/dlaqr0.c SRC/dlaqr1.c SRC/dlaqr2.c SRC/dlaqr3.c SRC/dlaqr4.c	\
+   SRC/dlaqr5.c SRC/dlaqtr.c SRC/dlar1v.c SRC/dlar2v.c SRC/iladlr.c	\
+   SRC/iladlc.c SRC/dlarf.c SRC/dlarfb.c SRC/dlarfg.c SRC/dlarft.c	\
+   SRC/dlarfx.c SRC/dlargv.c SRC/dlarrv.c SRC/dlartv.c SRC/dlarfp.c	\
+   SRC/dlarz.c SRC/dlarzb.c SRC/dlarzt.c SRC/dlaswp.c SRC/dlasy2.c	\
+   SRC/dlasyf.c SRC/dlatbs.c SRC/dlatdf.c SRC/dlatps.c SRC/dlatrd.c	\
+   SRC/dlatrs.c SRC/dlatrz.c SRC/dlatzm.c SRC/dlauu2.c SRC/dlauum.c	\
+   SRC/dopgtr.c SRC/dopmtr.c SRC/dorg2l.c SRC/dorg2r.c SRC/dorgbr.c	\
+   SRC/dorghr.c SRC/dorgl2.c SRC/dorglq.c SRC/dorgql.c SRC/dorgqr.c	\
+   SRC/dorgr2.c SRC/dorgrq.c SRC/dorgtr.c SRC/dorm2l.c SRC/dorm2r.c	\
+   SRC/dormbr.c SRC/dormhr.c SRC/dorml2.c SRC/dormlq.c SRC/dormql.c	\
+   SRC/dormqr.c SRC/dormr2.c SRC/dormr3.c SRC/dormrq.c SRC/dormrz.c	\
+   SRC/dormtr.c SRC/dpbcon.c SRC/dpbequ.c SRC/dpbrfs.c SRC/dpbstf.c	\
+   SRC/dpbsv.c SRC/dpbsvx.c SRC/dpbtf2.c SRC/dpbtrf.c SRC/dpbtrs.c	\
+   SRC/dpocon.c SRC/dpoequ.c SRC/dporfs.c SRC/dposv.c SRC/dposvx.c	\
+   SRC/dpotf2.c SRC/dpotrf.c SRC/dpotri.c SRC/dpotrs.c SRC/dpstrf.c	\
+   SRC/dpstf2.c SRC/dppcon.c SRC/dppequ.c SRC/dpprfs.c SRC/dppsv.c	\
+   SRC/dppsvx.c SRC/dpptrf.c SRC/dpptri.c SRC/dpptrs.c SRC/dptcon.c	\
+   SRC/dpteqr.c SRC/dptrfs.c SRC/dptsv.c SRC/dptsvx.c SRC/dpttrs.c	\
+   SRC/dptts2.c SRC/drscl.c SRC/dsbev.c SRC/dsbevd.c SRC/dsbevx.c	\
+   SRC/dsbgst.c SRC/dsbgv.c SRC/dsbgvd.c SRC/dsbgvx.c SRC/dsbtrd.c	\
+   SRC/dspcon.c SRC/dspev.c SRC/dspevd.c SRC/dspevx.c SRC/dspgst.c	\
+   SRC/dspgv.c SRC/dspgvd.c SRC/dspgvx.c SRC/dsprfs.c SRC/dspsv.c	\
+   SRC/dspsvx.c SRC/dsptrd.c SRC/dsptrf.c SRC/dsptri.c SRC/dsptrs.c	\
+   SRC/dstegr.c SRC/dstein.c SRC/dstev.c SRC/dstevd.c SRC/dstevr.c	\
+   SRC/dstevx.c SRC/dsycon.c SRC/dsyev.c SRC/dsyevd.c SRC/dsyevr.c	\
+   SRC/dsyevx.c SRC/dsygs2.c SRC/dsygst.c SRC/dsygv.c SRC/dsygvd.c	\
+   SRC/dsygvx.c SRC/dsyrfs.c SRC/dsysv.c SRC/dsysvx.c SRC/dsytd2.c	\
+   SRC/dsytf2.c SRC/dsytrd.c SRC/dsytrf.c SRC/dsytri.c SRC/dsytrs.c	\
+   SRC/dtbcon.c SRC/dtbrfs.c SRC/dtbtrs.c SRC/dtgevc.c SRC/dtgex2.c	\
+   SRC/dtgexc.c SRC/dtgsen.c SRC/dtgsja.c SRC/dtgsna.c SRC/dtgsy2.c	\
+   SRC/dtgsyl.c SRC/dtpcon.c SRC/dtprfs.c SRC/dtptri.c SRC/dtptrs.c	\
+   SRC/dtrcon.c SRC/dtrevc.c SRC/dtrexc.c SRC/dtrrfs.c SRC/dtrsen.c	\
+   SRC/dtrsna.c SRC/dtrsyl.c SRC/dtrti2.c SRC/dtrtri.c SRC/dtrtrs.c	\
+   SRC/dtzrqf.c SRC/dtzrzf.c SRC/dstemr.c SRC/dsgesv.c SRC/dsposv.c	\
+   SRC/dlag2s.c SRC/slag2d.c SRC/dlat2s.c SRC/dlansf.c SRC/dpftrf.c	\
+   SRC/dpftri.c SRC/dpftrs.c SRC/dsfrk.c SRC/dtfsm.c SRC/dtftri.c	\
+   SRC/dtfttp.c SRC/dtfttr.c SRC/dtpttf.c SRC/dtpttr.c SRC/dtrttf.c	\
+   SRC/dtrttp.c SRC/dgejsv.c SRC/dgesvj.c SRC/dgsvj0.c SRC/dgsvj1.c	\
+   SRC/dgeequb.c SRC/dsyequb.c SRC/dpoequb.c SRC/dgbequb.c
 
-ZLASRC = SRC/zbdsqr.o SRC/zgbbrd.o SRC/zgbcon.o SRC/zgbequ.o		\
-   SRC/zgbrfs.o SRC/zgbsv.o SRC/zgbsvx.o SRC/zgbtf2.o SRC/zgbtrf.o	\
-   SRC/zgbtrs.o SRC/zgebak.o SRC/zgebal.o SRC/zgebd2.o SRC/zgebrd.o	\
-   SRC/zgecon.o SRC/zgeequ.o SRC/zgees.o SRC/zgeesx.o SRC/zgeev.o	\
-   SRC/zgeevx.o SRC/zgegs.o SRC/zgegv.o SRC/zgehd2.o SRC/zgehrd.o	\
-   SRC/zgelq2.o SRC/zgelqf.o SRC/zgels.o SRC/zgelsd.o SRC/zgelss.o	\
-   SRC/zgelsx.o SRC/zgelsy.o SRC/zgeql2.o SRC/zgeqlf.o SRC/zgeqp3.o	\
-   SRC/zgeqpf.o SRC/zgeqr2.o SRC/zgeqrf.o SRC/zgerfs.o SRC/zgerq2.o	\
-   SRC/zgerqf.o SRC/zgesc2.o SRC/zgesdd.o SRC/zgesv.o SRC/zgesvd.o	\
-   SRC/zgesvx.o SRC/zgetc2.o SRC/zgetf2.o SRC/zgetrf.o SRC/zgetri.o	\
-   SRC/zgetrs.o SRC/zggbak.o SRC/zggbal.o SRC/zgges.o SRC/zggesx.o	\
-   SRC/zggev.o SRC/zggevx.o SRC/zggglm.o SRC/zgghrd.o SRC/zgglse.o	\
-   SRC/zggqrf.o SRC/zggrqf.o SRC/zggsvd.o SRC/zggsvp.o SRC/zgtcon.o	\
-   SRC/zgtrfs.o SRC/zgtsv.o SRC/zgtsvx.o SRC/zgttrf.o SRC/zgttrs.o	\
-   SRC/zgtts2.o SRC/zhbev.o SRC/zhbevd.o SRC/zhbevx.o SRC/zhbgst.o	\
-   SRC/zhbgv.o SRC/zhbgvd.o SRC/zhbgvx.o SRC/zhbtrd.o SRC/zhecon.o	\
-   SRC/zheev.o SRC/zheevd.o SRC/zheevr.o SRC/zheevx.o SRC/zhegs2.o	\
-   SRC/zhegst.o SRC/zhegv.o SRC/zhegvd.o SRC/zhegvx.o SRC/zherfs.o	\
-   SRC/zhesv.o SRC/zhesvx.o SRC/zhetd2.o SRC/zhetf2.o SRC/zhetrd.o	\
-   SRC/zhetrf.o SRC/zhetri.o SRC/zhetrs.o SRC/zhgeqz.o SRC/zhpcon.o	\
-   SRC/zhpev.o SRC/zhpevd.o SRC/zhpevx.o SRC/zhpgst.o SRC/zhpgv.o	\
-   SRC/zhpgvd.o SRC/zhpgvx.o SRC/zhprfs.o SRC/zhpsv.o SRC/zhpsvx.o	\
-   SRC/zhptrd.o SRC/zhptrf.o SRC/zhptri.o SRC/zhptrs.o SRC/zhsein.o	\
-   SRC/zhseqr.o SRC/zlabrd.o SRC/zlacgv.o SRC/zlacon.o SRC/zlacn2.o	\
-   SRC/zlacp2.o SRC/zlacpy.o SRC/zlacrm.o SRC/zlacrt.o SRC/zladiv.o	\
-   SRC/zlaed0.o SRC/zlaed7.o SRC/zlaed8.o SRC/zlaein.o SRC/zlaesy.o	\
-   SRC/zlaev2.o SRC/zlags2.o SRC/zlagtm.o SRC/zlahef.o SRC/zlahqr.o	\
-   SRC/zlahrd.o SRC/zlahr2.o SRC/zlaic1.o SRC/zlals0.o SRC/zlalsa.o	\
-   SRC/zlalsd.o SRC/zlangb.o SRC/zlange.o SRC/zlangt.o SRC/zlanhb.o	\
-   SRC/zlanhe.o SRC/zlanhp.o SRC/zlanhs.o SRC/zlanht.o SRC/zlansb.o	\
-   SRC/zlansp.o SRC/zlansy.o SRC/zlantb.o SRC/zlantp.o SRC/zlantr.o	\
-   SRC/zlapll.o SRC/zlapmt.o SRC/zlaqgb.o SRC/zlaqge.o SRC/zlaqhb.o	\
-   SRC/zlaqhe.o SRC/zlaqhp.o SRC/zlaqp2.o SRC/zlaqps.o SRC/zlaqsb.o	\
-   SRC/zlaqr0.o SRC/zlaqr1.o SRC/zlaqr2.o SRC/zlaqr3.o SRC/zlaqr4.o	\
-   SRC/zlaqr5.o SRC/zlaqsp.o SRC/zlaqsy.o SRC/zlar1v.o SRC/zlar2v.o	\
-   SRC/ilazlr.o SRC/ilazlc.o SRC/zlarcm.o SRC/zlarf.o SRC/zlarfb.o	\
-   SRC/zlarfg.o SRC/zlarft.o SRC/zlarfp.o SRC/zlarfx.o SRC/zlargv.o	\
-   SRC/zlarnv.o SRC/zlarrv.o SRC/zlartg.o SRC/zlartv.o SRC/zlarz.o	\
-   SRC/zlarzb.o SRC/zlarzt.o SRC/zlascl.o SRC/zlaset.o SRC/zlasr.o	\
-   SRC/zlassq.o SRC/zlaswp.o SRC/zlasyf.o SRC/zlatbs.o SRC/zlatdf.o	\
-   SRC/zlatps.o SRC/zlatrd.o SRC/zlatrs.o SRC/zlatrz.o SRC/zlatzm.o	\
-   SRC/zlauu2.o SRC/zlauum.o SRC/zpbcon.o SRC/zpbequ.o SRC/zpbrfs.o	\
-   SRC/zpbstf.o SRC/zpbsv.o SRC/zpbsvx.o SRC/zpbtf2.o SRC/zpbtrf.o	\
-   SRC/zpbtrs.o SRC/zpocon.o SRC/zpoequ.o SRC/zporfs.o SRC/zposv.o	\
-   SRC/zposvx.o SRC/zpotf2.o SRC/zpotrf.o SRC/zpotri.o SRC/zpotrs.o	\
-   SRC/zpstrf.o SRC/zpstf2.o SRC/zppcon.o SRC/zppequ.o SRC/zpprfs.o	\
-   SRC/zppsv.o SRC/zppsvx.o SRC/zpptrf.o SRC/zpptri.o SRC/zpptrs.o	\
-   SRC/zptcon.o SRC/zpteqr.o SRC/zptrfs.o SRC/zptsv.o SRC/zptsvx.o	\
-   SRC/zpttrf.o SRC/zpttrs.o SRC/zptts2.o SRC/zrot.o SRC/zspcon.o	\
-   SRC/zspmv.o SRC/zspr.o SRC/zsprfs.o SRC/zspsv.o SRC/zspsvx.o		\
-   SRC/zsptrf.o SRC/zsptri.o SRC/zsptrs.o SRC/zdrscl.o SRC/zstedc.o	\
-   SRC/zstegr.o SRC/zstein.o SRC/zsteqr.o SRC/zsycon.o SRC/zsymv.o	\
-   SRC/zsyr.o SRC/zsyrfs.o SRC/zsysv.o SRC/zsysvx.o SRC/zsytf2.o	\
-   SRC/zsytrf.o SRC/zsytri.o SRC/zsytrs.o SRC/ztbcon.o SRC/ztbrfs.o	\
-   SRC/ztbtrs.o SRC/ztgevc.o SRC/ztgex2.o SRC/ztgexc.o SRC/ztgsen.o	\
-   SRC/ztgsja.o SRC/ztgsna.o SRC/ztgsy2.o SRC/ztgsyl.o SRC/ztpcon.o	\
-   SRC/ztprfs.o SRC/ztptri.o SRC/ztptrs.o SRC/ztrcon.o SRC/ztrevc.o	\
-   SRC/ztrexc.o SRC/ztrrfs.o SRC/ztrsen.o SRC/ztrsna.o SRC/ztrsyl.o	\
-   SRC/ztrti2.o SRC/ztrtri.o SRC/ztrtrs.o SRC/ztzrqf.o SRC/ztzrzf.o	\
-   SRC/zung2l.o SRC/zung2r.o SRC/zungbr.o SRC/zunghr.o SRC/zungl2.o	\
-   SRC/zunglq.o SRC/zungql.o SRC/zungqr.o SRC/zungr2.o SRC/zungrq.o	\
-   SRC/zungtr.o SRC/zunm2l.o SRC/zunm2r.o SRC/zunmbr.o SRC/zunmhr.o	\
-   SRC/zunml2.o SRC/zunmlq.o SRC/zunmql.o SRC/zunmqr.o SRC/zunmr2.o	\
-   SRC/zunmr3.o SRC/zunmrq.o SRC/zunmrz.o SRC/zunmtr.o SRC/zupgtr.o	\
-   SRC/zupmtr.o SRC/izmax1.o SRC/dzsum1.o SRC/zstemr.o SRC/zcgesv.o	\
-   SRC/zcposv.o SRC/zlag2c.o SRC/clag2z.o SRC/zlat2c.o SRC/zhfrk.o	\
-   SRC/ztfttp.o SRC/zlanhf.o SRC/zpftrf.o SRC/zpftri.o SRC/zpftrs.o	\
-   SRC/ztfsm.o SRC/ztftri.o SRC/ztfttr.o SRC/ztpttf.o SRC/ztpttr.o	\
-   SRC/ztrttf.o SRC/ztrttp.o SRC/zgeequb.o SRC/zgbequb.o SRC/zsyequb.o	\
-   SRC/zpoequb.o SRC/zheequb.o
+ZLASRC = SRC/zbdsqr.c SRC/zgbbrd.c SRC/zgbcon.c SRC/zgbequ.c		\
+   SRC/zgbrfs.c SRC/zgbsv.c SRC/zgbsvx.c SRC/zgbtf2.c SRC/zgbtrf.c	\
+   SRC/zgbtrs.c SRC/zgebak.c SRC/zgebal.c SRC/zgebd2.c SRC/zgebrd.c	\
+   SRC/zgecon.c SRC/zgeequ.c SRC/zgees.c SRC/zgeesx.c SRC/zgeev.c	\
+   SRC/zgeevx.c SRC/zgegs.c SRC/zgegv.c SRC/zgehd2.c SRC/zgehrd.c	\
+   SRC/zgelq2.c SRC/zgelqf.c SRC/zgels.c SRC/zgelsd.c SRC/zgelss.c	\
+   SRC/zgelsx.c SRC/zgelsy.c SRC/zgeql2.c SRC/zgeqlf.c SRC/zgeqp3.c	\
+   SRC/zgeqpf.c SRC/zgeqr2.c SRC/zgeqrf.c SRC/zgerfs.c SRC/zgerq2.c	\
+   SRC/zgerqf.c SRC/zgesc2.c SRC/zgesdd.c SRC/zgesv.c SRC/zgesvd.c	\
+   SRC/zgesvx.c SRC/zgetc2.c SRC/zgetf2.c SRC/zgetrf.c SRC/zgetri.c	\
+   SRC/zgetrs.c SRC/zggbak.c SRC/zggbal.c SRC/zgges.c SRC/zggesx.c	\
+   SRC/zggev.c SRC/zggevx.c SRC/zggglm.c SRC/zgghrd.c SRC/zgglse.c	\
+   SRC/zggqrf.c SRC/zggrqf.c SRC/zggsvd.c SRC/zggsvp.c SRC/zgtcon.c	\
+   SRC/zgtrfs.c SRC/zgtsv.c SRC/zgtsvx.c SRC/zgttrf.c SRC/zgttrs.c	\
+   SRC/zgtts2.c SRC/zhbev.c SRC/zhbevd.c SRC/zhbevx.c SRC/zhbgst.c	\
+   SRC/zhbgv.c SRC/zhbgvd.c SRC/zhbgvx.c SRC/zhbtrd.c SRC/zhecon.c	\
+   SRC/zheev.c SRC/zheevd.c SRC/zheevr.c SRC/zheevx.c SRC/zhegs2.c	\
+   SRC/zhegst.c SRC/zhegv.c SRC/zhegvd.c SRC/zhegvx.c SRC/zherfs.c	\
+   SRC/zhesv.c SRC/zhesvx.c SRC/zhetd2.c SRC/zhetf2.c SRC/zhetrd.c	\
+   SRC/zhetrf.c SRC/zhetri.c SRC/zhetrs.c SRC/zhgeqz.c SRC/zhpcon.c	\
+   SRC/zhpev.c SRC/zhpevd.c SRC/zhpevx.c SRC/zhpgst.c SRC/zhpgv.c	\
+   SRC/zhpgvd.c SRC/zhpgvx.c SRC/zhprfs.c SRC/zhpsv.c SRC/zhpsvx.c	\
+   SRC/zhptrd.c SRC/zhptrf.c SRC/zhptri.c SRC/zhptrs.c SRC/zhsein.c	\
+   SRC/zhseqr.c SRC/zlabrd.c SRC/zlacgv.c SRC/zlacon.c SRC/zlacn2.c	\
+   SRC/zlacp2.c SRC/zlacpy.c SRC/zlacrm.c SRC/zlacrt.c SRC/zladiv.c	\
+   SRC/zlaed0.c SRC/zlaed7.c SRC/zlaed8.c SRC/zlaein.c SRC/zlaesy.c	\
+   SRC/zlaev2.c SRC/zlags2.c SRC/zlagtm.c SRC/zlahef.c SRC/zlahqr.c	\
+   SRC/zlahrd.c SRC/zlahr2.c SRC/zlaic1.c SRC/zlals0.c SRC/zlalsa.c	\
+   SRC/zlalsd.c SRC/zlangb.c SRC/zlange.c SRC/zlangt.c SRC/zlanhb.c	\
+   SRC/zlanhe.c SRC/zlanhp.c SRC/zlanhs.c SRC/zlanht.c SRC/zlansb.c	\
+   SRC/zlansp.c SRC/zlansy.c SRC/zlantb.c SRC/zlantp.c SRC/zlantr.c	\
+   SRC/zlapll.c SRC/zlapmt.c SRC/zlaqgb.c SRC/zlaqge.c SRC/zlaqhb.c	\
+   SRC/zlaqhe.c SRC/zlaqhp.c SRC/zlaqp2.c SRC/zlaqps.c SRC/zlaqsb.c	\
+   SRC/zlaqr0.c SRC/zlaqr1.c SRC/zlaqr2.c SRC/zlaqr3.c SRC/zlaqr4.c	\
+   SRC/zlaqr5.c SRC/zlaqsp.c SRC/zlaqsy.c SRC/zlar1v.c SRC/zlar2v.c	\
+   SRC/ilazlr.c SRC/ilazlc.c SRC/zlarcm.c SRC/zlarf.c SRC/zlarfb.c	\
+   SRC/zlarfg.c SRC/zlarft.c SRC/zlarfp.c SRC/zlarfx.c SRC/zlargv.c	\
+   SRC/zlarnv.c SRC/zlarrv.c SRC/zlartg.c SRC/zlartv.c SRC/zlarz.c	\
+   SRC/zlarzb.c SRC/zlarzt.c SRC/zlascl.c SRC/zlaset.c SRC/zlasr.c	\
+   SRC/zlassq.c SRC/zlaswp.c SRC/zlasyf.c SRC/zlatbs.c SRC/zlatdf.c	\
+   SRC/zlatps.c SRC/zlatrd.c SRC/zlatrs.c SRC/zlatrz.c SRC/zlatzm.c	\
+   SRC/zlauu2.c SRC/zlauum.c SRC/zpbcon.c SRC/zpbequ.c SRC/zpbrfs.c	\
+   SRC/zpbstf.c SRC/zpbsv.c SRC/zpbsvx.c SRC/zpbtf2.c SRC/zpbtrf.c	\
+   SRC/zpbtrs.c SRC/zpocon.c SRC/zpoequ.c SRC/zporfs.c SRC/zposv.c	\
+   SRC/zposvx.c SRC/zpotf2.c SRC/zpotrf.c SRC/zpotri.c SRC/zpotrs.c	\
+   SRC/zpstrf.c SRC/zpstf2.c SRC/zppcon.c SRC/zppequ.c SRC/zpprfs.c	\
+   SRC/zppsv.c SRC/zppsvx.c SRC/zpptrf.c SRC/zpptri.c SRC/zpptrs.c	\
+   SRC/zptcon.c SRC/zpteqr.c SRC/zptrfs.c SRC/zptsv.c SRC/zptsvx.c	\
+   SRC/zpttrf.c SRC/zpttrs.c SRC/zptts2.c SRC/zrot.c SRC/zspcon.c	\
+   SRC/zspmv.c SRC/zspr.c SRC/zsprfs.c SRC/zspsv.c SRC/zspsvx.c		\
+   SRC/zsptrf.c SRC/zsptri.c SRC/zsptrs.c SRC/zdrscl.c SRC/zstedc.c	\
+   SRC/zstegr.c SRC/zstein.c SRC/zsteqr.c SRC/zsycon.c SRC/zsymv.c	\
+   SRC/zsyr.c SRC/zsyrfs.c SRC/zsysv.c SRC/zsysvx.c SRC/zsytf2.c	\
+   SRC/zsytrf.c SRC/zsytri.c SRC/zsytrs.c SRC/ztbcon.c SRC/ztbrfs.c	\
+   SRC/ztbtrs.c SRC/ztgevc.c SRC/ztgex2.c SRC/ztgexc.c SRC/ztgsen.c	\
+   SRC/ztgsja.c SRC/ztgsna.c SRC/ztgsy2.c SRC/ztgsyl.c SRC/ztpcon.c	\
+   SRC/ztprfs.c SRC/ztptri.c SRC/ztptrs.c SRC/ztrcon.c SRC/ztrevc.c	\
+   SRC/ztrexc.c SRC/ztrrfs.c SRC/ztrsen.c SRC/ztrsna.c SRC/ztrsyl.c	\
+   SRC/ztrti2.c SRC/ztrtri.c SRC/ztrtrs.c SRC/ztzrqf.c SRC/ztzrzf.c	\
+   SRC/zung2l.c SRC/zung2r.c SRC/zungbr.c SRC/zunghr.c SRC/zungl2.c	\
+   SRC/zunglq.c SRC/zungql.c SRC/zungqr.c SRC/zungr2.c SRC/zungrq.c	\
+   SRC/zungtr.c SRC/zunm2l.c SRC/zunm2r.c SRC/zunmbr.c SRC/zunmhr.c	\
+   SRC/zunml2.c SRC/zunmlq.c SRC/zunmql.c SRC/zunmqr.c SRC/zunmr2.c	\
+   SRC/zunmr3.c SRC/zunmrq.c SRC/zunmrz.c SRC/zunmtr.c SRC/zupgtr.c	\
+   SRC/zupmtr.c SRC/izmax1.c SRC/dzsum1.c SRC/zstemr.c SRC/zcgesv.c	\
+   SRC/zcposv.c SRC/zlag2c.c SRC/clag2z.c SRC/zlat2c.c SRC/zhfrk.c	\
+   SRC/ztfttp.c SRC/zlanhf.c SRC/zpftrf.c SRC/zpftri.c SRC/zpftrs.c	\
+   SRC/ztfsm.c SRC/ztftri.c SRC/ztfttr.c SRC/ztpttf.c SRC/ztpttr.c	\
+   SRC/ztrttf.c SRC/ztrttp.c SRC/zgeequb.c SRC/zgbequb.c SRC/zsyequb.c	\
+   SRC/zpoequb.c SRC/zheequb.c
 
 LAPACK = $(SLASRC) $(DLASRC) $(CLASRC) $(ZLASRC) $(SCLAUX) $(DZLAUX)	\
 	$(ALLAUX)
