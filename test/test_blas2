@@ -1,0 +1,9 @@
+#!/bin/sh
+
+test -d out || mkdir out
+(./test_blas2s < $CBLAPACKDIR/test/input/sblat2.in | tee out/sblat2.out) &&
+(./test_blas2d < $CBLAPACKDIR/test/input/dblat2.in | tee out/dblat2.out) &&
+(./test_blas2c < $CBLAPACKDIR/test/input/cblat2.in | tee out/cblat2.out) &&
+(./test_blas2z < $CBLAPACKDIR/test/input/zblat2.in | tee out/zblat2.out) &&
+exit 0
+exit 2

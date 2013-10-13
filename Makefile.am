@@ -2,6 +2,8 @@
 
 ACLOCAL_AMFLAGS = -I m4
 
+SUBDIRS = test
+
 # We define the global AM_CPPFLAGS as everything we compile includes from these
 # directories.
 AM_CPPFLAGS = -I$(top_srcdir)/include
