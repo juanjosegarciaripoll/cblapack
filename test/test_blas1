@@ -1,9 +1,8 @@
 #!/bin/sh
 
-test -d out || mkdir out
-(./test_blas1s | tee out/sblat1.out) &&
-(./test_blas1d | tee out/dblat1.out) &&
-(./test_blas1c | tee out/cblat1.out) &&
-(./test_blas1z | tee out/zblat1.out) &&
+./test_blas1s &&
+./test_blas1d &&
+./test_blas1c &&
+./test_blas1z &&
 exit 0
 exit 1

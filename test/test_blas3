@@ -1,9 +1,8 @@
 #!/bin/sh
 
-test -d out || mkdir out
-(./test_blas3s < $CBLAPACKDIR/test/input/sblat3.in | tee out/sblat3.out) &&
-(./test_blas3d < $CBLAPACKDIR/test/input/dblat3.in | tee out/dblat3.out) &&
-(./test_blas3c < $CBLAPACKDIR/test/input/cblat3.in | tee out/cblat3.out) &&
-(./test_blas3z < $CBLAPACKDIR/test/input/zblat3.in | tee out/zblat3.out) &&
+./test_blas3s < $CBLAPACKDIR/test/input/sblat3.in &&
+./test_blas3d < $CBLAPACKDIR/test/input/dblat3.in &&
+./test_blas3c < $CBLAPACKDIR/test/input/cblat3.in &&
+./test_blas3z < $CBLAPACKDIR/test/input/zblat3.in &&
 exit 0
 exit 3
