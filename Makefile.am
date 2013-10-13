@@ -4,9 +4,7 @@ ACLOCAL_AMFLAGS = -I m4
 
 # We define the global AM_CPPFLAGS as everything we compile includes from these
 # directories.
-AM_CPPFLAGS = \
-	-I$(top_srcdir) -I$(top_srcdir)/include \
-	-I$(top_builddir)/include $(F2C_CPPFLAGS)
+AM_CPPFLAGS = -I$(top_srcdir)/include
 
 #
 # Main library
