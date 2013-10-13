@@ -80,11 +80,9 @@ BLAS = $(ALLBLAS) $(BLAS1) $(BLAS2) $(BLAS3)
 # LAPACK component
 #
 ALLAUX = SRC/maxloc.c SRC/ilaenv.c SRC/ieeeck.c SRC/lsamen.c	\
-    SRC/xerbla.c xerbla_array.c SRC/iparmq.c SRC/ilaprec.c	\
-    SRC/ilatrans.c SRC/ilauplo.c SRC/iladiag.c chla_transtype.c	\
-    ../INSTALL/ilaver.c ../INSTALL/lsame.c
-
-ALLXAUX =
+    SRC/xerbla.c SRC/xerbla_array.c SRC/iparmq.c SRC/ilaprec.c	\
+    SRC/ilatrans.c SRC/ilauplo.c SRC/iladiag.c SRC/chla_transtype.c \
+    INSTALL/ilaver.c INSTALL/lsame.c
 
 SCLAUX = SRC/sbdsdc.c SRC/sbdsqr.c SRC/sdisna.c SRC/slabad.c		\
    SRC/slacpy.c SRC/sladiv.c SRC/slae2.c SRC/slaebz.c SRC/slaed0.c	\
@@ -100,7 +98,7 @@ SCLAUX = SRC/sbdsdc.c SRC/sbdsqr.c SRC/sdisna.c SRC/slabad.c		\
    SRC/slasq1.c SRC/slasq2.c SRC/slasq3.c SRC/slasq4.c SRC/slasq5.c	\
    SRC/slasq6.c SRC/slasr.c SRC/slasrt.c SRC/slassq.c SRC/slasv2.c	\
    SRC/spttrf.c SRC/sstebz.c SRC/sstedc.c SRC/ssteqr.c SRC/ssterf.c	\
-   SRC/slaisnan.c SRC/sisnan.c ../INSTALL/slamch.c ../INSTALL/second.c
+   SRC/slaisnan.c SRC/sisnan.c INSTALL/slamch.c INSTALL/second.c
 
 DZLAUX = SRC/dbdsdc.c SRC/dbdsqr.c SRC/ddisna.c SRC/dlabad.c		\
    SRC/dlacpy.c SRC/dladiv.c SRC/dlae2.c SRC/dlaebz.c SRC/dlaed0.c	\
@@ -116,7 +114,7 @@ DZLAUX = SRC/dbdsdc.c SRC/dbdsqr.c SRC/ddisna.c SRC/dlabad.c		\
    SRC/dlasq1.c SRC/dlasq2.c SRC/dlasq3.c SRC/dlasq4.c SRC/dlasq5.c	\
    SRC/dlasq6.c SRC/dlasr.c SRC/dlasrt.c SRC/dlassq.c SRC/dlasv2.c	\
    SRC/dpttrf.c SRC/dstebz.c SRC/dstedc.c SRC/dsteqr.c SRC/dsterf.c	\
-   SRC/dlaisnan.c SRC/disnan.c ../INSTALL/dlamch.c ../INSTALL/dsecnd.c
+   SRC/dlaisnan.c SRC/disnan.c INSTALL/dlamch.c INSTALL/dsecnd.c
 
 SLASRC = SRC/sgbbrd.c SRC/sgbcon.c SRC/sgbequ.c SRC/sgbrfs.c		\
    SRC/sgbsv.c SRC/sgbsvx.c SRC/sgbtf2.c SRC/sgbtrf.c SRC/sgbtrs.c	\
