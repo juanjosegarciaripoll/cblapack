@@ -52,4 +52,40 @@ test_blas3c_LDADD = ../libcblapack.la -lf2c
 test_blas3z_SOURCES = BLAS/main.c BLAS/zblat3.c
 test_blas3z_LDADD = ../libcblapack.la -lf2c
 
+#
+# MATGEN library for generating test matrices
+#
+
+SCATGEN = MATGEN/slatm1.c MATGEN/slaran.c MATGEN/slarnd.c
+
+SMATGEN = MATGEN/slatms.c MATGEN/slatme.c MATGEN/slatmr.c		\
+   MATGEN/slatmt.c MATGEN/slagge.c MATGEN/slagsy.c MATGEN/slakf2.c	\
+   MATGEN/slarge.c MATGEN/slaror.c MATGEN/slarot.c MATGEN/slatm2.c	\
+   MATGEN/slatm3.c MATGEN/slatm5.c MATGEN/slatm6.c MATGEN/slatm7.c	\
+   MATGEN/slahilb.c
+
+CMATGEN = MATGEN/clatms.c MATGEN/clatme.c MATGEN/clatmr.c		\
+   MATGEN/clatmt.c MATGEN/clagge.c MATGEN/claghe.c MATGEN/clagsy.c	\
+   MATGEN/clakf2.c MATGEN/clarge.c MATGEN/claror.c MATGEN/clarot.c	\
+   MATGEN/clatm1.c MATGEN/clarnd.c MATGEN/clatm2.c MATGEN/clatm3.c	\
+   MATGEN/clatm5.c MATGEN/clatm6.c MATGEN/clahilb.c
+
+DZATGEN = MATGEN/dlatm1.c MATGEN/dlaran.c MATGEN/dlarnd.c
+
+DMATGEN = MATGEN/dlatms.c MATGEN/dlatme.c MATGEN/dlatmr.c		\
+   MATGEN/dlatmt.c MATGEN/dlagge.c MATGEN/dlagsy.c MATGEN/dlakf2.c	\
+   MATGEN/dlarge.c MATGEN/dlaror.c MATGEN/dlarot.c MATGEN/dlatm2.c	\
+   MATGEN/dlatm3.c MATGEN/dlatm5.c MATGEN/dlatm6.c MATGEN/dlatm7.c	\
+   MATGEN/dlahilb.c
+
+ZMATGEN = MATGEN/zlatms.c MATGEN/zlatme.c MATGEN/zlatmr.c		\
+   MATGEN/zlatmt.c MATGEN/zlagge.c MATGEN/zlaghe.c MATGEN/zlagsy.c	\
+   MATGEN/zlakf2.c MATGEN/zlarge.c MATGEN/zlaror.c MATGEN/zlarot.c	\
+   MATGEN/zlatm1.c MATGEN/zlarnd.c MATGEN/zlatm2.c MATGEN/zlatm3.c	\
+   MATGEN/zlatm5.c MATGEN/zlatm6.c MATGEN/zlahilb.c
+
+noinst_LIBRARIES = libtmglib.a
+libtmglib_a_SOURCES = $(SMATGEN) $(CMATGEN) $(SCATGEN) $(DMATGEN)	\
+	$(ZMATGEN) $(DZATGEN)
+
 CLEANFILES = out/*.out
