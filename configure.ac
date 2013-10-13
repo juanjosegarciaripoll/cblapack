@@ -12,6 +12,7 @@ AC_PREREQ(2.59)
 AC_CONFIG_SRCDIR([./README.md])		dnl Unique file where sources are
 AC_CONFIG_MACRO_DIR([m4])		dnl Additional macro directories
 AC_CONFIG_FILES([Makefile])
+AC_CONFIG_AUX_DIR([config_aux])
 
 #
 # Initialize Automake, minimal version 1.9, with options to make it less
@@ -24,6 +25,9 @@ AM_INIT_AUTOMAKE([1.9 foreign dist-bzip2 dist-zip subdir-objects])
 AC_PROG_CC
 AC_LANG([C])
 AC_PROG_LIBTOOL
+
+# libf2c must be available
+AC_CHECK_HEADER([f2c.h],[],[AC_MSG_ERROR([Unable to find f2c.h])])
 
 # Compiler features
 AC_C_INLINE
