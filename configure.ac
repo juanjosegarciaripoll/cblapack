@@ -29,7 +29,4 @@ AC_PROG_LIBTOOL
 # libf2c must be available
 AC_CHECK_HEADER([f2c.h],[],[AC_MSG_ERROR([Unable to find f2c.h])])
 
-# Compiler features
-AC_C_INLINE
-
 AC_OUTPUT
