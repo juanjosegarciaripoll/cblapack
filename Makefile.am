@@ -36,7 +36,7 @@ BLAS1 = BLAS/SRC/isamax.c BLAS/SRC/sasum.c BLAS/SRC/saxpy.c	\
 	BLAS/SRC/izamax.c BLAS/SRC/zaxpy.c BLAS/SRC/zcopy.c	\
 	BLAS/SRC/zdotc.c BLAS/SRC/zdotu.c BLAS/SRC/zdscal.c	\
 	BLAS/SRC/zrotg.c BLAS/SRC/zscal.c BLAS/SRC/zswap.c	\
-	BLAS/SRC/zdroto.c BLAS/SRC/isamax.c BLAS/SRC/sasum.c	\
+	BLAS/SRC/zdrot.c BLAS/SRC/isamax.c BLAS/SRC/sasum.c	\
 	BLAS/SRC/saxpy.c BLAS/SRC/scopy.c BLAS/SRC/snrm2.c	\
 	BLAS/SRC/sscal.c BLAS/SRC/idamax.c BLAS/SRC/dasum.c	\
 	BLAS/SRC/daxpy.c BLAS/SRC/dcopy.c BLAS/SRC/dnrm2.c	\
