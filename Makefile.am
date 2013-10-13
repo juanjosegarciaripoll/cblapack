@@ -20,7 +20,7 @@ lib_LTLIBRARIES = libcblapack.la
 ALLBLAS = BLAS/SRC/lsame.c BLAS/SRC/xerbla.c BLAS/SRC/xerbla_array.c
 
 BLAS1 = BLAS/SRC/isamax.c BLAS/SRC/sasum.c BLAS/SRC/saxpy.c	\
-	BLAS/SRC/scopy.c BLAS/SRCs/dot.c BLAS/SRC/snrm2.c	\
+	BLAS/SRC/scopy.c BLAS/SRC/sdot.c BLAS/SRC/snrm2.c	\
 	BLAS/SRC/srot.c BLAS/SRC/srotg.c BLAS/SRC/sscal.c	\
 	BLAS/SRC/sswap.c BLAS/SRC/sdsdot.c BLAS/SRC/srotmg.c	\
 	BLAS/SRC/srotm.c BLAS/SRC/scabs1.c BLAS/SRC/scasum.c	\
