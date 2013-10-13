@@ -1,2 +1,3 @@
 #!/bin/sh
-(echo ZGEBAL: Testing the balancing of a COMPLEX16 general matrix; ./test_eigz < $CBLAPACKDIR/zbal.in) | tee out/test_zbal.out 2>&1
+echo ZGEBAL: Testing the balancing of a COMPLEX16 general matrix
+exec ./test_eigz < $CBLAPACKDIR/test/input/zbal.in

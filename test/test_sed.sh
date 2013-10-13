@@ -1,2 +1,3 @@
 #!/bin/sh
-(echo SEV: Testing REAL Nonsymmetric Eigenvalue Driver; ./test_eigs < $CBLAPACKDIR/sed.in) | tee out/test_sed.out 2>&1
+echo SEV: Testing REAL Nonsymmetric Eigenvalue Driver
+exec ./test_eigs < $CBLAPACKDIR/test/input/sed.in

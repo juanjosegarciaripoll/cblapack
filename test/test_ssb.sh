@@ -1,2 +1,3 @@
 #!/bin/sh
-(echo SSB: Testing REAL Symmetric Eigenvalue Problem routines; ./test_eigs < $CBLAPACKDIR/ssb.in) | tee out/test_ssb.out 2>&1
+echo SSB: Testing REAL Symmetric Eigenvalue Problem routines
+exec ./test_eigs < $CBLAPACKDIR/test/input/ssb.in

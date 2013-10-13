@@ -1,2 +1,3 @@
 #!/bin/sh
-(echo GQR: Testing Generalized QR and RQ factorization routines; ./test_eigd < $CBLAPACKDIR/gqr.in) | tee out/test_dgqr.out 2>&1
+echo GQR: Testing Generalized QR and RQ factorization routines
+exec ./test_eigd < $CBLAPACKDIR/test/input/gqr.in

@@ -1,2 +1,3 @@
 #!/bin/sh
-(echo Testing SINGLE-DOUBLE PRECISION LAPACK prototype linear equation routines; ./test_linstds < $CBLAPACKDIR/dstest.in) | tee out/test_dstest.out 2>&1
+echo Testing SINGLE-DOUBLE PRECISION LAPACK prototype linear equation routines
+exec ./test_linds < $CBLAPACKDIR/test/input/dstest.in

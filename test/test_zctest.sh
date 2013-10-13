@@ -1,2 +1,3 @@
 #!/bin/sh
-(echo Testing COMPLEX-COMPLEX16 LAPACK protoype linear equation routines; ./test_linstzc < $CBLAPACKDIR/zctest.in) | tee out/test_zctest.out 2>&1
+echo Testing COMPLEX-COMPLEX16 LAPACK protoype linear equation routines
+exec ./test_linzc < $CBLAPACKDIR/test/input/zctest.in

@@ -1,2 +1,3 @@
 #!/bin/sh
-(echo DSB: Testing DOUBLE PRECISION Symmetric Eigenvalue Problem routines; ./test_eigd < $CBLAPACKDIR/dsb.in) | tee out/test_dsb.out 2>&1
+echo DSB: Testing DOUBLE PRECISION Symmetric Eigenvalue Problem routines
+exec ./test_eigd < $CBLAPACKDIR/test/input/dsb.in

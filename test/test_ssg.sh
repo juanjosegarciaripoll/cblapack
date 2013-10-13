@@ -1,2 +1,3 @@
 #!/bin/sh
-(echo SSG: Testing REAL Symmetric Generalized Eigenvalue Problem routines; ./test_eigs < $CBLAPACKDIR/ssg.in) | tee out/test_ssg.out 2>&1
+echo SSG: Testing REAL Symmetric Generalized Eigenvalue Problem routines
+exec ./test_eigs < $CBLAPACKDIR/test/input/ssg.in

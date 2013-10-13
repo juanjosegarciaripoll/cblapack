@@ -1,2 +1,3 @@
 #!/bin/sh
-(echo GLM: Testing Generalized Linear Regression Model routines; ./test_eigz < $CBLAPACKDIR/glm.in) | tee out/test_zglm.out 2>&1
+echo GLM: Testing Generalized Linear Regression Model routines
+exec ./test_eigz < $CBLAPACKDIR/test/input/glm.in

@@ -1,2 +1,3 @@
 #!/bin/sh
-(echo CES: Testing COMPLEX Nonsymmetric Schur Form Driver; ./test_eigc < $CBLAPACKDIR/ced.in) | tee out/test_ced.out 2>&1
+echo CES: Testing COMPLEX Nonsymmetric Schur Form Driver
+exec ./test_eigc < $CBLAPACKDIR/test/input/ced.in

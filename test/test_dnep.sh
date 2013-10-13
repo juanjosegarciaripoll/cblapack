@@ -1,2 +1,3 @@
 #!/bin/sh
-(echo NEP: Testing Nonsymmetric Eigenvalue Problem routines; ./test_eigd < $CBLAPACKDIR/nep.in) | tee out/test_dnep.out 2>&1
+echo NEP: Testing Nonsymmetric Eigenvalue Problem routines
+exec ./test_eigd < $CBLAPACKDIR/test/input/nep.in

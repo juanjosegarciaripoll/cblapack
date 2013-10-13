@@ -1,2 +1,3 @@
 #!/bin/sh
-(echo DEC: Testing DOUBLE PRECISION Eigen Condition Routines; ./test_eigd < $CBLAPACKDIR/dec.in) | tee out/test_dec.out 2>&1
+echo DEC: Testing DOUBLE PRECISION Eigen Condition Routines
+exec ./test_eigd < $CBLAPACKDIR/test/input/dec.in

@@ -1,2 +1,3 @@
 #!/bin/sh
-(echo DGG: Testing DOUBLE PRECISION Nonsymmetric Generalized Eigenvalue Problem routines; ./test_eigd < $CBLAPACKDIR/dgg.in) | tee out/test_dgg.out 2>&1
+echo DGG: Testing DOUBLE PRECISION Nonsymmetric Generalized Eigenvalue Problem routines
+exec ./test_eigd < $CBLAPACKDIR/test/input/dgg.in

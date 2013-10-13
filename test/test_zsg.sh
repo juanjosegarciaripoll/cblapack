@@ -1,2 +1,3 @@
 #!/bin/sh
-(echo ZSG: Testing Symmetric Generalized Eigenvalue Problem routines; ./test_eigz < $CBLAPACKDIR/zsg.in) | tee out/test_zsg.out 2>&1
+echo ZSG: Testing Symmetric Generalized Eigenvalue Problem routines
+exec ./test_eigz < $CBLAPACKDIR/test/input/zsg.in

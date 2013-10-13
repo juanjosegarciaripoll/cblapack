@@ -1,2 +1,3 @@
 #!/bin/sh
-(echo ZGD: Testing COMPLEX16 Nonsymmetric Generalized Eigenvalue Problem driver routines; ./test_eigz < $CBLAPACKDIR/zgd.in) | tee out/test_zgd.out 2>&1
+echo ZGD: Testing COMPLEX16 Nonsymmetric Generalized Eigenvalue Problem driver routines
+exec ./test_eigz < $CBLAPACKDIR/test/input/zgd.in

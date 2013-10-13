@@ -1,2 +1,3 @@
 #!/bin/sh
-(echo SGGBAL: Testing the balancing of a pair of REAL general matrices; ./test_eigs < $CBLAPACKDIR/sgbal.in) | tee out/test_sgbal.out 2>&1
+echo SGGBAL: Testing the balancing of a pair of REAL general matrices
+exec ./test_eigs < $CBLAPACKDIR/test/input/sgbal.in

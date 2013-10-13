@@ -1,2 +1,3 @@
 #!/bin/sh
-(echo SEP: Testing Symmetric Eigenvalue Problem routines; ./test_eigs < $CBLAPACKDIR/sep.in) | tee out/test_ssep.out 2>&1
+echo SEP: Testing Symmetric Eigenvalue Problem routines
+exec ./test_eigs < $CBLAPACKDIR/test/input/sep.in

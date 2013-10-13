@@ -1,2 +1,3 @@
 #!/bin/sh
-(echo SGG: Testing REAL Nonsymmetric Generalized Eigenvalue Problem routines; ./test_eigs < $CBLAPACKDIR/sgg.in) | tee out/test_sgg.out 2>&1
+echo SGG: Testing REAL Nonsymmetric Generalized Eigenvalue Problem routines
+exec ./test_eigs < $CBLAPACKDIR/test/input/sgg.in
