@@ -21,7 +21,6 @@ integer icamax_(integer *n, complex *cx, integer *incx)
     /* Local variables */
     integer i__, ix;
     real smax;
-    extern doublereal scabs1_(complex *);
 
 /*     .. Scalar Arguments .. */
 /*     .. */

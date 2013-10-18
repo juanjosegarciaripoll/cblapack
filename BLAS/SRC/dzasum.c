@@ -22,7 +22,6 @@ doublereal dzasum_(integer *n, doublecomplex *zx, integer *incx)
     /* Local variables */
     integer i__, ix;
     doublereal stemp;
-    extern doublereal dcabs1_(doublecomplex *);
 
 /*     .. Scalar Arguments .. */
 /*     .. */

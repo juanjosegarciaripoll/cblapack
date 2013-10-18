@@ -23,7 +23,6 @@
     /* Local variables */
     integer i__, j, ix, jy, kx, info;
     complex temp;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
 
 /*     .. Scalar Arguments .. */
 /*     .. */

@@ -26,10 +26,8 @@
     integer i__, j, k, info;
     doublecomplex temp;
     logical lside;
-    extern logical lsame_(char *, char *);
     integer nrowa;
     logical upper;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     logical noconj, nounit;
 
 /*     .. Scalar Arguments .. */

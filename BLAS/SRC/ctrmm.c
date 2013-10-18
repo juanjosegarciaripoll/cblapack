@@ -25,11 +25,9 @@
     /* Local variables */
     integer i__, j, k, info;
     complex temp;
-    extern logical lsame_(char *, char *);
     logical lside;
     integer nrowa;
     logical upper;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     logical noconj, nounit;
 
 /*     .. Scalar Arguments .. */

@@ -22,7 +22,6 @@
 
     /* Local variables */
     integer i__, ix, iy;
-    extern doublereal scabs1_(complex *);
 
 /*     .. Scalar Arguments .. */
 /*     .. */

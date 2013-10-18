@@ -21,7 +21,6 @@ integer izamax_(integer *n, doublecomplex *zx, integer *incx)
     /* Local variables */
     integer i__, ix;
     doublereal smax;
-    extern doublereal dcabs1_(doublecomplex *);
 
 /*     .. Scalar Arguments .. */
 /*     .. */

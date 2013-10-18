@@ -24,10 +24,8 @@
     integer i__, j, k, info;
     real temp;
     logical lside;
-    extern logical lsame_(char *, char *);
     integer nrowa;
     logical upper;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     logical nounit;
 
 /*     .. Scalar Arguments .. */

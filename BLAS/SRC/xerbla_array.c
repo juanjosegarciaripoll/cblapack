@@ -21,7 +21,6 @@
 
     /* Local variables */
     integer i__;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     char srname[32];
 
 

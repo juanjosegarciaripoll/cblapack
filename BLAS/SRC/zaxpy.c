@@ -22,7 +22,6 @@
 
     /* Local variables */
     integer i__, ix, iy;
-    extern doublereal dcabs1_(doublecomplex *);
 
 /*     .. Scalar Arguments .. */
 /*     .. */
