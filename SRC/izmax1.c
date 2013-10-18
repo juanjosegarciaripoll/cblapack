@@ -22,15 +22,8 @@ integer izmax1_(integer *n, doublecomplex *cx, integer *incx)
     integer i__, ix;
     doublereal smax;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -57,17 +50,7 @@ integer izmax1_(integer *n, doublecomplex *cx, integer *incx)
 
 /* ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-
 /*     NEXT LINE IS THE ONLY MODIFICATION. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --cx;
@@ -99,7 +82,6 @@ integer izmax1_(integer *n, doublecomplex *cx, integer *incx)
 	smax = z_abs(&cx[ix]);
 L10:
 	ix += *incx;
-/* L20: */
     }
     return ret_val;
 

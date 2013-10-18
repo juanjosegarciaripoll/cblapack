@@ -32,15 +32,8 @@ static integer c__1 = 1;
     complex taui;
     logical notran;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -88,7 +81,6 @@ static integer c__1 = 1;
 
 /*  A       (input) COMPLEX array, dimension (LDA,K) */
 /*          The i-th column must contain the vector which defines the */
-/*          elementary reflector H(i), for i = 1,2,...,k, as returned by */
 /*          CGEQLF in the last k columns of its array argument A. */
 /*          A is modified by the routine but restored on exit. */
 
@@ -117,18 +109,6 @@ static integer c__1 = 1;
 /*          < 0: if INFO = -i, the i-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -229,7 +209,6 @@ static integer c__1 = 1;
 		c_offset], ldc, &work[1]);
 	i__3 = nq - *k + i__ + i__ * a_dim1;
 	a[i__3].r = aii.r, a[i__3].i = aii.i;
-/* L10: */
     }
     return 0;
 

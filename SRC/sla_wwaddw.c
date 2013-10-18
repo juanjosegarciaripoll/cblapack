@@ -22,7 +22,6 @@
     integer i__;
     real s;
 
-
 /*     -- LAPACK routine (version 3.2)                                 -- */
 /*     -- Contributed by James Demmel, Deaglan Halligan, Yozo Hida and -- */
 /*     -- Jason Riedy of Univ. of California Berkeley.                 -- */
@@ -30,12 +29,6 @@
 
 /*     -- LAPACK is a software package provided by Univ. of Tennessee, -- */
 /*     -- Univ. of California Berkeley and NAG Ltd.                    -- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*     Purpose */
 /*     ======= */
@@ -56,10 +49,6 @@
 
 /*     W      (input) REAL array, length N */
 /*            The vector to be added. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --w;
@@ -73,7 +62,6 @@
 	s = s + s - s;
 	y[i__] = x[i__] - s + w[i__] + y[i__];
 	x[i__] = s;
-/* L10: */
     }
     return 0;
 } /* sla_wwaddw__ */

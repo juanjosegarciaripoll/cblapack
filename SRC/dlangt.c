@@ -29,15 +29,8 @@ doublereal dlangt_(char *norm, integer *n, doublereal *dl, doublereal *d__,
     doublereal sum, scale;
     doublereal anorm;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -86,18 +79,6 @@ doublereal dlangt_(char *norm, integer *n, doublereal *dl, doublereal *d__,
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --du;
     --d__;
@@ -122,7 +103,6 @@ doublereal dlangt_(char *norm, integer *n, doublereal *dl, doublereal *d__,
 /* Computing MAX */
 	    d__2 = anorm, d__3 = (d__1 = du[i__], abs(d__1));
 	    anorm = max(d__2,d__3);
-/* L10: */
 	}
     } else if (lsame_(norm, "O") || *(unsigned char *)
 	    norm == '1') {
@@ -142,7 +122,6 @@ doublereal dlangt_(char *norm, integer *n, doublereal *dl, doublereal *d__,
 		d__4 = anorm, d__5 = (d__1 = d__[i__], abs(d__1)) + (d__2 = 
 			dl[i__], abs(d__2)) + (d__3 = du[i__ - 1], abs(d__3));
 		anorm = max(d__4,d__5);
-/* L20: */
 	    }
 	}
     } else if (lsame_(norm, "I")) {
@@ -162,7 +141,6 @@ doublereal dlangt_(char *norm, integer *n, doublereal *dl, doublereal *d__,
 		d__4 = anorm, d__5 = (d__1 = d__[i__], abs(d__1)) + (d__2 = 
 			du[i__], abs(d__2)) + (d__3 = dl[i__ - 1], abs(d__3));
 		anorm = max(d__4,d__5);
-/* L30: */
 	    }
 	}
     } else if (lsame_(norm, "F") || lsame_(norm, "E")) {

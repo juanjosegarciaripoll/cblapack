@@ -26,15 +26,8 @@
     integer i__, j;
     doublereal cj, large, small;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -98,14 +91,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -148,9 +133,7 @@
 		    i__4 = i__ + j * a_dim1;
 		    z__1.r = cj * a[i__4].r, z__1.i = cj * a[i__4].i;
 		    a[i__3].r = z__1.r, a[i__3].i = z__1.i;
-/* L10: */
 		}
-/* L20: */
 	    }
 	    *(unsigned char *)equed = 'C';
 	}
@@ -168,9 +151,7 @@
 		z__1.r = r__[i__4] * a[i__5].r, z__1.i = r__[i__4] * a[i__5]
 			.i;
 		a[i__3].r = z__1.r, a[i__3].i = z__1.i;
-/* L30: */
 	    }
-/* L40: */
 	}
 	*(unsigned char *)equed = 'R';
     } else {
@@ -187,9 +168,7 @@
 		i__4 = i__ + j * a_dim1;
 		z__1.r = d__1 * a[i__4].r, z__1.i = d__1 * a[i__4].i;
 		a[i__3].r = z__1.r, a[i__3].i = z__1.i;
-/* L50: */
 	    }
-/* L60: */
 	}
 	*(unsigned char *)equed = 'B';
     }

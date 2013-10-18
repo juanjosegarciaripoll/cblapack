@@ -32,15 +32,8 @@ static integer c__1 = 1;
     real akk, bkk;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -99,18 +92,6 @@ static integer c__1 = 1;
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -191,7 +172,6 @@ static integer c__1 = 1;
 		    i__2 = *n - k;
 		    clacgv_(&i__2, &a[k + (k + 1) * a_dim1], lda);
 		}
-/* L10: */
 	    }
 	} else {
 
@@ -233,7 +213,6 @@ static integer c__1 = 1;
 			    + (k + 1) * b_dim1], ldb, &a[k + 1 + k * a_dim1], 
 			    &c__1);
 		}
-/* L20: */
 	    }
 	}
     } else {
@@ -271,7 +250,6 @@ static integer c__1 = 1;
 		r__2 = bkk;
 		r__1 = akk * (r__2 * r__2);
 		a[i__2].r = r__1, a[i__2].i = 0.f;
-/* L30: */
 	    }
 	} else {
 
@@ -313,7 +291,6 @@ static integer c__1 = 1;
 		r__2 = bkk;
 		r__1 = akk * (r__2 * r__2);
 		a[i__2].r = r__1, a[i__2].i = 0.f;
-/* L40: */
 	    }
 	}
     }

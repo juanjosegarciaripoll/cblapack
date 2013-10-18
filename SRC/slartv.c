@@ -23,21 +23,13 @@
     integer i__, ic, ix, iy;
     real xi, yi;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
 
 /*  SLARTV applies a vector of real plane rotations to elements of the */
-/*  real vectors x and y. For i = 1,2,...,n */
 
 /*     ( x(i) ) := (  c(i)  s(i) ) ( x(i) ) */
 /*     ( y(i) )    ( -s(i)  c(i) ) ( y(i) ) */
@@ -73,10 +65,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --s;
     --c__;
@@ -96,7 +84,6 @@
 	ix += *incx;
 	iy += *incy;
 	ic += *incc;
-/* L10: */
     }
     return 0;
 

@@ -20,13 +20,8 @@ logical disnan_(doublereal *din)
 
     /* Local variables */
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -43,9 +38,6 @@ logical disnan_(doublereal *din)
 
 /*  ===================================================================== */
 
-/*  .. External Functions .. */
-/*  .. */
-/*  .. Executable Statements .. */
     ret_val = dlaisnan_(din, din);
     return ret_val;
 } /* disnan_ */

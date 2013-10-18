@@ -40,15 +40,8 @@ static integer c__1 = 1;
     real absakk;
     real colmax, rowmax;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -109,7 +102,6 @@ static integer c__1 = 1;
 /*         Company */
 
 /*  If UPLO = 'U', then A = U*D*U', where */
-/*     U = P(n)*U(n)* ... *P(k)U(k)* ..., */
 /*  i.e., U is a product of terms P(k)*U(k), where k decreases from n to */
 /*  1 in steps of 1 or 2, and D is a block diagonal matrix with 1-by-1 */
 /*  and 2-by-2 diagonal blocks D(k).  P(k) is a permutation matrix as */
@@ -126,7 +118,6 @@ static integer c__1 = 1;
 /*  and A(k,k), and v overwrites A(1:k-2,k-1:k). */
 
 /*  If UPLO = 'L', then A = L*D*L', where */
-/*     L = P(1)*L(1)* ... *P(k)*L(k)* ..., */
 /*  i.e., L is a product of terms P(k)*L(k), where k increases from 1 to */
 /*  n in steps of 1 or 2, and D is a block diagonal matrix with 1-by-1 */
 /*  and 2-by-2 diagonal blocks D(k).  P(k) is a permutation matrix as */
@@ -143,22 +134,6 @@ static integer c__1 = 1;
 /*  and A(k+1,k+1), and v overwrites A(k+2:n,k:k+1). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -256,7 +231,6 @@ L10:
 			jmax = j;
 		    }
 		    kx += j;
-/* L20: */
 		}
 		kpc = (imax - 1) * imax / 2 + 1;
 		if (imax > 1) {
@@ -316,7 +290,6 @@ L10:
 		    ap[i__2].r = ap[i__3].r, ap[i__2].i = ap[i__3].i;
 		    i__2 = kx;
 		    ap[i__2].r = t.r, ap[i__2].i = t.i;
-/* L30: */
 		}
 		i__1 = knc + kk - 1;
 		t.r = ap[i__1].r, t.i = ap[i__1].i;
@@ -427,13 +400,11 @@ L10:
 			    q__1.r = q__2.r - q__4.r, q__1.i = q__2.i - 
 				    q__4.i;
 			    ap[i__1].r = q__1.r, ap[i__1].i = q__1.i;
-/* L40: */
 			}
 			i__1 = j + (k - 1) * k / 2;
 			ap[i__1].r = wk.r, ap[i__1].i = wk.i;
 			i__1 = j + (k - 2) * (k - 1) / 2;
 			ap[i__1].r = wkm1.r, ap[i__1].i = wkm1.i;
-/* L50: */
 		    }
 
 		}
@@ -527,7 +498,6 @@ L60:
 			jmax = j;
 		    }
 		    kx = kx + *n - j;
-/* L70: */
 		}
 		kpc = npp - (*n - imax + 1) * (*n - imax + 2) / 2 + 1;
 		if (imax < *n) {
@@ -591,7 +561,6 @@ L60:
 		    ap[i__2].r = ap[i__3].r, ap[i__2].i = ap[i__3].i;
 		    i__2 = kx;
 		    ap[i__2].r = t.r, ap[i__2].i = t.i;
-/* L80: */
 		}
 		i__1 = knc;
 		t.r = ap[i__1].r, t.i = ap[i__1].i;
@@ -713,13 +682,11 @@ L60:
 			    q__1.r = q__2.r - q__4.r, q__1.i = q__2.i - 
 				    q__4.i;
 			    ap[i__3].r = q__1.r, ap[i__3].i = q__1.i;
-/* L90: */
 			}
 			i__2 = j + (k - 1) * ((*n << 1) - k) / 2;
 			ap[i__2].r = wk.r, ap[i__2].i = wk.i;
 			i__2 = j + k * ((*n << 1) - k - 1) / 2;
 			ap[i__2].r = wkp1.r, ap[i__2].i = wkp1.i;
-/* L100: */
 		    }
 		}
 	    }

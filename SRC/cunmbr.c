@@ -39,15 +39,8 @@ static integer c__2 = 2;
     integer lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -155,16 +148,6 @@ static integer c__2 = 2;
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 

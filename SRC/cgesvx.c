@@ -42,15 +42,8 @@
     logical rowequ;
     real rpvgrw;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -279,18 +272,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     a_dim1 = *lda;
     a_offset = 1 + a_dim1;
@@ -360,7 +341,6 @@
 /* Computing MAX */
 		r__1 = rcmax, r__2 = r__[j];
 		rcmax = dmax(r__1,r__2);
-/* L10: */
 	    }
 	    if (rcmin <= 0.f) {
 		*info = -11;
@@ -381,7 +361,6 @@
 /* Computing MAX */
 		r__1 = rcmax, r__2 = c__[j];
 		rcmax = dmax(r__1,r__2);
-/* L20: */
 	    }
 	    if (rcmin <= 0.f) {
 		*info = -12;
@@ -439,9 +418,7 @@
 		    q__1.r = r__[i__4] * b[i__5].r, q__1.i = r__[i__4] * b[
 			    i__5].i;
 		    b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L30: */
 		}
-/* L40: */
 	    }
 	}
     } else if (colequ) {
@@ -455,9 +432,7 @@
 		q__1.r = c__[i__4] * b[i__5].r, q__1.i = c__[i__4] * b[i__5]
 			.i;
 		b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L50: */
 	    }
-/* L60: */
 	}
     }
 
@@ -538,14 +513,11 @@
 		    q__1.r = c__[i__4] * x[i__5].r, q__1.i = c__[i__4] * x[
 			    i__5].i;
 		    x[i__3].r = q__1.r, x[i__3].i = q__1.i;
-/* L70: */
 		}
-/* L80: */
 	    }
 	    i__1 = *nrhs;
 	    for (j = 1; j <= i__1; ++j) {
 		ferr[j] /= colcnd;
-/* L90: */
 	    }
 	}
     } else if (rowequ) {
@@ -559,14 +531,11 @@
 		q__1.r = r__[i__4] * x[i__5].r, q__1.i = r__[i__4] * x[i__5]
 			.i;
 		x[i__3].r = q__1.r, x[i__3].i = q__1.i;
-/* L100: */
 	    }
-/* L110: */
 	}
 	i__1 = *nrhs;
 	for (j = 1; j <= i__1; ++j) {
 	    ferr[j] /= rowcnd;
-/* L120: */
 	}
     }
 

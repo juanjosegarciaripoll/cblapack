@@ -43,21 +43,14 @@ static integer c__1 = 1;
     real rsigma, clwdth;
     logical sawnan1, sawnan2, tryrrr1;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
 /* * */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
 
 /*  Given the initial representation L D L^T and its cluster of close */
-/*  eigenvalues (in a relative measure), W( CLSTRT ), W( CLSTRT+1 ), ... */
 /*  W( CLEND ), SLARRF finds a new relatively robust representation */
 /*  L D L^T - SIGMA I = L(+) D(+) L(+)^T such that at least one of the */
 /*  eigenvalues of L(+) D(+) L(+)^T is relatively isolated. */
@@ -130,18 +123,6 @@ static integer c__1 = 1;
 /*     Christof Voemel, University of California, Berkeley, USA */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --work;
@@ -241,7 +222,6 @@ L5:
 /* Computing MAX */
 	r__2 = max1, r__3 = (r__1 = dplus[i__ + 1], dabs(r__1));
 	max1 = dmax(r__2,r__3);
-/* L6: */
     }
     sawnan1 = sawnan1 || sisnan_(&max1);
     if (forcer || max1 <= growthbound && ! sawnan1) {
@@ -273,7 +253,6 @@ L5:
 /* Computing MAX */
 	r__2 = max2, r__3 = (r__1 = work[i__ + 1], dabs(r__1));
 	max2 = dmax(r__2,r__3);
-/* L7: */
     }
     sawnan2 = sawnan2 || sisnan_(&max2);
     if (forcer || max2 <= growthbound && ! sawnan2) {
@@ -336,7 +315,6 @@ L5:
 /* Computing MAX */
 		r__2 = tmp, r__3 = (r__1 = dplus[i__] * prod, dabs(r__1));
 		tmp = dmax(r__2,r__3);
-/* L15: */
 	    }
 	    rrr1 = tmp / (*spdiam * sqrt(znm2));
 	    if (rrr1 <= 8.f) {
@@ -363,7 +341,6 @@ L5:
 /* Computing MAX */
 		r__2 = tmp, r__3 = (r__1 = work[i__] * prod, dabs(r__1));
 		tmp = dmax(r__2,r__3);
-/* L16: */
 	    }
 	    rrr2 = tmp / (*spdiam * sqrt(znm2));
 	    if (rrr2 <= 8.f) {

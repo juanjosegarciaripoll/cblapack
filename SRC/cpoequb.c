@@ -24,7 +24,6 @@
     integer i__;
     real tmp, base, smin;
 
-
 /*     -- LAPACK routine (version 3.2)                                 -- */
 /*     -- Contributed by James Demmel, Deaglan Halligan, Yozo Hida and -- */
 /*     -- Jason Riedy of Univ. of California Berkeley.                 -- */
@@ -32,12 +31,6 @@
 
 /*     -- LAPACK is a software package provided by Univ. of Tennessee, -- */
 /*     -- Univ. of California Berkeley and NAG Ltd.                    -- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -84,22 +77,6 @@
 /*          > 0:  if INFO = i, the i-th diagonal element is nonpositive. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function Definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -151,7 +128,6 @@
 /* Computing MAX */
 	r__1 = *amax, r__2 = s[i__];
 	*amax = dmax(r__1,r__2);
-/* L10: */
     }
 
     if (smin <= 0.f) {
@@ -164,7 +140,6 @@
 		*info = i__;
 		return 0;
 	    }
-/* L20: */
 	}
     } else {
 
@@ -175,7 +150,6 @@
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    i__2 = (integer) (tmp * log(s[i__]));
 	    s[i__] = pow_ri(&base, &i__2);
-/* L30: */
 	}
 
 /*        Compute SCOND = min(S(I)) / max(S(I)). */

@@ -38,15 +38,8 @@ static doublereal c_b37 = -1.;
     integer iwork[8];
     doublereal splus;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -135,20 +128,6 @@ static doublereal c_b37 = -1.;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     z_dim1 = *ldz;
     z_offset = 1 + z_dim1;
@@ -208,7 +187,6 @@ static doublereal c_b37 = -1.;
 	    daxpy_(&i__2, &temp, &z__[j + 1 + j * z_dim1], &c__1, &rhs[j + 1], 
 		     &c__1);
 
-/* L10: */
 	}
 
 /*        Solve for U-part, look-ahead for RHS(N) = +-1. This is not done */
@@ -230,11 +208,9 @@ static doublereal c_b37 = -1.;
 	    for (k = i__ + 1; k <= i__1; ++k) {
 		xp[i__ - 1] -= xp[k - 1] * (z__[i__ + k * z_dim1] * temp);
 		rhs[i__] -= rhs[k] * (z__[i__ + k * z_dim1] * temp);
-/* L20: */
 	    }
 	    splus += (d__1 = xp[i__ - 1], abs(d__1));
 	    sminu += (d__1 = rhs[i__], abs(d__1));
-/* L30: */
 	}
 	if (splus > sminu) {
 	    dcopy_(n, xp, &c__1, &rhs[1], &c__1);

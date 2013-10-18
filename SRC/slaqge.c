@@ -24,15 +24,8 @@
     integer i__, j;
     real cj, large, small;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -96,14 +89,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -143,9 +128,7 @@
 		i__2 = *m;
 		for (i__ = 1; i__ <= i__2; ++i__) {
 		    a[i__ + j * a_dim1] = cj * a[i__ + j * a_dim1];
-/* L10: */
 		}
-/* L20: */
 	    }
 	    *(unsigned char *)equed = 'C';
 	}
@@ -158,9 +141,7 @@
 	    i__2 = *m;
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		a[i__ + j * a_dim1] = r__[i__] * a[i__ + j * a_dim1];
-/* L30: */
 	    }
-/* L40: */
 	}
 	*(unsigned char *)equed = 'R';
     } else {
@@ -173,9 +154,7 @@
 	    i__2 = *m;
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		a[i__ + j * a_dim1] = cj * r__[i__] * a[i__ + j * a_dim1];
-/* L50: */
 	    }
-/* L60: */
 	}
 	*(unsigned char *)equed = 'B';
     }

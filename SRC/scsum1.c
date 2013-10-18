@@ -23,15 +23,8 @@ doublereal scsum1_(integer *n, complex *cx, integer *incx)
     integer i__, nincx;
     real stemp;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -58,12 +51,6 @@ doublereal scsum1_(integer *n, complex *cx, integer *incx)
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --cx;
 
@@ -87,7 +74,6 @@ doublereal scsum1_(integer *n, complex *cx, integer *incx)
 /*        NEXT LINE MODIFIED. */
 
 	stemp += c_abs(&cx[i__]);
-/* L10: */
     }
     ret_val = stemp;
     return ret_val;
@@ -101,7 +87,6 @@ L20:
 /*        NEXT LINE MODIFIED. */
 
 	stemp += c_abs(&cx[i__]);
-/* L30: */
     }
     ret_val = stemp;
     return ret_val;

@@ -32,15 +32,8 @@ static integer c__1 = 1;
     integer jclast;
     logical nounit;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -96,16 +89,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -140,7 +123,6 @@ static integer c__1 = 1;
 		if (ap[i__2].r == 0.f && ap[i__2].i == 0.f) {
 		    return 0;
 		}
-/* L10: */
 	    }
 	} else {
 	    jj = 1;
@@ -151,7 +133,6 @@ static integer c__1 = 1;
 		    return 0;
 		}
 		jj = jj + *n - *info + 1;
-/* L20: */
 	    }
 	}
 	*info = 0;
@@ -184,7 +165,6 @@ static integer c__1 = 1;
 	    i__2 = j - 1;
 	    cscal_(&i__2, &ajj, &ap[jc], &c__1);
 	    jc += j;
-/* L30: */
 	}
 
     } else {
@@ -216,7 +196,6 @@ static integer c__1 = 1;
 	    }
 	    jclast = jc;
 	    jc = jc - *n + j - 2;
-/* L40: */
 	}
     }
 

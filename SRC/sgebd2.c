@@ -26,15 +26,8 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -81,8 +74,6 @@ static integer c__1 = 1;
 
 /*  E       (output) REAL array, dimension (min(M,N)-1) */
 /*          The off-diagonal elements of the bidiagonal matrix B: */
-/*          if m >= n, E(i) = A(i,i+1) for i = 1,2,...,n-1; */
-/*          if m < n, E(i) = A(i+1,i) for i = 1,2,...,m-1. */
 
 /*  TAUQ    (output) REAL array dimension (min(M,N)) */
 /*          The scalar factors of the elementary reflectors which */
@@ -146,16 +137,6 @@ static integer c__1 = 1;
 /*  the vector defining G(i). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters */
 
@@ -236,7 +217,6 @@ static integer c__1 = 1;
 	    } else {
 		taup[i__] = 0.f;
 	    }
-/* L10: */
 	}
     } else {
 
@@ -289,7 +269,6 @@ static integer c__1 = 1;
 	    } else {
 		tauq[i__] = 0.f;
 	    }
-/* L20: */
 	}
     }
     return 0;

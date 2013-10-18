@@ -32,15 +32,8 @@ static real c_b34 = 1.f;
     integer lwkmin, lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -138,18 +131,6 @@ static real c_b34 = 1.f;
 /*                be computed. */
 
 /*  =================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters */
 
@@ -267,7 +248,6 @@ static real c_b34 = 1.f;
     i__1 = *m + *p - *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	y[i__] = 0.f;
-/* L10: */
     }
 
 /*     Update d1 = d1 - T12*y2 */

@@ -45,15 +45,8 @@ static integer c__1 = 1;
     logical lquery;
     integer smlsiz;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -179,18 +172,6 @@ static integer c__1 = 1;
 /*     at Berkeley, USA */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -333,9 +314,7 @@ static integer c__1 = 1;
 		    i__3 = i__ + j * z_dim1;
 		    i__4 = (j - 1) * *n + i__;
 		    z__[i__3].r = rwork[i__4], z__[i__3].i = 0.f;
-/* L10: */
 		}
-/* L20: */
 	    }
 	    goto L70;
 	}
@@ -442,7 +421,6 @@ L40:
 			k = j;
 			p = d__[j];
 		    }
-/* L50: */
 		}
 		if (k != i__) {
 		    d__[k] = d__[i__];
@@ -450,7 +428,6 @@ L40:
 		    cswap_(n, &z__[i__ * z_dim1 + 1], &c__1, &z__[k * z_dim1 
 			    + 1], &c__1);
 		}
-/* L60: */
 	    }
 	}
     }

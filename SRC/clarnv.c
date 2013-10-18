@@ -26,15 +26,8 @@
     real u[128];
     integer il, iv;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -75,18 +68,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --x;
     --iseed;
@@ -115,7 +96,6 @@
 		i__5 = (i__ << 1) - 1;
 		q__1.r = u[i__4], q__1.i = u[i__5];
 		x[i__3].r = q__1.r, x[i__3].i = q__1.i;
-/* L10: */
 	    }
 	} else if (*idist == 2) {
 
@@ -128,7 +108,6 @@
 		r__2 = u[(i__ << 1) - 1] * 2.f - 1.f;
 		q__1.r = r__1, q__1.i = r__2;
 		x[i__3].r = q__1.r, x[i__3].i = q__1.i;
-/* L20: */
 	    }
 	} else if (*idist == 3) {
 
@@ -143,7 +122,6 @@
 		c_exp(&q__2, &q__3);
 		q__1.r = r__1 * q__2.r, q__1.i = r__1 * q__2.i;
 		x[i__3].r = q__1.r, x[i__3].i = q__1.i;
-/* L30: */
 	    }
 	} else if (*idist == 4) {
 
@@ -159,7 +137,6 @@
 		c_exp(&q__2, &q__3);
 		q__1.r = r__1 * q__2.r, q__1.i = r__1 * q__2.i;
 		x[i__3].r = q__1.r, x[i__3].i = q__1.i;
-/* L40: */
 	    }
 	} else if (*idist == 5) {
 
@@ -173,10 +150,8 @@
 		q__2.r = 0.f, q__2.i = r__1;
 		c_exp(&q__1, &q__2);
 		x[i__3].r = q__1.r, x[i__3].i = q__1.i;
-/* L50: */
 	    }
 	}
-/* L60: */
     }
     return 0;
 

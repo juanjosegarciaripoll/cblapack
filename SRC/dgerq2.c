@@ -23,15 +23,8 @@
     integer i__, k;
     doublereal aii;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -88,16 +81,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input arguments */
 
     /* Parameter adjustments */
@@ -142,7 +125,6 @@
 	dlarf_("Right", &i__1, &i__2, &a[*m - k + i__ + a_dim1], lda, &tau[
 		i__], &a[a_offset], lda, &work[1]);
 	a[*m - k + i__ + (*n - k + i__) * a_dim1] = aii;
-/* L10: */
     }
     return 0;
 

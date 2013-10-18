@@ -36,15 +36,8 @@ static doublereal c_b13 = 0.;
     integer kstep;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -93,18 +86,6 @@ static doublereal c_b13 = 0.;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -146,7 +127,6 @@ static doublereal c_b13 = 0.;
 	    if (ipiv[*info] > 0 && a[*info + *info * a_dim1] == 0.) {
 		return 0;
 	    }
-/* L10: */
 	}
     } else {
 
@@ -157,7 +137,6 @@ static doublereal c_b13 = 0.;
 	    if (ipiv[*info] > 0 && a[*info + *info * a_dim1] == 0.) {
 		return 0;
 	    }
-/* L20: */
 	}
     }
     *info = 0;

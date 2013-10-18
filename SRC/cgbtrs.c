@@ -31,15 +31,8 @@ static integer c__1 = 1;
     logical lnoti;
     logical notran;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -98,18 +91,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -162,7 +143,6 @@ static integer c__1 = 1;
 /*        Solve L*X = B, overwriting B with X. */
 
 /*        L is represented as a product of permutations and unit lower */
-/*        triangular matrices L = P(1) * L(1) * ... * P(n-1) * L(n-1), */
 /*        where each transformation L(i) is a rank-one modification of */
 /*        the identity matrix. */
 
@@ -179,7 +159,6 @@ static integer c__1 = 1;
 		q__1.r = -1.f, q__1.i = -0.f;
 		cgeru_(&lm, nrhs, &q__1, &ab[kd + 1 + j * ab_dim1], &c__1, &b[
 			j + b_dim1], ldb, &b[j + 1 + b_dim1], ldb);
-/* L10: */
 	    }
 	}
 
@@ -191,7 +170,6 @@ static integer c__1 = 1;
 	    i__2 = *kl + *ku;
 	    ctbsv_("Upper", "No transpose", "Non-unit", n, &i__2, &ab[
 		    ab_offset], ldab, &b[i__ * b_dim1 + 1], &c__1);
-/* L20: */
 	}
 
     } else if (lsame_(trans, "T")) {
@@ -206,7 +184,6 @@ static integer c__1 = 1;
 	    i__2 = *kl + *ku;
 	    ctbsv_("Upper", "Transpose", "Non-unit", n, &i__2, &ab[ab_offset], 
 		     ldab, &b[i__ * b_dim1 + 1], &c__1);
-/* L30: */
 	}
 
 /*        Solve L**T * X = B, overwriting B with X. */
@@ -224,7 +201,6 @@ static integer c__1 = 1;
 		if (l != j) {
 		    cswap_(nrhs, &b[l + b_dim1], ldb, &b[j + b_dim1], ldb);
 		}
-/* L40: */
 	    }
 	}
 
@@ -240,7 +216,6 @@ static integer c__1 = 1;
 	    i__2 = *kl + *ku;
 	    ctbsv_("Upper", "Conjugate transpose", "Non-unit", n, &i__2, &ab[
 		    ab_offset], ldab, &b[i__ * b_dim1 + 1], &c__1);
-/* L50: */
 	}
 
 /*        Solve L**H * X = B, overwriting B with X. */
@@ -260,7 +235,6 @@ static integer c__1 = 1;
 		if (l != j) {
 		    cswap_(nrhs, &b[l + b_dim1], ldb, &b[j + b_dim1], ldb);
 		}
-/* L60: */
 	    }
 	}
     }

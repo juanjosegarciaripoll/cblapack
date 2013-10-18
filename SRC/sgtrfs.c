@@ -41,17 +41,10 @@ static real c_b19 = 1.f;
     char transn[1], transt[1];
     real lstres;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
 
 /*     Modified to call SLACN2 in place of SLACON, 7 Feb 03, SJH. */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -148,20 +141,6 @@ static real c_b19 = 1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -212,7 +191,6 @@ static real c_b19 = 1.f;
 	for (j = 1; j <= i__1; ++j) {
 	    ferr[j] = 0.f;
 	    berr[j] = 0.f;
-/* L10: */
 	}
 	return 0;
     }
@@ -269,7 +247,6 @@ L20:
 			    dabs(r__2)) + (r__3 = d__[i__] * x[i__ + j * 
 			    x_dim1], dabs(r__3)) + (r__4 = du[i__] * x[i__ + 
 			    1 + j * x_dim1], dabs(r__4));
-/* L30: */
 		}
 		work[*n] = (r__1 = b[*n + j * b_dim1], dabs(r__1)) + (r__2 = 
 			dl[*n - 1] * x[*n - 1 + j * x_dim1], dabs(r__2)) + (
@@ -290,7 +267,6 @@ L20:
 			    dabs(r__2)) + (r__3 = d__[i__] * x[i__ + j * 
 			    x_dim1], dabs(r__3)) + (r__4 = dl[i__] * x[i__ + 
 			    1 + j * x_dim1], dabs(r__4));
-/* L40: */
 		}
 		work[*n] = (r__1 = b[*n + j * b_dim1], dabs(r__1)) + (r__2 = 
 			du[*n - 1] * x[*n - 1 + j * x_dim1], dabs(r__2)) + (
@@ -321,7 +297,6 @@ L20:
 			 / (work[i__] + safe1);
 		s = dmax(r__2,r__3);
 	    }
-/* L50: */
 	}
 	berr[j] = s;
 
@@ -375,7 +350,6 @@ L20:
 		work[i__] = (r__1 = work[*n + i__], dabs(r__1)) + nz * eps * 
 			work[i__] + safe1;
 	    }
-/* L60: */
 	}
 
 	kase = 0;
@@ -392,7 +366,6 @@ L70:
 		i__2 = *n;
 		for (i__ = 1; i__ <= i__2; ++i__) {
 		    work[*n + i__] = work[i__] * work[*n + i__];
-/* L80: */
 		}
 	    } else {
 
@@ -401,7 +374,6 @@ L70:
 		i__2 = *n;
 		for (i__ = 1; i__ <= i__2; ++i__) {
 		    work[*n + i__] = work[i__] * work[*n + i__];
-/* L90: */
 		}
 		sgttrs_(transn, n, &c__1, &dlf[1], &df[1], &duf[1], &du2[1], &
 			ipiv[1], &work[*n + 1], n, info);
@@ -417,13 +389,11 @@ L70:
 /* Computing MAX */
 	    r__2 = lstres, r__3 = (r__1 = x[i__ + j * x_dim1], dabs(r__1));
 	    lstres = dmax(r__2,r__3);
-/* L100: */
 	}
 	if (lstres != 0.f) {
 	    ferr[j] /= lstres;
 	}
 
-/* L110: */
     }
 
     return 0;

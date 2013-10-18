@@ -42,11 +42,7 @@ integer ilaenv_(integer *ispec, char *name__, char *opts, integer *n1,
     opts_len = strlen (opts);
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     January 2007 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -85,7 +81,6 @@ integer ilaenv_(integer *ispec, char *name__, char *opts, integer *n1,
 /*               eigenvalue routines (DEPRECATED) */
 /*          = 5: the minimum column dimension for blocking to be used; */
 /*               rectangular blocks must have dimension at least k by m, */
-/*               where k is given by ILAENV(2,...) and m by ILAENV(5,...) */
 /*          = 6: the crossover point for the SVD (when reducing an m by n */
 /*               matrix to bidiagonal form, if max(m,n)/min(m,n) exceeds */
 /*               this value, a QR factorization is used first to reduce */
@@ -141,14 +136,6 @@ integer ilaenv_(integer *ispec, char *name__, char *opts, integer *n1,
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     switch (*ispec) {
 	case 1:  goto L10;
 	case 2:  goto L10;
@@ -192,7 +179,6 @@ L10:
 		if (ic >= 97 && ic <= 122) {
 		    *(unsigned char *)&subnam[i__ - 1] = (char) (ic - 32);
 		}
-/* L20: */
 	    }
 	}
 
@@ -209,7 +195,6 @@ L10:
 			162 && ic <= 169) {
 		    *(unsigned char *)&subnam[i__ - 1] = (char) (ic + 64);
 		}
-/* L30: */
 	    }
 	}
 
@@ -224,7 +209,6 @@ L10:
 		if (ic >= 225 && ic <= 250) {
 		    *(unsigned char *)&subnam[i__ - 1] = (char) (ic - 32);
 		}
-/* L40: */
 	    }
 	}
     }

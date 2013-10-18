@@ -51,15 +51,8 @@ static doublereal c_b35 = 0.;
     doublereal orgnrm;
     integer givnum, givptr, nrwork, irwwrk, smlszp;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -157,18 +150,6 @@ static doublereal c_b35 = 0.;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -241,7 +222,6 @@ static doublereal c_b35 = 0.;
 		rwork[(i__ << 1) - 1] = cs;
 		rwork[i__ * 2] = sn;
 	    }
-/* L10: */
 	}
 	if (*nrhs > 1) {
 	    i__1 = *nrhs;
@@ -252,9 +232,7 @@ static doublereal c_b35 = 0.;
 		    sn = rwork[j * 2];
 		    zdrot_(&c__1, &b[j + i__ * b_dim1], &c__1, &b[j + 1 + i__ 
 			    * b_dim1], &c__1, &cs, &sn);
-/* L20: */
 		}
-/* L30: */
 	    }
 	}
     }
@@ -302,9 +280,7 @@ static doublereal c_b35 = 0.;
 		++j;
 		i__3 = jrow + jcol * b_dim1;
 		rwork[j] = b[i__3].r;
-/* L40: */
 	    }
-/* L50: */
 	}
 	dgemm_("T", "N", n, nrhs, n, &c_b10, &rwork[irwu], n, &rwork[irwb], n, 
 		 &c_b35, &rwork[irwrb], n);
@@ -315,9 +291,7 @@ static doublereal c_b35 = 0.;
 	    for (jrow = 1; jrow <= i__2; ++jrow) {
 		++j;
 		rwork[j] = d_imag(&b[jrow + jcol * b_dim1]);
-/* L60: */
 	    }
-/* L70: */
 	}
 	dgemm_("T", "N", n, nrhs, n, &c_b10, &rwork[irwu], n, &rwork[irwb], n, 
 		 &c_b35, &rwork[irwib], n);
@@ -334,9 +308,7 @@ static doublereal c_b35 = 0.;
 		i__5 = jimag;
 		z__1.r = rwork[i__4], z__1.i = rwork[i__5];
 		b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L80: */
 	    }
-/* L90: */
 	}
 
 	tol = rcnd * (d__1 = d__[idamax_(n, &d__[1], &c__1)], abs(d__1));
@@ -349,7 +321,6 @@ static doublereal c_b35 = 0.;
 			i__ + b_dim1], ldb, info);
 		++(*rank);
 	    }
-/* L100: */
 	}
 
 /*        Since B is complex, the following call to DGEMM is performed */
@@ -367,9 +338,7 @@ static doublereal c_b35 = 0.;
 		++j;
 		i__3 = jrow + jcol * b_dim1;
 		rwork[j] = b[i__3].r;
-/* L110: */
 	    }
-/* L120: */
 	}
 	dgemm_("T", "N", n, nrhs, n, &c_b10, &rwork[irwvt], n, &rwork[irwb], 
 		n, &c_b35, &rwork[irwrb], n);
@@ -380,9 +349,7 @@ static doublereal c_b35 = 0.;
 	    for (jrow = 1; jrow <= i__2; ++jrow) {
 		++j;
 		rwork[j] = d_imag(&b[jrow + jcol * b_dim1]);
-/* L130: */
 	    }
-/* L140: */
 	}
 	dgemm_("T", "N", n, nrhs, n, &c_b10, &rwork[irwvt], n, &rwork[irwb], 
 		n, &c_b35, &rwork[irwib], n);
@@ -399,9 +366,7 @@ static doublereal c_b35 = 0.;
 		i__5 = jimag;
 		z__1.r = rwork[i__4], z__1.i = rwork[i__5];
 		b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L150: */
 	    }
-/* L160: */
 	}
 
 /*        Unscale. */
@@ -456,7 +421,6 @@ static doublereal c_b35 = 0.;
 	if ((d__1 = d__[i__], abs(d__1)) < eps) {
 	    d__[i__] = d_sign(&eps, &d__[i__]);
 	}
-/* L170: */
     }
 
     i__1 = nm1;
@@ -528,9 +492,7 @@ static doublereal c_b35 = 0.;
 			++j;
 			i__4 = jrow + jcol * b_dim1;
 			rwork[j] = b[i__4].r;
-/* L180: */
 		    }
-/* L190: */
 		}
 		dgemm_("T", "N", &nsize, nrhs, &nsize, &c_b10, &rwork[u + st1]
 , n, &rwork[irwb], &nsize, &c_b35, &rwork[irwrb], &
@@ -542,9 +504,7 @@ static doublereal c_b35 = 0.;
 		    for (jrow = st; jrow <= i__3; ++jrow) {
 			++j;
 			rwork[j] = d_imag(&b[jrow + jcol * b_dim1]);
-/* L200: */
 		    }
-/* L210: */
 		}
 		dgemm_("T", "N", &nsize, nrhs, &nsize, &c_b10, &rwork[u + st1]
 , n, &rwork[irwb], &nsize, &c_b35, &rwork[irwib], &
@@ -562,9 +522,7 @@ static doublereal c_b35 = 0.;
 			i__6 = jimag;
 			z__1.r = rwork[i__5], z__1.i = rwork[i__6];
 			b[i__4].r = z__1.r, b[i__4].i = z__1.i;
-/* L220: */
 		    }
-/* L230: */
 		}
 
 		zlacpy_("A", &nsize, nrhs, &b[st + b_dim1], ldb, &work[bx + 
@@ -597,7 +555,6 @@ static doublereal c_b35 = 0.;
 	    }
 	    st = i__ + 1;
 	}
-/* L240: */
     }
 
 /*     Apply the singular values and treat the tiny ones as zero. */
@@ -618,7 +575,6 @@ static doublereal c_b35 = 0.;
 		    bx + i__ - 1], n, info);
 	}
 	d__[i__] = (d__1 = d__[i__], abs(d__1));
-/* L250: */
     }
 
 /*     Now apply back the right singular vectors. */
@@ -651,9 +607,7 @@ static doublereal c_b35 = 0.;
 		    ++jreal;
 		    i__4 = j + jrow;
 		    rwork[jreal] = work[i__4].r;
-/* L260: */
 		}
-/* L270: */
 	    }
 	    dgemm_("T", "N", &nsize, nrhs, &nsize, &c_b10, &rwork[vt + st1], 
 		    n, &rwork[irwb], &nsize, &c_b35, &rwork[irwrb], &nsize);
@@ -666,9 +620,7 @@ static doublereal c_b35 = 0.;
 		for (jrow = 1; jrow <= i__3; ++jrow) {
 		    ++jimag;
 		    rwork[jimag] = d_imag(&work[j + jrow]);
-/* L280: */
 		}
-/* L290: */
 	    }
 	    dgemm_("T", "N", &nsize, nrhs, &nsize, &c_b10, &rwork[vt + st1], 
 		    n, &rwork[irwb], &nsize, &c_b35, &rwork[irwib], &nsize);
@@ -685,9 +637,7 @@ static doublereal c_b35 = 0.;
 		    i__6 = jimag;
 		    z__1.r = rwork[i__5], z__1.i = rwork[i__6];
 		    b[i__4].r = z__1.r, b[i__4].i = z__1.i;
-/* L300: */
 		}
-/* L310: */
 	    }
 	} else {
 	    zlalsa_(&icmpq2, smlsiz, &nsize, nrhs, &work[bxst], n, &b[st + 
@@ -701,7 +651,6 @@ static doublereal c_b35 = 0.;
 		return 0;
 	    }
 	}
-/* L320: */
     }
 
 /*     Unscale and sort the singular values. */

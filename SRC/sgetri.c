@@ -32,15 +32,8 @@ static real c_b22 = 1.f;
     integer ldwork, lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -89,18 +82,6 @@ static real c_b22 = 1.f;
 /*                singular and its inverse could not be computed. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -177,7 +158,6 @@ static real c_b22 = 1.f;
 	    for (i__ = j + 1; i__ <= i__1; ++i__) {
 		work[i__] = a[i__ + j * a_dim1];
 		a[i__ + j * a_dim1] = 0.f;
-/* L10: */
 	    }
 
 /*           Compute current column of inv(A). */
@@ -188,7 +168,6 @@ static real c_b22 = 1.f;
 			+ 1], lda, &work[j + 1], &c__1, &c_b22, &a[j * a_dim1 
 			+ 1], &c__1);
 	    }
-/* L20: */
 	}
     } else {
 
@@ -210,9 +189,7 @@ static real c_b22 = 1.f;
 		for (i__ = jj + 1; i__ <= i__3; ++i__) {
 		    work[i__ + (jj - j) * ldwork] = a[i__ + jj * a_dim1];
 		    a[i__ + jj * a_dim1] = 0.f;
-/* L30: */
 		}
-/* L40: */
 	    }
 
 /*           Compute current block column of inv(A). */
@@ -225,7 +202,6 @@ static real c_b22 = 1.f;
 	    }
 	    strsm_("Right", "Lower", "No transpose", "Unit", n, &jb, &c_b22, &
 		    work[j], &ldwork, &a[j * a_dim1 + 1], lda);
-/* L50: */
 	}
     }
 
@@ -236,7 +212,6 @@ static real c_b22 = 1.f;
 	if (jp != j) {
 	    sswap_(n, &a[j * a_dim1 + 1], &c__1, &a[jp * a_dim1 + 1], &c__1);
 	}
-/* L60: */
     }
 
     work[1] = (real) iws;

@@ -20,12 +20,8 @@ integer iladiag_(char *diag)
 
     /* Local variables */
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     October 2008 */
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -45,11 +41,6 @@ integer iladiag_(char *diag)
 /*          = 'U':  A is unit triangular. */
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
     if (lsame_(diag, "N")) {
 	ret_val = 131;
     } else if (lsame_(diag, "U")) {

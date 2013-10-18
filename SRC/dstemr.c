@@ -64,15 +64,8 @@ static doublereal c_b18 = .001;
     doublereal smlnum;
     logical lquery, zquery;
 
-
 /*  -- LAPACK computational routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -209,13 +202,11 @@ static doublereal c_b18 = .001;
 /*          is split. ISUPPZ is only accessed when JOBZ is 'V' and N > 0. */
 
 /*  TRYRAC  (input/output) LOGICAL */
-/*          If TRYRAC.EQ..TRUE., indicates that the code should check whether */
 /*          the tridiagonal matrix defines its eigenvalues to high relative */
 /*          accuracy.  If so, the code uses relative-accuracy preserving */
 /*          algorithms that might be (a bit) slower depending on the matrix. */
 /*          If the matrix does not define its eigenvalues to high relative */
 /*          accuracy, the code can uses possibly faster algorithms. */
-/*          If TRYRAC.EQ..FALSE., the code is not required to guarantee */
 /*          relatively accurate eigenvalues and can use the fastest possible */
 /*          techniques. */
 /*          On exit, a .TRUE. TRYRAC will be set to .FALSE. if the matrix */
@@ -255,7 +246,6 @@ static doublereal c_b18 = .001;
 /*                the nonzero error code returned by DLARRE or */
 /*                DLARRV, respectively. */
 
-
 /*  Further Details */
 /*  =============== */
 
@@ -267,19 +257,6 @@ static doublereal c_b18 = .001;
 /*     Christof Voemel, University of California, Berkeley, USA */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -540,7 +517,6 @@ static doublereal c_b18 = .001;
 /* Computing 2nd power */
 	d__1 = e[j];
 	work[inde2 + j - 1] = d__1 * d__1;
-/* L5: */
     }
 /*     Set the tolerance parameters for bisection */
     if (! wantz) {
@@ -592,7 +568,6 @@ static doublereal c_b18 = .001;
 	for (j = 1; j <= i__1; ++j) {
 	    itmp = iwork[iindbl + j - 1];
 	    w[j] += e[iwork[iinspl + itmp - 1]];
-/* L20: */
 	}
     }
 
@@ -661,7 +636,6 @@ L39:
 			i__ = jj;
 			tmp = w[jj];
 		    }
-/* L50: */
 		}
 		if (i__ != 0) {
 		    w[i__] = w[j];
@@ -677,11 +651,9 @@ L39:
 			isuppz[j * 2] = itmp;
 		    }
 		}
-/* L60: */
 	    }
 	}
     }
-
 
     work[1] = (doublereal) lwmin;
     iwork[1] = liwmin;

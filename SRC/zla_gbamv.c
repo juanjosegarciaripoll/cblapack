@@ -30,7 +30,6 @@
     integer lenx, leny;
     doublereal safe1;
 
-
 /*     -- LAPACK routine (version 3.2)                                 -- */
 /*     -- Contributed by James Demmel, Deaglan Halligan, Yozo Hida and -- */
 /*     -- Jason Riedy of Univ. of California Berkeley.                 -- */
@@ -38,12 +37,6 @@
 
 /*     -- LAPACK is a software package provided by Univ. of Tennessee, -- */
 /*     -- Univ. of California Berkeley and NAG Ltd.                    -- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -140,25 +133,7 @@
 /*           Y. INCY must not be zero. */
 /*           Unchanged on exit. */
 
-
 /*  Level 2 Blas routine. */
-
-/*     .. */
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions */
-/*     .. */
-/*     .. Statement Function Definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 

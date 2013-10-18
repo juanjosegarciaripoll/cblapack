@@ -32,15 +32,8 @@ static real c_b15 = 1.f;
     integer j, jb, nb;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -88,18 +81,6 @@ static real c_b15 = 1.f;
 /*                completed. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -179,7 +160,6 @@ static real c_b15 = 1.f;
 			     &jb, &i__3, &c_b1, &a[j + j * a_dim1], lda, &a[j 
 			    + (j + jb) * a_dim1], lda);
 		}
-/* L10: */
 	    }
 
 	} else {
@@ -218,7 +198,6 @@ static real c_b15 = 1.f;
 , &i__3, &jb, &c_b1, &a[j + j * a_dim1], lda, &a[
 			    j + jb + j * a_dim1], lda);
 		}
-/* L20: */
 	    }
 	}
     }

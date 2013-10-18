@@ -30,15 +30,8 @@ static integer c__1 = 1;
     integer i__, j;
     doublereal temp;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -109,16 +102,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -180,7 +163,6 @@ static integer c__1 = 1;
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	dlamda[i__] = dlamc3_(&dlamda[i__], &dlamda[i__]) - dlamda[i__];
-/* L10: */
     }
 
     i__1 = *kstop;
@@ -193,7 +175,6 @@ static integer c__1 = 1;
 	if (*info != 0) {
 	    goto L120;
 	}
-/* L20: */
     }
 
     if (*k == 1 || *k == 2) {
@@ -202,9 +183,7 @@ static integer c__1 = 1;
 	    i__2 = *k;
 	    for (j = 1; j <= i__2; ++j) {
 		s[j + i__ * s_dim1] = q[j + i__ * q_dim1];
-/* L30: */
 	    }
-/* L40: */
 	}
 	goto L120;
     }
@@ -222,20 +201,16 @@ static integer c__1 = 1;
 	i__2 = j - 1;
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    w[i__] *= q[i__ + j * q_dim1] / (dlamda[i__] - dlamda[j]);
-/* L50: */
 	}
 	i__2 = *k;
 	for (i__ = j + 1; i__ <= i__2; ++i__) {
 	    w[i__] *= q[i__ + j * q_dim1] / (dlamda[i__] - dlamda[j]);
-/* L60: */
 	}
-/* L70: */
     }
     i__1 = *k;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	d__1 = sqrt(-w[i__]);
 	w[i__] = d_sign(&d__1, &s[i__ + s_dim1]);
-/* L80: */
     }
 
 /*     Compute eigenvectors of the modified rank-1 modification. */
@@ -245,15 +220,12 @@ static integer c__1 = 1;
 	i__2 = *k;
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    q[i__ + j * q_dim1] = w[i__] / q[i__ + j * q_dim1];
-/* L90: */
 	}
 	temp = dnrm2_(k, &q[j * q_dim1 + 1], &c__1);
 	i__2 = *k;
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    s[i__ + j * s_dim1] = q[i__ + j * q_dim1] / temp;
-/* L100: */
 	}
-/* L110: */
     }
 
 L120:

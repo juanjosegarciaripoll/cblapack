@@ -29,15 +29,8 @@ doublereal dlansp_(char *norm, char *uplo, integer *n, doublereal *ap,
     doublereal sum, absa, scale;
     doublereal value;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -94,18 +87,6 @@ doublereal dlansp_(char *norm, char *uplo, integer *n, doublereal *ap,
 
 /* ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --work;
     --ap;
@@ -127,10 +108,8 @@ doublereal dlansp_(char *norm, char *uplo, integer *n, doublereal *ap,
 /* Computing MAX */
 		    d__2 = value, d__3 = (d__1 = ap[i__], abs(d__1));
 		    value = max(d__2,d__3);
-/* L10: */
 		}
 		k += j;
-/* L20: */
 	    }
 	} else {
 	    k = 1;
@@ -141,10 +120,8 @@ doublereal dlansp_(char *norm, char *uplo, integer *n, doublereal *ap,
 /* Computing MAX */
 		    d__2 = value, d__3 = (d__1 = ap[i__], abs(d__1));
 		    value = max(d__2,d__3);
-/* L30: */
 		}
 		k = k + *n - j + 1;
-/* L40: */
 	    }
 	}
     } else if (lsame_(norm, "I") || lsame_(norm, "O") || *(unsigned char *)norm == '1') {
@@ -163,24 +140,20 @@ doublereal dlansp_(char *norm, char *uplo, integer *n, doublereal *ap,
 		    sum += absa;
 		    work[i__] += absa;
 		    ++k;
-/* L50: */
 		}
 		work[j] = sum + (d__1 = ap[k], abs(d__1));
 		++k;
-/* L60: */
 	    }
 	    i__1 = *n;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 /* Computing MAX */
 		d__1 = value, d__2 = work[i__];
 		value = max(d__1,d__2);
-/* L70: */
 	    }
 	} else {
 	    i__1 = *n;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 		work[i__] = 0.;
-/* L80: */
 	    }
 	    i__1 = *n;
 	    for (j = 1; j <= i__1; ++j) {
@@ -192,10 +165,8 @@ doublereal dlansp_(char *norm, char *uplo, integer *n, doublereal *ap,
 		    sum += absa;
 		    work[i__] += absa;
 		    ++k;
-/* L90: */
 		}
 		value = max(value,sum);
-/* L100: */
 	    }
 	}
     } else if (lsame_(norm, "F") || lsame_(norm, "E")) {
@@ -211,7 +182,6 @@ doublereal dlansp_(char *norm, char *uplo, integer *n, doublereal *ap,
 		i__2 = j - 1;
 		dlassq_(&i__2, &ap[k], &c__1, &scale, &sum);
 		k += j;
-/* L110: */
 	    }
 	} else {
 	    i__1 = *n - 1;
@@ -219,7 +189,6 @@ doublereal dlansp_(char *norm, char *uplo, integer *n, doublereal *ap,
 		i__2 = *n - j;
 		dlassq_(&i__2, &ap[k], &c__1, &scale, &sum);
 		k = k + *n - j + 1;
-/* L120: */
 	    }
 	}
 	sum *= 2;
@@ -244,7 +213,6 @@ doublereal dlansp_(char *norm, char *uplo, integer *n, doublereal *ap,
 	    } else {
 		k = k + *n - i__ + 1;
 	    }
-/* L130: */
 	}
 	value = scale * sqrt(sum);
     }

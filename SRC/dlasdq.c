@@ -35,15 +35,8 @@ static integer c__1 = 1;
     integer iuplo;
     logical rotate;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -161,18 +154,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -246,7 +227,6 @@ static integer c__1 = 1;
 		work[i__] = cs;
 		work[*n + i__] = sn;
 	    }
-/* L10: */
 	}
 	dlartg_(&d__[*n], &e[*n], &cs, &sn, &r__);
 	d__[*n] = r__;
@@ -280,7 +260,6 @@ static integer c__1 = 1;
 		work[i__] = cs;
 		work[*n + i__] = sn;
 	    }
-/* L20: */
 	}
 
 /*        If matrix (N+1)-by-N lower bidiagonal, one additional */
@@ -339,7 +318,6 @@ static integer c__1 = 1;
 		isub = j;
 		smin = d__[j];
 	    }
-/* L30: */
 	}
 	if (isub != i__) {
 
@@ -360,7 +338,6 @@ static integer c__1 = 1;
 			;
 	    }
 	}
-/* L40: */
     }
 
     return 0;

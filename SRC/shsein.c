@@ -44,15 +44,8 @@ static logical c_true = TRUE_;
     logical rightv, fromqr;
     real smlnum;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -96,12 +89,10 @@ static logical c_true = TRUE_;
 /*  SELECT  (input/output) LOGICAL array, dimension (N) */
 /*          Specifies the eigenvectors to be computed. To select the */
 /*          real eigenvector corresponding to a real eigenvalue WR(j), */
-/*          SELECT(j) must be set to .TRUE.. To select the complex */
 /*          eigenvector corresponding to a complex eigenvalue */
 /*          (WR(j),WI(j)), with complex conjugate (WR(j+1),WI(j+1)), */
 /*          either SELECT(j) or SELECT(j+1) or both must be set to */
 /*          .TRUE.; then on exit SELECT(j) is .TRUE. and SELECT(j+1) is */
-/*          .FALSE.. */
 
 /*  N       (input) INTEGER */
 /*          The order of the matrix H.  N >= 0. */
@@ -202,18 +193,6 @@ static logical c_true = TRUE_;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Decode and test the input parameters. */
 
     /* Parameter adjustments */
@@ -265,7 +244,6 @@ static logical c_true = TRUE_;
 		}
 	    }
 	}
-/* L10: */
     }
 
     *info = 0;
@@ -340,7 +318,6 @@ static logical c_true = TRUE_;
 		    if (h__[i__ + (i__ - 1) * h_dim1] == 0.f) {
 			goto L30;
 		    }
-/* L20: */
 		}
 L30:
 		kl = i__;
@@ -350,7 +327,6 @@ L30:
 			if (h__[i__ + 1 + i__ * h_dim1] == 0.f) {
 			    goto L50;
 			}
-/* L40: */
 		    }
 L50:
 		    kr = i__;
@@ -387,7 +363,6 @@ L60:
 		    wkr += eps3;
 		    goto L60;
 		}
-/* L70: */
 	    }
 	    wr[k] = wkr;
 
@@ -421,13 +396,11 @@ L60:
 		i__2 = kl - 1;
 		for (i__ = 1; i__ <= i__2; ++i__) {
 		    vl[i__ + ksr * vl_dim1] = 0.f;
-/* L80: */
 		}
 		if (pair) {
 		    i__2 = kl - 1;
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			vl[i__ + ksi * vl_dim1] = 0.f;
-/* L90: */
 		    }
 		}
 	    }
@@ -454,13 +427,11 @@ L60:
 		i__2 = *n;
 		for (i__ = kr + 1; i__ <= i__2; ++i__) {
 		    vr[i__ + ksr * vr_dim1] = 0.f;
-/* L100: */
 		}
 		if (pair) {
 		    i__2 = *n;
 		    for (i__ = kr + 1; i__ <= i__2; ++i__) {
 			vr[i__ + ksi * vr_dim1] = 0.f;
-/* L110: */
 		    }
 		}
 	    }
@@ -471,7 +442,6 @@ L60:
 		++ksr;
 	    }
 	}
-/* L120: */
     }
 
     return 0;

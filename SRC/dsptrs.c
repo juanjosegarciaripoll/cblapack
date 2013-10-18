@@ -36,15 +36,8 @@ static doublereal c_b19 = 1.;
     doublereal denom;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -90,18 +83,6 @@ static doublereal c_b19 = 1.;
 /*          < 0: if INFO = -i, the i-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --ap;
@@ -210,7 +191,6 @@ L10:
 		bk = b[k + j * b_dim1] / akm1k;
 		b[k - 1 + j * b_dim1] = (ak * bkm1 - bk) / denom;
 		b[k + j * b_dim1] = (akm1 * bk - bkm1) / denom;
-/* L20: */
 	    }
 	    kc = kc - k + 1;
 	    k += -2;
@@ -361,7 +341,6 @@ L60:
 		bk = b[k + 1 + j * b_dim1] / akm1k;
 		b[k + j * b_dim1] = (ak * bkm1 - bk) / denom;
 		b[k + 1 + j * b_dim1] = (akm1 * bk - bkm1) / denom;
-/* L70: */
 	    }
 	    kc = kc + (*n - k << 1) + 1;
 	    k += 2;

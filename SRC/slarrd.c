@@ -52,16 +52,9 @@ static integer c__0 = 0;
     integer idiscu;
     logical ncnvrg, toofew;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2.1)                        -- */
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
 /*  -- April 2009                                                      -- */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -248,20 +241,6 @@ static integer c__0 = 0;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --iwork;
     --work;
@@ -359,7 +338,6 @@ static integer c__0 = 0;
 /* Computing MAX */
 	r__1 = gu, r__2 = gers[i__ * 2];
 	gu = dmax(r__1,r__2);
-/* L5: */
     }
 /*     Compute global Gerschgorin bounds and spectral diameter */
 /* Computing MAX */
@@ -530,7 +508,6 @@ static integer c__0 = 0;
 /* Computing MAX */
 		r__1 = gu, r__2 = gers[j * 2];
 		gu = dmax(r__1,r__2);
-/* L40: */
 	    }
 /*           [JAN/28/2009] */
 /*           change SPDIAM by TNORM in lines 2 and 3 thereafter */
@@ -605,9 +582,7 @@ static integer c__0 = 0;
 		    werr[je] = tmp2;
 		    indexw[je] = je - iwoff;
 		    iblock[je] = ib;
-/* L50: */
 		}
-/* L60: */
 	    }
 
 	    *m += im;
@@ -615,7 +590,6 @@ static integer c__0 = 0;
 L70:
 	;
     }
-/*     If RANGE='I', then (WL,WU) contains eigenvalues NWL+1,...,NWU */
 /*     If NWL+1 < IL or NWU > IU, discard extra eigenvalues. */
     if (irange == 3) {
 	idiscl = *il - 1 - nwl;
@@ -636,7 +610,6 @@ L70:
 		    indexw[im] = indexw[je];
 		    iblock[im] = iblock[je];
 		}
-/* L80: */
 	    }
 	    *m = im;
 	}
@@ -654,7 +627,6 @@ L70:
 		    indexw[im] = indexw[je];
 		    iblock[im] = iblock[je];
 		}
-/* L81: */
 	    }
 	    jee = 0;
 	    i__1 = *m;
@@ -664,7 +636,6 @@ L70:
 		werr[jee] = werr[je];
 		indexw[jee] = indexw[je];
 		iblock[jee] = iblock[je];
-/* L82: */
 	    }
 	    *m = *m - im + 1;
 	}
@@ -686,10 +657,8 @@ L70:
 			    iw = je;
 			    wkill = w[je];
 			}
-/* L90: */
 		    }
 		    iblock[iw] = 0;
-/* L100: */
 		}
 	    }
 	    if (idiscu > 0) {
@@ -703,10 +672,8 @@ L70:
 			    iw = je;
 			    wkill = w[je];
 			}
-/* L110: */
 		    }
 		    iblock[iw] = 0;
-/* L120: */
 		}
 	    }
 /*           Now erase all eigenvalues with IBLOCK set to zero */
@@ -720,7 +687,6 @@ L70:
 		    indexw[im] = indexw[je];
 		    iblock[im] = iblock[je];
 		}
-/* L130: */
 	    }
 	    *m = im;
 	}
@@ -746,7 +712,6 @@ L70:
 		    ie = j;
 		    tmp1 = w[j];
 		}
-/* L140: */
 	    }
 	    if (ie != 0) {
 		tmp2 = werr[ie];
@@ -761,7 +726,6 @@ L70:
 		iblock[je] = itmp1;
 		indexw[je] = itmp2;
 	    }
-/* L150: */
 	}
     }
 

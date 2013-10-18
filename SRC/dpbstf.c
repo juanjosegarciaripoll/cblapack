@@ -31,15 +31,8 @@ static doublereal c_b9 = -1.;
     integer kld;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -127,18 +120,6 @@ static doublereal c_b9 = -1.;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -204,7 +185,6 @@ static doublereal c_b9 = -1.;
 	    dscal_(&km, &d__1, &ab[*kd + 1 - km + j * ab_dim1], &c__1);
 	    dsyr_("Upper", &km, &c_b9, &ab[*kd + 1 - km + j * ab_dim1], &c__1, 
 		     &ab[*kd + 1 + (j - km) * ab_dim1], &kld);
-/* L10: */
 	}
 
 /*        Factorize the updated submatrix A(1:m,1:m) as U**T*U. */
@@ -233,7 +213,6 @@ static doublereal c_b9 = -1.;
 		dsyr_("Upper", &km, &c_b9, &ab[*kd + (j + 1) * ab_dim1], &kld, 
 			 &ab[*kd + 1 + (j + 1) * ab_dim1], &kld);
 	    }
-/* L20: */
 	}
     } else {
 
@@ -261,7 +240,6 @@ static doublereal c_b9 = -1.;
 	    dscal_(&km, &d__1, &ab[km + 1 + (j - km) * ab_dim1], &kld);
 	    dsyr_("Lower", &km, &c_b9, &ab[km + 1 + (j - km) * ab_dim1], &kld, 
 		     &ab[(j - km) * ab_dim1 + 1], &kld);
-/* L30: */
 	}
 
 /*        Factorize the updated submatrix A(1:m,1:m) as U**T*U. */
@@ -290,7 +268,6 @@ static doublereal c_b9 = -1.;
 		dsyr_("Lower", &km, &c_b9, &ab[j * ab_dim1 + 2], &c__1, &ab[(
 			j + 1) * ab_dim1 + 1], &kld);
 	    }
-/* L40: */
 	}
     }
     return 0;

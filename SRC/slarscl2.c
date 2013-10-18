@@ -22,7 +22,6 @@
     /* Local variables */
     integer i__, j;
 
-
 /*     -- LAPACK routine (version 3.2.1)                               -- */
 /*     -- Contributed by James Demmel, Deaglan Halligan, Yozo Hida and -- */
 /*     -- Jason Riedy of Univ. of California Berkeley.                 -- */
@@ -30,12 +29,6 @@
 
 /*     -- LAPACK is a software package provided by Univ. of Tennessee, -- */
 /*     -- Univ. of California Berkeley and NAG Ltd.                    -- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -67,10 +60,6 @@
 /*     The leading dimension of the vector X. LDX >= 0. */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --d__;

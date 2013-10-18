@@ -26,15 +26,8 @@
     logical left;
     logical notran;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -84,7 +77,6 @@
 /*                               (LDA,M) if SIDE = 'L', */
 /*                               (LDA,N) if SIDE = 'R' */
 /*          The i-th row must contain the vector which defines the */
-/*          elementary reflector H(i), for i = 1,2,...,k, as returned by */
 /*          SGERQF in the last k rows of its array argument A. */
 /*          A is modified by the routine but restored on exit. */
 
@@ -111,18 +103,6 @@
 /*          < 0: if INFO = -i, the i-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -213,7 +193,6 @@
 	slarf_(side, &mi, &ni, &a[i__ + a_dim1], lda, &tau[i__], &c__[
 		c_offset], ldc, &work[1]);
 	a[i__ + (nq - *k + i__) * a_dim1] = aii;
-/* L10: */
     }
     return 0;
 

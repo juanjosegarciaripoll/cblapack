@@ -33,15 +33,8 @@
     doublereal right, width, dplus;
     integer olnint, maxitr;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -119,15 +112,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --iwork;
     --work;
@@ -201,7 +185,6 @@ L20:
 		if (dplus < 0.) {
 		    ++cnt;
 		}
-/* L30: */
 	    }
 	    if (cnt > i__ - 1) {
 		left -= werr[ii] * fac;
@@ -225,7 +208,6 @@ L50:
 		if (dplus < 0.) {
 		    ++cnt;
 		}
-/* L60: */
 	    }
 	    if (cnt < i__) {
 		right += werr[ii] * fac;
@@ -238,7 +220,6 @@ L50:
 	}
 	work[k - 1] = left;
 	work[k] = right;
-/* L75: */
     }
     savi1 = i1;
 
@@ -295,7 +276,6 @@ L80:
 	    if (dplus < 0.) {
 		++cnt;
 	    }
-/* L90: */
 	}
 	if (cnt <= i__ - 1) {
 	    work[k - 1] = mid;
@@ -314,7 +294,6 @@ L100:
 	goto L80;
     }
 
-
 /*     At this point, all the intervals have converged */
     i__1 = *ilast;
     for (i__ = savi1; i__ <= i__1; ++i__) {
@@ -325,7 +304,6 @@ L100:
 	    w[ii] = (work[k - 1] + work[k]) * .5;
 	    werr[ii] = work[k] - w[ii];
 	}
-/* L110: */
     }
 
     return 0;

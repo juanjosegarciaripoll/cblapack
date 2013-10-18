@@ -27,15 +27,8 @@ static complex c_b2 = {1.f,0.f};
     /* Local variables */
     logical nounit;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -100,18 +93,6 @@ static complex c_b2 = {1.f,0.f};
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -162,7 +143,6 @@ static complex c_b2 = {1.f,0.f};
 	    if (a[i__2].r == 0.f && a[i__2].i == 0.f) {
 		return 0;
 	    }
-/* L10: */
 	}
     }
     *info = 0;

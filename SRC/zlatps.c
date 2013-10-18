@@ -47,15 +47,8 @@ static doublereal c_b36 = .5;
     doublereal smlnum;
     logical nounit;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -146,7 +139,6 @@ static doublereal c_b36 = .5;
 /*  if A is lower triangular is */
 
 /*       x[1:n] := b[1:n] */
-/*       for j = 1, ..., n */
 /*            x(j) := x(j) / A(j,j) */
 /*            x[j+1:n] := x[j+1:n] - x(j) * A[j+1:n,j] */
 /*       end */
@@ -154,7 +146,6 @@ static doublereal c_b36 = .5;
 /*  Define bounds on the components of x after j iterations of the loop: */
 /*     M(j) = bound on x[1:j] */
 /*     G(j) = bound on x[j+1:n] */
-/*  Initially, let M(0) = 0 and G(0) = max{x(i), i=1,...,n}. */
 
 /*  Then for iteration j+1 we have */
 /*     M(j+1) <= G(j) / | A(j+1,j+1) | */
@@ -172,7 +163,6 @@ static doublereal c_b36 = .5;
 /*                                   1<=i< j */
 
 /*  Since |x(j)| <= M(j), we use the Level 2 BLAS routine ZTPSV if the */
-/*  reciprocal of the largest M(j), j=1,..,n, is larger than */
 /*  max(underflow, 1/overflow). */
 
 /*  The bound on x(j) is also used to determine when a step in the */
@@ -184,7 +174,6 @@ static doublereal c_b36 = .5;
 /*  Similarly, a row-wise scheme is used to solve A**T *x = b  or */
 /*  A**H *x = b.  The basic algorithm for A upper triangular is */
 
-/*       for j = 1, ..., n */
 /*            x(j) := ( b(j) - A[1:j-1,j]' * x[1:j-1] ) / A(j,j) */
 /*       end */
 
@@ -192,7 +181,6 @@ static doublereal c_b36 = .5;
 /*       G(j) = bound on ( b(i) - A[1:i-1,i]' * x[1:i-1] ), 1<=i<=j */
 /*       M(j) = bound on x(i), 1<=i<=j */
 
-/*  The initial values are G(0) = 0, M(0) = max{b(i), i=1,..,n}, and we */
 /*  add the constraint G(j) >= G(j-1) and M(j) >= M(j-1) for j >= 1. */
 /*  Then the bound on x(j) is */
 
@@ -205,22 +193,6 @@ static doublereal c_b36 = .5;
 /*  than max(underflow, 1/overflow). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --cnorm;
@@ -283,7 +255,6 @@ static doublereal c_b36 = .5;
 		i__2 = j - 1;
 		cnorm[j] = dzasum_(&i__2, &ap[ip], &c__1);
 		ip += j;
-/* L10: */
 	    }
 	} else {
 
@@ -295,7 +266,6 @@ static doublereal c_b36 = .5;
 		i__2 = *n - j;
 		cnorm[j] = dzasum_(&i__2, &ap[ip + 1], &c__1);
 		ip = ip + *n - j + 1;
-/* L20: */
 	    }
 	    cnorm[*n] = 0.;
 	}
@@ -324,7 +294,6 @@ static doublereal c_b36 = .5;
 	d__3 = xmax, d__4 = (d__1 = x[i__2].r / 2., abs(d__1)) + (d__2 = 
 		d_imag(&x[j]) / 2., abs(d__2));
 	xmax = max(d__3,d__4);
-/* L30: */
     }
     xbnd = xmax;
     if (notran) {
@@ -351,7 +320,6 @@ static doublereal c_b36 = .5;
 /*           A is non-unit triangular. */
 
 /*           Compute GROW = 1/G(j) and XBND = 1/M(j). */
-/*           Initially, G(0) = max{x(i), i=1,...,n}. */
 
 	    grow = .5 / max(xbnd,smlnum);
 	    xbnd = grow;
@@ -399,14 +367,11 @@ static doublereal c_b36 = .5;
 		}
 		ip += jinc * jlen;
 		--jlen;
-/* L40: */
 	    }
 	    grow = xbnd;
 	} else {
 
 /*           A is unit triangular. */
-
-/*           Compute GROW = 1/G(j), where G(0) = max{x(i), i=1,...,n}. */
 
 /* Computing MIN */
 	    d__1 = 1., d__2 = .5 / max(xbnd,smlnum);
@@ -424,7 +389,6 @@ static doublereal c_b36 = .5;
 /*              G(j) = G(j-1)*( 1 + CNORM(j) ) */
 
 		grow *= 1. / (cnorm[j] + 1.);
-/* L50: */
 	    }
 	}
 L60:
@@ -454,7 +418,6 @@ L60:
 /*           A is non-unit triangular. */
 
 /*           Compute GROW = 1/G(j) and XBND = 1/M(j). */
-/*           Initially, M(0) = max{x(i), i=1,...,n}. */
 
 	    grow = .5 / max(xbnd,smlnum);
 	    xbnd = grow;
@@ -497,14 +460,11 @@ L60:
 		}
 		++jlen;
 		ip += jinc * jlen;
-/* L70: */
 	    }
 	    grow = min(grow,xbnd);
 	} else {
 
 /*           A is unit triangular. */
-
-/*           Compute GROW = 1/G(j), where G(0) = max{x(i), i=1,...,n}. */
 
 /* Computing MIN */
 	    d__1 = 1., d__2 = .5 / max(xbnd,smlnum);
@@ -523,7 +483,6 @@ L60:
 
 		xj = cnorm[j] + 1.;
 		grow /= xj;
-/* L80: */
 	    }
 	}
 L90:
@@ -635,7 +594,6 @@ L90:
 		    for (i__ = 1; i__ <= i__3; ++i__) {
 			i__4 = i__;
 			x[i__4].r = 0., x[i__4].i = 0.;
-/* L100: */
 		    }
 		    i__3 = j;
 		    x[i__3].r = 1., x[i__3].i = 0.;
@@ -705,7 +663,6 @@ L110:
 		    }
 		    ip = ip + *n - j + 1;
 		}
-/* L120: */
 	    }
 
 	} else if (lsame_(trans, "T")) {
@@ -793,7 +750,6 @@ L110:
 			    z__1.r = csumj.r + z__2.r, z__1.i = csumj.i + 
 				    z__2.i;
 			    csumj.r = z__1.r, csumj.i = z__1.i;
-/* L130: */
 			}
 		    } else if (j < *n) {
 			i__3 = *n - j;
@@ -809,7 +765,6 @@ L110:
 			    z__1.r = csumj.r + z__2.r, z__1.i = csumj.i + 
 				    z__2.i;
 			    csumj.r = z__1.r, csumj.i = z__1.i;
-/* L140: */
 			}
 		    }
 		}
@@ -887,7 +842,6 @@ L110:
 			for (i__ = 1; i__ <= i__3; ++i__) {
 			    i__4 = i__;
 			    x[i__4].r = 0., x[i__4].i = 0.;
-/* L150: */
 			}
 			i__3 = j;
 			x[i__3].r = 1., x[i__3].i = 0.;
@@ -913,7 +867,6 @@ L160:
 		xmax = max(d__3,d__4);
 		++jlen;
 		ip += jinc * jlen;
-/* L170: */
 	    }
 
 	} else {
@@ -1000,7 +953,6 @@ L160:
 			    z__1.r = csumj.r + z__2.r, z__1.i = csumj.i + 
 				    z__2.i;
 			    csumj.r = z__1.r, csumj.i = z__1.i;
-/* L180: */
 			}
 		    } else if (j < *n) {
 			i__3 = *n - j;
@@ -1016,7 +968,6 @@ L160:
 			    z__1.r = csumj.r + z__2.r, z__1.i = csumj.i + 
 				    z__2.i;
 			    csumj.r = z__1.r, csumj.i = z__1.i;
-/* L190: */
 			}
 		    }
 		}
@@ -1093,7 +1044,6 @@ L160:
 			for (i__ = 1; i__ <= i__3; ++i__) {
 			    i__4 = i__;
 			    x[i__4].r = 0., x[i__4].i = 0.;
-/* L200: */
 			}
 			i__3 = j;
 			x[i__3].r = 1., x[i__3].i = 0.;
@@ -1119,7 +1069,6 @@ L210:
 		xmax = max(d__3,d__4);
 		++jlen;
 		ip += jinc * jlen;
-/* L220: */
 	    }
 	}
 	*scale /= tscal;

@@ -36,15 +36,8 @@
     integer infequ;
     doublereal smlnum;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -237,18 +230,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     a_dim1 = *lda;
     a_offset = 1 + a_dim1;
@@ -311,7 +292,6 @@
 /* Computing MAX */
 		d__1 = smax, d__2 = s[j];
 		smax = max(d__1,d__2);
-/* L10: */
 	    }
 	    if (smin <= 0.) {
 		*info = -10;
@@ -362,9 +342,7 @@
 		i__5 = i__ + j * b_dim1;
 		z__1.r = s[i__4] * b[i__5].r, z__1.i = s[i__4] * b[i__5].i;
 		b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L20: */
 	    }
-/* L30: */
 	}
     }
 
@@ -417,14 +395,11 @@
 		i__5 = i__ + j * x_dim1;
 		z__1.r = s[i__4] * x[i__5].r, z__1.i = s[i__4] * x[i__5].i;
 		x[i__3].r = z__1.r, x[i__3].i = z__1.i;
-/* L40: */
 	    }
-/* L50: */
 	}
 	i__1 = *nrhs;
 	for (j = 1; j <= i__1; ++j) {
 	    ferr[j] /= scond;
-/* L60: */
 	}
     }
 

@@ -22,8 +22,6 @@ integer smaxloc_(real *a, integer *dimm)
     integer i__;
     real smax;
 
-
-
     /* Parameter adjustments */
     --a;
 
@@ -36,7 +34,6 @@ integer smaxloc_(real *a, integer *dimm)
 	    smax = a[i__];
 	    ret_val = i__;
 	}
-/* L10: */
     }
     return ret_val;
 } /* smaxloc_ */
@@ -51,8 +48,6 @@ integer dmaxloc_(doublereal *a, integer *dimm)
     integer i__;
     doublereal dmax__;
 
-
-
     /* Parameter adjustments */
     --a;
 
@@ -65,7 +60,6 @@ integer dmaxloc_(doublereal *a, integer *dimm)
 	    dmax__ = a[i__];
 	    ret_val = i__;
 	}
-/* L20: */
     }
     return ret_val;
 } /* dmaxloc_ */

@@ -27,7 +27,6 @@
     real emin, temp;
     real safmin;
 
-
 /*  -- LAPACK routine (version 3.2)                                    -- */
 
 /*  -- Contributed by Osni Marques of the Lawrence Berkeley National   -- */
@@ -36,12 +35,6 @@
 /*  -- November 2008                                                   -- */
 
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -85,16 +78,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameter .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Function .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --z__;
 
@@ -131,7 +114,6 @@
 /* Computing MIN */
 	    r__1 = emin, r__2 = z__[j4];
 	    emin = dmin(r__1,r__2);
-/* L10: */
 	}
     } else {
 	i__1 = *n0 - 3 << 2;
@@ -155,7 +137,6 @@
 /* Computing MIN */
 	    r__1 = emin, r__2 = z__[j4 - 1];
 	    emin = dmin(r__1,r__2);
-/* L20: */
 	}
     }
 

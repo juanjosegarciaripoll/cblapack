@@ -23,15 +23,8 @@
     /* Local variables */
     integer i__, j;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -92,14 +85,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --dl;
     --d__;
@@ -124,9 +109,7 @@
 	    i__2 = *n;
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		b[i__ + j * b_dim1] = 0.f;
-/* L10: */
 	    }
-/* L20: */
 	}
     } else if (*beta == -1.f) {
 	i__1 = *nrhs;
@@ -134,9 +117,7 @@
 	    i__2 = *n;
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		b[i__ + j * b_dim1] = -b[i__ + j * b_dim1];
-/* L30: */
 	    }
-/* L40: */
 	}
     }
 
@@ -161,10 +142,8 @@
 				1] * x[i__ - 1 + j * x_dim1] + d__[i__] * x[
 				i__ + j * x_dim1] + du[i__] * x[i__ + 1 + j * 
 				x_dim1];
-/* L50: */
 		    }
 		}
-/* L60: */
 	    }
 	} else {
 
@@ -186,10 +165,8 @@
 				1] * x[i__ - 1 + j * x_dim1] + d__[i__] * x[
 				i__ + j * x_dim1] + dl[i__] * x[i__ + 1 + j * 
 				x_dim1];
-/* L70: */
 		    }
 		}
-/* L80: */
 	    }
 	}
     } else if (*alpha == -1.f) {
@@ -213,10 +190,8 @@
 				1] * x[i__ - 1 + j * x_dim1] - d__[i__] * x[
 				i__ + j * x_dim1] - du[i__] * x[i__ + 1 + j * 
 				x_dim1];
-/* L90: */
 		    }
 		}
-/* L100: */
 	    }
 	} else {
 
@@ -238,10 +213,8 @@
 				1] * x[i__ - 1 + j * x_dim1] - d__[i__] * x[
 				i__ + j * x_dim1] - dl[i__] * x[i__ + 1 + j * 
 				x_dim1];
-/* L110: */
 		    }
 		}
-/* L120: */
 	    }
 	}
     }

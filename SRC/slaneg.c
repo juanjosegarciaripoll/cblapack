@@ -30,15 +30,8 @@ integer slaneg_(integer *n, real *d__, real *lld, real *sigma, real *pivmin,
     logical sawnan;
     real dminus;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -96,20 +89,11 @@ integer slaneg_(integer *n, real *d__, real *lld, real *sigma, real *pivmin,
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
 /*     Some architectures propagate Infinities and NaNs very slowly, so */
 /*     the code computes counts in BLKLEN chunks.  Then a NaN can */
 /*     propagate at most BLKLEN columns before being detected.  This is */
 /*     not a general tuning parameter; it needs only to be just large */
 /*     enough that the overhead is tiny in common cases. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
     /* Parameter adjustments */
     --lld;
     --d__;
@@ -132,7 +116,6 @@ integer slaneg_(integer *n, real *d__, real *lld, real *sigma, real *pivmin,
 	    }
 	    tmp = t / dplus;
 	    t = tmp * lld[j] - *sigma;
-/* L21: */
 	}
 	sawnan = sisnan_(&t);
 /*     Run a slower version of the above loop if a NaN is detected. */
@@ -155,11 +138,9 @@ integer slaneg_(integer *n, real *d__, real *lld, real *sigma, real *pivmin,
 		    tmp = 1.f;
 		}
 		t = tmp * lld[j] - *sigma;
-/* L22: */
 	    }
 	}
 	negcnt += neg1;
-/* L210: */
     }
 
 /*     II) lower part: L D L^T - SIGMA I = U- D- U-^T */
@@ -178,7 +159,6 @@ integer slaneg_(integer *n, real *d__, real *lld, real *sigma, real *pivmin,
 	    }
 	    tmp = p / dminus;
 	    p = tmp * d__[j] - *sigma;
-/* L23: */
 	}
 	sawnan = sisnan_(&p);
 /*     As above, run a slower version that substitutes 1 for Inf/Inf. */
@@ -199,11 +179,9 @@ integer slaneg_(integer *n, real *d__, real *lld, real *sigma, real *pivmin,
 		    tmp = 1.f;
 		}
 		p = tmp * d__[j] - *sigma;
-/* L24: */
 	    }
 	}
 	negcnt += neg2;
-/* L230: */
     }
 
 /*     III) Twist index */

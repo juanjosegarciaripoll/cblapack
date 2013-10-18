@@ -48,15 +48,8 @@ static real c_b78 = 0.f;
     integer irwork;
     logical lquery;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -145,20 +138,6 @@ static real c_b78 = 0.f;
 /*                bidiagonal form did not converge to zero. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -475,7 +454,6 @@ static real c_b78 = 0.f;
 	    } else {
 		claset_("F", &c__1, nrhs, &c_b1, &c_b1, &b[i__ + b_dim1], ldb);
 	    }
-/* L10: */
 	}
 
 /*        Multiply B by right singular vectors */
@@ -498,7 +476,6 @@ static real c_b78 = 0.f;
 		cgemm_("C", "N", n, &bl, n, &c_b2, &a[a_offset], lda, &b[i__ *
 			 b_dim1 + 1], ldb, &c_b1, &work[1], n);
 		clacpy_("G", n, &bl, &work[1], n, &b[i__ * b_dim1 + 1], ldb);
-/* L20: */
 	    }
 	} else {
 	    cgemv_("C", n, n, &c_b2, &a[a_offset], lda, &b[b_offset], &c__1, &
@@ -604,7 +581,6 @@ static real c_b78 = 0.f;
 		    claset_("F", &c__1, nrhs, &c_b1, &c_b1, &b[i__ + b_dim1], 
 			    ldb);
 		}
-/* L30: */
 	    }
 	    iwork = il + *m * ldwork;
 
@@ -629,7 +605,6 @@ static real c_b78 = 0.f;
 			    i__ * b_dim1 + 1], ldb, &c_b1, &work[iwork], m);
 		    clacpy_("G", m, &bl, &work[iwork], m, &b[i__ * b_dim1 + 1]
 , ldb);
-/* L40: */
 		}
 	    } else {
 		cgemv_("C", m, m, &c_b2, &work[il], &ldwork, &b[b_dim1 + 1], &
@@ -717,7 +692,6 @@ static real c_b78 = 0.f;
 		    claset_("F", &c__1, nrhs, &c_b1, &c_b1, &b[i__ + b_dim1], 
 			    ldb);
 		}
-/* L50: */
 	    }
 
 /*        Multiply B by right singular vectors of A */
@@ -741,7 +715,6 @@ static real c_b78 = 0.f;
 			    i__ * b_dim1 + 1], ldb, &c_b1, &work[1], n);
 		    clacpy_("F", n, &bl, &work[1], n, &b[i__ * b_dim1 + 1], 
 			    ldb);
-/* L60: */
 		}
 	    } else {
 		cgemv_("C", m, n, &c_b2, &a[a_offset], lda, &b[b_offset], &

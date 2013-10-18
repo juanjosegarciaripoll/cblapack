@@ -29,15 +29,8 @@
     integer start;
     integer stkpnt;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -61,26 +54,12 @@
 /*  D       (input/output) REAL array, dimension (N) */
 /*          On entry, the array to be sorted. */
 /*          On exit, D has been sorted into increasing order */
-/*          (D(1) <= ... <= D(N) ) or into decreasing order */
-/*          (D(1) >= ... >= D(N) ), depending on ID. */
 
 /*  INFO    (output) INTEGER */
 /*          = 0:  successful exit */
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input paramters. */
 
@@ -138,7 +117,6 @@ L10:
 		    } else {
 			goto L30;
 		    }
-/* L20: */
 		}
 L30:
 		;
@@ -159,7 +137,6 @@ L30:
 		    } else {
 			goto L50;
 		    }
-/* L40: */
 		}
 L50:
 		;

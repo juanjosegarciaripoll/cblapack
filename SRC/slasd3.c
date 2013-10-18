@@ -39,15 +39,8 @@ static real c_b26 = 0.f;
     integer ctemp;
     integer ktemp;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -163,18 +156,6 @@ static real c_b26 = 0.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -245,7 +226,6 @@ static real c_b26 = 0.f;
 	    i__1 = n;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 		u[i__ + u_dim1] = -u2[i__ + u2_dim1];
-/* L10: */
 	    }
 	}
 	return 0;
@@ -271,7 +251,6 @@ static real c_b26 = 0.f;
     i__1 = *k;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	dsigma[i__] = slamc3_(&dsigma[i__], &dsigma[i__]) - dsigma[i__];
-/* L20: */
     }
 
 /*     Keep a copy of Z. */
@@ -296,7 +275,6 @@ static real c_b26 = 0.f;
 	if (*info != 0) {
 	    return 0;
 	}
-/* L30: */
     }
 
 /*     Compute updated Z. */
@@ -308,17 +286,14 @@ static real c_b26 = 0.f;
 	for (j = 1; j <= i__2; ++j) {
 	    z__[i__] *= u[i__ + j * u_dim1] * vt[i__ + j * vt_dim1] / (dsigma[
 		    i__] - dsigma[j]) / (dsigma[i__] + dsigma[j]);
-/* L40: */
 	}
 	i__2 = *k - 1;
 	for (j = i__; j <= i__2; ++j) {
 	    z__[i__] *= u[i__ + j * u_dim1] * vt[i__ + j * vt_dim1] / (dsigma[
 		    i__] - dsigma[j + 1]) / (dsigma[i__] + dsigma[j + 1]);
-/* L50: */
 	}
 	r__2 = sqrt((r__1 = z__[i__], dabs(r__1)));
 	z__[i__] = r_sign(&r__2, &q[i__ + q_dim1]);
-/* L60: */
     }
 
 /*     Compute left singular vectors of the modified diagonal matrix, */
@@ -334,7 +309,6 @@ static real c_b26 = 0.f;
 	    vt[j + i__ * vt_dim1] = z__[j] / u[j + i__ * u_dim1] / vt[j + i__ 
 		    * vt_dim1];
 	    u[j + i__ * u_dim1] = dsigma[j] * vt[j + i__ * vt_dim1];
-/* L70: */
 	}
 	temp = snrm2_(k, &u[i__ * u_dim1 + 1], &c__1);
 	q[i__ * q_dim1 + 1] = u[i__ * u_dim1 + 1] / temp;
@@ -342,9 +316,7 @@ static real c_b26 = 0.f;
 	for (j = 2; j <= i__2; ++j) {
 	    jc = idxc[j];
 	    q[j + i__ * q_dim1] = u[jc + i__ * u_dim1] / temp;
-/* L80: */
 	}
-/* L90: */
     }
 
 /*     Update the left singular vector matrix. */
@@ -387,9 +359,7 @@ L100:
 	for (j = 2; j <= i__2; ++j) {
 	    jc = idxc[j];
 	    q[i__ + j * q_dim1] = vt[jc + i__ * vt_dim1] / temp;
-/* L110: */
 	}
-/* L120: */
     }
 
 /*     Update the right singular vector matrix. */
@@ -415,12 +385,10 @@ L100:
 	i__1 = *k;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    q[i__ + ktemp * q_dim1] = q[i__ + q_dim1];
-/* L130: */
 	}
 	i__1 = m;
 	for (i__ = nlp2; i__ <= i__1; ++i__) {
 	    vt2[ktemp + i__ * vt2_dim1] = vt2[i__ * vt2_dim1 + 1];
-/* L140: */
 	}
     }
     ctemp = ctot[2] + 1 + ctot[3];

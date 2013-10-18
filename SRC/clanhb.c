@@ -29,15 +29,8 @@ doublereal clanhb_(char *norm, char *uplo, integer *n, integer *k, complex *
     real sum, absa, scale;
     real value;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -103,18 +96,6 @@ doublereal clanhb_(char *norm, char *uplo, integer *n, integer *k, complex *
 
 /* ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     ab_dim1 = *ldab;
     ab_offset = 1 + ab_dim1;
@@ -139,13 +120,11 @@ doublereal clanhb_(char *norm, char *uplo, integer *n, integer *k, complex *
 /* Computing MAX */
 		    r__1 = value, r__2 = c_abs(&ab[i__ + j * ab_dim1]);
 		    value = dmax(r__1,r__2);
-/* L10: */
 		}
 /* Computing MAX */
 		i__3 = *k + 1 + j * ab_dim1;
 		r__2 = value, r__3 = (r__1 = ab[i__3].r, dabs(r__1));
 		value = dmax(r__2,r__3);
-/* L20: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -161,9 +140,7 @@ doublereal clanhb_(char *norm, char *uplo, integer *n, integer *k, complex *
 /* Computing MAX */
 		    r__1 = value, r__2 = c_abs(&ab[i__ + j * ab_dim1]);
 		    value = dmax(r__1,r__2);
-/* L30: */
 		}
-/* L40: */
 	    }
 	}
     } else if (lsame_(norm, "I") || lsame_(norm, "O") || *(unsigned char *)norm == '1') {
@@ -183,24 +160,20 @@ doublereal clanhb_(char *norm, char *uplo, integer *n, integer *k, complex *
 		    absa = c_abs(&ab[l + i__ + j * ab_dim1]);
 		    sum += absa;
 		    work[i__] += absa;
-/* L50: */
 		}
 		i__4 = *k + 1 + j * ab_dim1;
 		work[j] = sum + (r__1 = ab[i__4].r, dabs(r__1));
-/* L60: */
 	    }
 	    i__1 = *n;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 /* Computing MAX */
 		r__1 = value, r__2 = work[i__];
 		value = dmax(r__1,r__2);
-/* L70: */
 	    }
 	} else {
 	    i__1 = *n;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 		work[i__] = 0.f;
-/* L80: */
 	    }
 	    i__1 = *n;
 	    for (j = 1; j <= i__1; ++j) {
@@ -214,10 +187,8 @@ doublereal clanhb_(char *norm, char *uplo, integer *n, integer *k, complex *
 		    absa = c_abs(&ab[l + i__ + j * ab_dim1]);
 		    sum += absa;
 		    work[i__] += absa;
-/* L90: */
 		}
 		value = dmax(value,sum);
-/* L100: */
 	    }
 	}
     } else if (lsame_(norm, "F") || lsame_(norm, "E")) {
@@ -237,7 +208,6 @@ doublereal clanhb_(char *norm, char *uplo, integer *n, integer *k, complex *
 		    i__2 = *k + 2 - j;
 		    classq_(&i__4, &ab[max(i__2, 1)+ j * ab_dim1], &c__1, &
 			    scale, &sum);
-/* L110: */
 		}
 		l = *k + 1;
 	    } else {
@@ -247,7 +217,6 @@ doublereal clanhb_(char *norm, char *uplo, integer *n, integer *k, complex *
 		    i__3 = *n - j;
 		    i__4 = min(i__3,*k);
 		    classq_(&i__4, &ab[j * ab_dim1 + 2], &c__1, &scale, &sum);
-/* L120: */
 		}
 		l = 1;
 	    }
@@ -272,7 +241,6 @@ doublereal clanhb_(char *norm, char *uplo, integer *n, integer *k, complex *
 		    sum += r__1 * r__1;
 		}
 	    }
-/* L130: */
 	}
 	value = scale * sqrt(sum);
     }

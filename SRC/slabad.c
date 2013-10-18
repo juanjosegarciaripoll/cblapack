@@ -17,11 +17,7 @@
 {
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -49,10 +45,6 @@
 /*          root of LARGE, otherwise unchanged. */
 
 /*  ===================================================================== */
-
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     If it looks like we're on a Cray, take the square root of */
 /*     SMALL and LARGE to avoid overflow and underflow problems. */

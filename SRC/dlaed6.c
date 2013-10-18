@@ -32,15 +32,8 @@
     doublereal small1, small2, sminv1, sminv2;
     doublereal dscale[3], sclfac, zscale[3], erretm, sclinv;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     February 2007 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -106,18 +99,6 @@
 /*     Gragg-Thornton-Warner cubic convergent scheme for better stability. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --z__;
@@ -238,7 +219,6 @@
 	for (i__ = 1; i__ <= 3; ++i__) {
 	    dscale[i__ - 1] = d__[i__] * sclfac;
 	    zscale[i__ - 1] = z__[i__] * sclfac;
-/* L10: */
 	}
 	*tau *= sclfac;
 	lbd *= sclfac;
@@ -250,7 +230,6 @@
 	for (i__ = 1; i__ <= 3; ++i__) {
 	    dscale[i__ - 1] = d__[i__];
 	    zscale[i__ - 1] = z__[i__];
-/* L20: */
 	}
     }
 
@@ -265,7 +244,6 @@
 	fc += temp1 / dscale[i__ - 1];
 	df += temp2;
 	ddf += temp3;
-/* L30: */
     }
     f = *finit + *tau * fc;
 
@@ -341,7 +319,6 @@
 	    erretm += abs(temp4);
 	    df += temp2;
 	    ddf += temp3;
-/* L40: */
 	}
 	f = *finit + *tau * fc;
 	erretm = (abs(*finit) + abs(*tau) * erretm) * 8. + abs(*tau) * df;
@@ -353,7 +330,6 @@
 	} else {
 	    ubd = *tau;
 	}
-/* L50: */
     }
     *info = 1;
 L60:

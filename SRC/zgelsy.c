@@ -44,15 +44,8 @@ static integer c__2 = 2;
     integer lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -173,18 +166,6 @@ static integer c__2 = 2;
 /*    G. Quintana-Orti, Depto. de Informatica, Universidad Jaime I, Spain */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     a_dim1 = *lda;
@@ -361,7 +342,6 @@ L10:
 		z__1.r = s2.r * work[i__3].r - s2.i * work[i__3].i, z__1.i = 
 			s2.r * work[i__3].i + s2.i * work[i__3].r;
 		work[i__2].r = z__1.r, work[i__2].i = z__1.i;
-/* L20: */
 	    }
 	    i__1 = ismin + *rank;
 	    work[i__1].r = c1.r, work[i__1].i = c1.i;
@@ -414,9 +394,7 @@ L10:
 	for (i__ = *rank + 1; i__ <= i__2; ++i__) {
 	    i__3 = i__ + j * b_dim1;
 	    b[i__3].r = 0., b[i__3].i = 0.;
-/* L30: */
 	}
-/* L40: */
     }
 
 /*     B(1:N,1:NRHS) := Y' * B(1:N,1:NRHS) */
@@ -440,10 +418,8 @@ L10:
 	    i__3 = jpvt[i__];
 	    i__4 = i__ + j * b_dim1;
 	    work[i__3].r = b[i__4].r, work[i__3].i = b[i__4].i;
-/* L50: */
 	}
 	zcopy_(n, &work[1], &c__1, &b[j * b_dim1 + 1], &c__1);
-/* L60: */
     }
 
 /*     complex workspace: N. */

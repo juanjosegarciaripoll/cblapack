@@ -18,10 +18,7 @@
 {
 
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     October 2008 */
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -43,9 +40,6 @@
 /*          = BLAS_CONJ_TRANS = 113 :  Conjugate Transpose */
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Executable Statements .. */
     if (*trans == 111) {
 	*(unsigned char *)ret_val = 'N';
     } else if (*trans == 112) {

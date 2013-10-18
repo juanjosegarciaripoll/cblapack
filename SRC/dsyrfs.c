@@ -43,17 +43,10 @@ static doublereal c_b14 = 1.;
     doublereal safmin;
     doublereal lstres;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
 
 /*     Modified to call DLACN2 in place of DLACON, 5 Feb 03, SJH. */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -144,20 +137,6 @@ static doublereal c_b14 = 1.;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -210,7 +189,6 @@ static doublereal c_b14 = 1.;
 	for (j = 1; j <= i__1; ++j) {
 	    ferr[j] = 0.;
 	    berr[j] = 0.;
-/* L10: */
 	}
 	return 0;
     }
@@ -252,7 +230,6 @@ L20:
 	i__2 = *n;
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    work[i__] = (d__1 = b[i__ + j * b_dim1], abs(d__1));
-/* L30: */
 	}
 
 /*        Compute abs(A)*abs(X) + abs(B). */
@@ -267,11 +244,9 @@ L20:
 		    work[i__] += (d__1 = a[i__ + k * a_dim1], abs(d__1)) * xk;
 		    s += (d__1 = a[i__ + k * a_dim1], abs(d__1)) * (d__2 = x[
 			    i__ + j * x_dim1], abs(d__2));
-/* L40: */
 		}
 		work[k] = work[k] + (d__1 = a[k + k * a_dim1], abs(d__1)) * 
 			xk + s;
-/* L50: */
 	    }
 	} else {
 	    i__2 = *n;
@@ -284,10 +259,8 @@ L20:
 		    work[i__] += (d__1 = a[i__ + k * a_dim1], abs(d__1)) * xk;
 		    s += (d__1 = a[i__ + k * a_dim1], abs(d__1)) * (d__2 = x[
 			    i__ + j * x_dim1], abs(d__2));
-/* L60: */
 		}
 		work[k] += s;
-/* L70: */
 	    }
 	}
 	s = 0.;
@@ -304,7 +277,6 @@ L20:
 			/ (work[i__] + safe1);
 		s = max(d__2,d__3);
 	    }
-/* L80: */
 	}
 	berr[j] = s;
 
@@ -358,7 +330,6 @@ L20:
 		work[i__] = (d__1 = work[*n + i__], abs(d__1)) + nz * eps * 
 			work[i__] + safe1;
 	    }
-/* L90: */
 	}
 
 	kase = 0;
@@ -375,7 +346,6 @@ L100:
 		i__2 = *n;
 		for (i__ = 1; i__ <= i__2; ++i__) {
 		    work[*n + i__] = work[i__] * work[*n + i__];
-/* L110: */
 		}
 	    } else if (kase == 2) {
 
@@ -384,7 +354,6 @@ L100:
 		i__2 = *n;
 		for (i__ = 1; i__ <= i__2; ++i__) {
 		    work[*n + i__] = work[i__] * work[*n + i__];
-/* L120: */
 		}
 		dsytrs_(uplo, n, &c__1, &af[af_offset], ldaf, &ipiv[1], &work[
 			*n + 1], n, info);
@@ -400,13 +369,11 @@ L100:
 /* Computing MAX */
 	    d__2 = lstres, d__3 = (d__1 = x[i__ + j * x_dim1], abs(d__1));
 	    lstres = max(d__2,d__3);
-/* L130: */
 	}
 	if (lstres != 0.) {
 	    ferr[j] /= lstres;
 	}
 
-/* L140: */
     }
 
     return 0;

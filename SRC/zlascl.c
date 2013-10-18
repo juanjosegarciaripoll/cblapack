@@ -31,15 +31,8 @@
     doublereal cfromc;
     doublereal bignum, smlnum;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -101,18 +94,6 @@
 /*          <0 - if INFO = -i, the i-th argument had an illegal value. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -234,9 +215,7 @@ L10:
 		i__4 = i__ + j * a_dim1;
 		z__1.r = mul * a[i__4].r, z__1.i = mul * a[i__4].i;
 		a[i__3].r = z__1.r, a[i__3].i = z__1.i;
-/* L20: */
 	    }
-/* L30: */
 	}
 
     } else if (itype == 1) {
@@ -251,9 +230,7 @@ L10:
 		i__4 = i__ + j * a_dim1;
 		z__1.r = mul * a[i__4].r, z__1.i = mul * a[i__4].i;
 		a[i__3].r = z__1.r, a[i__3].i = z__1.i;
-/* L40: */
 	    }
-/* L50: */
 	}
 
     } else if (itype == 2) {
@@ -268,9 +245,7 @@ L10:
 		i__4 = i__ + j * a_dim1;
 		z__1.r = mul * a[i__4].r, z__1.i = mul * a[i__4].i;
 		a[i__3].r = z__1.r, a[i__3].i = z__1.i;
-/* L60: */
 	    }
-/* L70: */
 	}
 
     } else if (itype == 3) {
@@ -287,9 +262,7 @@ L10:
 		i__4 = i__ + j * a_dim1;
 		z__1.r = mul * a[i__4].r, z__1.i = mul * a[i__4].i;
 		a[i__3].r = z__1.r, a[i__3].i = z__1.i;
-/* L80: */
 	    }
-/* L90: */
 	}
 
     } else if (itype == 4) {
@@ -308,9 +281,7 @@ L10:
 		i__4 = i__ + j * a_dim1;
 		z__1.r = mul * a[i__4].r, z__1.i = mul * a[i__4].i;
 		a[i__3].r = z__1.r, a[i__3].i = z__1.i;
-/* L100: */
 	    }
-/* L110: */
 	}
 
     } else if (itype == 5) {
@@ -329,9 +300,7 @@ L10:
 		i__4 = i__ + j * a_dim1;
 		z__1.r = mul * a[i__4].r, z__1.i = mul * a[i__4].i;
 		a[i__2].r = z__1.r, a[i__2].i = z__1.i;
-/* L120: */
 	    }
-/* L130: */
 	}
 
     } else if (itype == 6) {
@@ -354,9 +323,7 @@ L10:
 		i__4 = i__ + j * a_dim1;
 		z__1.r = mul * a[i__4].r, z__1.i = mul * a[i__4].i;
 		a[i__3].r = z__1.r, a[i__3].i = z__1.i;
-/* L140: */
 	    }
-/* L150: */
 	}
 
     }

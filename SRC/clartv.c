@@ -24,21 +24,13 @@
     integer i__, ic, ix, iy;
     complex xi, yi;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
 
 /*  CLARTV applies a vector of complex plane rotations with real cosines */
-/*  to elements of the complex vectors x and y. For i = 1,2,...,n */
 
 /*     ( x(i) ) := (        c(i)   s(i) ) ( x(i) ) */
 /*     ( y(i) )    ( -conjg(s(i))  c(i) ) ( y(i) ) */
@@ -71,12 +63,6 @@
 /*          The increment between elements of C and S. INCC > 0. */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --s;
@@ -113,7 +99,6 @@
 	ix += *incx;
 	iy += *incy;
 	ic += *incc;
-/* L10: */
     }
     return 0;
 

@@ -32,15 +32,8 @@ static integer c__1 = 1;
     integer i__, iw;
     doublecomplex alpha;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -165,18 +158,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -293,7 +274,6 @@ static integer c__1 = 1;
 			w_dim1 + 1], &c__1);
 	    }
 
-/* L10: */
 	}
     } else {
 
@@ -394,7 +374,6 @@ static integer c__1 = 1;
 			i__ + 1 + i__ * w_dim1], &c__1);
 	    }
 
-/* L20: */
 	}
     }
 

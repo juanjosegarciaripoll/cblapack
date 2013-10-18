@@ -28,22 +28,14 @@
     integer ix;
     doublereal xi, yi, zi;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
 
 /*  DLAR2V applies a vector of real plane rotations from both sides to */
 /*  a sequence of 2-by-2 real symmetric matrices, defined by the elements */
-/*  of the vectors x, y and z. For i = 1,2,...,n */
 
 /*     ( x(i)  z(i) ) := (  c(i)  s(i) ) ( x(i)  z(i) ) ( c(i) -s(i) ) */
 /*     ( z(i)  y(i) )    ( -s(i)  c(i) ) ( z(i)  y(i) ) ( s(i)  c(i) ) */
@@ -80,10 +72,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --s;
     --c__;
@@ -112,7 +100,6 @@
 	z__[ix] = ci * t4 - si * t5;
 	ix += *incx;
 	ic += *incc;
-/* L10: */
     }
 
 /*     End of DLAR2V */

@@ -31,15 +31,8 @@ static real c_b27 = 1.f;
     real ct, akk, bkk;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -98,18 +91,6 @@ static real c_b27 = 1.f;
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -177,7 +158,6 @@ static real c_b27 = 1.f;
 			    k + 1) * b_dim1], ldb, &a[k + (k + 1) * a_dim1], 
 			    lda);
 		}
-/* L10: */
 	    }
 	} else {
 
@@ -214,7 +194,6 @@ static real c_b27 = 1.f;
 			    + (k + 1) * b_dim1], ldb, &a[k + 1 + k * a_dim1], 
 			    &c__1);
 		}
-/* L20: */
 	    }
 	}
     } else {
@@ -247,7 +226,6 @@ static real c_b27 = 1.f;
 /* Computing 2nd power */
 		r__1 = bkk;
 		a[k + k * a_dim1] = akk * (r__1 * r__1);
-/* L30: */
 	    }
 	} else {
 
@@ -276,7 +254,6 @@ static real c_b27 = 1.f;
 /* Computing 2nd power */
 		r__1 = bkk;
 		a[k + k * a_dim1] = akk * (r__1 * r__1);
-/* L40: */
 	    }
 	}
     }

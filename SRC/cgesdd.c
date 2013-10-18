@@ -48,16 +48,9 @@ static integer c__0 = 0;
     logical wntqas;
     integer nrwork;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
 /*     8-15-00:  Improve consistency of WS calculations (eca) */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -185,20 +178,6 @@ static integer c__0 = 0;
 /*     California at Berkeley, USA */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -798,7 +777,6 @@ static integer c__0 = 0;
 			    ldwrkr);
 		    clacpy_("F", &chunk, n, &work[ir], &ldwrkr, &a[i__ + 
 			    a_dim1], lda);
-/* L10: */
 		}
 
 	    } else if (wntqs) {
@@ -1093,7 +1071,6 @@ static integer c__0 = 0;
 			    &work[iu], &ldwrku, &rwork[nrwork]);
 		    clacpy_("F", &chunk, n, &work[iu], &ldwrku, &a[i__ + 
 			    a_dim1], lda);
-/* L20: */
 		}
 
 	    } else if (wntqs) {
@@ -1310,7 +1287,6 @@ static integer c__0 = 0;
 				 n, &work[iu], &ldwrku, &rwork[nrwork]);
 			clacpy_("F", &chunk, n, &work[iu], &ldwrku, &a[i__ + 
 				a_dim1], lda);
-/* L30: */
 		    }
 		}
 
@@ -1566,7 +1542,6 @@ static integer c__0 = 0;
 			    * a_dim1 + 1], lda, &c_b1, &work[il], &ldwrkl);
 		    clacpy_("F", m, &blk, &work[il], &ldwrkl, &a[i__ * a_dim1 
 			    + 1], lda);
-/* L40: */
 		}
 
 	    } else if (wntqs) {
@@ -1768,7 +1743,6 @@ static integer c__0 = 0;
 /*           Reduce to bidiagonal form without QR decomposition, use */
 /*           CUNGBR and matrix multiplication to compute singular vectors */
 
-
 	    ie = 1;
 	    nrwork = ie + *m;
 	    itauq = 1;
@@ -1865,7 +1839,6 @@ static integer c__0 = 0;
 			    lda, &work[ivt], &ldwkvt, &rwork[nrwork]);
 		    clacpy_("F", m, &blk, &work[ivt], &ldwkvt, &a[i__ * 
 			    a_dim1 + 1], lda);
-/* L50: */
 		}
 	    } else if (wntqs) {
 
@@ -2080,7 +2053,6 @@ static integer c__0 = 0;
 , lda, &work[ivt], &ldwkvt, &rwork[nrwork]);
 			clacpy_("F", m, &blk, &work[ivt], &ldwkvt, &a[i__ * 
 				a_dim1 + 1], lda);
-/* L60: */
 		    }
 		}
 	    } else if (wntqs) {

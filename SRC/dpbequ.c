@@ -26,15 +26,8 @@
     doublereal smin;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -91,18 +84,6 @@
 /*          > 0:  if INFO = i, the i-th diagonal element is nonpositive. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -161,7 +142,6 @@
 /* Computing MAX */
 	d__1 = *amax, d__2 = s[i__];
 	*amax = max(d__1,d__2);
-/* L10: */
     }
 
     if (smin <= 0.) {
@@ -174,7 +154,6 @@
 		*info = i__;
 		return 0;
 	    }
-/* L20: */
 	}
     } else {
 
@@ -184,7 +163,6 @@
 	i__1 = *n;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    s[i__] = 1. / sqrt(s[i__]);
-/* L30: */
 	}
 
 /*        Compute SCOND = min(S(I)) / max(S(I)) */

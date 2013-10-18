@@ -55,17 +55,8 @@ static integer c_n1 = -1;
     real smlnum;
     logical wantst, lquery, wantsv;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-/*     .. Function Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -160,8 +151,6 @@ static integer c_n1 = -1;
 
 /*  ALPHA   (output) COMPLEX array, dimension (N) */
 /*  BETA    (output) COMPLEX array, dimension (N) */
-/*          On exit, ALPHA(j)/BETA(j), j=1,...,N, will be the */
-/*          generalized eigenvalues.  ALPHA(j) and BETA(j),j=1,...,N  are */
 /*          the diagonals of the complex Schur form (S,T).  BETA(j) will */
 /*          be non-negative real. */
 
@@ -243,10 +232,8 @@ static integer c_n1 = -1;
 /*  INFO    (output) INTEGER */
 /*          = 0:  successful exit */
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value. */
-/*          = 1,...,N: */
 /*                The QZ iteration failed.  (A,B) are not in Schur */
 /*                form, but ALPHA(j) and BETA(j) should be correct for */
-/*                j=INFO+1,...,N. */
 /*          > N:  =N+1: other than QZ iteration failed in CHGEQZ */
 /*                =N+2: after reordering, roundoff changed values of */
 /*                      some complex eigenvalues so that leading */
@@ -256,20 +243,6 @@ static integer c_n1 = -1;
 /*                =N+3: reordering failed in CTGSEN. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode the input arguments */
 
@@ -560,7 +533,6 @@ static integer c_n1 = -1;
 	i__1 = *n;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    bwork[i__] = (*selctg)(&alpha[i__], &beta[i__]);
-/* L10: */
 	}
 
 /*        Reorder eigenvalues, transform Generalized Schur vectors, and */
@@ -645,7 +617,6 @@ static integer c_n1 = -1;
 		*info = *n + 2;
 	    }
 	    lastsl = cursl;
-/* L30: */
 	}
 
     }

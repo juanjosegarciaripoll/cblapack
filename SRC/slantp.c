@@ -30,15 +30,8 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
     logical udiag;
     real value;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -102,18 +95,6 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
 
 /* ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --work;
     --ap;
@@ -136,10 +117,8 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
 /* Computing MAX */
 			r__2 = value, r__3 = (r__1 = ap[i__], dabs(r__1));
 			value = dmax(r__2,r__3);
-/* L10: */
 		    }
 		    k += j;
-/* L20: */
 		}
 	    } else {
 		i__1 = *n;
@@ -149,10 +128,8 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
 /* Computing MAX */
 			r__2 = value, r__3 = (r__1 = ap[i__], dabs(r__1));
 			value = dmax(r__2,r__3);
-/* L30: */
 		    }
 		    k = k + *n - j + 1;
-/* L40: */
 		}
 	    }
 	} else {
@@ -165,10 +142,8 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
 /* Computing MAX */
 			r__2 = value, r__3 = (r__1 = ap[i__], dabs(r__1));
 			value = dmax(r__2,r__3);
-/* L50: */
 		    }
 		    k += j;
-/* L60: */
 		}
 	    } else {
 		i__1 = *n;
@@ -178,10 +153,8 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
 /* Computing MAX */
 			r__2 = value, r__3 = (r__1 = ap[i__], dabs(r__1));
 			value = dmax(r__2,r__3);
-/* L70: */
 		    }
 		    k = k + *n - j + 1;
-/* L80: */
 		}
 	    }
 	}
@@ -201,19 +174,16 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
 		    i__2 = k + j - 2;
 		    for (i__ = k; i__ <= i__2; ++i__) {
 			sum += (r__1 = ap[i__], dabs(r__1));
-/* L90: */
 		    }
 		} else {
 		    sum = 0.f;
 		    i__2 = k + j - 1;
 		    for (i__ = k; i__ <= i__2; ++i__) {
 			sum += (r__1 = ap[i__], dabs(r__1));
-/* L100: */
 		    }
 		}
 		k += j;
 		value = dmax(value,sum);
-/* L110: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -223,19 +193,16 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
 		    i__2 = k + *n - j;
 		    for (i__ = k + 1; i__ <= i__2; ++i__) {
 			sum += (r__1 = ap[i__], dabs(r__1));
-/* L120: */
 		    }
 		} else {
 		    sum = 0.f;
 		    i__2 = k + *n - j;
 		    for (i__ = k; i__ <= i__2; ++i__) {
 			sum += (r__1 = ap[i__], dabs(r__1));
-/* L130: */
 		    }
 		}
 		k = k + *n - j + 1;
 		value = dmax(value,sum);
-/* L140: */
 	    }
 	}
     } else if (lsame_(norm, "I")) {
@@ -248,7 +215,6 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
 		i__1 = *n;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    work[i__] = 1.f;
-/* L150: */
 		}
 		i__1 = *n;
 		for (j = 1; j <= i__1; ++j) {
@@ -256,16 +222,13 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			work[i__] += (r__1 = ap[k], dabs(r__1));
 			++k;
-/* L160: */
 		    }
 		    ++k;
-/* L170: */
 		}
 	    } else {
 		i__1 = *n;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    work[i__] = 0.f;
-/* L180: */
 		}
 		i__1 = *n;
 		for (j = 1; j <= i__1; ++j) {
@@ -273,9 +236,7 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			work[i__] += (r__1 = ap[k], dabs(r__1));
 			++k;
-/* L190: */
 		    }
-/* L200: */
 		}
 	    }
 	} else {
@@ -283,7 +244,6 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
 		i__1 = *n;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    work[i__] = 1.f;
-/* L210: */
 		}
 		i__1 = *n;
 		for (j = 1; j <= i__1; ++j) {
@@ -292,15 +252,12 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
 		    for (i__ = j + 1; i__ <= i__2; ++i__) {
 			work[i__] += (r__1 = ap[k], dabs(r__1));
 			++k;
-/* L220: */
 		    }
-/* L230: */
 		}
 	    } else {
 		i__1 = *n;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    work[i__] = 0.f;
-/* L240: */
 		}
 		i__1 = *n;
 		for (j = 1; j <= i__1; ++j) {
@@ -308,9 +265,7 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
 		    for (i__ = j; i__ <= i__2; ++i__) {
 			work[i__] += (r__1 = ap[k], dabs(r__1));
 			++k;
-/* L250: */
 		    }
-/* L260: */
 		}
 	    }
 	}
@@ -320,7 +275,6 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
 /* Computing MAX */
 	    r__1 = value, r__2 = work[i__];
 	    value = dmax(r__1,r__2);
-/* L270: */
 	}
     } else if (lsame_(norm, "F") || lsame_(norm, "E")) {
 
@@ -336,7 +290,6 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
 		    i__2 = j - 1;
 		    slassq_(&i__2, &ap[k], &c__1, &scale, &sum);
 		    k += j;
-/* L280: */
 		}
 	    } else {
 		scale = 0.f;
@@ -346,7 +299,6 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
 		for (j = 1; j <= i__1; ++j) {
 		    slassq_(&j, &ap[k], &c__1, &scale, &sum);
 		    k += j;
-/* L290: */
 		}
 	    }
 	} else {
@@ -359,7 +311,6 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
 		    i__2 = *n - j;
 		    slassq_(&i__2, &ap[k], &c__1, &scale, &sum);
 		    k = k + *n - j + 1;
-/* L300: */
 		}
 	    } else {
 		scale = 0.f;
@@ -370,7 +321,6 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
 		    i__2 = *n - j + 1;
 		    slassq_(&i__2, &ap[k], &c__1, &scale, &sum);
 		    k = k + *n - j + 1;
-/* L310: */
 		}
 	    }
 	}

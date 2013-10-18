@@ -25,15 +25,8 @@
     /* Local variables */
     integer i__, j;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -94,16 +87,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --dl;
     --d__;
@@ -129,9 +112,7 @@
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		i__3 = i__ + j * b_dim1;
 		b[i__3].r = 0.f, b[i__3].i = 0.f;
-/* L10: */
 	    }
-/* L20: */
 	}
     } else if (*beta == -1.f) {
 	i__1 = *nrhs;
@@ -142,9 +123,7 @@
 		i__4 = i__ + j * b_dim1;
 		q__1.r = -b[i__4].r, q__1.i = -b[i__4].i;
 		b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L30: */
 	    }
-/* L40: */
 	}
     }
 
@@ -217,10 +196,8 @@
 				du[i__9].i * x[i__10].r;
 			q__1.r = q__2.r + q__6.r, q__1.i = q__2.i + q__6.i;
 			b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L50: */
 		    }
 		}
-/* L60: */
 	    }
 	} else if (lsame_(trans, "T")) {
 
@@ -290,10 +267,8 @@
 				dl[i__9].i * x[i__10].r;
 			q__1.r = q__2.r + q__6.r, q__1.i = q__2.i + q__6.i;
 			b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L70: */
 		    }
 		}
-/* L80: */
 	    }
 	} else if (lsame_(trans, "C")) {
 
@@ -361,10 +336,8 @@
 				.r;
 			q__1.r = q__2.r + q__8.r, q__1.i = q__2.i + q__8.i;
 			b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L90: */
 		    }
 		}
-/* L100: */
 	    }
 	}
     } else if (*alpha == -1.f) {
@@ -436,10 +409,8 @@
 				du[i__9].i * x[i__10].r;
 			q__1.r = q__2.r - q__6.r, q__1.i = q__2.i - q__6.i;
 			b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L110: */
 		    }
 		}
-/* L120: */
 	    }
 	} else if (lsame_(trans, "T")) {
 
@@ -509,10 +480,8 @@
 				dl[i__9].i * x[i__10].r;
 			q__1.r = q__2.r - q__6.r, q__1.i = q__2.i - q__6.i;
 			b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L130: */
 		    }
 		}
-/* L140: */
 	    }
 	} else if (lsame_(trans, "C")) {
 
@@ -580,10 +549,8 @@
 				.r;
 			q__1.r = q__2.r - q__8.r, q__1.i = q__2.i - q__8.i;
 			b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L150: */
 		    }
 		}
-/* L160: */
 	    }
 	}
     }

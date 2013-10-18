@@ -26,15 +26,8 @@
     doublereal xnorm;
     doublereal safmin, rsafmn;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -81,18 +74,6 @@
 /*          The value tau. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --x;
@@ -173,7 +154,6 @@ L10:
 	i__1 = knt;
 	for (j = 1; j <= i__1; ++j) {
 	    beta *= safmin;
-/* L20: */
 	}
 	*alpha = beta;
     }

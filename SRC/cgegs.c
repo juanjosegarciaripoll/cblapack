@@ -49,15 +49,8 @@ static integer c_n1 = -1;
     integer irwork, lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -163,10 +156,8 @@ static integer c_n1 = -1;
 /*  INFO    (output) INTEGER */
 /*          = 0:  successful exit */
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value. */
-/*          =1,...,N: */
 /*                The QZ iteration failed.  (A,B) are not in Schur */
 /*                form, but ALPHA(j) and BETA(j) should be correct for */
-/*                j=INFO+1,...,N. */
 /*          > N:  errors that usually indicate LAPACK problems: */
 /*                =N+1: error return from CGGBAL */
 /*                =N+2: error return from CGEQRF */
@@ -180,18 +171,6 @@ static integer c_n1 = -1;
 /*                =N+9: error return from CLASCL (various places) */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode the input arguments */
 

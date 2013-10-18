@@ -37,17 +37,10 @@ static integer c_n1 = -1;
     logical wantsp;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
 
 /*     Modified to call ZLACN2 in place of ZLACON, 10 Feb 03, SJH. */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -79,7 +72,6 @@ static integer c_n1 = -1;
 
 /*  SELECT  (input) LOGICAL array, dimension (N) */
 /*          SELECT specifies the eigenvalues in the selected cluster. To */
-/*          select the j-th eigenvalue, SELECT(j) must be set to .TRUE.. */
 
 /*  N       (input) INTEGER */
 /*          The order of the matrix T. N >= 0. */
@@ -216,20 +208,6 @@ static integer c_n1 = -1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Decode and test the input parameters. */
 
     /* Parameter adjustments */
@@ -257,7 +235,6 @@ static integer c_n1 = -1;
 	if (select[k]) {
 	    ++(*m);
 	}
-/* L10: */
     }
 
     n1 = *m;
@@ -330,7 +307,6 @@ static integer c_n1 = -1;
 			ks, &ierr);
 	    }
 	}
-/* L20: */
     }
 
     if (wants) {
@@ -393,7 +369,6 @@ L40:
 	i__2 = k;
 	i__3 = k + k * t_dim1;
 	w[i__2].r = t[i__3].r, w[i__2].i = t[i__3].i;
-/* L50: */
     }
 
     work[1].r = (doublereal) lwmin, work[1].i = 0.;

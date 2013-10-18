@@ -31,15 +31,8 @@ static integer c__1 = 1;
     integer jlast;
     real safmin, altsgn, estold;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -100,18 +93,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --isave;
     --x;
@@ -126,7 +107,6 @@ static integer c__1 = 1;
 	    r__1 = 1.f / (real) (*n);
 	    q__1.r = r__1, q__1.i = 0.f;
 	    x[i__2].r = q__1.r, x[i__2].i = q__1.i;
-/* L10: */
 	}
 	*kase = 1;
 	isave[1] = 1;
@@ -141,14 +121,12 @@ static integer c__1 = 1;
 	case 5:  goto L120;
     }
 
-/*     ................ ENTRY   (ISAVE( 1 ) = 1) */
 /*     FIRST ITERATION.  X HAS BEEN OVERWRITTEN BY A*X. */
 
 L20:
     if (*n == 1) {
 	v[1].r = x[1].r, v[1].i = x[1].i;
 	*est = c_abs(&v[1]);
-/*        ... QUIT */
 	goto L130;
     }
     *est = scsum1_(n, &x[1], &c__1);
@@ -167,27 +145,22 @@ L20:
 	    i__2 = i__;
 	    x[i__2].r = 1.f, x[i__2].i = 0.f;
 	}
-/* L30: */
     }
     *kase = 2;
     isave[1] = 2;
     return 0;
 
-/*     ................ ENTRY   (ISAVE( 1 ) = 2) */
 /*     FIRST ITERATION.  X HAS BEEN OVERWRITTEN BY CTRANS(A)*X. */
 
 L40:
     isave[2] = icmax1_(n, &x[1], &c__1);
     isave[3] = 2;
 
-/*     MAIN LOOP - ITERATIONS 2,3,...,ITMAX. */
-
 L50:
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	i__2 = i__;
 	x[i__2].r = 0.f, x[i__2].i = 0.f;
-/* L60: */
     }
     i__1 = isave[2];
     x[i__1].r = 1.f, x[i__1].i = 0.f;
@@ -195,7 +168,6 @@ L50:
     isave[1] = 3;
     return 0;
 
-/*     ................ ENTRY   (ISAVE( 1 ) = 3) */
 /*     X HAS BEEN OVERWRITTEN BY A*X. */
 
 L70:
@@ -222,13 +194,11 @@ L70:
 	    i__2 = i__;
 	    x[i__2].r = 1.f, x[i__2].i = 0.f;
 	}
-/* L80: */
     }
     *kase = 2;
     isave[1] = 4;
     return 0;
 
-/*     ................ ENTRY   (ISAVE( 1 ) = 4) */
 /*     X HAS BEEN OVERWRITTEN BY CTRANS(A)*X. */
 
 L90:
@@ -250,13 +220,11 @@ L100:
 	q__1.r = r__1, q__1.i = 0.f;
 	x[i__2].r = q__1.r, x[i__2].i = q__1.i;
 	altsgn = -altsgn;
-/* L110: */
     }
     *kase = 1;
     isave[1] = 5;
     return 0;
 
-/*     ................ ENTRY   (ISAVE( 1 ) = 5) */
 /*     X HAS BEEN OVERWRITTEN BY A*X. */
 
 L120:

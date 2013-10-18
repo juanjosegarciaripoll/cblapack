@@ -34,15 +34,8 @@ static integer c__1 = 1;
     integer lastv;
     char transt[1];
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -118,18 +111,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -184,7 +165,6 @@ static integer c__1 = 1;
 		    ccopy_(&lastc, &c__[j + c_dim1], ldc, &work[j * work_dim1 
 			    + 1], &c__1);
 		    clacgv_(&lastc, &work[j * work_dim1 + 1], &c__1);
-/* L10: */
 		}
 
 /*              W := W * V1 */
@@ -240,9 +220,7 @@ static integer c__1 = 1;
 			q__1.r = c__[i__4].r - q__2.r, q__1.i = c__[i__4].i - 
 				q__2.i;
 			c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
-/* L20: */
 		    }
-/* L30: */
 		}
 
 	    } else if (lsame_(side, "R")) {
@@ -262,7 +240,6 @@ static integer c__1 = 1;
 		for (j = 1; j <= i__1; ++j) {
 		    ccopy_(&lastc, &c__[j * c_dim1 + 1], &c__1, &work[j * 
 			    work_dim1 + 1], &c__1);
-/* L40: */
 		}
 
 /*              W := W * V1 */
@@ -317,9 +294,7 @@ static integer c__1 = 1;
 			q__1.r = c__[i__4].r - work[i__5].r, q__1.i = c__[
 				i__4].i - work[i__5].i;
 			c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
-/* L50: */
 		    }
-/* L60: */
 		}
 	    }
 
@@ -348,7 +323,6 @@ static integer c__1 = 1;
 		    ccopy_(&lastc, &c__[lastv - *k + j + c_dim1], ldc, &work[
 			    j * work_dim1 + 1], &c__1);
 		    clacgv_(&lastc, &work[j * work_dim1 + 1], &c__1);
-/* L70: */
 		}
 
 /*              W := W * V2 */
@@ -402,9 +376,7 @@ static integer c__1 = 1;
 			q__1.r = c__[i__4].r - q__2.r, q__1.i = c__[i__4].i - 
 				q__2.i;
 			c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
-/* L80: */
 		    }
-/* L90: */
 		}
 
 	    } else if (lsame_(side, "R")) {
@@ -424,7 +396,6 @@ static integer c__1 = 1;
 		for (j = 1; j <= i__1; ++j) {
 		    ccopy_(&lastc, &c__[(lastv - *k + j) * c_dim1 + 1], &c__1, 
 			     &work[j * work_dim1 + 1], &c__1);
-/* L100: */
 		}
 
 /*              W := W * V2 */
@@ -478,9 +449,7 @@ static integer c__1 = 1;
 			q__1.r = c__[i__4].r - work[i__5].r, q__1.i = c__[
 				i__4].i - work[i__5].i;
 			c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
-/* L110: */
 		    }
-/* L120: */
 		}
 	    }
 	}
@@ -511,7 +480,6 @@ static integer c__1 = 1;
 		    ccopy_(&lastc, &c__[j + c_dim1], ldc, &work[j * work_dim1 
 			    + 1], &c__1);
 		    clacgv_(&lastc, &work[j * work_dim1 + 1], &c__1);
-/* L130: */
 		}
 
 /*              W := W * V1' */
@@ -567,9 +535,7 @@ static integer c__1 = 1;
 			q__1.r = c__[i__4].r - q__2.r, q__1.i = c__[i__4].i - 
 				q__2.i;
 			c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
-/* L140: */
 		    }
-/* L150: */
 		}
 
 	    } else if (lsame_(side, "R")) {
@@ -589,7 +555,6 @@ static integer c__1 = 1;
 		for (j = 1; j <= i__1; ++j) {
 		    ccopy_(&lastc, &c__[j * c_dim1 + 1], &c__1, &work[j * 
 			    work_dim1 + 1], &c__1);
-/* L160: */
 		}
 
 /*              W := W * V1' */
@@ -645,9 +610,7 @@ static integer c__1 = 1;
 			q__1.r = c__[i__4].r - work[i__5].r, q__1.i = c__[
 				i__4].i - work[i__5].i;
 			c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
-/* L170: */
 		    }
-/* L180: */
 		}
 
 	    }
@@ -676,7 +639,6 @@ static integer c__1 = 1;
 		    ccopy_(&lastc, &c__[lastv - *k + j + c_dim1], ldc, &work[
 			    j * work_dim1 + 1], &c__1);
 		    clacgv_(&lastc, &work[j * work_dim1 + 1], &c__1);
-/* L190: */
 		}
 
 /*              W := W * V2' */
@@ -730,9 +692,7 @@ static integer c__1 = 1;
 			q__1.r = c__[i__4].r - q__2.r, q__1.i = c__[i__4].i - 
 				q__2.i;
 			c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
-/* L200: */
 		    }
-/* L210: */
 		}
 
 	    } else if (lsame_(side, "R")) {
@@ -752,7 +712,6 @@ static integer c__1 = 1;
 		for (j = 1; j <= i__1; ++j) {
 		    ccopy_(&lastc, &c__[(lastv - *k + j) * c_dim1 + 1], &c__1, 
 			     &work[j * work_dim1 + 1], &c__1);
-/* L220: */
 		}
 
 /*              W := W * V2' */
@@ -806,9 +765,7 @@ static integer c__1 = 1;
 			q__1.r = c__[i__4].r - work[i__5].r, q__1.i = c__[
 				i__4].i - work[i__5].i;
 			c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
-/* L230: */
 		    }
-/* L240: */
 		}
 
 	    }

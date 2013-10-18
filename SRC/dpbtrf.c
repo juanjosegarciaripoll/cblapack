@@ -31,15 +31,8 @@ static integer c__33 = 33;
     integer i__, j, i2, i3, ib, nb, ii, jj;
     doublereal work[1056]	/* was [33][32] */;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -115,20 +108,6 @@ static integer c__33 = 33;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -190,9 +169,7 @@ static integer c__33 = 33;
 		i__2 = j - 1;
 		for (i__ = 1; i__ <= i__2; ++i__) {
 		    work[i__ + j * 33 - 34] = 0.;
-/* L10: */
 		}
-/* L20: */
 	    }
 
 /*           Process the band matrix one diagonal block at a time. */
@@ -266,9 +243,7 @@ static integer c__33 = 33;
 			    for (ii = jj; ii <= i__4; ++ii) {
 				work[ii + jj * 33 - 34] = ab[ii - jj + 1 + (
 					jj + i__ + *kd - 1) * ab_dim1];
-/* L30: */
 			    }
-/* L40: */
 			}
 
 /*                    Update A13 (in the work array). */
@@ -304,13 +279,10 @@ static integer c__33 = 33;
 			    for (ii = jj; ii <= i__4; ++ii) {
 				ab[ii - jj + 1 + (jj + i__ + *kd - 1) * 
 					ab_dim1] = work[ii + jj * 33 - 34];
-/* L50: */
 			    }
-/* L60: */
 			}
 		    }
 		}
-/* L70: */
 	    }
 	} else {
 
@@ -325,9 +297,7 @@ static integer c__33 = 33;
 		i__1 = nb;
 		for (i__ = j + 1; i__ <= i__1; ++i__) {
 		    work[i__ + j * 33 - 34] = 0.;
-/* L80: */
 		}
-/* L90: */
 	    }
 
 /*           Process the band matrix one diagonal block at a time. */
@@ -399,9 +369,7 @@ static integer c__33 = 33;
 			    for (ii = 1; ii <= i__4; ++ii) {
 				work[ii + jj * 33 - 34] = ab[*kd + 1 - jj + 
 					ii + (jj + i__ - 1) * ab_dim1];
-/* L100: */
 			    }
-/* L110: */
 			}
 
 /*                    Update A31 (in the work array). */
@@ -437,13 +405,10 @@ static integer c__33 = 33;
 			    for (ii = 1; ii <= i__4; ++ii) {
 				ab[*kd + 1 - jj + ii + (jj + i__ - 1) * 
 					ab_dim1] = work[ii + jj * 33 - 34];
-/* L120: */
 			    }
-/* L130: */
 			}
 		    }
 		}
-/* L140: */
 	    }
 	}
     }

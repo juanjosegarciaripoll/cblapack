@@ -62,16 +62,8 @@ static integer c__1 = 1;
     logical ilcomp;
     integer ihwmny;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 
 /*  Purpose */
 /*  ======= */
@@ -119,7 +111,6 @@ static integer c__1 = 1;
 /*  SELECT  (input) LOGICAL array, dimension (N) */
 /*          If HOWMNY='S', SELECT specifies the eigenvectors to be */
 /*          computed.  The eigenvector corresponding to the j-th */
-/*          eigenvalue is computed if SELECT(j) = .TRUE.. */
 /*          Not referenced if HOWMNY = 'A' or 'B'. */
 
 /*  N       (input) INTEGER */
@@ -189,22 +180,6 @@ static integer c__1 = 1;
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode and Test the input parameters */
 
@@ -285,7 +260,6 @@ static integer c__1 = 1;
 	    if (select[j]) {
 		++im;
 	    }
-/* L10: */
 	}
     } else {
 	im = *n;
@@ -299,7 +273,6 @@ static integer c__1 = 1;
 	if (r_imag(&p[j + j * p_dim1]) != 0.f) {
 	    ilbbad = TRUE_;
 	}
-/* L20: */
     }
 
     if (ilbbad) {
@@ -358,7 +331,6 @@ static integer c__1 = 1;
 	    i__3 = i__ + j * p_dim1;
 	    rwork[*n + j] += (r__1 = p[i__3].r, dabs(r__1)) + (r__2 = r_imag(&
 		    p[i__ + j * p_dim1]), dabs(r__2));
-/* L30: */
 	}
 /* Computing MAX */
 	i__2 = j + j * s_dim1;
@@ -370,7 +342,6 @@ static integer c__1 = 1;
 	r__3 = bnorm, r__4 = rwork[*n + j] + ((r__1 = p[i__2].r, dabs(r__1)) 
 		+ (r__2 = r_imag(&p[j + j * p_dim1]), dabs(r__2)));
 	bnorm = dmax(r__3,r__4);
-/* L40: */
     }
 
     ascale = 1.f / dmax(anorm,safmin);
@@ -405,7 +376,6 @@ static integer c__1 = 1;
 		    for (jr = 1; jr <= i__2; ++jr) {
 			i__3 = jr + ieig * vl_dim1;
 			vl[i__3].r = 0.f, vl[i__3].i = 0.f;
-/* L50: */
 		    }
 		    i__2 = ieig + ieig * vl_dim1;
 		    vl[i__2].r = 1.f, vl[i__2].i = 0.f;
@@ -484,7 +454,6 @@ static integer c__1 = 1;
 		for (jr = 1; jr <= i__2; ++jr) {
 		    i__3 = jr;
 		    work[i__3].r = 0.f, work[i__3].i = 0.f;
-/* L60: */
 		}
 		i__2 = je;
 		work[i__2].r = 1.f, work[i__2].i = 0.f;
@@ -518,7 +487,6 @@ static integer c__1 = 1;
 			    q__1.r = temp * work[i__5].r, q__1.i = temp * 
 				    work[i__5].i;
 			    work[i__4].r = q__1.r, work[i__4].i = q__1.i;
-/* L70: */
 			}
 			xmax = 1.f;
 		    }
@@ -541,7 +509,6 @@ static integer c__1 = 1;
 				work[i__4].r;
 			q__1.r = sumb.r + q__2.r, q__1.i = sumb.i + q__2.i;
 			sumb.r = q__1.r, sumb.i = q__1.i;
-/* L80: */
 		    }
 		    q__2.r = acoeff * suma.r, q__2.i = acoeff * suma.i;
 		    r_cnjg(&q__4, &bcoeff);
@@ -583,7 +550,6 @@ static integer c__1 = 1;
 				q__1.r = temp * work[i__5].r, q__1.i = temp * 
 					work[i__5].i;
 				work[i__4].r = q__1.r, work[i__4].i = q__1.i;
-/* L90: */
 			    }
 			    xmax = temp * xmax;
 			    q__1.r = temp * sum.r, q__1.i = temp * sum.i;
@@ -599,7 +565,6 @@ static integer c__1 = 1;
 		    r__3 = xmax, r__4 = (r__1 = work[i__3].r, dabs(r__1)) + (
 			    r__2 = r_imag(&work[j]), dabs(r__2));
 		    xmax = dmax(r__3,r__4);
-/* L100: */
 		}
 
 /*              Back transform eigenvector if HOWMNY='B'. */
@@ -626,7 +591,6 @@ static integer c__1 = 1;
 			    r__2 = r_imag(&work[(isrc - 1) * *n + jr]), dabs(
 			    r__2));
 		    xmax = dmax(r__3,r__4);
-/* L110: */
 		}
 
 		if (xmax > safmin) {
@@ -638,7 +602,6 @@ static integer c__1 = 1;
 			q__1.r = temp * work[i__4].r, q__1.i = temp * work[
 				i__4].i;
 			vl[i__3].r = q__1.r, vl[i__3].i = q__1.i;
-/* L120: */
 		    }
 		} else {
 		    ibeg = *n + 1;
@@ -648,7 +611,6 @@ static integer c__1 = 1;
 		for (jr = 1; jr <= i__2; ++jr) {
 		    i__3 = jr + ieig * vl_dim1;
 		    vl[i__3].r = 0.f, vl[i__3].i = 0.f;
-/* L130: */
 		}
 
 	    }
@@ -685,7 +647,6 @@ L140:
 		    for (jr = 1; jr <= i__1; ++jr) {
 			i__2 = jr + ieig * vr_dim1;
 			vr[i__2].r = 0.f, vr[i__2].i = 0.f;
-/* L150: */
 		    }
 		    i__1 = ieig + ieig * vr_dim1;
 		    vr[i__1].r = 1.f, vr[i__1].i = 0.f;
@@ -764,7 +725,6 @@ L140:
 		for (jr = 1; jr <= i__1; ++jr) {
 		    i__2 = jr;
 		    work[i__2].r = 0.f, work[i__2].i = 0.f;
-/* L160: */
 		}
 		i__1 = je;
 		work[i__1].r = 1.f, work[i__1].i = 0.f;
@@ -789,7 +749,6 @@ L140:
 			    .r;
 		    q__1.r = q__2.r - q__3.r, q__1.i = q__2.i - q__3.i;
 		    work[i__2].r = q__1.r, work[i__2].i = q__1.i;
-/* L170: */
 		}
 		i__1 = je;
 		work[i__1].r = 1.f, work[i__1].i = 0.f;
@@ -830,7 +789,6 @@ L140:
 				q__1.r = temp * work[i__3].r, q__1.i = temp * 
 					work[i__3].i;
 				work[i__2].r = q__1.r, work[i__2].i = q__1.i;
-/* L180: */
 			    }
 			}
 		    }
@@ -861,7 +819,6 @@ L140:
 					    temp * work[i__3].i;
 				    work[i__2].r = q__1.r, work[i__2].i = 
 					    q__1.i;
-/* L190: */
 				}
 			    }
 			}
@@ -892,10 +849,8 @@ L140:
 			    q__1.r = q__2.r - q__4.r, q__1.i = q__2.i - 
 				    q__4.i;
 			    work[i__2].r = q__1.r, work[i__2].i = q__1.i;
-/* L200: */
 			}
 		    }
-/* L210: */
 		}
 
 /*              Back transform eigenvector if HOWMNY='B'. */
@@ -921,7 +876,6 @@ L140:
 			    r__2 = r_imag(&work[(isrc - 1) * *n + jr]), dabs(
 			    r__2));
 		    xmax = dmax(r__3,r__4);
-/* L220: */
 		}
 
 		if (xmax > safmin) {
@@ -933,7 +887,6 @@ L140:
 			q__1.r = temp * work[i__3].r, q__1.i = temp * work[
 				i__3].i;
 			vr[i__2].r = q__1.r, vr[i__2].i = q__1.i;
-/* L230: */
 		    }
 		} else {
 		    iend = 0;
@@ -943,7 +896,6 @@ L140:
 		for (jr = iend + 1; jr <= i__1; ++jr) {
 		    i__2 = jr + ieig * vr_dim1;
 		    vr[i__2].r = 0.f, vr[i__2].i = 0.f;
-/* L240: */
 		}
 
 	    }

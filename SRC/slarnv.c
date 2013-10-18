@@ -24,15 +24,8 @@
     real u[128];
     integer il, iv, il2;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -71,18 +64,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --x;
     --iseed;
@@ -111,7 +92,6 @@
 	    i__2 = il;
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		x[iv + i__ - 1] = u[i__ - 1];
-/* L10: */
 	    }
 	} else if (*idist == 2) {
 
@@ -120,7 +100,6 @@
 	    i__2 = il;
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		x[iv + i__ - 1] = u[i__ - 1] * 2.f - 1.f;
-/* L20: */
 	    }
 	} else if (*idist == 3) {
 
@@ -130,10 +109,8 @@
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		x[iv + i__ - 1] = sqrt(log(u[(i__ << 1) - 2]) * -2.f) * cos(u[
 			(i__ << 1) - 1] * 6.2831853071795864769252867663f);
-/* L30: */
 	    }
 	}
-/* L40: */
     }
     return 0;
 

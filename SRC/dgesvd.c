@@ -48,15 +48,8 @@ static doublereal c_b443 = 1.;
     doublereal smlnum;
     logical lquery, wntuas, wntvas;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -175,20 +168,6 @@ static doublereal c_b443 = 1.;
 /*                above for details. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -1008,7 +987,6 @@ static doublereal c_b443 = 1.;
 				work[iu], &ldwrku);
 			dlacpy_("F", &chunk, n, &work[iu], &ldwrku, &a[i__ + 
 				a_dim1], lda);
-/* L10: */
 		    }
 
 		} else {
@@ -1166,7 +1144,6 @@ static doublereal c_b443 = 1.;
 				work[iu], &ldwrku);
 			dlacpy_("F", &chunk, n, &work[iu], &ldwrku, &a[i__ + 
 				a_dim1], lda);
-/* L20: */
 		    }
 
 		} else {
@@ -2580,7 +2557,6 @@ static doublereal c_b443 = 1.;
 				work[iu], &ldwrku);
 			dlacpy_("F", m, &blk, &work[iu], &ldwrku, &a[i__ * 
 				a_dim1 + 1], lda);
-/* L30: */
 		    }
 
 		} else {
@@ -2736,7 +2712,6 @@ static doublereal c_b443 = 1.;
 				work[iu], &ldwrku);
 			dlacpy_("F", m, &blk, &work[iu], &ldwrku, &a[i__ * 
 				a_dim1 + 1], lda);
-/* L40: */
 		    }
 
 		} else {
@@ -3969,13 +3944,11 @@ static doublereal c_b443 = 1.;
 	    i__2 = minmn - 1;
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		work[i__ + 1] = work[i__ + ie - 1];
-/* L50: */
 	    }
 	}
 	if (ie < 2) {
 	    for (i__ = minmn - 1; i__ >= 1; --i__) {
 		work[i__ + 1] = work[i__ + ie - 1];
-/* L60: */
 	    }
 	}
     }

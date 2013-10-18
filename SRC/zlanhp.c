@@ -29,15 +29,8 @@ doublereal zlanhp_(char *norm, char *uplo, integer *n, doublecomplex *ap,
     doublereal sum, absa, scale;
     doublereal value;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -96,18 +89,6 @@ doublereal zlanhp_(char *norm, char *uplo, integer *n, doublecomplex *ap,
 
 /* ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --work;
     --ap;
@@ -129,14 +110,12 @@ doublereal zlanhp_(char *norm, char *uplo, integer *n, doublecomplex *ap,
 /* Computing MAX */
 		    d__1 = value, d__2 = z_abs(&ap[i__]);
 		    value = max(d__1,d__2);
-/* L10: */
 		}
 		k += j;
 /* Computing MAX */
 		i__2 = k;
 		d__2 = value, d__3 = (d__1 = ap[i__2].r, abs(d__1));
 		value = max(d__2,d__3);
-/* L20: */
 	    }
 	} else {
 	    k = 1;
@@ -151,10 +130,8 @@ doublereal zlanhp_(char *norm, char *uplo, integer *n, doublecomplex *ap,
 /* Computing MAX */
 		    d__1 = value, d__2 = z_abs(&ap[i__]);
 		    value = max(d__1,d__2);
-/* L30: */
 		}
 		k = k + *n - j + 1;
-/* L40: */
 	    }
 	}
     } else if (lsame_(norm, "I") || lsame_(norm, "O") || *(unsigned char *)norm == '1') {
@@ -173,25 +150,21 @@ doublereal zlanhp_(char *norm, char *uplo, integer *n, doublecomplex *ap,
 		    sum += absa;
 		    work[i__] += absa;
 		    ++k;
-/* L50: */
 		}
 		i__2 = k;
 		work[j] = sum + (d__1 = ap[i__2].r, abs(d__1));
 		++k;
-/* L60: */
 	    }
 	    i__1 = *n;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 /* Computing MAX */
 		d__1 = value, d__2 = work[i__];
 		value = max(d__1,d__2);
-/* L70: */
 	    }
 	} else {
 	    i__1 = *n;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 		work[i__] = 0.;
-/* L80: */
 	    }
 	    i__1 = *n;
 	    for (j = 1; j <= i__1; ++j) {
@@ -204,10 +177,8 @@ doublereal zlanhp_(char *norm, char *uplo, integer *n, doublecomplex *ap,
 		    sum += absa;
 		    work[i__] += absa;
 		    ++k;
-/* L90: */
 		}
 		value = max(value,sum);
-/* L100: */
 	    }
 	}
     } else if (lsame_(norm, "F") || lsame_(norm, "E")) {
@@ -223,7 +194,6 @@ doublereal zlanhp_(char *norm, char *uplo, integer *n, doublecomplex *ap,
 		i__2 = j - 1;
 		zlassq_(&i__2, &ap[k], &c__1, &scale, &sum);
 		k += j;
-/* L110: */
 	    }
 	} else {
 	    i__1 = *n - 1;
@@ -231,7 +201,6 @@ doublereal zlanhp_(char *norm, char *uplo, integer *n, doublecomplex *ap,
 		i__2 = *n - j;
 		zlassq_(&i__2, &ap[k], &c__1, &scale, &sum);
 		k = k + *n - j + 1;
-/* L120: */
 	    }
 	}
 	sum *= 2;
@@ -258,7 +227,6 @@ doublereal zlanhp_(char *norm, char *uplo, integer *n, doublecomplex *ap,
 	    } else {
 		k = k + *n - i__ + 1;
 	    }
-/* L130: */
 	}
 	value = scale * sqrt(sum);
     }

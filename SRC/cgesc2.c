@@ -34,15 +34,8 @@ static integer c_n1 = -1;
     real bignum;
     real smlnum;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -53,7 +46,6 @@ static integer c_n1 = -1;
 
 /*  with a general N-by-N matrix A using the LU factorization with */
 /*  complete pivoting computed by CGETC2. */
-
 
 /*  Arguments */
 /*  ========= */
@@ -93,18 +85,6 @@ static integer c_n1 = -1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Set constant to control overflow */
 
     /* Parameter adjustments */
@@ -141,9 +121,7 @@ static integer c_n1 = -1;
 		    .r;
 	    q__1.r = rhs[i__4].r - q__2.r, q__1.i = rhs[i__4].i - q__2.i;
 	    rhs[i__3].r = q__1.r, rhs[i__3].i = q__1.i;
-/* L10: */
 	}
-/* L20: */
     }
 
 /*     Solve for U part */
@@ -180,9 +158,7 @@ static integer c_n1 = -1;
 		    rhs[i__4].r * q__3.i + rhs[i__4].i * q__3.r;
 	    q__1.r = rhs[i__3].r - q__2.r, q__1.i = rhs[i__3].i - q__2.i;
 	    rhs[i__2].r = q__1.r, rhs[i__2].i = q__1.i;
-/* L30: */
 	}
-/* L40: */
     }
 
 /*     Apply permutations JPIV to the solution (RHS) */

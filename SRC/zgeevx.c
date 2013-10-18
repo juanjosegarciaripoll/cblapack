@@ -52,15 +52,8 @@ static integer c_n1 = -1;
     logical lquery, wantvr;
     logical wntsnn, wntsnv;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -176,16 +169,12 @@ static integer c_n1 = -1;
 /*  IHI     (output) INTEGER */
 /*          ILO and IHI are integer values determined when A was */
 /*          balanced.  The balanced A(i,j) = 0 if I > J and */
-/*          J = 1,...,ILO-1 or I = IHI+1,...,N. */
 
 /*  SCALE   (output) DOUBLE PRECISION array, dimension (N) */
 /*          Details of the permutations and scaling factors applied */
 /*          when balancing A.  If P(j) is the index of the row and column */
 /*          interchanged with row and column j, and D(j) is the scaling */
 /*          factor applied to row and column j, then */
-/*          SCALE(J) = P(J),    for J = 1,...,ILO-1 */
-/*                   = D(J),    for J = ILO,...,IHI */
-/*                   = P(J)     for J = IHI+1,...,N. */
 /*          The order in which the interchanges are made is N to IHI+1, */
 /*          then 1 to ILO-1. */
 
@@ -226,20 +215,6 @@ static integer c_n1 = -1;
 /*                contain eigenvalues which have converged. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -558,7 +533,6 @@ static integer c_n1 = -1;
 /* Computing 2nd power */
 		d__2 = d_imag(&vl[k + i__ * vl_dim1]);
 		rwork[k] = d__1 * d__1 + d__2 * d__2;
-/* L10: */
 	    }
 	    k = idamax_(n, &rwork[1], &c__1);
 	    d_cnjg(&z__2, &vl[k + i__ * vl_dim1]);
@@ -571,7 +545,6 @@ static integer c_n1 = -1;
 	    d__1 = vl[i__3].r;
 	    z__1.r = d__1, z__1.i = 0.;
 	    vl[i__2].r = z__1.r, vl[i__2].i = z__1.i;
-/* L20: */
 	}
     }
 
@@ -596,7 +569,6 @@ static integer c_n1 = -1;
 /* Computing 2nd power */
 		d__2 = d_imag(&vr[k + i__ * vr_dim1]);
 		rwork[k] = d__1 * d__1 + d__2 * d__2;
-/* L30: */
 	    }
 	    k = idamax_(n, &rwork[1], &c__1);
 	    d_cnjg(&z__2, &vr[k + i__ * vr_dim1]);
@@ -609,7 +581,6 @@ static integer c_n1 = -1;
 	    d__1 = vr[i__3].r;
 	    z__1.r = d__1, z__1.i = 0.;
 	    vr[i__2].r = z__1.r, vr[i__2].i = z__1.i;
-/* L40: */
 	}
     }
 

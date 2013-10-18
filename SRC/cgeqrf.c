@@ -31,15 +31,8 @@ static integer c__2 = 2;
     integer ldwork, lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -105,16 +98,6 @@ static integer c__2 = 2;
 /*  and tau in TAU(i). */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -221,7 +204,6 @@ static integer c__2 = 2;
 			work[1], &ldwork, &a[i__ + (i__ + ib) * a_dim1], lda, 
 			&work[ib + 1], &ldwork);
 	    }
-/* L10: */
 	}
     } else {
 	i__ = 1;

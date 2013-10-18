@@ -61,16 +61,8 @@ static logical c_false = FALSE_;
     logical ilcomp, ilcplx;
     integer ihwmny;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 
 /*  Purpose */
 /*  ======= */
@@ -118,12 +110,10 @@ static logical c_false = FALSE_;
 /*  SELECT  (input) LOGICAL array, dimension (N) */
 /*          If HOWMNY='S', SELECT specifies the eigenvectors to be */
 /*          computed.  If w(j) is a real eigenvalue, the corresponding */
-/*          real eigenvector is computed if SELECT(j) is .TRUE.. */
 /*          If w(j) and w(j+1) are the real and imaginary parts of a */
 /*          complex eigenvalue, the corresponding complex eigenvector */
 /*          is computed if either SELECT(j) or SELECT(j+1) is .TRUE., */
 /*          and on exit SELECT(j) is set to .TRUE. and SELECT(j+1) is */
-/*          set to .FALSE.. */
 /*          Not referenced if HOWMNY = 'A' or 'B'. */
 
 /*  N       (input) INTEGER */
@@ -265,20 +255,6 @@ static logical c_false = FALSE_;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Decode and Test the input parameters */
 
     /* Parameter adjustments */
@@ -398,7 +374,6 @@ L10:
 		}
 	    }
 	}
-/* L20: */
     }
 
     if (ilabad) {
@@ -461,7 +436,6 @@ L10:
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    temp += (d__1 = s[i__ + j * s_dim1], abs(d__1));
 	    temp2 += (d__1 = p[i__ + j * p_dim1], abs(d__1));
-/* L30: */
 	}
 	work[j] = temp;
 	work[*n + j] = temp2;
@@ -471,11 +445,9 @@ L10:
 	for (i__ = iend + 1; i__ <= i__2; ++i__) {
 	    temp += (d__1 = s[i__ + j * s_dim1], abs(d__1));
 	    temp2 += (d__1 = p[i__ + j * p_dim1], abs(d__1));
-/* L40: */
 	}
 	anorm = max(anorm,temp);
 	bnorm = max(bnorm,temp2);
-/* L50: */
     }
 
     ascale = 1. / max(anorm,safmin);
@@ -532,7 +504,6 @@ L10:
 		    i__2 = *n;
 		    for (jr = 1; jr <= i__2; ++jr) {
 			vl[jr + ieig * vl_dim1] = 0.;
-/* L60: */
 		    }
 		    vl[ieig + ieig * vl_dim1] = 1.;
 		    goto L220;
@@ -544,7 +515,6 @@ L10:
 	    i__2 = nw * *n;
 	    for (jr = 1; jr <= i__2; ++jr) {
 		work[(*n << 1) + jr] = 0.;
-/* L70: */
 	    }
 /*                                                 T */
 /*           Compute coefficients in  ( a A - b B )  y = 0 */
@@ -727,9 +697,7 @@ L10:
 			for (jr = je; jr <= i__4; ++jr) {
 			    work[(jw + 2) * *n + jr] = xscale * work[(jw + 2) 
 				    * *n + jr];
-/* L80: */
 			}
-/* L90: */
 		    }
 		    xmax *= xscale;
 		}
@@ -748,7 +716,6 @@ L10:
 
 /*              which may cause underflow problems if A or B are close */
 /*              to underflow.  (E.g., less than SMALL.) */
-
 
 /*              A series of compiler directives to defeat vectorization */
 /*              for the next loop */
@@ -791,11 +758,8 @@ L10:
 				    s_dim1] * work[(jw + 1) * *n + jr];
 			    sump[ja + (jw << 1) - 3] += p[jr + (j + ja - 1) * 
 				    p_dim1] * work[(jw + 1) * *n + jr];
-/* L100: */
 			}
-/* L110: */
 		    }
-/* L120: */
 		}
 
 /* $PL$ CMCHAR=' ' */
@@ -821,7 +785,6 @@ L10:
 			sum[ja - 1] = -acoef * sums[ja - 1] + bcoefr * sump[
 				ja - 1];
 		    }
-/* L130: */
 		}
 
 /*                                  T */
@@ -838,9 +801,7 @@ L10:
 			for (jr = je; jr <= i__4; ++jr) {
 			    work[(jw + 2) * *n + jr] = scale * work[(jw + 2) *
 				     *n + jr];
-/* L140: */
 			}
-/* L150: */
 		    }
 		    xmax = scale * xmax;
 		}
@@ -860,7 +821,6 @@ L160:
 		    dgemv_("N", n, &i__3, &c_b34, &vl[je * vl_dim1 + 1], ldvl, 
 			     &work[(jw + 2) * *n + je], &c__1, &c_b36, &work[(
 			    jw + 4) * *n + 1], &c__1);
-/* L170: */
 		}
 		dlacpy_(" ", n, &nw, &work[(*n << 2) + 1], n, &vl[je * 
 			vl_dim1 + 1], ldvl);
@@ -882,7 +842,6 @@ L160:
 			    d__1)) + (d__2 = vl[j + (ieig + 1) * vl_dim1], 
 			    abs(d__2));
 		    xmax = max(d__3,d__4);
-/* L180: */
 		}
 	    } else {
 		i__2 = *n;
@@ -891,7 +850,6 @@ L160:
 		    d__2 = xmax, d__3 = (d__1 = vl[j + ieig * vl_dim1], abs(
 			    d__1));
 		    xmax = max(d__2,d__3);
-/* L190: */
 		}
 	    }
 
@@ -904,9 +862,7 @@ L160:
 		    for (jr = ibeg; jr <= i__3; ++jr) {
 			vl[jr + (ieig + jw) * vl_dim1] = xscale * vl[jr + (
 				ieig + jw) * vl_dim1];
-/* L200: */
 		    }
-/* L210: */
 		}
 	    }
 	    ieig = ieig + nw - 1;
@@ -969,7 +925,6 @@ L220:
 		    i__1 = *n;
 		    for (jr = 1; jr <= i__1; ++jr) {
 			vr[jr + ieig * vr_dim1] = 0.;
-/* L230: */
 		    }
 		    vr[ieig + ieig * vr_dim1] = 1.;
 		    goto L500;
@@ -983,9 +938,7 @@ L220:
 		i__2 = *n;
 		for (jr = 1; jr <= i__2; ++jr) {
 		    work[(jw + 2) * *n + jr] = 0.;
-/* L240: */
 		}
-/* L250: */
 	    }
 
 /*           Compute coefficients in  ( a A - b B ) x = 0 */
@@ -1053,7 +1006,6 @@ L220:
 		for (jr = 1; jr <= i__1; ++jr) {
 		    work[(*n << 1) + jr] = bcoefr * p[jr + je * p_dim1] - 
 			    acoef * s[jr + je * s_dim1];
-/* L260: */
 		}
 	    } else {
 
@@ -1150,7 +1102,6 @@ L220:
 		    work[*n * 3 + jr] = -cimaga * s[jr + (je - 1) * s_dim1] + 
 			    cimagb * p[jr + (je - 1) * p_dim1] - cim2a * s[jr 
 			    + je * s_dim1] + cim2b * p[jr + je * p_dim1];
-/* L270: */
 		}
 	    }
 
@@ -1195,9 +1146,7 @@ L220:
 			for (jr = 1; jr <= i__2; ++jr) {
 			    work[(jw + 2) * *n + jr] = scale * work[(jw + 2) *
 				     *n + jr];
-/* L280: */
 			}
-/* L290: */
 		    }
 		}
 /* Computing MAX */
@@ -1210,9 +1159,7 @@ L220:
 		    for (ja = 1; ja <= i__2; ++ja) {
 			work[(jw + 1) * *n + j + ja - 1] = sum[ja + (jw << 1) 
 				- 3];
-/* L300: */
 		    }
-/* L310: */
 		}
 
 /*              w = w + x(j)*(a S(*,j) - b P(*,j) ) with scaling */
@@ -1240,9 +1187,7 @@ L220:
 			    for (jr = 1; jr <= i__2; ++jr) {
 				work[(jw + 2) * *n + jr] = xscale * work[(jw 
 					+ 2) * *n + jr];
-/* L320: */
 			    }
-/* L330: */
 			}
 			xmax *= xscale;
 		    }
@@ -1250,7 +1195,6 @@ L220:
 /*                 Compute the contributions of the off-diagonals of */
 /*                 column j (and j+1, if 2-by-2 block) of A and B to the */
 /*                 sums. */
-
 
 		    i__1 = na;
 		    for (ja = 1; ja <= i__1; ++ja) {
@@ -1271,7 +1215,6 @@ L220:
 					cimaga * s[jr + (j + ja - 1) * s_dim1]
 					 + cimagb * p[jr + (j + ja - 1) * 
 					p_dim1];
-/* L340: */
 			    }
 			} else {
 			    creala = acoef * work[(*n << 1) + j + ja - 1];
@@ -1282,10 +1225,8 @@ L220:
 					creala * s[jr + (j + ja - 1) * s_dim1]
 					 + crealb * p[jr + (j + ja - 1) * 
 					p_dim1];
-/* L350: */
 			    }
 			}
-/* L360: */
 		    }
 		}
 
@@ -1306,12 +1247,10 @@ L370:
 		    for (jr = 1; jr <= i__2; ++jr) {
 			work[(jw + 4) * *n + jr] = work[(jw + 2) * *n + 1] * 
 				vr[jr + vr_dim1];
-/* L380: */
 		    }
 
 /*                 A series of compiler directives to defeat */
 /*                 vectorization for the next loop */
-
 
 		    i__2 = je;
 		    for (jc = 2; jc <= i__2; ++jc) {
@@ -1319,11 +1258,8 @@ L370:
 			for (jr = 1; jr <= i__3; ++jr) {
 			    work[(jw + 4) * *n + jr] += work[(jw + 2) * *n + 
 				    jc] * vr[jr + jc * vr_dim1];
-/* L390: */
 			}
-/* L400: */
 		    }
-/* L410: */
 		}
 
 		i__1 = nw - 1;
@@ -1332,9 +1268,7 @@ L370:
 		    for (jr = 1; jr <= i__2; ++jr) {
 			vr[jr + (ieig + jw) * vr_dim1] = work[(jw + 4) * *n + 
 				jr];
-/* L420: */
 		    }
-/* L430: */
 		}
 
 		iend = *n;
@@ -1345,9 +1279,7 @@ L370:
 		    for (jr = 1; jr <= i__2; ++jr) {
 			vr[jr + (ieig + jw) * vr_dim1] = work[(jw + 2) * *n + 
 				jr];
-/* L440: */
 		    }
-/* L450: */
 		}
 
 		iend = je;
@@ -1364,7 +1296,6 @@ L370:
 			    d__1)) + (d__2 = vr[j + (ieig + 1) * vr_dim1], 
 			    abs(d__2));
 		    xmax = max(d__3,d__4);
-/* L460: */
 		}
 	    } else {
 		i__1 = iend;
@@ -1373,7 +1304,6 @@ L370:
 		    d__2 = xmax, d__3 = (d__1 = vr[j + ieig * vr_dim1], abs(
 			    d__1));
 		    xmax = max(d__2,d__3);
-/* L470: */
 		}
 	    }
 
@@ -1385,9 +1315,7 @@ L370:
 		    for (jr = 1; jr <= i__2; ++jr) {
 			vr[jr + (ieig + jw) * vr_dim1] = xscale * vr[jr + (
 				ieig + jw) * vr_dim1];
-/* L480: */
 		    }
-/* L490: */
 		}
 	    }
 L500:

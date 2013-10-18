@@ -30,19 +30,12 @@ static complex c_b1 = {1.f,0.f};
     logical lower;
     logical nisodd;
 
-
 /*  -- LAPACK routine (version 3.2)                                    -- */
 
 /*  -- Contributed by Fred Gustavson of the IBM Watson Research Center -- */
 /*  -- November 2008                                                   -- */
 
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -107,7 +100,6 @@ static complex c_b1 = {1.f,0.f};
 /*               44 45       40 41 42 43 44 */
 /*                  55       50 51 52 53 54 55 */
 
-
 /*  Let TRANSR = 'N'. RFP holds AP as follows: */
 /*  For UPLO = 'U' the upper trapezoid A(0:5,0:2) consists of the last */
 /*  three columns of AP upper. The lower triangle A(4:6,0:2) consists of */
@@ -138,7 +130,6 @@ static complex c_b1 = {1.f,0.f};
 /*  Now let TRANSR = 'C'. RFP A in both UPLO cases is just the conjugate- */
 /*  transpose of RFP A above. One therefore gets: */
 
-
 /*           RFP A                   RFP A */
 
 /*     -- -- -- --                -- -- -- -- -- -- */
@@ -147,7 +138,6 @@ static complex c_b1 = {1.f,0.f};
 /*     04 14 24 34 44 11 12    43 44 11 21 31 41 51 */
 /*     -- -- -- -- -- --                -- -- -- -- */
 /*     05 15 25 35 45 55 22    53 54 55 22 32 42 52 */
-
 
 /*  We next  consider Standard Packed Format when N is odd. */
 /*  We give an example where N = 5. */
@@ -159,7 +149,6 @@ static complex c_b1 = {1.f,0.f};
 /*         22 23 24              20 21 22 */
 /*            33 34              30 31 32 33 */
 /*               44              40 41 42 43 44 */
-
 
 /*  Let TRANSR = 'N'. RFP holds AP as follows: */
 /*  For UPLO = 'U' the upper trapezoid A(0:4,0:2) consists of the last */
@@ -187,7 +176,6 @@ static complex c_b1 = {1.f,0.f};
 /*  Now let TRANSR = 'C'. RFP A in both UPLO cases is just the conjugate- */
 /*  transpose of RFP A above. One therefore gets: */
 
-
 /*           RFP A                   RFP A */
 
 /*     -- -- --                   -- -- -- -- -- -- */
@@ -198,18 +186,6 @@ static complex c_b1 = {1.f,0.f};
 /*     04 14 24 34 44             43 44 22 32 42 52 */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -257,7 +233,6 @@ static complex c_b1 = {1.f,0.f};
 	n1 = *n / 2;
 	n2 = *n - n1;
     }
-
 
 /*     start execution: there are eight cases */
 

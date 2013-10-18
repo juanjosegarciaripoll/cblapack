@@ -31,15 +31,8 @@ static doublereal c_b7 = 0.;
     /* Local variables */
     integer i__, j, l;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -83,16 +76,6 @@ static doublereal c_b7 = 0.;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible. */
 
     /* Parameter adjustments */
@@ -118,9 +101,7 @@ static doublereal c_b7 = 0.;
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    i__3 = i__ + j * a_dim1;
 	    rwork[(j - 1) * *m + i__] = a[i__3].r;
-/* L10: */
 	}
-/* L20: */
     }
 
     l = *m * *n + 1;
@@ -133,9 +114,7 @@ static doublereal c_b7 = 0.;
 	    i__3 = i__ + j * c_dim1;
 	    i__4 = l + (j - 1) * *m + i__ - 1;
 	    c__[i__3].r = rwork[i__4], c__[i__3].i = 0.;
-/* L30: */
 	}
-/* L40: */
     }
 
     i__1 = *n;
@@ -143,9 +122,7 @@ static doublereal c_b7 = 0.;
 	i__2 = *m;
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    rwork[(j - 1) * *m + i__] = d_imag(&a[i__ + j * a_dim1]);
-/* L50: */
 	}
-/* L60: */
     }
     dgemm_("N", "N", m, n, n, &c_b6, &rwork[1], m, &b[b_offset], ldb, &c_b7, &
 	    rwork[l], m);
@@ -159,9 +136,7 @@ static doublereal c_b7 = 0.;
 	    i__5 = l + (j - 1) * *m + i__ - 1;
 	    z__1.r = d__1, z__1.i = rwork[i__5];
 	    c__[i__3].r = z__1.r, c__[i__3].i = z__1.i;
-/* L70: */
 	}
-/* L80: */
     }
 
     return 0;

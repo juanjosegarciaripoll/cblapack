@@ -33,7 +33,6 @@ doublereal sla_porcond__(char *uplo, integer *n, real *a, integer *lda, real *
     integer isave[3];
     real ainvnm;
 
-
 /*     -- LAPACK routine (version 3.2.1)                                 -- */
 /*     -- Contributed by James Demmel, Deaglan Halligan, Yozo Hida and -- */
 /*     -- Jason Riedy of Univ. of California Berkeley.                 -- */
@@ -41,12 +40,6 @@ doublereal sla_porcond__(char *uplo, integer *n, real *a, integer *lda, real *
 
 /*     -- LAPACK is a software package provided by Univ. of Tennessee, -- */
 /*     -- Univ. of California Berkeley and NAG Ltd.                    -- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -105,18 +98,6 @@ doublereal sla_porcond__(char *uplo, integer *n, real *a, integer *lda, real *
 /*     Workspace. */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     a_dim1 = *lda;

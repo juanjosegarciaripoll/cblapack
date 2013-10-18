@@ -26,15 +26,8 @@
     doublereal u[128];
     integer il, iv;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -75,18 +68,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --x;
     --iseed;
@@ -115,7 +96,6 @@
 		i__5 = (i__ << 1) - 1;
 		z__1.r = u[i__4], z__1.i = u[i__5];
 		x[i__3].r = z__1.r, x[i__3].i = z__1.i;
-/* L10: */
 	    }
 	} else if (*idist == 2) {
 
@@ -128,7 +108,6 @@
 		d__2 = u[(i__ << 1) - 1] * 2. - 1.;
 		z__1.r = d__1, z__1.i = d__2;
 		x[i__3].r = z__1.r, x[i__3].i = z__1.i;
-/* L20: */
 	    }
 	} else if (*idist == 3) {
 
@@ -143,7 +122,6 @@
 		z_exp(&z__2, &z__3);
 		z__1.r = d__1 * z__2.r, z__1.i = d__1 * z__2.i;
 		x[i__3].r = z__1.r, x[i__3].i = z__1.i;
-/* L30: */
 	    }
 	} else if (*idist == 4) {
 
@@ -159,7 +137,6 @@
 		z_exp(&z__2, &z__3);
 		z__1.r = d__1 * z__2.r, z__1.i = d__1 * z__2.i;
 		x[i__3].r = z__1.r, x[i__3].i = z__1.i;
-/* L40: */
 	    }
 	} else if (*idist == 5) {
 
@@ -173,10 +150,8 @@
 		z__2.r = 0., z__2.i = d__1;
 		z_exp(&z__1, &z__2);
 		x[i__3].r = z__1.r, x[i__3].i = z__1.i;
-/* L50: */
 	    }
 	}
-/* L60: */
     }
     return 0;
 

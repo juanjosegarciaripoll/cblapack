@@ -42,15 +42,8 @@ static integer c__1 = 1;
     real nrmsml;
     real growto;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -125,18 +118,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     h_dim1 = *ldh;
     h_offset = 1 + h_dim1;
@@ -168,10 +149,8 @@ static integer c__1 = 1;
 	i__2 = j - 1;
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    b[i__ + j * b_dim1] = h__[i__ + j * h_dim1];
-/* L10: */
 	}
 	b[j + j * b_dim1] = h__[j + j * h_dim1] - *wr;
-/* L20: */
     }
 
     if (*wi == 0.f) {
@@ -185,7 +164,6 @@ static integer c__1 = 1;
 	    i__1 = *n;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 		vr[i__] = *eps3;
-/* L30: */
 	    }
 	} else {
 
@@ -216,7 +194,6 @@ static integer c__1 = 1;
 			b[i__ + 1 + j * b_dim1] = b[i__ + j * b_dim1] - x * 
 				temp;
 			b[i__ + j * b_dim1] = temp;
-/* L40: */
 		    }
 		} else {
 
@@ -231,11 +208,9 @@ static integer c__1 = 1;
 			for (j = i__ + 1; j <= i__2; ++j) {
 			    b[i__ + 1 + j * b_dim1] -= x * b[i__ + j * b_dim1]
 				    ;
-/* L50: */
 			}
 		    }
 		}
-/* L60: */
 	    }
 	    if (b[*n + *n * b_dim1] == 0.f) {
 		b[*n + *n * b_dim1] = *eps3;
@@ -262,7 +237,6 @@ static integer c__1 = 1;
 			b[i__ + (j - 1) * b_dim1] = b[i__ + j * b_dim1] - x * 
 				temp;
 			b[i__ + j * b_dim1] = temp;
-/* L70: */
 		    }
 		} else {
 
@@ -277,11 +251,9 @@ static integer c__1 = 1;
 			for (i__ = 1; i__ <= i__1; ++i__) {
 			    b[i__ + (j - 1) * b_dim1] -= x * b[i__ + j * 
 				    b_dim1];
-/* L80: */
 			}
 		    }
 		}
-/* L90: */
 	    }
 	    if (b[b_dim1 + 1] == 0.f) {
 		b[b_dim1 + 1] = *eps3;
@@ -317,10 +289,8 @@ static integer c__1 = 1;
 	    i__2 = *n;
 	    for (i__ = 2; i__ <= i__2; ++i__) {
 		vr[i__] = temp;
-/* L100: */
 	    }
 	    vr[*n - its + 1] -= *eps3 * rootn;
-/* L110: */
 	}
 
 /*        Failure to find eigenvector in N iterations. */
@@ -346,7 +316,6 @@ L120:
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 		vr[i__] = *eps3;
 		vi[i__] = 0.f;
-/* L130: */
 	    }
 	} else {
 
@@ -372,7 +341,6 @@ L120:
 	    i__1 = *n;
 	    for (i__ = 2; i__ <= i__1; ++i__) {
 		b[i__ + 1 + b_dim1] = 0.f;
-/* L140: */
 	    }
 
 	    i__1 = *n - 1;
@@ -397,7 +365,6 @@ L120:
 				b_dim1] - xi * temp;
 			b[i__ + j * b_dim1] = temp;
 			b[j + 1 + i__ * b_dim1] = 0.f;
-/* L150: */
 		    }
 		    b[i__ + 2 + i__ * b_dim1] = -(*wi);
 		    b[i__ + 1 + (i__ + 1) * b_dim1] -= xi * *wi;
@@ -421,7 +388,6 @@ L120:
 				* b_dim1];
 			b[j + 1 + (i__ + 1) * b_dim1] = -xr * b[j + 1 + i__ * 
 				b_dim1] - xi * b[i__ + j * b_dim1];
-/* L160: */
 		    }
 		    b[i__ + 2 + (i__ + 1) * b_dim1] -= *wi;
 		}
@@ -432,7 +398,6 @@ L120:
 		i__3 = *n - i__;
 		work[i__] = sasum_(&i__2, &b[i__ + (i__ + 1) * b_dim1], ldb) 
 			+ sasum_(&i__3, &b[i__ + 2 + i__ * b_dim1], &c__1);
-/* L170: */
 	    }
 	    if (b[*n + *n * b_dim1] == 0.f && b[*n + 1 + *n * b_dim1] == 0.f) 
 		    {
@@ -455,7 +420,6 @@ L120:
 	    i__1 = *n - 1;
 	    for (j = 1; j <= i__1; ++j) {
 		b[*n + 1 + j * b_dim1] = 0.f;
-/* L180: */
 	    }
 
 	    for (j = *n; j >= 2; --j) {
@@ -478,7 +442,6 @@ L120:
 				temp;
 			b[i__ + j * b_dim1] = temp;
 			b[j + 1 + i__ * b_dim1] = 0.f;
-/* L190: */
 		    }
 		    b[j + 1 + (j - 1) * b_dim1] = *wi;
 		    b[j - 1 + (j - 1) * b_dim1] += xi * *wi;
@@ -502,7 +465,6 @@ L120:
 				i__ * b_dim1];
 			b[j + i__ * b_dim1] = -xr * b[j + 1 + i__ * b_dim1] - 
 				xi * b[i__ + j * b_dim1];
-/* L200: */
 		    }
 		    b[j + (j - 1) * b_dim1] += *wi;
 		}
@@ -513,7 +475,6 @@ L120:
 		i__2 = j - 1;
 		work[j] = sasum_(&i__1, &b[j * b_dim1 + 1], &c__1) + sasum_(&
 			i__2, &b[j + 1 + b_dim1], ldb);
-/* L210: */
 	    }
 	    if (b[b_dim1 + 1] == 0.f && b[b_dim1 + 2] == 0.f) {
 		b[b_dim1 + 1] = *eps3;
@@ -558,7 +519,6 @@ L120:
 				* b_dim1] * vi[j];
 			xi = xi - b[i__ + j * b_dim1] * vi[j] - b[j + 1 + i__ 
 				* b_dim1] * vr[j];
-/* L220: */
 		    }
 		} else {
 		    i__4 = i__ - 1;
@@ -567,7 +527,6 @@ L120:
 				* b_dim1] * vi[j];
 			xi = xi - b[j + i__ * b_dim1] * vi[j] - b[i__ + 1 + j 
 				* b_dim1] * vr[j];
-/* L230: */
 		    }
 		}
 
@@ -601,7 +560,6 @@ L120:
 		    for (j = 1; j <= i__4; ++j) {
 			vr[j] = 0.f;
 			vi[j] = 0.f;
-/* L240: */
 		    }
 		    vr[i__] = 1.f;
 		    vi[i__] = 1.f;
@@ -609,7 +567,6 @@ L120:
 		    vmax = 1.f;
 		    vcrit = *bignum;
 		}
-/* L250: */
 	    }
 
 /*           Test for sufficient growth in the norm of (VR,VI). */
@@ -629,10 +586,8 @@ L120:
 	    for (i__ = 2; i__ <= i__3; ++i__) {
 		vr[i__] = y;
 		vi[i__] = 0.f;
-/* L260: */
 	    }
 	    vr[*n - its + 1] -= *eps3 * rootn;
-/* L270: */
 	}
 
 /*        Failure to find eigenvector in N iterations */
@@ -650,7 +605,6 @@ L280:
 	    r__3 = vnorm, r__4 = (r__1 = vr[i__], dabs(r__1)) + (r__2 = vi[
 		    i__], dabs(r__2));
 	    vnorm = dmax(r__3,r__4);
-/* L290: */
 	}
 	r__1 = 1.f / vnorm;
 	sscal_(n, &r__1, &vr[1], &c__1);

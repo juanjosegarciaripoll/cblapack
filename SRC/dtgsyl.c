@@ -47,15 +47,8 @@ static doublereal c_b52 = 1.;
     integer isolve;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -233,18 +226,6 @@ static doublereal c_b52 = 1.;
 /*  Replaced various illegal calls to DCOPY by calls to DLASET. */
 /*  Sven Hammarling, 1/5/02. */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Decode and test input parameters */
 
     /* Parameter adjustments */
@@ -395,7 +376,6 @@ static doublereal c_b52 = 1.;
 		dlacpy_("F", m, n, &work[*m * *n + 1], m, &f[f_offset], ldf);
 		*scale = scale2;
 	    }
-/* L30: */
 	}
 
 	return 0;
@@ -459,7 +439,6 @@ L70:
 /*           Solve (I, J)-subsystem */
 /*               A(I, I) * R(I, J) - L(I, J) * B(J, J) = C(I, J) */
 /*               D(I, I) * R(I, J) - L(I, J) * E(J, J) = F(I, J) */
-/*           for I = P, P - 1,..., 1; J = 1, 2,..., Q */
 
 	    dscale = 0.;
 	    dsum = 1.;
@@ -491,7 +470,6 @@ L70:
 			for (k = 1; k <= i__3; ++k) {
 			    dscal_(m, &scaloc, &c__[k * c_dim1 + 1], &c__1);
 			    dscal_(m, &scaloc, &f[k * f_dim1 + 1], &c__1);
-/* L80: */
 			}
 			i__3 = je;
 			for (k = js; k <= i__3; ++k) {
@@ -500,7 +478,6 @@ L70:
 				    c__1);
 			    i__4 = is - 1;
 			    dscal_(&i__4, &scaloc, &f[k * f_dim1 + 1], &c__1);
-/* L90: */
 			}
 			i__3 = je;
 			for (k = js; k <= i__3; ++k) {
@@ -510,13 +487,11 @@ L70:
 			    i__4 = *m - ie;
 			    dscal_(&i__4, &scaloc, &f[ie + 1 + k * f_dim1], &
 				    c__1);
-/* L100: */
 			}
 			i__3 = *n;
 			for (k = je + 1; k <= i__3; ++k) {
 			    dscal_(m, &scaloc, &c__[k * c_dim1 + 1], &c__1);
 			    dscal_(m, &scaloc, &f[k * f_dim1 + 1], &c__1);
-/* L110: */
 			}
 			*scale *= scaloc;
 		    }
@@ -545,9 +520,7 @@ L70:
 				 f_dim1], ldf, &e[js + (je + 1) * e_dim1], 
 				lde, &c_b52, &f[is + (je + 1) * f_dim1], ldf);
 		    }
-/* L120: */
 		}
-/* L130: */
 	    }
 	    if (dscale != 0.) {
 		if (*ijob == 1 || *ijob == 3) {
@@ -571,7 +544,6 @@ L70:
 		dlacpy_("F", m, n, &work[*m * *n + 1], m, &f[f_offset], ldf);
 		*scale = scale2;
 	    }
-/* L150: */
 	}
 
     } else {
@@ -579,7 +551,6 @@ L70:
 /*        Solve transposed (I, J)-subsystem */
 /*             A(I, I)' * R(I, J)  + D(I, I)' * L(I, J)  =  C(I, J) */
 /*             R(I, J)  * B(J, J)' + L(I, J)  * E(J, J)' = -F(I, J) */
-/*        for I = 1,2,..., P; J = Q, Q-1,..., 1 */
 
 	*scale = 1.;
 	i__1 = p;
@@ -605,7 +576,6 @@ L70:
 		    for (k = 1; k <= i__3; ++k) {
 			dscal_(m, &scaloc, &c__[k * c_dim1 + 1], &c__1);
 			dscal_(m, &scaloc, &f[k * f_dim1 + 1], &c__1);
-/* L160: */
 		    }
 		    i__3 = je;
 		    for (k = js; k <= i__3; ++k) {
@@ -613,7 +583,6 @@ L70:
 			dscal_(&i__4, &scaloc, &c__[k * c_dim1 + 1], &c__1);
 			i__4 = is - 1;
 			dscal_(&i__4, &scaloc, &f[k * f_dim1 + 1], &c__1);
-/* L170: */
 		    }
 		    i__3 = je;
 		    for (k = js; k <= i__3; ++k) {
@@ -623,13 +592,11 @@ L70:
 			i__4 = *m - ie;
 			dscal_(&i__4, &scaloc, &f[ie + 1 + k * f_dim1], &c__1)
 				;
-/* L180: */
 		    }
 		    i__3 = *n;
 		    for (k = je + 1; k <= i__3; ++k) {
 			dscal_(m, &scaloc, &c__[k * c_dim1 + 1], &c__1);
 			dscal_(m, &scaloc, &f[k * f_dim1 + 1], &c__1);
-/* L190: */
 		    }
 		    *scale *= scaloc;
 		}
@@ -656,9 +623,7 @@ L70:
 			    1) * d_dim1], ldd, &f[is + js * f_dim1], ldf, &
 			    c_b52, &c__[ie + 1 + js * c_dim1], ldc);
 		}
-/* L200: */
 	    }
-/* L210: */
 	}
 
     }

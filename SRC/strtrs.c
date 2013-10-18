@@ -27,15 +27,8 @@ static real c_b12 = 1.f;
     /* Local variables */
     logical nounit;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -100,18 +93,6 @@ static real c_b12 = 1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -161,7 +142,6 @@ static real c_b12 = 1.f;
 	    if (a[*info + *info * a_dim1] == 0.f) {
 		return 0;
 	    }
-/* L10: */
 	}
     }
     *info = 0;

@@ -36,15 +36,9 @@ static real c_b24 = 1.f;
     logical upper;
     real sstop;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
 /*     Craig Lucas, University of Manchester / NAG Ltd. */
 /*     October, 2008 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -112,18 +106,6 @@ static real c_b24 = 1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -173,7 +155,6 @@ static real c_b24 = 1.f;
 	i__1 = *n;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    piv[i__] = i__;
-/* L100: */
 	}
 
 /*     Compute stopping value */
@@ -201,7 +182,6 @@ static real c_b24 = 1.f;
 	    sstop = *tol;
 	}
 
-
 	if (upper) {
 
 /*           Compute the Cholesky factorization P' * A * P = U' * U */
@@ -222,7 +202,6 @@ static real c_b24 = 1.f;
 		i__3 = *n;
 		for (i__ = k; i__ <= i__3; ++i__) {
 		    work[i__] = 0.f;
-/* L110: */
 		}
 
 		i__3 = k + jb - 1;
@@ -242,7 +221,6 @@ static real c_b24 = 1.f;
 			}
 			work[*n + i__] = a[i__ + i__ * a_dim1] - work[i__];
 
-/* L120: */
 		    }
 
 		    if (j > 1) {
@@ -299,7 +277,6 @@ static real c_b24 = 1.f;
 			sscal_(&i__4, &r__1, &a[j + (j + 1) * a_dim1], lda);
 		    }
 
-/* L130: */
 		}
 
 /*              Update trailing matrix, J already incremented */
@@ -310,7 +287,6 @@ static real c_b24 = 1.f;
 			    a_dim1], lda, &c_b24, &a[j + j * a_dim1], lda);
 		}
 
-/* L140: */
 	    }
 
 	} else {
@@ -333,7 +309,6 @@ static real c_b24 = 1.f;
 		i__3 = *n;
 		for (i__ = k; i__ <= i__3; ++i__) {
 		    work[i__] = 0.f;
-/* L150: */
 		}
 
 		i__3 = k + jb - 1;
@@ -353,7 +328,6 @@ static real c_b24 = 1.f;
 			}
 			work[*n + i__] = a[i__ + i__ * a_dim1] - work[i__];
 
-/* L160: */
 		    }
 
 		    if (j > 1) {
@@ -410,7 +384,6 @@ static real c_b24 = 1.f;
 			sscal_(&i__4, &r__1, &a[j + 1 + j * a_dim1], &c__1);
 		    }
 
-/* L170: */
 		}
 
 /*              Update trailing matrix, J already incremented */
@@ -421,7 +394,6 @@ static real c_b24 = 1.f;
 			     a_dim1], lda, &c_b24, &a[j + j * a_dim1], lda);
 		}
 
-/* L180: */
 	    }
 
 	}

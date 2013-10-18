@@ -50,15 +50,8 @@ static integer c__4 = 4;
     real smlnum;
     logical lquery;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -92,7 +85,6 @@ static integer c__4 = 4;
 /*  tridiagonal eigenvalue/eigenvector problem", by Inderjit Dhillon, */
 /*  Computer Science Division Technical Report No. UCB//CSD-97-971, */
 /*  UC Berkeley, May 1997. */
-
 
 /*  Note 1 : SSTEVR calls SSTEMR when the full spectrum is requested */
 /*  on machines which conform to the ieee-754 floating point standard. */
@@ -247,19 +239,6 @@ static integer c__4 = 4;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -288,7 +267,6 @@ static integer c__4 = 4;
 /* Computing MAX */
     i__1 = 1, i__2 = *n * 10;
     liwmin = max(i__1,i__2);
-
 
     *info = 0;
     if (! (wantz || lsame_(jobz, "N"))) {
@@ -369,7 +347,6 @@ static integer c__4 = 4;
     r__1 = sqrt(bignum), r__2 = 1.f / sqrt(sqrt(safmin));
     rmax = dmin(r__1,r__2);
 
-
 /*     Scale matrix to allowable range, if necessary. */
 
     iscale = 0;
@@ -412,7 +389,6 @@ static integer c__4 = 4;
 /*     If all eigenvalues are desired, then */
 /*     call SSTERF or SSTEMR.  If this fails for some eigenvalue, then */
 /*     try SSTEBZ. */
-
 
     test = FALSE_;
     if (indeig) {
@@ -490,7 +466,6 @@ L10:
 		    i__ = jj;
 		    tmp1 = w[jj];
 		}
-/* L20: */
 	    }
 
 	    if (i__ != 0) {
@@ -499,13 +474,11 @@ L10:
 		sswap_(n, &z__[i__ * z_dim1 + 1], &c__1, &z__[j * z_dim1 + 1], 
 			 &c__1);
 	    }
-/* L30: */
 	}
     }
 
 /*      Causes problems with tests 19 & 20: */
 /*      IF (wantz .and. INDEIG ) Z( 1,1) = Z(1,1) / 1.002 + .002 */
-
 
     work[1] = (real) lwmin;
     iwork[1] = liwmin;

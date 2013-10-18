@@ -29,15 +29,8 @@ static integer c__1 = 1;
     integer i__, j, jp;
     doublereal sfmin;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -83,18 +76,6 @@ static integer c__1 = 1;
 /*               to solve a system of equations. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -160,7 +141,6 @@ static integer c__1 = 1;
 			z_div(&z__1, &a[j + i__ + j * a_dim1], &a[j + j * 
 				a_dim1]);
 			a[i__3].r = z__1.r, a[i__3].i = z__1.i;
-/* L20: */
 		    }
 		}
 	    }
@@ -181,7 +161,6 @@ static integer c__1 = 1;
 		    (j + 1) * a_dim1], lda, &a[j + 1 + (j + 1) * a_dim1], lda)
 		    ;
 	}
-/* L10: */
     }
     return 0;
 

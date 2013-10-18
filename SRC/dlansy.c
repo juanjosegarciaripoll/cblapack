@@ -29,15 +29,8 @@ doublereal dlansy_(char *norm, char *uplo, integer *n, doublereal *a, integer
     doublereal sum, absa, scale;
     doublereal value;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -99,18 +92,6 @@ doublereal dlansy_(char *norm, char *uplo, integer *n, doublereal *a, integer
 
 /* ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     a_dim1 = *lda;
     a_offset = 1 + a_dim1;
@@ -134,9 +115,7 @@ doublereal dlansy_(char *norm, char *uplo, integer *n, doublereal *a, integer
 		    d__2 = value, d__3 = (d__1 = a[i__ + j * a_dim1], abs(
 			    d__1));
 		    value = max(d__2,d__3);
-/* L10: */
 		}
-/* L20: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -147,9 +126,7 @@ doublereal dlansy_(char *norm, char *uplo, integer *n, doublereal *a, integer
 		    d__2 = value, d__3 = (d__1 = a[i__ + j * a_dim1], abs(
 			    d__1));
 		    value = max(d__2,d__3);
-/* L30: */
 		}
-/* L40: */
 	    }
 	}
     } else if (lsame_(norm, "I") || lsame_(norm, "O") || *(unsigned char *)norm == '1') {
@@ -166,23 +143,19 @@ doublereal dlansy_(char *norm, char *uplo, integer *n, doublereal *a, integer
 		    absa = (d__1 = a[i__ + j * a_dim1], abs(d__1));
 		    sum += absa;
 		    work[i__] += absa;
-/* L50: */
 		}
 		work[j] = sum + (d__1 = a[j + j * a_dim1], abs(d__1));
-/* L60: */
 	    }
 	    i__1 = *n;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 /* Computing MAX */
 		d__1 = value, d__2 = work[i__];
 		value = max(d__1,d__2);
-/* L70: */
 	    }
 	} else {
 	    i__1 = *n;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 		work[i__] = 0.;
-/* L80: */
 	    }
 	    i__1 = *n;
 	    for (j = 1; j <= i__1; ++j) {
@@ -192,10 +165,8 @@ doublereal dlansy_(char *norm, char *uplo, integer *n, doublereal *a, integer
 		    absa = (d__1 = a[i__ + j * a_dim1], abs(d__1));
 		    sum += absa;
 		    work[i__] += absa;
-/* L90: */
 		}
 		value = max(value,sum);
-/* L100: */
 	    }
 	}
     } else if (lsame_(norm, "F") || lsame_(norm, "E")) {
@@ -209,14 +180,12 @@ doublereal dlansy_(char *norm, char *uplo, integer *n, doublereal *a, integer
 	    for (j = 2; j <= i__1; ++j) {
 		i__2 = j - 1;
 		dlassq_(&i__2, &a[j * a_dim1 + 1], &c__1, &scale, &sum);
-/* L110: */
 	    }
 	} else {
 	    i__1 = *n - 1;
 	    for (j = 1; j <= i__1; ++j) {
 		i__2 = *n - j;
 		dlassq_(&i__2, &a[j + 1 + j * a_dim1], &c__1, &scale, &sum);
-/* L120: */
 	    }
 	}
 	sum *= 2;

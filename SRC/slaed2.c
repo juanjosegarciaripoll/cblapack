@@ -35,15 +35,8 @@ static integer c__1 = 1;
     real eps, tau, tol;
     integer psm[4], imax, jmax, ctot[4];
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -157,20 +150,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -236,7 +215,6 @@ static integer c__1 = 1;
     i__1 = *n;
     for (i__ = n1p1; i__ <= i__1; ++i__) {
 	indxq[i__] += *n1;
-/* L10: */
     }
 
 /*     re-integrate the deflated parts from the last pass */
@@ -244,13 +222,11 @@ static integer c__1 = 1;
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	dlamda[i__] = d__[indxq[i__]];
-/* L20: */
     }
     slamrg_(n1, &n2, &dlamda[1], &c__1, &c__1, &indxc[1]);
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	indx[i__] = indxq[indxc[i__]];
-/* L30: */
     }
 
 /*     Calculate the allowable deflation tolerance */
@@ -276,7 +252,6 @@ static integer c__1 = 1;
 	    scopy_(n, &q[i__ * q_dim1 + 1], &c__1, &q2[iq2], &c__1);
 	    dlamda[j] = d__[i__];
 	    iq2 += *n;
-/* L40: */
 	}
 	slacpy_("A", n, n, &q2[1], n, &q[q_offset], ldq);
 	scopy_(n, &dlamda[1], &c__1, &d__[1], &c__1);
@@ -292,14 +267,11 @@ static integer c__1 = 1;
     i__1 = *n1;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	coltyp[i__] = 1;
-/* L50: */
     }
     i__1 = *n;
     for (i__ = n1p1; i__ <= i__1; ++i__) {
 	coltyp[i__] = 3;
-/* L60: */
     }
-
 
     *k = 0;
     k2 = *n + 1;
@@ -320,7 +292,6 @@ static integer c__1 = 1;
 	    pj = nj;
 	    goto L80;
 	}
-/* L70: */
     }
 L80:
     ++j;
@@ -413,13 +384,11 @@ L100:
 
     for (j = 1; j <= 4; ++j) {
 	ctot[j - 1] = 0;
-/* L110: */
     }
     i__1 = *n;
     for (j = 1; j <= i__1; ++j) {
 	ct = coltyp[j];
 	++ctot[ct - 1];
-/* L120: */
     }
 
 /*     PSM(*) = Position in SubMatrix (of types 1 through 4) */
@@ -441,7 +410,6 @@ L100:
 	indx[psm[ct - 1]] = js;
 	indxc[psm[ct - 1]] = j;
 	++psm[ct - 1];
-/* L130: */
     }
 
 /*     Sort the eigenvalues and corresponding eigenvectors into DLAMDA */
@@ -459,7 +427,6 @@ L100:
 	z__[i__] = d__[js];
 	++i__;
 	iq1 += *n1;
-/* L140: */
     }
 
     i__1 = ctot[1];
@@ -471,7 +438,6 @@ L100:
 	++i__;
 	iq1 += *n1;
 	iq2 += n2;
-/* L150: */
     }
 
     i__1 = ctot[2];
@@ -481,7 +447,6 @@ L100:
 	z__[i__] = d__[js];
 	++i__;
 	iq2 += n2;
-/* L160: */
     }
 
     iq1 = iq2;
@@ -492,7 +457,6 @@ L100:
 	iq2 += *n;
 	z__[i__] = d__[js];
 	++i__;
-/* L170: */
     }
 
 /*     The deflated eigenvalues and their corresponding vectors go back */
@@ -506,7 +470,6 @@ L100:
 
     for (j = 1; j <= 4; ++j) {
 	coltyp[j] = ctot[j - 1];
-/* L180: */
     }
 
 L190:

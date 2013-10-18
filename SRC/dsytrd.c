@@ -36,15 +36,8 @@ static doublereal c_b23 = 1.;
     integer ldwork, lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -158,18 +151,6 @@ static doublereal c_b23 = 1.;
 /*  denotes an element of the vector defining H(i). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters */
 
@@ -291,9 +272,7 @@ static doublereal c_b23 = 1.;
 	    for (j = i__; j <= i__3; ++j) {
 		a[j - 1 + j * a_dim1] = e[j - 1];
 		d__[j] = a[j + j * a_dim1];
-/* L10: */
 	    }
-/* L20: */
 	}
 
 /*        Use unblocked code to reduce the last or only block */
@@ -330,9 +309,7 @@ static doublereal c_b23 = 1.;
 	    for (j = i__; j <= i__3; ++j) {
 		a[j + 1 + j * a_dim1] = e[j];
 		d__[j] = a[j + j * a_dim1];
-/* L30: */
 	    }
-/* L40: */
 	}
 
 /*        Use unblocked code to reduce the last or only block */

@@ -28,13 +28,8 @@ logical lsamen_(integer *n, char *ca, char *cb)
     ca_len = strlen (ca);
     cb_len = strlen (cb);
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -58,14 +53,6 @@ logical lsamen_(integer *n, char *ca, char *cb)
 
 /* ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     ret_val = FALSE_;
     if (i_len(ca, ca_len) < *n || i_len(cb, cb_len) < *n) {
 	goto L20;
@@ -82,7 +69,6 @@ logical lsamen_(integer *n, char *ca, char *cb)
 	    goto L20;
 	}
 
-/* L10: */
     }
     ret_val = TRUE_;
 

@@ -36,15 +36,8 @@ static integer c__1 = 1;
     doublereal absakk;
     doublereal colmax, rowmax;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -123,7 +116,6 @@ static integer c__1 = 1;
 /*         Company */
 
 /*  If UPLO = 'U', then A = U*D*U', where */
-/*     U = P(n)*U(n)* ... *P(k)U(k)* ..., */
 /*  i.e., U is a product of terms P(k)*U(k), where k decreases from n to */
 /*  1 in steps of 1 or 2, and D is a block diagonal matrix with 1-by-1 */
 /*  and 2-by-2 diagonal blocks D(k).  P(k) is a permutation matrix as */
@@ -140,7 +132,6 @@ static integer c__1 = 1;
 /*  and A(k,k), and v overwrites A(1:k-2,k-1:k). */
 
 /*  If UPLO = 'L', then A = L*D*L', where */
-/*     L = P(1)*L(1)* ... *P(k)*L(k)* ..., */
 /*  i.e., L is a product of terms P(k)*L(k), where k increases from 1 to */
 /*  n in steps of 1 or 2, and D is a block diagonal matrix with 1-by-1 */
 /*  and 2-by-2 diagonal blocks D(k).  P(k) is a permutation matrix as */
@@ -157,18 +148,6 @@ static integer c__1 = 1;
 /*  and A(k+1,k+1), and v overwrites A(k+2:n,k:k+1). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -362,11 +341,9 @@ L10:
 			    a[i__ + j * a_dim1] = a[i__ + j * a_dim1] - a[i__ 
 				    + k * a_dim1] * wk - a[i__ + (k - 1) * 
 				    a_dim1] * wkm1;
-/* L20: */
 			}
 			a[j + k * a_dim1] = wk;
 			a[j + (k - 1) * a_dim1] = wkm1;
-/* L30: */
 		    }
 
 		}
@@ -558,13 +535,11 @@ L40:
 			    a[i__ + j * a_dim1] = a[i__ + j * a_dim1] - a[i__ 
 				    + k * a_dim1] * wk - a[i__ + (k + 1) * 
 				    a_dim1] * wkp1;
-/* L50: */
 			}
 
 			a[j + k * a_dim1] = wk;
 			a[j + (k + 1) * a_dim1] = wkp1;
 
-/* L60: */
 		    }
 		}
 	    }

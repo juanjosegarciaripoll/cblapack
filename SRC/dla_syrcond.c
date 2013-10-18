@@ -36,7 +36,6 @@ doublereal dla_syrcond__(char *uplo, integer *n, doublereal *a, integer *lda,
     char normin[1];
     doublereal smlnum;
 
-
 /*     -- LAPACK routine (version 3.2.1)                                 -- */
 /*     -- Contributed by James Demmel, Deaglan Halligan, Yozo Hida and -- */
 /*     -- Jason Riedy of Univ. of California Berkeley.                 -- */
@@ -44,12 +43,6 @@ doublereal dla_syrcond__(char *uplo, integer *n, doublereal *a, integer *lda,
 
 /*     -- LAPACK is a software package provided by Univ. of Tennessee, -- */
 /*     -- Univ. of California Berkeley and NAG Ltd.                    -- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -112,18 +105,6 @@ doublereal dla_syrcond__(char *uplo, integer *n, doublereal *a, integer *lda,
 /*     Workspace. */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     a_dim1 = *lda;

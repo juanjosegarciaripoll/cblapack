@@ -40,15 +40,8 @@ static doublereal c_b26 = 1.;
     integer ldwork, lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -142,20 +135,6 @@ static doublereal c_b26 = 1.;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters */
 
     /* Parameter adjustments */
@@ -197,12 +176,10 @@ static doublereal c_b26 = 1.;
     i__1 = *ilo - 1;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	tau[i__] = 0.;
-/* L10: */
     }
     i__1 = *n - 1;
     for (i__ = max(1,*ihi); i__ <= i__1; ++i__) {
 	tau[i__] = 0.;
-/* L20: */
     }
 
 /*     Quick return if possible */
@@ -299,7 +276,6 @@ static doublereal c_b26 = 1.;
 	    for (j = 0; j <= i__3; ++j) {
 		daxpy_(&i__, &c_b25, &work[ldwork * j + 1], &c__1, &a[(i__ + 
 			j + 1) * a_dim1 + 1], &c__1);
-/* L30: */
 	    }
 
 /*           Apply the block reflector H to A(i+1:ihi,i+ib:n) from the */
@@ -310,7 +286,6 @@ static doublereal c_b26 = 1.;
 	    dlarfb_("Left", "Transpose", "Forward", "Columnwise", &i__3, &
 		    i__4, &ib, &a[i__ + 1 + i__ * a_dim1], lda, t, &c__65, &a[
 		    i__ + 1 + (i__ + ib) * a_dim1], lda, &work[1], &ldwork);
-/* L40: */
 	}
     }
 

@@ -63,15 +63,8 @@
     /* Local variables */
     integer i__, i1, i2, i3, i4, it1, it2, it3, it4;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -111,22 +104,11 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Data statements .. */
     /* Parameter adjustments */
     --iseed;
     --x;
 
     /* Function Body */
-/*     .. */
-/*     .. Executable Statements .. */
 
     i1 = iseed[1];
     i2 = iseed[2];
@@ -176,7 +158,6 @@ L20:
 	    goto L20;
 	}
 
-/* L10: */
     }
 
 /*     Return final value of seed */

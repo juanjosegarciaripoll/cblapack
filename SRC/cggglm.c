@@ -33,15 +33,8 @@ static integer c_n1 = -1;
     integer lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -139,18 +132,6 @@ static integer c_n1 = -1;
 /*                be computed. */
 
 /*  =================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters */
 
@@ -271,7 +252,6 @@ static integer c_n1 = -1;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	i__2 = i__;
 	y[i__2].r = 0.f, y[i__2].i = 0.f;
-/* L10: */
     }
 
 /*     Update d1 = d1 - T12*y2 */

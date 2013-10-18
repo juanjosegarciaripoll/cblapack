@@ -28,15 +28,8 @@ static integer c__1 = 1;
 
     /* Local variables */
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -104,14 +97,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --v;
     c_dim1 = *ldc;
@@ -142,7 +127,6 @@ static integer c__1 = 1;
 	    z__1.r = -tau->r, z__1.i = -tau->i;
 	    zaxpy_(n, &z__1, &work[1], &c__1, &c__[c_offset], ldc);
 
-/*           C( m-l+1:m, 1:n ) = C( m-l+1:m, 1:n ) - ... */
 /*                               tau * v( 1:l ) * conjg( w( 1:n )' ) */
 
 	    z__1.r = -tau->r, z__1.i = -tau->i;
@@ -170,7 +154,6 @@ static integer c__1 = 1;
 	    z__1.r = -tau->r, z__1.i = -tau->i;
 	    zaxpy_(m, &z__1, &work[1], &c__1, &c__[c_offset], &c__1);
 
-/*           C( 1:m, n-l+1:n ) = C( 1:m, n-l+1:n ) - ... */
 /*                               tau * w( 1:m ) * v( 1:l )' */
 
 	    z__1.r = -tau->r, z__1.i = -tau->i;

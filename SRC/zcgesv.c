@@ -36,16 +36,8 @@ static integer c__1 = 1;
     doublereal rnrm, xnrm;
     integer ptsx, iiter;
 
-
 /*  -- LAPACK PROTOTYPE driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     January 2007 */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -155,25 +147,6 @@ static integer c__1 = 1;
 /*                could not be computed. */
 
 /*  ========= */
-
-/*     .. Parameters .. */
-
-
-
-
-/*     .. Local Scalars .. */
-
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     work_dim1 = *n;
@@ -374,7 +347,6 @@ L10:
 
 L20:
 
-/* L30: */
 	;
     }
 

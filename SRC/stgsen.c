@@ -49,18 +49,11 @@ static real c_b28 = 1.f;
     real smlnum;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
 /*     January 2007 */
 
 /*     Modified to call SLACN2 in place of SLACON, 7 Feb 03, SJH. */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -120,7 +113,6 @@ static real c_b28 = 1.f;
 /*  SELECT  (input) LOGICAL array, dimension (N) */
 /*          SELECT specifies the eigenvalues in the selected cluster. */
 /*          To select a real eigenvalue w(j), SELECT(j) must be set to */
-/*          .TRUE.. To select a complex conjugate pair of eigenvalues */
 /*          w(j) and w(j+1), corresponding to a 2-by-2 diagonal block, */
 /*          either SELECT(j) or SELECT(j+1) or both must be set to */
 /*          .TRUE.; a complex conjugate pair of eigenvalues must be */
@@ -148,9 +140,7 @@ static real c_b28 = 1.f;
 /*  ALPHAR  (output) REAL array, dimension (N) */
 /*  ALPHAI  (output) REAL array, dimension (N) */
 /*  BETA    (output) REAL array, dimension (N) */
-/*          On exit, (ALPHAR(j) + ALPHAI(j)*i)/BETA(j), j=1,...,N, will */
 /*          be the generalized eigenvalues.  ALPHAR(j) + ALPHAI(j)*i */
-/*          and BETA(j),j=1,...,N  are the diagonals of the complex Schur */
 /*          form (S,T) that would result if the 2-by-2 diagonal blocks of */
 /*          the real generalized Schur form of (A,B) were further reduced */
 /*          to triangular form using complex unitary transformations. */
@@ -371,20 +361,6 @@ static real c_b28 = 1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Decode and test the input parameters */
 
     /* Parameter adjustments */
@@ -470,7 +446,6 @@ static real c_b28 = 1.f;
 		}
 	    }
 	}
-/* L10: */
     }
 
     if (*ijob == 1 || *ijob == 2 || *ijob == 4) {
@@ -528,7 +503,6 @@ static real c_b28 = 1.f;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 		slassq_(n, &a[i__ * a_dim1 + 1], &c__1, &dscale, &dsum);
 		slassq_(n, &b[i__ * b_dim1 + 1], &c__1, &dscale, &dsum);
-/* L20: */
 	    }
 	    dif[1] = dscale * sqrt(dsum);
 	    dif[2] = dif[1];
@@ -590,7 +564,6 @@ static real c_b28 = 1.f;
 		}
 	    }
 	}
-/* L30: */
     }
     if (wantp) {
 
@@ -663,7 +636,6 @@ static real c_b28 = 1.f;
 		    &dif[2], &work[(n1 << 1) * n2 + 1], &i__1, &iwork[1], &
 		    ierr);
 	} else {
-
 
 /*           Compute 1-norm-based estimates of Difu and Difl using */
 /*           reversed communication with SLACN2. In each step a */
@@ -790,7 +762,6 @@ L60:
 			if (*wantq) {
 			    q[i__ + k * q_dim1] = -q[i__ + k * q_dim1];
 			}
-/* L80: */
 		    }
 		}
 
@@ -800,7 +771,6 @@ L60:
 
 	    }
 	}
-/* L70: */
     }
 
     work[1] = (real) lwmin;

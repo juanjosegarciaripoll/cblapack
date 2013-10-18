@@ -32,15 +32,8 @@ static integer c__1 = 1;
     doublecomplex t1, t2, t3, t4, t5, t6, t7, t8, t9, v1, v2, v3, v4, v5, v6, 
 	    v7, v8, v9, t10, v10, sum;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -90,18 +83,6 @@ static integer c__1 = 1;
 /*          WORK is not referenced if H has order < 11. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --v;
@@ -153,7 +134,6 @@ L10:
 	    z__1.r = t1.r * c__[i__3].r - t1.i * c__[i__3].i, z__1.i = t1.r * 
 		    c__[i__3].i + t1.i * c__[i__3].r;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L20: */
 	}
 	goto L410;
 L30:
@@ -194,7 +174,6 @@ L30:
 		    sum.i * t2.r;
 	    z__1.r = c__[i__3].r - z__2.r, z__1.i = c__[i__3].i - z__2.i;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L40: */
 	}
 	goto L410;
 L50:
@@ -251,7 +230,6 @@ L50:
 		    sum.i * t3.r;
 	    z__1.r = c__[i__3].r - z__2.r, z__1.i = c__[i__3].i - z__2.i;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L60: */
 	}
 	goto L410;
 L70:
@@ -324,7 +302,6 @@ L70:
 		    sum.i * t4.r;
 	    z__1.r = c__[i__3].r - z__2.r, z__1.i = c__[i__3].i - z__2.i;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L80: */
 	}
 	goto L410;
 L90:
@@ -413,7 +390,6 @@ L90:
 		    sum.i * t5.r;
 	    z__1.r = c__[i__3].r - z__2.r, z__1.i = c__[i__3].i - z__2.i;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L100: */
 	}
 	goto L410;
 L110:
@@ -518,7 +494,6 @@ L110:
 		    sum.i * t6.r;
 	    z__1.r = c__[i__3].r - z__2.r, z__1.i = c__[i__3].i - z__2.i;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L120: */
 	}
 	goto L410;
 L130:
@@ -639,7 +614,6 @@ L130:
 		    sum.i * t7.r;
 	    z__1.r = c__[i__3].r - z__2.r, z__1.i = c__[i__3].i - z__2.i;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L140: */
 	}
 	goto L410;
 L150:
@@ -776,7 +750,6 @@ L150:
 		    sum.i * t8.r;
 	    z__1.r = c__[i__3].r - z__2.r, z__1.i = c__[i__3].i - z__2.i;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L160: */
 	}
 	goto L410;
 L170:
@@ -929,7 +902,6 @@ L170:
 		    sum.i * t9.r;
 	    z__1.r = c__[i__3].r - z__2.r, z__1.i = c__[i__3].i - z__2.i;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L180: */
 	}
 	goto L410;
 L190:
@@ -1098,7 +1070,6 @@ L190:
 		    sum.i * t10.r;
 	    z__1.r = c__[i__3].r - z__2.r, z__1.i = c__[i__3].i - z__2.i;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L200: */
 	}
 	goto L410;
     } else {
@@ -1140,7 +1111,6 @@ L210:
 	    z__1.r = t1.r * c__[i__3].r - t1.i * c__[i__3].i, z__1.i = t1.r * 
 		    c__[i__3].i + t1.i * c__[i__3].r;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L220: */
 	}
 	goto L410;
 L230:
@@ -1179,7 +1149,6 @@ L230:
 		    sum.i * t2.r;
 	    z__1.r = c__[i__3].r - z__2.r, z__1.i = c__[i__3].i - z__2.i;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L240: */
 	}
 	goto L410;
 L250:
@@ -1233,7 +1202,6 @@ L250:
 		    sum.i * t3.r;
 	    z__1.r = c__[i__3].r - z__2.r, z__1.i = c__[i__3].i - z__2.i;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L260: */
 	}
 	goto L410;
 L270:
@@ -1302,7 +1270,6 @@ L270:
 		    sum.i * t4.r;
 	    z__1.r = c__[i__3].r - z__2.r, z__1.i = c__[i__3].i - z__2.i;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L280: */
 	}
 	goto L410;
 L290:
@@ -1386,7 +1353,6 @@ L290:
 		    sum.i * t5.r;
 	    z__1.r = c__[i__3].r - z__2.r, z__1.i = c__[i__3].i - z__2.i;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L300: */
 	}
 	goto L410;
 L310:
@@ -1485,7 +1451,6 @@ L310:
 		    sum.i * t6.r;
 	    z__1.r = c__[i__3].r - z__2.r, z__1.i = c__[i__3].i - z__2.i;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L320: */
 	}
 	goto L410;
 L330:
@@ -1599,7 +1564,6 @@ L330:
 		    sum.i * t7.r;
 	    z__1.r = c__[i__3].r - z__2.r, z__1.i = c__[i__3].i - z__2.i;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L340: */
 	}
 	goto L410;
 L350:
@@ -1728,7 +1692,6 @@ L350:
 		    sum.i * t8.r;
 	    z__1.r = c__[i__3].r - z__2.r, z__1.i = c__[i__3].i - z__2.i;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L360: */
 	}
 	goto L410;
 L370:
@@ -1872,7 +1835,6 @@ L370:
 		    sum.i * t9.r;
 	    z__1.r = c__[i__3].r - z__2.r, z__1.i = c__[i__3].i - z__2.i;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L380: */
 	}
 	goto L410;
 L390:
@@ -2031,7 +1993,6 @@ L390:
 		    sum.i * t10.r;
 	    z__1.r = c__[i__3].r - z__2.r, z__1.i = c__[i__3].i - z__2.i;
 	    c__[i__2].r = z__1.r, c__[i__2].i = z__1.i;
-/* L400: */
 	}
 	goto L410;
     }

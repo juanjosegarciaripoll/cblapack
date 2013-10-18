@@ -27,15 +27,8 @@ static integer c__1 = 1;
     integer i__;
     real aii;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -113,16 +106,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters */
 
     /* Parameter adjustments */
@@ -176,7 +159,6 @@ static integer c__1 = 1;
 		i__], &a[i__ + 1 + (i__ + 1) * a_dim1], lda, &work[1]);
 
 	a[i__ + 1 + i__ * a_dim1] = aii;
-/* L10: */
     }
 
     return 0;

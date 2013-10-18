@@ -54,15 +54,8 @@ static integer c__0 = 0;
     logical dtrong;
     doublereal thresh, smlnum;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -80,7 +73,6 @@ static integer c__0 = 0;
 
 /*         Q(in) * A(in) * Z(in)' = Q(out) * A(out) * Z(out)' */
 /*         Q(in) * B(in) * Z(in)' = Q(out) * B(out) * Z(out)' */
-
 
 /*  Arguments */
 /*  ========= */
@@ -113,7 +105,6 @@ static integer c__0 = 0;
 /*  Q       (input/output) DOUBLE PRECISION array, dimension (LDZ,N) */
 /*          On entry, if WANTQ = .TRUE., the orthogonal matrix Q. */
 /*          On exit, the updated matrix Q. */
-/*          Not referenced if WANTQ = .FALSE.. */
 
 /*  LDQ     (input) INTEGER */
 /*          The leading dimension of the array Q. LDQ >= 1. */
@@ -122,7 +113,6 @@ static integer c__0 = 0;
 /*  Z       (input/output) DOUBLE PRECISION array, dimension (LDZ,N) */
 /*          On entry, if WANTZ =.TRUE., the orthogonal matrix Z. */
 /*          On exit, the updated matrix Z. */
-/*          Not referenced if WANTZ = .FALSE.. */
 
 /*  LDZ     (input) INTEGER */
 /*          The leading dimension of the array Z. LDZ >= 1. */
@@ -161,7 +151,6 @@ static integer c__0 = 0;
 
 /*  In the current code both weak and strong stability tests are */
 /*  performed. The user can omit the strong stability test by changing */
-/*  the internal logical parameter WANDS to .FALSE.. See ref. [2] for */
 /*  details. */
 
 /*  [1] B. Kagstrom; A Direct Method for Reordering Eigenvalues in the */
@@ -179,20 +168,6 @@ static integer c__0 = 0;
 /*  ===================================================================== */
 /*  Replaced various illegal calls to DCOPY by calls to DLASET, or by DO */
 /*  loops. Sven Hammarling, 1/5/02. */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     a_dim1 = *lda;
@@ -390,7 +365,6 @@ static integer c__0 = 0;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    dscal_(n1, &c_b48, &li[(i__ << 2) - 4], &c__1);
 	    li[*n1 + i__ + (i__ << 2) - 5] = scale;
-/* L10: */
 	}
 	dgeqr2_(&m, n2, li, &c__4, taul, &work[1], &linfo);
 	if (linfo != 0) {
@@ -410,7 +384,6 @@ static integer c__0 = 0;
 	i__1 = *n1;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    ir[*n2 + i__ + (i__ << 2) - 5] = scale;
-/* L20: */
 	}
 	dgerq2_(n1, &m, &ir[*n2], &c__4, taur, &work[1], &linfo);
 	if (linfo != 0) {
@@ -461,7 +434,6 @@ static integer c__0 = 0;
 	i__1 = *n2;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    dlassq_(n1, &s[*n2 + 1 + (i__ << 2) - 5], &c__1, &dscale, &dsum);
-/* L30: */
 	}
 	brqa21 = dscale * sqrt(dsum);
 
@@ -488,7 +460,6 @@ static integer c__0 = 0;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    dlassq_(n1, &scpy[*n2 + 1 + (i__ << 2) - 5], &c__1, &dscale, &
 		    dsum);
-/* L40: */
 	}
 	bqra21 = dscale * sqrt(dsum);
 
@@ -561,7 +532,6 @@ static integer c__0 = 0;
 	i__1 = m * m;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    work[i__] = 0.;
-/* L50: */
 	}
 	work[1] = 1.;
 	t[0] = 1.;

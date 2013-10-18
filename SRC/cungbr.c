@@ -32,15 +32,8 @@ static integer c_n1 = -1;
     integer lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -124,18 +117,6 @@ static integer c_n1 = -1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input arguments */
 
     /* Parameter adjustments */
@@ -218,9 +199,7 @@ static integer c_n1 = -1;
 		    i__2 = i__ + j * a_dim1;
 		    i__3 = i__ + (j - 1) * a_dim1;
 		    a[i__2].r = a[i__3].r, a[i__2].i = a[i__3].i;
-/* L10: */
 		}
-/* L20: */
 	    }
 	    i__1 = a_dim1 + 1;
 	    a[i__1].r = 1.f, a[i__1].i = 0.f;
@@ -228,7 +207,6 @@ static integer c_n1 = -1;
 	    for (i__ = 2; i__ <= i__1; ++i__) {
 		i__2 = i__ + a_dim1;
 		a[i__2].r = 0.f, a[i__2].i = 0.f;
-/* L30: */
 	    }
 	    if (*m > 1) {
 
@@ -267,7 +245,6 @@ static integer c_n1 = -1;
 	    for (i__ = 2; i__ <= i__1; ++i__) {
 		i__2 = i__ + a_dim1;
 		a[i__2].r = 0.f, a[i__2].i = 0.f;
-/* L40: */
 	    }
 	    i__1 = *n;
 	    for (j = 2; j <= i__1; ++j) {
@@ -275,11 +252,9 @@ static integer c_n1 = -1;
 		    i__2 = i__ + j * a_dim1;
 		    i__3 = i__ - 1 + j * a_dim1;
 		    a[i__2].r = a[i__3].r, a[i__2].i = a[i__3].i;
-/* L50: */
 		}
 		i__2 = j * a_dim1 + 1;
 		a[i__2].r = 0.f, a[i__2].i = 0.f;
-/* L60: */
 	    }
 	    if (*n > 1) {
 

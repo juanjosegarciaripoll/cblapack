@@ -53,7 +53,6 @@ static real c_b31 = 1.f;
     real hugeval;
     integer x_state__, z_state__;
 
-
 /*     -- LAPACK routine (version 3.2.1)                                 -- */
 /*     -- Contributed by James Demmel, Deaglan Halligan, Yozo Hida and -- */
 /*     -- Jason Riedy of Univ. of California Berkeley.                 -- */
@@ -61,12 +60,6 @@ static real c_b31 = 1.f;
 
 /*     -- LAPACK is a software package provided by Univ. of Tennessee, -- */
 /*     -- Univ. of California Berkeley and NAG Ltd.                    -- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -306,7 +299,6 @@ static real c_b31 = 1.f;
 
 /*     IGNORE_CWISE   (input) LOGICAL */
 /*     If .TRUE. then ignore componentwise convergence. Default value */
-/*     is .FALSE.. */
 
 /*     INFO           (output) INTEGER */
 /*       = 0:  Successful exit. */
@@ -314,20 +306,6 @@ static real c_b31 = 1.f;
 /*             value */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Parameters .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function Definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     errs_c_dim1 = *nrhs;

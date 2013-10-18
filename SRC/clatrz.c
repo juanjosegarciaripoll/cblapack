@@ -24,16 +24,9 @@
     integer i__;
     complex alpha;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -96,24 +89,11 @@
 
 /*  The scalar tau is returned in the kth element of TAU and the vector */
 /*  u( k ) in the kth row of A2, such that the elements of z( k ) are */
-/*  in  a( k, l + 1 ), ..., a( k, n ). The elements of R are returned in */
 /*  the upper triangular part of A1. */
 
 /*  Z is given by */
 
-/*     Z =  Z( 1 ) * Z( 2 ) * ... * Z( m ). */
-
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Quick return if possible */
 
@@ -132,7 +112,6 @@
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    i__2 = i__;
 	    tau[i__2].r = 0.f, tau[i__2].i = 0.f;
-/* L10: */
 	}
 	return 0;
     }
@@ -163,7 +142,6 @@
 	r_cnjg(&q__1, &alpha);
 	a[i__1].r = q__1.r, a[i__1].i = q__1.i;
 
-/* L20: */
     }
 
     return 0;

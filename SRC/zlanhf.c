@@ -33,19 +33,12 @@ doublereal zlanhf_(char *norm, char *transr, char *uplo, integer *n,
     doublereal scale;
     doublereal value;
 
-
 /*  -- LAPACK routine (version 3.2)                                    -- */
 
 /*  -- Contributed by Fred Gustavson of the IBM Watson Research Center -- */
 /*  -- November 2008                                                   -- */
 
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -135,7 +128,6 @@ doublereal zlanhf_(char *norm, char *transr, char *uplo, integer *n,
 /*               44 45       40 41 42 43 44 */
 /*                  55       50 51 52 53 54 55 */
 
-
 /*  Let TRANSR = 'N'. RFP holds AP as follows: */
 /*  For UPLO = 'U' the upper trapezoid A(0:5,0:2) consists of the last */
 /*  three columns of AP upper. The lower triangle A(4:6,0:2) consists of */
@@ -166,7 +158,6 @@ doublereal zlanhf_(char *norm, char *transr, char *uplo, integer *n,
 /*  Now let TRANSR = 'C'. RFP A in both UPLO cases is just the conjugate- */
 /*  transpose of RFP A above. One therefore gets: */
 
-
 /*           RFP A                   RFP A */
 
 /*     -- -- -- --                -- -- -- -- -- -- */
@@ -175,7 +166,6 @@ doublereal zlanhf_(char *norm, char *transr, char *uplo, integer *n,
 /*     04 14 24 34 44 11 12    43 44 11 21 31 41 51 */
 /*     -- -- -- -- -- --                -- -- -- -- */
 /*     05 15 25 35 45 55 22    53 54 55 22 32 42 52 */
-
 
 /*  We next  consider Standard Packed Format when N is odd. */
 /*  We give an example where N = 5. */
@@ -187,7 +177,6 @@ doublereal zlanhf_(char *norm, char *transr, char *uplo, integer *n,
 /*         22 23 24              20 21 22 */
 /*            33 34              30 31 32 33 */
 /*               44              40 41 42 43 44 */
-
 
 /*  Let TRANSR = 'N'. RFP holds AP as follows: */
 /*  For UPLO = 'U' the upper trapezoid A(0:4,0:2) consists of the last */
@@ -215,7 +204,6 @@ doublereal zlanhf_(char *norm, char *transr, char *uplo, integer *n,
 /*  Now let TRANSR = 'C'. RFP A in both UPLO cases is just the conjugate- */
 /*  transpose of RFP A above. One therefore gets: */
 
-
 /*           RFP A                   RFP A */
 
 /*     -- -- --                   -- -- -- -- -- -- */
@@ -226,18 +214,6 @@ doublereal zlanhf_(char *norm, char *transr, char *uplo, integer *n,
 /*     04 14 24 34 44             43 44 22 32 42 52 */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     if (*n == 0) {
 	ret_val = 0.;

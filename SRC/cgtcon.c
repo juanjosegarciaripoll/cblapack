@@ -30,17 +30,10 @@ static integer c__1 = 1;
     real ainvnm;
     logical onenrm;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
 
 /*     Modified to call CLACN2 in place of CLACON, 10 Feb 03, SJH. */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -101,20 +94,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input arguments. */
 
     /* Parameter adjustments */
@@ -159,7 +138,6 @@ static integer c__1 = 1;
 	if (d__[i__2].r == 0.f && d__[i__2].i == 0.f) {
 	    return 0;
 	}
-/* L10: */
     }
 
     ainvnm = 0.f;

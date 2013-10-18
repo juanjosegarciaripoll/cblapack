@@ -24,15 +24,8 @@
     integer k;
     real tl, eps, piv1, piv2, temp, mult, scale1, scale2;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -117,18 +110,6 @@
 
 /* ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --in;
     --d__;
@@ -208,7 +189,6 @@
 	if (dmax(piv1,piv2) <= tl && in[*n] == 0) {
 	    in[*n] = k;
 	}
-/* L10: */
     }
     if ((r__1 = a[*n], dabs(r__1)) <= scale1 * tl && in[*n] == 0) {
 	in[*n] = *n;

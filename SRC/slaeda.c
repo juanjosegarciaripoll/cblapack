@@ -32,15 +32,8 @@ static real c_b26 = 0.f;
     integer i__, k, mid, ptr, curr;
     integer bsiz1, bsiz2, psiz1, psiz2, zptr1;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -119,16 +112,6 @@ static real c_b26 = 0.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -183,7 +166,6 @@ static real c_b26 = 0.f;
     i__1 = mid - bsiz1 - 1;
     for (k = 1; k <= i__1; ++k) {
 	z__[k] = 0.f;
-/* L10: */
     }
     scopy_(&bsiz1, &q[qptr[curr] + bsiz1 - 1], &bsiz1, &z__[mid - bsiz1], &
 	    c__1);
@@ -191,7 +173,6 @@ static real c_b26 = 0.f;
     i__1 = *n;
     for (k = mid + bsiz2; k <= i__1; ++k) {
 	z__[k] = 0.f;
-/* L20: */
     }
 
 /*     Loop thru remaining levels 1 -> CURLVL applying the Givens */
@@ -216,27 +197,23 @@ static real c_b26 = 0.f;
 	    srot_(&c__1, &z__[zptr1 + givcol[(i__ << 1) + 1] - 1], &c__1, &
 		    z__[zptr1 + givcol[(i__ << 1) + 2] - 1], &c__1, &givnum[(
 		    i__ << 1) + 1], &givnum[(i__ << 1) + 2]);
-/* L30: */
 	}
 	i__2 = givptr[curr + 2] - 1;
 	for (i__ = givptr[curr + 1]; i__ <= i__2; ++i__) {
 	    srot_(&c__1, &z__[mid - 1 + givcol[(i__ << 1) + 1]], &c__1, &z__[
 		    mid - 1 + givcol[(i__ << 1) + 2]], &c__1, &givnum[(i__ << 
 		    1) + 1], &givnum[(i__ << 1) + 2]);
-/* L40: */
 	}
 	psiz1 = prmptr[curr + 1] - prmptr[curr];
 	psiz2 = prmptr[curr + 2] - prmptr[curr + 1];
 	i__2 = psiz1 - 1;
 	for (i__ = 0; i__ <= i__2; ++i__) {
 	    ztemp[i__ + 1] = z__[zptr1 + perm[prmptr[curr] + i__] - 1];
-/* L50: */
 	}
 	i__2 = psiz2 - 1;
 	for (i__ = 0; i__ <= i__2; ++i__) {
 	    ztemp[psiz1 + i__ + 1] = z__[mid + perm[prmptr[curr + 1] + i__] - 
 		    1];
-/* L60: */
 	}
 
 /*        Multiply Blocks at CURR and CURR+1 */
@@ -264,7 +241,6 @@ static real c_b26 = 0.f;
 
 	i__2 = *tlvls - k;
 	ptr += pow_ii(&c__2, &i__2);
-/* L70: */
     }
 
     return 0;

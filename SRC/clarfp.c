@@ -31,15 +31,8 @@ static complex c_b5 = {1.f,0.f};
     real alphi, alphr, xnorm;
     real safmin, rsafmn;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -86,18 +79,6 @@ static complex c_b5 = {1.f,0.f};
 /*          The value tau. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --x;
@@ -211,7 +192,6 @@ L10:
 	i__1 = knt;
 	for (j = 1; j <= i__1; ++j) {
 	    beta *= safmin;
-/* L20: */
 	}
 	alpha->r = beta, alpha->i = 0.f;
     }

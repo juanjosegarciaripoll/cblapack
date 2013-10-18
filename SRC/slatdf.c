@@ -39,15 +39,8 @@ static real c_b37 = -1.f;
     integer iwork[8];
     real splus;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -136,20 +129,6 @@ static real c_b37 = -1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     z_dim1 = *ldz;
     z_offset = 1 + z_dim1;
@@ -209,7 +188,6 @@ static real c_b37 = -1.f;
 	    saxpy_(&i__2, &temp, &z__[j + 1 + j * z_dim1], &c__1, &rhs[j + 1], 
 		     &c__1);
 
-/* L10: */
 	}
 
 /*        Solve for U-part, look-ahead for RHS(N) = +-1. This is not done */
@@ -231,11 +209,9 @@ static real c_b37 = -1.f;
 	    for (k = i__ + 1; k <= i__1; ++k) {
 		xp[i__ - 1] -= xp[k - 1] * (z__[i__ + k * z_dim1] * temp);
 		rhs[i__] -= rhs[k] * (z__[i__ + k * z_dim1] * temp);
-/* L20: */
 	    }
 	    splus += (r__1 = xp[i__ - 1], dabs(r__1));
 	    sminu += (r__1 = rhs[i__], dabs(r__1));
-/* L30: */
 	}
 	if (splus > sminu) {
 	    scopy_(n, xp, &c__1, &rhs[1], &c__1);

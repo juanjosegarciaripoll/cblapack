@@ -31,7 +31,6 @@
     integer n0in, ipn4;
     doublereal tol2, temp;
 
-
 /*  -- LAPACK routine (version 3.2)                                    -- */
 
 /*  -- Contributed by Osni Marques of the Lawrence Berkeley National   -- */
@@ -40,12 +39,6 @@
 /*  -- November 2008                                                   -- */
 
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -104,18 +97,6 @@
 /*         between calls to DLASQ3. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Function .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --z__;
@@ -213,7 +194,6 @@ L50:
 		temp = z__[j4];
 		z__[j4] = z__[ipn4 - j4 - 4];
 		z__[ipn4 - j4 - 4] = temp;
-/* L60: */
 	    }
 	    if (*n0 - *i0 <= 4) {
 		z__[(*n0 << 2) + *pp - 1] = z__[(*i0 << 2) + *pp - 1];

@@ -39,15 +39,8 @@
     logical orgati;
     doublereal erretm, rhoinv;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -124,20 +117,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Since this routine is called in an inner loop, we do no argument */
 /*     checking. */
 
@@ -187,14 +166,12 @@
 	i__1 = *n;
 	for (j = 1; j <= i__1; ++j) {
 	    delta[j] = d__[j] - d__[*i__] - midpt;
-/* L10: */
 	}
 
 	psi = 0.;
 	i__1 = *n - 2;
 	for (j = 1; j <= i__1; ++j) {
 	    psi += z__[j] * z__[j] / delta[j];
-/* L20: */
 	}
 
 	c__ = rhoinv + psi;
@@ -243,7 +220,6 @@
 	i__1 = *n;
 	for (j = 1; j <= i__1; ++j) {
 	    delta[j] = d__[j] - d__[*i__] - tau;
-/* L30: */
 	}
 
 /*        Evaluate PSI and the derivative DPSI */
@@ -257,7 +233,6 @@
 	    psi += z__[j] * temp;
 	    dpsi += temp * temp;
 	    erretm += psi;
-/* L40: */
 	}
 	erretm = abs(erretm);
 
@@ -326,7 +301,6 @@
 	i__1 = *n;
 	for (j = 1; j <= i__1; ++j) {
 	    delta[j] -= eta;
-/* L50: */
 	}
 
 	tau += eta;
@@ -342,7 +316,6 @@
 	    psi += z__[j] * temp;
 	    dpsi += temp * temp;
 	    erretm += psi;
-/* L60: */
 	}
 	erretm = abs(erretm);
 
@@ -409,7 +382,6 @@
 	    i__1 = *n;
 	    for (j = 1; j <= i__1; ++j) {
 		delta[j] -= eta;
-/* L70: */
 	    }
 
 	    tau += eta;
@@ -425,7 +397,6 @@
 		psi += z__[j] * temp;
 		dpsi += temp * temp;
 		erretm += psi;
-/* L80: */
 	    }
 	    erretm = abs(erretm);
 
@@ -438,7 +409,6 @@
 		    dpsi + dphi);
 
 	    w = rhoinv + phi + psi;
-/* L90: */
 	}
 
 /*        Return with INFO = 1, NITER = MAXIT and not converged */
@@ -463,21 +433,18 @@
 	i__1 = *n;
 	for (j = 1; j <= i__1; ++j) {
 	    delta[j] = d__[j] - d__[*i__] - midpt;
-/* L100: */
 	}
 
 	psi = 0.;
 	i__1 = *i__ - 1;
 	for (j = 1; j <= i__1; ++j) {
 	    psi += z__[j] * z__[j] / delta[j];
-/* L110: */
 	}
 
 	phi = 0.;
 	i__1 = *i__ + 2;
 	for (j = *n; j >= i__1; --j) {
 	    phi += z__[j] * z__[j] / delta[j];
-/* L120: */
 	}
 	c__ = rhoinv + psi + phi;
 	w = c__ + z__[*i__] * z__[*i__] / delta[*i__] + z__[ip1] * z__[ip1] / 
@@ -525,13 +492,11 @@
 	    i__1 = *n;
 	    for (j = 1; j <= i__1; ++j) {
 		delta[j] = d__[j] - d__[*i__] - tau;
-/* L130: */
 	    }
 	} else {
 	    i__1 = *n;
 	    for (j = 1; j <= i__1; ++j) {
 		delta[j] = d__[j] - d__[ip1] - tau;
-/* L140: */
 	    }
 	}
 	if (orgati) {
@@ -553,7 +518,6 @@
 	    psi += z__[j] * temp;
 	    dpsi += temp * temp;
 	    erretm += psi;
-/* L150: */
 	}
 	erretm = abs(erretm);
 
@@ -567,7 +531,6 @@
 	    phi += z__[j] * temp;
 	    dphi += temp * temp;
 	    erretm += phi;
-/* L160: */
 	}
 
 	w = rhoinv + phi + psi;
@@ -699,7 +662,6 @@
 	i__1 = *n;
 	for (j = 1; j <= i__1; ++j) {
 	    delta[j] -= eta;
-/* L180: */
 	}
 
 /*        Evaluate PSI and the derivative DPSI */
@@ -713,7 +675,6 @@
 	    psi += z__[j] * temp;
 	    dpsi += temp * temp;
 	    erretm += psi;
-/* L190: */
 	}
 	erretm = abs(erretm);
 
@@ -727,7 +688,6 @@
 	    phi += z__[j] * temp;
 	    dphi += temp * temp;
 	    erretm += phi;
-/* L200: */
 	}
 
 	temp = z__[ii] / delta[ii];
@@ -879,7 +839,6 @@
 	    i__1 = *n;
 	    for (j = 1; j <= i__1; ++j) {
 		delta[j] -= eta;
-/* L210: */
 	    }
 
 	    tau += eta;
@@ -896,7 +855,6 @@
 		psi += z__[j] * temp;
 		dpsi += temp * temp;
 		erretm += psi;
-/* L220: */
 	    }
 	    erretm = abs(erretm);
 
@@ -910,7 +868,6 @@
 		phi += z__[j] * temp;
 		dphi += temp * temp;
 		erretm += phi;
-/* L230: */
 	    }
 
 	    temp = z__[ii] / delta[ii];
@@ -923,7 +880,6 @@
 		swtch = ! swtch;
 	    }
 
-/* L240: */
 	}
 
 /*        Return with INFO = 1, NITER = MAXIT and not converged */

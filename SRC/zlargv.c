@@ -40,22 +40,14 @@
     doublereal safmx2;
     doublereal safmin;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
 
 /*  ZLARGV generates a vector of complex plane rotations with real */
 /*  cosines, determined by elements of the complex vectors x and y. */
-/*  For i = 1,2,...,n */
 
 /*     (        c(i)   s(i) ) ( x(i) ) = ( r(i) ) */
 /*     ( -conjg(s(i))  c(i) ) ( y(i) ) = (   0  ) */
@@ -75,7 +67,6 @@
 
 /*  X       (input/output) COMPLEX*16 array, dimension (1+(N-1)*INCX) */
 /*          On entry, the vector x. */
-/*          On exit, x(i) is overwritten by r(i), for i = 1,...,n. */
 
 /*  INCX    (input) INTEGER */
 /*          The increment between elements of X. INCX > 0. */
@@ -103,26 +94,9 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
 /*     LOGICAL            FIRST */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Save statement .. */
 /*     SAVE               FIRST, SAFMX2, SAFMIN, SAFMN2 */
-/*     .. */
-/*     .. Data statements .. */
 /*     DATA               FIRST / .TRUE. / */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     IF( FIRST ) THEN */
 /*        FIRST = .FALSE. */
@@ -299,14 +273,12 @@ L20:
 		    for (j = 1; j <= i__2; ++j) {
 			z__1.r = safmx2 * r__.r, z__1.i = safmx2 * r__.i;
 			r__.r = z__1.r, r__.i = z__1.i;
-/* L30: */
 		    }
 		} else {
 		    i__2 = -count;
 		    for (j = 1; j <= i__2; ++j) {
 			z__1.r = safmn2 * r__.r, z__1.i = safmn2 * r__.i;
 			r__.r = z__1.r, r__.i = z__1.i;
-/* L40: */
 		    }
 		}
 	    }
@@ -320,7 +292,6 @@ L50:
 	ic += *incc;
 	iy += *incy;
 	ix += *incx;
-/* L60: */
     }
     return 0;
 

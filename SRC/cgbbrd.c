@@ -44,15 +44,8 @@ static integer c__1 = 1;
     logical wantq;
     logical wantpt;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -140,18 +133,6 @@ static integer c__1 = 1;
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters */
 
@@ -292,7 +273,6 @@ static integer c__1 = 1;
 				+ l - 1) * ab_dim1], &inca, &rwork[j1], &work[
 				j1], &kb1);
 		    }
-/* L10: */
 		}
 
 		if (ml > ml0) {
@@ -333,7 +313,6 @@ static integer c__1 = 1;
 			r_cnjg(&q__1, &work[j]);
 			crot_(m, &q[(j - 1) * q_dim1 + 1], &c__1, &q[j * 
 				q_dim1 + 1], &c__1, &rwork[j], &q__1);
-/* L20: */
 		    }
 		}
 
@@ -347,7 +326,6 @@ static integer c__1 = 1;
 			    {
 			crot_(ncc, &c__[j - 1 + c_dim1], ldc, &c__[j + c_dim1]
 , ldc, &rwork[j], &work[j]);
-/* L30: */
 		    }
 		}
 
@@ -379,7 +357,6 @@ static integer c__1 = 1;
 		    q__1.r = rwork[i__6] * ab[i__7].r, q__1.i = rwork[i__6] * 
 			    ab[i__7].i;
 		    ab[i__5].r = q__1.r, ab[i__5].i = q__1.i;
-/* L40: */
 		}
 
 /*              generate plane rotations to annihilate nonzero elements */
@@ -404,7 +381,6 @@ static integer c__1 = 1;
 				inca, &ab[l + (j1 + kun) * ab_dim1], &inca, &
 				rwork[j1 + kun], &work[j1 + kun], &kb1);
 		    }
-/* L50: */
 		}
 
 		if (ml == ml0 && mu > mu0) {
@@ -442,7 +418,6 @@ static integer c__1 = 1;
 			r_cnjg(&q__1, &work[j + kun]);
 			crot_(n, &pt[j + kun - 1 + pt_dim1], ldpt, &pt[j + 
 				kun + pt_dim1], ldpt, &rwork[j + kun], &q__1);
-/* L60: */
 		    }
 		}
 
@@ -474,7 +449,6 @@ static integer c__1 = 1;
 		    q__1.r = rwork[i__6] * ab[i__7].r, q__1.i = rwork[i__6] * 
 			    ab[i__7].i;
 		    ab[i__5].r = q__1.r, ab[i__5].i = q__1.i;
-/* L70: */
 		}
 
 		if (ml > ml0) {
@@ -482,9 +456,7 @@ static integer c__1 = 1;
 		} else {
 		    --mu;
 		}
-/* L80: */
 	    }
-/* L90: */
 	}
     }
 
@@ -524,7 +496,6 @@ static integer c__1 = 1;
 		crot_(ncc, &c__[i__ + c_dim1], ldc, &c__[i__ + 1 + c_dim1], 
 			ldc, &rc, &rs);
 	    }
-/* L100: */
 	}
     } else {
 
@@ -560,7 +531,6 @@ static integer c__1 = 1;
 		    crot_(n, &pt[i__ + pt_dim1], ldpt, &pt[*m + 1 + pt_dim1], 
 			    ldpt, &rc, &q__1);
 		}
-/* L110: */
 	    }
 	}
     }
@@ -626,7 +596,6 @@ static integer c__1 = 1;
 		t.r = q__1.r, t.i = q__1.i;
 	    }
 	}
-/* L120: */
     }
     return 0;
 

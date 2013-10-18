@@ -49,15 +49,8 @@ static real c_b11 = 1.f;
     integer givnum;
     integer givptr, smlszp;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -151,18 +144,6 @@ static real c_b11 = 1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -234,7 +215,6 @@ static real c_b11 = 1.f;
 		work[(i__ << 1) - 1] = cs;
 		work[i__ * 2] = sn;
 	    }
-/* L10: */
 	}
 	if (*nrhs > 1) {
 	    i__1 = *nrhs;
@@ -245,9 +225,7 @@ static real c_b11 = 1.f;
 		    sn = work[j * 2];
 		    srot_(&c__1, &b[j + i__ * b_dim1], &c__1, &b[j + 1 + i__ *
 			     b_dim1], &c__1, &cs, &sn);
-/* L20: */
 		}
-/* L30: */
 	    }
 	}
     }
@@ -286,7 +264,6 @@ static real c_b11 = 1.f;
 			i__ + b_dim1], ldb, info);
 		++(*rank);
 	    }
-/* L40: */
 	}
 	sgemm_("T", "N", n, nrhs, n, &c_b11, &work[1], n, &b[b_offset], ldb, &
 		c_b6, &work[nwork], n);
@@ -339,7 +316,6 @@ static real c_b11 = 1.f;
 	if ((r__1 = d__[i__], dabs(r__1)) < eps) {
 	    d__[i__] = r_sign(&eps, &d__[i__]);
 	}
-/* L50: */
     }
 
     i__1 = nm1;
@@ -425,7 +401,6 @@ static real c_b11 = 1.f;
 	    }
 	    st = i__ + 1;
 	}
-/* L60: */
     }
 
 /*     Apply the singular values and treat the tiny ones as zero. */
@@ -446,7 +421,6 @@ static real c_b11 = 1.f;
 		    bx + i__ - 1], n, info);
 	}
 	d__[i__] = (r__1 = d__[i__], dabs(r__1));
-/* L70: */
     }
 
 /*     Now apply back the right singular vectors. */
@@ -475,7 +449,6 @@ static real c_b11 = 1.f;
 		return 0;
 	    }
 	}
-/* L80: */
     }
 
 /*     Unscale and sort the singular values. */

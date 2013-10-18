@@ -20,12 +20,8 @@ integer ilatrans_(char *trans)
 
     /* Local variables */
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     October 2008 */
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -47,11 +43,6 @@ integer ilatrans_(char *trans)
 /*          = 'C':  Conjugate transpose */
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
     if (lsame_(trans, "N")) {
 	ret_val = 111;
     } else if (lsame_(trans, "T")) {

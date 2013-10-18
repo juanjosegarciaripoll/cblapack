@@ -55,15 +55,8 @@ static real c_b38 = 0.f;
     integer lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -220,10 +213,8 @@ static real c_b38 = 0.f;
 /*  INFO    (output) INTEGER */
 /*          = 0:  successful exit */
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value. */
-/*          = 1,...,N: */
 /*                The QZ iteration failed.  No eigenvectors have been */
 /*                calculated, but ALPHAR(j), ALPHAI(j), and BETA(j) */
-/*                should be correct for j=INFO+1,...,N. */
 /*          > N:  errors that usually indicate LAPACK problems: */
 /*                =N+1: error return from SGGBAL */
 /*                =N+2: error return from SGEQRF */
@@ -268,20 +259,6 @@ static real c_b38 = 0.f;
 /*      by Golub & van Loan, pub. by Johns Hopkins U. Press. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode the input arguments */
 
@@ -433,7 +410,6 @@ static real c_b38 = 0.f;
 
 /*     Permute the matrix to make it more nearly triangular */
 /*     Workspace layout:  (8*N words -- "work" requires 6*N words) */
-/*        left_permutation, right_permutation, work... */
 
     ileft = 1;
     iright = *n + 1;
@@ -446,8 +422,6 @@ static real c_b38 = 0.f;
     }
 
 /*     Reduce B to triangular form, and initialize VL and/or VR */
-/*     Workspace layout:  ("work..." must have at least N words) */
-/*        left_permutation, right_permutation, tau, work... */
 
     irows = ihi + 1 - ilo;
     if (ilv) {
@@ -529,8 +503,6 @@ static real c_b38 = 0.f;
     }
 
 /*     Perform QZ algorithm */
-/*     Workspace layout:  ("work..." must have at least 1 word) */
-/*        left_permutation, right_permutation, work... */
 
     iwork = itau;
     if (ilv) {
@@ -602,7 +574,6 @@ static real c_b38 = 0.f;
 			r__2 = temp, r__3 = (r__1 = vl[jr + jc * vl_dim1], 
 				dabs(r__1));
 			temp = dmax(r__2,r__3);
-/* L10: */
 		    }
 		} else {
 		    i__2 = *n;
@@ -612,7 +583,6 @@ static real c_b38 = 0.f;
 				dabs(r__1)) + (r__2 = vl[jr + (jc + 1) * 
 				vl_dim1], dabs(r__2));
 			temp = dmax(r__3,r__4);
-/* L20: */
 		    }
 		}
 		if (temp < safmin) {
@@ -623,14 +593,12 @@ static real c_b38 = 0.f;
 		    i__2 = *n;
 		    for (jr = 1; jr <= i__2; ++jr) {
 			vl[jr + jc * vl_dim1] *= temp;
-/* L30: */
 		    }
 		} else {
 		    i__2 = *n;
 		    for (jr = 1; jr <= i__2; ++jr) {
 			vl[jr + jc * vl_dim1] *= temp;
 			vl[jr + (jc + 1) * vl_dim1] *= temp;
-/* L40: */
 		    }
 		}
 L50:
@@ -657,7 +625,6 @@ L50:
 			r__2 = temp, r__3 = (r__1 = vr[jr + jc * vr_dim1], 
 				dabs(r__1));
 			temp = dmax(r__2,r__3);
-/* L60: */
 		    }
 		} else {
 		    i__2 = *n;
@@ -667,7 +634,6 @@ L50:
 				dabs(r__1)) + (r__2 = vr[jr + (jc + 1) * 
 				vr_dim1], dabs(r__2));
 			temp = dmax(r__3,r__4);
-/* L70: */
 		    }
 		}
 		if (temp < safmin) {
@@ -678,14 +644,12 @@ L50:
 		    i__2 = *n;
 		    for (jr = 1; jr <= i__2; ++jr) {
 			vr[jr + jc * vr_dim1] *= temp;
-/* L80: */
 		    }
 		} else {
 		    i__2 = *n;
 		    for (jr = 1; jr <= i__2; ++jr) {
 			vr[jr + jc * vr_dim1] *= temp;
 			vr[jr + (jc + 1) * vr_dim1] *= temp;
-/* L90: */
 		    }
 		}
 L100:
@@ -792,7 +756,6 @@ L100:
 	alphar[jc] = salfar;
 	alphai[jc] = salfai;
 	beta[jc] = sbeta;
-/* L110: */
     }
 
 L120:

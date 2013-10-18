@@ -24,7 +24,6 @@ doublereal cla_gbrpvgrw__(integer *n, integer *kl, integer *ku, integer *
     integer i__, j, kd;
     real amax, umax, rpvgrw;
 
-
 /*     -- LAPACK routine (version 3.2.1)                                 -- */
 /*     -- Contributed by James Demmel, Deaglan Halligan, Yozo Hida and -- */
 /*     -- Jason Riedy of Univ. of California Berkeley.                 -- */
@@ -32,12 +31,6 @@ doublereal cla_gbrpvgrw__(integer *n, integer *kl, integer *ku, integer *
 
 /*     -- LAPACK is a software package provided by Univ. of Tennessee, -- */
 /*     -- Univ. of California Berkeley and NAG Ltd.                    -- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -85,16 +78,6 @@ doublereal cla_gbrpvgrw__(integer *n, integer *kl, integer *ku, integer *
 /*     The leading dimension of the array AFB.  LDAFB >= 2*KL+KU+1. */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function Definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     ab_dim1 = *ldab;

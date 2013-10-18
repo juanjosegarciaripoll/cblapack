@@ -50,15 +50,8 @@ static integer c__3 = 3;
     real smlnum;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -88,7 +81,6 @@ static integer c__3 = 3;
 /*          If HOWMNY = 'S', SELECT specifies the eigenpairs for which */
 /*          condition numbers are required. To select condition numbers */
 /*          for the corresponding j-th eigenvalue and/or eigenvector, */
-/*          SELECT(j) must be set to .TRUE.. */
 /*          If HOWMNY = 'A', SELECT is not referenced. */
 
 /*  N       (input) INTEGER */
@@ -250,20 +242,6 @@ static integer c__3 = 3;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Decode and test the input parameters */
 
     /* Parameter adjustments */
@@ -321,7 +299,6 @@ static integer c__3 = 3;
 		if (select[k]) {
 		    ++(*m);
 		}
-/* L10: */
 	    }
 	} else {
 	    *m = *n;

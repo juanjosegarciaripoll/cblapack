@@ -24,15 +24,8 @@
     real temp;
     integer nlvl, llst, ncrnt;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -75,14 +68,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Find the number of levels on the tree. */
 
     /* Parameter adjustments */
@@ -119,10 +104,8 @@
 	    ndiml[ir] = ndimr[ncrnt] / 2;
 	    ndimr[ir] = ndimr[ncrnt] - ndiml[ir] - 1;
 	    inode[ir] = inode[ncrnt] + ndiml[ir] + 1;
-/* L10: */
 	}
 	llst <<= 1;
-/* L20: */
     }
     *nd = (llst << 1) - 1;
 

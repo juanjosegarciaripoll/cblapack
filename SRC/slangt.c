@@ -28,15 +28,8 @@ doublereal slangt_(char *norm, integer *n, real *dl, real *d__, real *du)
     real sum, scale;
     real anorm;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -85,18 +78,6 @@ doublereal slangt_(char *norm, integer *n, real *dl, real *d__, real *du)
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --du;
     --d__;
@@ -121,7 +102,6 @@ doublereal slangt_(char *norm, integer *n, real *dl, real *d__, real *du)
 /* Computing MAX */
 	    r__2 = anorm, r__3 = (r__1 = du[i__], dabs(r__1));
 	    anorm = dmax(r__2,r__3);
-/* L10: */
 	}
     } else if (lsame_(norm, "O") || *(unsigned char *)
 	    norm == '1') {
@@ -142,7 +122,6 @@ doublereal slangt_(char *norm, integer *n, real *dl, real *d__, real *du)
 			dl[i__], dabs(r__2)) + (r__3 = du[i__ - 1], dabs(r__3)
 			);
 		anorm = dmax(r__4,r__5);
-/* L20: */
 	    }
 	}
     } else if (lsame_(norm, "I")) {
@@ -163,7 +142,6 @@ doublereal slangt_(char *norm, integer *n, real *dl, real *d__, real *du)
 			du[i__], dabs(r__2)) + (r__3 = dl[i__ - 1], dabs(r__3)
 			);
 		anorm = dmax(r__4,r__5);
-/* L30: */
 	    }
 	}
     } else if (lsame_(norm, "F") || lsame_(norm, "E")) {

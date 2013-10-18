@@ -41,15 +41,8 @@ static complex c_b16 = {1.f,0.f};
     real safmin;
     real lstres;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -134,22 +127,6 @@ static complex c_b16 = {1.f,0.f};
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -195,7 +172,6 @@ static complex c_b16 = {1.f,0.f};
 	for (j = 1; j <= i__1; ++j) {
 	    ferr[j] = 0.f;
 	    berr[j] = 0.f;
-/* L10: */
 	}
 	return 0;
     }
@@ -293,7 +269,6 @@ L20:
 			    r__10 = r_imag(&e[i__]), dabs(r__10))) * ((r__11 =
 			     x[i__6].r, dabs(r__11)) + (r__12 = r_imag(&x[i__ 
 			    + 1 + j * x_dim1]), dabs(r__12)));
-/* L30: */
 		}
 		i__2 = *n + j * b_dim1;
 		bi.r = b[i__2].r, bi.i = b[i__2].i;
@@ -392,7 +367,6 @@ L20:
 			    r__10 = r_imag(&e[i__]), dabs(r__10))) * ((r__11 =
 			     x[i__6].r, dabs(r__11)) + (r__12 = r_imag(&x[i__ 
 			    + 1 + j * x_dim1]), dabs(r__12)));
-/* L40: */
 		}
 		i__2 = *n + j * b_dim1;
 		bi.r = b[i__2].r, bi.i = b[i__2].i;
@@ -448,7 +422,6 @@ L20:
 			 + safe1);
 		s = dmax(r__3,r__4);
 	    }
-/* L50: */
 	}
 	berr[j] = s;
 
@@ -500,7 +473,6 @@ L20:
 			r_imag(&work[i__]), dabs(r__2)) + nz * eps * rwork[
 			i__] + safe1;
 	    }
-/* L60: */
 	}
 	ix = isamax_(n, &rwork[1], &c__1);
 	ferr[j] = rwork[ix];
@@ -512,15 +484,12 @@ L20:
 /*           m(i,j) =  abs(A(i,j)), i = j, */
 /*           m(i,j) = -abs(A(i,j)), i .ne. j, */
 
-/*        and e = [ 1, 1, ..., 1 ]'.  Note M(A) = M(L)*D*M(L)'. */
-
 /*        Solve M(L) * x = e. */
 
 	rwork[1] = 1.f;
 	i__2 = *n;
 	for (i__ = 2; i__ <= i__2; ++i__) {
 	    rwork[i__] = rwork[i__ - 1] * c_abs(&ef[i__ - 1]) + 1.f;
-/* L70: */
 	}
 
 /*        Solve D * M(L)' * x = b. */
@@ -529,7 +498,6 @@ L20:
 	for (i__ = *n - 1; i__ >= 1; --i__) {
 	    rwork[i__] = rwork[i__] / df[i__] + rwork[i__ + 1] * c_abs(&ef[
 		    i__]);
-/* L80: */
 	}
 
 /*        Compute norm(inv(A)) = max(x(i)), 1<=i<=n. */
@@ -545,13 +513,11 @@ L20:
 /* Computing MAX */
 	    r__1 = lstres, r__2 = c_abs(&x[i__ + j * x_dim1]);
 	    lstres = dmax(r__1,r__2);
-/* L90: */
 	}
 	if (lstres != 0.f) {
 	    ferr[j] /= lstres;
 	}
 
-/* L100: */
     }
 
     return 0;

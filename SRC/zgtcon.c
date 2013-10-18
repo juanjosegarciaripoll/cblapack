@@ -31,17 +31,10 @@ static integer c__1 = 1;
     doublereal ainvnm;
     logical onenrm;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
 
 /*     Modified to call ZLACN2 in place of ZLACON, 10 Feb 03, SJH. */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -102,20 +95,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input arguments. */
 
     /* Parameter adjustments */
@@ -160,7 +139,6 @@ static integer c__1 = 1;
 	if (d__[i__2].r == 0. && d__[i__2].i == 0.) {
 	    return 0;
 	}
-/* L10: */
     }
 
     ainvnm = 0.;

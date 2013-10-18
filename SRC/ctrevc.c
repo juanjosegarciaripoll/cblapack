@@ -41,15 +41,8 @@ static integer c__1 = 1;
     logical rightv;
     real smlnum;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -94,7 +87,6 @@ static integer c__1 = 1;
 /*          If HOWMNY = 'S', SELECT specifies the eigenvectors to be */
 /*          computed. */
 /*          The eigenvector corresponding to the j-th eigenvalue is */
-/*          computed if SELECT(j) = .TRUE.. */
 /*          Not referenced if HOWMNY = 'A' or 'B'. */
 
 /*  N       (input) INTEGER */
@@ -171,22 +163,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Decode and test the input parameters */
 
     /* Parameter adjustments */
@@ -222,7 +198,6 @@ static integer c__1 = 1;
 	    if (select[j]) {
 		++(*m);
 	    }
-/* L10: */
 	}
     } else {
 	*m = *n;
@@ -271,7 +246,6 @@ static integer c__1 = 1;
 	i__2 = i__ + *n;
 	i__3 = i__ + i__ * t_dim1;
 	work[i__2].r = t[i__3].r, work[i__2].i = t[i__3].i;
-/* L20: */
     }
 
 /*     Compute 1-norm of each column of strictly upper triangular */
@@ -282,7 +256,6 @@ static integer c__1 = 1;
     for (j = 2; j <= i__1; ++j) {
 	i__2 = j - 1;
 	rwork[j] = scasum_(&i__2, &t[j * t_dim1 + 1], &c__1);
-/* L30: */
     }
 
     if (rightv) {
@@ -313,7 +286,6 @@ static integer c__1 = 1;
 		i__3 = k + ki * t_dim1;
 		q__1.r = -t[i__3].r, q__1.i = -t[i__3].i;
 		work[i__2].r = q__1.r, work[i__2].i = q__1.i;
-/* L40: */
 	    }
 
 /*           Solve the triangular system: */
@@ -333,7 +305,6 @@ static integer c__1 = 1;
 		    i__3 = k + k * t_dim1;
 		    t[i__3].r = smin, t[i__3].i = 0.f;
 		}
-/* L50: */
 	    }
 
 	    if (ki > 1) {
@@ -359,7 +330,6 @@ static integer c__1 = 1;
 		for (k = ki + 1; k <= i__1; ++k) {
 		    i__2 = k + is * vr_dim1;
 		    vr[i__2].r = 0.f, vr[i__2].i = 0.f;
-/* L60: */
 		}
 	    } else {
 		if (ki > 1) {
@@ -383,7 +353,6 @@ static integer c__1 = 1;
 		i__2 = k + k * t_dim1;
 		i__3 = k + *n;
 		t[i__2].r = work[i__3].r, t[i__2].i = work[i__3].i;
-/* L70: */
 	    }
 
 	    --is;
@@ -422,7 +391,6 @@ L80:
 		r_cnjg(&q__2, &t[ki + k * t_dim1]);
 		q__1.r = -q__2.r, q__1.i = -q__2.i;
 		work[i__3].r = q__1.r, work[i__3].i = q__1.i;
-/* L90: */
 	    }
 
 /*           Solve the triangular system: */
@@ -442,7 +410,6 @@ L80:
 		    i__4 = k + k * t_dim1;
 		    t[i__4].r = smin, t[i__4].i = 0.f;
 		}
-/* L100: */
 	    }
 
 	    if (ki < *n) {
@@ -473,7 +440,6 @@ L80:
 		for (k = 1; k <= i__2; ++k) {
 		    i__3 = k + is * vl_dim1;
 		    vl[i__3].r = 0.f, vl[i__3].i = 0.f;
-/* L110: */
 		}
 	    } else {
 		if (ki < *n) {
@@ -498,7 +464,6 @@ L80:
 		i__3 = k + k * t_dim1;
 		i__4 = k + *n;
 		t[i__3].r = work[i__4].r, t[i__3].i = work[i__4].i;
-/* L120: */
 	    }
 
 	    ++is;

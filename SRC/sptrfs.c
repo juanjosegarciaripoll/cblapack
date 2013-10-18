@@ -35,15 +35,8 @@ static real c_b11 = 1.f;
     real safmin;
     real lstres;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -116,18 +109,6 @@ static real c_b11 = 1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -169,7 +150,6 @@ static real c_b11 = 1.f;
 	for (j = 1; j <= i__1; ++j) {
 	    ferr[j] = 0.f;
 	    berr[j] = 0.f;
-/* L10: */
 	}
 	return 0;
     }
@@ -215,7 +195,6 @@ L20:
 		ex = e[i__] * x[i__ + 1 + j * x_dim1];
 		work[*n + i__] = bi - cx - dx - ex;
 		work[i__] = dabs(bi) + dabs(cx) + dabs(dx) + dabs(ex);
-/* L30: */
 	    }
 	    bi = b[*n + j * b_dim1];
 	    cx = e[*n - 1] * x[*n - 1 + j * x_dim1];
@@ -247,7 +226,6 @@ L20:
 			 / (work[i__] + safe1);
 		s = dmax(r__2,r__3);
 	    }
-/* L40: */
 	}
 	berr[j] = s;
 
@@ -296,7 +274,6 @@ L20:
 		work[i__] = (r__1 = work[*n + i__], dabs(r__1)) + nz * eps * 
 			work[i__] + safe1;
 	    }
-/* L50: */
 	}
 	ix = isamax_(n, &work[1], &c__1);
 	ferr[j] = work[ix];
@@ -308,8 +285,6 @@ L20:
 /*           m(i,j) =  abs(A(i,j)), i = j, */
 /*           m(i,j) = -abs(A(i,j)), i .ne. j, */
 
-/*        and e = [ 1, 1, ..., 1 ]'.  Note M(A) = M(L)*D*M(L)'. */
-
 /*        Solve M(L) * x = e. */
 
 	work[1] = 1.f;
@@ -317,7 +292,6 @@ L20:
 	for (i__ = 2; i__ <= i__2; ++i__) {
 	    work[i__] = work[i__ - 1] * (r__1 = ef[i__ - 1], dabs(r__1)) + 
 		    1.f;
-/* L60: */
 	}
 
 /*        Solve D * M(L)' * x = b. */
@@ -326,7 +300,6 @@ L20:
 	for (i__ = *n - 1; i__ >= 1; --i__) {
 	    work[i__] = work[i__] / df[i__] + work[i__ + 1] * (r__1 = ef[i__],
 		     dabs(r__1));
-/* L70: */
 	}
 
 /*        Compute norm(inv(A)) = max(x(i)), 1<=i<=n. */
@@ -342,13 +315,11 @@ L20:
 /* Computing MAX */
 	    r__2 = lstres, r__3 = (r__1 = x[i__ + j * x_dim1], dabs(r__1));
 	    lstres = dmax(r__2,r__3);
-/* L80: */
 	}
 	if (lstres != 0.f) {
 	    ferr[j] /= lstres;
 	}
 
-/* L90: */
     }
 
     return 0;

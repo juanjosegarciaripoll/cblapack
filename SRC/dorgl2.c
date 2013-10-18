@@ -23,15 +23,8 @@
     /* Local variables */
     integer i__, j, l;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -59,7 +52,6 @@
 
 /*  A       (input/output) DOUBLE PRECISION array, dimension (LDA,N) */
 /*          On entry, the i-th row must contain the vector which defines */
-/*          the elementary reflector H(i), for i = 1,2,...,k, as returned */
 /*          by DGELQF in the first k rows of its array argument A. */
 /*          On exit, the m-by-n matrix Q. */
 
@@ -77,16 +69,6 @@
 /*          < 0: if INFO = -i, the i-th argument has an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -129,12 +111,10 @@
 	    i__2 = *m;
 	    for (l = *k + 1; l <= i__2; ++l) {
 		a[l + j * a_dim1] = 0.;
-/* L10: */
 	    }
 	    if (j > *k && j <= *m) {
 		a[j + j * a_dim1] = 1.;
 	    }
-/* L20: */
 	}
     }
 
@@ -161,9 +141,7 @@
 	i__1 = i__ - 1;
 	for (l = 1; l <= i__1; ++l) {
 	    a[i__ + l * a_dim1] = 0.;
-/* L30: */
 	}
-/* L40: */
     }
     return 0;
 

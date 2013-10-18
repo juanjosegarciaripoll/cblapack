@@ -29,15 +29,8 @@ doublereal zlange_(char *norm, integer *m, integer *n, doublecomplex *a,
     doublereal sum, scale;
     doublereal value;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -91,18 +84,6 @@ doublereal zlange_(char *norm, integer *m, integer *n, doublecomplex *a,
 
 /* ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     a_dim1 = *lda;
     a_offset = 1 + a_dim1;
@@ -124,9 +105,7 @@ doublereal zlange_(char *norm, integer *m, integer *n, doublecomplex *a,
 /* Computing MAX */
 		d__1 = value, d__2 = z_abs(&a[i__ + j * a_dim1]);
 		value = max(d__1,d__2);
-/* L10: */
 	    }
-/* L20: */
 	}
     } else if (lsame_(norm, "O") || *(unsigned char *)
 	    norm == '1') {
@@ -140,10 +119,8 @@ doublereal zlange_(char *norm, integer *m, integer *n, doublecomplex *a,
 	    i__2 = *m;
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		sum += z_abs(&a[i__ + j * a_dim1]);
-/* L30: */
 	    }
 	    value = max(value,sum);
-/* L40: */
 	}
     } else if (lsame_(norm, "I")) {
 
@@ -152,16 +129,13 @@ doublereal zlange_(char *norm, integer *m, integer *n, doublecomplex *a,
 	i__1 = *m;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    work[i__] = 0.;
-/* L50: */
 	}
 	i__1 = *n;
 	for (j = 1; j <= i__1; ++j) {
 	    i__2 = *m;
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		work[i__] += z_abs(&a[i__ + j * a_dim1]);
-/* L60: */
 	    }
-/* L70: */
 	}
 	value = 0.;
 	i__1 = *m;
@@ -169,7 +143,6 @@ doublereal zlange_(char *norm, integer *m, integer *n, doublecomplex *a,
 /* Computing MAX */
 	    d__1 = value, d__2 = work[i__];
 	    value = max(d__1,d__2);
-/* L80: */
 	}
     } else if (lsame_(norm, "F") || lsame_(norm, "E")) {
 
@@ -180,7 +153,6 @@ doublereal zlange_(char *norm, integer *m, integer *n, doublecomplex *a,
 	i__1 = *n;
 	for (j = 1; j <= i__1; ++j) {
 	    zlassq_(m, &a[j * a_dim1 + 1], &c__1, &scale, &sum);
-/* L90: */
 	}
 	value = scale * sqrt(sum);
     }

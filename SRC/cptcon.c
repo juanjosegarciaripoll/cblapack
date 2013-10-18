@@ -28,15 +28,8 @@ static integer c__1 = 1;
     integer i__, ix;
     real ainvnm;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -87,18 +80,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input arguments. */
 
     /* Parameter adjustments */
@@ -136,7 +117,6 @@ static integer c__1 = 1;
 	if (d__[i__] <= 0.f) {
 	    return 0;
 	}
-/* L10: */
     }
 
 /*     Solve M(A) * x = e, where M(A) = (m(i,j)) is given by */
@@ -144,15 +124,12 @@ static integer c__1 = 1;
 /*        m(i,j) =  abs(A(i,j)), i = j, */
 /*        m(i,j) = -abs(A(i,j)), i .ne. j, */
 
-/*     and e = [ 1, 1, ..., 1 ]'.  Note M(A) = M(L)*D*M(L)'. */
-
 /*     Solve M(L) * x = e. */
 
     rwork[1] = 1.f;
     i__1 = *n;
     for (i__ = 2; i__ <= i__1; ++i__) {
 	rwork[i__] = rwork[i__ - 1] * c_abs(&e[i__ - 1]) + 1.f;
-/* L20: */
     }
 
 /*     Solve D * M(L)' * x = b. */
@@ -160,7 +137,6 @@ static integer c__1 = 1;
     rwork[*n] /= d__[*n];
     for (i__ = *n - 1; i__ >= 1; --i__) {
 	rwork[i__] = rwork[i__] / d__[i__] + rwork[i__ + 1] * c_abs(&e[i__]);
-/* L30: */
     }
 
 /*     Compute AINVNM = max(x(i)), 1<=i<=n. */

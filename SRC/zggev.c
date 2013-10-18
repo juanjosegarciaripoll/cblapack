@@ -56,15 +56,8 @@ static integer c_n1 = -1;
     integer lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -121,7 +114,6 @@ static integer c_n1 = -1;
 
 /*  ALPHA   (output) COMPLEX*16 array, dimension (N) */
 /*  BETA    (output) COMPLEX*16 array, dimension (N) */
-/*          On exit, ALPHA(j)/BETA(j), j=1,...,N, will be the */
 /*          generalized eigenvalues. */
 
 /*          Note: the quotients ALPHA(j)/BETA(j) may easily over- or */
@@ -172,32 +164,12 @@ static integer c_n1 = -1;
 /*  INFO    (output) INTEGER */
 /*          = 0:  successful exit */
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value. */
-/*          =1,...,N: */
 /*                The QZ iteration failed.  No eigenvectors have been */
 /*                calculated, but ALPHA(j) and BETA(j) should be */
-/*                correct for j=INFO+1,...,N. */
 /*          > N:  =N+1: other then QZ iteration failed in DHGEQZ, */
 /*                =N+2: error return from DTGEVC. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode the input arguments */
 
@@ -484,7 +456,6 @@ static integer c_n1 = -1;
 		    d__3 = temp, d__4 = (d__1 = vl[i__3].r, abs(d__1)) + (
 			    d__2 = d_imag(&vl[jr + jc * vl_dim1]), abs(d__2));
 		    temp = max(d__3,d__4);
-/* L10: */
 		}
 		if (temp < smlnum) {
 		    goto L30;
@@ -496,7 +467,6 @@ static integer c_n1 = -1;
 		    i__4 = jr + jc * vl_dim1;
 		    z__1.r = temp * vl[i__4].r, z__1.i = temp * vl[i__4].i;
 		    vl[i__3].r = z__1.r, vl[i__3].i = z__1.i;
-/* L20: */
 		}
 L30:
 		;
@@ -515,7 +485,6 @@ L30:
 		    d__3 = temp, d__4 = (d__1 = vr[i__3].r, abs(d__1)) + (
 			    d__2 = d_imag(&vr[jr + jc * vr_dim1]), abs(d__2));
 		    temp = max(d__3,d__4);
-/* L40: */
 		}
 		if (temp < smlnum) {
 		    goto L60;
@@ -527,7 +496,6 @@ L30:
 		    i__4 = jr + jc * vr_dim1;
 		    z__1.r = temp * vr[i__4].r, z__1.i = temp * vr[i__4].i;
 		    vr[i__3].r = z__1.r, vr[i__3].i = z__1.i;
-/* L50: */
 		}
 L60:
 		;

@@ -23,15 +23,8 @@
     /* Local variables */
     integer i__, j;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -72,14 +65,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     a_dim1 = *lda;
     a_offset = 1 + a_dim1;
@@ -99,15 +84,12 @@
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		i__3 = i__ + j * a_dim1;
 		a[i__3].r = alpha->r, a[i__3].i = alpha->i;
-/* L10: */
 	    }
-/* L20: */
 	}
 	i__1 = min(*n,*m);
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    i__2 = i__ + i__ * a_dim1;
 	    a[i__2].r = beta->r, a[i__2].i = beta->i;
-/* L30: */
 	}
 
     } else if (lsame_(uplo, "L")) {
@@ -121,15 +103,12 @@
 	    for (i__ = j + 1; i__ <= i__2; ++i__) {
 		i__3 = i__ + j * a_dim1;
 		a[i__3].r = alpha->r, a[i__3].i = alpha->i;
-/* L40: */
 	    }
-/* L50: */
 	}
 	i__1 = min(*n,*m);
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    i__2 = i__ + i__ * a_dim1;
 	    a[i__2].r = beta->r, a[i__2].i = beta->i;
-/* L60: */
 	}
 
     } else {
@@ -143,15 +122,12 @@
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		i__3 = i__ + j * a_dim1;
 		a[i__3].r = alpha->r, a[i__3].i = alpha->i;
-/* L70: */
 	    }
-/* L80: */
 	}
 	i__1 = min(*m,*n);
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    i__2 = i__ + i__ * a_dim1;
 	    a[i__2].r = beta->r, a[i__2].i = beta->i;
-/* L90: */
 	}
     }
 

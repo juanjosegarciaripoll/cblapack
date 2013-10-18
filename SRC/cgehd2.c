@@ -28,15 +28,8 @@ static integer c__1 = 1;
     integer i__;
     complex alpha;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -114,16 +107,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters */
 
     /* Parameter adjustments */
@@ -181,7 +164,6 @@ static integer c__1 = 1;
 
 	i__2 = i__ + 1 + i__ * a_dim1;
 	a[i__2].r = alpha.r, a[i__2].i = alpha.i;
-/* L10: */
     }
 
     return 0;

@@ -27,13 +27,8 @@ static real c_b4 = 1.f;
     real p, z__, aa, bb, cc, dd, cs1, sn1, sab, sac, eps, tau, temp, scale, 
 	    bcmax, bcmis, sigma;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -80,16 +75,6 @@ static real c_b4 = 1.f;
 /*  abs(RT1R) >= abs(RT2R). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     eps = slamch_("P");
     if (*c__ == 0.f) {

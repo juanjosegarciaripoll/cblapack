@@ -24,7 +24,6 @@ doublereal dla_rpvgrw__(integer *n, integer *ncols, doublereal *a, integer *
     integer i__, j;
     doublereal amax, umax, rpvgrw;
 
-
 /*     -- LAPACK routine (version 3.2.1)                                 -- */
 /*     -- Contributed by James Demmel, Deaglan Halligan, Yozo Hida and -- */
 /*     -- Jason Riedy of Univ. of California Berkeley.                 -- */
@@ -32,12 +31,6 @@ doublereal dla_rpvgrw__(integer *n, integer *ncols, doublereal *a, integer *
 
 /*     -- LAPACK is a software package provided by Univ. of Tennessee, -- */
 /*     -- Univ. of California Berkeley and NAG Ltd.                    -- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -73,12 +66,6 @@ doublereal dla_rpvgrw__(integer *n, integer *ncols, doublereal *a, integer *
 /*     The leading dimension of the array AF.  LDAF >= max(1,N). */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     a_dim1 = *lda;

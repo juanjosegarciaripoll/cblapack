@@ -37,16 +37,8 @@ static integer c__1 = 1;
     integer ptsx;
     integer iiter;
 
-
 /*  -- LAPACK PROTOTYPE driver routine (version 3.1.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd.. */
 /*     May 2007 */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -114,7 +106,6 @@ static integer c__1 = 1;
 /*          array A contains the factor U or L from the Cholesky */
 /*          factorization A = U**T*U or A = L*L**T. */
 
-
 /*  LDA     (input) INTEGER */
 /*          The leading dimension of the array A.  LDA >= max(1,N). */
 
@@ -159,21 +150,6 @@ static integer c__1 = 1;
 /*                has not been computed. */
 
 /*  ========= */
-
-/*     .. Parameters .. */
-
-
-
-
-/*     .. Local Scalars .. */
-
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     work_dim1 = *n;
@@ -363,7 +339,6 @@ L10:
 
 L20:
 
-/* L30: */
 	;
     }
 

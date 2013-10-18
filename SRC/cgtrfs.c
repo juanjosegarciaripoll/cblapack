@@ -48,17 +48,10 @@ static complex c_b26 = {1.f,0.f};
     char transt[1];
     real lstres;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
 
 /*     Modified to call CLACN2 in place of CLACON, 10 Feb 03, SJH. */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -155,24 +148,6 @@ static complex c_b26 = {1.f,0.f};
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -223,7 +198,6 @@ static complex c_b26 = {1.f,0.f};
 	for (j = 1; j <= i__1; ++j) {
 	    ferr[j] = 0.f;
 	    berr[j] = 0.f;
-/* L10: */
 	}
 	return 0;
     }
@@ -308,7 +282,6 @@ L20:
 			    r_imag(&du[i__]), dabs(r__12))) * ((r__13 = x[
 			    i__9].r, dabs(r__13)) + (r__14 = r_imag(&x[i__ + 
 			    1 + j * x_dim1]), dabs(r__14)));
-/* L30: */
 		}
 		i__2 = *n + j * b_dim1;
 		i__3 = *n - 1;
@@ -367,7 +340,6 @@ L20:
 			    r_imag(&dl[i__]), dabs(r__12))) * ((r__13 = x[
 			    i__9].r, dabs(r__13)) + (r__14 = r_imag(&x[i__ + 
 			    1 + j * x_dim1]), dabs(r__14)));
-/* L40: */
 		}
 		i__2 = *n + j * b_dim1;
 		i__3 = *n - 1;
@@ -411,7 +383,6 @@ L20:
 			 + safe1);
 		s = dmax(r__3,r__4);
 	    }
-/* L50: */
 	}
 	berr[j] = s;
 
@@ -468,7 +439,6 @@ L20:
 			r_imag(&work[i__]), dabs(r__2)) + nz * eps * rwork[
 			i__] + safe1;
 	    }
-/* L60: */
 	}
 
 	kase = 0;
@@ -489,7 +459,6 @@ L70:
 		    q__1.r = rwork[i__4] * work[i__5].r, q__1.i = rwork[i__4] 
 			    * work[i__5].i;
 		    work[i__3].r = q__1.r, work[i__3].i = q__1.i;
-/* L80: */
 		}
 	    } else {
 
@@ -503,7 +472,6 @@ L70:
 		    q__1.r = rwork[i__4] * work[i__5].r, q__1.i = rwork[i__4] 
 			    * work[i__5].i;
 		    work[i__3].r = q__1.r, work[i__3].i = q__1.i;
-/* L90: */
 		}
 		cgttrs_(transn, n, &c__1, &dlf[1], &df[1], &duf[1], &du2[1], &
 			ipiv[1], &work[1], n, info);
@@ -521,13 +489,11 @@ L70:
 	    r__3 = lstres, r__4 = (r__1 = x[i__3].r, dabs(r__1)) + (r__2 = 
 		    r_imag(&x[i__ + j * x_dim1]), dabs(r__2));
 	    lstres = dmax(r__3,r__4);
-/* L100: */
 	}
 	if (lstres != 0.f) {
 	    ferr[j] /= lstres;
 	}
 
-/* L110: */
     }
 
     return 0;

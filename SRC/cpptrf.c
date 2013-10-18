@@ -31,15 +31,8 @@ static real c_b16 = -1.f;
     real ajj;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -100,18 +93,6 @@ static real c_b16 = -1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -171,7 +152,6 @@ static real c_b16 = -1.f;
 	    i__2 = jj;
 	    r__1 = sqrt(ajj);
 	    ap[i__2].r = r__1, ap[i__2].i = 0.f;
-/* L10: */
 	}
     } else {
 
@@ -206,7 +186,6 @@ static real c_b16 = -1.f;
 			- j + 1]);
 		jj = jj + *n - j + 1;
 	    }
-/* L20: */
 	}
     }
     goto L40;

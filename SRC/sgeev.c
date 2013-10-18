@@ -49,15 +49,8 @@ static integer c_n1 = -1;
     integer hswork;
     logical lquery, wantvr;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -156,20 +149,6 @@ static integer c_n1 = -1;
 /*                have converged. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -439,7 +418,6 @@ static integer c_n1 = -1;
 /* Computing 2nd power */
 		    r__2 = vl[k + (i__ + 1) * vl_dim1];
 		    work[iwrk + k - 1] = r__1 * r__1 + r__2 * r__2;
-/* L10: */
 		}
 		k = isamax_(n, &work[iwrk], &c__1);
 		slartg_(&vl[k + i__ * vl_dim1], &vl[k + (i__ + 1) * vl_dim1], 
@@ -448,7 +426,6 @@ static integer c_n1 = -1;
 			vl_dim1 + 1], &c__1, &cs, &sn);
 		vl[k + (i__ + 1) * vl_dim1] = 0.f;
 	    }
-/* L20: */
 	}
     }
 
@@ -480,7 +457,6 @@ static integer c_n1 = -1;
 /* Computing 2nd power */
 		    r__2 = vr[k + (i__ + 1) * vr_dim1];
 		    work[iwrk + k - 1] = r__1 * r__1 + r__2 * r__2;
-/* L30: */
 		}
 		k = isamax_(n, &work[iwrk], &c__1);
 		slartg_(&vr[k + i__ * vr_dim1], &vr[k + (i__ + 1) * vr_dim1], 
@@ -489,7 +465,6 @@ static integer c_n1 = -1;
 			vr_dim1 + 1], &c__1, &cs, &sn);
 		vr[k + (i__ + 1) * vr_dim1] = 0.f;
 	    }
-/* L40: */
 	}
     }
 

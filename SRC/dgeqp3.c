@@ -35,15 +35,8 @@ static integer c__2 = 2;
     integer lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -119,18 +112,6 @@ static integer c__2 = 2;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test input arguments */
 /*     ==================== */
 
@@ -202,7 +183,6 @@ static integer c__2 = 2;
 	} else {
 	    jpvt[j] = j;
 	}
-/* L10: */
     }
     --nfxd;
 
@@ -256,7 +236,6 @@ static integer c__2 = 2;
 		    c_n1);
 	    nx = max(i__1,i__2);
 
-
 	    if (nx < sminmn) {
 
 /*              Determine if workspace is large enough for blocked code. */
@@ -274,7 +253,6 @@ static integer c__2 = 2;
 			    c_n1, &c_n1);
 		    nbmin = max(i__1,i__2);
 
-
 		}
 	    }
 	}
@@ -286,7 +264,6 @@ static integer c__2 = 2;
 	for (j = nfxd + 1; j <= i__1; ++j) {
 	    work[j] = dnrm2_(&sm, &a[nfxd + 1 + j * a_dim1], &c__1);
 	    work[*n + j] = work[j];
-/* L20: */
 	}
 
 	if (nb >= nbmin && nb < sminmn && nx < sminmn) {
@@ -296,7 +273,6 @@ static integer c__2 = 2;
 	    j = nfxd + 1;
 
 /*           Compute factorization: while loop. */
-
 
 	    topbmn = minmn - nx;
 L30:
@@ -322,7 +298,6 @@ L30:
 	}
 
 /*        Use unblocked code to factor the last or only block. */
-
 
 	if (j <= minmn) {
 	    i__1 = *n - j + 1;

@@ -40,15 +40,8 @@ static integer c__2 = 2;
 	    nlp1, lvl2, nrp1, jcol, nlvl, sqre, jrow, jimag;
     integer jreal, inode, ndiml, ndimr;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -185,16 +178,6 @@ static integer c__2 = 2;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -316,9 +299,7 @@ static integer c__2 = 2;
 		++j;
 		i__4 = jrow + jcol * b_dim1;
 		rwork[j] = b[i__4].r;
-/* L10: */
 	    }
-/* L20: */
 	}
 	dgemm_("T", "N", &nl, nrhs, &nl, &c_b9, &u[nlf + u_dim1], ldu, &rwork[
 		(nl * *nrhs << 1) + 1], &nl, &c_b10, &rwork[1], &nl);
@@ -329,9 +310,7 @@ static integer c__2 = 2;
 	    for (jrow = nlf; jrow <= i__3; ++jrow) {
 		++j;
 		rwork[j] = d_imag(&b[jrow + jcol * b_dim1]);
-/* L30: */
 	    }
-/* L40: */
 	}
 	dgemm_("T", "N", &nl, nrhs, &nl, &c_b9, &u[nlf + u_dim1], ldu, &rwork[
 		(nl * *nrhs << 1) + 1], &nl, &c_b10, &rwork[nl * *nrhs + 1], &
@@ -349,9 +328,7 @@ static integer c__2 = 2;
 		i__6 = jimag;
 		z__1.r = rwork[i__5], z__1.i = rwork[i__6];
 		bx[i__4].r = z__1.r, bx[i__4].i = z__1.i;
-/* L50: */
 	    }
-/* L60: */
 	}
 
 /*        Since B and BX are complex, the following call to DGEMM */
@@ -368,9 +345,7 @@ static integer c__2 = 2;
 		++j;
 		i__4 = jrow + jcol * b_dim1;
 		rwork[j] = b[i__4].r;
-/* L70: */
 	    }
-/* L80: */
 	}
 	dgemm_("T", "N", &nr, nrhs, &nr, &c_b9, &u[nrf + u_dim1], ldu, &rwork[
 		(nr * *nrhs << 1) + 1], &nr, &c_b10, &rwork[1], &nr);
@@ -381,9 +356,7 @@ static integer c__2 = 2;
 	    for (jrow = nrf; jrow <= i__3; ++jrow) {
 		++j;
 		rwork[j] = d_imag(&b[jrow + jcol * b_dim1]);
-/* L90: */
 	    }
-/* L100: */
 	}
 	dgemm_("T", "N", &nr, nrhs, &nr, &c_b9, &u[nrf + u_dim1], ldu, &rwork[
 		(nr * *nrhs << 1) + 1], &nr, &c_b10, &rwork[nr * *nrhs + 1], &
@@ -401,12 +374,9 @@ static integer c__2 = 2;
 		i__6 = jimag;
 		z__1.r = rwork[i__5], z__1.i = rwork[i__6];
 		bx[i__4].r = z__1.r, bx[i__4].i = z__1.i;
-/* L110: */
 	    }
-/* L120: */
 	}
 
-/* L130: */
     }
 
 /*     Next copy the rows of B that correspond to unchanged rows */
@@ -416,7 +386,6 @@ static integer c__2 = 2;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	ic = iwork[inode + i__ - 1];
 	zcopy_(nrhs, &b[ic + b_dim1], ldb, &bx[ic + bx_dim1], ldbx);
-/* L140: */
     }
 
 /*     Finally go through the left singular vector matrices of all */
@@ -455,9 +424,7 @@ static integer c__2 = 2;
 		     poles_dim1], &difl[nlf + lvl * difl_dim1], &difr[nlf + 
 		    lvl2 * difr_dim1], &z__[nlf + lvl * z_dim1], &k[j], &c__[
 		    j], &s[j], &rwork[1], info);
-/* L150: */
 	}
-/* L160: */
     }
     goto L330;
 
@@ -505,9 +472,7 @@ L170:
 		     poles_dim1], &difl[nlf + lvl * difl_dim1], &difr[nlf + 
 		    lvl2 * difr_dim1], &z__[nlf + lvl * z_dim1], &k[j], &c__[
 		    j], &s[j], &rwork[1], info);
-/* L180: */
 	}
-/* L190: */
     }
 
 /*     The nodes on the bottom level of the tree were solved */
@@ -544,9 +509,7 @@ L170:
 		++j;
 		i__4 = jrow + jcol * b_dim1;
 		rwork[j] = b[i__4].r;
-/* L200: */
 	    }
-/* L210: */
 	}
 	dgemm_("T", "N", &nlp1, nrhs, &nlp1, &c_b9, &vt[nlf + vt_dim1], ldu, &
 		rwork[(nlp1 * *nrhs << 1) + 1], &nlp1, &c_b10, &rwork[1], &
@@ -558,9 +521,7 @@ L170:
 	    for (jrow = nlf; jrow <= i__3; ++jrow) {
 		++j;
 		rwork[j] = d_imag(&b[jrow + jcol * b_dim1]);
-/* L220: */
 	    }
-/* L230: */
 	}
 	dgemm_("T", "N", &nlp1, nrhs, &nlp1, &c_b9, &vt[nlf + vt_dim1], ldu, &
 		rwork[(nlp1 * *nrhs << 1) + 1], &nlp1, &c_b10, &rwork[nlp1 * *
@@ -578,9 +539,7 @@ L170:
 		i__6 = jimag;
 		z__1.r = rwork[i__5], z__1.i = rwork[i__6];
 		bx[i__4].r = z__1.r, bx[i__4].i = z__1.i;
-/* L240: */
 	    }
-/* L250: */
 	}
 
 /*        Since B and BX are complex, the following call to DGEMM is */
@@ -597,9 +556,7 @@ L170:
 		++j;
 		i__4 = jrow + jcol * b_dim1;
 		rwork[j] = b[i__4].r;
-/* L260: */
 	    }
-/* L270: */
 	}
 	dgemm_("T", "N", &nrp1, nrhs, &nrp1, &c_b9, &vt[nrf + vt_dim1], ldu, &
 		rwork[(nrp1 * *nrhs << 1) + 1], &nrp1, &c_b10, &rwork[1], &
@@ -611,9 +568,7 @@ L170:
 	    for (jrow = nrf; jrow <= i__3; ++jrow) {
 		++j;
 		rwork[j] = d_imag(&b[jrow + jcol * b_dim1]);
-/* L280: */
 	    }
-/* L290: */
 	}
 	dgemm_("T", "N", &nrp1, nrhs, &nrp1, &c_b9, &vt[nrf + vt_dim1], ldu, &
 		rwork[(nrp1 * *nrhs << 1) + 1], &nrp1, &c_b10, &rwork[nrp1 * *
@@ -631,12 +586,9 @@ L170:
 		i__6 = jimag;
 		z__1.r = rwork[i__5], z__1.i = rwork[i__6];
 		bx[i__4].r = z__1.r, bx[i__4].i = z__1.i;
-/* L300: */
 	    }
-/* L310: */
 	}
 
-/* L320: */
     }
 
 L330:

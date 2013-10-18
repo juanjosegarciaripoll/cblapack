@@ -59,17 +59,8 @@ static real c_b43 = 1.f;
     real smlnum;
     logical wantst, lquery, wantsv;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-/*     .. Function Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -107,7 +98,6 @@ static real c_b43 = 1.f;
 
 /*  and the pair of corresponding 2-by-2 blocks in S and T will have a */
 /*  complex conjugate pair of generalized eigenvalues. */
-
 
 /*  Arguments */
 /*  ========= */
@@ -177,9 +167,7 @@ static real c_b43 = 1.f;
 /*  ALPHAR  (output) REAL array, dimension (N) */
 /*  ALPHAI  (output) REAL array, dimension (N) */
 /*  BETA    (output) REAL array, dimension (N) */
-/*          On exit, (ALPHAR(j) + ALPHAI(j)*i)/BETA(j), j=1,...,N, will */
 /*          be the generalized eigenvalues.  ALPHAR(j) + ALPHAI(j)*i */
-/*          and BETA(j),j=1,...,N  are the diagonals of the complex Schur */
 /*          form (S,T) that would result if the 2-by-2 diagonal blocks of */
 /*          the real Schur form of (A,B) were further reduced to */
 /*          triangular form using 2-by-2 complex unitary transformations. */
@@ -263,10 +251,8 @@ static real c_b43 = 1.f;
 /*  INFO    (output) INTEGER */
 /*          = 0:  successful exit */
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value. */
-/*          = 1,...,N: */
 /*                The QZ iteration failed.  (A,B) are not in Schur */
 /*                form, but ALPHAR(j), ALPHAI(j), and BETA(j) should */
-/*                be correct for j=INFO+1,...,N. */
 /*          > N:  =N+1: other than QZ iteration failed in SHGEQZ */
 /*                =N+2: after reordering, roundoff changed values of */
 /*                      some complex eigenvalues so that leading */
@@ -291,20 +277,6 @@ static real c_b43 = 1.f;
 /*  See LAPACK User's Guide, section 4.11 for more information. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode the input arguments */
 
@@ -601,7 +573,6 @@ static real c_b43 = 1.f;
 	i__1 = *n;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    bwork[i__] = (*selctg)(&alphar[i__], &alphai[i__], &beta[i__]);
-/* L10: */
 	}
 
 /*        Reorder eigenvalues, transform Generalized Schur vectors, and */
@@ -676,7 +647,6 @@ static real c_b43 = 1.f;
 		    alphai[i__] *= work[1];
 		}
 	    }
-/* L20: */
 	}
     }
 
@@ -693,7 +663,6 @@ static real c_b43 = 1.f;
 		    alphai[i__] *= work[1];
 		}
 	    }
-/* L25: */
 	}
     }
 
@@ -757,7 +726,6 @@ static real c_b43 = 1.f;
 	    }
 	    lst2sl = lastsl;
 	    lastsl = cursl;
-/* L40: */
 	}
 
     }

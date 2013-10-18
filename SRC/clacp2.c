@@ -22,15 +22,8 @@
     /* Local variables */
     integer i__, j;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -69,14 +62,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     a_dim1 = *lda;
     a_offset = 1 + a_dim1;
@@ -94,9 +79,7 @@
 		i__3 = i__ + j * b_dim1;
 		i__4 = i__ + j * a_dim1;
 		b[i__3].r = a[i__4], b[i__3].i = 0.f;
-/* L10: */
 	    }
-/* L20: */
 	}
 
     } else if (lsame_(uplo, "L")) {
@@ -107,9 +90,7 @@
 		i__3 = i__ + j * b_dim1;
 		i__4 = i__ + j * a_dim1;
 		b[i__3].r = a[i__4], b[i__3].i = 0.f;
-/* L30: */
 	    }
-/* L40: */
 	}
 
     } else {
@@ -120,9 +101,7 @@
 		i__3 = i__ + j * b_dim1;
 		i__4 = i__ + j * a_dim1;
 		b[i__3].r = a[i__4], b[i__3].i = 0.f;
-/* L50: */
 	    }
-/* L60: */
 	}
     }
 

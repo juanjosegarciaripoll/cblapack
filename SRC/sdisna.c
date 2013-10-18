@@ -30,15 +30,8 @@
     real safmin;
     real newgap, thresh;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -94,18 +87,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input arguments */
 
     /* Parameter adjustments */
@@ -140,7 +121,6 @@
 	    if (decr) {
 		decr = decr && d__[i__] >= d__[i__ + 1];
 	    }
-/* L10: */
 	}
 	if (sing && k > 0) {
 	    if (incr) {
@@ -178,7 +158,6 @@
 	    newgap = (r__1 = d__[i__ + 1] - d__[i__], dabs(r__1));
 	    sep[i__] = dmin(oldgap,newgap);
 	    oldgap = newgap;
-/* L20: */
 	}
 	sep[k] = oldgap;
     }
@@ -215,7 +194,6 @@
 /* Computing MAX */
 	r__1 = sep[i__];
 	sep[i__] = dmax(r__1,thresh);
-/* L30: */
     }
 
     return 0;

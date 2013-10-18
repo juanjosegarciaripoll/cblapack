@@ -37,15 +37,8 @@ static integer c_n1 = -1;
     integer idlmda;
     integer coltyp;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -187,16 +180,6 @@ static integer c_n1 = -1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -270,7 +253,6 @@ static integer c_n1 = -1;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	i__2 = *tlvls - i__;
 	ptr += pow_ii(&c__2, &i__2);
-/* L10: */
     }
     curr = ptr + *curpbm;
     dlaeda_(n, tlvls, curlvl, curpbm, &prmptr[1], &perm[1], &givptr[1], &
@@ -323,7 +305,6 @@ static integer c_n1 = -1;
 	i__1 = *n;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    indxq[i__] = i__;
-/* L20: */
 	}
     }
 

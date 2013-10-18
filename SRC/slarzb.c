@@ -32,15 +32,8 @@ static real c_b23 = -1.f;
     integer i__, j, info;
     char transt[1];
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -124,16 +117,6 @@ static real c_b23 = -1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -184,10 +167,8 @@ static real c_b23 = -1.f;
 	i__1 = *k;
 	for (j = 1; j <= i__1; ++j) {
 	    scopy_(n, &c__[j + c_dim1], ldc, &work[j * work_dim1 + 1], &c__1);
-/* L10: */
 	}
 
-/*        W( 1:n, 1:k ) = W( 1:n, 1:k ) + ... */
 /*                        C( m-l+1:m, 1:n )' * V( 1:k, 1:l )' */
 
 	if (*l > 0) {
@@ -208,12 +189,9 @@ static real c_b23 = -1.f;
 	    i__2 = *k;
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		c__[i__ + j * c_dim1] -= work[j + i__ * work_dim1];
-/* L20: */
 	    }
-/* L30: */
 	}
 
-/*        C( m-l+1:m, 1:n ) = C( m-l+1:m, 1:n ) - ... */
 /*                            V( 1:k, 1:l )' * W( 1:n, 1:k )' */
 
 	if (*l > 0) {
@@ -232,10 +210,8 @@ static real c_b23 = -1.f;
 	for (j = 1; j <= i__1; ++j) {
 	    scopy_(m, &c__[j * c_dim1 + 1], &c__1, &work[j * work_dim1 + 1], &
 		    c__1);
-/* L40: */
 	}
 
-/*        W( 1:m, 1:k ) = W( 1:m, 1:k ) + ... */
 /*                        C( 1:m, n-l+1:n ) * V( 1:k, 1:l )' */
 
 	if (*l > 0) {
@@ -256,12 +232,9 @@ static real c_b23 = -1.f;
 	    i__2 = *m;
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		c__[i__ + j * c_dim1] -= work[i__ + j * work_dim1];
-/* L50: */
 	    }
-/* L60: */
 	}
 
-/*        C( 1:m, n-l+1:n ) = C( 1:m, n-l+1:n ) - ... */
 /*                            W( 1:m, 1:k ) * V( 1:k, 1:l ) */
 
 	if (*l > 0) {

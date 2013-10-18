@@ -53,7 +53,6 @@ static doublereal c_b42 = 1.;
     integer rowskip;
     doublereal roottol;
 
-
 /*  -- LAPACK routine (version 3.2)                                    -- */
 
 /*  -- Contributed by Zlatko Drmac of the University of Zagreb and     -- */
@@ -61,7 +60,6 @@ static doublereal c_b42 = 1.;
 /*  -- November 2008                                                   -- */
 
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
 
 /* This routine is also part of SIGMA (version 1.23, October 23. 2008.) */
 /* SIGMA is a library of algorithms for highly accurate algorithms for */
@@ -70,10 +68,7 @@ static doublereal c_b42 = 1.;
 
 /*     Scalar Arguments */
 
-
 /*     Array Arguments */
-
-/*     .. */
 
 /*  Purpose */
 /*  ~~~~~~~ */
@@ -191,15 +186,11 @@ static doublereal c_b42 = 1.;
 /*     Local Scalars */
 /*     Local Arrays */
 
-
 /*     Intrinsic Functions */
-
 
 /*     External Functions */
 
-
 /*     External Subroutines */
-
 
 /*     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| */
 
@@ -260,7 +251,6 @@ static doublereal c_b42 = 1.;
     bigtheta = 1. / rooteps;
     roottol = sqrt(*tol);
 
-
 /*     -#- Row-cyclic Jacobi SVD algorithm with column pivoting -#- */
 
     emptsw = *n * (*n - 1) / 2;
@@ -273,7 +263,6 @@ static doublereal c_b42 = 1.;
 /* [TP] SWBAND is a tuning parameter. It is meaningful and effective */
 /*     if SGESVJ is used as a computational routine in the preconditioned */
 /*     Jacobi SVD algorithm SGESVJ. For sweeps i=1:SWBAND the procedure */
-/*     ...... */
     kbl = min(8,*n);
 /* [TP] KBL is a tuning parameter that defines the tile size in the */
 /*     tiling of the p-q loops of pivot pairs. In general, an optimal */
@@ -297,7 +286,6 @@ static doublereal c_b42 = 1.;
 
     i__1 = *nsweep;
     for (i__ = 1; i__ <= i__1; ++i__) {
-/*     .. go go go ... */
 
 	mxaapq = 0.;
 	mxsinj = 0.;
@@ -321,7 +309,6 @@ static doublereal c_b42 = 1.;
 		i__5 = igl + kbl - 1, i__6 = *n - 1;
 		i__4 = min(i__5,i__6);
 		for (p = igl; p <= i__4; ++p) {
-/*     .. de Rijk's pivoting */
 		    i__5 = *n - p + 1;
 		    q = idamax_(&i__5, &sva[p], &c__1) + p - 1;
 		    if (p != q) {
@@ -421,11 +408,8 @@ static doublereal c_b42 = 1.;
 				d__1 = mxaapq, d__2 = abs(aapq);
 				mxaapq = max(d__1,d__2);
 
-/*        TO rotate or NOT to rotate, THAT is the question ... */
-
 				if (abs(aapq) > *tol) {
 
-/*           .. rotate */
 /*           ROTATED = ROTATED + ONE */
 
 				    if (ir1 == 0) {
@@ -465,8 +449,6 @@ static doublereal c_b42 = 1.;
 					    mxsinj = max(d__1,d__2);
 
 					} else {
-
-/*                 .. choose correct signum for THETA and rotate */
 
 					    thsign = -d_sign(&c_b42, &aapq);
 					    t = 1. / (theta + thsign * sqrt(
@@ -582,7 +564,6 @@ static doublereal c_b42 = 1.;
 					}
 
 				    } else {
-/*              .. have to use modified Gram-Schmidt like transformation */
 					dcopy_(m, &a[p * a_dim1 + 1], &c__1, &
 						work[1], &c__1);
 					dlascl_("G", &c__0, &c__0, &aapp, &
@@ -603,7 +584,6 @@ static doublereal c_b42 = 1.;
 						;
 					mxsinj = max(mxsinj,*sfmin);
 				    }
-/*           END IF ROTOK THEN ... ELSE */
 
 /*           In the case of cancellation in updating SVA(q), SVA(p) */
 /*           recompute SVA(q), SVA(p). */
@@ -660,7 +640,6 @@ static doublereal c_b42 = 1.;
 				goto L2103;
 			    }
 
-/* L2002: */
 			}
 /*     END q-LOOP */
 
@@ -676,16 +655,11 @@ L2103:
 			}
 		    }
 
-/* L2001: */
 		}
 /*     end of the p-loop */
 /*     end of doing the block ( ibr, ibr ) */
-/* L1002: */
 	    }
 /*     end of ir1-loop */
-
-/* ........................................................ */
-/* ... go to the off diagonal blocks */
 
 	    igl = (ibr - 1) * kbl + 1;
 
@@ -770,8 +744,6 @@ L2103:
 				d__1 = mxaapq, d__2 = abs(aapq);
 				mxaapq = max(d__1,d__2);
 
-/*        TO rotate or NOT to rotate, THAT is the question ... */
-
 				if (abs(aapq) > *tol) {
 				    notrot = 0;
 /*           ROTATED  = ROTATED + 1 */
@@ -812,8 +784,6 @@ L2103:
 					    d__1 = mxsinj, d__2 = abs(t);
 					    mxsinj = max(d__1,d__2);
 					} else {
-
-/*                 .. choose correct signum for THETA and rotate */
 
 					    thsign = -d_sign(&c_b42, &aapq);
 					    if (aaqq > aapp0) {
@@ -976,10 +946,8 @@ L2103:
 					    mxsinj = max(mxsinj,*sfmin);
 					}
 				    }
-/*           END IF ROTOK THEN ... ELSE */
 
 /*           In the case of cancellation in updating SVA(q) */
-/*           .. recompute SVA(q) */
 /* Computing 2nd power */
 				    d__1 = sva[q] / aaqq;
 				    if (d__1 * d__1 <= rooteps) {
@@ -1034,7 +1002,6 @@ L2103:
 				goto L2203;
 			    }
 
-/* L2200: */
 			}
 /*        end of the q-loop */
 L2203:
@@ -1051,10 +1018,8 @@ L2203:
 			    notrot = 0;
 			}
 		    }
-/* L2100: */
 		}
 /*     end of the p-loop */
-/* L2010: */
 	    }
 /*     end of the jbc-loop */
 L2011:
@@ -1064,14 +1029,11 @@ L2011:
 	    i__3 = min(i__4,*n);
 	    for (p = igl; p <= i__3; ++p) {
 		sva[p] = (d__1 = sva[p], abs(d__1));
-/* L2012: */
 	    }
 
-/* L2000: */
 	}
 /* 2000 :: end of the ibr-loop */
 
-/*     .. update SVA(N) */
 	if (sva[*n] < rootbig && sva[*n] > rootsfmin) {
 	    sva[*n] = dnrm2_(m, &a[*n * a_dim1 + 1], &c__1) * d__[*n];
 	} else {
@@ -1095,7 +1057,6 @@ L2011:
 	if (notrot >= emptsw) {
 	    goto L1994;
 	}
-/* L1993: */
     }
 /*     end i=1:NSWEEP loop */
 /* #:) Reaching this point means that the procedure has comleted the given */
@@ -1128,11 +1089,7 @@ L1995:
 			c__1);
 	    }
 	}
-/* L5991: */
     }
 
     return 0;
-/*     .. */
-/*     .. END OF DGSVJ0 */
-/*     .. */
 } /* dgsvj0_ */

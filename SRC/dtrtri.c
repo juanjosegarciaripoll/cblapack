@@ -34,15 +34,8 @@ static doublereal c_b22 = -1.;
     logical upper;
     logical nounit;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -90,18 +83,6 @@ static doublereal c_b22 = -1.;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -142,7 +123,6 @@ static doublereal c_b22 = -1.;
 	    if (a[*info + *info * a_dim1] == 0.) {
 		return 0;
 	    }
-/* L10: */
 	}
 	*info = 0;
     }
@@ -187,7 +167,6 @@ static doublereal c_b22 = -1.;
 /*              Compute inverse of current diagonal block */
 
 		dtrti2_("Upper", diag, &jb, &a[j + j * a_dim1], lda, info);
-/* L20: */
 	    }
 	} else {
 
@@ -216,7 +195,6 @@ static doublereal c_b22 = -1.;
 /*              Compute inverse of current diagonal block */
 
 		dtrti2_("Lower", diag, &jb, &a[j + j * a_dim1], lda, info);
-/* L30: */
 	    }
 	}
     }

@@ -42,15 +42,8 @@ static integer c_n1 = -1;
     integer blksiz;
     doublereal onenrm, dtpcrt, pertol;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -137,20 +130,6 @@ static integer c_n1 = -1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -171,7 +150,6 @@ static integer c_n1 = -1;
     i__1 = *m;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	ifail[i__] = 0;
-/* L10: */
     }
 
     if (*n < 0) {
@@ -191,7 +169,6 @@ static integer c_n1 = -1;
 		*info = -5;
 		goto L30;
 	    }
-/* L20: */
 	}
 L30:
 	;
@@ -220,7 +197,6 @@ L30:
 
     for (i__ = 1; i__ <= 4; ++i__) {
 	iseed[i__ - 1] = 1;
-/* L40: */
     }
 
 /*     Initialize pointers. */
@@ -264,7 +240,6 @@ L30:
 	    d__4 = onenrm, d__5 = (d__1 = d__[i__], abs(d__1)) + (d__2 = e[
 		    i__ - 1], abs(d__2)) + (d__3 = e[i__], abs(d__3));
 	    onenrm = max(d__4,d__5);
-/* L50: */
 	}
 	ortol = onenrm * .001;
 
@@ -361,7 +336,6 @@ L70:
 			    i__ * z_dim1], &c__1);
 		    daxpy_(&blksiz, &ztr, &z__[b1 + i__ * z_dim1], &c__1, &
 			    work[indrv1 + 1], &c__1);
-/* L80: */
 		}
 	    }
 
@@ -404,12 +378,10 @@ L120:
 	    i__3 = *n;
 	    for (i__ = 1; i__ <= i__3; ++i__) {
 		z__[i__ + j * z_dim1] = 0.;
-/* L130: */
 	    }
 	    i__3 = blksiz;
 	    for (i__ = 1; i__ <= i__3; ++i__) {
 		z__[b1 + i__ - 1 + j * z_dim1] = work[indrv1 + i__];
-/* L140: */
 	    }
 
 /*           Save the shift to check eigenvalue spacing at next */
@@ -417,7 +389,6 @@ L120:
 
 	    xjm = xj;
 
-/* L150: */
 	}
 L160:
 	;

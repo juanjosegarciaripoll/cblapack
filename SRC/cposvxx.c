@@ -36,7 +36,6 @@
     integer infequ;
     real smlnum;
 
-
 /*     -- LAPACK driver routine (version 3.2.1)                          -- */
 /*     -- Contributed by James Demmel, Deaglan Halligan, Yozo Hida and -- */
 /*     -- Jason Riedy of Univ. of California Berkeley.                 -- */
@@ -44,12 +43,6 @@
 
 /*     -- LAPACK is a software package provided by Univ. of Tennessee, -- */
 /*     -- Univ. of California Berkeley and NAG Ltd.                    -- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*     Purpose */
 /*     ======= */
@@ -410,18 +403,6 @@
 
 /*     ================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     err_bnds_comp_dim1 = *nrhs;
     err_bnds_comp_offset = 1 + err_bnds_comp_dim1;
@@ -496,7 +477,6 @@
 /* Computing MAX */
 		r__1 = smax, r__2 = s[j];
 		smax = dmax(r__1,r__2);
-/* L10: */
 	    }
 	    if (smin <= 0.f) {
 		*info = -10;

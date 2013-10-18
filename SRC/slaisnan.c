@@ -18,13 +18,8 @@ logical slaisnan_(real *sin1, real *sin2)
     /* System generated locals */
     logical ret_val;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -52,7 +47,6 @@ logical slaisnan_(real *sin1, real *sin2)
 
 /*  ===================================================================== */
 
-/*  .. Executable Statements .. */
     ret_val = *sin1 != *sin2;
     return ret_val;
 } /* slaisnan_ */

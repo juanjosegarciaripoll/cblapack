@@ -43,15 +43,8 @@ static doublereal c_b36 = .5;
     doublereal smlnum;
     logical nounit;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -148,7 +141,6 @@ static doublereal c_b36 = .5;
 /*  if A is lower triangular is */
 
 /*       x[1:n] := b[1:n] */
-/*       for j = 1, ..., n */
 /*            x(j) := x(j) / A(j,j) */
 /*            x[j+1:n] := x[j+1:n] - x(j) * A[j+1:n,j] */
 /*       end */
@@ -156,7 +148,6 @@ static doublereal c_b36 = .5;
 /*  Define bounds on the components of x after j iterations of the loop: */
 /*     M(j) = bound on x[1:j] */
 /*     G(j) = bound on x[j+1:n] */
-/*  Initially, let M(0) = 0 and G(0) = max{x(i), i=1,...,n}. */
 
 /*  Then for iteration j+1 we have */
 /*     M(j+1) <= G(j) / | A(j+1,j+1) | */
@@ -174,7 +165,6 @@ static doublereal c_b36 = .5;
 /*                                   1<=i< j */
 
 /*  Since |x(j)| <= M(j), we use the Level 2 BLAS routine DTBSV if the */
-/*  reciprocal of the largest M(j), j=1,..,n, is larger than */
 /*  max(underflow, 1/overflow). */
 
 /*  The bound on x(j) is also used to determine when a step in the */
@@ -186,7 +176,6 @@ static doublereal c_b36 = .5;
 /*  Similarly, a row-wise scheme is used to solve A'*x = b.  The basic */
 /*  algorithm for A upper triangular is */
 
-/*       for j = 1, ..., n */
 /*            x(j) := ( b(j) - A[1:j-1,j]' * x[1:j-1] ) / A(j,j) */
 /*       end */
 
@@ -194,7 +183,6 @@ static doublereal c_b36 = .5;
 /*       G(j) = bound on ( b(i) - A[1:i-1,i]' * x[1:i-1] ), 1<=i<=j */
 /*       M(j) = bound on x(i), 1<=i<=j */
 
-/*  The initial values are G(0) = 0, M(0) = max{b(i), i=1,..,n}, and we */
 /*  add the constraint G(j) >= G(j-1) and M(j) >= M(j-1) for j >= 1. */
 /*  Then the bound on x(j) is */
 
@@ -207,18 +195,6 @@ static doublereal c_b36 = .5;
 /*  than max(underflow, 1/overflow). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     ab_dim1 = *ldab;
@@ -285,7 +261,6 @@ static doublereal c_b36 = .5;
 		jlen = min(i__2,i__3);
 		cnorm[j] = dasum_(&jlen, &ab[*kd + 1 - jlen + j * ab_dim1], &
 			c__1);
-/* L10: */
 	    }
 	} else {
 
@@ -301,7 +276,6 @@ static doublereal c_b36 = .5;
 		} else {
 		    cnorm[j] = 0.;
 		}
-/* L20: */
 	    }
 	}
     }
@@ -350,7 +324,6 @@ static doublereal c_b36 = .5;
 /*           A is non-unit triangular. */
 
 /*           Compute GROW = 1/G(j) and XBND = 1/M(j). */
-/*           Initially, G(0) = max{x(i), i=1,...,n}. */
 
 	    grow = 1. / max(xbnd,smlnum);
 	    xbnd = grow;
@@ -381,14 +354,11 @@ static doublereal c_b36 = .5;
 
 		    grow = 0.;
 		}
-/* L30: */
 	    }
 	    grow = xbnd;
 	} else {
 
 /*           A is unit triangular. */
-
-/*           Compute GROW = 1/G(j), where G(0) = max{x(i), i=1,...,n}. */
 
 /* Computing MIN */
 	    d__1 = 1., d__2 = 1. / max(xbnd,smlnum);
@@ -406,7 +376,6 @@ static doublereal c_b36 = .5;
 /*              G(j) = G(j-1)*( 1 + CNORM(j) ) */
 
 		grow *= 1. / (cnorm[j] + 1.);
-/* L40: */
 	    }
 	}
 L50:
@@ -438,7 +407,6 @@ L50:
 /*           A is non-unit triangular. */
 
 /*           Compute GROW = 1/G(j) and XBND = 1/M(j). */
-/*           Initially, M(0) = max{x(i), i=1,...,n}. */
 
 	    grow = 1. / max(xbnd,smlnum);
 	    xbnd = grow;
@@ -465,14 +433,11 @@ L50:
 		if (xj > tjj) {
 		    xbnd *= tjj / xj;
 		}
-/* L60: */
 	    }
 	    grow = min(grow,xbnd);
 	} else {
 
 /*           A is unit triangular. */
-
-/*           Compute GROW = 1/G(j), where G(0) = max{x(i), i=1,...,n}. */
 
 /* Computing MIN */
 	    d__1 = 1., d__2 = 1. / max(xbnd,smlnum);
@@ -491,7 +456,6 @@ L50:
 
 		xj = cnorm[j] + 1.;
 		grow /= xj;
-/* L70: */
 	    }
 	}
 L80:
@@ -586,7 +550,6 @@ L80:
 		    i__3 = *n;
 		    for (i__ = 1; i__ <= i__3; ++i__) {
 			x[i__] = 0.;
-/* L90: */
 		    }
 		    x[j] = 1.;
 		    xj = 1.;
@@ -651,7 +614,6 @@ L100:
 		    i__ = j + idamax_(&i__3, &x[j + 1], &c__1);
 		    xmax = (d__1 = x[i__], abs(d__1));
 		}
-/* L110: */
 	    }
 
 	} else {
@@ -728,7 +690,6 @@ L100:
 			for (i__ = 1; i__ <= i__3; ++i__) {
 			    sumj += ab[*kd + i__ - jlen + j * ab_dim1] * 
 				    uscal * x[j - jlen - 1 + i__];
-/* L120: */
 			}
 		    } else {
 /* Computing MIN */
@@ -738,7 +699,6 @@ L100:
 			for (i__ = 1; i__ <= i__3; ++i__) {
 			    sumj += ab[i__ + 1 + j * ab_dim1] * uscal * x[j + 
 				    i__];
-/* L130: */
 			}
 		    }
 		}
@@ -800,7 +760,6 @@ L100:
 			i__3 = *n;
 			for (i__ = 1; i__ <= i__3; ++i__) {
 			    x[i__] = 0.;
-/* L140: */
 			}
 			x[j] = 1.;
 			*scale = 0.;
@@ -818,7 +777,6 @@ L150:
 /* Computing MAX */
 		d__2 = xmax, d__3 = (d__1 = x[j], abs(d__1));
 		xmax = max(d__2,d__3);
-/* L160: */
 	    }
 	}
 	*scale /= tscal;

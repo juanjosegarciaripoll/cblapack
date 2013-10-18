@@ -53,17 +53,10 @@ static logical c_false = FALSE_;
     real smlnum;
     logical wantsp;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
 
 /*     Modified to call SLACN2 in place of SLACON, 7 Feb 03, SJH. */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -97,10 +90,8 @@ static logical c_false = FALSE_;
 /*          If HOWMNY = 'S', SELECT specifies the eigenpairs for which */
 /*          condition numbers are required. To select condition numbers */
 /*          for the eigenpair corresponding to a real eigenvalue w(j), */
-/*          SELECT(j) must be set to .TRUE.. To select condition numbers */
 /*          corresponding to a complex conjugate pair of eigenvalues w(j) */
 /*          and w(j+1), either SELECT(j) or SELECT(j+1) or both, must be */
-/*          set to .TRUE.. */
 /*          If HOWMNY = 'A', SELECT is not referenced. */
 
 /*  N       (input) INTEGER */
@@ -221,20 +212,6 @@ static logical c_false = FALSE_;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Decode and test the input parameters */
 
     /* Parameter adjustments */
@@ -305,7 +282,6 @@ static logical c_false = FALSE_;
 			}
 		    }
 		}
-/* L10: */
 	    }
 	} else {
 	    *m = *n;
@@ -454,7 +430,6 @@ static logical c_false = FALSE_;
 		    i__2 = *n;
 		    for (i__ = 2; i__ <= i__2; ++i__) {
 			work[i__ + i__ * work_dim1] -= work[work_dim1 + 1];
-/* L20: */
 		    }
 		    n2 = 1;
 		    nn = *n - 1;
@@ -476,10 +451,7 @@ static logical c_false = FALSE_;
 
 /*                 Form */
 
-/*                 C' = WORK(2:N,2:N) + i*[rwork(1) ..... rwork(n-1) ] */
 /*                                        [   mu                     ] */
-/*                                        [         ..               ] */
-/*                                        [             ..           ] */
 /*                                        [                  mu      ] */
 /*                 where C' is conjugate transpose of complex matrix C, */
 /*                 and RWORK is stored starting in the N+1-st column of */
@@ -490,7 +462,6 @@ static logical c_false = FALSE_;
 			work[j * work_dim1 + 2] = cs * work[j * work_dim1 + 2]
 				;
 			work[j + j * work_dim1] -= work[work_dim1 + 1];
-/* L30: */
 		    }
 		    work[(work_dim1 << 1) + 2] = 0.f;
 
@@ -499,7 +470,6 @@ static logical c_false = FALSE_;
 		    for (i__ = 2; i__ <= i__2; ++i__) {
 			work[i__ + (*n + 1) * work_dim1] = sn * work[(i__ + 1)
 				 * work_dim1 + 1];
-/* L40: */
 		    }
 		    n2 = 2;
 		    nn = *n - 1 << 1;

@@ -31,15 +31,8 @@ static real c_b14 = -1.f;
     real alpha;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -122,16 +115,6 @@ static real c_b14 = -1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters */
 
     /* Parameter adjustments */
@@ -202,7 +185,6 @@ static real c_b14 = -1.f;
 	    d__[i__ + 1] = ap[i1 + i__];
 	    tau[i__] = taui;
 	    i1 -= i__;
-/* L10: */
 	}
 	d__[1] = ap[1];
     } else {
@@ -254,7 +236,6 @@ static real c_b14 = -1.f;
 	    d__[i__] = ap[ii];
 	    tau[i__] = taui;
 	    ii = i1i1;
-/* L20: */
 	}
 	d__[*n] = ap[ii];
     }

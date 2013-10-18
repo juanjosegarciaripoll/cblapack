@@ -28,15 +28,8 @@ static integer c__1 = 1;
     logical upper;
     logical nounit;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -96,18 +89,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -157,7 +138,6 @@ static integer c__1 = 1;
 		    return 0;
 		}
 		jc += *info;
-/* L10: */
 	    }
 	} else {
 	    jc = 1;
@@ -167,7 +147,6 @@ static integer c__1 = 1;
 		    return 0;
 		}
 		jc = jc + *n - *info + 1;
-/* L20: */
 	    }
 	}
     }
@@ -178,7 +157,6 @@ static integer c__1 = 1;
     i__1 = *nrhs;
     for (j = 1; j <= i__1; ++j) {
 	stpsv_(uplo, trans, diag, n, &ap[1], &b[j * b_dim1 + 1], &c__1);
-/* L30: */
     }
 
     return 0;

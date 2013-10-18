@@ -29,16 +29,9 @@ static integer c__1 = 1;
     integer i__, k, m1;
     complex alpha;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -104,24 +97,11 @@ static integer c__1 = 1;
 
 /*  The scalar tau is returned in the kth element of TAU and the vector */
 /*  u( k ) in the kth row of A, such that the elements of z( k ) are */
-/*  in  a( k, m + 1 ), ..., a( k, n ). The elements of R are returned in */
 /*  the upper triangular part of A. */
 
 /*  Z is given by */
 
-/*     Z =  Z( 1 ) * Z( 2 ) * ... * Z( m ). */
-
 /* ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -156,7 +136,6 @@ static integer c__1 = 1;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    i__2 = i__;
 	    tau[i__2].r = 0.f, tau[i__2].i = 0.f;
-/* L10: */
 	}
     } else {
 /* Computing MIN */
@@ -218,7 +197,6 @@ static integer c__1 = 1;
 		cgerc_(&i__1, &i__2, &q__1, &tau[1], &c__1, &a[k + m1 * 
 			a_dim1], lda, &a[m1 * a_dim1 + 1], lda);
 	    }
-/* L20: */
 	}
     }
 

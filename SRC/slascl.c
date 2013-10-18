@@ -31,15 +31,8 @@
     real bignum;
     real smlnum;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -101,18 +94,6 @@
 /*          <0 - if INFO = -i, the i-th argument had an illegal value. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -231,9 +212,7 @@ L10:
 	    i__2 = *m;
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		a[i__ + j * a_dim1] *= mul;
-/* L20: */
 	    }
-/* L30: */
 	}
 
     } else if (itype == 1) {
@@ -245,9 +224,7 @@ L10:
 	    i__2 = *m;
 	    for (i__ = j; i__ <= i__2; ++i__) {
 		a[i__ + j * a_dim1] *= mul;
-/* L40: */
 	    }
-/* L50: */
 	}
 
     } else if (itype == 2) {
@@ -259,9 +236,7 @@ L10:
 	    i__2 = min(j,*m);
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		a[i__ + j * a_dim1] *= mul;
-/* L60: */
 	    }
-/* L70: */
 	}
 
     } else if (itype == 3) {
@@ -275,9 +250,7 @@ L10:
 	    i__2 = min(i__3,*m);
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		a[i__ + j * a_dim1] *= mul;
-/* L80: */
 	    }
-/* L90: */
 	}
 
     } else if (itype == 4) {
@@ -293,9 +266,7 @@ L10:
 	    i__2 = min(i__3,i__4);
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		a[i__ + j * a_dim1] *= mul;
-/* L100: */
 	    }
-/* L110: */
 	}
 
     } else if (itype == 5) {
@@ -311,9 +282,7 @@ L10:
 	    i__3 = k3;
 	    for (i__ = max(i__2,1); i__ <= i__3; ++i__) {
 		a[i__ + j * a_dim1] *= mul;
-/* L120: */
 	    }
-/* L130: */
 	}
 
     } else if (itype == 6) {
@@ -333,9 +302,7 @@ L10:
 	    i__2 = min(i__4,i__5);
 	    for (i__ = max(i__3,k2); i__ <= i__2; ++i__) {
 		a[i__ + j * a_dim1] *= mul;
-/* L140: */
 	    }
-/* L150: */
 	}
 
     }

@@ -28,15 +28,8 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__, j, km, jp, ju, kv;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -111,18 +104,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     KV is the number of superdiagonals in the factor U, allowing for */
 /*     fill-in. */
 
@@ -171,9 +152,7 @@ static integer c__1 = 1;
 	for (i__ = kv - j + 2; i__ <= i__2; ++i__) {
 	    i__3 = i__ + j * ab_dim1;
 	    ab[i__3].r = 0.f, ab[i__3].i = 0.f;
-/* L10: */
 	}
-/* L20: */
     }
 
 /*     JU is the index of the last column affected by the current stage */
@@ -191,7 +170,6 @@ static integer c__1 = 1;
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		i__3 = i__ + (j + kv) * ab_dim1;
 		ab[i__3].r = 0.f, ab[i__3].i = 0.f;
-/* L30: */
 	    }
 	}
 
@@ -249,7 +227,6 @@ static integer c__1 = 1;
 		*info = j;
 	    }
 	}
-/* L40: */
     }
     return 0;
 

@@ -32,15 +32,8 @@ static integer c__1 = 1;
     logical applyleft;
     integer lastc, lastv;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -97,16 +90,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --v;
     c_dim1 = *ldc;
@@ -160,8 +143,6 @@ static integer c__1 = 1;
 	    cgemv_("Conjugate transpose", &lastv, &lastc, &c_b1, &c__[
 		    c_offset], ldc, &v[1], incv, &c_b2, &work[1], &c__1);
 
-/*           C(1:lastv,1:lastc) := C(...) - v(1:lastv,1) * w(1:lastc,1)' */
-
 	    q__1.r = -tau->r, q__1.i = -tau->i;
 	    cgerc_(&lastv, &lastc, &q__1, &v[1], incv, &work[1], &c__1, &c__[
 		    c_offset], ldc);
@@ -176,8 +157,6 @@ static integer c__1 = 1;
 
 	    cgemv_("No transpose", &lastc, &lastv, &c_b1, &c__[c_offset], ldc, 
 		     &v[1], incv, &c_b2, &work[1], &c__1);
-
-/*           C(1:lastc,1:lastv) := C(...) - w(1:lastc,1) * v(1:lastv,1)' */
 
 	    q__1.r = -tau->r, q__1.i = -tau->i;
 	    cgerc_(&lastc, &lastv, &q__1, &work[1], &c__1, &v[1], incv, &c__[

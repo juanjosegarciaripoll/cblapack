@@ -32,15 +32,8 @@ static integer c__1 = 1;
     complex alpha;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -122,18 +115,6 @@ static integer c__1 = 1;
 /*  overwriting A(i+2:n,i), and tau is stored in TAU(i). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters */
 
@@ -224,7 +205,6 @@ static integer c__1 = 1;
 	    i__1 = i__;
 	    tau[i__1].r = taui.r, tau[i__1].i = taui.i;
 	    i1 -= i__;
-/* L10: */
 	}
 	d__[1] = ap[1].r;
     } else {
@@ -293,7 +273,6 @@ static integer c__1 = 1;
 	    i__2 = i__;
 	    tau[i__2].r = taui.r, tau[i__2].i = taui.i;
 	    ii = i1i1;
-/* L20: */
 	}
 	i__1 = *n;
 	i__2 = ii;

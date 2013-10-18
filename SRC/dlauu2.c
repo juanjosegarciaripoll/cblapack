@@ -29,15 +29,8 @@ static integer c__1 = 1;
     doublereal aii;
     logical upper;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -80,18 +73,6 @@ static integer c__1 = 1;
 /*          < 0: if INFO = -k, the k-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -141,7 +122,6 @@ static integer c__1 = 1;
 	    } else {
 		dscal_(&i__, &aii, &a[i__ * a_dim1 + 1], &c__1);
 	    }
-/* L10: */
 	}
 
     } else {
@@ -163,7 +143,6 @@ static integer c__1 = 1;
 	    } else {
 		dscal_(&i__, &aii, &a[i__ + a_dim1], lda);
 	    }
-/* L20: */
 	}
     }
 

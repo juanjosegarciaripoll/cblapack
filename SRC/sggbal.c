@@ -47,15 +47,8 @@ static real c_b71 = .5f;
     real pgamma;
     integer lsfmin, lsfmax;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -77,7 +70,6 @@ static real c_b71 = .5f;
 /*  JOB     (input) CHARACTER*1 */
 /*          Specifies the operations to be performed on A and B: */
 /*          = 'N':  none:  simply set ILO = 1, IHI = N, LSCALE(I) = 1.0 */
-/*                  and RSCALE(I) = 1.0 for i = 1,...,N. */
 /*          = 'P':  permute only; */
 /*          = 'S':  scale only; */
 /*          = 'B':  both permute and scale. */
@@ -105,7 +97,6 @@ static real c_b71 = .5f;
 /*  IHI     (output) INTEGER */
 /*          ILO and IHI are set to integers such that on exit */
 /*          A(i,j) = 0 and B(i,j) = 0 if i > j and */
-/*          j = 1,...,ILO-1 or i = IHI+1,...,N. */
 /*          If JOB = 'N' or 'S', ILO = 1 and IHI = N. */
 
 /*  LSCALE  (output) REAL array, dimension (N) */
@@ -113,9 +104,6 @@ static real c_b71 = .5f;
 /*          to the left side of A and B.  If P(j) is the index of the */
 /*          row interchanged with row j, and D(j) */
 /*          is the scaling factor applied to row j, then */
-/*            LSCALE(j) = P(j)    for J = 1,...,ILO-1 */
-/*                      = D(j)    for J = ILO,...,IHI */
-/*                      = P(j)    for J = IHI+1,...,N. */
 /*          The order in which the interchanges are made is N to IHI+1, */
 /*          then 1 to ILO-1. */
 
@@ -124,9 +112,6 @@ static real c_b71 = .5f;
 /*          to the right side of A and B.  If P(j) is the index of the */
 /*          column interchanged with column j, and D(j) */
 /*          is the scaling factor applied to column j, then */
-/*            LSCALE(j) = P(j)    for J = 1,...,ILO-1 */
-/*                      = D(j)    for J = ILO,...,IHI */
-/*                      = P(j)    for J = IHI+1,...,N. */
 /*          The order in which the interchanges are made is N to IHI+1, */
 /*          then 1 to ILO-1. */
 
@@ -145,18 +130,6 @@ static real c_b71 = .5f;
 /*                 SIAM J. Sci. Stat. Comp. 2 (1981), 141-152. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters */
 
@@ -212,7 +185,6 @@ static real c_b71 = .5f;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    lscale[i__] = 1.f;
 	    rscale[i__] = 1.f;
-/* L10: */
 	}
 	return 0;
     }
@@ -248,7 +220,6 @@ L30:
 	    if (a[i__ + j * a_dim1] != 0.f || b[i__ + j * b_dim1] != 0.f) {
 		goto L50;
 	    }
-/* L40: */
 	}
 	j = l;
 	goto L70;
@@ -259,7 +230,6 @@ L50:
 	    if (a[i__ + j * a_dim1] != 0.f || b[i__ + j * b_dim1] != 0.f) {
 		goto L80;
 	    }
-/* L60: */
 	}
 	j = jp1 - 1;
 
@@ -286,7 +256,6 @@ L100:
 	    if (a[i__ + j * a_dim1] != 0.f || b[i__ + j * b_dim1] != 0.f) {
 		goto L120;
 	    }
-/* L110: */
 	}
 	i__ = l;
 	goto L140;
@@ -296,7 +265,6 @@ L120:
 	    if (a[i__ + j * a_dim1] != 0.f || b[i__ + j * b_dim1] != 0.f) {
 		goto L150;
 	    }
-/* L130: */
 	}
 	i__ = ip1 - 1;
 L140:
@@ -345,7 +313,6 @@ L190:
 	for (i__ = *ilo; i__ <= i__1; ++i__) {
 	    lscale[i__] = 1.f;
 	    rscale[i__] = 1.f;
-/* L195: */
 	}
 	return 0;
     }
@@ -368,7 +335,6 @@ L190:
 	work[i__ + *n * 3] = 0.f;
 	work[i__ + (*n << 2)] = 0.f;
 	work[i__ + *n * 5] = 0.f;
-/* L200: */
     }
 
 /*     Compute right side vector in resulting linear equations */
@@ -394,9 +360,7 @@ L210:
 L220:
 	    work[i__ + (*n << 2)] = work[i__ + (*n << 2)] - ta - tb;
 	    work[j + *n * 5] = work[j + *n * 5] - ta - tb;
-/* L230: */
 	}
-/* L240: */
     }
 
     coef = 1.f / (real) (nr << 1);
@@ -420,7 +384,6 @@ L250:
     for (i__ = *ilo; i__ <= i__1; ++i__) {
 	ew += work[i__ + (*n << 2)];
 	ewc += work[i__ + *n * 5];
-/* L260: */
     }
 
 /* Computing 2nd power */
@@ -451,7 +414,6 @@ L250:
     for (i__ = *ilo; i__ <= i__1; ++i__) {
 	work[i__] += tc;
 	work[i__ + *n] += t;
-/* L270: */
     }
 
 /*     Apply matrix to vector */
@@ -477,7 +439,6 @@ L290:
 	    ;
 	}
 	work[i__ + (*n << 1)] = (real) kount * work[i__ + *n] + sum;
-/* L300: */
     }
 
     i__1 = *ihi;
@@ -501,7 +462,6 @@ L320:
 	    ;
 	}
 	work[j + *n * 3] = (real) kount * work[j] + sum;
-/* L330: */
     }
 
     sum = sdot_(&nr, &work[*ilo + *n], &c__1, &work[*ilo + (*n << 1)], &c__1) 
@@ -523,7 +483,6 @@ L320:
 	    cmax = dabs(cor);
 	}
 	rscale[i__] += cor;
-/* L340: */
     }
     if (cmax < .5f) {
 	goto L350;
@@ -580,7 +539,6 @@ L350:
 	i__2 = max(jc,lsfmin), i__2 = min(i__2,lsfmax), i__3 = lsfmax - lcab;
 	jc = min(i__2,i__3);
 	rscale[i__] = pow_ri(&c_b35, &jc);
-/* L360: */
     }
 
 /*     Row scaling of matrices A and B */
@@ -591,7 +549,6 @@ L350:
 	sscal_(&i__2, &lscale[i__], &a[i__ + *ilo * a_dim1], lda);
 	i__2 = *n - *ilo + 1;
 	sscal_(&i__2, &lscale[i__], &b[i__ + *ilo * b_dim1], ldb);
-/* L370: */
     }
 
 /*     Column scaling of matrices A and B */
@@ -600,7 +557,6 @@ L350:
     for (j = *ilo; j <= i__1; ++j) {
 	sscal_(ihi, &rscale[j], &a[j * a_dim1 + 1], &c__1);
 	sscal_(ihi, &rscale[j], &b[j * b_dim1 + 1], &c__1);
-/* L380: */
     }
 
     return 0;

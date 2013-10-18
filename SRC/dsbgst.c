@@ -42,15 +42,8 @@ static doublereal c_b20 = -1.;
     logical upper, wantx;
     logical update;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -123,18 +116,6 @@ static doublereal c_b20 = -1.;
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters */
 
@@ -210,12 +191,7 @@ static doublereal c_b20 = -1.;
 
 /*     S is treated as a product of elementary matrices: */
 
-/*     S = S(m)*S(m-1)*...*S(2)*S(1)*S(m+1)*S(m+2)*...*S(n-1)*S(n) */
-
 /*     where S(i) is determined by the i-th row of S. */
-
-/*     In phase 1, the index i takes the values n, n-1, ... , m+1; */
-/*     in phase 2, it takes the values 1, 2, ... , m. */
 
 /*     For each value of i, the current matrix A is updated by forming */
 /*     inv(S(i))**T*A*inv(S(i)). This creates a triangular bulge outside */
@@ -301,14 +277,12 @@ L10:
 	    i__1 = i1;
 	    for (j = i__; j <= i__1; ++j) {
 		ab[i__ - j + ka1 + j * ab_dim1] /= bii;
-/* L20: */
 	    }
 /* Computing MAX */
 	    i__1 = 1, i__2 = i__ - *ka;
 	    i__3 = i__;
 	    for (j = max(i__1,i__2); j <= i__3; ++j) {
 		ab[j - i__ + ka1 + i__ * ab_dim1] /= bii;
-/* L30: */
 	    }
 	    i__3 = i__ - 1;
 	    for (k = i__ - kbt; k <= i__3; ++k) {
@@ -321,7 +295,6 @@ L10:
 			    ab_dim1] + ab[ka1 + i__ * ab_dim1] * bb[j - i__ + 
 			    kb1 + i__ * bb_dim1] * bb[k - i__ + kb1 + i__ * 
 			    bb_dim1];
-/* L40: */
 		}
 /* Computing MAX */
 		i__1 = 1, i__2 = i__ - *ka;
@@ -329,9 +302,7 @@ L10:
 		for (j = max(i__1,i__2); j <= i__4; ++j) {
 		    ab[j - k + ka1 + k * ab_dim1] -= bb[k - i__ + kb1 + i__ * 
 			    bb_dim1] * ab[j - i__ + ka1 + i__ * ab_dim1];
-/* L50: */
 		}
-/* L60: */
 	    }
 	    i__3 = i1;
 	    for (j = i__; j <= i__3; ++j) {
@@ -341,9 +312,7 @@ L10:
 		for (k = max(i__4,i__1); k <= i__2; ++k) {
 		    ab[k - j + ka1 + j * ab_dim1] -= bb[k - i__ + kb1 + i__ * 
 			    bb_dim1] * ab[i__ - j + ka1 + j * ab_dim1];
-/* L70: */
 		}
-/* L80: */
 	    }
 
 	    if (wantx) {
@@ -421,7 +390,6 @@ L10:
 		work[j - m] *= ab[(j + 1) * ab_dim1 + 1];
 		ab[(j + 1) * ab_dim1 + 1] = work[*n + j - m] * ab[(j + 1) * 
 			ab_dim1 + 1];
-/* L90: */
 	    }
 
 /*           generate rotations in 1st set to annihilate elements which */
@@ -440,7 +408,6 @@ L10:
 		    dlartv_(&nr, &ab[ka1 - l + j2 * ab_dim1], &inca, &ab[*ka 
 			    - l + (j2 + 1) * ab_dim1], &inca, &work[*n + j2 - 
 			    m], &work[j2 - m], &ka1);
-/* L100: */
 		}
 
 /*              apply rotations in 1st set from both sides to diagonal */
@@ -462,7 +429,6 @@ L10:
 			    ab[l + 1 + (j2 + ka1 - l) * ab_dim1], &inca, &
 			    work[*n + j2 - m], &work[j2 - m], &ka1);
 		}
-/* L110: */
 	    }
 
 	    if (wantx) {
@@ -476,10 +442,8 @@ L10:
 		    drot_(&i__1, &x[m + 1 + j * x_dim1], &c__1, &x[m + 1 + (j 
 			    + 1) * x_dim1], &c__1, &work[*n + j - m], &work[j 
 			    - m]);
-/* L120: */
 		}
 	    }
-/* L130: */
 	}
 
 	if (update) {
@@ -512,7 +476,6 @@ L10:
 			    l + 1 + (j2 - l + 1) * ab_dim1], &inca, &work[*n 
 			    + j2 - *ka], &work[j2 - *ka], &ka1);
 		}
-/* L140: */
 	    }
 	    nr = (*n - j2 + *ka) / ka1;
 	    j1 = j2 + (nr - 1) * ka1;
@@ -521,7 +484,6 @@ L10:
 	    for (j = j1; i__2 < 0 ? j >= i__3 : j <= i__3; j += i__2) {
 		work[j] = work[j - *ka];
 		work[*n + j] = work[*n + j - *ka];
-/* L150: */
 	    }
 	    i__2 = j1;
 	    i__3 = ka1;
@@ -533,14 +495,12 @@ L10:
 		work[j] *= ab[(j + 1) * ab_dim1 + 1];
 		ab[(j + 1) * ab_dim1 + 1] = work[*n + j] * ab[(j + 1) * 
 			ab_dim1 + 1];
-/* L160: */
 	    }
 	    if (update) {
 		if (i__ - k < *n - *ka && k <= kbt) {
 		    work[i__ - k + *ka] = work[i__ - k];
 		}
 	    }
-/* L170: */
 	}
 
 	for (k = *kb; k >= 1; --k) {
@@ -564,7 +524,6 @@ L10:
 		    dlartv_(&nr, &ab[ka1 - l + j2 * ab_dim1], &inca, &ab[*ka 
 			    - l + (j2 + 1) * ab_dim1], &inca, &work[*n + j2], 
 			    &work[j2], &ka1);
-/* L180: */
 		}
 
 /*              apply rotations in 2nd set from both sides to diagonal */
@@ -586,7 +545,6 @@ L10:
 			    ab[l + 1 + (j2 + ka1 - l) * ab_dim1], &inca, &
 			    work[*n + j2], &work[j2], &ka1);
 		}
-/* L190: */
 	    }
 
 	    if (wantx) {
@@ -599,10 +557,8 @@ L10:
 		    i__4 = *n - m;
 		    drot_(&i__4, &x[m + 1 + j * x_dim1], &c__1, &x[m + 1 + (j 
 			    + 1) * x_dim1], &c__1, &work[*n + j], &work[j]);
-/* L200: */
 		}
 	    }
-/* L210: */
 	}
 
 	i__2 = *kb - 1;
@@ -620,9 +576,7 @@ L10:
 			    ab[l + 1 + (j2 + ka1 - l) * ab_dim1], &inca, &
 			    work[*n + j2 - m], &work[j2 - m], &ka1);
 		}
-/* L220: */
 	    }
-/* L230: */
 	}
 
 	if (*kb > 1) {
@@ -630,7 +584,6 @@ L10:
 	    for (j = *n - 1; j >= i__2; --j) {
 		work[*n + j - m] = work[*n + j - *ka - m];
 		work[j - m] = work[j - *ka - m];
-/* L240: */
 	    }
 	}
 
@@ -646,14 +599,12 @@ L10:
 	    i__2 = i1;
 	    for (j = i__; j <= i__2; ++j) {
 		ab[j - i__ + 1 + i__ * ab_dim1] /= bii;
-/* L250: */
 	    }
 /* Computing MAX */
 	    i__2 = 1, i__3 = i__ - *ka;
 	    i__4 = i__;
 	    for (j = max(i__2,i__3); j <= i__4; ++j) {
 		ab[i__ - j + 1 + j * ab_dim1] /= bii;
-/* L260: */
 	    }
 	    i__4 = i__ - 1;
 	    for (k = i__ - kbt; k <= i__4; ++k) {
@@ -665,7 +616,6 @@ L10:
 			    ab[i__ - j + 1 + j * ab_dim1] + ab[i__ * ab_dim1 
 			    + 1] * bb[i__ - j + 1 + j * bb_dim1] * bb[i__ - k 
 			    + 1 + k * bb_dim1];
-/* L270: */
 		}
 /* Computing MAX */
 		i__2 = 1, i__3 = i__ - *ka;
@@ -673,9 +623,7 @@ L10:
 		for (j = max(i__2,i__3); j <= i__1; ++j) {
 		    ab[k - j + 1 + j * ab_dim1] -= bb[i__ - k + 1 + k * 
 			    bb_dim1] * ab[i__ - j + 1 + j * ab_dim1];
-/* L280: */
 		}
-/* L290: */
 	    }
 	    i__4 = i1;
 	    for (j = i__; j <= i__4; ++j) {
@@ -685,9 +633,7 @@ L10:
 		for (k = max(i__1,i__2); k <= i__3; ++k) {
 		    ab[j - k + 1 + k * ab_dim1] -= bb[i__ - k + 1 + k * 
 			    bb_dim1] * ab[j - i__ + 1 + i__ * ab_dim1];
-/* L300: */
 		}
-/* L310: */
 	    }
 
 	    if (wantx) {
@@ -766,7 +712,6 @@ L10:
 		work[j - m] *= ab[ka1 + (j - *ka + 1) * ab_dim1];
 		ab[ka1 + (j - *ka + 1) * ab_dim1] = work[*n + j - m] * ab[ka1 
 			+ (j - *ka + 1) * ab_dim1];
-/* L320: */
 	    }
 
 /*           generate rotations in 1st set to annihilate elements which */
@@ -785,7 +730,6 @@ L10:
 		    dlartv_(&nr, &ab[l + 1 + (j2 - l) * ab_dim1], &inca, &ab[
 			    l + 2 + (j2 - l) * ab_dim1], &inca, &work[*n + j2 
 			    - m], &work[j2 - m], &ka1);
-/* L330: */
 		}
 
 /*              apply rotations in 1st set from both sides to diagonal */
@@ -807,7 +751,6 @@ L10:
 			    ka1 - l + (j2 + 1) * ab_dim1], &inca, &work[*n + 
 			    j2 - m], &work[j2 - m], &ka1);
 		}
-/* L340: */
 	    }
 
 	    if (wantx) {
@@ -821,10 +764,8 @@ L10:
 		    drot_(&i__2, &x[m + 1 + j * x_dim1], &c__1, &x[m + 1 + (j 
 			    + 1) * x_dim1], &c__1, &work[*n + j - m], &work[j 
 			    - m]);
-/* L350: */
 		}
 	    }
-/* L360: */
 	}
 
 	if (update) {
@@ -858,7 +799,6 @@ L10:
 			    inca, &work[*n + j2 - *ka], &work[j2 - *ka], &ka1)
 			    ;
 		}
-/* L370: */
 	    }
 	    nr = (*n - j2 + *ka) / ka1;
 	    j1 = j2 + (nr - 1) * ka1;
@@ -867,7 +807,6 @@ L10:
 	    for (j = j1; i__3 < 0 ? j >= i__4 : j <= i__4; j += i__3) {
 		work[j] = work[j - *ka];
 		work[*n + j] = work[*n + j - *ka];
-/* L380: */
 	    }
 	    i__3 = j1;
 	    i__4 = ka1;
@@ -879,14 +818,12 @@ L10:
 		work[j] *= ab[ka1 + (j - *ka + 1) * ab_dim1];
 		ab[ka1 + (j - *ka + 1) * ab_dim1] = work[*n + j] * ab[ka1 + (
 			j - *ka + 1) * ab_dim1];
-/* L390: */
 	    }
 	    if (update) {
 		if (i__ - k < *n - *ka && k <= kbt) {
 		    work[i__ - k + *ka] = work[i__ - k];
 		}
 	    }
-/* L400: */
 	}
 
 	for (k = *kb; k >= 1; --k) {
@@ -910,7 +847,6 @@ L10:
 		    dlartv_(&nr, &ab[l + 1 + (j2 - l) * ab_dim1], &inca, &ab[
 			    l + 2 + (j2 - l) * ab_dim1], &inca, &work[*n + j2]
 , &work[j2], &ka1);
-/* L410: */
 		}
 
 /*              apply rotations in 2nd set from both sides to diagonal */
@@ -932,7 +868,6 @@ L10:
 			    ka1 - l + (j2 + 1) * ab_dim1], &inca, &work[*n + 
 			    j2], &work[j2], &ka1);
 		}
-/* L420: */
 	    }
 
 	    if (wantx) {
@@ -945,10 +880,8 @@ L10:
 		    i__1 = *n - m;
 		    drot_(&i__1, &x[m + 1 + j * x_dim1], &c__1, &x[m + 1 + (j 
 			    + 1) * x_dim1], &c__1, &work[*n + j], &work[j]);
-/* L430: */
 		}
 	    }
-/* L440: */
 	}
 
 	i__3 = *kb - 1;
@@ -966,9 +899,7 @@ L10:
 			    ka1 - l + (j2 + 1) * ab_dim1], &inca, &work[*n + 
 			    j2 - m], &work[j2 - m], &ka1);
 		}
-/* L450: */
 	    }
-/* L460: */
 	}
 
 	if (*kb > 1) {
@@ -976,7 +907,6 @@ L10:
 	    for (j = *n - 1; j >= i__3; --j) {
 		work[*n + j - m] = work[*n + j - *ka - m];
 		work[j - m] = work[j - *ka - m];
-/* L470: */
 	    }
 	}
 
@@ -1049,14 +979,12 @@ L490:
 	    i__3 = i__;
 	    for (j = i1; j <= i__3; ++j) {
 		ab[j - i__ + ka1 + i__ * ab_dim1] /= bii;
-/* L500: */
 	    }
 /* Computing MIN */
 	    i__4 = *n, i__1 = i__ + *ka;
 	    i__3 = min(i__4,i__1);
 	    for (j = i__; j <= i__3; ++j) {
 		ab[i__ - j + ka1 + j * ab_dim1] /= bii;
-/* L510: */
 	    }
 	    i__3 = i__ + kbt;
 	    for (k = i__ + 1; k <= i__3; ++k) {
@@ -1068,7 +996,6 @@ L490:
 			    k * bb_dim1] * ab[i__ - j + ka1 + j * ab_dim1] + 
 			    ab[ka1 + i__ * ab_dim1] * bb[i__ - j + kb1 + j * 
 			    bb_dim1] * bb[i__ - k + kb1 + k * bb_dim1];
-/* L520: */
 		}
 /* Computing MIN */
 		i__1 = *n, i__2 = i__ + *ka;
@@ -1076,9 +1003,7 @@ L490:
 		for (j = i__ + kbt + 1; j <= i__4; ++j) {
 		    ab[k - j + ka1 + j * ab_dim1] -= bb[i__ - k + kb1 + k * 
 			    bb_dim1] * ab[i__ - j + ka1 + j * ab_dim1];
-/* L530: */
 		}
-/* L540: */
 	    }
 	    i__3 = i__;
 	    for (j = i1; j <= i__3; ++j) {
@@ -1088,9 +1013,7 @@ L490:
 		for (k = i__ + 1; k <= i__4; ++k) {
 		    ab[j - k + ka1 + k * ab_dim1] -= bb[i__ - k + kb1 + k * 
 			    bb_dim1] * ab[j - i__ + ka1 + i__ * ab_dim1];
-/* L550: */
 		}
-/* L560: */
 	    }
 
 	    if (wantx) {
@@ -1164,7 +1087,6 @@ L490:
 		work[j] *= ab[(j + *ka - 1) * ab_dim1 + 1];
 		ab[(j + *ka - 1) * ab_dim1 + 1] = work[*n + j] * ab[(j + *ka 
 			- 1) * ab_dim1 + 1];
-/* L570: */
 	    }
 
 /*           generate rotations in 1st set to annihilate elements which */
@@ -1183,7 +1105,6 @@ L490:
 		    dlartv_(&nr, &ab[ka1 - l + (j1 + l) * ab_dim1], &inca, &
 			    ab[*ka - l + (j1 + l) * ab_dim1], &inca, &work[*n 
 			    + j1], &work[j1], &ka1);
-/* L580: */
 		}
 
 /*              apply rotations in 1st set from both sides to diagonal */
@@ -1206,7 +1127,6 @@ L490:
 			    j1t - 1) * ab_dim1], &inca, &work[*n + j1t], &
 			    work[j1t], &ka1);
 		}
-/* L590: */
 	    }
 
 	    if (wantx) {
@@ -1218,10 +1138,8 @@ L490:
 		for (j = j1; i__4 < 0 ? j >= i__1 : j <= i__1; j += i__4) {
 		    drot_(&nx, &x[j * x_dim1 + 1], &c__1, &x[(j - 1) * x_dim1 
 			    + 1], &c__1, &work[*n + j], &work[j]);
-/* L600: */
 		}
 	    }
-/* L610: */
 	}
 
 	if (update) {
@@ -1257,7 +1175,6 @@ L490:
 			    n + m - *kb + j1t + *ka], &work[m - *kb + j1t + *
 			    ka], &ka1);
 		}
-/* L620: */
 	    }
 	    nr = (j2 + *ka - 1) / ka1;
 	    j1 = j2 - (nr - 1) * ka1;
@@ -1266,7 +1183,6 @@ L490:
 	    for (j = j1; i__4 < 0 ? j >= i__3 : j <= i__3; j += i__4) {
 		work[m - *kb + j] = work[m - *kb + j + *ka];
 		work[*n + m - *kb + j] = work[*n + m - *kb + j + *ka];
-/* L630: */
 	    }
 	    i__4 = j2;
 	    i__3 = ka1;
@@ -1278,14 +1194,12 @@ L490:
 		work[m - *kb + j] *= ab[(j + *ka - 1) * ab_dim1 + 1];
 		ab[(j + *ka - 1) * ab_dim1 + 1] = work[*n + m - *kb + j] * ab[
 			(j + *ka - 1) * ab_dim1 + 1];
-/* L640: */
 	    }
 	    if (update) {
 		if (i__ + k > ka1 && k <= kbt) {
 		    work[m - *kb + i__ + k - *ka] = work[m - *kb + i__ + k];
 		}
 	    }
-/* L650: */
 	}
 
 	for (k = *kb; k >= 1; --k) {
@@ -1309,7 +1223,6 @@ L490:
 		    dlartv_(&nr, &ab[ka1 - l + (j1 + l) * ab_dim1], &inca, &
 			    ab[*ka - l + (j1 + l) * ab_dim1], &inca, &work[*n 
 			    + m - *kb + j1], &work[m - *kb + j1], &ka1);
-/* L660: */
 		}
 
 /*              apply rotations in 2nd set from both sides to diagonal */
@@ -1332,7 +1245,6 @@ L490:
 			    j1t - 1) * ab_dim1], &inca, &work[*n + m - *kb + 
 			    j1t], &work[m - *kb + j1t], &ka1);
 		}
-/* L670: */
 	    }
 
 	    if (wantx) {
@@ -1345,10 +1257,8 @@ L490:
 		    drot_(&nx, &x[j * x_dim1 + 1], &c__1, &x[(j - 1) * x_dim1 
 			    + 1], &c__1, &work[*n + m - *kb + j], &work[m - *
 			    kb + j]);
-/* L680: */
 		}
 	    }
-/* L690: */
 	}
 
 	i__4 = *kb - 1;
@@ -1367,9 +1277,7 @@ L490:
 			    j1t - 1) * ab_dim1], &inca, &work[*n + j1t], &
 			    work[j1t], &ka1);
 		}
-/* L700: */
 	    }
-/* L710: */
 	}
 
 	if (*kb > 1) {
@@ -1379,7 +1287,6 @@ L490:
 	    for (j = 2; j <= i__4; ++j) {
 		work[*n + j] = work[*n + j + *ka];
 		work[j] = work[j + *ka];
-/* L720: */
 	    }
 	}
 
@@ -1395,14 +1302,12 @@ L490:
 	    i__4 = i__;
 	    for (j = i1; j <= i__4; ++j) {
 		ab[i__ - j + 1 + j * ab_dim1] /= bii;
-/* L730: */
 	    }
 /* Computing MIN */
 	    i__3 = *n, i__1 = i__ + *ka;
 	    i__4 = min(i__3,i__1);
 	    for (j = i__; j <= i__4; ++j) {
 		ab[j - i__ + 1 + i__ * ab_dim1] /= bii;
-/* L740: */
 	    }
 	    i__4 = i__ + kbt;
 	    for (k = i__ + 1; k <= i__4; ++k) {
@@ -1414,7 +1319,6 @@ L490:
 			    bb_dim1] * ab[j - i__ + 1 + i__ * ab_dim1] + ab[
 			    i__ * ab_dim1 + 1] * bb[j - i__ + 1 + i__ * 
 			    bb_dim1] * bb[k - i__ + 1 + i__ * bb_dim1];
-/* L750: */
 		}
 /* Computing MIN */
 		i__1 = *n, i__2 = i__ + *ka;
@@ -1422,9 +1326,7 @@ L490:
 		for (j = i__ + kbt + 1; j <= i__3; ++j) {
 		    ab[j - k + 1 + k * ab_dim1] -= bb[k - i__ + 1 + i__ * 
 			    bb_dim1] * ab[j - i__ + 1 + i__ * ab_dim1];
-/* L760: */
 		}
-/* L770: */
 	    }
 	    i__4 = i__;
 	    for (j = i1; j <= i__4; ++j) {
@@ -1434,9 +1336,7 @@ L490:
 		for (k = i__ + 1; k <= i__3; ++k) {
 		    ab[k - j + 1 + j * ab_dim1] -= bb[k - i__ + 1 + i__ * 
 			    bb_dim1] * ab[i__ - j + 1 + j * ab_dim1];
-/* L780: */
 		}
-/* L790: */
 	    }
 
 	    if (wantx) {
@@ -1511,7 +1411,6 @@ L490:
 		work[j] *= ab[ka1 + (j - 1) * ab_dim1];
 		ab[ka1 + (j - 1) * ab_dim1] = work[*n + j] * ab[ka1 + (j - 1) 
 			* ab_dim1];
-/* L800: */
 	    }
 
 /*           generate rotations in 1st set to annihilate elements which */
@@ -1530,7 +1429,6 @@ L490:
 		    dlartv_(&nr, &ab[l + 1 + j1 * ab_dim1], &inca, &ab[l + 2 
 			    + (j1 - 1) * ab_dim1], &inca, &work[*n + j1], &
 			    work[j1], &ka1);
-/* L810: */
 		}
 
 /*              apply rotations in 1st set from both sides to diagonal */
@@ -1553,7 +1451,6 @@ L490:
 , &inca, &ab[ka1 - l + (j1t - ka1 + l) * ab_dim1], 
 			     &inca, &work[*n + j1t], &work[j1t], &ka1);
 		}
-/* L820: */
 	    }
 
 	    if (wantx) {
@@ -1565,10 +1462,8 @@ L490:
 		for (j = j1; i__3 < 0 ? j >= i__1 : j <= i__1; j += i__3) {
 		    drot_(&nx, &x[j * x_dim1 + 1], &c__1, &x[(j - 1) * x_dim1 
 			    + 1], &c__1, &work[*n + j], &work[j]);
-/* L830: */
 		}
 	    }
-/* L840: */
 	}
 
 	if (update) {
@@ -1604,7 +1499,6 @@ L490:
 			    inca, &work[*n + m - *kb + j1t + *ka], &work[m - *
 			    kb + j1t + *ka], &ka1);
 		}
-/* L850: */
 	    }
 	    nr = (j2 + *ka - 1) / ka1;
 	    j1 = j2 - (nr - 1) * ka1;
@@ -1613,7 +1507,6 @@ L490:
 	    for (j = j1; i__3 < 0 ? j >= i__4 : j <= i__4; j += i__3) {
 		work[m - *kb + j] = work[m - *kb + j + *ka];
 		work[*n + m - *kb + j] = work[*n + m - *kb + j + *ka];
-/* L860: */
 	    }
 	    i__3 = j2;
 	    i__4 = ka1;
@@ -1625,14 +1518,12 @@ L490:
 		work[m - *kb + j] *= ab[ka1 + (j - 1) * ab_dim1];
 		ab[ka1 + (j - 1) * ab_dim1] = work[*n + m - *kb + j] * ab[ka1 
 			+ (j - 1) * ab_dim1];
-/* L870: */
 	    }
 	    if (update) {
 		if (i__ + k > ka1 && k <= kbt) {
 		    work[m - *kb + i__ + k - *ka] = work[m - *kb + i__ + k];
 		}
 	    }
-/* L880: */
 	}
 
 	for (k = *kb; k >= 1; --k) {
@@ -1656,7 +1547,6 @@ L490:
 		    dlartv_(&nr, &ab[l + 1 + j1 * ab_dim1], &inca, &ab[l + 2 
 			    + (j1 - 1) * ab_dim1], &inca, &work[*n + m - *kb 
 			    + j1], &work[m - *kb + j1], &ka1);
-/* L890: */
 		}
 
 /*              apply rotations in 2nd set from both sides to diagonal */
@@ -1680,7 +1570,6 @@ L490:
 			     &inca, &work[*n + m - *kb + j1t], &work[m - *kb 
 			    + j1t], &ka1);
 		}
-/* L900: */
 	    }
 
 	    if (wantx) {
@@ -1693,10 +1582,8 @@ L490:
 		    drot_(&nx, &x[j * x_dim1 + 1], &c__1, &x[(j - 1) * x_dim1 
 			    + 1], &c__1, &work[*n + m - *kb + j], &work[m - *
 			    kb + j]);
-/* L910: */
 		}
 	    }
-/* L920: */
 	}
 
 	i__3 = *kb - 1;
@@ -1715,9 +1602,7 @@ L490:
 , &inca, &ab[ka1 - l + (j1t - ka1 + l) * ab_dim1], 
 			     &inca, &work[*n + j1t], &work[j1t], &ka1);
 		}
-/* L930: */
 	    }
-/* L940: */
 	}
 
 	if (*kb > 1) {
@@ -1727,7 +1612,6 @@ L490:
 	    for (j = 2; j <= i__3; ++j) {
 		work[*n + j] = work[*n + j + *ka];
 		work[j] = work[j + *ka];
-/* L950: */
 	    }
 	}
 

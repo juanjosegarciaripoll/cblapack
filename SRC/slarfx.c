@@ -28,15 +28,8 @@ static integer c__1 = 1;
     real t1, t2, t3, t4, t5, t6, t7, t8, t9, v1, v2, v3, v4, v5, v6, v7, v8, 
 	    v9, t10, v10, sum;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -88,16 +81,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --v;
     c_dim1 = *ldc;
@@ -138,7 +121,6 @@ L10:
 	i__1 = *n;
 	for (j = 1; j <= i__1; ++j) {
 	    c__[j * c_dim1 + 1] = t1 * c__[j * c_dim1 + 1];
-/* L20: */
 	}
 	goto L410;
 L30:
@@ -154,7 +136,6 @@ L30:
 	    sum = v1 * c__[j * c_dim1 + 1] + v2 * c__[j * c_dim1 + 2];
 	    c__[j * c_dim1 + 1] -= sum * t1;
 	    c__[j * c_dim1 + 2] -= sum * t2;
-/* L40: */
 	}
 	goto L410;
 L50:
@@ -174,7 +155,6 @@ L50:
 	    c__[j * c_dim1 + 1] -= sum * t1;
 	    c__[j * c_dim1 + 2] -= sum * t2;
 	    c__[j * c_dim1 + 3] -= sum * t3;
-/* L60: */
 	}
 	goto L410;
 L70:
@@ -197,7 +177,6 @@ L70:
 	    c__[j * c_dim1 + 2] -= sum * t2;
 	    c__[j * c_dim1 + 3] -= sum * t3;
 	    c__[j * c_dim1 + 4] -= sum * t4;
-/* L80: */
 	}
 	goto L410;
 L90:
@@ -224,7 +203,6 @@ L90:
 	    c__[j * c_dim1 + 3] -= sum * t3;
 	    c__[j * c_dim1 + 4] -= sum * t4;
 	    c__[j * c_dim1 + 5] -= sum * t5;
-/* L100: */
 	}
 	goto L410;
 L110:
@@ -254,7 +232,6 @@ L110:
 	    c__[j * c_dim1 + 4] -= sum * t4;
 	    c__[j * c_dim1 + 5] -= sum * t5;
 	    c__[j * c_dim1 + 6] -= sum * t6;
-/* L120: */
 	}
 	goto L410;
 L130:
@@ -288,7 +265,6 @@ L130:
 	    c__[j * c_dim1 + 5] -= sum * t5;
 	    c__[j * c_dim1 + 6] -= sum * t6;
 	    c__[j * c_dim1 + 7] -= sum * t7;
-/* L140: */
 	}
 	goto L410;
 L150:
@@ -325,7 +301,6 @@ L150:
 	    c__[j * c_dim1 + 6] -= sum * t6;
 	    c__[j * c_dim1 + 7] -= sum * t7;
 	    c__[j * c_dim1 + 8] -= sum * t8;
-/* L160: */
 	}
 	goto L410;
 L170:
@@ -366,7 +341,6 @@ L170:
 	    c__[j * c_dim1 + 7] -= sum * t7;
 	    c__[j * c_dim1 + 8] -= sum * t8;
 	    c__[j * c_dim1 + 9] -= sum * t9;
-/* L180: */
 	}
 	goto L410;
 L190:
@@ -410,7 +384,6 @@ L190:
 	    c__[j * c_dim1 + 8] -= sum * t8;
 	    c__[j * c_dim1 + 9] -= sum * t9;
 	    c__[j * c_dim1 + 10] -= sum * t10;
-/* L200: */
 	}
 	goto L410;
     } else {
@@ -442,7 +415,6 @@ L210:
 	i__1 = *m;
 	for (j = 1; j <= i__1; ++j) {
 	    c__[j + c_dim1] = t1 * c__[j + c_dim1];
-/* L220: */
 	}
 	goto L410;
 L230:
@@ -458,7 +430,6 @@ L230:
 	    sum = v1 * c__[j + c_dim1] + v2 * c__[j + (c_dim1 << 1)];
 	    c__[j + c_dim1] -= sum * t1;
 	    c__[j + (c_dim1 << 1)] -= sum * t2;
-/* L240: */
 	}
 	goto L410;
 L250:
@@ -478,7 +449,6 @@ L250:
 	    c__[j + c_dim1] -= sum * t1;
 	    c__[j + (c_dim1 << 1)] -= sum * t2;
 	    c__[j + c_dim1 * 3] -= sum * t3;
-/* L260: */
 	}
 	goto L410;
 L270:
@@ -501,7 +471,6 @@ L270:
 	    c__[j + (c_dim1 << 1)] -= sum * t2;
 	    c__[j + c_dim1 * 3] -= sum * t3;
 	    c__[j + (c_dim1 << 2)] -= sum * t4;
-/* L280: */
 	}
 	goto L410;
 L290:
@@ -528,7 +497,6 @@ L290:
 	    c__[j + c_dim1 * 3] -= sum * t3;
 	    c__[j + (c_dim1 << 2)] -= sum * t4;
 	    c__[j + c_dim1 * 5] -= sum * t5;
-/* L300: */
 	}
 	goto L410;
 L310:
@@ -558,7 +526,6 @@ L310:
 	    c__[j + (c_dim1 << 2)] -= sum * t4;
 	    c__[j + c_dim1 * 5] -= sum * t5;
 	    c__[j + c_dim1 * 6] -= sum * t6;
-/* L320: */
 	}
 	goto L410;
 L330:
@@ -592,7 +559,6 @@ L330:
 	    c__[j + c_dim1 * 5] -= sum * t5;
 	    c__[j + c_dim1 * 6] -= sum * t6;
 	    c__[j + c_dim1 * 7] -= sum * t7;
-/* L340: */
 	}
 	goto L410;
 L350:
@@ -629,7 +595,6 @@ L350:
 	    c__[j + c_dim1 * 6] -= sum * t6;
 	    c__[j + c_dim1 * 7] -= sum * t7;
 	    c__[j + (c_dim1 << 3)] -= sum * t8;
-/* L360: */
 	}
 	goto L410;
 L370:
@@ -670,7 +635,6 @@ L370:
 	    c__[j + c_dim1 * 7] -= sum * t7;
 	    c__[j + (c_dim1 << 3)] -= sum * t8;
 	    c__[j + c_dim1 * 9] -= sum * t9;
-/* L380: */
 	}
 	goto L410;
 L390:
@@ -714,7 +678,6 @@ L390:
 	    c__[j + (c_dim1 << 3)] -= sum * t8;
 	    c__[j + c_dim1 * 9] -= sum * t9;
 	    c__[j + c_dim1 * 10] -= sum * t10;
-/* L400: */
 	}
 	goto L410;
     }

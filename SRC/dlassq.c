@@ -24,22 +24,13 @@
     integer ix;
     doublereal absxi;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
 
 /*  DLASSQ  returns the values  scl  and  smsq  such that */
-
-/*     ( scl**2 )*smsq = x( 1 )**2 +...+ x( n )**2 + ( scale**2 )*sumsq, */
 
 /*  where  x( i ) = X( 1 + ( i - 1 )*INCX ). The value of  sumsq  is */
 /*  assumed to be non-negative and  scl  returns the value */
@@ -77,14 +68,6 @@
 
 /* ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --x;
 
@@ -106,7 +89,6 @@
 		    *sumsq += d__1 * d__1;
 		}
 	    }
-/* L10: */
 	}
     }
     return 0;

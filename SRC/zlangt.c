@@ -29,15 +29,8 @@ doublereal zlangt_(char *norm, integer *n, doublecomplex *dl, doublecomplex *
     doublereal sum, scale;
     doublereal anorm;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -86,18 +79,6 @@ doublereal zlangt_(char *norm, integer *n, doublecomplex *dl, doublecomplex *
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --du;
     --d__;
@@ -122,7 +103,6 @@ doublereal zlangt_(char *norm, integer *n, doublecomplex *dl, doublecomplex *
 /* Computing MAX */
 	    d__1 = anorm, d__2 = z_abs(&du[i__]);
 	    anorm = max(d__1,d__2);
-/* L10: */
 	}
     } else if (lsame_(norm, "O") || *(unsigned char *)
 	    norm == '1') {
@@ -142,7 +122,6 @@ doublereal zlangt_(char *norm, integer *n, doublecomplex *dl, doublecomplex *
 		d__1 = anorm, d__2 = z_abs(&d__[i__]) + z_abs(&dl[i__]) + 
 			z_abs(&du[i__ - 1]);
 		anorm = max(d__1,d__2);
-/* L20: */
 	    }
 	}
     } else if (lsame_(norm, "I")) {
@@ -162,7 +141,6 @@ doublereal zlangt_(char *norm, integer *n, doublecomplex *dl, doublecomplex *
 		d__1 = anorm, d__2 = z_abs(&d__[i__]) + z_abs(&du[i__]) + 
 			z_abs(&dl[i__ - 1]);
 		anorm = max(d__1,d__2);
-/* L30: */
 	    }
 	}
     } else if (lsame_(norm, "F") || lsame_(norm, "E")) {

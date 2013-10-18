@@ -27,15 +27,8 @@
     logical matt;
     doublereal lpivot, rpivot;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -91,14 +84,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --e;
     --d__;
@@ -132,7 +117,6 @@
 	    if (rpivot <= 0.) {
 		++(*rcnt);
 	    }
-/* L10: */
 	}
     } else {
 /*        Sturm sequence count on L D L^T */
@@ -163,7 +147,6 @@
 	    } else {
 		su = su * tmp2 - *vu;
 	    }
-/* L20: */
 	}
 	lpivot = d__[*n] + sl;
 	rpivot = d__[*n] + su;

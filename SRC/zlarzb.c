@@ -32,15 +32,8 @@ static integer c__1 = 1;
     integer i__, j, info;
     char transt[1];
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -124,16 +117,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -184,10 +167,8 @@ static integer c__1 = 1;
 	i__1 = *k;
 	for (j = 1; j <= i__1; ++j) {
 	    zcopy_(n, &c__[j + c_dim1], ldc, &work[j * work_dim1 + 1], &c__1);
-/* L10: */
 	}
 
-/*        W( 1:n, 1:k ) = W( 1:n, 1:k ) + ... */
 /*                        conjg( C( m-l+1:m, 1:n )' ) * V( 1:k, 1:l )' */
 
 	if (*l > 0) {
@@ -213,12 +194,9 @@ static integer c__1 = 1;
 		z__1.r = c__[i__4].r - work[i__5].r, z__1.i = c__[i__4].i - 
 			work[i__5].i;
 		c__[i__3].r = z__1.r, c__[i__3].i = z__1.i;
-/* L20: */
 	    }
-/* L30: */
 	}
 
-/*        C( m-l+1:m, 1:n ) = C( m-l+1:m, 1:n ) - ... */
 /*                    conjg( V( 1:k, 1:l )' ) * conjg( W( 1:n, 1:k )' ) */
 
 	if (*l > 0) {
@@ -238,10 +216,8 @@ static integer c__1 = 1;
 	for (j = 1; j <= i__1; ++j) {
 	    zcopy_(m, &c__[j * c_dim1 + 1], &c__1, &work[j * work_dim1 + 1], &
 		    c__1);
-/* L40: */
 	}
 
-/*        W( 1:m, 1:k ) = W( 1:m, 1:k ) + ... */
 /*                        C( 1:m, n-l+1:n ) * conjg( V( 1:k, 1:l )' ) */
 
 	if (*l > 0) {
@@ -257,7 +233,6 @@ static integer c__1 = 1;
 	for (j = 1; j <= i__1; ++j) {
 	    i__2 = *k - j + 1;
 	    zlacgv_(&i__2, &t[j + j * t_dim1], &c__1);
-/* L50: */
 	}
 	ztrmm_("Right", "Lower", trans, "Non-unit", m, k, &c_b1, &t[t_offset], 
 		 ldt, &work[work_offset], ldwork);
@@ -265,7 +240,6 @@ static integer c__1 = 1;
 	for (j = 1; j <= i__1; ++j) {
 	    i__2 = *k - j + 1;
 	    zlacgv_(&i__2, &t[j + j * t_dim1], &c__1);
-/* L60: */
 	}
 
 /*        C( 1:m, 1:k ) = C( 1:m, 1:k ) - W( 1:m, 1:k ) */
@@ -280,18 +254,14 @@ static integer c__1 = 1;
 		z__1.r = c__[i__4].r - work[i__5].r, z__1.i = c__[i__4].i - 
 			work[i__5].i;
 		c__[i__3].r = z__1.r, c__[i__3].i = z__1.i;
-/* L70: */
 	    }
-/* L80: */
 	}
 
-/*        C( 1:m, n-l+1:n ) = C( 1:m, n-l+1:n ) - ... */
 /*                            W( 1:m, 1:k ) * conjg( V( 1:k, 1:l ) ) */
 
 	i__1 = *l;
 	for (j = 1; j <= i__1; ++j) {
 	    zlacgv_(k, &v[j * v_dim1 + 1], &c__1);
-/* L90: */
 	}
 	if (*l > 0) {
 	    z__1.r = -1., z__1.i = -0.;
@@ -302,7 +272,6 @@ static integer c__1 = 1;
 	i__1 = *l;
 	for (j = 1; j <= i__1; ++j) {
 	    zlacgv_(k, &v[j * v_dim1 + 1], &c__1);
-/* L100: */
 	}
 
     }

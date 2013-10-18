@@ -29,15 +29,8 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__, j, info;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -147,16 +140,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Check for currently supported options */
 
     /* Parameter adjustments */
@@ -189,7 +172,6 @@ static integer c__1 = 1;
 	    i__1 = *k;
 	    for (j = i__; j <= i__1; ++j) {
 		t[j + i__ * t_dim1] = 0.;
-/* L10: */
 	    }
 	} else {
 
@@ -214,7 +196,6 @@ static integer c__1 = 1;
 	    }
 	    t[i__ + i__ * t_dim1] = tau[i__];
 	}
-/* L20: */
     }
     return 0;
 

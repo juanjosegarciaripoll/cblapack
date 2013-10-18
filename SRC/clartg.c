@@ -33,13 +33,8 @@
     real safmn2, safmx2;
     real safmin;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -84,26 +79,9 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
 /*     LOGICAL            FIRST */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Save statement .. */
 /*     SAVE               FIRST, SAFMX2, SAFMIN, SAFMN2 */
-/*     .. */
-/*     .. Data statements .. */
 /*     DATA               FIRST / .TRUE. / */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     IF( FIRST ) THEN */
     safmin = slamch_("S");
@@ -259,14 +237,12 @@ L20:
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    q__1.r = safmx2 * r__->r, q__1.i = safmx2 * r__->i;
 		    r__->r = q__1.r, r__->i = q__1.i;
-/* L30: */
 		}
 	    } else {
 		i__1 = -count;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    q__1.r = safmn2 * r__->r, q__1.i = safmn2 * r__->i;
 		    r__->r = q__1.r, r__->i = q__1.i;
-/* L40: */
 		}
 	    }
 	}

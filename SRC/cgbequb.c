@@ -26,7 +26,6 @@
     real radix, rcmin, rcmax;
     real bignum, logrdx, smlnum;
 
-
 /*     -- LAPACK routine (version 3.2)                                 -- */
 /*     -- Contributed by James Demmel, Deaglan Halligan, Yozo Hida and -- */
 /*     -- Jason Riedy of Univ. of California Berkeley.                 -- */
@@ -34,12 +33,6 @@
 
 /*     -- LAPACK is a software package provided by Univ. of Tennessee, -- */
 /*     -- Univ. of California Berkeley and NAG Ltd.                    -- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -118,22 +111,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -183,7 +160,6 @@
     i__1 = *m;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	r__[i__] = 0.f;
-/* L10: */
     }
 
 /*     Find the maximum element in each row. */
@@ -202,9 +178,7 @@
 	    r__3 = r__[i__], r__4 = (r__1 = ab[i__2].r, dabs(r__1)) + (r__2 = 
 		    r_imag(&ab[kd + i__ - j + j * ab_dim1]), dabs(r__2));
 	    r__[i__] = dmax(r__3,r__4);
-/* L20: */
 	}
-/* L30: */
     }
     i__1 = *m;
     for (i__ = 1; i__ <= i__1; ++i__) {
@@ -226,7 +200,6 @@
 /* Computing MIN */
 	r__1 = rcmin, r__2 = r__[i__];
 	rcmin = dmin(r__1,r__2);
-/* L40: */
     }
     *amax = rcmax;
 
@@ -240,7 +213,6 @@
 		*info = i__;
 		return 0;
 	    }
-/* L50: */
 	}
     } else {
 
@@ -253,7 +225,6 @@
 	    r__2 = r__[i__];
 	    r__1 = dmax(r__2,smlnum);
 	    r__[i__] = 1.f / dmin(r__1,bignum);
-/* L60: */
 	}
 
 /*        Compute ROWCND = min(R(I)) / max(R(I)). */
@@ -266,7 +237,6 @@
     i__1 = *n;
     for (j = 1; j <= i__1; ++j) {
 	c__[j] = 0.f;
-/* L70: */
     }
 
 /*     Find the maximum element in each column, */
@@ -286,13 +256,11 @@
 		    r_imag(&ab[kd + i__ - j + j * ab_dim1]), dabs(r__2))) * 
 		    r__[i__];
 	    c__[j] = dmax(r__3,r__4);
-/* L80: */
 	}
 	if (c__[j] > 0.f) {
 	    i__2 = (integer) (log(c__[j]) / logrdx);
 	    c__[j] = pow_ri(&radix, &i__2);
 	}
-/* L90: */
     }
 
 /*     Find the maximum and minimum scale factors. */
@@ -307,7 +275,6 @@
 /* Computing MAX */
 	r__1 = rcmax, r__2 = c__[j];
 	rcmax = dmax(r__1,r__2);
-/* L100: */
     }
 
     if (rcmin == 0.f) {
@@ -320,7 +287,6 @@
 		*info = *m + j;
 		return 0;
 	    }
-/* L110: */
 	}
     } else {
 
@@ -333,7 +299,6 @@
 	    r__2 = c__[j];
 	    r__1 = dmax(r__2,smlnum);
 	    c__[j] = 1.f / dmin(r__1,bignum);
-/* L120: */
 	}
 
 /*        Compute COLCND = min(C(J)) / max(C(J)). */

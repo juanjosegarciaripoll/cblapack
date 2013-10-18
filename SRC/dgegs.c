@@ -50,15 +50,8 @@ static doublereal c_b37 = 1.;
     integer lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -167,10 +160,8 @@ static doublereal c_b37 = 1.;
 /*  INFO    (output) INTEGER */
 /*          = 0:  successful exit */
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value. */
-/*          = 1,...,N: */
 /*                The QZ iteration failed.  (A,B) are not in Schur */
 /*                form, but ALPHAR(j), ALPHAI(j), and BETA(j) should */
-/*                be correct for j=INFO+1,...,N. */
 /*          > N:  errors that usually indicate LAPACK problems: */
 /*                =N+1: error return from DGGBAL */
 /*                =N+2: error return from DGEQRF */
@@ -184,18 +175,6 @@ static doublereal c_b37 = 1.;
 /*                =N+9: error return from DLASCL (various places) */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode the input arguments */
 
@@ -342,8 +321,6 @@ static doublereal c_b37 = 1.;
     }
 
 /*     Permute the matrix to make it more nearly triangular */
-/*     Workspace layout:  (2*N words -- "work..." not actually used) */
-/*        left_permutation, right_permutation, work... */
 
     ileft = 1;
     iright = *n + 1;
@@ -356,8 +333,6 @@ static doublereal c_b37 = 1.;
     }
 
 /*     Reduce B to triangular form, and initialize VSL and/or VSR */
-/*     Workspace layout:  ("work..." must have at least N words) */
-/*        left_permutation, right_permutation, tau, work... */
 
     irows = ihi + 1 - ilo;
     icols = *n + 1 - ilo;
@@ -424,8 +399,6 @@ static doublereal c_b37 = 1.;
     }
 
 /*     Perform QZ algorithm, computing Schur vectors if desired */
-/*     Workspace layout:  ("work..." must have at least 1 word) */
-/*        left_permutation, right_permutation, work... */
 
     iwork = itau;
     i__1 = *lwork + 1 - iwork;

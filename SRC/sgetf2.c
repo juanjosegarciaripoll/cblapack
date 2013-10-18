@@ -29,15 +29,8 @@ static real c_b8 = -1.f;
     integer i__, j, jp;
     real sfmin;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -83,18 +76,6 @@ static real c_b8 = -1.f;
 /*               to solve a system of equations. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -156,7 +137,6 @@ static real c_b8 = -1.f;
 		    i__2 = *m - j;
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			a[j + i__ + j * a_dim1] /= a[j + j * a_dim1];
-/* L20: */
 		    }
 		}
 	    }
@@ -175,7 +155,6 @@ static real c_b8 = -1.f;
 	    sger_(&i__2, &i__3, &c_b8, &a[j + 1 + j * a_dim1], &c__1, &a[j + (
 		    j + 1) * a_dim1], lda, &a[j + 1 + (j + 1) * a_dim1], lda);
 	}
-/* L10: */
     }
     return 0;
 

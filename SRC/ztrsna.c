@@ -46,17 +46,10 @@ static integer c__1 = 1;
     doublereal smlnum;
     logical wantsp;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
 
 /*     Modified to call ZLACN2 in place of ZLACON, 10 Feb 03, SJH. */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -83,7 +76,6 @@ static integer c__1 = 1;
 /*  SELECT  (input) LOGICAL array, dimension (N) */
 /*          If HOWMNY = 'S', SELECT specifies the eigenpairs for which */
 /*          condition numbers are required. To select condition numbers */
-/*          for the j-th eigenpair, SELECT(j) must be set to .TRUE.. */
 /*          If HOWMNY = 'A', SELECT is not referenced. */
 
 /*  N       (input) INTEGER */
@@ -198,24 +190,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Decode and test the input parameters */
 
     /* Parameter adjustments */
@@ -253,7 +227,6 @@ static integer c__1 = 1;
 	    if (select[j]) {
 		++(*m);
 	    }
-/* L10: */
 	}
     } else {
 	*m = *n;
@@ -358,7 +331,6 @@ static integer c__1 = 1;
 		z__1.r = work[i__4].r - work[i__5].r, z__1.i = work[i__4].i - 
 			work[i__5].i;
 		work[i__3].r = z__1.r, work[i__3].i = z__1.i;
-/* L20: */
 	    }
 
 /*           Estimate a lower bound for the 1-norm of inv(C'). The 1st */

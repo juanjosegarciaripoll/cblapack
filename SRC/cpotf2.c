@@ -31,15 +31,8 @@ static integer c__1 = 1;
     real ajj;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -89,18 +82,6 @@ static integer c__1 = 1;
 /*               completed. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -173,7 +154,6 @@ static integer c__1 = 1;
 		r__1 = 1.f / ajj;
 		csscal_(&i__2, &r__1, &a[j + (j + 1) * a_dim1], lda);
 	    }
-/* L10: */
 	}
     } else {
 
@@ -216,7 +196,6 @@ static integer c__1 = 1;
 		r__1 = 1.f / ajj;
 		csscal_(&i__2, &r__1, &a[j + 1 + j * a_dim1], &c__1);
 	    }
-/* L20: */
 	}
     }
     goto L40;

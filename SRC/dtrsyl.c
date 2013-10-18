@@ -45,16 +45,9 @@ static logical c_true = TRUE_;
     logical notrna, notrnb;
     doublereal smlnum;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -132,20 +125,6 @@ static logical c_true = TRUE_;
 /*               A and B are unchanged). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode and Test input parameters */
 
@@ -307,7 +286,6 @@ static logical c_true = TRUE_;
 			i__2 = *n;
 			for (j = 1; j <= i__2; ++j) {
 			    dscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L10: */
 			}
 			*scale *= scaloc;
 		    }
@@ -351,7 +329,6 @@ static logical c_true = TRUE_;
 			i__2 = *n;
 			for (j = 1; j <= i__2; ++j) {
 			    dscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L20: */
 			}
 			*scale *= scaloc;
 		    }
@@ -398,7 +375,6 @@ static logical c_true = TRUE_;
 			i__2 = *n;
 			for (j = 1; j <= i__2; ++j) {
 			    dscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L30: */
 			}
 			*scale *= scaloc;
 		    }
@@ -466,7 +442,6 @@ static logical c_true = TRUE_;
 			i__2 = *n;
 			for (j = 1; j <= i__2; ++j) {
 			    dscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L40: */
 			}
 			*scale *= scaloc;
 		    }
@@ -575,7 +550,6 @@ L60:
 			i__3 = *n;
 			for (j = 1; j <= i__3; ++j) {
 			    dscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L70: */
 			}
 			*scale *= scaloc;
 		    }
@@ -611,7 +585,6 @@ L60:
 			i__3 = *n;
 			for (j = 1; j <= i__3; ++j) {
 			    dscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L80: */
 			}
 			*scale *= scaloc;
 		    }
@@ -650,7 +623,6 @@ L60:
 			i__3 = *n;
 			for (j = 1; j <= i__3; ++j) {
 			    dscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L90: */
 			}
 			*scale *= scaloc;
 		    }
@@ -702,7 +674,6 @@ L60:
 			i__3 = *n;
 			for (j = 1; j <= i__3; ++j) {
 			    dscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L100: */
 			}
 			*scale *= scaloc;
 		    }
@@ -813,7 +784,6 @@ L120:
 			i__2 = *n;
 			for (j = 1; j <= i__2; ++j) {
 			    dscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L130: */
 			}
 			*scale *= scaloc;
 		    }
@@ -857,7 +827,6 @@ L120:
 			i__2 = *n;
 			for (j = 1; j <= i__2; ++j) {
 			    dscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L140: */
 			}
 			*scale *= scaloc;
 		    }
@@ -904,7 +873,6 @@ L120:
 			i__2 = *n;
 			for (j = 1; j <= i__2; ++j) {
 			    dscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L150: */
 			}
 			*scale *= scaloc;
 		    }
@@ -972,7 +940,6 @@ L120:
 			i__2 = *n;
 			for (j = 1; j <= i__2; ++j) {
 			    dscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L160: */
 			}
 			*scale *= scaloc;
 		    }
@@ -1086,7 +1053,6 @@ L180:
 			i__1 = *n;
 			for (j = 1; j <= i__1; ++j) {
 			    dscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L190: */
 			}
 			*scale *= scaloc;
 		    }
@@ -1138,7 +1104,6 @@ L180:
 			i__1 = *n;
 			for (j = 1; j <= i__1; ++j) {
 			    dscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L200: */
 			}
 			*scale *= scaloc;
 		    }
@@ -1193,7 +1158,6 @@ L180:
 			i__1 = *n;
 			for (j = 1; j <= i__1; ++j) {
 			    dscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L210: */
 			}
 			*scale *= scaloc;
 		    }
@@ -1277,7 +1241,6 @@ L180:
 			i__1 = *n;
 			for (j = 1; j <= i__1; ++j) {
 			    dscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L220: */
 			}
 			*scale *= scaloc;
 		    }

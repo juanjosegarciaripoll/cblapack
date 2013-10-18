@@ -39,15 +39,8 @@ static integer c__1 = 1;
     integer infequ;
     real smlnum;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -270,18 +263,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     ab_dim1 = *ldab;
     ab_offset = 1 + ab_dim1;
@@ -346,7 +327,6 @@ static integer c__1 = 1;
 /* Computing MAX */
 		r__1 = smax, r__2 = s[j];
 		smax = dmax(r__1,r__2);
-/* L10: */
 	    }
 	    if (smin <= 0.f) {
 		*info = -11;
@@ -399,9 +379,7 @@ static integer c__1 = 1;
 		i__5 = i__ + j * b_dim1;
 		q__1.r = s[i__4] * b[i__5].r, q__1.i = s[i__4] * b[i__5].i;
 		b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L20: */
 	    }
-/* L30: */
 	}
     }
 
@@ -418,7 +396,6 @@ static integer c__1 = 1;
 		i__2 = j - j1 + 1;
 		ccopy_(&i__2, &ab[*kd + 1 - j + j1 + j * ab_dim1], &c__1, &
 			afb[*kd + 1 - j + j1 + j * afb_dim1], &c__1);
-/* L40: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -429,7 +406,6 @@ static integer c__1 = 1;
 		i__2 = j2 - j + 1;
 		ccopy_(&i__2, &ab[j * ab_dim1 + 1], &c__1, &afb[j * afb_dim1 
 			+ 1], &c__1);
-/* L50: */
 	    }
 	}
 
@@ -478,14 +454,11 @@ static integer c__1 = 1;
 		i__5 = i__ + j * x_dim1;
 		q__1.r = s[i__4] * x[i__5].r, q__1.i = s[i__4] * x[i__5].i;
 		x[i__3].r = q__1.r, x[i__3].i = q__1.i;
-/* L60: */
 	    }
-/* L70: */
 	}
 	i__1 = *nrhs;
 	for (j = 1; j <= i__1; ++j) {
 	    ferr[j] /= scond;
-/* L80: */
 	}
     }
 

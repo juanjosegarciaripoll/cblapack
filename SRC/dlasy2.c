@@ -53,15 +53,8 @@ static integer c__0 = 0;
     logical xswap;
     doublereal smlnum;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -140,19 +133,6 @@ static integer c__0 = 0;
 
 /* ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Data statements .. */
     /* Parameter adjustments */
     tl_dim1 = *ldtl;
     tl_offset = 1 + tl_dim1;
@@ -168,8 +148,6 @@ static integer c__0 = 0;
     x -= x_offset;
 
     /* Function Body */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Do not check the input parameters for errors */
 
@@ -394,9 +372,7 @@ L50:
 		    ipsv = ip;
 		    jpsv = jp;
 		}
-/* L60: */
 	    }
-/* L70: */
 	}
 	if (ipsv != i__) {
 	    dswap_(&c__4, &t16[ipsv - 1], &c__4, &t16[i__ - 1], &c__4);
@@ -419,11 +395,8 @@ L50:
 	    for (k = i__ + 1; k <= 4; ++k) {
 		t16[j + (k << 2) - 5] -= t16[j + (i__ << 2) - 5] * t16[i__ + (
 			k << 2) - 5];
-/* L80: */
 	    }
-/* L90: */
 	}
-/* L100: */
     }
     if (abs(t16[15]) < smin) {
 	t16[15] = smin;
@@ -447,9 +420,7 @@ L50:
 	tmp[k - 1] = btmp[k - 1] * temp;
 	for (j = k + 1; j <= 4; ++j) {
 	    tmp[k - 1] -= temp * t16[k + (j << 2) - 5] * tmp[j - 1];
-/* L110: */
 	}
-/* L120: */
     }
     for (i__ = 1; i__ <= 3; ++i__) {
 	if (jpiv[4 - i__ - 1] != 4 - i__) {
@@ -457,7 +428,6 @@ L50:
 	    tmp[4 - i__ - 1] = tmp[jpiv[4 - i__ - 1] - 1];
 	    tmp[jpiv[4 - i__ - 1] - 1] = temp;
 	}
-/* L130: */
     }
     x[x_dim1 + 1] = tmp[0];
     x[x_dim1 + 2] = tmp[1];

@@ -31,15 +31,8 @@ static real c_b23 = 1.f;
     logical lnoti;
     logical notran;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -98,18 +91,6 @@ static real c_b23 = 1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -162,7 +143,6 @@ static real c_b23 = 1.f;
 /*        Solve L*X = B, overwriting B with X. */
 
 /*        L is represented as a product of permutations and unit lower */
-/*        triangular matrices L = P(1) * L(1) * ... * P(n-1) * L(n-1), */
 /*        where each transformation L(i) is a rank-one modification of */
 /*        the identity matrix. */
 
@@ -178,7 +158,6 @@ static real c_b23 = 1.f;
 		}
 		sger_(&lm, nrhs, &c_b7, &ab[kd + 1 + j * ab_dim1], &c__1, &b[
 			j + b_dim1], ldb, &b[j + 1 + b_dim1], ldb);
-/* L10: */
 	    }
 	}
 
@@ -190,7 +169,6 @@ static real c_b23 = 1.f;
 	    i__2 = *kl + *ku;
 	    stbsv_("Upper", "No transpose", "Non-unit", n, &i__2, &ab[
 		    ab_offset], ldab, &b[i__ * b_dim1 + 1], &c__1);
-/* L20: */
 	}
 
     } else {
@@ -205,7 +183,6 @@ static real c_b23 = 1.f;
 	    i__2 = *kl + *ku;
 	    stbsv_("Upper", "Transpose", "Non-unit", n, &i__2, &ab[ab_offset], 
 		     ldab, &b[i__ * b_dim1 + 1], &c__1);
-/* L30: */
 	}
 
 /*        Solve L'*X = B, overwriting B with X. */
@@ -222,7 +199,6 @@ static real c_b23 = 1.f;
 		if (l != j) {
 		    sswap_(nrhs, &b[l + b_dim1], ldb, &b[j + b_dim1], ldb);
 		}
-/* L40: */
 	    }
 	}
     }

@@ -34,16 +34,9 @@ static integer c__1 = 1;
     integer offpi;
     integer itemp;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -108,18 +101,6 @@ static integer c__1 = 1;
 /*    June 2006. */
 /*  For more details see LAPACK Working Note 176. */
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     a_dim1 = *lda;
@@ -213,10 +194,8 @@ static integer c__1 = 1;
 		    vn1[j] *= sqrt(temp);
 		}
 	    }
-/* L10: */
 	}
 
-/* L20: */
     }
 
     return 0;

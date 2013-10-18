@@ -45,15 +45,8 @@ static integer c__1 = 1;
     doublereal thresh;
     doublereal smlnum;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -70,7 +63,6 @@ static integer c__1 = 1;
 
 /*         Q(in) * A(in) * Z(in)' = Q(out) * A(out) * Z(out)' */
 /*         Q(in) * B(in) * Z(in)' = Q(out) * B(out) * Z(out)' */
-
 
 /*  Arguments */
 /*  ========= */
@@ -103,7 +95,6 @@ static integer c__1 = 1;
 /*  Q       (input/output) COMPLEX*16 array, dimension (LDZ,N) */
 /*          If WANTQ = .TRUE, on entry, the unitary matrix Q. On exit, */
 /*          the updated matrix Q. */
-/*          Not referenced if WANTQ = .FALSE.. */
 
 /*  LDQ     (input) INTEGER */
 /*          The leading dimension of the array Q. LDQ >= 1; */
@@ -112,7 +103,6 @@ static integer c__1 = 1;
 /*  Z       (input/output) COMPLEX*16 array, dimension (LDZ,N) */
 /*          If WANTZ = .TRUE, on entry, the unitary matrix Z. On exit, */
 /*          the updated matrix Z. */
-/*          Not referenced if WANTZ = .FALSE.. */
 
 /*  LDZ     (input) INTEGER */
 /*          The leading dimension of the array Z. LDZ >= 1; */
@@ -127,7 +117,6 @@ static integer c__1 = 1;
 /*                from generalized Schur form; the problem is ill- */
 /*                conditioned. */
 
-
 /*  Further Details */
 /*  =============== */
 
@@ -137,7 +126,6 @@ static integer c__1 = 1;
 
 /*  In the current code both weak and strong stability tests are */
 /*  performed. The user can omit the strong stability test by changing */
-/*  the internal logical parameter WANDS to .FALSE.. See ref. [2] for */
 /*  details. */
 
 /*  [1] B. Kagstrom; A Direct Method for Reordering Eigenvalues in the */
@@ -153,20 +141,6 @@ static integer c__1 = 1;
 /*      Numerical Algorithms, 1996. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     a_dim1 = *lda;
@@ -297,7 +271,6 @@ static integer c__1 = 1;
 	    z__1.r = work[i__2].r - b[i__3].r, z__1.i = work[i__2].i - b[i__3]
 		    .i;
 	    work[i__1].r = z__1.r, work[i__1].i = z__1.i;
-/* L10: */
 	}
 	scale = 0.;
 	sum = 1.;

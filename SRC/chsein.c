@@ -43,15 +43,8 @@ static logical c_true = TRUE_;
     logical rightv, fromqr;
     real smlnum;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -95,7 +88,6 @@ static logical c_true = TRUE_;
 /*  SELECT  (input) LOGICAL array, dimension (N) */
 /*          Specifies the eigenvectors to be computed. To select the */
 /*          eigenvector corresponding to the eigenvalue W(j), */
-/*          SELECT(j) must be set to .TRUE.. */
 
 /*  N       (input) INTEGER */
 /*          The order of the matrix H.  N >= 0. */
@@ -184,22 +176,6 @@ static logical c_true = TRUE_;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Decode and test the input parameters. */
 
     /* Parameter adjustments */
@@ -237,7 +213,6 @@ static logical c_true = TRUE_;
 	if (select[k]) {
 	    ++(*m);
 	}
-/* L10: */
     }
 
     *info = 0;
@@ -312,7 +287,6 @@ static logical c_true = TRUE_;
 		    if (h__[i__3].r == 0.f && h__[i__3].i == 0.f) {
 			goto L30;
 		    }
-/* L20: */
 		}
 L30:
 		kl = i__;
@@ -323,7 +297,6 @@ L30:
 			if (h__[i__3].r == 0.f && h__[i__3].i == 0.f) {
 			    goto L50;
 			}
-/* L40: */
 		    }
 L50:
 		    kr = i__;
@@ -364,7 +337,6 @@ L60:
 		    wk.r = q__1.r, wk.i = q__1.i;
 		    goto L60;
 		}
-/* L70: */
 	    }
 	    i__2 = k;
 	    w[i__2].r = wk.r, w[i__2].i = wk.i;
@@ -387,7 +359,6 @@ L60:
 		for (i__ = 1; i__ <= i__2; ++i__) {
 		    i__3 = i__ + ks * vl_dim1;
 		    vl[i__3].r = 0.f, vl[i__3].i = 0.f;
-/* L80: */
 		}
 	    }
 	    if (rightv) {
@@ -407,12 +378,10 @@ L60:
 		for (i__ = kr + 1; i__ <= i__2; ++i__) {
 		    i__3 = i__ + ks * vr_dim1;
 		    vr[i__3].r = 0.f, vr[i__3].i = 0.f;
-/* L90: */
 		}
 	    }
 	    ++ks;
 	}
-/* L100: */
     }
 
     return 0;

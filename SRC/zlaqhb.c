@@ -27,15 +27,8 @@
     doublereal cj, large;
     doublereal small;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -102,16 +95,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -156,13 +139,11 @@
 		    i__3 = *kd + 1 + i__ - j + j * ab_dim1;
 		    z__1.r = d__1 * ab[i__3].r, z__1.i = d__1 * ab[i__3].i;
 		    ab[i__2].r = z__1.r, ab[i__2].i = z__1.i;
-/* L10: */
 		}
 		i__4 = *kd + 1 + j * ab_dim1;
 		i__2 = *kd + 1 + j * ab_dim1;
 		d__1 = cj * cj * ab[i__2].r;
 		ab[i__4].r = d__1, ab[i__4].i = 0.;
-/* L20: */
 	    }
 	} else {
 
@@ -184,9 +165,7 @@
 		    i__3 = i__ + 1 - j + j * ab_dim1;
 		    z__1.r = d__1 * ab[i__3].r, z__1.i = d__1 * ab[i__3].i;
 		    ab[i__2].r = z__1.r, ab[i__2].i = z__1.i;
-/* L30: */
 		}
-/* L40: */
 	    }
 	}
 	*(unsigned char *)equed = 'Y';

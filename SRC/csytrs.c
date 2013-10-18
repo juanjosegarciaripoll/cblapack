@@ -34,15 +34,8 @@ static integer c__1 = 1;
     complex denom;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -90,18 +83,6 @@ static integer c__1 = 1;
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     a_dim1 = *lda;
@@ -233,7 +214,6 @@ L10:
 		q__2.r = q__3.r - bkm1.r, q__2.i = q__3.i - bkm1.i;
 		c_div(&q__1, &q__2, &denom);
 		b[i__2].r = q__1.r, b[i__2].i = q__1.i;
-/* L20: */
 	    }
 	    k += -2;
 	}
@@ -405,7 +385,6 @@ L60:
 		q__2.r = q__3.r - bkm1.r, q__2.i = q__3.i - bkm1.i;
 		c_div(&q__1, &q__2, &denom);
 		b[i__2].r = q__1.r, b[i__2].i = q__1.i;
-/* L70: */
 	    }
 	    k += 2;
 	}

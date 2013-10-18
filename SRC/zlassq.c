@@ -24,22 +24,13 @@
     integer ix;
     doublereal temp1;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
 
 /*  ZLASSQ returns the values scl and ssq such that */
-
-/*     ( scl**2 )*ssq = x( 1 )**2 +...+ x( n )**2 + ( scale**2 )*sumsq, */
 
 /*  where x( i ) = abs( X( 1 + ( i - 1 )*INCX ) ). The value of sumsq is */
 /*  assumed to be at least unity and the value of ssq will then satisfy */
@@ -80,14 +71,6 @@
 
 /* ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --x;
 
@@ -124,7 +107,6 @@
 		    *sumsq += d__1 * d__1;
 		}
 	    }
-/* L10: */
 	}
     }
 

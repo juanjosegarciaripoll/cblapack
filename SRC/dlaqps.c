@@ -38,15 +38,8 @@ static doublereal c_b16 = 0.;
     integer itemp;
     integer lsticc, lastrk;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -127,18 +120,6 @@ static doublereal c_b16 = 0.;
 /*    June 2006. */
 /*  For more details see LAPACK Working Note 176. */
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     a_dim1 = *lda;
@@ -224,7 +205,6 @@ L10:
 	i__1 = k;
 	for (j = 1; j <= i__1; ++j) {
 	    f[j + k * f_dim1] = 0.;
-/* L20: */
 	}
 
 /*        Incremental updating of F: */
@@ -277,7 +257,6 @@ L10:
 			vn1[j] *= sqrt(temp);
 		    }
 		}
-/* L30: */
 	    }
 	}
 

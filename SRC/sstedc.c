@@ -43,15 +43,8 @@ static integer c__1 = 1;
     integer smlsiz;
     integer storez, strtrw;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -160,18 +153,6 @@ static integer c__1 = 1;
 /*  Modified by Francoise Tisseur, University of Tennessee. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -433,7 +414,6 @@ L20:
 			    k = j;
 			    p = d__[j];
 			}
-/* L30: */
 		    }
 		    if (k != i__) {
 			d__[k] = d__[i__];
@@ -441,7 +421,6 @@ L20:
 			sswap_(n, &z__[i__ * z_dim1 + 1], &c__1, &z__[k * 
 				z_dim1 + 1], &c__1);
 		    }
-/* L40: */
 		}
 	    }
 	}

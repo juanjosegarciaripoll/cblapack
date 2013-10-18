@@ -36,15 +36,9 @@ static integer c__1 = 1;
     logical upper;
     real sstop;
 
-
 /*  -- LAPACK PROTOTYPE routine (version 3.2) -- */
 /*     Craig Lucas, University of Manchester / NAG Ltd. */
 /*     October, 2008 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -112,18 +106,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters */
 
     /* Parameter adjustments */
@@ -160,7 +142,6 @@ static integer c__1 = 1;
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	piv[i__] = i__;
-/* L100: */
     }
 
 /*     Compute stopping value */
@@ -169,7 +150,6 @@ static integer c__1 = 1;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	i__2 = i__ + i__ * a_dim1;
 	work[i__] = a[i__2].r;
-/* L110: */
     }
     pvt = smaxloc_(&work[1], n);
     i__1 = pvt + pvt * a_dim1;
@@ -193,7 +173,6 @@ static integer c__1 = 1;
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	work[i__] = 0.f;
-/* L120: */
     }
 
     if (upper) {
@@ -220,7 +199,6 @@ static integer c__1 = 1;
 		i__3 = i__ + i__ * a_dim1;
 		work[*n + i__] = a[i__3].r - work[i__];
 
-/* L130: */
 	    }
 
 	    if (j > 1) {
@@ -259,7 +237,6 @@ static integer c__1 = 1;
 		    a[i__3].r = q__1.r, a[i__3].i = q__1.i;
 		    i__3 = i__ + pvt * a_dim1;
 		    a[i__3].r = ctemp.r, a[i__3].i = ctemp.i;
-/* L140: */
 		}
 		i__2 = j + pvt * a_dim1;
 		r_cnjg(&q__1, &a[j + pvt * a_dim1]);
@@ -297,7 +274,6 @@ static integer c__1 = 1;
 		csscal_(&i__2, &r__1, &a[j + (j + 1) * a_dim1], lda);
 	    }
 
-/* L150: */
 	}
 
     } else {
@@ -324,7 +300,6 @@ static integer c__1 = 1;
 		i__3 = i__ + i__ * a_dim1;
 		work[*n + i__] = a[i__3].r - work[i__];
 
-/* L160: */
 	    }
 
 	    if (j > 1) {
@@ -362,7 +337,6 @@ static integer c__1 = 1;
 		    a[i__3].r = q__1.r, a[i__3].i = q__1.i;
 		    i__3 = pvt + i__ * a_dim1;
 		    a[i__3].r = ctemp.r, a[i__3].i = ctemp.i;
-/* L170: */
 		}
 		i__2 = pvt + j * a_dim1;
 		r_cnjg(&q__1, &a[pvt + j * a_dim1]);
@@ -400,7 +374,6 @@ static integer c__1 = 1;
 		csscal_(&i__2, &r__1, &a[j + 1 + j * a_dim1], &c__1);
 	    }
 
-/* L180: */
 	}
 
     }

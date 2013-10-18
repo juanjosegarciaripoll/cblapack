@@ -27,15 +27,8 @@ static integer c__1 = 1;
     integer j;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -85,16 +78,6 @@ static integer c__1 = 1;
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -150,7 +133,6 @@ static integer c__1 = 1;
 
 	    stbsv_("Upper", "No transpose", "Non-unit", n, kd, &ab[ab_offset], 
 		     ldab, &b[j * b_dim1 + 1], &c__1);
-/* L10: */
 	}
     } else {
 
@@ -168,7 +150,6 @@ static integer c__1 = 1;
 
 	    stbsv_("Lower", "Transpose", "Non-unit", n, kd, &ab[ab_offset], 
 		    ldab, &b[j * b_dim1 + 1], &c__1);
-/* L20: */
 	}
     }
 

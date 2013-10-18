@@ -47,15 +47,8 @@ static real c_b108 = 1.f;
     real smlnum;
     logical lquery;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -142,20 +135,6 @@ static real c_b108 = 1.f;
 /*                bidiagonal form did not converge to zero. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -490,7 +469,6 @@ static real c_b108 = 1.f;
 		slaset_("F", &c__1, nrhs, &c_b74, &c_b74, &b[i__ + b_dim1], 
 			ldb);
 	    }
-/* L10: */
 	}
 
 /*        Multiply B by right singular vectors */
@@ -512,7 +490,6 @@ static real c_b108 = 1.f;
 		sgemm_("T", "N", n, &bl, n, &c_b108, &a[a_offset], lda, &b[
 			i__ * b_dim1 + 1], ldb, &c_b74, &work[1], n);
 		slacpy_("G", n, &bl, &work[1], n, &b[i__ * b_dim1 + 1], ldb);
-/* L20: */
 	    }
 	} else {
 	    sgemv_("T", n, n, &c_b108, &a[a_offset], lda, &b[b_offset], &c__1, 
@@ -616,7 +593,6 @@ static real c_b108 = 1.f;
 		    slaset_("F", &c__1, nrhs, &c_b74, &c_b74, &b[i__ + b_dim1]
 , ldb);
 		}
-/* L30: */
 	    }
 	    iwork = ie;
 
@@ -640,7 +616,6 @@ static real c_b108 = 1.f;
 			    b[i__ * b_dim1 + 1], ldb, &c_b74, &work[iwork], m);
 		    slacpy_("G", m, &bl, &work[iwork], m, &b[i__ * b_dim1 + 1]
 , ldb);
-/* L40: */
 		}
 	    } else {
 		sgemv_("T", m, m, &c_b108, &work[il], &ldwork, &b[b_dim1 + 1], 
@@ -724,7 +699,6 @@ static real c_b108 = 1.f;
 		    slaset_("F", &c__1, nrhs, &c_b74, &c_b74, &b[i__ + b_dim1]
 , ldb);
 		}
-/* L50: */
 	    }
 
 /*        Multiply B by right singular vectors of A */
@@ -747,7 +721,6 @@ static real c_b108 = 1.f;
 			    b[i__ * b_dim1 + 1], ldb, &c_b74, &work[1], n);
 		    slacpy_("F", n, &bl, &work[1], n, &b[i__ * b_dim1 + 1], 
 			    ldb);
-/* L60: */
 		}
 	    } else {
 		sgemv_("T", m, n, &c_b108, &a[a_offset], lda, &b[b_offset], &

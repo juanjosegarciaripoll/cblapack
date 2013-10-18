@@ -61,15 +61,8 @@ static integer c__2 = 2;
     doublereal clwdth, isleft;
     doublereal isrght, bsrtol, dpivot;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -229,20 +222,6 @@ static integer c__2 = 2;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --iwork;
     --work;
@@ -321,7 +300,6 @@ static integer c__2 = 2;
 	d__1 = gu, d__2 = gers[i__ * 2];
 	gu = max(d__1,d__2);
 	eold = eabs;
-/* L5: */
     }
 /*     The minimum pivot allowed in the Sturm sequence for T */
 /* Computing MAX */
@@ -366,7 +344,6 @@ static integer c__2 = 2;
 	    werr[i__] = 0.;
 	    iblock[i__] = 0;
 	    indexw[i__] = 0;
-/* L14: */
 	}
     }
 /* ** */
@@ -413,7 +390,6 @@ static integer c__2 = 2;
 /* Computing MAX */
 	    d__1 = gers[i__ * 2];
 	    gu = max(d__1,gu);
-/* L15: */
 	}
 	spdiam = gu - gl;
 	if (! (irange == 1 && ! forceb)) {
@@ -426,7 +402,6 @@ static integer c__2 = 2;
 		} else {
 		    goto L21;
 		}
-/* L20: */
 	    }
 L21:
 	    if (mb == 0) {
@@ -449,7 +424,6 @@ L21:
 		    d__1 = 0., d__2 = w[i__ + 1] - werr[i__ + 1] - (w[i__] + 
 			    werr[i__]);
 		    wgap[i__] = max(d__1,d__2);
-/* L30: */
 		}
 /* Computing MAX */
 		d__1 = 0., d__2 = *vu - sigma - (w[wend] + werr[wend]);
@@ -617,7 +591,6 @@ L21:
 		d__1 = dmax__, d__2 = abs(dpivot);
 		dmax__ = max(d__1,d__2);
 		++j;
-/* L70: */
 	    }
 /*           check for element growth */
 	    if (dmax__ > spdiam * 64.) {
@@ -634,7 +607,6 @@ L21:
 		    if (tmp < 0.) {
 			norep = TRUE_;
 		    }
-/* L71: */
 		}
 	    }
 	    if (norep) {
@@ -656,7 +628,6 @@ L21:
 /*              an initial RRR is found */
 		goto L83;
 	    }
-/* L80: */
 	}
 /*        if the program reaches this point, no base representation could be */
 /*        found in MAXTRY iterations. */
@@ -679,7 +650,6 @@ L83:
 
 	    for (i__ = 1; i__ <= 4; ++i__) {
 		iseed[i__ - 1] = 1;
-/* L122: */
 	    }
 	    i__2 = (in << 1) - 1;
 	    dlarnv_(&c__2, iseed, &i__2, &work[1]);
@@ -687,7 +657,6 @@ L83:
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		d__[ibegin + i__ - 1] *= eps * 8. * work[i__] + 1.;
 		e[ibegin + i__ - 1] *= eps * 8. * work[in + i__] + 1.;
-/* L125: */
 	    }
 	    d__[iend] *= eps * 4. * work[in] + 1.;
 
@@ -708,7 +677,6 @@ L83:
 	    for (j = wbegin; j <= i__2; ++j) {
 		w[j] -= sigma;
 		werr[j] += (d__1 = w[j], abs(d__1)) * eps;
-/* L134: */
 	    }
 /*           call DLARRB to reduce eigenvalue error of the approximations */
 /*           from DLARRD */
@@ -717,7 +685,6 @@ L83:
 /* Computing 2nd power */
 		d__1 = e[i__];
 		work[i__] = d__[i__] * (d__1 * d__1);
-/* L135: */
 	    }
 /*           use bisection to find EV from INDL to INDU */
 	    i__2 = indl - 1;
@@ -739,7 +706,6 @@ L83:
 		++(*m);
 		iblock[*m] = jblk;
 		indexw[*m] = i__;
-/* L138: */
 	    }
 	} else {
 /*           Call dqds to get all eigs (and then possibly delete unwanted */
@@ -760,7 +726,6 @@ L83:
 		work[(i__ << 1) - 1] = (d__1 = d__[j], abs(d__1));
 		work[i__ * 2] = e[j] * e[j] * work[(i__ << 1) - 1];
 		++j;
-/* L140: */
 	    }
 	    work[(in << 1) - 1] = (d__1 = d__[iend], abs(d__1));
 	    work[in * 2] = 0.;
@@ -779,7 +744,6 @@ L83:
 			*info = -6;
 			return 0;
 		    }
-/* L149: */
 		}
 	    }
 	    if (sgndef > 0.) {
@@ -789,7 +753,6 @@ L83:
 		    w[*m] = work[in - i__ + 1];
 		    iblock[*m] = jblk;
 		    indexw[*m] = i__;
-/* L150: */
 		}
 	    } else {
 		i__2 = indu;
@@ -798,14 +761,12 @@ L83:
 		    w[*m] = -work[i__];
 		    iblock[*m] = jblk;
 		    indexw[*m] = i__;
-/* L160: */
 		}
 	    }
 	    i__2 = *m;
 	    for (i__ = *m - mb + 1; i__ <= i__2; ++i__) {
 /*              the value of RTOL below should be the tolerance in DLASQ2 */
 		werr[i__] = rtol * (d__1 = w[i__], abs(d__1));
-/* L165: */
 	    }
 	    i__2 = *m - 1;
 	    for (i__ = *m - mb + 1; i__ <= i__2; ++i__) {
@@ -814,7 +775,6 @@ L83:
 		d__1 = 0., d__2 = w[i__ + 1] - werr[i__ + 1] - (w[i__] + werr[
 			i__]);
 		wgap[i__] = max(d__1,d__2);
-/* L166: */
 	    }
 /* Computing MAX */
 	    d__1 = 0., d__2 = *vu - sigma - (w[*m] + werr[*m]);

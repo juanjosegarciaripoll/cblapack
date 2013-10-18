@@ -49,16 +49,9 @@ static real c_b248 = 1.f;
     logical wntqas;
     logical lquery;
 
-
 /*  -- LAPACK driver routine (version 3.2.1)                                  -- */
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
 /*     March 2009 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -186,20 +179,6 @@ static real c_b248 = 1.f;
 /*     California at Berkeley, USA */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -760,7 +739,6 @@ static real c_b248 = 1.f;
 			    lda, &work[iu], n, &c_b227, &work[ir], &ldwrkr);
 		    slacpy_("F", &chunk, n, &work[ir], &ldwrkr, &a[i__ + 
 			    a_dim1], lda);
-/* L10: */
 		}
 
 	    } else if (wntqs) {
@@ -1025,7 +1003,6 @@ static real c_b248 = 1.f;
 				work[ir], &ldwrkr);
 			slacpy_("F", &chunk, n, &work[ir], &ldwrkr, &a[i__ + 
 				a_dim1], lda);
-/* L20: */
 		    }
 		}
 
@@ -1229,7 +1206,6 @@ static real c_b248 = 1.f;
 			    ldwrkl);
 		    slacpy_("F", m, &blk, &work[il], &ldwrkl, &a[i__ * a_dim1 
 			    + 1], lda);
-/* L30: */
 		}
 
 	    } else if (wntqs) {
@@ -1490,7 +1466,6 @@ static real c_b248 = 1.f;
 				work[il], m);
 			slacpy_("F", m, &blk, &work[il], m, &a[i__ * a_dim1 + 
 				1], lda);
-/* L40: */
 		    }
 		}
 	    } else if (wntqs) {

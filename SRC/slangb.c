@@ -29,15 +29,8 @@ doublereal slangb_(char *norm, integer *n, integer *kl, integer *ku, real *ab,
     real sum, scale;
     real value;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -96,19 +89,6 @@ doublereal slangb_(char *norm, integer *n, integer *kl, integer *ku, real *ab,
 
 /* ===================================================================== */
 
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     ab_dim1 = *ldab;
     ab_offset = 1 + ab_dim1;
@@ -135,9 +115,7 @@ doublereal slangb_(char *norm, integer *n, integer *kl, integer *ku, real *ab,
 		r__2 = value, r__3 = (r__1 = ab[i__ + j * ab_dim1], dabs(r__1)
 			);
 		value = dmax(r__2,r__3);
-/* L10: */
 	    }
-/* L20: */
 	}
     } else if (lsame_(norm, "O") || *(unsigned char *)
 	    norm == '1') {
@@ -155,10 +133,8 @@ doublereal slangb_(char *norm, integer *n, integer *kl, integer *ku, real *ab,
 	    i__2 = min(i__4,i__5);
 	    for (i__ = max(i__3,1); i__ <= i__2; ++i__) {
 		sum += (r__1 = ab[i__ + j * ab_dim1], dabs(r__1));
-/* L30: */
 	    }
 	    value = dmax(value,sum);
-/* L40: */
 	}
     } else if (lsame_(norm, "I")) {
 
@@ -167,7 +143,6 @@ doublereal slangb_(char *norm, integer *n, integer *kl, integer *ku, real *ab,
 	i__1 = *n;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    work[i__] = 0.f;
-/* L50: */
 	}
 	i__1 = *n;
 	for (j = 1; j <= i__1; ++j) {
@@ -179,9 +154,7 @@ doublereal slangb_(char *norm, integer *n, integer *kl, integer *ku, real *ab,
 	    i__4 = min(i__5,i__6);
 	    for (i__ = max(i__2,i__3); i__ <= i__4; ++i__) {
 		work[i__] += (r__1 = ab[k + i__ + j * ab_dim1], dabs(r__1));
-/* L60: */
 	    }
-/* L70: */
 	}
 	value = 0.f;
 	i__1 = *n;
@@ -189,7 +162,6 @@ doublereal slangb_(char *norm, integer *n, integer *kl, integer *ku, real *ab,
 /* Computing MAX */
 	    r__1 = value, r__2 = work[i__];
 	    value = dmax(r__1,r__2);
-/* L80: */
 	}
     } else if (lsame_(norm, "F") || lsame_(norm, "E")) {
 
@@ -207,7 +179,6 @@ doublereal slangb_(char *norm, integer *n, integer *kl, integer *ku, real *ab,
 	    i__2 = *n, i__3 = j + *kl;
 	    i__4 = min(i__2,i__3) - l + 1;
 	    slassq_(&i__4, &ab[k + j * ab_dim1], &c__1, &scale, &sum);
-/* L90: */
 	}
 	value = scale * sqrt(sum);
     }

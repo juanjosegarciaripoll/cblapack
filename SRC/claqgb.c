@@ -26,15 +26,8 @@
     integer i__, j;
     real cj, large, small;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -109,16 +102,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -165,9 +148,7 @@
 		    i__3 = *ku + 1 + i__ - j + j * ab_dim1;
 		    q__1.r = cj * ab[i__3].r, q__1.i = cj * ab[i__3].i;
 		    ab[i__2].r = q__1.r, ab[i__2].i = q__1.i;
-/* L10: */
 		}
-/* L20: */
 	    }
 	    *(unsigned char *)equed = 'C';
 	}
@@ -189,9 +170,7 @@
 		q__1.r = r__[i__2] * ab[i__5].r, q__1.i = r__[i__2] * ab[i__5]
 			.i;
 		ab[i__4].r = q__1.r, ab[i__4].i = q__1.i;
-/* L30: */
 	    }
-/* L40: */
 	}
 	*(unsigned char *)equed = 'R';
     } else {
@@ -212,9 +191,7 @@
 		i__4 = *ku + 1 + i__ - j + j * ab_dim1;
 		q__1.r = r__1 * ab[i__4].r, q__1.i = r__1 * ab[i__4].i;
 		ab[i__3].r = q__1.r, ab[i__3].i = q__1.i;
-/* L50: */
 	    }
-/* L60: */
 	}
 	*(unsigned char *)equed = 'B';
     }

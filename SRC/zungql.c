@@ -33,15 +33,8 @@ static integer c__2 = 2;
     logical lquery;
     integer lwkopt;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -69,7 +62,6 @@ static integer c__2 = 2;
 
 /*  A       (input/output) COMPLEX*16 array, dimension (LDA,N) */
 /*          On entry, the (n-k+i)-th column must contain the vector which */
-/*          defines the elementary reflector H(i), for i = 1,2,...,k, as */
 /*          returned by ZGEQLF in the last k columns of its array */
 /*          argument A. */
 /*          On exit, the M-by-N matrix Q. */
@@ -99,18 +91,6 @@ static integer c__2 = 2;
 /*          < 0:  if INFO = -i, the i-th argument has an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -208,9 +188,7 @@ static integer c__2 = 2;
 	    for (i__ = *m - kk + 1; i__ <= i__2; ++i__) {
 		i__3 = i__ + j * a_dim1;
 		a[i__3].r = 0., a[i__3].i = 0.;
-/* L10: */
 	    }
-/* L20: */
 	}
     } else {
 	kk = 0;
@@ -268,11 +246,8 @@ static integer c__2 = 2;
 		for (l = *m - *k + i__ + ib; l <= i__4; ++l) {
 		    i__5 = l + j * a_dim1;
 		    a[i__5].r = 0., a[i__5].i = 0.;
-/* L30: */
 		}
-/* L40: */
 	    }
-/* L50: */
 	}
     }
 

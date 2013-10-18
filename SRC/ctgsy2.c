@@ -38,15 +38,8 @@ static integer c__1 = 1;
     real scaloc;
     logical notran;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -197,20 +190,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Decode and test input parameters */
 
     /* Parameter adjustments */
@@ -274,7 +253,6 @@ static integer c__1 = 1;
 /*        Solve (I, J) - system */
 /*           A(I, I) * R(I, J) - L(I, J) * B(J, J) = C(I, J) */
 /*           D(I, I) * R(I, J) - L(I, J) * E(J, J) = F(I, J) */
-/*        for I = M, M - 1, ..., 1; J = 1, 2, ..., N */
 
 	*scale = 1.f;
 	scaloc = 1.f;
@@ -317,7 +295,6 @@ static integer c__1 = 1;
 			    cscal_(m, &q__1, &c__[k * c_dim1 + 1], &c__1);
 			    q__1.r = scaloc, q__1.i = 0.f;
 			    cscal_(m, &q__1, &f[k * f_dim1 + 1], &c__1);
-/* L10: */
 			}
 			*scale *= scaloc;
 		    }
@@ -354,16 +331,13 @@ static integer c__1 = 1;
 			    i__ + (j + 1) * f_dim1], ldf);
 		}
 
-/* L20: */
 	    }
-/* L30: */
 	}
     } else {
 
 /*        Solve transposed (I, J) - system: */
 /*           A(I, I)' * R(I, J) + D(I, I)' * L(J, J) = C(I, J) */
 /*           R(I, I) * B(J, J) + L(I, J) * E(J, J)   = -F(I, J) */
-/*        for I = 1, 2, ..., M, J = N, N - 1, ..., 1 */
 
 	*scale = 1.f;
 	scaloc = 1.f;
@@ -383,7 +357,6 @@ static integer c__1 = 1;
 		r_cnjg(&q__2, &e[j + j * e_dim1]);
 		q__1.r = -q__2.r, q__1.i = -q__2.i;
 		z__[3].r = q__1.r, z__[3].i = q__1.i;
-
 
 /*              Set up right hand side(s) */
 
@@ -406,7 +379,6 @@ static integer c__1 = 1;
 			cscal_(m, &q__1, &c__[k * c_dim1 + 1], &c__1);
 			q__1.r = scaloc, q__1.i = 0.f;
 			cscal_(m, &q__1, &f[k * f_dim1 + 1], &c__1);
-/* L40: */
 		    }
 		    *scale *= scaloc;
 		}
@@ -433,7 +405,6 @@ static integer c__1 = 1;
 			    rhs[1].r * q__6.i + rhs[1].i * q__6.r;
 		    q__1.r = q__2.r + q__5.r, q__1.i = q__2.i + q__5.i;
 		    f[i__3].r = q__1.r, f[i__3].i = q__1.i;
-/* L50: */
 		}
 		i__2 = *m;
 		for (k = i__ + 1; k <= i__2; ++k) {
@@ -449,12 +420,9 @@ static integer c__1 = 1;
 			    q__6.r * rhs[1].i + q__6.i * rhs[1].r;
 		    q__1.r = q__2.r - q__5.r, q__1.i = q__2.i - q__5.i;
 		    c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
-/* L60: */
 		}
 
-/* L70: */
 	    }
-/* L80: */
 	}
     }
     return 0;

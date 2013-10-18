@@ -61,15 +61,8 @@ static doublereal c_b60 = 1.;
     doublereal smlnum;
     logical lquery, wantsv;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -101,7 +94,6 @@ static doublereal c_b60 = 1.;
 /*                   u(j)**H * A  = lambda(j) * u(j)**H * B. */
 
 /*  where u(j)**H is the conjugate-transpose of u(j). */
-
 
 /*  Arguments */
 /*  ========= */
@@ -156,7 +148,6 @@ static doublereal c_b60 = 1.;
 /*  ALPHAR  (output) DOUBLE PRECISION array, dimension (N) */
 /*  ALPHAI  (output) DOUBLE PRECISION array, dimension (N) */
 /*  BETA    (output) DOUBLE PRECISION array, dimension (N) */
-/*          On exit, (ALPHAR(j) + ALPHAI(j)*i)/BETA(j), j=1,...,N, will */
 /*          be the generalized eigenvalues.  If ALPHAI(j) is zero, then */
 /*          the j-th eigenvalue is real; if positive, then the j-th and */
 /*          (j+1)-st eigenvalues are a complex conjugate pair, with */
@@ -203,7 +194,6 @@ static doublereal c_b60 = 1.;
 /*  IHI     (output) INTEGER */
 /*          ILO and IHI are integer values such that on exit */
 /*          A(i,j) = 0 and B(i,j) = 0 if i > j and */
-/*          j = 1,...,ILO-1 or i = IHI+1,...,N. */
 /*          If BALANC = 'N' or 'S', ILO = 1 and IHI = N. */
 
 /*  LSCALE  (output) DOUBLE PRECISION array, dimension (N) */
@@ -211,9 +201,6 @@ static doublereal c_b60 = 1.;
 /*          to the left side of A and B.  If PL(j) is the index of the */
 /*          row interchanged with row j, and DL(j) is the scaling */
 /*          factor applied to row j, then */
-/*            LSCALE(j) = PL(j)  for j = 1,...,ILO-1 */
-/*                      = DL(j)  for j = ILO,...,IHI */
-/*                      = PL(j)  for j = IHI+1,...,N. */
 /*          The order in which the interchanges are made is N to IHI+1, */
 /*          then 1 to ILO-1. */
 
@@ -222,9 +209,6 @@ static doublereal c_b60 = 1.;
 /*          to the right side of A and B.  If PR(j) is the index of the */
 /*          column interchanged with column j, and DR(j) is the scaling */
 /*          factor applied to column j, then */
-/*            RSCALE(j) = PR(j)  for j = 1,...,ILO-1 */
-/*                      = DR(j)  for j = ILO,...,IHI */
-/*                      = PR(j)  for j = IHI+1,...,N */
 /*          The order in which the interchanges are made is N to IHI+1, */
 /*          then 1 to ILO-1. */
 
@@ -277,10 +261,8 @@ static doublereal c_b60 = 1.;
 /*  INFO    (output) INTEGER */
 /*          = 0:  successful exit */
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value. */
-/*          = 1,...,N: */
 /*                The QZ iteration failed.  No eigenvectors have been */
 /*                calculated, but ALPHAR(j), ALPHAI(j), and BETA(j) */
-/*                should be correct for j=INFO+1,...,N. */
 /*          > N:  =N+1: other than QZ iteration failed in DHGEQZ. */
 /*                =N+2: error return from DTGEVC. */
 
@@ -311,20 +293,6 @@ static doublereal c_b60 = 1.;
 /*  and RCONDV, see section 4.11 of LAPACK User's Guide. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode the input arguments */
 
@@ -469,7 +437,6 @@ static doublereal c_b60 = 1.;
     if (*n == 0) {
 	return 0;
     }
-
 
 /*     Get machine constants */
 
@@ -675,7 +642,6 @@ static doublereal c_b60 = 1.;
 		i__2 = *n;
 		for (j = 1; j <= i__2; ++j) {
 		    bwork[j] = FALSE_;
-/* L10: */
 		}
 		if (mm == 1) {
 		    bwork[i__] = TRUE_;
@@ -732,7 +698,6 @@ L20:
 		    d__2 = temp, d__3 = (d__1 = vl[jr + jc * vl_dim1], abs(
 			    d__1));
 		    temp = max(d__2,d__3);
-/* L30: */
 		}
 	    } else {
 		i__2 = *n;
@@ -742,7 +707,6 @@ L20:
 			    d__1)) + (d__2 = vl[jr + (jc + 1) * vl_dim1], abs(
 			    d__2));
 		    temp = max(d__3,d__4);
-/* L40: */
 		}
 	    }
 	    if (temp < smlnum) {
@@ -753,14 +717,12 @@ L20:
 		i__2 = *n;
 		for (jr = 1; jr <= i__2; ++jr) {
 		    vl[jr + jc * vl_dim1] *= temp;
-/* L50: */
 		}
 	    } else {
 		i__2 = *n;
 		for (jr = 1; jr <= i__2; ++jr) {
 		    vl[jr + jc * vl_dim1] *= temp;
 		    vl[jr + (jc + 1) * vl_dim1] *= temp;
-/* L60: */
 		}
 	    }
 L70:
@@ -783,7 +745,6 @@ L70:
 		    d__2 = temp, d__3 = (d__1 = vr[jr + jc * vr_dim1], abs(
 			    d__1));
 		    temp = max(d__2,d__3);
-/* L80: */
 		}
 	    } else {
 		i__2 = *n;
@@ -793,7 +754,6 @@ L70:
 			    d__1)) + (d__2 = vr[jr + (jc + 1) * vr_dim1], abs(
 			    d__2));
 		    temp = max(d__3,d__4);
-/* L90: */
 		}
 	    }
 	    if (temp < smlnum) {
@@ -804,14 +764,12 @@ L70:
 		i__2 = *n;
 		for (jr = 1; jr <= i__2; ++jr) {
 		    vr[jr + jc * vr_dim1] *= temp;
-/* L100: */
 		}
 	    } else {
 		i__2 = *n;
 		for (jr = 1; jr <= i__2; ++jr) {
 		    vr[jr + jc * vr_dim1] *= temp;
 		    vr[jr + (jc + 1) * vr_dim1] *= temp;
-/* L110: */
 		}
 	    }
 L120:

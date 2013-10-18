@@ -24,15 +24,8 @@
     integer i__, ix, iy;
     doublecomplex stemp;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -68,12 +61,6 @@
 /*          where C*C + S*CONJG(S) = 1.0. */
 
 /* ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --cy;
@@ -119,7 +106,6 @@
 	cx[i__2].r = stemp.r, cx[i__2].i = stemp.i;
 	ix += *incx;
 	iy += *incy;
-/* L10: */
     }
     return 0;
 
@@ -146,7 +132,6 @@ L20:
 	cy[i__2].r = z__1.r, cy[i__2].i = z__1.i;
 	i__2 = i__;
 	cx[i__2].r = stemp.r, cx[i__2].i = stemp.i;
-/* L30: */
     }
     return 0;
 } /* zrot_ */

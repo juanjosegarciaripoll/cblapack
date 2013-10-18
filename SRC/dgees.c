@@ -45,17 +45,8 @@ static integer c_n1 = -1;
     integer hswork;
     logical wantst, lquery, wantvs;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-/*     .. Function Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -173,20 +164,6 @@ static integer c_n1 = -1;
 /*                   could also be caused by underflow due to scaling. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -358,7 +335,6 @@ static integer c_n1 = -1;
 	i__1 = *n;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    bwork[i__] = (*select)(&wr[i__], &wi[i__]);
-/* L10: */
 	}
 
 /*        Reorder eigenvalues and transform Schur vectors */
@@ -505,7 +481,6 @@ L20:
 	    }
 	    lst2sl = lastsl;
 	    lastsl = cursl;
-/* L30: */
 	}
     }
 

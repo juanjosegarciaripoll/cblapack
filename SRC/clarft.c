@@ -30,15 +30,8 @@ static integer c__1 = 1;
     complex vii;
     integer lastv;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -130,16 +123,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -170,7 +153,6 @@ static integer c__1 = 1;
 		for (j = 1; j <= i__2; ++j) {
 		    i__3 = j + i__ * t_dim1;
 		    t[i__3].r = 0.f, t[i__3].i = 0.f;
-/* L10: */
 		}
 	    } else {
 
@@ -246,7 +228,6 @@ static integer c__1 = 1;
 		    prevlastv = lastv;
 		}
 	    }
-/* L20: */
 	}
     } else {
 	prevlastv = 1;
@@ -260,7 +241,6 @@ static integer c__1 = 1;
 		for (j = i__; j <= i__1; ++j) {
 		    i__2 = j + i__ * t_dim1;
 		    t[i__2].r = 0.f, t[i__2].i = 0.f;
-/* L30: */
 		}
 	    } else {
 
@@ -345,7 +325,6 @@ static integer c__1 = 1;
 		i__2 = i__;
 		t[i__1].r = tau[i__2].r, t[i__1].i = tau[i__2].i;
 	    }
-/* L40: */
 	}
     }
     return 0;

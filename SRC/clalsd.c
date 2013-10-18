@@ -54,15 +54,8 @@ static real c_b35 = 0.f;
     integer givnum;
     integer givptr, nrwork, irwwrk, smlszp;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -158,18 +151,6 @@ static real c_b35 = 0.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -242,7 +223,6 @@ static real c_b35 = 0.f;
 		rwork[(i__ << 1) - 1] = cs;
 		rwork[i__ * 2] = sn;
 	    }
-/* L10: */
 	}
 	if (*nrhs > 1) {
 	    i__1 = *nrhs;
@@ -253,9 +233,7 @@ static real c_b35 = 0.f;
 		    sn = rwork[j * 2];
 		    csrot_(&c__1, &b[j + i__ * b_dim1], &c__1, &b[j + 1 + i__ 
 			    * b_dim1], &c__1, &cs, &sn);
-/* L20: */
 		}
-/* L30: */
 	    }
 	}
     }
@@ -303,9 +281,7 @@ static real c_b35 = 0.f;
 		++j;
 		i__3 = jrow + jcol * b_dim1;
 		rwork[j] = b[i__3].r;
-/* L40: */
 	    }
-/* L50: */
 	}
 	sgemm_("T", "N", n, nrhs, n, &c_b10, &rwork[irwu], n, &rwork[irwb], n, 
 		 &c_b35, &rwork[irwrb], n);
@@ -316,9 +292,7 @@ static real c_b35 = 0.f;
 	    for (jrow = 1; jrow <= i__2; ++jrow) {
 		++j;
 		rwork[j] = r_imag(&b[jrow + jcol * b_dim1]);
-/* L60: */
 	    }
-/* L70: */
 	}
 	sgemm_("T", "N", n, nrhs, n, &c_b10, &rwork[irwu], n, &rwork[irwb], n, 
 		 &c_b35, &rwork[irwib], n);
@@ -335,9 +309,7 @@ static real c_b35 = 0.f;
 		i__5 = jimag;
 		q__1.r = rwork[i__4], q__1.i = rwork[i__5];
 		b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L80: */
 	    }
-/* L90: */
 	}
 
 	tol = rcnd * (r__1 = d__[isamax_(n, &d__[1], &c__1)], dabs(r__1));
@@ -350,7 +322,6 @@ static real c_b35 = 0.f;
 			i__ + b_dim1], ldb, info);
 		++(*rank);
 	    }
-/* L100: */
 	}
 
 /*        Since B is complex, the following call to SGEMM is performed */
@@ -368,9 +339,7 @@ static real c_b35 = 0.f;
 		++j;
 		i__3 = jrow + jcol * b_dim1;
 		rwork[j] = b[i__3].r;
-/* L110: */
 	    }
-/* L120: */
 	}
 	sgemm_("T", "N", n, nrhs, n, &c_b10, &rwork[irwvt], n, &rwork[irwb], 
 		n, &c_b35, &rwork[irwrb], n);
@@ -381,9 +350,7 @@ static real c_b35 = 0.f;
 	    for (jrow = 1; jrow <= i__2; ++jrow) {
 		++j;
 		rwork[j] = r_imag(&b[jrow + jcol * b_dim1]);
-/* L130: */
 	    }
-/* L140: */
 	}
 	sgemm_("T", "N", n, nrhs, n, &c_b10, &rwork[irwvt], n, &rwork[irwb], 
 		n, &c_b35, &rwork[irwib], n);
@@ -400,9 +367,7 @@ static real c_b35 = 0.f;
 		i__5 = jimag;
 		q__1.r = rwork[i__4], q__1.i = rwork[i__5];
 		b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L150: */
 	    }
-/* L160: */
 	}
 
 /*        Unscale. */
@@ -456,7 +421,6 @@ static real c_b35 = 0.f;
 	if ((r__1 = d__[i__], dabs(r__1)) < eps) {
 	    d__[i__] = r_sign(&eps, &d__[i__]);
 	}
-/* L170: */
     }
 
     i__1 = nm1;
@@ -528,9 +492,7 @@ static real c_b35 = 0.f;
 			++j;
 			i__4 = jrow + jcol * b_dim1;
 			rwork[j] = b[i__4].r;
-/* L180: */
 		    }
-/* L190: */
 		}
 		sgemm_("T", "N", &nsize, nrhs, &nsize, &c_b10, &rwork[u + st1]
 , n, &rwork[irwb], &nsize, &c_b35, &rwork[irwrb], &
@@ -542,9 +504,7 @@ static real c_b35 = 0.f;
 		    for (jrow = st; jrow <= i__3; ++jrow) {
 			++j;
 			rwork[j] = r_imag(&b[jrow + jcol * b_dim1]);
-/* L200: */
 		    }
-/* L210: */
 		}
 		sgemm_("T", "N", &nsize, nrhs, &nsize, &c_b10, &rwork[u + st1]
 , n, &rwork[irwb], &nsize, &c_b35, &rwork[irwib], &
@@ -562,9 +522,7 @@ static real c_b35 = 0.f;
 			i__6 = jimag;
 			q__1.r = rwork[i__5], q__1.i = rwork[i__6];
 			b[i__4].r = q__1.r, b[i__4].i = q__1.i;
-/* L220: */
 		    }
-/* L230: */
 		}
 
 		clacpy_("A", &nsize, nrhs, &b[st + b_dim1], ldb, &work[bx + 
@@ -597,7 +555,6 @@ static real c_b35 = 0.f;
 	    }
 	    st = i__ + 1;
 	}
-/* L240: */
     }
 
 /*     Apply the singular values and treat the tiny ones as zero. */
@@ -618,7 +575,6 @@ static real c_b35 = 0.f;
 		    bx + i__ - 1], n, info);
 	}
 	d__[i__] = (r__1 = d__[i__], dabs(r__1));
-/* L250: */
     }
 
 /*     Now apply back the right singular vectors. */
@@ -651,9 +607,7 @@ static real c_b35 = 0.f;
 		    ++jreal;
 		    i__4 = j + jrow;
 		    rwork[jreal] = work[i__4].r;
-/* L260: */
 		}
-/* L270: */
 	    }
 	    sgemm_("T", "N", &nsize, nrhs, &nsize, &c_b10, &rwork[vt + st1], 
 		    n, &rwork[irwb], &nsize, &c_b35, &rwork[irwrb], &nsize);
@@ -666,9 +620,7 @@ static real c_b35 = 0.f;
 		for (jrow = 1; jrow <= i__3; ++jrow) {
 		    ++jimag;
 		    rwork[jimag] = r_imag(&work[j + jrow]);
-/* L280: */
 		}
-/* L290: */
 	    }
 	    sgemm_("T", "N", &nsize, nrhs, &nsize, &c_b10, &rwork[vt + st1], 
 		    n, &rwork[irwb], &nsize, &c_b35, &rwork[irwib], &nsize);
@@ -685,9 +637,7 @@ static real c_b35 = 0.f;
 		    i__6 = jimag;
 		    q__1.r = rwork[i__5], q__1.i = rwork[i__6];
 		    b[i__4].r = q__1.r, b[i__4].i = q__1.i;
-/* L300: */
 		}
-/* L310: */
 	    }
 	} else {
 	    clalsa_(&icmpq2, smlsiz, &nsize, nrhs, &work[bxst], n, &b[st + 
@@ -701,7 +651,6 @@ static real c_b35 = 0.f;
 		return 0;
 	    }
 	}
-/* L320: */
     }
 
 /*     Unscale and sort the singular values. */

@@ -26,16 +26,8 @@
     logical yesrel;
     real smlnum, offdig2;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 
 /*  Purpose */
 /*  ======= */
@@ -74,16 +66,6 @@
 /*     Christof Voemel, University of California, Berkeley, USA */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     As a default, do NOT go for relative-accuracy preserving computations. */
     /* Parameter adjustments */
@@ -140,7 +122,6 @@
 	}
 	tmp = tmp2;
 	offdig = offdig2;
-/* L10: */
     }
 L11:
     if (yesrel) {
@@ -149,20 +130,16 @@ L11:
     } else {
     }
 
-
 /*     *** MORE TO BE IMPLEMENTED *** */
-
 
 /*     Test if the lower bidiagonal matrix L from T = L D L^T */
 /*     (zero shift facto) is well conditioned */
-
 
 /*     Test if the upper bidiagonal matrix U from T = U D U^T */
 /*     (zero shift facto) is well conditioned. */
 /*     In this case, the matrix needs to be flipped and, at the end */
 /*     of the eigenvector computation, the flip needs to be applied */
 /*     to the computed eigenvectors (and the support) */
-
 
     return 0;
 

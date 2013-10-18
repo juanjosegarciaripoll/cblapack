@@ -25,15 +25,8 @@
     integer iinfo;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -79,18 +72,6 @@
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -141,18 +122,15 @@
 		i__4 = ij;
 		q[i__3].r = ap[i__4].r, q[i__3].i = ap[i__4].i;
 		++ij;
-/* L10: */
 	    }
 	    ij += 2;
 	    i__2 = *n + j * q_dim1;
 	    q[i__2].r = 0., q[i__2].i = 0.;
-/* L20: */
 	}
 	i__1 = *n - 1;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    i__2 = i__ + *n * q_dim1;
 	    q[i__2].r = 0., q[i__2].i = 0.;
-/* L30: */
 	}
 	i__1 = *n + *n * q_dim1;
 	q[i__1].r = 1., q[i__1].i = 0.;
@@ -179,7 +157,6 @@
 	for (i__ = 2; i__ <= i__1; ++i__) {
 	    i__2 = i__ + q_dim1;
 	    q[i__2].r = 0., q[i__2].i = 0.;
-/* L40: */
 	}
 	ij = 3;
 	i__1 = *n;
@@ -192,10 +169,8 @@
 		i__4 = ij;
 		q[i__3].r = ap[i__4].r, q[i__3].i = ap[i__4].i;
 		++ij;
-/* L50: */
 	    }
 	    ij += 2;
-/* L60: */
 	}
 	if (*n > 1) {
 

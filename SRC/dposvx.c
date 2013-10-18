@@ -34,15 +34,8 @@
     integer infequ;
     doublereal smlnum;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -235,18 +228,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     a_dim1 = *lda;
     a_offset = 1 + a_dim1;
@@ -309,7 +290,6 @@
 /* Computing MAX */
 		d__1 = smax, d__2 = s[j];
 		smax = max(d__1,d__2);
-/* L10: */
 	    }
 	    if (smin <= 0.) {
 		*info = -10;
@@ -356,9 +336,7 @@
 	    i__2 = *n;
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		b[i__ + j * b_dim1] = s[i__] * b[i__ + j * b_dim1];
-/* L20: */
 	    }
-/* L30: */
 	}
     }
 
@@ -407,14 +385,11 @@
 	    i__2 = *n;
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		x[i__ + j * x_dim1] = s[i__] * x[i__ + j * x_dim1];
-/* L40: */
 	    }
-/* L50: */
 	}
 	i__1 = *nrhs;
 	for (j = 1; j <= i__1; ++j) {
 	    ferr[j] /= scond;
-/* L60: */
 	}
     }
 

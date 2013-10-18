@@ -33,15 +33,8 @@ static doublereal c_b38 = 0.;
     integer i__;
     doublereal ei;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -133,16 +126,6 @@ static doublereal c_b38 = 0.;
 /*  element of the vector defining H(i). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Quick return if possible */
 
@@ -265,7 +248,6 @@ static doublereal c_b38 = 0.;
 		;
 	t[i__ + i__ * t_dim1] = tau[i__];
 
-/* L10: */
     }
     a[*k + *nb + *nb * a_dim1] = ei;
 

@@ -47,15 +47,8 @@ static integer c__2 = 2;
     integer nmaxit, icompz;
     real ssfmax;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -118,18 +111,6 @@ static integer c__2 = 2;
 /*                matrix. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -226,7 +207,6 @@ L10:
 		e[m] = 0.f;
 		goto L30;
 	    }
-/* L20: */
 	}
     }
     m = *n;
@@ -292,7 +272,6 @@ L40:
 			+ 1], dabs(r__2)) + safmin) {
 		    goto L60;
 		}
-/* L50: */
 	    }
 	}
 
@@ -369,7 +348,6 @@ L60:
 		work[*n - 1 + i__] = -s;
 	    }
 
-/* L70: */
 	}
 
 /*        If eigenvectors are desired, then apply saved rotations. */
@@ -413,7 +391,6 @@ L90:
 			- 1], dabs(r__2)) + safmin) {
 		    goto L110;
 		}
-/* L100: */
 	    }
 	}
 
@@ -491,7 +468,6 @@ L110:
 		work[*n - 1 + i__] = s;
 	    }
 
-/* L120: */
 	}
 
 /*        If eigenvectors are desired, then apply saved rotations. */
@@ -549,7 +525,6 @@ L140:
 	if (e[i__] != 0.f) {
 	    ++(*info);
 	}
-/* L150: */
     }
     goto L190;
 
@@ -577,7 +552,6 @@ L160:
 		    k = j;
 		    p = d__[j];
 		}
-/* L170: */
 	    }
 	    if (k != i__) {
 		d__[k] = d__[i__];
@@ -585,7 +559,6 @@ L160:
 		sswap_(n, &z__[i__ * z_dim1 + 1], &c__1, &z__[k * z_dim1 + 1], 
 			 &c__1);
 	    }
-/* L180: */
 	}
     }
 

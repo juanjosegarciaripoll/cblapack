@@ -24,15 +24,8 @@
     integer i__, j;
     real fact, temp;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -63,7 +56,6 @@
 
 /*          On exit, DL is overwritten by the (n-2) elements of the */
 /*          second super-diagonal of the upper triangular matrix U from */
-/*          the LU factorization of A, in DL(1), ..., DL(n-2). */
 
 /*  D       (input/output) REAL array, dimension (N) */
 /*          On entry, D must contain the diagonal elements of A. */
@@ -92,16 +84,6 @@
 /*               completed unless i = N. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --dl;
@@ -162,7 +144,6 @@
 		b[i__ + b_dim1] = b[i__ + 1 + b_dim1];
 		b[i__ + 1 + b_dim1] = temp - fact * b[i__ + 1 + b_dim1];
 	    }
-/* L10: */
 	}
 	if (*n > 1) {
 	    i__ = *n - 1;
@@ -205,7 +186,6 @@
 		    i__2 = *nrhs;
 		    for (j = 1; j <= i__2; ++j) {
 			b[i__ + 1 + j * b_dim1] -= fact * b[i__ + j * b_dim1];
-/* L20: */
 		    }
 		} else {
 		    *info = i__;
@@ -229,10 +209,8 @@
 		    b[i__ + j * b_dim1] = b[i__ + 1 + j * b_dim1];
 		    b[i__ + 1 + j * b_dim1] = temp - fact * b[i__ + 1 + j * 
 			    b_dim1];
-/* L30: */
 		}
 	    }
-/* L40: */
 	}
 	if (*n > 1) {
 	    i__ = *n - 1;
@@ -244,7 +222,6 @@
 		    i__1 = *nrhs;
 		    for (j = 1; j <= i__1; ++j) {
 			b[i__ + 1 + j * b_dim1] -= fact * b[i__ + j * b_dim1];
-/* L50: */
 		    }
 		} else {
 		    *info = i__;
@@ -262,7 +239,6 @@
 		    b[i__ + j * b_dim1] = b[i__ + 1 + j * b_dim1];
 		    b[i__ + 1 + j * b_dim1] = temp - fact * b[i__ + 1 + j * 
 			    b_dim1];
-/* L60: */
 		}
 	    }
 	}
@@ -286,7 +262,6 @@ L70:
 	    b[i__ + j * b_dim1] = (b[i__ + j * b_dim1] - du[i__] * b[i__ + 1 
 		    + j * b_dim1] - dl[i__] * b[i__ + 2 + j * b_dim1]) / d__[
 		    i__];
-/* L80: */
 	}
 	if (j < *nrhs) {
 	    ++j;
@@ -304,9 +279,7 @@ L70:
 		b[i__ + j * b_dim1] = (b[i__ + j * b_dim1] - du[i__] * b[i__ 
 			+ 1 + j * b_dim1] - dl[i__] * b[i__ + 2 + j * b_dim1])
 			 / d__[i__];
-/* L90: */
 	    }
-/* L100: */
 	}
     }
 

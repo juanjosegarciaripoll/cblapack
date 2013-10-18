@@ -28,7 +28,6 @@ doublereal sla_syrpvgrw__(char *uplo, integer *n, integer *info, real *a,
     logical upper;
     real rpvgrw;
 
-
 /*     -- LAPACK routine (version 3.2.1)                                 -- */
 /*     -- Contributed by James Demmel, Deaglan Halligan, Yozo Hida and -- */
 /*     -- Jason Riedy of Univ. of California Berkeley.                 -- */
@@ -36,12 +35,6 @@ doublereal sla_syrpvgrw__(char *uplo, integer *n, integer *info, real *a,
 
 /*     -- LAPACK is a software package provided by Univ. of Tennessee, -- */
 /*     -- Univ. of California Berkeley and NAG Ltd.                    -- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -91,14 +84,6 @@ doublereal sla_syrpvgrw__(char *uplo, integer *n, integer *info, real *a,
 /*     WORK    (input) REAL array, dimension (2*N) */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     a_dim1 = *lda;

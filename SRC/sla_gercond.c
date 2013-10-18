@@ -33,7 +33,6 @@ doublereal sla_gercond__(char *trans, integer *n, real *a, integer *lda, real
     real ainvnm;
     logical notrans;
 
-
 /*     -- LAPACK routine (version 3.2.1)                                 -- */
 /*     -- Contributed by James Demmel, Deaglan Halligan, Yozo Hida and -- */
 /*     -- Jason Riedy of Univ. of California Berkeley.                 -- */
@@ -41,12 +40,6 @@ doublereal sla_gercond__(char *trans, integer *n, real *a, integer *lda, real
 
 /*     -- LAPACK is a software package provided by Univ. of Tennessee, -- */
 /*     -- Univ. of California Berkeley and NAG Ltd.                    -- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*    .. */
 
 /*  Purpose */
 /*  ======= */
@@ -112,18 +105,6 @@ doublereal sla_gercond__(char *trans, integer *n, real *a, integer *lda, real
 /*     Workspace.2 */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     a_dim1 = *lda;

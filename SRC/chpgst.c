@@ -36,15 +36,8 @@ static integer c__1 = 1;
     real bjj, bkk;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -95,18 +88,6 @@ static integer c__1 = 1;
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -167,7 +148,6 @@ static integer c__1 = 1;
 		q__2.r = ap[i__3].r - q__3.r, q__2.i = ap[i__3].i - q__3.i;
 		q__1.r = q__2.r / bjj, q__1.i = q__2.i / bjj;
 		ap[i__2].r = q__1.r, ap[i__2].i = q__1.i;
-/* L10: */
 	    }
 	} else {
 
@@ -212,7 +192,6 @@ static integer c__1 = 1;
 			     &ap[kk + 1], &c__1);
 		}
 		kk = k1k1;
-/* L20: */
 	    }
 	}
     } else {
@@ -253,7 +232,6 @@ static integer c__1 = 1;
 		r__2 = bkk;
 		r__1 = akk * (r__2 * r__2);
 		ap[i__2].r = r__1, ap[i__2].i = 0.f;
-/* L30: */
 	    }
 	} else {
 
@@ -287,7 +265,6 @@ static integer c__1 = 1;
 		ctpmv_(uplo, "Conjugate transpose", "Non-unit", &i__2, &bp[jj]
 , &ap[jj], &c__1);
 		jj = j1j1;
-/* L40: */
 	    }
 	}
     }

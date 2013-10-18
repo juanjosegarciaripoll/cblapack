@@ -30,17 +30,10 @@ static integer c__1 = 1;
     logical upper;
     doublereal ainvnm;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
 
 /*     Modified to call DLACN2 in place of DLACON, 5 Feb 03, SJH. */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -91,18 +84,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -149,7 +130,6 @@ static integer c__1 = 1;
 		return 0;
 	    }
 	    ip -= i__;
-/* L10: */
 	}
     } else {
 
@@ -162,7 +142,6 @@ static integer c__1 = 1;
 		return 0;
 	    }
 	    ip = ip + *n - i__ + 1;
-/* L20: */
 	}
     }
 

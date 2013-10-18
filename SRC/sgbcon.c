@@ -38,17 +38,10 @@ static integer c__1 = 1;
     char normin[1];
     real smlnum;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
 
 /*     Modified to call SLACN2 in place of SLACON, 7 Feb 03, SJH. */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -110,20 +103,6 @@ static integer c__1 = 1;
 /*          < 0: if INFO = -i, the i-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -203,7 +182,6 @@ L10:
 		    r__1 = -t;
 		    saxpy_(&lm, &r__1, &ab[kd + 1 + j * ab_dim1], &c__1, &
 			    work[j + 1], &c__1);
-/* L20: */
 		}
 	    }
 
@@ -237,7 +215,6 @@ L10:
 			work[jp] = work[j];
 			work[j] = t;
 		    }
-/* L30: */
 		}
 	    }
 	}

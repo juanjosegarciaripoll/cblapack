@@ -40,18 +40,12 @@ static doublereal c_b30 = 1.;
     logical upper;
     doublecomplex ztemp;
 
-
 /*  -- LAPACK routine (version 3.2.1)                                  -- */
 
 /*  -- Contributed by Craig Lucas, University of Manchester / NAG Ltd. -- */
 /*  -- April 2009                                                      -- */
 
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -119,18 +113,6 @@ static doublereal c_b30 = 1.;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -180,7 +162,6 @@ static doublereal c_b30 = 1.;
 	i__1 = *n;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    piv[i__] = i__;
-/* L100: */
 	}
 
 /*     Compute stopping value */
@@ -189,7 +170,6 @@ static doublereal c_b30 = 1.;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    i__2 = i__ + i__ * a_dim1;
 	    work[i__] = a[i__2].r;
-/* L110: */
 	}
 	pvt = dmaxloc_(&work[1], n);
 	i__1 = pvt + pvt * a_dim1;
@@ -207,7 +187,6 @@ static doublereal c_b30 = 1.;
 	} else {
 	    dstop = *tol;
 	}
-
 
 	if (upper) {
 
@@ -229,7 +208,6 @@ static doublereal c_b30 = 1.;
 		i__3 = *n;
 		for (i__ = k; i__ <= i__3; ++i__) {
 		    work[i__] = 0.;
-/* L120: */
 		}
 
 		i__3 = k + jb - 1;
@@ -253,7 +231,6 @@ static doublereal c_b30 = 1.;
 			i__5 = i__ + i__ * a_dim1;
 			work[*n + i__] = a[i__5].r - work[i__];
 
-/* L130: */
 		    }
 
 		    if (j > 1) {
@@ -292,7 +269,6 @@ static doublereal c_b30 = 1.;
 			    a[i__5].r = z__1.r, a[i__5].i = z__1.i;
 			    i__5 = i__ + pvt * a_dim1;
 			    a[i__5].r = ztemp.r, a[i__5].i = ztemp.i;
-/* L140: */
 			}
 			i__4 = j + pvt * a_dim1;
 			d_cnjg(&z__1, &a[j + pvt * a_dim1]);
@@ -330,7 +306,6 @@ static doublereal c_b30 = 1.;
 			zdscal_(&i__4, &d__1, &a[j + (j + 1) * a_dim1], lda);
 		    }
 
-/* L150: */
 		}
 
 /*              Update trailing matrix, J already incremented */
@@ -341,7 +316,6 @@ static doublereal c_b30 = 1.;
 			    j * a_dim1], lda, &c_b30, &a[j + j * a_dim1], lda);
 		}
 
-/* L160: */
 	    }
 
 	} else {
@@ -364,7 +338,6 @@ static doublereal c_b30 = 1.;
 		i__3 = *n;
 		for (i__ = k; i__ <= i__3; ++i__) {
 		    work[i__] = 0.;
-/* L170: */
 		}
 
 		i__3 = k + jb - 1;
@@ -388,7 +361,6 @@ static doublereal c_b30 = 1.;
 			i__5 = i__ + i__ * a_dim1;
 			work[*n + i__] = a[i__5].r - work[i__];
 
-/* L180: */
 		    }
 
 		    if (j > 1) {
@@ -427,12 +399,10 @@ static doublereal c_b30 = 1.;
 			    a[i__5].r = z__1.r, a[i__5].i = z__1.i;
 			    i__5 = pvt + i__ * a_dim1;
 			    a[i__5].r = ztemp.r, a[i__5].i = ztemp.i;
-/* L190: */
 			}
 			i__4 = pvt + j * a_dim1;
 			d_cnjg(&z__1, &a[pvt + j * a_dim1]);
 			a[i__4].r = z__1.r, a[i__4].i = z__1.i;
-
 
 /*                    Swap dot products and PIV */
 
@@ -466,7 +436,6 @@ static doublereal c_b30 = 1.;
 			zdscal_(&i__4, &d__1, &a[j + 1 + j * a_dim1], &c__1);
 		    }
 
-/* L200: */
 		}
 
 /*              Update trailing matrix, J already incremented */
@@ -477,7 +446,6 @@ static doublereal c_b30 = 1.;
 			     a_dim1], lda, &c_b30, &a[j + j * a_dim1], lda);
 		}
 
-/* L210: */
 	    }
 
 	}

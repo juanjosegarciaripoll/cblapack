@@ -30,15 +30,8 @@ static integer c_n1 = -1;
     integer i__, j, jb, nb;
     integer iinfo;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -84,18 +77,6 @@ static integer c_n1 = -1;
 /*                to solve a system of equations. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -161,7 +142,6 @@ static integer c_n1 = -1;
 	    i__3 = min(i__4,i__5);
 	    for (i__ = j; i__ <= i__3; ++i__) {
 		ipiv[i__] = j - 1 + ipiv[i__];
-/* L10: */
 	    }
 
 /*           Apply interchanges to columns 1:J-1. */
@@ -198,7 +178,6 @@ static integer c_n1 = -1;
 			    a_dim1], lda);
 		}
 	    }
-/* L20: */
 	}
     }
     return 0;

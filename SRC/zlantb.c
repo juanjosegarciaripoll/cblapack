@@ -30,15 +30,8 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
     logical udiag;
     doublereal value;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -110,18 +103,6 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 
 /* ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     ab_dim1 = *ldab;
     ab_offset = 1 + ab_dim1;
@@ -147,9 +128,7 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 /* Computing MAX */
 			d__1 = value, d__2 = z_abs(&ab[i__ + j * ab_dim1]);
 			value = max(d__1,d__2);
-/* L10: */
 		    }
-/* L20: */
 		}
 	    } else {
 		i__1 = *n;
@@ -161,9 +140,7 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 /* Computing MAX */
 			d__1 = value, d__2 = z_abs(&ab[i__ + j * ab_dim1]);
 			value = max(d__1,d__2);
-/* L30: */
 		    }
-/* L40: */
 		}
 	    }
 	} else {
@@ -178,9 +155,7 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 /* Computing MAX */
 			d__1 = value, d__2 = z_abs(&ab[i__ + j * ab_dim1]);
 			value = max(d__1,d__2);
-/* L50: */
 		    }
-/* L60: */
 		}
 	    } else {
 		i__1 = *n;
@@ -192,9 +167,7 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 /* Computing MAX */
 			d__1 = value, d__2 = z_abs(&ab[i__ + j * ab_dim1]);
 			value = max(d__1,d__2);
-/* L70: */
 		    }
-/* L80: */
 		}
 	    }
 	}
@@ -215,7 +188,6 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 		    i__3 = *k;
 		    for (i__ = max(i__2,1); i__ <= i__3; ++i__) {
 			sum += z_abs(&ab[i__ + j * ab_dim1]);
-/* L90: */
 		    }
 		} else {
 		    sum = 0.;
@@ -224,11 +196,9 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 		    i__2 = *k + 1;
 		    for (i__ = max(i__3,1); i__ <= i__2; ++i__) {
 			sum += z_abs(&ab[i__ + j * ab_dim1]);
-/* L100: */
 		    }
 		}
 		value = max(value,sum);
-/* L110: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -240,7 +210,6 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 		    i__2 = min(i__3,i__4);
 		    for (i__ = 2; i__ <= i__2; ++i__) {
 			sum += z_abs(&ab[i__ + j * ab_dim1]);
-/* L120: */
 		    }
 		} else {
 		    sum = 0.;
@@ -249,11 +218,9 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 		    i__2 = min(i__3,i__4);
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			sum += z_abs(&ab[i__ + j * ab_dim1]);
-/* L130: */
 		    }
 		}
 		value = max(value,sum);
-/* L140: */
 	    }
 	}
     } else if (lsame_(norm, "I")) {
@@ -266,7 +233,6 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 		i__1 = *n;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    work[i__] = 1.;
-/* L150: */
 		}
 		i__1 = *n;
 		for (j = 1; j <= i__1; ++j) {
@@ -276,15 +242,12 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 		    i__4 = j - 1;
 		    for (i__ = max(i__2,i__3); i__ <= i__4; ++i__) {
 			work[i__] += z_abs(&ab[l + i__ + j * ab_dim1]);
-/* L160: */
 		    }
-/* L170: */
 		}
 	    } else {
 		i__1 = *n;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    work[i__] = 0.;
-/* L180: */
 		}
 		i__1 = *n;
 		for (j = 1; j <= i__1; ++j) {
@@ -294,9 +257,7 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 		    i__3 = j;
 		    for (i__ = max(i__4,i__2); i__ <= i__3; ++i__) {
 			work[i__] += z_abs(&ab[l + i__ + j * ab_dim1]);
-/* L190: */
 		    }
-/* L200: */
 		}
 	    }
 	} else {
@@ -304,7 +265,6 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 		i__1 = *n;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    work[i__] = 1.;
-/* L210: */
 		}
 		i__1 = *n;
 		for (j = 1; j <= i__1; ++j) {
@@ -314,15 +274,12 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 		    i__3 = min(i__4,i__2);
 		    for (i__ = j + 1; i__ <= i__3; ++i__) {
 			work[i__] += z_abs(&ab[l + i__ + j * ab_dim1]);
-/* L220: */
 		    }
-/* L230: */
 		}
 	    } else {
 		i__1 = *n;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    work[i__] = 0.;
-/* L240: */
 		}
 		i__1 = *n;
 		for (j = 1; j <= i__1; ++j) {
@@ -332,9 +289,7 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 		    i__3 = min(i__4,i__2);
 		    for (i__ = j; i__ <= i__3; ++i__) {
 			work[i__] += z_abs(&ab[l + i__ + j * ab_dim1]);
-/* L250: */
 		    }
-/* L260: */
 		}
 	    }
 	}
@@ -343,7 +298,6 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 /* Computing MAX */
 	    d__1 = value, d__2 = work[i__];
 	    value = max(d__1,d__2);
-/* L270: */
 	}
     } else if (lsame_(norm, "F") || lsame_(norm, "E")) {
 
@@ -363,7 +317,6 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 			i__2 = *k + 2 - j;
 			zlassq_(&i__3, &ab[max(i__2, 1)+ j * ab_dim1], &c__1, 
 				&scale, &sum);
-/* L280: */
 		    }
 		}
 	    } else {
@@ -378,7 +331,6 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 		    i__5 = *k + 2 - j;
 		    zlassq_(&i__3, &ab[max(i__5, 1)+ j * ab_dim1], &c__1, &
 			    scale, &sum);
-/* L290: */
 		}
 	    }
 	} else {
@@ -393,7 +345,6 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 			i__3 = min(i__4,*k);
 			zlassq_(&i__3, &ab[j * ab_dim1 + 2], &c__1, &scale, &
 				sum);
-/* L300: */
 		    }
 		}
 	    } else {
@@ -405,7 +356,6 @@ doublereal zlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
 		    i__4 = *n - j + 1, i__2 = *k + 1;
 		    i__3 = min(i__4,i__2);
 		    zlassq_(&i__3, &ab[j * ab_dim1 + 1], &c__1, &scale, &sum);
-/* L310: */
 		}
 	    }
 	}

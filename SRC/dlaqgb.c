@@ -24,15 +24,8 @@
     integer i__, j;
     doublereal cj, large, small;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -107,16 +100,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -161,9 +144,7 @@
 		for (i__ = max(i__2,i__3); i__ <= i__4; ++i__) {
 		    ab[*ku + 1 + i__ - j + j * ab_dim1] = cj * ab[*ku + 1 + 
 			    i__ - j + j * ab_dim1];
-/* L10: */
 		}
-/* L20: */
 	    }
 	    *(unsigned char *)equed = 'C';
 	}
@@ -181,9 +162,7 @@
 	    for (i__ = max(i__4,i__2); i__ <= i__3; ++i__) {
 		ab[*ku + 1 + i__ - j + j * ab_dim1] = r__[i__] * ab[*ku + 1 + 
 			i__ - j + j * ab_dim1];
-/* L30: */
 	    }
-/* L40: */
 	}
 	*(unsigned char *)equed = 'R';
     } else {
@@ -201,9 +180,7 @@
 	    for (i__ = max(i__3,i__4); i__ <= i__2; ++i__) {
 		ab[*ku + 1 + i__ - j + j * ab_dim1] = cj * r__[i__] * ab[*ku 
 			+ 1 + i__ - j + j * ab_dim1];
-/* L50: */
 	    }
-/* L60: */
 	}
 	*(unsigned char *)equed = 'B';
     }

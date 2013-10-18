@@ -25,15 +25,8 @@
     complex temp;
     real ctemp, stemp;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -55,11 +48,7 @@
 
 /*  When DIRECT = 'F' (Forward sequence), then */
 
-/*     P = P(z-1) * ... * P(2) * P(1) */
-
 /*  and when DIRECT = 'B' (Backward sequence), then */
-
-/*     P = P(1) * P(2) * ... * P(z-1) */
 
 /*  where P(k) is a plane rotation matrix defined by the 2-by-2 rotation */
 
@@ -70,12 +59,10 @@
 /*  for the plane (k,k+1), i.e., P(k) has the form */
 
 /*     P(k) = (  1                                            ) */
-/*            (       ...                                     ) */
 /*            (              1                                ) */
 /*            (                   c(k)  s(k)                  ) */
 /*            (                  -s(k)  c(k)                  ) */
 /*            (                                1              ) */
-/*            (                                     ...       ) */
 /*            (                                            1  ) */
 
 /*  where R(k) appears as a rank-2 modification to the identity matrix in */
@@ -86,11 +73,9 @@
 
 /*     P(k) = (  c(k)                    s(k)                 ) */
 /*            (         1                                     ) */
-/*            (              ...                              ) */
 /*            (                     1                         ) */
 /*            ( -s(k)                    c(k)                 ) */
 /*            (                                 1             ) */
-/*            (                                      ...      ) */
 /*            (                                             1 ) */
 
 /*  where R(k) appears in rows and columns 1 and k+1. */
@@ -99,11 +84,9 @@
 /*  performed for the plane (k,z), giving P(k) the form */
 
 /*     P(k) = ( 1                                             ) */
-/*            (      ...                                      ) */
 /*            (             1                                 ) */
 /*            (                  c(k)                    s(k) ) */
 /*            (                         1                     ) */
-/*            (                              ...              ) */
 /*            (                                     1         ) */
 /*            (                 -s(k)                    c(k) ) */
 
@@ -129,8 +112,6 @@
 /*  DIRECT  (input) CHARACTER*1 */
 /*          Specifies whether P is a forward or backward sequence of */
 /*          plane rotations. */
-/*          = 'F':  Forward, P = P(z-1)*...*P(2)*P(1) */
-/*          = 'B':  Backward, P = P(1)*P(2)*...*P(z-1) */
 
 /*  M       (input) INTEGER */
 /*          The number of rows of the matrix A.  If m <= 1, an immediate */
@@ -161,18 +142,6 @@
 /*          The leading dimension of the array A.  LDA >= max(1,M). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters */
 
@@ -241,10 +210,8 @@
 			    q__1.r = q__2.r + q__3.r, q__1.i = q__2.i + 
 				    q__3.i;
 			    a[i__3].r = q__1.r, a[i__3].i = q__1.i;
-/* L10: */
 			}
 		    }
-/* L20: */
 		}
 	    } else if (lsame_(direct, "B")) {
 		for (j = *m - 1; j >= 1; --j) {
@@ -271,10 +238,8 @@
 			    q__1.r = q__2.r + q__3.r, q__1.i = q__2.i + 
 				    q__3.i;
 			    a[i__2].r = q__1.r, a[i__2].i = q__1.i;
-/* L30: */
 			}
 		    }
-/* L40: */
 		}
 	    }
 	} else if (lsame_(pivot, "T")) {
@@ -304,10 +269,8 @@
 			    q__1.r = q__2.r + q__3.r, q__1.i = q__2.i + 
 				    q__3.i;
 			    a[i__3].r = q__1.r, a[i__3].i = q__1.i;
-/* L50: */
 			}
 		    }
-/* L60: */
 		}
 	    } else if (lsame_(direct, "B")) {
 		for (j = *m; j >= 2; --j) {
@@ -334,10 +297,8 @@
 			    q__1.r = q__2.r + q__3.r, q__1.i = q__2.i + 
 				    q__3.i;
 			    a[i__2].r = q__1.r, a[i__2].i = q__1.i;
-/* L70: */
 			}
 		    }
-/* L80: */
 		}
 	    }
 	} else if (lsame_(pivot, "B")) {
@@ -367,10 +328,8 @@
 			    q__1.r = q__2.r - q__3.r, q__1.i = q__2.i - 
 				    q__3.i;
 			    a[i__3].r = q__1.r, a[i__3].i = q__1.i;
-/* L90: */
 			}
 		    }
-/* L100: */
 		}
 	    } else if (lsame_(direct, "B")) {
 		for (j = *m - 1; j >= 1; --j) {
@@ -397,10 +356,8 @@
 			    q__1.r = q__2.r - q__3.r, q__1.i = q__2.i - 
 				    q__3.i;
 			    a[i__2].r = q__1.r, a[i__2].i = q__1.i;
-/* L110: */
 			}
 		    }
-/* L120: */
 		}
 	    }
 	}
@@ -435,10 +392,8 @@
 			    q__1.r = q__2.r + q__3.r, q__1.i = q__2.i + 
 				    q__3.i;
 			    a[i__3].r = q__1.r, a[i__3].i = q__1.i;
-/* L130: */
 			}
 		    }
-/* L140: */
 		}
 	    } else if (lsame_(direct, "B")) {
 		for (j = *n - 1; j >= 1; --j) {
@@ -465,10 +420,8 @@
 			    q__1.r = q__2.r + q__3.r, q__1.i = q__2.i + 
 				    q__3.i;
 			    a[i__2].r = q__1.r, a[i__2].i = q__1.i;
-/* L150: */
 			}
 		    }
-/* L160: */
 		}
 	    }
 	} else if (lsame_(pivot, "T")) {
@@ -498,10 +451,8 @@
 			    q__1.r = q__2.r + q__3.r, q__1.i = q__2.i + 
 				    q__3.i;
 			    a[i__3].r = q__1.r, a[i__3].i = q__1.i;
-/* L170: */
 			}
 		    }
-/* L180: */
 		}
 	    } else if (lsame_(direct, "B")) {
 		for (j = *n; j >= 2; --j) {
@@ -528,10 +479,8 @@
 			    q__1.r = q__2.r + q__3.r, q__1.i = q__2.i + 
 				    q__3.i;
 			    a[i__2].r = q__1.r, a[i__2].i = q__1.i;
-/* L190: */
 			}
 		    }
-/* L200: */
 		}
 	    }
 	} else if (lsame_(pivot, "B")) {
@@ -561,10 +510,8 @@
 			    q__1.r = q__2.r - q__3.r, q__1.i = q__2.i - 
 				    q__3.i;
 			    a[i__3].r = q__1.r, a[i__3].i = q__1.i;
-/* L210: */
 			}
 		    }
-/* L220: */
 		}
 	    } else if (lsame_(direct, "B")) {
 		for (j = *n - 1; j >= 1; --j) {
@@ -591,10 +538,8 @@
 			    q__1.r = q__2.r - q__3.r, q__1.i = q__2.i - 
 				    q__3.i;
 			    a[i__2].r = q__1.r, a[i__2].i = q__1.i;
-/* L230: */
 			}
 		    }
-/* L240: */
 		}
 	    }
 	}

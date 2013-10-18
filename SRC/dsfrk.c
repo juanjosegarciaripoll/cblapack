@@ -27,20 +27,12 @@
     logical lower;
     logical nisodd, notrans;
 
-
 /*  -- LAPACK routine (version 3.2)                                    -- */
 
 /*  -- Contributed by Julien Langou of the Univ. of Colorado Denver    -- */
 /*  -- November 2008                                                   -- */
 
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -123,26 +115,12 @@
 /*           On entry, BETA specifies the scalar beta. */
 /*           Unchanged on exit. */
 
-
 /*  C      - (input/output) DOUBLE PRECISION array, dimension ( NT ); */
 /*           NT = N*(N+1)/2. On entry, the symmetric matrix C in RFP */
 /*           Format. RFP Format is described by TRANSR, UPLO and N. */
 
 /*  Arguments */
 /*  ========== */
-
-/*     .. */
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 

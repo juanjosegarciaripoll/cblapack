@@ -35,15 +35,8 @@ static complex c_b2 = {1.f,0.f};
     logical wantq, wantu, wantv;
     logical forwrd;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -174,22 +167,6 @@ static complex c_b2 = {1.f,0.f};
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters */
 
     /* Parameter adjustments */
@@ -255,7 +232,6 @@ static complex c_b2 = {1.f,0.f};
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	iwork[i__] = 0;
-/* L10: */
     }
     cgeqpf_(p, n, &b[b_offset], ldb, &iwork[1], &tau[1], &work[1], &rwork[1], 
 	    info);
@@ -274,7 +250,6 @@ static complex c_b2 = {1.f,0.f};
 		b_dim1]), dabs(r__2)) > *tolb) {
 	    ++(*l);
 	}
-/* L20: */
     }
 
     if (wantv) {
@@ -299,9 +274,7 @@ static complex c_b2 = {1.f,0.f};
 	for (i__ = j + 1; i__ <= i__2; ++i__) {
 	    i__3 = i__ + j * b_dim1;
 	    b[i__3].r = 0.f, b[i__3].i = 0.f;
-/* L30: */
 	}
-/* L40: */
     }
     if (*p > *l) {
 	i__1 = *p - *l;
@@ -344,9 +317,7 @@ static complex c_b2 = {1.f,0.f};
 	    for (i__ = j - *n + *l + 1; i__ <= i__2; ++i__) {
 		i__3 = i__ + j * b_dim1;
 		b[i__3].r = 0.f, b[i__3].i = 0.f;
-/* L50: */
 	    }
-/* L60: */
 	}
 
     }
@@ -362,7 +333,6 @@ static complex c_b2 = {1.f,0.f};
     i__1 = *n - *l;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	iwork[i__] = 0;
-/* L70: */
     }
     i__1 = *n - *l;
     cgeqpf_(m, &i__1, &a[a_offset], lda, &iwork[1], &tau[1], &work[1], &rwork[
@@ -380,7 +350,6 @@ static complex c_b2 = {1.f,0.f};
 		a_dim1]), dabs(r__2)) > *tola) {
 	    ++(*k);
 	}
-/* L80: */
     }
 
 /*     Update A12 := U'*A12, where A12 = A( 1:M, N-L+1:N ) */
@@ -425,9 +394,7 @@ static complex c_b2 = {1.f,0.f};
 	for (i__ = j + 1; i__ <= i__2; ++i__) {
 	    i__3 = i__ + j * a_dim1;
 	    a[i__3].r = 0.f, a[i__3].i = 0.f;
-/* L90: */
 	}
-/* L100: */
     }
     if (*m > *k) {
 	i__1 = *m - *k;
@@ -461,9 +428,7 @@ static complex c_b2 = {1.f,0.f};
 	    for (i__ = j - *n + *l + *k + 1; i__ <= i__2; ++i__) {
 		i__3 = i__ + j * a_dim1;
 		a[i__3].r = 0.f, a[i__3].i = 0.f;
-/* L110: */
 	    }
-/* L120: */
 	}
 
     }
@@ -497,9 +462,7 @@ static complex c_b2 = {1.f,0.f};
 	    for (i__ = j - *n + *k + *l + 1; i__ <= i__2; ++i__) {
 		i__3 = i__ + j * a_dim1;
 		a[i__3].r = 0.f, a[i__3].i = 0.f;
-/* L130: */
 	    }
-/* L140: */
 	}
 
     }

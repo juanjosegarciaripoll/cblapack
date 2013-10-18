@@ -37,16 +37,8 @@ static integer c__1 = 1;
     integer ptsx;
     integer iiter;
 
-
 /*  -- LAPACK PROTOTYPE driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     February 2007 */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -154,21 +146,6 @@ static integer c__1 = 1;
 /*                could not be computed. */
 
 /*  ========= */
-
-/*     .. Parameters .. */
-
-
-
-
-/*     .. Local Scalars .. */
-
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     work_dim1 = *n;
@@ -360,7 +337,6 @@ L10:
 
 L20:
 
-/* L30: */
 	;
     }
 

@@ -39,15 +39,8 @@ static integer c__1 = 1;
     doublereal nrmsml;
     doublereal growto;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -109,22 +102,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     h_dim1 = *ldh;
     h_offset = 1 + h_dim1;
@@ -157,13 +134,11 @@ static integer c__1 = 1;
 	    i__3 = i__ + j * b_dim1;
 	    i__4 = i__ + j * h_dim1;
 	    b[i__3].r = h__[i__4].r, b[i__3].i = h__[i__4].i;
-/* L10: */
 	}
 	i__2 = j + j * b_dim1;
 	i__3 = j + j * h_dim1;
 	z__1.r = h__[i__3].r - w->r, z__1.i = h__[i__3].i - w->i;
 	b[i__2].r = z__1.r, b[i__2].i = z__1.i;
-/* L20: */
     }
 
     if (*noinit) {
@@ -174,7 +149,6 @@ static integer c__1 = 1;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    i__2 = i__;
 	    v[i__2].r = *eps3, v[i__2].i = 0.;
-/* L30: */
 	}
     } else {
 
@@ -217,7 +191,6 @@ static integer c__1 = 1;
 		    b[i__3].r = z__1.r, b[i__3].i = z__1.i;
 		    i__3 = i__ + j * b_dim1;
 		    b[i__3].r = temp.r, b[i__3].i = temp.i;
-/* L40: */
 		}
 	    } else {
 
@@ -241,11 +214,9 @@ static integer c__1 = 1;
 			z__1.r = b[i__4].r - z__2.r, z__1.i = b[i__4].i - 
 				z__2.i;
 			b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L50: */
 		    }
 		}
 	    }
-/* L60: */
 	}
 	i__1 = *n + *n * b_dim1;
 	if (b[i__1].r == 0. && b[i__1].i == 0.) {
@@ -286,7 +257,6 @@ static integer c__1 = 1;
 		    b[i__2].r = z__1.r, b[i__2].i = z__1.i;
 		    i__2 = i__ + j * b_dim1;
 		    b[i__2].r = temp.r, b[i__2].i = temp.i;
-/* L70: */
 		}
 	    } else {
 
@@ -310,11 +280,9 @@ static integer c__1 = 1;
 			z__1.r = b[i__3].r - z__2.r, z__1.i = b[i__3].i - 
 				z__2.i;
 			b[i__2].r = z__1.r, b[i__2].i = z__1.i;
-/* L80: */
 		    }
 		}
 	    }
-/* L90: */
 	}
 	i__1 = b_dim1 + 1;
 	if (b[i__1].r == 0. && b[i__1].i == 0.) {
@@ -353,14 +321,12 @@ static integer c__1 = 1;
 	for (i__ = 2; i__ <= i__2; ++i__) {
 	    i__3 = i__;
 	    v[i__3].r = rtemp, v[i__3].i = 0.;
-/* L100: */
 	}
 	i__2 = *n - its + 1;
 	i__3 = *n - its + 1;
 	d__1 = *eps3 * rootn;
 	z__1.r = v[i__3].r - d__1, z__1.i = v[i__3].i;
 	v[i__2].r = z__1.r, v[i__2].i = z__1.i;
-/* L110: */
     }
 
 /*     Failure to find eigenvector in N iterations. */

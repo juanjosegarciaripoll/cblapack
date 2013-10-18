@@ -37,15 +37,8 @@ static integer c__1 = 1;
     integer igivnm, submat, curprb, subpbs, igivpt;
     integer curlvl, matsiz, iprmpt, smlsiz;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -113,18 +106,6 @@ static integer c__1 = 1;
 
 /*  Warning:      N could be as big as QSIZ! */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -180,7 +161,6 @@ L10:
 	for (j = subpbs; j >= 1; --j) {
 	    iwork[j * 2] = (iwork[j] + 1) / 2;
 	    iwork[(j << 1) - 1] = iwork[j] / 2;
-/* L20: */
 	}
 	++tlvls;
 	subpbs <<= 1;
@@ -189,7 +169,6 @@ L10:
     i__1 = subpbs;
     for (j = 2; j <= i__1; ++j) {
 	iwork[j] += iwork[j - 1];
-/* L30: */
     }
 
 /*     Divide the matrix into SUBPBS submatrices of size at most SMLSIZ+1 */
@@ -202,7 +181,6 @@ L10:
 	smm1 = submat - 1;
 	d__[smm1] -= (d__1 = e[smm1], abs(d__1));
 	d__[submat] -= (d__1 = e[smm1], abs(d__1));
-/* L40: */
     }
 
     indxq = (*n << 2) + 3;
@@ -234,7 +212,6 @@ L10:
     for (i__ = 0; i__ <= i__1; ++i__) {
 	iwork[iprmpt + i__] = 1;
 	iwork[igivpt + i__] = 1;
-/* L50: */
     }
     iwork[iqptr] = 1;
 
@@ -270,9 +247,7 @@ L10:
 	for (j = submat; j <= i__2; ++j) {
 	    iwork[indxq + j] = k;
 	    ++k;
-/* L60: */
 	}
-/* L70: */
     }
 
 /*     Successively merge eigensystems of adjacent submatrices */
@@ -316,7 +291,6 @@ L80:
 		return 0;
 	    }
 	    iwork[i__ / 2 + 1] = iwork[i__ + 2];
-/* L90: */
 	}
 	subpbs /= 2;
 	++curlvl;
@@ -334,7 +308,6 @@ L80:
 	rwork[i__] = d__[j];
 	zcopy_(qsiz, &qstore[j * qstore_dim1 + 1], &c__1, &q[i__ * q_dim1 + 1]
 , &c__1);
-/* L100: */
     }
     dcopy_(n, &rwork[1], &c__1, &d__[1], &c__1);
 

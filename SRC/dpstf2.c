@@ -36,15 +36,9 @@ static doublereal c_b18 = 1.;
     doublereal dstop;
     logical upper;
 
-
 /*  -- LAPACK PROTOTYPE routine (version 3.2) -- */
 /*     Craig Lucas, University of Manchester / NAG Ltd. */
 /*     October, 2008 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -112,18 +106,6 @@ static doublereal c_b18 = 1.;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters */
 
     /* Parameter adjustments */
@@ -160,7 +142,6 @@ static doublereal c_b18 = 1.;
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	piv[i__] = i__;
-/* L100: */
     }
 
 /*     Compute stopping value */
@@ -193,7 +174,6 @@ static doublereal c_b18 = 1.;
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	work[i__] = 0.;
-/* L110: */
     }
 
     if (upper) {
@@ -217,7 +197,6 @@ static doublereal c_b18 = 1.;
 		}
 		work[*n + i__] = a[i__ + i__ * a_dim1] - work[i__];
 
-/* L120: */
 	    }
 
 	    if (j > 1) {
@@ -274,7 +253,6 @@ static doublereal c_b18 = 1.;
 		dscal_(&i__2, &d__1, &a[j + (j + 1) * a_dim1], lda);
 	    }
 
-/* L130: */
 	}
 
     } else {
@@ -298,7 +276,6 @@ static doublereal c_b18 = 1.;
 		}
 		work[*n + i__] = a[i__ + i__ * a_dim1] - work[i__];
 
-/* L140: */
 	    }
 
 	    if (j > 1) {
@@ -354,7 +331,6 @@ static doublereal c_b18 = 1.;
 		dscal_(&i__2, &d__1, &a[j + 1 + j * a_dim1], &c__1);
 	    }
 
-/* L150: */
 	}
 
     }

@@ -25,15 +25,8 @@
     /* Local variables */
     integer here;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -113,7 +106,6 @@
 /*                and ILST points to the first row of the current */
 /*                position of the block being moved. */
 
-
 /*  Further Details */
 /*  =============== */
 
@@ -142,14 +134,6 @@
 /*      1996. */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode and test input arguments. */
     /* Parameter adjustments */

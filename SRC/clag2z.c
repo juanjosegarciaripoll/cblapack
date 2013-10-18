@@ -22,16 +22,8 @@
     /* Local variables */
     integer i__, j;
 
-
 /*  -- LAPACK PROTOTYPE auxiliary routine (version 3.1.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     August 2007 */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -69,10 +61,6 @@
 /*          = 0:  successful exit */
 /*  ========= */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     sa_dim1 = *ldsa;
     sa_offset = 1 + sa_dim1;
@@ -90,9 +78,7 @@
 	    i__3 = i__ + j * a_dim1;
 	    i__4 = i__ + j * sa_dim1;
 	    a[i__3].r = sa[i__4].r, a[i__3].i = sa[i__4].i;
-/* L10: */
 	}
-/* L20: */
     }
     return 0;
 

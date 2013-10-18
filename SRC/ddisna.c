@@ -29,15 +29,8 @@
     doublereal oldgap, safmin;
     doublereal newgap, thresh;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -93,18 +86,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input arguments */
 
     /* Parameter adjustments */
@@ -139,7 +120,6 @@
 	    if (decr) {
 		decr = decr && d__[i__] >= d__[i__ + 1];
 	    }
-/* L10: */
 	}
 	if (sing && k > 0) {
 	    if (incr) {
@@ -177,7 +157,6 @@
 	    newgap = (d__1 = d__[i__ + 1] - d__[i__], abs(d__1));
 	    sep[i__] = min(oldgap,newgap);
 	    oldgap = newgap;
-/* L20: */
 	}
 	sep[k] = oldgap;
     }
@@ -214,7 +193,6 @@
 /* Computing MAX */
 	d__1 = sep[i__];
 	sep[i__] = max(d__1,thresh);
-/* L30: */
     }
 
     return 0;

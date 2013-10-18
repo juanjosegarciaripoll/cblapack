@@ -27,15 +27,8 @@ static integer c_n1 = -1;
     /* Local variables */
     integer j, jb, nb;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -80,16 +73,6 @@ static integer c_n1 = -1;
 /*          < 0: if INFO = -k, the k-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments. */
 
@@ -141,7 +124,6 @@ static integer c_n1 = -1;
 	    i__3 = *nrhs - j + 1;
 	    jb = min(i__3,nb);
 	    dptts2_(n, &jb, &d__[1], &e[1], &b[j * b_dim1 + 1], ldb);
-/* L10: */
 	}
     }
 

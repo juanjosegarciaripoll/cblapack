@@ -25,15 +25,8 @@
     integer i__;
     doublereal tmp1, eabs;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -82,7 +75,6 @@
 /*          etc., and the NSPLIT-th consists of rows/columns */
 /*          ISPLIT(NSPLIT-1)+1 through ISPLIT(NSPLIT)=N. */
 
-
 /*  INFO    (output) INTEGER */
 /*          = 0:  successful exit */
 
@@ -97,14 +89,6 @@
 /*     Christof Voemel, University of California, Berkeley, USA */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --isplit;
@@ -128,7 +112,6 @@
 		isplit[*nsplit] = i__;
 		++(*nsplit);
 	    }
-/* L9: */
 	}
     } else {
 /*        Criterion that guarantees relative accuracy */
@@ -142,7 +125,6 @@
 		isplit[*nsplit] = i__;
 		++(*nsplit);
 	    }
-/* L10: */
 	}
     }
     isplit[*nsplit] = *n;

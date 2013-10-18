@@ -26,7 +26,6 @@ doublereal dla_porpvgrw__(char *uplo, integer *ncols, doublereal *a, integer *
     logical upper;
     doublereal rpvgrw;
 
-
 /*     -- LAPACK routine (version 3.2.1)                                 -- */
 /*     -- Contributed by James Demmel, Deaglan Halligan, Yozo Hida and -- */
 /*     -- Jason Riedy of Univ. of California Berkeley.                 -- */
@@ -34,12 +33,6 @@ doublereal dla_porpvgrw__(char *uplo, integer *ncols, doublereal *a, integer *
 
 /*     -- LAPACK is a software package provided by Univ. of Tennessee, -- */
 /*     -- Univ. of California Berkeley and NAG Ltd.                    -- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -77,14 +70,6 @@ doublereal dla_porpvgrw__(char *uplo, integer *ncols, doublereal *a, integer *
 /*     WORK    (input) DOUBLE PRECISION array, dimension (2*N) */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     a_dim1 = *lda;

@@ -23,28 +23,16 @@
     integer i__, j, ii, in;
     complex temp;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
 
 /*  CLAPMT rearranges the columns of the M by N matrix X as specified */
-/*  by the permutation K(1),K(2),...,K(N) of the integers 1,...,N. */
 /*  If FORWRD = .TRUE.,  forward permutation: */
 
-/*       X(*,K(J)) is moved X(*,J) for J = 1,2,...,N. */
-
 /*  If FORWRD = .FALSE., backward permutation: */
-
-/*       X(*,J) is moved to X(*,K(J)) for J = 1,2,...,N. */
 
 /*  Arguments */
 /*  ========= */
@@ -73,10 +61,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     x_dim1 = *ldx;
     x_offset = 1 + x_dim1;
@@ -91,7 +75,6 @@
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	k[i__] = -k[i__];
-/* L10: */
     }
 
     if (*forwrd) {
@@ -123,7 +106,6 @@ L20:
 		x[i__3].r = x[i__4].r, x[i__3].i = x[i__4].i;
 		i__3 = ii + in * x_dim1;
 		x[i__3].r = temp.r, x[i__3].i = temp.i;
-/* L30: */
 	    }
 
 	    k[in] = -k[in];
@@ -133,7 +115,6 @@ L20:
 
 L40:
 
-/* L60: */
 	    ;
 	}
 
@@ -164,7 +145,6 @@ L80:
 		x[i__3].r = x[i__4].r, x[i__3].i = x[i__4].i;
 		i__3 = ii + j * x_dim1;
 		x[i__3].r = temp.r, x[i__3].i = temp.i;
-/* L90: */
 	    }
 
 	    k[j] = -k[j];
@@ -172,7 +152,6 @@ L80:
 	    goto L80;
 
 L100:
-/* L110: */
 	    ;
 	}
 

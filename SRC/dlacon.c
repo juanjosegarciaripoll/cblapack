@@ -32,15 +32,8 @@ static doublereal c_b11 = 1.;
     static integer jlast;
     static doublereal altsgn, estold;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -90,20 +83,6 @@ static doublereal c_b11 = 1.;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Save statement .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --isgn;
     --x;
@@ -114,7 +93,6 @@ static doublereal c_b11 = 1.;
 	i__1 = *n;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    x[i__] = 1. / (doublereal) (*n);
-/* L10: */
 	}
 	*kase = 1;
 	jump = 1;
@@ -129,14 +107,12 @@ static doublereal c_b11 = 1.;
 	case 5:  goto L140;
     }
 
-/*     ................ ENTRY   (JUMP = 1) */
 /*     FIRST ITERATION.  X HAS BEEN OVERWRITTEN BY A*X. */
 
 L20:
     if (*n == 1) {
 	v[1] = x[1];
 	*est = abs(v[1]);
-/*        ... QUIT */
 	goto L150;
     }
     *est = dasum_(n, &x[1], &c__1);
@@ -145,33 +121,27 @@ L20:
     for (i__ = 1; i__ <= i__1; ++i__) {
 	x[i__] = d_sign(&c_b11, &x[i__]);
 	isgn[i__] = i_dnnt(&x[i__]);
-/* L30: */
     }
     *kase = 2;
     jump = 2;
     return 0;
 
-/*     ................ ENTRY   (JUMP = 2) */
 /*     FIRST ITERATION.  X HAS BEEN OVERWRITTEN BY TRANSPOSE(A)*X. */
 
 L40:
     j = idamax_(n, &x[1], &c__1);
     iter = 2;
 
-/*     MAIN LOOP - ITERATIONS 2,3,...,ITMAX. */
-
 L50:
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	x[i__] = 0.;
-/* L60: */
     }
     x[j] = 1.;
     *kase = 1;
     jump = 3;
     return 0;
 
-/*     ................ ENTRY   (JUMP = 3) */
 /*     X HAS BEEN OVERWRITTEN BY A*X. */
 
 L70:
@@ -184,7 +154,6 @@ L70:
 	if (i_dnnt(&d__1) != isgn[i__]) {
 	    goto L90;
 	}
-/* L80: */
     }
 /*     REPEATED SIGN VECTOR DETECTED, HENCE ALGORITHM HAS CONVERGED. */
     goto L120;
@@ -199,13 +168,11 @@ L90:
     for (i__ = 1; i__ <= i__1; ++i__) {
 	x[i__] = d_sign(&c_b11, &x[i__]);
 	isgn[i__] = i_dnnt(&x[i__]);
-/* L100: */
     }
     *kase = 2;
     jump = 4;
     return 0;
 
-/*     ................ ENTRY   (JUMP = 4) */
 /*     X HAS BEEN OVERWRITTEN BY TRANSPOSE(A)*X. */
 
 L110:
@@ -225,13 +192,11 @@ L120:
 	x[i__] = altsgn * ((doublereal) (i__ - 1) / (doublereal) (*n - 1) + 
 		1.);
 	altsgn = -altsgn;
-/* L130: */
     }
     *kase = 1;
     jump = 5;
     return 0;
 
-/*     ................ ENTRY   (JUMP = 5) */
 /*     X HAS BEEN OVERWRITTEN BY A*X. */
 
 L140:

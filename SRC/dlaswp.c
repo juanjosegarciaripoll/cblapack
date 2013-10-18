@@ -23,15 +23,8 @@
     integer i__, j, k, i1, i2, n32, ip, ix, ix0, inc;
     doublereal temp;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -78,10 +71,6 @@
 
 /* ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Interchange row I with row IPIV(I) for each of rows K1 through K2. */
 
     /* Parameter adjustments */
@@ -121,13 +110,10 @@
 			temp = a[i__ + k * a_dim1];
 			a[i__ + k * a_dim1] = a[ip + k * a_dim1];
 			a[ip + k * a_dim1] = temp;
-/* L10: */
 		    }
 		}
 		ix += *incx;
-/* L20: */
 	    }
-/* L30: */
 	}
     }
     if (n32 != *n) {
@@ -143,11 +129,9 @@
 		    temp = a[i__ + k * a_dim1];
 		    a[i__ + k * a_dim1] = a[ip + k * a_dim1];
 		    a[ip + k * a_dim1] = temp;
-/* L40: */
 		}
 	    }
 	    ix += *incx;
-/* L50: */
 	}
     }
 

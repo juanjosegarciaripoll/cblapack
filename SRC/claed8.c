@@ -36,15 +36,8 @@ static integer c__1 = 1;
     real eps, tau, tol;
     integer jlam, imax, jmax;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -158,18 +151,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -230,7 +211,6 @@ static integer c__1 = 1;
     i__1 = *n;
     for (j = 1; j <= i__1; ++j) {
 	indx[j] = j;
-/* L10: */
     }
     sscal_(n, &t, &z__[1], &c__1);
     *rho = (r__1 = *rho * 2.f, dabs(r__1));
@@ -240,13 +220,11 @@ static integer c__1 = 1;
     i__1 = *n;
     for (i__ = *cutpnt + 1; i__ <= i__1; ++i__) {
 	indxq[i__] += *cutpnt;
-/* L20: */
     }
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	dlamda[i__] = d__[indxq[i__]];
 	w[i__] = z__[indxq[i__]];
-/* L30: */
     }
     i__ = 1;
     j = *cutpnt + 1;
@@ -255,7 +233,6 @@ static integer c__1 = 1;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	d__[i__] = dlamda[indx[i__]];
 	z__[i__] = w[indx[i__]];
-/* L40: */
     }
 
 /*     Calculate the allowable deflation tolerance */
@@ -276,7 +253,6 @@ static integer c__1 = 1;
 	    perm[j] = indxq[indx[j]];
 	    ccopy_(qsiz, &q[perm[j] * q_dim1 + 1], &c__1, &q2[j * q2_dim1 + 1]
 , &c__1);
-/* L50: */
 	}
 	clacpy_("A", qsiz, n, &q2[q2_dim1 + 1], ldq2, &q[q_dim1 + 1], ldq);
 	return 0;
@@ -306,7 +282,6 @@ static integer c__1 = 1;
 	    jlam = j;
 	    goto L70;
 	}
-/* L60: */
     }
 L70:
     ++j;
@@ -400,7 +375,6 @@ L100:
 	perm[j] = indxq[indx[jp]];
 	ccopy_(qsiz, &q[perm[j] * q_dim1 + 1], &c__1, &q2[j * q2_dim1 + 1], &
 		c__1);
-/* L110: */
     }
 
 /*     The deflated eigenvalues and their corresponding vectors go back */

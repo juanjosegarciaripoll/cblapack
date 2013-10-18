@@ -21,13 +21,8 @@ doublereal dlapy3_(doublereal *x, doublereal *y, doublereal *z__)
     /* Local variables */
     doublereal w, xabs, yabs, zabs;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -44,14 +39,6 @@ doublereal dlapy3_(doublereal *x, doublereal *y, doublereal *z__)
 /*          X, Y and Z specify the values x, y and z. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     xabs = abs(*x);
     yabs = abs(*y);

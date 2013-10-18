@@ -31,15 +31,8 @@ static integer c__1 = 1;
     integer kld;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -117,18 +110,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -192,7 +173,6 @@ static integer c__1 = 1;
 		dsyr_("Upper", &kn, &c_b8, &ab[*kd + (j + 1) * ab_dim1], &kld, 
 			 &ab[*kd + 1 + (j + 1) * ab_dim1], &kld);
 	    }
-/* L10: */
 	}
     } else {
 
@@ -222,7 +202,6 @@ static integer c__1 = 1;
 		dsyr_("Lower", &kn, &c_b8, &ab[j * ab_dim1 + 2], &c__1, &ab[(
 			j + 1) * ab_dim1 + 1], &kld);
 	    }
-/* L20: */
 	}
     }
     return 0;

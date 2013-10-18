@@ -38,15 +38,8 @@ static doublereal c_b24 = 1.;
     doublereal rtemp, sminu, rwork[2];
     doublereal splus;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -137,20 +130,6 @@ static doublereal c_b24 = 1.;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     z_dim1 = *ldz;
     z_offset = 1 + z_dim1;
@@ -224,7 +203,6 @@ static doublereal c_b24 = 1.;
 	    i__2 = *n - j;
 	    zaxpy_(&i__2, &temp, &z__[j + 1 + j * z_dim1], &c__1, &rhs[j + 1], 
 		     &c__1);
-/* L10: */
 	}
 
 /*        Solve for U- part, lockahead for RHS(N) = +-1. This is not done */
@@ -281,11 +259,9 @@ static doublereal c_b24 = 1.;
 			 rhs[i__4].r * z__3.i + rhs[i__4].i * z__3.r;
 		z__1.r = rhs[i__3].r - z__2.r, z__1.i = rhs[i__3].i - z__2.i;
 		rhs[i__2].r = z__1.r, rhs[i__2].i = z__1.i;
-/* L20: */
 	    }
 	    splus += z_abs(&work[i__ - 1]);
 	    sminu += z_abs(&rhs[i__]);
-/* L30: */
 	}
 	if (splus > sminu) {
 	    zcopy_(n, work, &c__1, &rhs[1], &c__1);

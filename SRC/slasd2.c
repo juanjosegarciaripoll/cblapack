@@ -41,15 +41,8 @@ static real c_b30 = 0.f;
     integer idxjp, jprev;
     real hlftol;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -199,20 +192,6 @@ static real c_b30 = 0.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -278,7 +257,6 @@ static real c_b30 = 0.f;
 	z__[i__ + 1] = *alpha * vt[i__ + nlp1 * vt_dim1];
 	d__[i__ + 1] = d__[i__];
 	idxq[i__ + 1] = idxq[i__] + 1;
-/* L10: */
     }
 
 /*     Generate the second part of the vector Z. */
@@ -286,7 +264,6 @@ static real c_b30 = 0.f;
     i__1 = m;
     for (i__ = nlp2; i__ <= i__1; ++i__) {
 	z__[i__] = *beta * vt[i__ + nlp2 * vt_dim1];
-/* L20: */
     }
 
 /*     Initialize some reference arrays. */
@@ -294,12 +271,10 @@ static real c_b30 = 0.f;
     i__1 = nlp1;
     for (i__ = 2; i__ <= i__1; ++i__) {
 	coltyp[i__] = 1;
-/* L30: */
     }
     i__1 = n;
     for (i__ = nlp2; i__ <= i__1; ++i__) {
 	coltyp[i__] = 2;
-/* L40: */
     }
 
 /*     Sort the singular values into increasing order */
@@ -307,7 +282,6 @@ static real c_b30 = 0.f;
     i__1 = n;
     for (i__ = nlp2; i__ <= i__1; ++i__) {
 	idxq[i__] += nlp1;
-/* L50: */
     }
 
 /*     DSIGMA, IDXC, IDXC, and the first column of U2 */
@@ -318,7 +292,6 @@ static real c_b30 = 0.f;
 	dsigma[i__] = d__[idxq[i__]];
 	u2[i__ + u2_dim1] = z__[idxq[i__]];
 	idxc[i__] = coltyp[idxq[i__]];
-/* L60: */
     }
 
     slamrg_(nl, nr, &dsigma[2], &c__1, &c__1, &idx[2]);
@@ -329,7 +302,6 @@ static real c_b30 = 0.f;
 	d__[i__] = dsigma[idxi];
 	z__[i__] = u2[idxi + u2_dim1];
 	coltyp[i__] = idxc[idxi];
-/* L70: */
     }
 
 /*     Calculate the allowable deflation tolerance */
@@ -379,7 +351,6 @@ static real c_b30 = 0.f;
 	    jprev = j;
 	    goto L90;
 	}
-/* L80: */
     }
 L90:
     j = jprev;
@@ -464,13 +435,11 @@ L120:
 
     for (j = 1; j <= 4; ++j) {
 	ctot[j - 1] = 0;
-/* L130: */
     }
     i__1 = n;
     for (j = 2; j <= i__1; ++j) {
 	ct = coltyp[j];
 	++ctot[ct - 1];
-/* L140: */
     }
 
 /*     PSM(*) = Position in SubMatrix (of types 1 through 4) */
@@ -491,7 +460,6 @@ L120:
 	ct = coltyp[jp];
 	idxc[psm[ct - 1]] = j;
 	++psm[ct - 1];
-/* L150: */
     }
 
 /*     Sort the singular values and corresponding singular vectors into */
@@ -511,7 +479,6 @@ L120:
 	}
 	scopy_(&n, &u[idxj * u_dim1 + 1], &c__1, &u2[j * u2_dim1 + 1], &c__1);
 	scopy_(&m, &vt[idxj + vt_dim1], ldvt, &vt2[j + vt2_dim1], ldvt2);
-/* L160: */
     }
 
 /*     Determine DSIGMA(1), DSIGMA(2) and Z(1) */
@@ -554,13 +521,11 @@ L120:
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    vt[m + i__ * vt_dim1] = -s * vt[nlp1 + i__ * vt_dim1];
 	    vt2[i__ * vt2_dim1 + 1] = c__ * vt[nlp1 + i__ * vt_dim1];
-/* L170: */
 	}
 	i__1 = m;
 	for (i__ = nlp2; i__ <= i__1; ++i__) {
 	    vt2[i__ * vt2_dim1 + 1] = s * vt[m + i__ * vt_dim1];
 	    vt[m + i__ * vt_dim1] = c__ * vt[m + i__ * vt_dim1];
-/* L180: */
 	}
     } else {
 	scopy_(&m, &vt[nlp1 + vt_dim1], ldvt, &vt2[vt2_dim1 + 1], ldvt2);
@@ -587,7 +552,6 @@ L120:
 
     for (j = 1; j <= 4; ++j) {
 	coltyp[j] = ctot[j - 1];
-/* L190: */
     }
 
     return 0;

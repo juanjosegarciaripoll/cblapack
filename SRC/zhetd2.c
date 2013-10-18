@@ -33,15 +33,8 @@ static integer c__1 = 1;
     doublecomplex alpha;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -145,18 +138,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters */
 
     /* Parameter adjustments */
@@ -254,7 +235,6 @@ static integer c__1 = 1;
 	    d__[i__1] = a[i__2].r;
 	    i__1 = i__;
 	    tau[i__1].r = taui.r, tau[i__1].i = taui.i;
-/* L10: */
 	}
 	i__1 = a_dim1 + 1;
 	d__[1] = a[i__1].r;
@@ -334,7 +314,6 @@ static integer c__1 = 1;
 	    d__[i__2] = a[i__3].r;
 	    i__2 = i__;
 	    tau[i__2].r = taui.r, tau[i__2].i = taui.i;
-/* L20: */
 	}
 	i__1 = *n;
 	i__2 = *n + *n * a_dim1;

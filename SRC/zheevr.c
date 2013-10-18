@@ -62,15 +62,8 @@ static integer c_n1 = -1;
     integer lwkopt;
     integer llrwork;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -121,7 +114,6 @@ static integer c_n1 = -1;
 /*    tridiagonal eigenvalue/eigenvector problem", */
 /*    Computer Science Division Technical Report No. UCB/CSD-97-971, */
 /*    UC Berkeley, May 1997. */
-
 
 /*  Note 1 : ZHEEVR calls ZSTEMR when the full spectrum is requested */
 /*  on machines which conform to the ieee-754 floating point standard. */
@@ -297,18 +289,6 @@ static integer c_n1 = -1;
 
 /* ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -468,13 +448,11 @@ static integer c_n1 = -1;
 	    for (j = 1; j <= i__1; ++j) {
 		i__2 = *n - j + 1;
 		zdscal_(&i__2, &sigma, &a[j + j * a_dim1], &c__1);
-/* L10: */
 	    }
 	} else {
 	    i__1 = *n;
 	    for (j = 1; j <= i__1; ++j) {
 		zdscal_(&j, &sigma, &a[j * a_dim1 + 1], &c__1);
-/* L20: */
 	    }
 	}
 	if (*abstol > 0.) {
@@ -569,7 +547,6 @@ static integer c_n1 = -1;
 	    }
 	}
 
-
 	if (*info == 0) {
 	    *m = *n;
 	    goto L30;
@@ -630,7 +607,6 @@ L30:
 		    i__ = jj;
 		    tmp1 = w[jj];
 		}
-/* L40: */
 	    }
 
 	    if (i__ != 0) {
@@ -642,7 +618,6 @@ L30:
 		zswap_(n, &z__[i__ * z_dim1 + 1], &c__1, &z__[j * z_dim1 + 1], 
 			 &c__1);
 	    }
-/* L50: */
 	}
     }
 

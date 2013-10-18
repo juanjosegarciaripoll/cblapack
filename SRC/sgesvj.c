@@ -63,7 +63,6 @@ static integer c__2 = 2;
     integer rowskip;
     real roottol;
 
-
 /*  -- LAPACK routine (version 3.2)                                    -- */
 
 /*  -- Contributed by Zlatko Drmac of the University of Zagreb and     -- */
@@ -71,7 +70,6 @@ static integer c__2 = 2;
 /*  -- November 2008                                                   -- */
 
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
 
 /* This routine is also part of SIGMA (version 1.23, October 23. 2008.) */
 /* SIGMA is a library of algorithms for highly accurate algorithms for */
@@ -80,10 +78,7 @@ static integer c__2 = 2;
 
 /*     -#- Scalar Arguments -#- */
 
-
 /*     -#- Array Arguments -#- */
-
-/*     .. */
 
 /*  Purpose */
 /*  ~~~~~~~ */
@@ -323,24 +318,15 @@ static integer c__2 = 2;
 
 /*     Local Parameters */
 
-
 /*     Local Scalars */
-
 
 /*     Local Arrays */
 
-
 /*     Intrinsic Functions */
 
-
 /*     External Functions */
-/*     .. from BLAS */
-/*     .. from LAPACK */
 
 /*     External Subroutines */
-/*     .. from BLAS */
-/*     .. from LAPACK */
-
 
 /*     Test the input arguments */
 
@@ -413,17 +399,14 @@ static integer c__2 = 2;
 /*     where EPS is the round-off and CTOL is defined as follows: */
 
     if (uctol) {
-/*        ... user controlled */
 	ctol = work[1];
     } else {
-/*        ... default */
 	if (lsvec || rsvec || applv) {
 	    ctol = sqrt((real) (*m));
 	} else {
 	    ctol = (real) (*m);
 	}
     }
-/*     ... and the machine dependent parameters are */
 /* [!]  (Make sure that SLAMCH() works properly on the target machine.) */
 
     epsilon = slamch_("Epsilon");
@@ -494,11 +477,9 @@ static integer c__2 = 2;
 		    i__2 = p - 1;
 		    for (q = 1; q <= i__2; ++q) {
 			sva[q] *= scale;
-/* L1873: */
 		    }
 		}
 	    }
-/* L1874: */
 	}
     } else if (upper) {
 /*        the input matrix is M-by-N upper triangular (trapezoidal) */
@@ -524,11 +505,9 @@ static integer c__2 = 2;
 		    i__2 = p - 1;
 		    for (q = 1; q <= i__2; ++q) {
 			sva[q] *= scale;
-/* L2873: */
 		    }
 		}
 	    }
-/* L2874: */
 	}
     } else {
 /*        the input matrix is M-by-N general dense */
@@ -554,11 +533,9 @@ static integer c__2 = 2;
 		    i__2 = p - 1;
 		    for (q = 1; q <= i__2; ++q) {
 			sva[q] *= scale;
-/* L3873: */
 		    }
 		}
 	    }
-/* L3874: */
 	}
     }
 
@@ -582,7 +559,6 @@ static integer c__2 = 2;
 /* Computing MAX */
 	r__1 = aapp, r__2 = sva[p];
 	aapp = dmax(r__1,r__2);
-/* L4781: */
     }
 
 /* #:) Quick return for zero matrix */
@@ -679,9 +655,7 @@ static integer c__2 = 2;
     i__1 = *n;
     for (q = 1; q <= i__1; ++q) {
 	work[q] = 1.f;
-/* L1868: */
     }
-
 
     swband = 3;
 /* [TP] SWBAND is a tuning parameter [TP]. It is meaningful and effective */
@@ -784,9 +758,7 @@ static integer c__2 = 2;
 		    mvl, &v[v_offset], ldv, &epsilon, &sfmin, &tol, &c__1, &
 		    work[*n + 1], &i__1, &ierr);
 
-
 	} else if (upper) {
-
 
 	    i__1 = *lwork - *n;
 	    sgsvj0_(jobv, &n4, &n4, &a[a_offset], lda, &work[1], &sva[1], &
@@ -817,7 +789,6 @@ static integer c__2 = 2;
 /*     -#- Row-cyclic pivot strategy with de Rijk's pivoting -#- */
 
     for (i__ = 1; i__ <= 30; ++i__) {
-/*     .. go go go ... */
 
 	mxaapq = 0.f;
 	mxsinj = 0.f;
@@ -847,8 +818,6 @@ static integer c__2 = 2;
 		i__4 = igl + kbl - 1, i__5 = *n - 1;
 		i__3 = min(i__4,i__5);
 		for (p = igl; p <= i__3; ++p) {
-
-/*     .. de Rijk's pivoting */
 
 		    i__4 = *n - p + 1;
 		    q = isamax_(&i__4, &sva[p], &c__1) + p - 1;
@@ -950,11 +919,8 @@ static integer c__2 = 2;
 				r__1 = mxaapq, r__2 = dabs(aapq);
 				mxaapq = dmax(r__1,r__2);
 
-/*        TO rotate or NOT to rotate, THAT is the question ... */
-
 				if (dabs(aapq) > tol) {
 
-/*           .. rotate */
 /* [RTD]      ROTATED = ROTATED + ONE */
 
 				    if (ir1 == 0) {
@@ -994,8 +960,6 @@ static integer c__2 = 2;
 					    mxsinj = dmax(r__1,r__2);
 
 					} else {
-
-/*                 .. choose correct signum for THETA and rotate */
 
 					    thsign = -r_sign(&c_b18, &aapq);
 					    t = 1.f / (theta + thsign * sqrt(
@@ -1111,7 +1075,6 @@ static integer c__2 = 2;
 					}
 
 				    } else {
-/*              .. have to use modified Gram-Schmidt like transformation */
 					scopy_(m, &a[p * a_dim1 + 1], &c__1, &
 						work[*n + 1], &c__1);
 					slascl_("G", &c__0, &c__0, &aapp, &
@@ -1133,7 +1096,6 @@ static integer c__2 = 2;
 						);
 					mxsinj = dmax(mxsinj,sfmin);
 				    }
-/*           END IF ROTOK THEN ... ELSE */
 
 /*           In the case of cancellation in updating SVA(q), SVA(p) */
 /*           recompute SVA(q), SVA(p). */
@@ -1192,7 +1154,6 @@ static integer c__2 = 2;
 				goto L2103;
 			    }
 
-/* L2002: */
 			}
 /*     END q-LOOP */
 
@@ -1210,15 +1171,11 @@ L2103:
 			}
 		    }
 
-/* L2001: */
 		}
 /*     end of the p-loop */
 /*     end of doing the block ( ibr, ibr ) */
-/* L1002: */
 	    }
 /*     end of ir1-loop */
-
-/* ... go to the off diagonal blocks */
 
 	    igl = (ibr - 1) * kbl + 1;
 
@@ -1301,8 +1258,6 @@ L2103:
 				r__1 = mxaapq, r__2 = dabs(aapq);
 				mxaapq = dmax(r__1,r__2);
 
-/*        TO rotate or NOT to rotate, THAT is the question ... */
-
 				if (dabs(aapq) > tol) {
 				    notrot = 0;
 /* [RTD]      ROTATED  = ROTATED + 1 */
@@ -1343,8 +1298,6 @@ L2103:
 					    r__1 = mxsinj, r__2 = dabs(t);
 					    mxsinj = dmax(r__1,r__2);
 					} else {
-
-/*                 .. choose correct signum for THETA and rotate */
 
 					    thsign = -r_sign(&c_b18, &aapq);
 					    if (aaqq > aapp0) {
@@ -1509,10 +1462,8 @@ L2103:
 					    mxsinj = dmax(mxsinj,sfmin);
 					}
 				    }
-/*           END IF ROTOK THEN ... ELSE */
 
 /*           In the case of cancellation in updating SVA(q) */
-/*           .. recompute SVA(q) */
 /* Computing 2nd power */
 				    r__1 = sva[q] / aaqq;
 				    if (r__1 * r__1 <= rooteps) {
@@ -1568,7 +1519,6 @@ L2103:
 				goto L2203;
 			    }
 
-/* L2200: */
 			}
 /*        end of the q-loop */
 L2203:
@@ -1588,10 +1538,8 @@ L2203:
 
 		    }
 
-/* L2100: */
 		}
 /*     end of the p-loop */
-/* L2010: */
 	    }
 /*     end of the jbc-loop */
 L2011:
@@ -1601,14 +1549,11 @@ L2011:
 	    i__2 = min(i__3,*n);
 	    for (p = igl; p <= i__2; ++p) {
 		sva[p] = (r__1 = sva[p], dabs(r__1));
-/* L2012: */
 	    }
 /* ** */
-/* L2000: */
 	}
 /* 2000 :: end of the ibr-loop */
 
-/*     .. update SVA(N) */
 	if (sva[*n] < rootbig && sva[*n] > rootsfmin) {
 	    sva[*n] = snrm2_(m, &a[*n * a_dim1 + 1], &c__1) * work[*n];
 	} else {
@@ -1633,7 +1578,6 @@ L2011:
 	    goto L1994;
 	}
 
-/* L1993: */
     }
 /*     end i=1:NSWEEP loop */
 
@@ -1677,7 +1621,6 @@ L1995:
 		++n2;
 	    }
 	}
-/* L5991: */
     }
     if (sva[*n] != 0.f) {
 	++n4;
@@ -1693,7 +1636,6 @@ L1995:
 	for (p = 1; p <= i__1; ++p) {
 	    r__1 = work[p] / sva[p];
 	    sscal_(m, &r__1, &a[p * a_dim1 + 1], &c__1);
-/* L1998: */
 	}
     }
 
@@ -1704,14 +1646,12 @@ L1995:
 	    i__1 = *n;
 	    for (p = 1; p <= i__1; ++p) {
 		sscal_(&mvl, &work[p], &v[p * v_dim1 + 1], &c__1);
-/* L2398: */
 	    }
 	} else {
 	    i__1 = *n;
 	    for (p = 1; p <= i__1; ++p) {
 		temp1 = 1.f / snrm2_(&mvl, &v[p * v_dim1 + 1], &c__1);
 		sscal_(&mvl, &temp1, &v[p * v_dim1 + 1], &c__1);
-/* L2399: */
 	    }
 	}
     }
@@ -1722,7 +1662,6 @@ L1995:
 	i__1 = *n;
 	for (p = 1; p <= i__1; ++p) {
 	    sva[p] = scale * sva[p];
-/* L2400: */
 	}
 	scale = 1.f;
     }
@@ -1752,7 +1691,4 @@ L1995:
 /*     in the last sweep */
 
     return 0;
-/*     .. */
-/*     .. END OF SGESVJ */
-/*     .. */
 } /* sgesvj_ */

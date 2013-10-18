@@ -32,15 +32,8 @@ static integer c__1 = 1;
     doublereal sfmin1, sfmin2, sfmax1, sfmax2;
     logical noconv;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -61,7 +54,6 @@ static integer c__1 = 1;
 /*  JOB     (input) CHARACTER*1 */
 /*          Specifies the operations to be performed on A: */
 /*          = 'N':  none:  simply set ILO = 1, IHI = N, SCALE(I) = 1.0 */
-/*                  for i = 1,...,N; */
 /*          = 'P':  permute only; */
 /*          = 'S':  scale only; */
 /*          = 'B':  both permute and scale. */
@@ -81,7 +73,6 @@ static integer c__1 = 1;
 /*  ILO     (output) INTEGER */
 /*  IHI     (output) INTEGER */
 /*          ILO and IHI are set to integers such that on exit */
-/*          A(i,j) = 0 if i > j and j = 1,...,ILO-1 or I = IHI+1,...,N. */
 /*          If JOB = 'N' or 'S', ILO = 1 and IHI = N. */
 
 /*  SCALE   (output) DOUBLE PRECISION array, dimension (N) */
@@ -89,9 +80,6 @@ static integer c__1 = 1;
 /*          A.  If P(j) is the index of the row and column interchanged */
 /*          with row and column j and D(j) is the scaling factor */
 /*          applied to row and column j, then */
-/*          SCALE(j) = P(j)    for j = 1,...,ILO-1 */
-/*                   = D(j)    for j = ILO,...,IHI */
-/*                   = P(j)    for j = IHI+1,...,N. */
 /*          The order in which the interchanges are made is N to IHI+1, */
 /*          then 1 to ILO-1. */
 
@@ -130,22 +118,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters */
 
     /* Parameter adjustments */
@@ -181,7 +153,6 @@ static integer c__1 = 1;
 	i__1 = *n;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    scale[i__] = 1.;
-/* L10: */
 	}
 	goto L210;
     }
@@ -278,7 +249,6 @@ L120:
     i__1 = l;
     for (i__ = k; i__ <= i__1; ++i__) {
 	scale[i__] = 1.;
-/* L130: */
     }
 
     if (lsame_(job, "P")) {

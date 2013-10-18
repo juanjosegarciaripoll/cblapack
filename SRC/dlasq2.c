@@ -52,7 +52,6 @@ static integer c__11 = 11;
     integer iwhila, iwhilb;
     doublereal oldemn, safmin;
 
-
 /*  -- LAPACK routine (version 3.2)                                    -- */
 
 /*  -- Contributed by Osni Marques of the Lawrence Berkeley National   -- */
@@ -61,12 +60,6 @@ static integer c__11 = 11;
 /*  -- November 2008                                                   -- */
 
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -77,9 +70,7 @@ static integer c__11 = 11;
 /*  absence of denormalization, underflow and overflow. */
 
 /*  To see the relation of Z to the tridiagonal matrix, let L be a */
-/*  unit lower bidiagonal matrix with subdiagonals Z(2,4,6,,..) and */
 /*  let U be an upper bidiagonal matrix with 1's above and diagonal */
-/*  Z(1,3,5,,..). The tridiagonal is L*U or, if you prefer, the */
 /*  symmetric tridiagonal to which it is similar. */
 
 /*  Note : DLASQ2 defines a logical variable, IEEE, which is true */
@@ -121,18 +112,6 @@ static integer c__11 = 11;
 /*  Ping-pong is controlled by PP (alternates between 0 and 1). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments. */
 /*     (in case DLASQ2 is not called by DLASQ1) */
@@ -226,7 +205,6 @@ static integer c__11 = 11;
 /* Computing MAX */
 	d__1 = max(qmax,zmax), d__2 = z__[k + 1];
 	zmax = max(d__1,d__2);
-/* L10: */
     }
     if (z__[(*n << 1) - 1] < 0.) {
 	*info = -((*n << 1) + 199);
@@ -245,7 +223,6 @@ static integer c__11 = 11;
 	i__1 = *n;
 	for (k = 2; k <= i__1; ++k) {
 	    z__[k] = z__[(k << 1) - 1];
-/* L20: */
 	}
 	dlasrt_("D", n, &z__[1], &iinfo);
 	z__[(*n << 1) - 1] = d__;
@@ -266,14 +243,11 @@ static integer c__11 = 11;
     ieee = ilaenv_(&c__10, "DLASQ2", "N", &c__1, &c__2, &c__3, &c__4) == 1 && ilaenv_(&c__11, "DLASQ2", "N", &c__1, &c__2, 
 	     &c__3, &c__4) == 1;
 
-/*     Rearrange data for locality: Z=(q1,qq1,e1,ee1,q2,qq2,e2,ee2,...). */
-
     for (k = *n << 1; k >= 2; k += -2) {
 	z__[k * 2] = 0.;
 	z__[(k << 1) - 1] = z__[k];
 	z__[(k << 1) - 2] = 0.;
 	z__[(k << 1) - 3] = z__[k - 1];
-/* L30: */
     }
 
     i0 = 1;
@@ -291,7 +265,6 @@ static integer c__11 = 11;
 	    temp = z__[i4 - 1];
 	    z__[i4 - 1] = z__[ipn4 - i4 - 5];
 	    z__[ipn4 - i4 - 5] = temp;
-/* L40: */
 	}
     }
 
@@ -310,7 +283,6 @@ static integer c__11 = 11;
 	    } else {
 		d__ = z__[i4 - 3] * (d__ / (d__ + z__[i4 - 1]));
 	    }
-/* L50: */
 	}
 
 /*        dqd maps Z to ZZ plus Li's test. */
@@ -338,7 +310,6 @@ static integer c__11 = 11;
 /* Computing MIN */
 	    d__1 = emin, d__2 = z__[i4 - (pp << 1)];
 	    emin = min(d__1,d__2);
-/* L60: */
 	}
 	z__[(n0 << 2) - pp - 2] = d__;
 
@@ -350,13 +321,11 @@ static integer c__11 = 11;
 /* Computing MAX */
 	    d__1 = qmax, d__2 = z__[i4];
 	    qmax = max(d__1,d__2);
-/* L70: */
 	}
 
 /*        Prepare for the next iteration on K. */
 
 	pp = 1 - pp;
-/* L80: */
     }
 
 /*     Initialise variables to pass to DLASQ3. */
@@ -425,7 +394,6 @@ static integer c__11 = 11;
 /* Computing MIN */
 	    d__1 = emin, d__2 = z__[i4 - 5];
 	    emin = min(d__1,d__2);
-/* L90: */
 	}
 	i4 = 4;
 
@@ -444,7 +412,6 @@ L100:
 		    deemin = dee;
 		    kmin = (i4 + 3) / 4;
 		}
-/* L110: */
 	    }
 	    if (kmin - i0 << 1 < n0 - kmin && deemin <= z__[(n0 << 2) - 3] * 
 		    .5) {
@@ -464,7 +431,6 @@ L100:
 		    temp = z__[i4];
 		    z__[i4] = z__[ipn4 - i4 - 4];
 		    z__[ipn4 - i4 - 4] = temp;
-/* L120: */
 		}
 	    }
 	}
@@ -525,7 +491,6 @@ L100:
 			    d__1 = oldemn, d__2 = z__[i4];
 			    oldemn = min(d__1,d__2);
 			}
-/* L130: */
 		    }
 		    z__[(n0 << 2) - 1] = emin;
 		    z__[n0 * 4] = oldemn;
@@ -533,7 +498,6 @@ L100:
 		}
 	    }
 
-/* L140: */
 	}
 
 	*info = 2;
@@ -543,7 +507,6 @@ L100:
 
 L150:
 
-/* L160: */
 	;
     }
 
@@ -559,7 +522,6 @@ L170:
     i__1 = *n;
     for (k = 2; k <= i__1; ++k) {
 	z__[k] = z__[(k << 2) - 3];
-/* L180: */
     }
 
 /*     Sort and compute sum of eigenvalues. */
@@ -569,7 +531,6 @@ L170:
     e = 0.;
     for (k = *n; k >= 1; --k) {
 	e += z__[k];
-/* L190: */
     }
 
 /*     Store trace, sum(eigenvalues) and information on performance. */

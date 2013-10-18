@@ -34,22 +34,14 @@
     doublecomplex zi;
     doublereal t1i, t1r, sii, zii, sir, zir;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
 
 /*  ZLAR2V applies a vector of complex plane rotations with real cosines */
 /*  from both sides to a sequence of 2-by-2 complex Hermitian matrices, */
-/*  defined by the elements of the vectors x, y and z. For i = 1,2,...,n */
 
 /*     (       x(i)  z(i) ) := */
 /*     ( conjg(z(i)) y(i) ) */
@@ -85,12 +77,6 @@
 /*          The increment between elements of C and S. INCC > 0. */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --s;
@@ -147,7 +133,6 @@
 	z__[i__2].r = z__1.r, z__[i__2].i = z__1.i;
 	ix += *incx;
 	ic += *incc;
-/* L10: */
     }
     return 0;
 

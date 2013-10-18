@@ -34,15 +34,8 @@ static integer c__1 = 1;
     integer nru;
     integer icompz;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -120,20 +113,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -194,12 +173,10 @@ static integer c__1 = 1;
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	d__[i__] = sqrt(d__[i__]);
-/* L10: */
     }
     i__1 = *n - 1;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	e[i__] *= d__[i__];
-/* L20: */
     }
 
 /*     Call DBDSQR to compute the singular values/vectors of the */
@@ -219,7 +196,6 @@ static integer c__1 = 1;
 	i__1 = *n;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    d__[i__] *= d__[i__];
-/* L30: */
 	}
     } else {
 	*info = *n + *info;

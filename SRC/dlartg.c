@@ -27,13 +27,8 @@
     doublereal safmn2, safmx2;
     doublereal safmin;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -76,22 +71,9 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
 /*     LOGICAL            FIRST */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Save statement .. */
 /*     SAVE               FIRST, SAFMX2, SAFMIN, SAFMN2 */
-/*     .. */
-/*     .. Data statements .. */
 /*     DATA               FIRST / .TRUE. / */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     IF( FIRST ) THEN */
     safmin = dlamch_("S");
@@ -138,7 +120,6 @@ L10:
 	    i__1 = count;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 		*r__ *= safmx2;
-/* L20: */
 	    }
 	} else if (scale <= safmn2) {
 	    count = 0;
@@ -162,7 +143,6 @@ L30:
 	    i__1 = count;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 		*r__ *= safmn2;
-/* L40: */
 	    }
 	} else {
 /* Computing 2nd power */

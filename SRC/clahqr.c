@@ -52,15 +52,8 @@ static integer c__2 = 2;
     real rtemp;
     real safmin, safmax, smlnum;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*     Purpose */
 /*     ======= */
@@ -90,7 +83,6 @@ static integer c__2 = 2;
 /*          columns IHI+1:N, and that H(ILO,ILO-1) = 0 (unless ILO = 1). */
 /*          CLAHQR works primarily with the Hessenberg submatrix in rows */
 /*          and columns ILO to IHI, but applies transformations to all of */
-/*          H if WANTT is .TRUE.. */
 /*          1 <= ILO <= max(1,IHI); IHI <= N. */
 
 /*     H       (input/output) COMPLEX array, dimension (LDH,N) */
@@ -113,7 +105,6 @@ static integer c__2 = 2;
 /*     ILOZ    (input) INTEGER */
 /*     IHIZ    (input) INTEGER */
 /*          Specify the rows of Z to which transformations must be */
-/*          applied if WANTZ is .TRUE.. */
 /*          1 <= ILOZ <= ILO; IHI <= IHIZ <= N. */
 
 /*     Z       (input/output) COMPLEX array, dimension (LDZ,N) */
@@ -166,24 +157,6 @@ static integer c__2 = 2;
 
 /*     ========================================================= */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     h_dim1 = *ldh;
     h_offset = 1 + h_dim1;
@@ -215,7 +188,6 @@ static integer c__2 = 2;
 	h__[i__2].r = 0.f, h__[i__2].i = 0.f;
 	i__2 = j + 3 + j * h_dim1;
 	h__[i__2].r = 0.f, h__[i__2].i = 0.f;
-/* L10: */
     }
     if (*ilo <= *ihi - 2) {
 	i__1 = *ihi + (*ihi - 2) * h_dim1;
@@ -261,7 +233,6 @@ static integer c__2 = 2;
 		cscal_(&i__2, &q__1, &z__[*iloz + i__ * z_dim1], &c__1);
 	    }
 	}
-/* L20: */
     }
 
     nh = *ihi - *ilo + 1;
@@ -379,7 +350,6 @@ L30:
 		    goto L50;
 		}
 	    }
-/* L40: */
 	}
 L50:
 	l = k;
@@ -505,7 +475,6 @@ L50:
 		    ) {
 		goto L70;
 	    }
-/* L60: */
 	}
 	i__1 = l + l * h_dim1;
 	h11.r = h__[i__1].r, h11.i = h__[i__1].i;
@@ -579,7 +548,6 @@ L70:
 			sum.i * v2.r;
 		q__1.r = h__[i__4].r - q__2.r, q__1.i = h__[i__4].i - q__2.i;
 		h__[i__3].r = q__1.r, h__[i__3].i = q__1.i;
-/* L80: */
 	    }
 
 /*           Apply G from the right to transform the columns of the */
@@ -607,7 +575,6 @@ L70:
 			q__3.i + sum.i * q__3.r;
 		q__1.r = h__[i__4].r - q__2.r, q__1.i = h__[i__4].i - q__2.i;
 		h__[i__3].r = q__1.r, h__[i__3].i = q__1.i;
-/* L90: */
 	    }
 
 	    if (*wantz) {
@@ -636,7 +603,6 @@ L70:
 		    q__1.r = z__[i__4].r - q__2.r, q__1.i = z__[i__4].i - 
 			    q__2.i;
 		    z__[i__3].r = q__1.r, z__[i__3].i = q__1.i;
-/* L100: */
 		}
 	    }
 
@@ -683,10 +649,8 @@ L70:
 				    c__1);
 			}
 		    }
-/* L110: */
 		}
 	    }
-/* L120: */
 	}
 
 /*        Ensure that H(I,I-1) is real. */
@@ -711,7 +675,6 @@ L70:
 	    }
 	}
 
-/* L130: */
     }
 
 /*     Failure to converge in remaining number of iterations */

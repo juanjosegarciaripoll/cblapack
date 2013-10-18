@@ -28,15 +28,8 @@ doublereal clanht_(char *norm, integer *n, real *d__, complex *e)
     real sum, scale;
     real anorm;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -82,18 +75,6 @@ doublereal clanht_(char *norm, integer *n, real *d__, complex *e)
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --e;
     --d__;
@@ -114,7 +95,6 @@ doublereal clanht_(char *norm, integer *n, real *d__, complex *e)
 /* Computing MAX */
 	    r__1 = anorm, r__2 = c_abs(&e[i__]);
 	    anorm = dmax(r__1,r__2);
-/* L10: */
 	}
     } else if (lsame_(norm, "O") || *(unsigned char *)
 	    norm == '1' || lsame_(norm, "I")) {
@@ -134,7 +114,6 @@ doublereal clanht_(char *norm, integer *n, real *d__, complex *e)
 		r__2 = anorm, r__3 = (r__1 = d__[i__], dabs(r__1)) + c_abs(&e[
 			i__]) + c_abs(&e[i__ - 1]);
 		anorm = dmax(r__2,r__3);
-/* L20: */
 	    }
 	}
     } else if (lsame_(norm, "F") || lsame_(norm, "E")) {

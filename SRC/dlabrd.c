@@ -32,15 +32,8 @@ static doublereal c_b16 = 0.;
     /* Local variables */
     integer i__;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -162,16 +155,6 @@ static doublereal c_b16 = 0.;
 /*  of the vector defining G(i). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Quick return if possible */
 
@@ -306,7 +289,6 @@ static doublereal c_b16 = 0.;
 		i__2 = *m - i__;
 		dscal_(&i__2, &taup[i__], &x[i__ + 1 + i__ * x_dim1], &c__1);
 	    }
-/* L10: */
 	}
     } else {
 
@@ -419,7 +401,6 @@ static doublereal c_b16 = 0.;
 		i__2 = *n - i__;
 		dscal_(&i__2, &tauq[i__], &y[i__ + 1 + i__ * y_dim1], &c__1);
 	    }
-/* L20: */
 	}
     }
     return 0;

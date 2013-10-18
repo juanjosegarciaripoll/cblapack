@@ -56,15 +56,8 @@ static real c_b72 = -1.f;
     logical rotate;
     real tolmul;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     January 2007 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -201,18 +194,6 @@ static real c_b72 = -1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -294,7 +275,6 @@ static real c_b72 = -1.f;
 	    d__[i__ + 1] = cs * d__[i__ + 1];
 	    work[i__] = cs;
 	    work[nm1 + i__] = sn;
-/* L10: */
 	}
 
 /*        Update singular vectors if desired */
@@ -329,14 +309,12 @@ static real c_b72 = -1.f;
 /* Computing MAX */
 	r__2 = smax, r__3 = (r__1 = d__[i__], dabs(r__1));
 	smax = dmax(r__2,r__3);
-/* L20: */
     }
     i__1 = *n - 1;
     for (i__ = 1; i__ <= i__1; ++i__) {
 /* Computing MAX */
 	r__2 = smax, r__3 = (r__1 = e[i__], dabs(r__1));
 	smax = dmax(r__2,r__3);
-/* L30: */
     }
     sminl = 0.f;
     if (tol >= 0.f) {
@@ -356,7 +334,6 @@ static real c_b72 = -1.f;
 	    if (sminoa == 0.f) {
 		goto L50;
 	    }
-/* L40: */
 	}
 L50:
 	sminoa /= sqrt((real) (*n));
@@ -420,7 +397,6 @@ L60:
 /* Computing MAX */
 	r__1 = max(smax,abss);
 	smax = dmax(r__1,abse);
-/* L70: */
     }
     ll = 0;
     goto L90;
@@ -516,7 +492,6 @@ L90:
 		mu = (r__2 = d__[lll + 1], dabs(r__2)) * (mu / (mu + (r__1 = 
 			e[lll], dabs(r__1))));
 		sminl = dmin(sminl,mu);
-/* L100: */
 	    }
 	}
 
@@ -547,7 +522,6 @@ L90:
 		mu = (r__2 = d__[lll], dabs(r__2)) * (mu / (mu + (r__1 = e[
 			lll], dabs(r__1))));
 		sminl = dmin(sminl,mu);
-/* L110: */
 	    }
 	}
     }
@@ -615,7 +589,6 @@ L90:
 		work[i__ - ll + 1 + nm1] = sn;
 		work[i__ - ll + 1 + nm12] = oldcs;
 		work[i__ - ll + 1 + nm13] = oldsn;
-/* L120: */
 	    }
 	    h__ = d__[m] * cs;
 	    d__[m] = h__ * oldcs;
@@ -666,7 +639,6 @@ L90:
 		work[i__ - ll + nm1] = -sn;
 		work[i__ - ll + nm12] = oldcs;
 		work[i__ - ll + nm13] = -oldsn;
-/* L130: */
 	    }
 	    h__ = d__[ll] * cs;
 	    d__[ll] = h__ * oldcs;
@@ -730,7 +702,6 @@ L90:
 		work[i__ - ll + 1 + nm1] = sinr;
 		work[i__ - ll + 1 + nm12] = cosl;
 		work[i__ - ll + 1 + nm13] = sinl;
-/* L140: */
 	    }
 	    e[m - 1] = f;
 
@@ -788,7 +759,6 @@ L90:
 		work[i__ - ll + nm1] = -sinr;
 		work[i__ - ll + nm12] = cosl;
 		work[i__ - ll + nm13] = -sinl;
-/* L150: */
 	    }
 	    e[ll] = f;
 
@@ -836,7 +806,6 @@ L160:
 		sscal_(ncvt, &c_b72, &vt[i__ + vt_dim1], ldvt);
 	    }
 	}
-/* L170: */
     }
 
 /*     Sort the singular values into decreasing order (insertion sort on */
@@ -855,7 +824,6 @@ L160:
 		isub = j;
 		smin = d__[j];
 	    }
-/* L180: */
 	}
 	if (isub != *n + 1 - i__) {
 
@@ -876,7 +844,6 @@ L160:
 			c_dim1], ldc);
 	    }
 	}
-/* L190: */
     }
     goto L220;
 
@@ -889,7 +856,6 @@ L200:
 	if (e[i__] != 0.f) {
 	    ++(*info);
 	}
-/* L210: */
     }
 L220:
     return 0;

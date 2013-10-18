@@ -36,15 +36,8 @@ static doublereal c_b22 = 1.;
     integer ldwrkx, ldwrky, lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -91,8 +84,6 @@ static doublereal c_b22 = 1.;
 
 /*  E       (output) DOUBLE PRECISION array, dimension (min(M,N)-1) */
 /*          The off-diagonal elements of the bidiagonal matrix B: */
-/*          if m >= n, E(i) = A(i,i+1) for i = 1,2,...,n-1; */
-/*          if m < n, E(i) = A(i+1,i) for i = 1,2,...,m-1. */
 
 /*  TAUQ    (output) DOUBLE PRECISION array dimension (min(M,N)) */
 /*          The scalar factors of the elementary reflectors which */
@@ -167,18 +158,6 @@ static doublereal c_b22 = 1.;
 /*  the vector defining G(i). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters */
 
@@ -298,17 +277,14 @@ static doublereal c_b22 = 1.;
 	    for (j = i__; j <= i__3; ++j) {
 		a[j + j * a_dim1] = d__[j];
 		a[j + (j + 1) * a_dim1] = e[j];
-/* L10: */
 	    }
 	} else {
 	    i__3 = i__ + nb - 1;
 	    for (j = i__; j <= i__3; ++j) {
 		a[j + j * a_dim1] = d__[j];
 		a[j + 1 + j * a_dim1] = e[j];
-/* L20: */
 	    }
 	}
-/* L30: */
     }
 
 /*     Use unblocked code to reduce the remainder of the matrix */

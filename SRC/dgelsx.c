@@ -39,15 +39,8 @@ static doublereal c_b36 = 1.;
     doublereal bignum;
     doublereal sminpr, smaxpr, smlnum;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -142,18 +135,6 @@ static doublereal c_b36 = 1.;
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     a_dim1 = *lda;
@@ -292,7 +273,6 @@ L10:
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 		work[ismin + i__ - 1] = s1 * work[ismin + i__ - 1];
 		work[ismax + i__ - 1] = s2 * work[ismax + i__ - 1];
-/* L20: */
 	    }
 	    work[ismin + *rank] = c1;
 	    work[ismax + *rank] = c2;
@@ -332,9 +312,7 @@ L10:
 	i__2 = *nrhs;
 	for (j = 1; j <= i__2; ++j) {
 	    b[i__ + j * b_dim1] = 0.;
-/* L30: */
 	}
-/* L40: */
     }
 
 /*     B(1:N,1:NRHS) := Y' * B(1:N,1:NRHS) */
@@ -346,7 +324,6 @@ L10:
 	    dlatzm_("Left", &i__2, nrhs, &a[i__ + (*rank + 1) * a_dim1], lda, 
 		    &work[mn + i__], &b[i__ + b_dim1], &b[*rank + 1 + b_dim1], 
 		     ldb, &work[(mn << 1) + 1]);
-/* L50: */
 	}
     }
 
@@ -359,7 +336,6 @@ L10:
 	i__2 = *n;
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    work[(mn << 1) + i__] = 1.;
-/* L60: */
 	}
 	i__2 = *n;
 	for (i__ = 1; i__ <= i__2; ++i__) {
@@ -381,9 +357,7 @@ L70:
 		    work[(mn << 1) + k] = 0.;
 		}
 	    }
-/* L80: */
 	}
-/* L90: */
     }
 
 /*     Undo scaling */

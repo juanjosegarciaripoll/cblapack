@@ -27,15 +27,8 @@
     doublereal rcmin, rcmax;
     doublereal bignum, smlnum;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -107,22 +100,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters */
 
     /* Parameter adjustments */
@@ -170,7 +147,6 @@
     i__1 = *m;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	r__[i__] = 0.;
-/* L10: */
     }
 
 /*     Find the maximum element in each row. */
@@ -189,9 +165,7 @@
 	    d__3 = r__[i__], d__4 = (d__1 = ab[i__2].r, abs(d__1)) + (d__2 = 
 		    d_imag(&ab[kd + i__ - j + j * ab_dim1]), abs(d__2));
 	    r__[i__] = max(d__3,d__4);
-/* L20: */
 	}
-/* L30: */
     }
 
 /*     Find the maximum and minimum scale factors. */
@@ -206,7 +180,6 @@
 /* Computing MIN */
 	d__1 = rcmin, d__2 = r__[i__];
 	rcmin = min(d__1,d__2);
-/* L40: */
     }
     *amax = rcmax;
 
@@ -220,7 +193,6 @@
 		*info = i__;
 		return 0;
 	    }
-/* L50: */
 	}
     } else {
 
@@ -233,7 +205,6 @@
 	    d__2 = r__[i__];
 	    d__1 = max(d__2,smlnum);
 	    r__[i__] = 1. / min(d__1,bignum);
-/* L60: */
 	}
 
 /*        Compute ROWCND = min(R(I)) / max(R(I)) */
@@ -246,7 +217,6 @@
     i__1 = *n;
     for (j = 1; j <= i__1; ++j) {
 	c__[j] = 0.;
-/* L70: */
     }
 
 /*     Find the maximum element in each column, */
@@ -267,9 +237,7 @@
 		    d_imag(&ab[kd + i__ - j + j * ab_dim1]), abs(d__2))) * 
 		    r__[i__];
 	    c__[j] = max(d__3,d__4);
-/* L80: */
 	}
-/* L90: */
     }
 
 /*     Find the maximum and minimum scale factors. */
@@ -284,7 +252,6 @@
 /* Computing MAX */
 	d__1 = rcmax, d__2 = c__[j];
 	rcmax = max(d__1,d__2);
-/* L100: */
     }
 
     if (rcmin == 0.) {
@@ -297,7 +264,6 @@
 		*info = *m + j;
 		return 0;
 	    }
-/* L110: */
 	}
     } else {
 
@@ -310,7 +276,6 @@
 	    d__2 = c__[j];
 	    d__1 = max(d__2,smlnum);
 	    c__[j] = 1. / min(d__1,bignum);
-/* L120: */
 	}
 
 /*        Compute COLCND = min(C(J)) / max(C(J)) */

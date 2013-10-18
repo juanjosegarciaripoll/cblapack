@@ -32,15 +32,8 @@ static doublereal c_b23 = 0.;
     integer i__, j, n2, n12, ii, n23, iq2;
     doublereal temp;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -140,18 +133,6 @@ static doublereal c_b23 = 0.;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -208,7 +189,6 @@ static doublereal c_b23 = 0.;
     i__1 = *k;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	dlamda[i__] = dlamc3_(&dlamda[i__], &dlamda[i__]) - dlamda[i__];
-/* L10: */
     }
 
     i__1 = *k;
@@ -221,7 +201,6 @@ static doublereal c_b23 = 0.;
 	if (*info != 0) {
 	    goto L120;
 	}
-/* L20: */
     }
 
     if (*k == 1) {
@@ -236,7 +215,6 @@ static doublereal c_b23 = 0.;
 	    q[j * q_dim1 + 1] = w[ii];
 	    ii = indx[2];
 	    q[j * q_dim1 + 2] = w[ii];
-/* L30: */
 	}
 	goto L110;
     }
@@ -254,20 +232,16 @@ static doublereal c_b23 = 0.;
 	i__2 = j - 1;
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    w[i__] *= q[i__ + j * q_dim1] / (dlamda[i__] - dlamda[j]);
-/* L40: */
 	}
 	i__2 = *k;
 	for (i__ = j + 1; i__ <= i__2; ++i__) {
 	    w[i__] *= q[i__ + j * q_dim1] / (dlamda[i__] - dlamda[j]);
-/* L50: */
 	}
-/* L60: */
     }
     i__1 = *k;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	d__1 = sqrt(-w[i__]);
 	w[i__] = d_sign(&d__1, &s[i__]);
-/* L70: */
     }
 
 /*     Compute eigenvectors of the modified rank-1 modification. */
@@ -277,16 +251,13 @@ static doublereal c_b23 = 0.;
 	i__2 = *k;
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    s[i__] = w[i__] / q[i__ + j * q_dim1];
-/* L80: */
 	}
 	temp = dnrm2_(k, &s[1], &c__1);
 	i__2 = *k;
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    ii = indx[i__];
 	    q[i__ + j * q_dim1] = s[ii] / temp;
-/* L90: */
 	}
-/* L100: */
     }
 
 /*     Compute the updated eigenvectors. */
@@ -313,7 +284,6 @@ L110:
     } else {
 	dlaset_("A", n1, k, &c_b23, &c_b23, &q[q_dim1 + 1], ldq);
     }
-
 
 L120:
     return 0;

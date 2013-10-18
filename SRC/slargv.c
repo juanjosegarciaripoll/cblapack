@@ -26,21 +26,13 @@
     integer ic, ix, iy;
     real tt;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
 
 /*  SLARGV generates a vector of real plane rotations, determined by */
-/*  elements of the real vectors x and y. For i = 1,2,...,n */
 
 /*     (  c(i)  s(i) ) ( x(i) ) = ( a(i) ) */
 /*     ( -s(i)  c(i) ) ( y(i) ) = (   0  ) */
@@ -54,7 +46,6 @@
 /*  X       (input/output) REAL array, */
 /*                         dimension (1+(N-1)*INCX) */
 /*          On entry, the vector x. */
-/*          On exit, x(i) is overwritten by a(i), for i = 1,...,n. */
 
 /*  INCX    (input) INTEGER */
 /*          The increment between elements of X. INCX > 0. */
@@ -74,14 +65,6 @@
 /*          The increment between elements of C. INCC > 0. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --c__;
@@ -118,7 +101,6 @@
 	ic += *incc;
 	iy += *incy;
 	ix += *incx;
-/* L10: */
     }
     return 0;
 

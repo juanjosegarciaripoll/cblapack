@@ -32,15 +32,8 @@ static integer c__1 = 1;
     integer i__;
     complex ei;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -132,16 +125,6 @@ static integer c__1 = 1;
 /*  element of the vector defining H(i). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Quick return if possible */
 
@@ -278,7 +261,6 @@ static integer c__1 = 1;
 	i__3 = i__;
 	t[i__2].r = tau[i__3].r, t[i__2].i = tau[i__3].i;
 
-/* L10: */
     }
     i__1 = *k + *nb + *nb * a_dim1;
     a[i__1].r = ei.r, a[i__1].i = ei.i;

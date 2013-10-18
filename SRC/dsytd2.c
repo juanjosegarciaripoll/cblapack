@@ -31,15 +31,8 @@ static doublereal c_b14 = -1.;
     doublereal alpha;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -142,18 +135,6 @@ static doublereal c_b14 = -1.;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters */
 
     /* Parameter adjustments */
@@ -227,7 +208,6 @@ static doublereal c_b14 = -1.;
 	    }
 	    d__[i__ + 1] = a[i__ + 1 + (i__ + 1) * a_dim1];
 	    tau[i__] = taui;
-/* L10: */
 	}
 	d__[1] = a[a_dim1 + 1];
     } else {
@@ -281,7 +261,6 @@ static doublereal c_b14 = -1.;
 	    }
 	    d__[i__] = a[i__ + i__ * a_dim1];
 	    tau[i__] = taui;
-/* L20: */
 	}
 	d__[*n] = a[*n + *n * a_dim1];
     }

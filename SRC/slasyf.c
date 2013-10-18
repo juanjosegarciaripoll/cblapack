@@ -36,15 +36,8 @@ static real c_b9 = 1.f;
     real absakk;
     real colmax, rowmax;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -125,18 +118,6 @@ static real c_b9 = 1.f;
 /*               exactly singular. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     a_dim1 = *lda;
@@ -341,7 +322,6 @@ L10:
 				* w_dim1] - w[j + kw * w_dim1]);
 			a[j + k * a_dim1] = d21 * (d22 * w[j + kw * w_dim1] - 
 				w[j + (kw - 1) * w_dim1]);
-/* L20: */
 		    }
 		}
 
@@ -391,7 +371,6 @@ L30:
 		sgemv_("No transpose", &i__3, &i__4, &c_b8, &a[j + (k + 1) * 
 			a_dim1], lda, &w[jj + (kw + 1) * w_dim1], ldw, &c_b9, 
 			&a[j + jj * a_dim1], &c__1);
-/* L40: */
 	    }
 
 /*           Update the rectangular superdiagonal block */
@@ -401,7 +380,6 @@ L30:
 	    sgemm_("No transpose", "Transpose", &i__2, &jb, &i__3, &c_b8, &a[(
 		    k + 1) * a_dim1 + 1], lda, &w[j + (kw + 1) * w_dim1], ldw, 
 		     &c_b9, &a[j * a_dim1 + 1], lda);
-/* L50: */
 	}
 
 /*        Put U12 in standard form by partially undoing the interchanges */
@@ -611,7 +589,6 @@ L70:
 				w[j + (k + 1) * w_dim1]);
 			a[j + (k + 1) * a_dim1] = d21 * (d22 * w[j + (k + 1) *
 				 w_dim1] - w[j + k * w_dim1]);
-/* L80: */
 		    }
 		}
 
@@ -661,7 +638,6 @@ L90:
 		sgemv_("No transpose", &i__4, &i__5, &c_b8, &a[jj + a_dim1], 
 			lda, &w[jj + w_dim1], ldw, &c_b9, &a[jj + jj * a_dim1]
 , &c__1);
-/* L100: */
 	    }
 
 /*           Update the rectangular subdiagonal block */
@@ -673,7 +649,6 @@ L90:
 			&a[j + jb + a_dim1], lda, &w[j + w_dim1], ldw, &c_b9, 
 			&a[j + jb + j * a_dim1], lda);
 	    }
-/* L110: */
 	}
 
 /*        Put L21 in standard form by partially undoing the interchanges */

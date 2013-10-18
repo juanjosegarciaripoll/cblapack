@@ -46,17 +46,10 @@ static integer c__1 = 1;
     char transn[1], transt[1];
     doublereal lstres;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
 
 /*     Modified to call ZLACN2 in place of ZLACON, 10 Feb 03, SJH. */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -153,24 +146,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -228,7 +203,6 @@ static integer c__1 = 1;
 	for (j = 1; j <= i__1; ++j) {
 	    ferr[j] = 0.;
 	    berr[j] = 0.;
-/* L10: */
 	}
 	return 0;
     }
@@ -284,7 +258,6 @@ L20:
 	    i__3 = i__ + j * b_dim1;
 	    rwork[i__] = (d__1 = b[i__3].r, abs(d__1)) + (d__2 = d_imag(&b[
 		    i__ + j * b_dim1]), abs(d__2));
-/* L30: */
 	}
 
 /*        Compute abs(op(A))*abs(X) + abs(B). */
@@ -306,9 +279,7 @@ L20:
 		    rwork[i__] += ((d__1 = ab[i__3].r, abs(d__1)) + (d__2 = 
 			    d_imag(&ab[kk + i__ + k * ab_dim1]), abs(d__2))) *
 			     xk;
-/* L40: */
 		}
-/* L50: */
 	    }
 	} else {
 	    i__2 = *n;
@@ -327,10 +298,8 @@ L20:
 			    kk + i__ + k * ab_dim1]), abs(d__2))) * ((d__3 = 
 			    x[i__3].r, abs(d__3)) + (d__4 = d_imag(&x[i__ + j 
 			    * x_dim1]), abs(d__4)));
-/* L60: */
 		}
 		rwork[k] += s;
-/* L70: */
 	    }
 	}
 	s = 0.;
@@ -350,7 +319,6 @@ L20:
 			+ safe1);
 		s = max(d__3,d__4);
 	    }
-/* L80: */
 	}
 	berr[j] = s;
 
@@ -407,7 +375,6 @@ L20:
 			d_imag(&work[i__]), abs(d__2)) + nz * eps * rwork[i__]
 			 + safe1;
 	    }
-/* L90: */
 	}
 
 	kase = 0;
@@ -428,7 +395,6 @@ L100:
 		    z__1.r = rwork[i__5] * work[i__3].r, z__1.i = rwork[i__5] 
 			    * work[i__3].i;
 		    work[i__4].r = z__1.r, work[i__4].i = z__1.i;
-/* L110: */
 		}
 	    } else {
 
@@ -442,7 +408,6 @@ L100:
 		    z__1.r = rwork[i__5] * work[i__3].r, z__1.i = rwork[i__5] 
 			    * work[i__3].i;
 		    work[i__4].r = z__1.r, work[i__4].i = z__1.i;
-/* L120: */
 		}
 		zgbtrs_(transn, n, kl, ku, &c__1, &afb[afb_offset], ldafb, &
 			ipiv[1], &work[1], n, info);
@@ -460,13 +425,11 @@ L100:
 	    d__3 = lstres, d__4 = (d__1 = x[i__4].r, abs(d__1)) + (d__2 = 
 		    d_imag(&x[i__ + j * x_dim1]), abs(d__2));
 	    lstres = max(d__3,d__4);
-/* L130: */
 	}
 	if (lstres != 0.) {
 	    ferr[j] /= lstres;
 	}
 
-/* L140: */
     }
 
     return 0;

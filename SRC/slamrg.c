@@ -22,15 +22,8 @@
     /* Local variables */
     integer i__, ind1, ind2, n1sv, n2sv;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -65,10 +58,6 @@
 /*         sorted in ascending order. */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --index;
@@ -111,7 +100,6 @@ L10:
 	    index[i__] = ind2;
 	    ++i__;
 	    ind2 += *strd2;
-/* L20: */
 	}
     } else {
 /*     N2SV .EQ. 0 */
@@ -120,7 +108,6 @@ L10:
 	    index[i__] = ind1;
 	    ++i__;
 	    ind1 += *strd1;
-/* L30: */
 	}
     }
 

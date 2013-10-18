@@ -30,15 +30,8 @@ static real c_b8 = 0.f;
     real vii;
     integer lastv;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -130,16 +123,6 @@ static real c_b8 = 0.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -168,7 +151,6 @@ static real c_b8 = 0.f;
 		i__2 = i__;
 		for (j = 1; j <= i__2; ++j) {
 		    t[j + i__ * t_dim1] = 0.f;
-/* L10: */
 		}
 	    } else {
 
@@ -227,7 +209,6 @@ static real c_b8 = 0.f;
 		    prevlastv = lastv;
 		}
 	    }
-/* L20: */
 	}
     } else {
 	prevlastv = 1;
@@ -239,7 +220,6 @@ static real c_b8 = 0.f;
 		i__1 = *k;
 		for (j = i__; j <= i__1; ++j) {
 		    t[j + i__ * t_dim1] = 0.f;
-/* L30: */
 		}
 	    } else {
 
@@ -308,7 +288,6 @@ static real c_b8 = 0.f;
 		}
 		t[i__ + i__ * t_dim1] = tau[i__];
 	    }
-/* L40: */
 	}
     }
     return 0;

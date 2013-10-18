@@ -42,15 +42,8 @@ static integer c__0 = 0;
     doublereal diflj, difrj, dsigj;
     doublereal dsigjp;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -196,18 +189,6 @@ static integer c__0 = 0;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -284,7 +265,6 @@ static integer c__0 = 0;
 	    drot_(nrhs, &b[givcol[i__ + (givcol_dim1 << 1)] + b_dim1], ldb, &
 		    b[givcol[i__ + givcol_dim1] + b_dim1], ldb, &givnum[i__ + 
 		    (givnum_dim1 << 1)], &givnum[i__ + givnum_dim1]);
-/* L10: */
 	}
 
 /*        Step (2L): permute rows of B. */
@@ -294,7 +274,6 @@ static integer c__0 = 0;
 	for (i__ = 2; i__ <= i__1; ++i__) {
 	    dcopy_(nrhs, &b[perm[i__] + b_dim1], ldb, &bx[i__ + bx_dim1], 
 		    ldbx);
-/* L20: */
 	}
 
 /*        Step (3L): apply the inverse of the left singular vector */
@@ -332,7 +311,6 @@ static integer c__0 = 0;
 				dsigj) - diflj) / (poles[i__ + (poles_dim1 << 
 				1)] + dj);
 		    }
-/* L30: */
 		}
 		i__2 = *k;
 		for (i__ = j + 1; i__ <= i__2; ++i__) {
@@ -345,7 +323,6 @@ static integer c__0 = 0;
 				dsigjp) + difrj) / (poles[i__ + (poles_dim1 <<
 				 1)] + dj);
 		    }
-/* L40: */
 		}
 		work[1] = -1.;
 		temp = dnrm2_(k, &work[1], &c__1);
@@ -353,7 +330,6 @@ static integer c__0 = 0;
 			c__1, &c_b13, &b[j + b_dim1], ldb);
 		dlascl_("G", &c__0, &c__0, &temp, &c_b11, &c__1, nrhs, &b[j + 
 			b_dim1], ldb, info);
-/* L50: */
 	    }
 	}
 
@@ -393,7 +369,6 @@ static integer c__0 = 0;
 				i__ + difr_dim1]) / (dsigj + poles[i__ + 
 				poles_dim1]) / difr[i__ + (difr_dim1 << 1)];
 		    }
-/* L60: */
 		}
 		i__2 = *k;
 		for (i__ = j + 1; i__ <= i__2; ++i__) {
@@ -405,11 +380,9 @@ static integer c__0 = 0;
 				i__]) / (dsigj + poles[i__ + poles_dim1]) / 
 				difr[i__ + (difr_dim1 << 1)];
 		    }
-/* L70: */
 		}
 		dgemv_("T", k, nrhs, &c_b11, &b[b_offset], ldb, &work[1], &
 			c__1, &c_b13, &bx[j + bx_dim1], ldbx);
-/* L80: */
 	    }
 	}
 
@@ -437,7 +410,6 @@ static integer c__0 = 0;
 	for (i__ = 2; i__ <= i__1; ++i__) {
 	    dcopy_(nrhs, &bx[i__ + bx_dim1], ldbx, &b[perm[i__] + b_dim1], 
 		    ldb);
-/* L90: */
 	}
 
 /*        Step (4R): apply back the Givens rotations performed. */
@@ -447,7 +419,6 @@ static integer c__0 = 0;
 	    drot_(nrhs, &b[givcol[i__ + (givcol_dim1 << 1)] + b_dim1], ldb, &
 		    b[givcol[i__ + givcol_dim1] + b_dim1], ldb, &givnum[i__ + 
 		    (givnum_dim1 << 1)], &d__1);
-/* L100: */
 	}
     }
 

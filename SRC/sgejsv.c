@@ -62,7 +62,6 @@ static integer c_n1 = -1;
     real cond_ok__;
     integer warning, numrank;
 
-
 /*  -- LAPACK routine (version 3.2)                                    -- */
 
 /*  -- Contributed by Zlatko Drmac of the University of Zagreb and     -- */
@@ -70,7 +69,6 @@ static integer c_n1 = -1;
 /*  -- November 2008                                                   -- */
 
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
 
 /* This routine is also part of SIGMA (version 1.23, October 23. 2008.) */
 /* SIGMA is a library of algorithms for highly accurate algorithms for */
@@ -79,10 +77,7 @@ static integer c_n1 = -1;
 
 /*     -#- Scalar Arguments -#- */
 
-
 /*     -#- Array Arguments -#- */
-
-/*     .. */
 
 /*  Purpose */
 /*  ~~~~~~~ */
@@ -167,7 +162,6 @@ static integer c_n1 = -1;
 
 /*  Arguments */
 /*  ~~~~~~~~~ */
-/* ............................................................................ */
 /* . JOBA   (input) CHARACTER*1 */
 /* .        Specifies the level of accuracy: */
 /* .      = 'C': This option works well (high relative accuracy) if A = B * D, */
@@ -273,7 +267,6 @@ static integer c_n1 = -1;
 /* .        computing one set of singular vectors. */
 /* .      = 'P': introduce perturbation */
 /* .      = 'N': do not perturb */
-/* ............................................................................ */
 
 /*  M      (input) INTEGER */
 /*         The number of rows of the input matrix A.  M >= 0. */
@@ -375,12 +368,10 @@ static integer c_n1 = -1;
 /*          LWORK depends on the job: */
 
 /*          If only SIGMA is needed ( JOBU.EQ.'N', JOBV.EQ.'N' ) and */
-/*            -> .. no scaled condition estimate required ( JOBE.EQ.'N'): */
 /*               LWORK >= max(2*M+N,4*N+1,7). This is the minimal requirement. */
 /*               For optimal performance (blocked code) the optimal value */
 /*               is LWORK >= max(2*M+N,3*N+(N+1)*NB,7). Here NB is the optimal */
 /*               block size for xGEQP3/xGEQRF. */
-/*            -> .. an estimate of the scaled condition number of A is */
 /*               required (JOBA='E', 'G'). In this case, LWORK is the maximum */
 /*               of the above and N*N+4*N, i.e. LWORK >= max(2*M+N,N*N+4N,7). */
 
@@ -395,9 +386,7 @@ static integer c_n1 = -1;
 /*               where NB is the optimal block size. */
 
 /*          If full SVD is needed ( JOBU.EQ.'U' or 'F', JOBV.EQ.'V' ) and */
-/*            -> .. the singular vectors are computed without explicit */
 /*               accumulation of the Jacobi rotations, LWORK >= 6*N+2*N*N */
-/*            -> .. in the iterative part, the Jacobi rotations are */
 /*               explicitly accumulated (option, see the description of JOBV), */
 /*               then the minimal requirement is LWORK >= max(M+3*N+N*N,7). */
 /*               For better performance, if NB is the optimal block size, */
@@ -420,25 +409,15 @@ static integer c_n1 = -1;
 /*           > 0 :  SGEJSV  did not converge in the maximal allowed number */
 /*                  of sweeps. The computed values may be inaccurate. */
 
-/* ............................................................................ */
-
 /*     Local Parameters: */
-
 
 /*     Local Scalars: */
 
-
 /*     Intrinsic Functions: */
-
 
 /*     External Functions: */
 
-
 /*     External Subroutines ( BLAS, LAPACK ): */
-
-
-
-/* ............................................................................ */
 
 /*     Test the input arguments */
 
@@ -581,7 +560,6 @@ static integer c_n1 = -1;
 		sscal_(&i__2, &scalem, &sva[1], &c__1);
 	    }
 	}
-/* L1874: */
     }
 
     if (noscal) {
@@ -600,7 +578,6 @@ static integer c_n1 = -1;
 	    r__1 = aaqq, r__2 = sva[p];
 	    aaqq = dmin(r__1,r__2);
 	}
-/* L4781: */
     }
 
 /*     Quick return for zero M x N matrix */
@@ -706,7 +683,6 @@ static integer c_n1 = -1;
 /*     Compute the row norms, needed to determine row pivoting sequence */
 /*     (in the case of heavily row weighted A, row pivoting is strongly */
 /*     advised) and to collect information needed to compare the */
-/*     structures of A * A^t and A^t * A (in the case L2TRAN.EQ..TRUE.). */
 
 	if (l2tran) {
 	    i__1 = *m;
@@ -726,7 +702,6 @@ static integer c_n1 = -1;
 		    r__1 = aatmin, r__2 = work[*n + p];
 		    aatmin = dmin(r__1,r__2);
 		}
-/* L1950: */
 	    }
 	} else {
 	    i__1 = *m;
@@ -739,7 +714,6 @@ static integer c_n1 = -1;
 /* Computing MIN */
 		r__1 = aatmin, r__2 = work[*m + *n + p];
 		aatmin = dmin(r__1,r__2);
-/* L1904: */
 	    }
 	}
 
@@ -770,7 +744,6 @@ static integer c_n1 = -1;
 	    if (big1 != 0.f) {
 		entra += big1 * log(big1);
 	    }
-/* L1113: */
 	}
 	entra = -entra / log((real) (*n));
 
@@ -789,7 +762,6 @@ static integer c_n1 = -1;
 	    if (big1 != 0.f) {
 		entrat += big1 * log(big1);
 	    }
-/* L1114: */
 	}
 	entrat = -entrat / log((real) (*m));
 
@@ -810,15 +782,12 @@ static integer c_n1 = -1;
 		    temp1 = a[q + p * a_dim1];
 		    a[q + p * a_dim1] = a[p + q * a_dim1];
 		    a[p + q * a_dim1] = temp1;
-/* L1116: */
 		}
-/* L1115: */
 	    }
 	    i__1 = *n;
 	    for (p = 1; p <= i__1; ++p) {
 		work[*m + *n + p] = sva[p];
 		sva[p] = work[*n + p];
-/* L1117: */
 	    }
 	    temp1 = aapp;
 	    aapp = aatmax;
@@ -893,7 +862,6 @@ static integer c_n1 = -1;
 			lda);
 		sva[p] = 0.f;
 	    }
-/* L700: */
 	}
     }
 
@@ -915,7 +883,6 @@ static integer c_n1 = -1;
 		work[*m + *n + p] = work[*m + *n + q];
 		work[*m + *n + q] = temp1;
 	    }
-/* L1952: */
 	}
 	i__1 = *m - 1;
 	slaswp_(n, &a[a_offset], lda, &c__1, &i__1, &iwork[(*n << 1) + 1], &
@@ -939,9 +906,7 @@ static integer c_n1 = -1;
 /*     A * P1 = Q1 * [ R1^t 0]^t: */
     i__1 = *n;
     for (p = 1; p <= i__1; ++p) {
-/*        .. all columns are free columns */
 	iwork[p] = 0;
-/* L1963: */
     }
     i__1 = *lwork - *n;
     sgeqp3_(m, n, &a[a_offset], lda, &iwork[1], &work[1], &work[*n + 1], &
@@ -970,12 +935,10 @@ static integer c_n1 = -1;
 	    } else {
 		goto L3002;
 	    }
-/* L3001: */
 	}
 L3002:
 	;
     } else if (l2rank) {
-/*        .. similarly as above, only slightly more gentle (less agressive). */
 /*        Sudden drop on the diagonal of R1 is used as the criterion for */
 /*        close-to-rank-defficient. */
 	temp1 = sqrt(sfmin);
@@ -988,7 +951,6 @@ L3002:
 		goto L3402;
 	    }
 	    ++nr;
-/* L3401: */
 	}
 L3402:
 
@@ -1009,7 +971,6 @@ L3402:
 		goto L3302;
 	    }
 	    ++nr;
-/* L3301: */
 	}
 L3302:
 
@@ -1023,7 +984,6 @@ L3302:
 	for (p = 2; p <= i__1; ++p) {
 	    temp1 = (r__1 = a[p + p * a_dim1], dabs(r__1)) / sva[iwork[p]];
 	    maxprj = dmin(maxprj,temp1);
-/* L3051: */
 	}
 /* Computing 2nd power */
 	r__1 = maxprj;
@@ -1032,7 +992,6 @@ L3302:
 	}
     }
 
-
     sconda = -1.f;
     condr1 = -1.f;
     condr2 = -1.f;
@@ -1040,26 +999,22 @@ L3302:
     if (errest) {
 	if (*n == nr) {
 	    if (rsvec) {
-/*              .. V is available as workspace */
 		slacpy_("U", n, n, &a[a_offset], lda, &v[v_offset], ldv);
 		i__1 = *n;
 		for (p = 1; p <= i__1; ++p) {
 		    temp1 = sva[iwork[p]];
 		    r__1 = 1.f / temp1;
 		    sscal_(&p, &r__1, &v[p * v_dim1 + 1], &c__1);
-/* L3053: */
 		}
 		spocon_("U", n, &v[v_offset], ldv, &c_b35, &temp1, &work[*n + 
 			1], &iwork[(*n << 1) + *m + 1], &ierr);
 	    } else if (lsvec) {
-/*              .. U is available as workspace */
 		slacpy_("U", n, n, &a[a_offset], lda, &u[u_offset], ldu);
 		i__1 = *n;
 		for (p = 1; p <= i__1; ++p) {
 		    temp1 = sva[iwork[p]];
 		    r__1 = 1.f / temp1;
 		    sscal_(&p, &r__1, &u[p * u_dim1 + 1], &c__1);
-/* L3054: */
 		}
 		spocon_("U", n, &u[u_offset], ldu, &c_b35, &temp1, &work[*n + 
 			1], &iwork[(*n << 1) + *m + 1], &ierr);
@@ -1070,9 +1025,7 @@ L3302:
 		    temp1 = sva[iwork[p]];
 		    r__1 = 1.f / temp1;
 		    sscal_(&p, &r__1, &work[*n + (p - 1) * *n + 1], &c__1);
-/* L3052: */
 		}
-/*           .. the columns of R are scaled to have unit Euclidean lengths. */
 		spocon_("U", n, &work[*n + 1], n, &c_b35, &temp1, &work[*n + *
 			n * *n + 1], &iwork[(*n << 1) + *m + 1], &ierr);
 	    }
@@ -1094,7 +1047,6 @@ L3302:
 
 /*         Singular Values only */
 
-/*         .. transpose A(1:NR,1:N) */
 /* Computing MIN */
 	i__2 = *n - 1;
 	i__1 = min(i__2,nr);
@@ -1102,7 +1054,6 @@ L3302:
 	    i__2 = *n - p;
 	    scopy_(&i__2, &a[p + (p + 1) * a_dim1], lda, &a[p + 1 + p * 
 		    a_dim1], &c__1);
-/* L1946: */
 	}
 
 /*        The following two DO-loops introduce small relative perturbation */
@@ -1132,9 +1083,7 @@ L3302:
 			    a[p + q * a_dim1] = r_sign(&temp1, &a[p + q * 
 				    a_dim1]);
 			}
-/* L4949: */
 		    }
-/* L4947: */
 		}
 	    } else {
 		i__1 = nr - 1;
@@ -1143,26 +1092,21 @@ L3302:
 			1], lda);
 	    }
 
-/*            .. second preconditioning using the QR factorization */
-
 	    i__1 = *lwork - *n;
 	    sgeqrf_(n, &nr, &a[a_offset], lda, &work[1], &work[*n + 1], &i__1, 
 		     &ierr);
 
-/*           .. and transpose upper to lower triangular */
 	    i__1 = nr - 1;
 	    for (p = 1; p <= i__1; ++p) {
 		i__2 = nr - p;
 		scopy_(&i__2, &a[p + (p + 1) * a_dim1], lda, &a[p + 1 + p * 
 			a_dim1], &c__1);
-/* L1948: */
 	    }
 
 	}
 
 /*           Row-cyclic Jacobi SVD algorithm with column pivoting */
 
-/*           .. again some perturbation (a "background noise") is added */
 /*           to drown denormals */
 	if (l2pert) {
 /*              XSC = SQRT(SMALL) */
@@ -1177,9 +1121,7 @@ L3302:
 			a[p + q * a_dim1] = r_sign(&temp1, &a[p + q * a_dim1])
 				;
 		    }
-/* L1949: */
 		}
-/* L1947: */
 	    }
 	} else {
 	    i__1 = nr - 1;
@@ -1188,7 +1130,6 @@ L3302:
 		    lda);
 	}
 
-/*           .. and one-sided Jacobi rotations are started on a lower */
 /*           triangular matrix (plus perturbation which is ignored in */
 /*           the part which destroys triangular form (confusing?!)) */
 
@@ -1198,20 +1139,17 @@ L3302:
 	scalem = work[1];
 	numrank = i_nint(&work[2]);
 
-
     } else if (rsvec && ! lsvec) {
 
 /*        -> Singular Values and Right Singular Vectors <- */
 
 	if (almort) {
 
-/*           .. in this case NR equals N */
 	    i__1 = nr;
 	    for (p = 1; p <= i__1; ++p) {
 		i__2 = *n - p + 1;
 		scopy_(&i__2, &a[p + p * a_dim1], lda, &v[p + p * v_dim1], &
 			c__1);
-/* L1998: */
 	    }
 	    i__1 = nr - 1;
 	    i__2 = nr - 1;
@@ -1224,7 +1162,6 @@ L3302:
 	    numrank = i_nint(&work[2]);
 	} else {
 
-/*        .. two more QR factorizations ( one QRF is not enough, two require */
 /*        accumulated product of Jacobi rotations, three are perfect ) */
 
 	    i__1 = nr - 1;
@@ -1247,7 +1184,6 @@ L3302:
 		i__2 = nr - p + 1;
 		scopy_(&i__2, &v[p + p * v_dim1], ldv, &v[p + p * v_dim1], &
 			c__1);
-/* L8998: */
 	    }
 	    i__1 = nr - 1;
 	    i__2 = nr - 1;
@@ -1280,7 +1216,6 @@ L3302:
 	i__1 = *n;
 	for (p = 1; p <= i__1; ++p) {
 	    scopy_(n, &v[p + v_dim1], ldv, &a[iwork[p] + a_dim1], lda);
-/* L8991: */
 	}
 	slacpy_("All", n, n, &a[a_offset], lda, &v[v_offset], ldv);
 
@@ -1292,13 +1227,11 @@ L3302:
 
 /*        -#- Singular Values and Left Singular Vectors                 -#- */
 
-/*        .. second preconditioning step to avoid need to accumulate */
 /*        Jacobi rotations in the Jacobi iterations. */
 	i__1 = nr;
 	for (p = 1; p <= i__1; ++p) {
 	    i__2 = *n - p + 1;
 	    scopy_(&i__2, &a[p + p * a_dim1], lda, &u[p + p * u_dim1], &c__1);
-/* L1965: */
 	}
 	i__1 = nr - 1;
 	i__2 = nr - 1;
@@ -1314,7 +1247,6 @@ L3302:
 	    i__2 = nr - p;
 	    scopy_(&i__2, &u[p + (p + 1) * u_dim1], ldu, &u[p + 1 + p * 
 		    u_dim1], &c__1);
-/* L1967: */
 	}
 	i__1 = nr - 1;
 	i__2 = nr - 1;
@@ -1355,7 +1287,6 @@ L3302:
 	for (p = 1; p <= i__1; ++p) {
 	    xsc = 1.f / snrm2_(m, &u[p * u_dim1 + 1], &c__1);
 	    sscal_(m, &xsc, &u[p * u_dim1 + 1], &c__1);
-/* L1974: */
 	}
 
 	if (transp) {
@@ -1382,10 +1313,8 @@ L3302:
 		    i__2 = *n - p + 1;
 		    scopy_(&i__2, &a[p + p * a_dim1], lda, &v[p + p * v_dim1], 
 			     &c__1);
-/* L1968: */
 		}
 
-/*           .. the following two loops perturb small entries to avoid */
 /*           denormals in the second QR factorization, where they are */
 /*           as good as zeros. This is done to avoid painfully slow */
 /*           computation with denormals. The relative size of the perturbation */
@@ -1412,9 +1341,7 @@ L3302:
 			    if (p < q) {
 				v[p + q * v_dim1] = -v[p + q * v_dim1];
 			    }
-/* L2968: */
 			}
-/* L2969: */
 		    }
 		} else {
 		    i__1 = nr - 1;
@@ -1438,21 +1365,17 @@ L3302:
 		    r__1 = 1.f / temp1;
 		    sscal_(&i__2, &r__1, &work[(*n << 1) + (p - 1) * nr + p], 
 			    &c__1);
-/* L3950: */
 		}
 		spocon_("Lower", &nr, &work[(*n << 1) + 1], &nr, &c_b35, &
 			temp1, &work[(*n << 1) + nr * nr + 1], &iwork[*m + (*
 			n << 1) + 1], &ierr);
 		condr1 = 1.f / sqrt(temp1);
-/*           .. here need a second oppinion on the condition number */
-/*           .. then assume worst case scenario */
 /*           R1 is OK for inverse <=> CONDR1 .LT. FLOAT(N) */
 /*           more conservative    <=> CONDR1 .LT. SQRT(FLOAT(N)) */
 
 		cond_ok__ = sqrt((real) nr);
 /* [TP]       COND_OK is a tuning parameter. */
 		if (condr1 < cond_ok__) {
-/*              .. the second QRF without pivoting. Note: in an optimized */
 /*              implementation, this QRF should be implemented as the QRF */
 /*              of a lower triangular matrix. */
 /*              R1^t = Q2 * R2 */
@@ -1476,9 +1399,7 @@ L3302:
 				    v[q + p * v_dim1] = r_sign(&temp1, &v[q + 
 					    p * v_dim1]);
 				}
-/* L3958: */
 			    }
-/* L3959: */
 			}
 		    }
 
@@ -1486,22 +1407,18 @@ L3302:
 			slacpy_("A", n, &nr, &v[v_offset], ldv, &work[(*n << 
 				1) + 1], n);
 		    }
-/*              .. save ... */
 
-/*           .. this transposed copy should be better than naive */
 		    i__1 = nr - 1;
 		    for (p = 1; p <= i__1; ++p) {
 			i__2 = nr - p;
 			scopy_(&i__2, &v[p + (p + 1) * v_dim1], ldv, &v[p + 1 
 				+ p * v_dim1], &c__1);
-/* L1969: */
 		    }
 
 		    condr2 = condr1;
 
 		} else {
 
-/*              .. ill-conditioned case: second QRF with pivoting */
 /*              Note that windowed pivoting would be equaly good */
 /*              numerically, and more run-time efficient. So, in */
 /*              an optimal implementation, the next call to SGEQP3 */
@@ -1512,7 +1429,6 @@ L3302:
 		    i__1 = nr;
 		    for (p = 1; p <= i__1; ++p) {
 			iwork[*n + p] = 0;
-/* L3003: */
 		    }
 		    i__1 = *lwork - (*n << 1);
 		    sgeqp3_(n, &nr, &v[v_offset], ldv, &iwork[*n + 1], &work[*
@@ -1535,9 +1451,7 @@ L3302:
 				    v[q + p * v_dim1] = r_sign(&temp1, &v[q + 
 					    p * v_dim1]);
 				}
-/* L3968: */
 			    }
-/* L3969: */
 			}
 		    }
 
@@ -1557,9 +1471,7 @@ L3302:
 				temp1 = xsc * dmin(r__3,r__4);
 				v[p + q * v_dim1] = -r_sign(&temp1, &v[q + p *
 					 v_dim1]);
-/* L8971: */
 			    }
-/* L8970: */
 			}
 		    } else {
 			i__1 = nr - 1;
@@ -1572,7 +1484,6 @@ L3302:
 		    sgelqf_(&nr, &nr, &v[v_offset], ldv, &work[(*n << 1) + *n 
 			    * nr + 1], &work[(*n << 1) + *n * nr + nr + 1], &
 			    i__1, &ierr);
-/*              .. and estimate the condition number */
 		    slacpy_("L", &nr, &nr, &v[v_offset], ldv, &work[(*n << 1) 
 			    + *n * nr + nr + 1], &nr);
 		    i__1 = nr;
@@ -1582,7 +1493,6 @@ L3302:
 			r__1 = 1.f / temp1;
 			sscal_(&p, &r__1, &work[(*n << 1) + *n * nr + nr + p], 
 				 &nr);
-/* L4950: */
 		    }
 		    spocon_("L", &nr, &work[(*n << 1) + *n * nr + nr + 1], &
 			    nr, &c_b35, &temp1, &work[(*n << 1) + *n * nr + 
@@ -1591,13 +1501,11 @@ L3302:
 		    condr2 = 1.f / sqrt(temp1);
 
 		    if (condr2 >= cond_ok__) {
-/*                 .. save the Householder vectors used for Q3 */
 /*                 (this overwrittes the copy of R2, as it will not be */
 /*                 needed in this branch, but it does not overwritte the */
 /*                 Huseholder vectors of Q2.). */
 			slacpy_("U", &nr, &nr, &v[v_offset], ldv, &work[(*n <<
 				 1) + 1], n);
-/*                 .. and the rest of the information on Q3 is in */
 /*                 WORK(2*N+N*NR+1:2*N+N*NR+N) */
 		    }
 
@@ -1613,9 +1521,7 @@ L3302:
 /*                    V(p,q) = - SIGN( TEMP1, V(q,p) ) */
 			    v[p + q * v_dim1] = -r_sign(&temp1, &v[p + q * 
 				    v_dim1]);
-/* L4969: */
 			}
-/* L4968: */
 		    }
 		} else {
 		    i__1 = nr - 1;
@@ -1643,19 +1549,15 @@ L3302:
 			scopy_(&nr, &v[p * v_dim1 + 1], &c__1, &u[p * u_dim1 
 				+ 1], &c__1);
 			sscal_(&nr, &sva[p], &v[p * v_dim1 + 1], &c__1);
-/* L3970: */
 		    }
-/*        .. pick the right matrix equation and solve it */
 
 		    if (nr == *n) {
-/* :))             .. best case, R1 is inverted. The solution of this matrix */
 /*                 equation is Q2*V2 = the product of the Jacobi rotations */
 /*                 used in SGESVJ, premultiplied with the orthogonal matrix */
 /*                 from the second QR factorization. */
 			strsm_("L", "U", "N", "N", &nr, &nr, &c_b35, &a[
 				a_offset], lda, &v[v_offset], ldv);
 		    } else {
-/*                 .. R1 is well conditioned, but non-square. Transpose(R2) */
 /*                 is inverted to get the product of the Jacobi rotations */
 /*                 used in SGESVJ. The Q-factor from the second QR */
 /*                 factorization is then built in explicitly. */
@@ -1681,7 +1583,6 @@ L3302:
 
 		} else if (condr2 < cond_ok__) {
 
-/* :)           .. the input matrix A is very likely a relative of */
 /*              the Kahan matrix :) */
 /*              The matrix R2 is inverted. The solution of the matrix equation */
 /*              is Q3^T*V3 = the product of the Jacobi rotations (appplied to */
@@ -1698,26 +1599,21 @@ L3302:
 			scopy_(&nr, &v[p * v_dim1 + 1], &c__1, &u[p * u_dim1 
 				+ 1], &c__1);
 			sscal_(&nr, &sva[p], &u[p * u_dim1 + 1], &c__1);
-/* L3870: */
 		    }
 		    strsm_("L", "U", "N", "N", &nr, &nr, &c_b35, &work[(*n << 
 			    1) + 1], n, &u[u_offset], ldu);
-/*              .. apply the permutation from the second QR factorization */
 		    i__1 = nr;
 		    for (q = 1; q <= i__1; ++q) {
 			i__2 = nr;
 			for (p = 1; p <= i__2; ++p) {
 			    work[(*n << 1) + *n * nr + nr + iwork[*n + p]] = 
 				    u[p + q * u_dim1];
-/* L872: */
 			}
 			i__2 = nr;
 			for (p = 1; p <= i__2; ++p) {
 			    u[p + q * u_dim1] = work[(*n << 1) + *n * nr + nr 
 				    + p];
-/* L874: */
 			}
-/* L873: */
 		    }
 		    if (nr < *n) {
 			i__1 = *n - nr;
@@ -1781,15 +1677,12 @@ L3302:
 			for (p = 1; p <= i__2; ++p) {
 			    work[(*n << 1) + *n * nr + nr + iwork[*n + p]] = 
 				    u[p + q * u_dim1];
-/* L772: */
 			}
 			i__2 = nr;
 			for (p = 1; p <= i__2; ++p) {
 			    u[p + q * u_dim1] = work[(*n << 1) + *n * nr + nr 
 				    + p];
-/* L774: */
 			}
-/* L773: */
 		    }
 
 		}
@@ -1805,19 +1698,16 @@ L3302:
 		    for (p = 1; p <= i__2; ++p) {
 			work[(*n << 1) + *n * nr + nr + iwork[p]] = v[p + q * 
 				v_dim1];
-/* L972: */
 		    }
 		    i__2 = *n;
 		    for (p = 1; p <= i__2; ++p) {
 			v[p + q * v_dim1] = work[(*n << 1) + *n * nr + nr + p]
 				;
-/* L973: */
 		    }
 		    xsc = 1.f / snrm2_(n, &v[q * v_dim1 + 1], &c__1);
 		    if (xsc < 1.f - temp1 || xsc > temp1 + 1.f) {
 			sscal_(n, &xsc, &v[q * v_dim1 + 1], &c__1);
 		    }
-/* L1972: */
 		}
 /*           At this moment, V contains the right singular vectors of A. */
 /*           Next, assemble the left singular vector matrix U (M x N). */
@@ -1850,7 +1740,6 @@ L3302:
 		    if (xsc < 1.f - temp1 || xsc > temp1 + 1.f) {
 			sscal_(m, &xsc, &u[p * u_dim1 + 1], &c__1);
 		    }
-/* L1973: */
 		}
 
 /*           If the initial QRF is computed with row pivoting, the left */
@@ -1864,7 +1753,6 @@ L3302:
 
 	    } else {
 
-/*        .. the initial matrix A has almost orthogonal columns and */
 /*        the second QRF is not needed */
 
 		slacpy_("Upper", n, n, &a[a_offset], lda, &work[*n + 1], n);
@@ -1877,9 +1765,7 @@ L3302:
 			for (q = 1; q <= i__2; ++q) {
 			    work[*n + (q - 1) * *n + p] = -r_sign(&temp1, &
 				    work[*n + (p - 1) * *n + q]);
-/* L5971: */
 			}
-/* L5970: */
 		    }
 		} else {
 		    i__1 = *n - 1;
@@ -1900,7 +1786,6 @@ L3302:
 		    scopy_(n, &work[*n + (p - 1) * *n + 1], &c__1, &u[p * 
 			    u_dim1 + 1], &c__1);
 		    sscal_(n, &sva[p], &work[*n + (p - 1) * *n + 1], &c__1);
-/* L6970: */
 		}
 
 		strsm_("Left", "Upper", "NoTrans", "No UD", n, n, &c_b35, &a[
@@ -1908,7 +1793,6 @@ L3302:
 		i__1 = *n;
 		for (p = 1; p <= i__1; ++p) {
 		    scopy_(n, &work[*n + p], n, &v[iwork[p] + v_dim1], ldv);
-/* L6972: */
 		}
 		temp1 = sqrt((real) (*n)) * epsln;
 		i__1 = *n;
@@ -1917,7 +1801,6 @@ L3302:
 		    if (xsc < 1.f - temp1 || xsc > temp1 + 1.f) {
 			sscal_(n, &xsc, &v[p * v_dim1 + 1], &c__1);
 		    }
-/* L6971: */
 		}
 
 /*           Assemble the left singular vector matrix U (M x N). */
@@ -1946,7 +1829,6 @@ L3302:
 		    if (xsc < 1.f - temp1 || xsc > temp1 + 1.f) {
 			sscal_(m, &xsc, &u[p * u_dim1 + 1], &c__1);
 		    }
-/* L6973: */
 		}
 
 		if (rowpiv) {
@@ -1969,14 +1851,12 @@ L3302:
 /*        to be greater than the overflow threshold. This is because the */
 /*        a posteriori computation of the singular vectors assumes robust */
 /*        implementation of BLAS and some LAPACK procedures, capable of working */
-/*        in presence of extreme values. Since that is not always the case, ... */
 
 	    i__1 = nr;
 	    for (p = 1; p <= i__1; ++p) {
 		i__2 = *n - p + 1;
 		scopy_(&i__2, &a[p + p * a_dim1], lda, &v[p + p * v_dim1], &
 			c__1);
-/* L7968: */
 	    }
 
 	    if (l2pert) {
@@ -1994,9 +1874,7 @@ L3302:
 			if (p < q) {
 			    v[p + q * v_dim1] = -v[p + q * v_dim1];
 			}
-/* L5968: */
 		    }
-/* L5969: */
 		}
 	    } else {
 		i__1 = nr - 1;
@@ -2014,7 +1892,6 @@ L3302:
 		i__2 = nr - p + 1;
 		scopy_(&i__2, &v[p + p * v_dim1], ldv, &u[p + p * u_dim1], &
 			c__1);
-/* L7969: */
 	    }
 	    if (l2pert) {
 		xsc = sqrt(small / epsln);
@@ -2028,9 +1905,7 @@ L3302:
 			temp1 = xsc * dmin(r__3,r__4);
 			u[p + q * u_dim1] = -r_sign(&temp1, &u[q + p * u_dim1]
 				);
-/* L9971: */
 		    }
-/* L9970: */
 		}
 	    } else {
 		i__1 = nr - 1;
@@ -2072,18 +1947,15 @@ L3302:
 		for (p = 1; p <= i__2; ++p) {
 		    work[(*n << 1) + *n * nr + nr + iwork[p]] = v[p + q * 
 			    v_dim1];
-/* L8972: */
 		}
 		i__2 = *n;
 		for (p = 1; p <= i__2; ++p) {
 		    v[p + q * v_dim1] = work[(*n << 1) + *n * nr + nr + p];
-/* L8973: */
 		}
 		xsc = 1.f / snrm2_(n, &v[q * v_dim1 + 1], &c__1);
 		if (xsc < 1.f - temp1 || xsc > temp1 + 1.f) {
 		    sscal_(n, &xsc, &v[q * v_dim1 + 1], &c__1);
 		}
-/* L7972: */
 	    }
 
 /*           At this moment, V contains the right singular vectors of A. */
@@ -2114,15 +1986,12 @@ L3302:
 			 + 1], &c_n1);
 	    }
 
-
 	}
 	if (transp) {
-/*           .. swap U and V because the procedure worked on A^t */
 	    i__1 = *n;
 	    for (p = 1; p <= i__1; ++p) {
 		sswap_(n, &u[p * u_dim1 + 1], &c__1, &v[p * v_dim1 + 1], &
 			c__1);
-/* L6974: */
 	    }
 	}
 
@@ -2142,7 +2011,6 @@ L3302:
 	i__1 = *n;
 	for (p = nr + 1; p <= i__1; ++p) {
 	    sva[p] = 0.f;
-/* L3004: */
 	}
     }
 
@@ -2165,7 +2033,4 @@ L3302:
     iwork[3] = warning;
 
     return 0;
-/*     .. */
-/*     .. END OF SGEJSV */
-/*     .. */
 } /* sgejsv_ */

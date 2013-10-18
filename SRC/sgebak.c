@@ -27,15 +27,8 @@
     logical leftv;
     logical rightv;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -88,18 +81,6 @@
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode and Test the input parameters */
 
@@ -161,7 +142,6 @@
 	    for (i__ = *ilo; i__ <= i__1; ++i__) {
 		s = scale[i__];
 		sscal_(m, &s, &v[i__ + v_dim1], ldv);
-/* L10: */
 	    }
 	}
 
@@ -170,7 +150,6 @@
 	    for (i__ = *ilo; i__ <= i__1; ++i__) {
 		s = 1.f / scale[i__];
 		sscal_(m, &s, &v[i__ + v_dim1], ldv);
-/* L20: */
 	    }
 	}
 

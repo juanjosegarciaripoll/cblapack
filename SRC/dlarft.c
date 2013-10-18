@@ -31,15 +31,8 @@ static doublereal c_b8 = 0.;
     doublereal vii;
     integer lastv;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -131,16 +124,6 @@ static doublereal c_b8 = 0.;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -169,7 +152,6 @@ static doublereal c_b8 = 0.;
 		i__2 = i__;
 		for (j = 1; j <= i__2; ++j) {
 		    t[j + i__ * t_dim1] = 0.;
-/* L10: */
 		}
 	    } else {
 
@@ -228,7 +210,6 @@ static doublereal c_b8 = 0.;
 		    prevlastv = lastv;
 		}
 	    }
-/* L20: */
 	}
     } else {
 	prevlastv = 1;
@@ -240,7 +221,6 @@ static doublereal c_b8 = 0.;
 		i__1 = *k;
 		for (j = i__; j <= i__1; ++j) {
 		    t[j + i__ * t_dim1] = 0.;
-/* L30: */
 		}
 	    } else {
 
@@ -309,7 +289,6 @@ static doublereal c_b8 = 0.;
 		}
 		t[i__ + i__ * t_dim1] = tau[i__];
 	    }
-/* L40: */
 	}
     }
     return 0;

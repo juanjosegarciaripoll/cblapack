@@ -31,15 +31,8 @@ static real c_b11 = 1.f;
     integer jlast;
     real altsgn, estold;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -100,18 +93,6 @@ static real c_b11 = 1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --isave;
     --isgn;
@@ -123,7 +104,6 @@ static real c_b11 = 1.f;
 	i__1 = *n;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    x[i__] = 1.f / (real) (*n);
-/* L10: */
 	}
 	*kase = 1;
 	isave[1] = 1;
@@ -138,14 +118,12 @@ static real c_b11 = 1.f;
 	case 5:  goto L140;
     }
 
-/*     ................ ENTRY   (ISAVE( 1 ) = 1) */
 /*     FIRST ITERATION.  X HAS BEEN OVERWRITTEN BY A*X. */
 
 L20:
     if (*n == 1) {
 	v[1] = x[1];
 	*est = dabs(v[1]);
-/*        ... QUIT */
 	goto L150;
     }
     *est = sasum_(n, &x[1], &c__1);
@@ -154,33 +132,27 @@ L20:
     for (i__ = 1; i__ <= i__1; ++i__) {
 	x[i__] = r_sign(&c_b11, &x[i__]);
 	isgn[i__] = i_nint(&x[i__]);
-/* L30: */
     }
     *kase = 2;
     isave[1] = 2;
     return 0;
 
-/*     ................ ENTRY   (ISAVE( 1 ) = 2) */
 /*     FIRST ITERATION.  X HAS BEEN OVERWRITTEN BY TRANSPOSE(A)*X. */
 
 L40:
     isave[2] = isamax_(n, &x[1], &c__1);
     isave[3] = 2;
 
-/*     MAIN LOOP - ITERATIONS 2,3,...,ITMAX. */
-
 L50:
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	x[i__] = 0.f;
-/* L60: */
     }
     x[isave[2]] = 1.f;
     *kase = 1;
     isave[1] = 3;
     return 0;
 
-/*     ................ ENTRY   (ISAVE( 1 ) = 3) */
 /*     X HAS BEEN OVERWRITTEN BY A*X. */
 
 L70:
@@ -193,7 +165,6 @@ L70:
 	if (i_nint(&r__1) != isgn[i__]) {
 	    goto L90;
 	}
-/* L80: */
     }
 /*     REPEATED SIGN VECTOR DETECTED, HENCE ALGORITHM HAS CONVERGED. */
     goto L120;
@@ -208,13 +179,11 @@ L90:
     for (i__ = 1; i__ <= i__1; ++i__) {
 	x[i__] = r_sign(&c_b11, &x[i__]);
 	isgn[i__] = i_nint(&x[i__]);
-/* L100: */
     }
     *kase = 2;
     isave[1] = 4;
     return 0;
 
-/*     ................ ENTRY   (ISAVE( 1 ) = 4) */
 /*     X HAS BEEN OVERWRITTEN BY TRANSPOSE(A)*X. */
 
 L110:
@@ -233,13 +202,11 @@ L120:
     for (i__ = 1; i__ <= i__1; ++i__) {
 	x[i__] = altsgn * ((real) (i__ - 1) / (real) (*n - 1) + 1.f);
 	altsgn = -altsgn;
-/* L130: */
     }
     *kase = 1;
     isave[1] = 5;
     return 0;
 
-/*     ................ ENTRY   (ISAVE( 1 ) = 5) */
 /*     X HAS BEEN OVERWRITTEN BY A*X. */
 
 L140:

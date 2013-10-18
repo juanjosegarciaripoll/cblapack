@@ -36,15 +36,8 @@ static integer c__1 = 1;
     logical upper;
     integer kcnext;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -91,18 +84,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -143,7 +124,6 @@ static integer c__1 = 1;
 		return 0;
 	    }
 	    kp -= *info;
-/* L10: */
 	}
     } else {
 
@@ -157,7 +137,6 @@ static integer c__1 = 1;
 		return 0;
 	    }
 	    kp = kp + *n - *info + 1;
-/* L20: */
 	}
     }
     *info = 0;
@@ -296,7 +275,6 @@ L30:
 		ap[i__2].r = ap[i__3].r, ap[i__2].i = ap[i__3].i;
 		i__2 = kx;
 		ap[i__2].r = temp.r, ap[i__2].i = temp.i;
-/* L40: */
 	    }
 	    i__1 = kc + k - 1;
 	    temp.r = ap[i__1].r, temp.i = ap[i__1].i;
@@ -461,7 +439,6 @@ L60:
 		ap[i__2].r = ap[i__3].r, ap[i__2].i = ap[i__3].i;
 		i__2 = kx;
 		ap[i__2].r = temp.r, ap[i__2].i = temp.i;
-/* L70: */
 	    }
 	    i__1 = kc;
 	    temp.r = ap[i__1].r, temp.i = ap[i__1].i;

@@ -45,15 +45,8 @@
     doublereal bnorm, cnorm, smini;
     doublereal bignum, smlnum;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -171,21 +164,6 @@
 
 /* ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Equivalences .. */
-/*     .. */
-/*     .. Data statements .. */
     /* Parameter adjustments */
     a_dim1 = *lda;
     a_offset = 1 + a_dim1;
@@ -198,8 +176,6 @@
     x -= x_offset;
 
     /* Function Body */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Compute BIGNUM */
 
@@ -318,7 +294,6 @@
 		    cmax = (d__1 = crv[j - 1], abs(d__1));
 		    icmax = j;
 		}
-/* L10: */
 	    }
 
 /*           If norm(C) < SMINI, use SMINI*identity. */
@@ -418,7 +393,6 @@
 			    , abs(d__2));
 		    icmax = j;
 		}
-/* L20: */
 	    }
 
 /*           If norm(C) < SMINI, use SMINI*identity. */

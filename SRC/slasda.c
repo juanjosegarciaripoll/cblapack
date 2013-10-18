@@ -43,15 +43,8 @@ static integer c__2 = 2;
     integer nwork1, nwork2;
     integer smlszp;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -202,14 +195,6 @@ static integer c__2 = 2;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -357,7 +342,6 @@ static integer c__2 = 2;
 	i__2 = nl;
 	for (j = 1; j <= i__2; ++j) {
 	    iwork[idxqi + j] = j;
-/* L10: */
 	}
 	if (i__ == nd && *sqre == 0) {
 	    sqrei = 0;
@@ -393,9 +377,7 @@ static integer c__2 = 2;
 	i__2 = nr;
 	for (j = 1; j <= i__2; ++j) {
 	    iwork[idxqi + j] = j;
-/* L20: */
 	}
-/* L30: */
     }
 
 /*     Now conquer each subproblem bottom-up. */
@@ -455,9 +437,7 @@ static integer c__2 = 2;
 	    if (*info != 0) {
 		return 0;
 	    }
-/* L40: */
 	}
-/* L50: */
     }
 
     return 0;

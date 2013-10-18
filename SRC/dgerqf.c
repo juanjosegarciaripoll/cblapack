@@ -31,15 +31,8 @@ static integer c__2 = 2;
     integer ldwork, lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -107,16 +100,6 @@ static integer c__2 = 2;
 /*  A(m-k+i,1:n-k+i-1), and tau in TAU(i). */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -238,7 +221,6 @@ static integer c__2 = 2;
 			 &i__4, &ib, &a[*m - k + i__ + a_dim1], lda, &work[1], 
 			 &ldwork, &a[a_offset], lda, &work[ib + 1], &ldwork);
 	    }
-/* L10: */
 	}
 	mu = *m - k + i__ + nb - 1;
 	nu = *n - k + i__ + nb - 1;

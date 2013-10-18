@@ -51,19 +51,11 @@ static logical c_true = TRUE_;
     real smlnum;
     integer lwkopt;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2.1)                        -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd.. */
 /*  -- April 2009                                                      -- */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*     This subroutine is identical to CLAQR3 except that it avoids */
 /*     recursion by calling CLAHQR instead of CLAQR4. */
-
 
 /*     ****************************************************************** */
 /*     Aggressive early deflation: */
@@ -124,7 +116,6 @@ static logical c_true = TRUE_;
 /*     ILOZ    (input) INTEGER */
 /*     IHIZ    (input) INTEGER */
 /*          Specify the rows of Z to which transformations must be */
-/*          applied if WANTZ is .TRUE.. 1 .LE. ILOZ .LE. IHIZ .LE. N. */
 
 /*     Z       (input/output) COMPLEX array, dimension (LDZ,N) */
 /*          IF WANTZ is .TRUE., then on output, the unitary */
@@ -198,21 +189,6 @@ static logical c_true = TRUE_;
 /*        University of Kansas, USA */
 
 /*     ================================================================ */
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     ==== Estimate optimal workspace. ==== */
 
@@ -271,15 +247,12 @@ static logical c_true = TRUE_;
 	return 0;
     }
 
-/*     ==== Nothing to do ... */
-/*     ... for an empty active block ... ==== */
     *ns = 0;
     *nd = 0;
     work[1].r = 1.f, work[1].i = 0.f;
     if (*ktop > *kbot) {
 	return 0;
     }
-/*     ... nor for an empty deflation window. ==== */
     if (*nw < 1) {
 	return 0;
     }
@@ -384,7 +357,6 @@ static logical c_true = TRUE_;
 		    ilst, &info);
 	    ++ilst;
 	}
-/* L10: */
     }
 
 /*        ==== Return to Hessenberg form ==== */
@@ -411,14 +383,12 @@ static logical c_true = TRUE_;
 			r__4))) {
 		    ifst = j;
 		}
-/* L20: */
 	    }
 	    ilst = i__;
 	    if (ifst != ilst) {
 		ctrexc_("V", &jw, &t[t_offset], ldt, &v[v_offset], ldv, &ifst, 
 			 &ilst, &info);
 	    }
-/* L30: */
 	}
     }
 
@@ -429,9 +399,7 @@ static logical c_true = TRUE_;
 	i__2 = kwtop + i__ - 1;
 	i__3 = i__ + i__ * t_dim1;
 	sh[i__2].r = t[i__3].r, sh[i__2].i = t[i__3].i;
-/* L40: */
     }
-
 
     if (*ns < jw || s.r == 0.f && s.i == 0.f) {
 	if (*ns > 1 && (s.r != 0.f || s.i != 0.f)) {
@@ -444,7 +412,6 @@ static logical c_true = TRUE_;
 		i__2 = i__;
 		r_cnjg(&q__1, &work[i__]);
 		work[i__2].r = q__1.r, work[i__2].i = q__1.i;
-/* L50: */
 	    }
 	    beta.r = work[1].r, beta.i = work[1].i;
 	    clarfg_(ns, &beta, &work[2], &c__1, &tau);
@@ -512,7 +479,6 @@ static logical c_true = TRUE_;
 		    ldwv);
 	    clacpy_("A", &kln, &jw, &wv[wv_offset], ldwv, &h__[krow + kwtop * 
 		    h_dim1], ldh);
-/* L60: */
 	}
 
 /*        ==== Update horizontal slab in H ==== */
@@ -530,7 +496,6 @@ static logical c_true = TRUE_;
 			ldt);
 		clacpy_("A", &jw, &kln, &t[t_offset], ldt, &h__[kwtop + kcol *
 			 h_dim1], ldh);
-/* L70: */
 	    }
 	}
 
@@ -549,16 +514,12 @@ static logical c_true = TRUE_;
 , ldwv);
 		clacpy_("A", &kln, &jw, &wv[wv_offset], ldwv, &z__[krow + 
 			kwtop * z_dim1], ldz);
-/* L80: */
 	    }
 	}
     }
 
-/*     ==== Return the number of deflations ... ==== */
-
     *nd = jw - *ns;
 
-/*     ==== ... and the number of shifts. (Subtracting */
 /*     .    INFQR from the spike length takes care */
 /*     .    of the case of a rare QR failure while */
 /*     .    calculating eigenvalues of the deflation */

@@ -25,15 +25,8 @@
     integer i__, i4;
     doublereal eii, eir;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -69,16 +62,6 @@
 /*               completed, but D(N) <= 0. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -119,7 +102,6 @@
 	z__1.r = f, z__1.i = g;
 	e[i__2].r = z__1.r, e[i__2].i = z__1.i;
 	d__[i__ + 1] = d__[i__ + 1] - f * eir - g * eii;
-/* L10: */
     }
 
     i__1 = *n - 4;
@@ -195,7 +177,6 @@
 	z__1.r = f, z__1.i = g;
 	e[i__2].r = z__1.r, e[i__2].i = z__1.i;
 	d__[i__ + 4] = d__[i__ + 4] - f * eir - g * eii;
-/* L20: */
     }
 
 /*     Check d(n) for positive definiteness. */

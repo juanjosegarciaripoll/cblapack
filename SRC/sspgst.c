@@ -35,15 +35,8 @@ static real c_b11 = 1.f;
     real bjj, bkk;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -95,16 +88,6 @@ static real c_b11 = 1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -154,7 +137,6 @@ static real c_b11 = 1.f;
 		i__2 = j - 1;
 		ap[jj] = (ap[jj] - sdot_(&i__2, &ap[j1], &c__1, &bp[j1], &
 			c__1)) / bjj;
-/* L10: */
 	    }
 	} else {
 
@@ -194,7 +176,6 @@ static real c_b11 = 1.f;
 			     &ap[kk + 1], &c__1);
 		}
 		kk = k1k1;
-/* L20: */
 	    }
 	}
     } else {
@@ -230,7 +211,6 @@ static real c_b11 = 1.f;
 /* Computing 2nd power */
 		r__1 = bkk;
 		ap[kk] = akk * (r__1 * r__1);
-/* L30: */
 	    }
 	} else {
 
@@ -259,7 +239,6 @@ static real c_b11 = 1.f;
 		stpmv_(uplo, "Transpose", "Non-unit", &i__2, &bp[jj], &ap[jj], 
 			 &c__1);
 		jj = j1j1;
-/* L40: */
 	    }
 	}
     }

@@ -57,15 +57,8 @@ static integer c__2 = 2;
     integer mstart;
     doublereal smlnum;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*     This auxiliary subroutine called by ZLAQR0 performs a */
 /*     single small-bulge multi-shift QR sweep. */
@@ -125,7 +118,6 @@ static integer c__2 = 2;
 /*      ILOZ   (input) INTEGER */
 /*      IHIZ   (input) INTEGER */
 /*             Specify the rows of Z to which transformations must be */
-/*             applied if WANTZ is .TRUE.. 1 .LE. ILOZ .LE. IHIZ .LE. N */
 
 /*      Z      (input/output) COMPLEX*16 array of size (LDZ,IHI) */
 /*             If WANTZ = .TRUE., then the QR Sweep unitary */
@@ -185,24 +177,6 @@ static integer c__2 = 2;
 /*     volume 23, pages 929--947, 2002. */
 
 /*     ================================================================ */
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     ==== If there are no shifts, then there is nothing to do. ==== */
 
@@ -450,7 +424,6 @@ static integer c__2 = 2;
 			}
 		    }
 		}
-/* L10: */
 	    }
 
 /*           ==== Generate a 2-by-2 reflection, if needed. ==== */
@@ -538,9 +511,7 @@ static integer c__2 = 2;
 		    z__1.r = h__[i__7].r - z__2.r, z__1.i = h__[i__7].i - 
 			    z__2.i;
 		    h__[i__6].r = z__1.r, h__[i__6].i = z__1.i;
-/* L20: */
 		}
-/* L30: */
 	    }
 	    if (bmp22) {
 		k = krcol + (m22 - 1) * 3;
@@ -574,7 +545,6 @@ static integer c__2 = 2;
 		    z__1.r = h__[i__6].r - z__2.r, z__1.i = h__[i__6].i - 
 			    z__2.i;
 		    h__[i__4].r = z__1.r, h__[i__4].i = z__1.i;
-/* L40: */
 		}
 	    }
 
@@ -640,7 +610,6 @@ static integer c__2 = 2;
 			z__1.r = h__[i__7].r - z__2.r, z__1.i = h__[i__7].i - 
 				z__2.i;
 			h__[i__6].r = z__1.r, h__[i__6].i = z__1.i;
-/* L50: */
 		    }
 
 		    if (accum) {
@@ -697,7 +666,6 @@ static integer c__2 = 2;
 			    z__1.r = u[i__6].r - z__2.r, z__1.i = u[i__6].i - 
 				    z__2.i;
 			    u[i__4].r = z__1.r, u[i__4].i = z__1.i;
-/* L60: */
 			}
 		    } else if (*wantz) {
 
@@ -750,11 +718,9 @@ static integer c__2 = 2;
 			    z__1.r = z__[i__6].r - z__2.r, z__1.i = z__[i__6]
 				    .i - z__2.i;
 			    z__[i__4].r = z__1.r, z__[i__4].i = z__1.i;
-/* L70: */
 			}
 		    }
 		}
-/* L80: */
 	    }
 
 /*           ==== Special case: 2-by-2 reflection (if needed) ==== */
@@ -791,7 +757,6 @@ static integer c__2 = 2;
 		    z__1.r = h__[i__4].r - z__2.r, z__1.i = h__[i__4].i - 
 			    z__2.i;
 		    h__[i__7].r = z__1.r, h__[i__7].i = z__1.i;
-/* L90: */
 		}
 
 		if (accum) {
@@ -827,7 +792,6 @@ static integer c__2 = 2;
 			z__1.r = u[i__7].r - z__2.r, z__1.i = u[i__7].i - 
 				z__2.i;
 			u[i__5].r = z__1.r, u[i__5].i = z__1.i;
-/* L100: */
 		    }
 		} else if (*wantz) {
 		    i__4 = *ihiz;
@@ -859,7 +823,6 @@ static integer c__2 = 2;
 			z__1.r = z__[i__7].r - z__2.r, z__1.i = z__[i__7].i - 
 				z__2.i;
 			z__[i__5].r = z__1.r, z__[i__5].i = z__1.i;
-/* L110: */
 		    }
 		}
 	    }
@@ -998,7 +961,6 @@ static integer c__2 = 2;
 			}
 		    }
 		}
-/* L120: */
 	    }
 
 /*           ==== Fill in the last row of each bulge. ==== */
@@ -1034,12 +996,10 @@ static integer c__2 = 2;
 			refsum.r * z__3.i + refsum.i * z__3.r;
 		z__1.r = h__[i__7].r - z__2.r, z__1.i = h__[i__7].i - z__2.i;
 		h__[i__5].r = z__1.r, h__[i__5].i = z__1.i;
-/* L130: */
 	    }
 
 /*           ==== End of near-the-diagonal bulge chase. ==== */
 
-/* L140: */
 	}
 
 /*        ==== Use U (if accumulated) to update far-from-diagonal */
@@ -1086,7 +1046,6 @@ static integer c__2 = 2;
 			    ldh, &c_b1, &wh[wh_offset], ldwh);
 		    zlacpy_("ALL", &nu, &jlen, &wh[wh_offset], ldwh, &h__[
 			    incol + k1 + jcol * h_dim1], ldh);
-/* L150: */
 		}
 
 /*              ==== Vertical multiply ==== */
@@ -1103,7 +1062,6 @@ static integer c__2 = 2;
 			    ldu, &c_b1, &wv[wv_offset], ldwv);
 		    zlacpy_("ALL", &jlen, &nu, &wv[wv_offset], ldwv, &h__[
 			    jrow + (incol + k1) * h_dim1], ldh);
-/* L160: */
 		}
 
 /*              ==== Z multiply (also vertical) ==== */
@@ -1122,7 +1080,6 @@ static integer c__2 = 2;
 			zlacpy_("ALL", &jlen, &nu, &wv[wv_offset], ldwv, &z__[
 				jrow + (incol + k1) * z_dim1], ldz)
 				;
-/* L170: */
 		    }
 		}
 	    } else {
@@ -1196,7 +1153,6 @@ static integer c__2 = 2;
 
 		    zlacpy_("ALL", &kdu, &jlen, &wh[wh_offset], ldwh, &h__[
 			    incol + 1 + jcol * h_dim1], ldh);
-/* L180: */
 		}
 
 /*              ==== Vertical multiply ==== */
@@ -1254,7 +1210,6 @@ static integer c__2 = 2;
 
 		    zlacpy_("ALL", &jlen, &kdu, &wv[wv_offset], ldwv, &h__[
 			    jrow + (incol + 1) * h_dim1], ldh);
-/* L190: */
 		}
 
 /*              ==== Multiply Z (also vertical) ==== */
@@ -1315,12 +1270,10 @@ static integer c__2 = 2;
 
 			zlacpy_("ALL", &jlen, &kdu, &wv[wv_offset], ldwv, &
 				z__[jrow + (incol + 1) * z_dim1], ldz);
-/* L200: */
 		    }
 		}
 	    }
 	}
-/* L210: */
     }
 
 /*     ==== End of ZLAQR5 ==== */

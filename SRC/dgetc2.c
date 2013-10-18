@@ -32,15 +32,8 @@ static doublereal c_b10 = -1.;
     doublereal smin, xmax;
     doublereal bignum, smlnum;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -91,18 +84,6 @@ static doublereal c_b10 = -1.;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Set constants to control overflow */
 
     /* Parameter adjustments */
@@ -137,9 +118,7 @@ static doublereal c_b10 = -1.;
 		    ipv = ip;
 		    jpv = jp;
 		}
-/* L10: */
 	    }
-/* L20: */
 	}
 	if (i__ == 1) {
 /* Computing MAX */
@@ -171,14 +150,12 @@ static doublereal c_b10 = -1.;
 	i__2 = *n;
 	for (j = i__ + 1; j <= i__2; ++j) {
 	    a[j + i__ * a_dim1] /= a[i__ + i__ * a_dim1];
-/* L30: */
 	}
 	i__2 = *n - i__;
 	i__3 = *n - i__;
 	dger_(&i__2, &i__3, &c_b10, &a[i__ + 1 + i__ * a_dim1], &c__1, &a[i__ 
 		+ (i__ + 1) * a_dim1], lda, &a[i__ + 1 + (i__ + 1) * a_dim1], 
 		lda);
-/* L40: */
     }
 
     if ((d__1 = a[*n + *n * a_dim1], abs(d__1)) < smin) {

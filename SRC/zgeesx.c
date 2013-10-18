@@ -44,17 +44,8 @@ static integer c_n1 = -1;
     integer hswork;
     logical wantst, wantsv, wantvs;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-/*     .. Function Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -185,20 +176,6 @@ static integer c_n1 = -1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input arguments */
 
     /* Parameter adjustments */
@@ -324,7 +301,6 @@ static integer c_n1 = -1;
 		ierr);
     }
 
-
 /*     Permute the matrix to make it more nearly triangular */
 /*     (CWorkspace: none) */
 /*     (RWorkspace: need N) */
@@ -382,7 +358,6 @@ static integer c_n1 = -1;
 	i__1 = *n;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    bwork[i__] = (*select)(&w[i__]);
-/* L10: */
 	}
 
 /*        Reorder eigenvalues, transform Schur vectors, and compute */

@@ -25,15 +25,8 @@
     doublereal s;
     doublecomplex h21s, h31s;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*       Given a 2-by-2 or 3-by-3 matrix H, ZLAQR1 sets v to a */
 /*       scalar multiple of the first column of the product */
@@ -44,7 +37,6 @@
 
 /*       This is useful for starting double implicit shift bulges */
 /*       in the QR algorithm. */
-
 
 /*       N      (input) integer */
 /*              Order of the matrix H. N must be either 2 or 3. */
@@ -70,17 +62,6 @@
 
 /*     ================================================================ */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
     /* Parameter adjustments */
     h_dim1 = *ldh;
     h_offset = 1 + h_dim1;

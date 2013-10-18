@@ -30,15 +30,8 @@ static integer c__1 = 1;
     logical left;
     logical notran;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -86,7 +79,6 @@ static integer c__1 = 1;
 
 /*  A       (input) REAL array, dimension (LDA,K) */
 /*          The i-th column must contain the vector which defines the */
-/*          elementary reflector H(i), for i = 1,2,...,k, as returned by */
 /*          SGEQLF in the last k columns of its array argument A. */
 /*          A is modified by the routine but restored on exit. */
 
@@ -115,18 +107,6 @@ static integer c__1 = 1;
 /*          < 0: if INFO = -i, the i-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -217,7 +197,6 @@ static integer c__1 = 1;
 	slarf_(side, &mi, &ni, &a[i__ * a_dim1 + 1], &c__1, &tau[i__], &c__[
 		c_offset], ldc, &work[1]);
 	a[nq - *k + i__ + i__ * a_dim1] = aii;
-/* L10: */
     }
     return 0;
 

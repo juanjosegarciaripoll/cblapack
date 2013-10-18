@@ -46,15 +46,8 @@ static real c_b27 = 0.f;
     integer indwrk;
     integer nsplit;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -210,18 +203,6 @@ static real c_b27 = 0.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -351,7 +332,6 @@ static real c_b27 = 0.f;
 		i__1 = *n;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    ifail[i__] = 0;
-/* L10: */
 		}
 	    }
 	}
@@ -390,7 +370,6 @@ static real c_b27 = 0.f;
 	    scopy_(n, &z__[j * z_dim1 + 1], &c__1, &work[1], &c__1);
 	    sgemv_("N", n, n, &c_b25, &q[q_offset], ldq, &work[1], &c__1, &
 		    c_b27, &z__[j * z_dim1 + 1], &c__1);
-/* L20: */
 	}
     }
 
@@ -410,7 +389,6 @@ L30:
 		    i__ = jj;
 		    tmp1 = w[jj];
 		}
-/* L40: */
 	    }
 
 	    if (i__ != 0) {
@@ -427,7 +405,6 @@ L30:
 		    ifail[j] = itmp1;
 		}
 	    }
-/* L50: */
 	}
     }
 

@@ -37,15 +37,8 @@ static integer c__1 = 1;
     complex ctemp;
     integer icompq, icompz;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -156,18 +149,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Decode COMPQ */
 
     /* Parameter adjustments */
@@ -264,9 +245,7 @@ static integer c__1 = 1;
 	for (jrow = jcol + 1; jrow <= i__2; ++jrow) {
 	    i__3 = jrow + jcol * b_dim1;
 	    b[i__3].r = 0.f, b[i__3].i = 0.f;
-/* L10: */
 	}
-/* L20: */
     }
 
 /*     Reduce A and B */
@@ -314,9 +293,7 @@ static integer c__1 = 1;
 		crot_(n, &z__[jrow * z_dim1 + 1], &c__1, &z__[(jrow - 1) * 
 			z_dim1 + 1], &c__1, &c__, &s);
 	    }
-/* L30: */
 	}
-/* L40: */
     }
 
     return 0;

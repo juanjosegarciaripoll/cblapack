@@ -36,15 +36,8 @@ static real c_b8 = 1.f;
     real diflj, difrj, dsigj;
     real dsigjp;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     October 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -129,18 +122,6 @@ static real c_b8 = 1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -203,7 +184,6 @@ static real c_b8 = 1.f;
     i__1 = *k;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	dsigma[i__] = slamc3_(&dsigma[i__], &dsigma[i__]) - dsigma[i__];
-/* L10: */
     }
 
 /*     Book keeping. */
@@ -245,16 +225,13 @@ static real c_b8 = 1.f;
 	    work[iwk3i + i__] = work[iwk3i + i__] * work[i__] * work[iwk2i + 
 		    i__] / (dsigma[i__] - dsigma[j]) / (dsigma[i__] + dsigma[
 		    j]);
-/* L20: */
 	}
 	i__2 = *k;
 	for (i__ = j + 1; i__ <= i__2; ++i__) {
 	    work[iwk3i + i__] = work[iwk3i + i__] * work[i__] * work[iwk2i + 
 		    i__] / (dsigma[i__] - dsigma[j]) / (dsigma[i__] + dsigma[
 		    j]);
-/* L30: */
 	}
-/* L40: */
     }
 
 /*     Compute updated Z. */
@@ -263,7 +240,6 @@ static real c_b8 = 1.f;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	r__2 = sqrt((r__1 = work[iwk3i + i__], dabs(r__1)));
 	z__[i__] = r_sign(&r__2, &z__[i__]);
-/* L50: */
     }
 
 /*     Update VF and VL. */
@@ -282,13 +258,11 @@ static real c_b8 = 1.f;
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    work[i__] = z__[i__] / (slamc3_(&dsigma[i__], &dsigj) - diflj) / (
 		    dsigma[i__] + dj);
-/* L60: */
 	}
 	i__2 = *k;
 	for (i__ = j + 1; i__ <= i__2; ++i__) {
 	    work[i__] = z__[i__] / (slamc3_(&dsigma[i__], &dsigjp) + difrj) / 
 		    (dsigma[i__] + dj);
-/* L70: */
 	}
 	temp = snrm2_(k, &work[1], &c__1);
 	work[iwk2i + j] = sdot_(k, &work[1], &c__1, &vf[1], &c__1) / temp;
@@ -296,7 +270,6 @@ static real c_b8 = 1.f;
 	if (*icompq == 1) {
 	    difr[j + (difr_dim1 << 1)] = temp;
 	}
-/* L80: */
     }
 
     scopy_(k, &work[iwk2], &c__1, &vf[1], &c__1);

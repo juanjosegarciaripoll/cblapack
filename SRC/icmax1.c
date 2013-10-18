@@ -22,15 +22,8 @@ integer icmax1_(integer *n, complex *cx, integer *incx)
     integer i__, ix;
     real smax;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -57,17 +50,7 @@ integer icmax1_(integer *n, complex *cx, integer *incx)
 
 /* ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-
 /*     NEXT LINE IS THE ONLY MODIFICATION. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --cx;
@@ -99,7 +82,6 @@ integer icmax1_(integer *n, complex *cx, integer *incx)
 	smax = c_abs(&cx[ix]);
 L10:
 	ix += *incx;
-/* L20: */
     }
     return ret_val;
 

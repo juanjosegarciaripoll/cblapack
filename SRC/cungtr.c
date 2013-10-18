@@ -31,15 +31,8 @@ static integer c_n1 = -1;
     integer lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -94,18 +87,6 @@ static integer c_n1 = -1;
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -182,17 +163,14 @@ static integer c_n1 = -1;
 		i__3 = i__ + j * a_dim1;
 		i__4 = i__ + (j + 1) * a_dim1;
 		a[i__3].r = a[i__4].r, a[i__3].i = a[i__4].i;
-/* L10: */
 	    }
 	    i__2 = *n + j * a_dim1;
 	    a[i__2].r = 0.f, a[i__2].i = 0.f;
-/* L20: */
 	}
 	i__1 = *n - 1;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    i__2 = i__ + *n * a_dim1;
 	    a[i__2].r = 0.f, a[i__2].i = 0.f;
-/* L30: */
 	}
 	i__1 = *n + *n * a_dim1;
 	a[i__1].r = 1.f, a[i__1].i = 0.f;
@@ -221,9 +199,7 @@ static integer c_n1 = -1;
 		i__2 = i__ + j * a_dim1;
 		i__3 = i__ + (j - 1) * a_dim1;
 		a[i__2].r = a[i__3].r, a[i__2].i = a[i__3].i;
-/* L40: */
 	    }
-/* L50: */
 	}
 	i__1 = a_dim1 + 1;
 	a[i__1].r = 1.f, a[i__1].i = 0.f;
@@ -231,7 +207,6 @@ static integer c_n1 = -1;
 	for (i__ = 2; i__ <= i__1; ++i__) {
 	    i__2 = i__ + a_dim1;
 	    a[i__2].r = 0.f, a[i__2].i = 0.f;
-/* L60: */
 	}
 	if (*n > 1) {
 

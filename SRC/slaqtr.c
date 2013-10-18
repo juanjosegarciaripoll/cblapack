@@ -46,15 +46,8 @@ static logical c_true = TRUE_;
     logical notran;
     real smlnum;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -71,7 +64,6 @@ static logical c_true = TRUE_;
 /*  If LREAL = .FALSE., then the first diagonal block of T must be */
 /*  1 by 1, B is the specially structured matrix */
 
-/*                 B = [ b(1) b(2) ... b(n) ] */
 /*                     [       w            ] */
 /*                     [           w        ] */
 /*                     [              .     ] */
@@ -140,20 +132,6 @@ static logical c_true = TRUE_;
 
 /* ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Do not test the input parameters for errors */
 
     /* Parameter adjustments */
@@ -199,14 +177,12 @@ static logical c_true = TRUE_;
     for (j = 2; j <= i__1; ++j) {
 	i__2 = j - 1;
 	work[j] = sasum_(&i__2, &t[j * t_dim1 + 1], &c__1);
-/* L10: */
     }
 
     if (! (*lreal)) {
 	i__1 = *n;
 	for (i__ = 2; i__ <= i__1; ++i__) {
 	    work[i__] += (r__1 = b[i__], dabs(r__1));
-/* L20: */
 	}
     }
 
@@ -568,7 +544,6 @@ L40:
 			    r__3 = xmax, r__4 = (r__1 = x[k], dabs(r__1)) + (
 				    r__2 = x[k + *n], dabs(r__2));
 			    xmax = dmax(r__3,r__4);
-/* L50: */
 			}
 		    }
 
@@ -598,7 +573,6 @@ L40:
 		    x[*n + j1] = v[2];
 		    x[*n + j2] = v[3];
 
-/*                 Scale X(J1), .... to avoid overflow in */
 /*                 updating right hand side. */
 
 /* Computing MAX */
@@ -646,7 +620,6 @@ L40:
 			    r__3 = (r__1 = x[k], dabs(r__1)) + (r__2 = x[k + *
 				    n], dabs(r__2));
 			    xmax = dmax(r__3,xmax);
-/* L60: */
 			}
 		    }
 

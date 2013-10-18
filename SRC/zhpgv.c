@@ -31,15 +31,8 @@ static integer c__1 = 1;
     logical upper;
     logical wantz;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -122,14 +115,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -207,7 +192,6 @@ static integer c__1 = 1;
 	    for (j = 1; j <= i__1; ++j) {
 		ztpsv_(uplo, trans, "Non-unit", n, &bp[1], &z__[j * z_dim1 + 
 			1], &c__1);
-/* L10: */
 	    }
 
 	} else if (*itype == 3) {
@@ -225,7 +209,6 @@ static integer c__1 = 1;
 	    for (j = 1; j <= i__1; ++j) {
 		ztpmv_(uplo, trans, "Non-unit", n, &bp[1], &z__[j * z_dim1 + 
 			1], &c__1);
-/* L20: */
 	    }
 	}
     }

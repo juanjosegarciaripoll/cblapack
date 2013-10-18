@@ -42,15 +42,8 @@
     logical orgati;
     doublereal erretm, dtipsq, rhoinv;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -132,20 +125,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Since this routine is called in an inner loop, we do no argument */
 /*     checking. */
 
@@ -199,14 +178,12 @@
 	for (j = 1; j <= i__1; ++j) {
 	    work[j] = d__[j] + d__[*n] + temp1;
 	    delta[j] = d__[j] - d__[*n] - temp1;
-/* L10: */
 	}
 
 	psi = 0.;
 	i__1 = *n - 2;
 	for (j = 1; j <= i__1; ++j) {
 	    psi += z__[j] * z__[j] / (delta[j] * work[j]);
-/* L20: */
 	}
 
 	c__ = rhoinv + psi;
@@ -267,7 +244,6 @@
 	for (j = 1; j <= i__1; ++j) {
 	    delta[j] = d__[j] - d__[*i__] - eta;
 	    work[j] = d__[j] + d__[*i__] + eta;
-/* L30: */
 	}
 
 /*        Evaluate PSI and the derivative DPSI */
@@ -281,7 +257,6 @@
 	    psi += z__[j] * temp;
 	    dpsi += temp * temp;
 	    erretm += psi;
-/* L40: */
 	}
 	erretm = abs(erretm);
 
@@ -342,7 +317,6 @@
 	for (j = 1; j <= i__1; ++j) {
 	    delta[j] -= eta;
 	    work[j] += eta;
-/* L50: */
 	}
 
 	*sigma += eta;
@@ -358,7 +332,6 @@
 	    psi += z__[j] * temp;
 	    dpsi += temp * temp;
 	    erretm += psi;
-/* L60: */
 	}
 	erretm = abs(erretm);
 
@@ -419,7 +392,6 @@
 	    for (j = 1; j <= i__1; ++j) {
 		delta[j] -= eta;
 		work[j] += eta;
-/* L70: */
 	    }
 
 	    *sigma += eta;
@@ -435,7 +407,6 @@
 		psi += z__[j] * temp;
 		dpsi += temp * temp;
 		erretm += psi;
-/* L80: */
 	    }
 	    erretm = abs(erretm);
 
@@ -448,7 +419,6 @@
 		    dpsi + dphi);
 
 	    w = rhoinv + phi + psi;
-/* L90: */
 	}
 
 /*        Return with INFO = 1, NITER = MAXIT and not converged */
@@ -474,21 +444,18 @@
 	for (j = 1; j <= i__1; ++j) {
 	    work[j] = d__[j] + d__[*i__] + temp;
 	    delta[j] = d__[j] - d__[*i__] - temp;
-/* L100: */
 	}
 
 	psi = 0.;
 	i__1 = *i__ - 1;
 	for (j = 1; j <= i__1; ++j) {
 	    psi += z__[j] * z__[j] / (work[j] * delta[j]);
-/* L110: */
 	}
 
 	phi = 0.;
 	i__1 = *i__ + 2;
 	for (j = *n; j >= i__1; --j) {
 	    phi += z__[j] * z__[j] / (work[j] * delta[j]);
-/* L120: */
 	}
 	c__ = rhoinv + psi + phi;
 	w = c__ + z__[*i__] * z__[*i__] / (work[*i__] * delta[*i__]) + z__[
@@ -552,7 +519,6 @@
 	    for (j = 1; j <= i__1; ++j) {
 		work[j] = d__[j] + d__[*i__] + eta;
 		delta[j] = d__[j] - d__[*i__] - eta;
-/* L130: */
 	    }
 	} else {
 	    ii = *i__ + 1;
@@ -561,7 +527,6 @@
 	    for (j = 1; j <= i__1; ++j) {
 		work[j] = d__[j] + d__[ip1] + eta;
 		delta[j] = d__[j] - d__[ip1] - eta;
-/* L140: */
 	    }
 	}
 	iim1 = ii - 1;
@@ -578,7 +543,6 @@
 	    psi += z__[j] * temp;
 	    dpsi += temp * temp;
 	    erretm += psi;
-/* L150: */
 	}
 	erretm = abs(erretm);
 
@@ -592,7 +556,6 @@
 	    phi += z__[j] * temp;
 	    dphi += temp * temp;
 	    erretm += phi;
-/* L160: */
 	}
 
 	w = rhoinv + phi + psi;
@@ -742,7 +705,6 @@
 	for (j = 1; j <= i__1; ++j) {
 	    work[j] += eta;
 	    delta[j] -= eta;
-/* L170: */
 	}
 
 /*        Evaluate PSI and the derivative DPSI */
@@ -756,7 +718,6 @@
 	    psi += z__[j] * temp;
 	    dpsi += temp * temp;
 	    erretm += psi;
-/* L180: */
 	}
 	erretm = abs(erretm);
 
@@ -770,7 +731,6 @@
 	    phi += z__[j] * temp;
 	    dphi += temp * temp;
 	    erretm += phi;
-/* L190: */
 	}
 
 	temp = z__[ii] / (work[ii] * delta[ii]);
@@ -936,7 +896,6 @@
 	    for (j = 1; j <= i__1; ++j) {
 		work[j] += eta;
 		delta[j] -= eta;
-/* L200: */
 	    }
 
 	    prew = w;
@@ -952,7 +911,6 @@
 		psi += z__[j] * temp;
 		dpsi += temp * temp;
 		erretm += psi;
-/* L210: */
 	    }
 	    erretm = abs(erretm);
 
@@ -966,7 +924,6 @@
 		phi += z__[j] * temp;
 		dphi += temp * temp;
 		erretm += phi;
-/* L220: */
 	    }
 
 	    temp = z__[ii] / (work[ii] * delta[ii]);
@@ -985,7 +942,6 @@
 		sg2ub = min(sg2ub,tau);
 	    }
 
-/* L230: */
 	}
 
 /*        Return with INFO = 1, NITER = MAXIT and not converged */

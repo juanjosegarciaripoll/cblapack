@@ -27,15 +27,8 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__, j, l;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -63,7 +56,6 @@ static integer c__1 = 1;
 
 /*  A       (input/output) COMPLEX array, dimension (LDA,N) */
 /*          On entry, the i-th column must contain the vector which */
-/*          defines the elementary reflector H(i), for i = 1,2,...,k, as */
 /*          returned by CGEQRF in the first k columns of its array */
 /*          argument A. */
 /*          On exit, the m by n matrix Q. */
@@ -82,16 +74,6 @@ static integer c__1 = 1;
 /*          < 0: if INFO = -i, the i-th argument has an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -133,11 +115,9 @@ static integer c__1 = 1;
 	for (l = 1; l <= i__2; ++l) {
 	    i__3 = l + j * a_dim1;
 	    a[i__3].r = 0.f, a[i__3].i = 0.f;
-/* L10: */
 	}
 	i__2 = j + j * a_dim1;
 	a[i__2].r = 1.f, a[i__2].i = 0.f;
-/* L20: */
     }
 
     for (i__ = *k; i__ >= 1; --i__) {
@@ -169,9 +149,7 @@ static integer c__1 = 1;
 	for (l = 1; l <= i__1; ++l) {
 	    i__2 = l + i__ * a_dim1;
 	    a[i__2].r = 0.f, a[i__2].i = 0.f;
-/* L30: */
 	}
-/* L40: */
     }
     return 0;
 

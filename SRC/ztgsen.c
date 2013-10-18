@@ -44,17 +44,10 @@ static integer c__1 = 1;
     integer liwmin;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     January 2007 */
 
 /*     Modified to call ZLACN2 in place of ZLACON, 10 Feb 03, SJH. */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -81,7 +74,6 @@ static integer c__1 = 1;
 /*  the selected cluster and the eigenvalues outside the cluster, resp., */
 /*  and norms of "projections" onto left and right eigenspaces w.r.t. */
 /*  the selected cluster in the (1,1)-block. */
-
 
 /*  Arguments */
 /*  ========= */
@@ -113,7 +105,6 @@ static integer c__1 = 1;
 /*  SELECT  (input) LOGICAL array, dimension (N) */
 /*          SELECT specifies the eigenvalues in the selected cluster. To */
 /*          select an eigenvalue w(j), SELECT(j) must be set to */
-/*          .TRUE.. */
 
 /*  N       (input) INTEGER */
 /*          The order of the matrices A and B. N >= 0. */
@@ -138,7 +129,6 @@ static integer c__1 = 1;
 /*  BETA    (output) COMPLEX*16 array, dimension (N) */
 /*          The diagonal elements of A and B, respectively, */
 /*          when the pair (A,B) has been reduced to generalized Schur */
-/*          form.  ALPHA(i)/BETA(i) i=1,...,N are the generalized */
 /*          eigenvalues. */
 
 /*  Q       (input/output) COMPLEX*16 array, dimension (LDQ,N) */
@@ -223,7 +213,6 @@ static integer c__1 = 1;
 /*                Schur form; the problem is very ill-conditioned. */
 /*                (A, B) may have been partially reordered. */
 /*                If requested, 0 is returned in DIF(*), PL and PR. */
-
 
 /*  Further Details */
 /*  =============== */
@@ -356,20 +345,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Decode and test the input parameters */
 
     /* Parameter adjustments */
@@ -444,7 +419,6 @@ static integer c__1 = 1;
 		++(*m);
 	    }
 	}
-/* L10: */
     }
 
     if (*ijob == 1 || *ijob == 2 || *ijob == 4) {
@@ -498,7 +472,6 @@ static integer c__1 = 1;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 		zlassq_(n, &a[i__ * a_dim1 + 1], &c__1, &dscale, &dsum);
 		zlassq_(n, &b[i__ * b_dim1 + 1], &c__1, &dscale, &dsum);
-/* L20: */
 	    }
 	    dif[1] = dscale * sqrt(dsum);
 	    dif[2] = dif[1];
@@ -544,7 +517,6 @@ static integer c__1 = 1;
 		goto L70;
 	    }
 	}
-/* L30: */
     }
     if (wantp) {
 
@@ -728,7 +700,6 @@ L50:
 	i__3 = k + k * b_dim1;
 	beta[i__2].r = b[i__3].r, beta[i__2].i = b[i__3].i;
 
-/* L60: */
     }
 
 L70:

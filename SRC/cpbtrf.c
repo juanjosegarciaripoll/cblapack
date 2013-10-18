@@ -33,15 +33,8 @@ static integer c__33 = 33;
     integer i__, j, i2, i3, ib, nb, ii, jj;
     complex work[1056]	/* was [33][32] */;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -117,20 +110,6 @@ static integer c__33 = 33;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -193,9 +172,7 @@ static integer c__33 = 33;
 		for (i__ = 1; i__ <= i__2; ++i__) {
 		    i__3 = i__ + j * 33 - 34;
 		    work[i__3].r = 0.f, work[i__3].i = 0.f;
-/* L10: */
 		}
-/* L20: */
 	    }
 
 /*           Process the band matrix one diagonal block at a time. */
@@ -272,9 +249,7 @@ static integer c__33 = 33;
 					ab_dim1;
 				work[i__5].r = ab[i__6].r, work[i__5].i = ab[
 					i__6].i;
-/* L30: */
 			    }
-/* L40: */
 			}
 
 /*                    Update A13 (in the work array). */
@@ -315,13 +290,10 @@ static integer c__33 = 33;
 				i__6 = ii + jj * 33 - 34;
 				ab[i__5].r = work[i__6].r, ab[i__5].i = work[
 					i__6].i;
-/* L50: */
 			    }
-/* L60: */
 			}
 		    }
 		}
-/* L70: */
 	    }
 	} else {
 
@@ -337,9 +309,7 @@ static integer c__33 = 33;
 		for (i__ = j + 1; i__ <= i__1; ++i__) {
 		    i__3 = i__ + j * 33 - 34;
 		    work[i__3].r = 0.f, work[i__3].i = 0.f;
-/* L80: */
 		}
-/* L90: */
 	    }
 
 /*           Process the band matrix one diagonal block at a time. */
@@ -414,9 +384,7 @@ static integer c__33 = 33;
 					ab_dim1;
 				work[i__5].r = ab[i__6].r, work[i__5].i = ab[
 					i__6].i;
-/* L100: */
 			    }
-/* L110: */
 			}
 
 /*                    Update A31 (in the work array). */
@@ -456,13 +424,10 @@ static integer c__33 = 33;
 				i__6 = ii + jj * 33 - 34;
 				ab[i__5].r = work[i__6].r, ab[i__5].i = work[
 					i__6].i;
-/* L120: */
 			    }
-/* L130: */
 			}
 		    }
 		}
-/* L140: */
 	    }
 	}
     }

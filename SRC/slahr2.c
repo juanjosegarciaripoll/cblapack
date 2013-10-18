@@ -32,15 +32,8 @@ static real c_b38 = 0.f;
     integer i__;
     real ei;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -137,16 +130,6 @@ static real c_b38 = 0.f;
 /*  not backward compatible with LAPACK3.0. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Quick return if possible */
 
@@ -274,7 +257,6 @@ static real c_b38 = 0.f;
 		;
 	t[i__ + i__ * t_dim1] = tau[i__];
 
-/* L10: */
     }
     a[*k + *nb + *nb * a_dim1] = ei;
 

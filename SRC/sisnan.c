@@ -20,13 +20,8 @@ logical sisnan_(real *sin__)
 
     /* Local variables */
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -43,9 +38,6 @@ logical sisnan_(real *sin__)
 
 /*  ===================================================================== */
 
-/*  .. External Functions .. */
-/*  .. */
-/*  .. Executable Statements .. */
     ret_val = slaisnan_(sin__, sin__);
     return ret_val;
 } /* sisnan_ */

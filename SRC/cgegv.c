@@ -56,15 +56,8 @@ static real c_b29 = 1.f;
     integer irwork, lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -197,10 +190,8 @@ static real c_b29 = 1.f;
 /*  INFO    (output) INTEGER */
 /*          = 0:  successful exit */
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value. */
-/*          =1,...,N: */
 /*                The QZ iteration failed.  No eigenvectors have been */
 /*                calculated, but ALPHA(j) and BETA(j) should be */
-/*                correct for j=INFO+1,...,N. */
 /*          > N:  errors that usually indicate LAPACK problems: */
 /*                =N+1: error return from CGGBAL */
 /*                =N+2: error return from CGEQRF */
@@ -244,24 +235,6 @@ static real c_b29 = 1.f;
 /*  [*] In other words, upper triangular form. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode the input arguments */
 
@@ -576,7 +549,6 @@ static real c_b29 = 1.f;
 			    r__2 = r_imag(&vl[jr + jc * vl_dim1]), dabs(r__2))
 			    ;
 		    temp = dmax(r__3,r__4);
-/* L10: */
 		}
 		if (temp < safmin) {
 		    goto L30;
@@ -588,7 +560,6 @@ static real c_b29 = 1.f;
 		    i__4 = jr + jc * vl_dim1;
 		    q__1.r = temp * vl[i__4].r, q__1.i = temp * vl[i__4].i;
 		    vl[i__3].r = q__1.r, vl[i__3].i = q__1.i;
-/* L20: */
 		}
 L30:
 		;
@@ -612,7 +583,6 @@ L30:
 			    r__2 = r_imag(&vr[jr + jc * vr_dim1]), dabs(r__2))
 			    ;
 		    temp = dmax(r__3,r__4);
-/* L40: */
 		}
 		if (temp < safmin) {
 		    goto L60;
@@ -624,7 +594,6 @@ L30:
 		    i__4 = jr + jc * vr_dim1;
 		    q__1.r = temp * vr[i__4].r, q__1.i = temp * vr[i__4].i;
 		    vr[i__3].r = q__1.r, vr[i__3].i = q__1.i;
-/* L50: */
 		}
 L60:
 		;
@@ -729,7 +698,6 @@ L60:
 	alpha[i__2].r = q__1.r, alpha[i__2].i = q__1.i;
 	i__2 = jc;
 	beta[i__2].r = sbeta, beta[i__2].i = 0.f;
-/* L70: */
     }
 
 L80:

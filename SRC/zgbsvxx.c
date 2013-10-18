@@ -43,7 +43,6 @@
     doublereal smlnum;
     logical rowequ;
 
-
 /*     -- LAPACK driver routine (version 3.2)                          -- */
 /*     -- Contributed by James Demmel, Deaglan Halligan, Yozo Hida and -- */
 /*     -- Jason Riedy of Univ. of California Berkeley.                 -- */
@@ -51,12 +50,6 @@
 
 /*     -- LAPACK is a software package provided by Univ. of Tennessee, -- */
 /*     -- Univ. of California Berkeley and NAG Ltd.                    -- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*     Purpose */
 /*     ======= */
@@ -466,18 +459,6 @@
 
 /*     ================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     err_bnds_comp_dim1 = *nrhs;
     err_bnds_comp_offset = 1 + err_bnds_comp_dim1;
@@ -563,7 +544,6 @@
 /* Computing MAX */
 		d__1 = rcmax, d__2 = r__[j];
 		rcmax = max(d__1,d__2);
-/* L10: */
 	    }
 	    if (rcmin <= 0.) {
 		*info = -13;
@@ -584,7 +564,6 @@
 /* Computing MAX */
 		d__1 = rcmax, d__2 = c__[j];
 		rcmax = max(d__1,d__2);
-/* L20: */
 	    }
 	    if (rcmin <= 0.) {
 		*info = -14;
@@ -666,9 +645,7 @@
 		i__3 = i__ + j * afb_dim1;
 		i__4 = i__ - *kl + j * ab_dim1;
 		afb[i__3].r = ab[i__4].r, afb[i__3].i = ab[i__4].i;
-/* L30: */
 	    }
-/* L40: */
 	}
 	zgbtrf_(n, n, kl, ku, &afb[afb_offset], ldafb, &ipiv[1], info);
 

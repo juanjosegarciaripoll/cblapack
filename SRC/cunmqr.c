@@ -40,15 +40,8 @@ static integer c__65 = 65;
     integer ldwork, lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -92,7 +85,6 @@ static integer c__65 = 65;
 
 /*  A       (input) COMPLEX array, dimension (LDA,K) */
 /*          The i-th column must contain the vector which defines the */
-/*          elementary reflector H(i), for i = 1,2,...,k, as returned by */
 /*          CGEQRF in the first k columns of its array argument A. */
 /*          A is modified by the routine but restored on exit. */
 
@@ -133,20 +125,6 @@ static integer c__65 = 65;
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -303,7 +281,6 @@ static integer c__65 = 65;
 	    clarfb_(side, trans, "Forward", "Columnwise", &mi, &ni, &ib, &a[
 		    i__ + i__ * a_dim1], lda, t, &c__65, &c__[ic + jc * 
 		    c_dim1], ldc, &work[1], &ldwork);
-/* L10: */
 	}
     }
     work[1].r = (real) lwkopt, work[1].i = 0.f;

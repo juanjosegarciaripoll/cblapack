@@ -32,15 +32,8 @@ static integer c__2 = 2;
     integer nbnext;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -62,7 +55,6 @@ static integer c__2 = 2;
 
 /*         Q(in) * A(in) * Z(in)' = Q(out) * A(out) * Z(out)' */
 /*         Q(in) * B(in) * Z(in)' = Q(out) * B(out) * Z(out)' */
-
 
 /*  Arguments */
 /*  ========= */
@@ -159,16 +151,6 @@ static integer c__2 = 2;
 /*      Real-Time Applications, Kluwer Academic Publ. 1993, pp 195-218. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode and test input arguments. */
 

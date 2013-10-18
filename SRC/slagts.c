@@ -25,15 +25,8 @@
     real ak, eps, temp, pert, absak, sfmin;
     real bignum;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -120,18 +113,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --y;
     --in;
@@ -178,7 +159,6 @@
 			r__4 = max(r__4,r__5), r__5 = (r__3 = d__[k - 2], 
 			dabs(r__3));
 		*tol = dmax(r__4,r__5);
-/* L10: */
 	    }
 	    *tol *= eps;
 	    if (*tol == 0.f) {
@@ -197,7 +177,6 @@
 		y[k - 1] = y[k];
 		y[k] = temp - c__[k - 1] * y[k];
 	    }
-/* L20: */
 	}
 	if (*job == 1) {
 	    for (k = *n; k >= 1; --k) {
@@ -225,7 +204,6 @@
 		    }
 		}
 		y[k] = temp / ak;
-/* L30: */
 	    }
 	} else {
 	    for (k = *n; k >= 1; --k) {
@@ -257,7 +235,6 @@ L40:
 		    }
 		}
 		y[k] = temp / ak;
-/* L50: */
 	    }
 	}
     } else {
@@ -291,7 +268,6 @@ L40:
 		    }
 		}
 		y[k] = temp / ak;
-/* L60: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -324,7 +300,6 @@ L70:
 		    }
 		}
 		y[k] = temp / ak;
-/* L80: */
 	    }
 	}
 
@@ -336,7 +311,6 @@ L70:
 		y[k - 1] = y[k];
 		y[k] = temp - c__[k - 1] * y[k];
 	    }
-/* L90: */
 	}
     }
 

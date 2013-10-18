@@ -28,15 +28,8 @@
     real rtoli, tnorm;
     integer negcnt;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -101,16 +94,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Get machine constants */
     /* Parameter adjustments */
     --e2;
@@ -168,7 +151,6 @@ L10:
 	if (tmp1 <= 0.f) {
 	    ++negcnt;
 	}
-/* L20: */
     }
     if (negcnt >= *iw) {
 	right = mid;

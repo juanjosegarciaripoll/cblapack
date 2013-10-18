@@ -24,7 +24,6 @@
     integer i__;
     doublecomplex s;
 
-
 /*     -- LAPACK routine (version 3.2)                                 -- */
 /*     -- Contributed by James Demmel, Deaglan Halligan, Yozo Hida and -- */
 /*     -- Jason Riedy of Univ. of California Berkeley.                 -- */
@@ -32,12 +31,6 @@
 
 /*     -- LAPACK is a software package provided by Univ. of Tennessee, -- */
 /*     -- Univ. of California Berkeley and NAG Ltd.                    -- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*     Purpose */
 /*     ======= */
@@ -58,10 +51,6 @@
 
 /*     W      (input) COMPLEX*16 array, length N */
 /*            The vector to be added. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Executable Statements .. */
     /* Parameter adjustments */
     --w;
     --y;
@@ -87,7 +76,6 @@
 	y[i__2].r = z__1.r, y[i__2].i = z__1.i;
 	i__2 = i__;
 	x[i__2].r = s.r, x[i__2].i = s.i;
-/* L10: */
     }
     return 0;
 } /* zla_wwaddw__ */

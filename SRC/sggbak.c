@@ -25,15 +25,8 @@
     logical leftv;
     logical rightv;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -97,16 +90,6 @@
 /*                 SIAM J. Sci. Stat. Comp. 2 (1981), 141-152. */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters */
 
@@ -174,7 +157,6 @@
 	    i__1 = *ihi;
 	    for (i__ = *ilo; i__ <= i__1; ++i__) {
 		sscal_(m, &rscale[i__], &v[i__ + v_dim1], ldv);
-/* L10: */
 	    }
 	}
 
@@ -184,7 +166,6 @@
 	    i__1 = *ihi;
 	    for (i__ = *ilo; i__ <= i__1; ++i__) {
 		sscal_(m, &lscale[i__], &v[i__ + v_dim1], ldv);
-/* L20: */
 	    }
 	}
     }

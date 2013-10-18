@@ -22,15 +22,8 @@
     /* Local variables */
     integer i__, ioff;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -53,12 +46,6 @@
 
 /* ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --x;
 
@@ -69,7 +56,6 @@
 	    i__2 = i__;
 	    d_cnjg(&z__1, &x[i__]);
 	    x[i__2].r = z__1.r, x[i__2].i = z__1.i;
-/* L10: */
 	}
     } else {
 	ioff = 1;
@@ -82,7 +68,6 @@
 	    d_cnjg(&z__1, &x[ioff]);
 	    x[i__2].r = z__1.r, x[i__2].i = z__1.i;
 	    ioff += *incx;
-/* L20: */
 	}
     }
     return 0;

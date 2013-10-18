@@ -42,16 +42,9 @@ static integer c__1 = 1;
     logical notrna, notrnb;
     doublereal smlnum;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -122,20 +115,6 @@ static integer c__1 = 1;
 /*               A and B are unchanged). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode and Test input parameters */
 
@@ -265,16 +244,13 @@ static integer c__1 = 1;
 		    i__2 = *n;
 		    for (j = 1; j <= i__2; ++j) {
 			zdscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L10: */
 		    }
 		    *scale *= scaloc;
 		}
 		i__2 = k + l * c_dim1;
 		c__[i__2].r = x11.r, c__[i__2].i = x11.i;
 
-/* L20: */
 	    }
-/* L30: */
 	}
 
     } else if (! notrna && notrnb) {
@@ -341,16 +317,13 @@ static integer c__1 = 1;
 		    i__3 = *n;
 		    for (j = 1; j <= i__3; ++j) {
 			zdscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L40: */
 		    }
 		    *scale *= scaloc;
 		}
 		i__3 = k + l * c_dim1;
 		c__[i__3].r = x11.r, c__[i__3].i = x11.i;
 
-/* L50: */
 	    }
-/* L60: */
 	}
 
     } else if (! notrna && ! notrnb) {
@@ -425,16 +398,13 @@ static integer c__1 = 1;
 		    i__2 = *n;
 		    for (j = 1; j <= i__2; ++j) {
 			zdscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L70: */
 		    }
 		    *scale *= scaloc;
 		}
 		i__2 = k + l * c_dim1;
 		c__[i__2].r = x11.r, c__[i__2].i = x11.i;
 
-/* L80: */
 	    }
-/* L90: */
 	}
 
     } else if (notrna && ! notrnb) {
@@ -508,16 +478,13 @@ static integer c__1 = 1;
 		    i__1 = *n;
 		    for (j = 1; j <= i__1; ++j) {
 			zdscal_(m, &scaloc, &c__[j * c_dim1 + 1], &c__1);
-/* L100: */
 		    }
 		    *scale *= scaloc;
 		}
 		i__1 = k + l * c_dim1;
 		c__[i__1].r = x11.r, c__[i__1].i = x11.i;
 
-/* L110: */
 	    }
-/* L120: */
 	}
 
     }

@@ -46,15 +46,8 @@ static doublereal c_b29 = 0.;
     doublereal orgnrm;
     integer givnum, givptr, qstart, smlsiz, wstart, smlszp;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -174,18 +167,6 @@ static doublereal c_b29 = 0.;
 /*  (N-1).  Sven, 17 Feb 05. */
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -283,7 +264,6 @@ static doublereal c_b29 = 0.;
 		work[i__] = cs;
 		work[nm1 + i__] = -sn;
 	    }
-/* L10: */
 	}
     }
 
@@ -361,7 +341,6 @@ static doublereal c_b29 = 0.;
 	if ((d__1 = d__[i__], abs(d__1)) < eps) {
 	    d__[i__] = d_sign(&eps, &d__[i__]);
 	}
-/* L20: */
     }
 
     start = 1;
@@ -422,7 +401,6 @@ static doublereal c_b29 = 0.;
 	    }
 	    start = i__ + 1;
 	}
-/* L30: */
     }
 
 /*     Unscale */
@@ -443,7 +421,6 @@ L40:
 		kk = j;
 		p = d__[j];
 	    }
-/* L50: */
 	}
 	if (kk != i__) {
 	    d__[kk] = d__[i__];
@@ -458,7 +435,6 @@ L40:
 	} else if (icompq == 1) {
 	    iq[i__] = i__;
 	}
-/* L60: */
     }
 
 /*     If ICOMPQ = 1, use IQ(N,1) as the indicator for UPLO */

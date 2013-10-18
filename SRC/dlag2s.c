@@ -23,16 +23,8 @@
     integer i__, j;
     doublereal rmax;
 
-
 /*  -- LAPACK PROTOTYPE auxiliary routine (version 3.1.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     August 2007 */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -76,12 +68,6 @@
 
 /*  ========= */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     a_dim1 = *lda;
     a_offset = 1 + a_dim1;
@@ -101,9 +87,7 @@
 		goto L30;
 	    }
 	    sa[i__ + j * sa_dim1] = a[i__ + j * a_dim1];
-/* L10: */
 	}
-/* L20: */
     }
     *info = 0;
 L30:

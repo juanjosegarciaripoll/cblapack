@@ -27,7 +27,6 @@ doublereal zla_porpvgrw__(char *uplo, integer *ncols, doublecomplex *a,
     logical upper;
     doublereal rpvgrw;
 
-
 /*     -- LAPACK routine (version 3.2.1)                                 -- */
 /*     -- Contributed by James Demmel, Deaglan Halligan, Yozo Hida and -- */
 /*     -- Jason Riedy of Univ. of California Berkeley.                 -- */
@@ -35,12 +34,6 @@ doublereal zla_porpvgrw__(char *uplo, integer *ncols, doublecomplex *a,
 
 /*     -- LAPACK is a software package provided by Univ. of Tennessee, -- */
 /*     -- Univ. of California Berkeley and NAG Ltd.                    -- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -79,17 +72,6 @@ doublereal zla_porpvgrw__(char *uplo, integer *ncols, doublecomplex *a,
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function Definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
     /* Parameter adjustments */
     a_dim1 = *lda;
     a_offset = 1 + a_dim1;

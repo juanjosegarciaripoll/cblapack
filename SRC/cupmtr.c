@@ -33,15 +33,8 @@ static integer c__1 = 1;
     logical upper;
     logical notran, forwrd;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -112,18 +105,6 @@ static integer c__1 = 1;
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -235,7 +216,6 @@ static integer c__1 = 1;
 	    } else {
 		ii = ii - i__ - 1;
 	    }
-/* L10: */
 	}
     } else {
 
@@ -303,7 +283,6 @@ static integer c__1 = 1;
 	    } else {
 		ii = ii - nq + i__ - 2;
 	    }
-/* L20: */
 	}
     }
     return 0;

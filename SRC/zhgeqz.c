@@ -69,16 +69,9 @@ static integer c__2 = 2;
     integer istart;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -233,12 +226,8 @@ static integer c__2 = 2;
 /*  INFO    (output) INTEGER */
 /*          = 0: successful exit */
 /*          < 0: if INFO = -i, the i-th argument had an illegal value */
-/*          = 1,...,N: the QZ iteration did not converge.  (H,T) is not */
 /*                     in Schur form, but ALPHA(i) and BETA(i), */
-/*                     i=INFO+1,...,N should be correct. */
-/*          = N+1,...,2*N: the shift calculation failed.  (H,T) is not */
 /*                     in Schur form, but ALPHA(i) and BETA(i), */
-/*                     i=INFO-N+1,...,N should be correct. */
 
 /*  Further Details */
 /*  =============== */
@@ -247,22 +236,6 @@ static integer c__2 = 2;
 /*  overflow. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode JOB, COMPQ, COMPZ */
 
@@ -391,7 +364,6 @@ static integer c__2 = 2;
     ascale = 1. / max(safmin,anorm);
     bscale = 1. / max(safmin,bnorm);
 
-
 /*     Set Eigenvalues IHI+1:N */
 
     i__1 = *n;
@@ -429,7 +401,6 @@ static integer c__2 = 2;
 	i__2 = j;
 	i__3 = j + j * t_dim1;
 	beta[i__2].r = t[i__3].r, beta[i__2].i = t[i__3].i;
-/* L10: */
     }
 
 /*     If IHI < ILO, skip QZ steps */
@@ -593,7 +564,6 @@ static integer c__2 = 2;
 			}
 			i__4 = jch + 1 + (jch + 1) * t_dim1;
 			t[i__4].r = 0., t[i__4].i = 0.;
-/* L20: */
 		    }
 		    goto L50;
 		} else {
@@ -642,7 +612,6 @@ static integer c__2 = 2;
 			    zrot_(n, &z__[jch * z_dim1 + 1], &c__1, &z__[(jch 
 				    - 1) * z_dim1 + 1], &c__1, &c__, &s);
 			}
-/* L30: */
 		    }
 		    goto L50;
 		}
@@ -656,7 +625,6 @@ static integer c__2 = 2;
 
 /*           Neither test passed -- try next J */
 
-/* L40: */
 	}
 
 /*        (Drop-through is "impossible") */
@@ -868,7 +836,6 @@ L70:
 		    - 1) * h_dim1]), abs(d__2))) * temp2 <= temp * atol) {
 		goto L90;
 	    }
-/* L80: */
 	}
 
 	istart = ifirst;
@@ -944,7 +911,6 @@ L90:
 		t[i__4].r = z__1.r, t[i__4].i = z__1.i;
 		i__4 = j + jc * t_dim1;
 		t[i__4].r = ctemp2.r, t[i__4].i = ctemp2.i;
-/* L100: */
 	    }
 	    if (ilq) {
 		i__3 = *n;
@@ -968,7 +934,6 @@ L90:
 		    q[i__4].r = z__1.r, q[i__4].i = z__1.i;
 		    i__4 = jr + j * q_dim1;
 		    q[i__4].r = ctemp.r, q[i__4].i = ctemp.i;
-/* L110: */
 		}
 	    }
 
@@ -1002,7 +967,6 @@ L90:
 		h__[i__4].r = z__1.r, h__[i__4].i = z__1.i;
 		i__4 = jr + (j + 1) * h_dim1;
 		h__[i__4].r = ctemp.r, h__[i__4].i = ctemp.i;
-/* L120: */
 	    }
 	    i__3 = j;
 	    for (jr = ifrstm; jr <= i__3; ++jr) {
@@ -1025,7 +989,6 @@ L90:
 		t[i__4].r = z__1.r, t[i__4].i = z__1.i;
 		i__4 = jr + (j + 1) * t_dim1;
 		t[i__4].r = ctemp.r, t[i__4].i = ctemp.i;
-/* L130: */
 	    }
 	    if (ilz) {
 		i__3 = *n;
@@ -1050,15 +1013,12 @@ L90:
 		    z__[i__4].r = z__1.r, z__[i__4].i = z__1.i;
 		    i__4 = jr + (j + 1) * z_dim1;
 		    z__[i__4].r = ctemp.r, z__[i__4].i = ctemp.i;
-/* L140: */
 		}
 	    }
-/* L150: */
 	}
 
 L160:
 
-/* L170: */
 	;
     }
 
@@ -1109,7 +1069,6 @@ L190:
 	i__2 = j;
 	i__3 = j + j * t_dim1;
 	beta[i__2].r = t[i__3].r, beta[i__2].i = t[i__3].i;
-/* L200: */
     }
 
 /*     Normal Termination */

@@ -31,15 +31,8 @@ static integer c_n1 = -1;
     doublereal bignum;
     doublereal smlnum;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -89,18 +82,6 @@ static integer c_n1 = -1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*      Set constant to control owerflow */
 
     /* Parameter adjustments */
@@ -129,9 +110,7 @@ static integer c_n1 = -1;
 	i__2 = *n;
 	for (j = i__ + 1; j <= i__2; ++j) {
 	    rhs[j] -= a[j + i__ * a_dim1] * rhs[i__];
-/* L10: */
 	}
-/* L20: */
     }
 
 /*     Solve for U part */
@@ -154,9 +133,7 @@ static integer c_n1 = -1;
 	i__1 = *n;
 	for (j = i__ + 1; j <= i__1; ++j) {
 	    rhs[i__] -= rhs[j] * (a[i__ + j * a_dim1] * temp);
-/* L30: */
 	}
-/* L40: */
     }
 
 /*     Apply permutations JPIV to the solution (RHS) */

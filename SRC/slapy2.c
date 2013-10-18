@@ -21,13 +21,8 @@ doublereal slapy2_(real *x, real *y)
     /* Local variables */
     real w, z__, xabs, yabs;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -43,14 +38,6 @@ doublereal slapy2_(real *x, real *y)
 /*          X and Y specify the values x and y. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     xabs = dabs(*x);
     yabs = dabs(*y);

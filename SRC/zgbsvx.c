@@ -48,15 +48,8 @@ static integer c__1 = 1;
     logical rowequ;
     doublereal rpvgrw;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -302,18 +295,6 @@ static integer c__1 = 1;
 /*  overwritten.  Sven, 17 Mar 05. */
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     ab_dim1 = *ldab;
     ab_offset = 1 + ab_dim1;
@@ -387,7 +368,6 @@ static integer c__1 = 1;
 /* Computing MAX */
 		d__1 = rcmax, d__2 = r__[j];
 		rcmax = max(d__1,d__2);
-/* L10: */
 	    }
 	    if (rcmin <= 0.) {
 		*info = -13;
@@ -408,7 +388,6 @@ static integer c__1 = 1;
 /* Computing MAX */
 		d__1 = rcmax, d__2 = c__[j];
 		rcmax = max(d__1,d__2);
-/* L20: */
 	    }
 	    if (rcmin <= 0.) {
 		*info = -14;
@@ -466,9 +445,7 @@ static integer c__1 = 1;
 		    z__1.r = r__[i__4] * b[i__5].r, z__1.i = r__[i__4] * b[
 			    i__5].i;
 		    b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L30: */
 		}
-/* L40: */
 	    }
 	}
     } else if (colequ) {
@@ -482,9 +459,7 @@ static integer c__1 = 1;
 		z__1.r = c__[i__4] * b[i__5].r, z__1.i = c__[i__4] * b[i__5]
 			.i;
 		b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L50: */
 	    }
-/* L60: */
 	}
     }
 
@@ -503,7 +478,6 @@ static integer c__1 = 1;
 	    i__2 = j2 - j1 + 1;
 	    zcopy_(&i__2, &ab[*ku + 1 - j + j1 + j * ab_dim1], &c__1, &afb[*
 		    kl + *ku + 1 - j + j1 + j * afb_dim1], &c__1);
-/* L70: */
 	}
 
 	zgbtrf_(n, n, kl, ku, &afb[afb_offset], ldafb, &ipiv[1], info);
@@ -527,9 +501,7 @@ static integer c__1 = 1;
 /* Computing MAX */
 		    d__1 = anorm, d__2 = z_abs(&ab[i__ + j * ab_dim1]);
 		    anorm = max(d__1,d__2);
-/* L80: */
 		}
-/* L90: */
 	    }
 /* Computing MIN */
 	    i__3 = *info - 1, i__2 = *kl + *ku;
@@ -600,14 +572,11 @@ static integer c__1 = 1;
 		    z__1.r = c__[i__4] * x[i__5].r, z__1.i = c__[i__4] * x[
 			    i__5].i;
 		    x[i__2].r = z__1.r, x[i__2].i = z__1.i;
-/* L100: */
 		}
-/* L110: */
 	    }
 	    i__1 = *nrhs;
 	    for (j = 1; j <= i__1; ++j) {
 		ferr[j] /= colcnd;
-/* L120: */
 	    }
 	}
     } else if (rowequ) {
@@ -621,14 +590,11 @@ static integer c__1 = 1;
 		z__1.r = r__[i__4] * x[i__5].r, z__1.i = r__[i__4] * x[i__5]
 			.i;
 		x[i__2].r = z__1.r, x[i__2].i = z__1.i;
-/* L130: */
 	    }
-/* L140: */
 	}
 	i__1 = *nrhs;
 	for (j = 1; j <= i__1; ++j) {
 	    ferr[j] /= rowcnd;
-/* L150: */
 	}
     }
 

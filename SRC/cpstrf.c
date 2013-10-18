@@ -39,15 +39,9 @@ static real c_b30 = 1.f;
     logical upper;
     real sstop;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
 /*     Craig Lucas, University of Manchester / NAG Ltd. */
 /*     October, 2008 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -115,18 +109,6 @@ static real c_b30 = 1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -176,7 +158,6 @@ static real c_b30 = 1.f;
 	i__1 = *n;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    piv[i__] = i__;
-/* L100: */
 	}
 
 /*     Compute stopping value */
@@ -185,7 +166,6 @@ static real c_b30 = 1.f;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    i__2 = i__ + i__ * a_dim1;
 	    work[i__] = a[i__2].r;
-/* L110: */
 	}
 	pvt = smaxloc_(&work[1], n);
 	i__1 = pvt + pvt * a_dim1;
@@ -203,7 +183,6 @@ static real c_b30 = 1.f;
 	} else {
 	    sstop = *tol;
 	}
-
 
 	if (upper) {
 
@@ -225,7 +204,6 @@ static real c_b30 = 1.f;
 		i__3 = *n;
 		for (i__ = k; i__ <= i__3; ++i__) {
 		    work[i__] = 0.f;
-/* L120: */
 		}
 
 		i__3 = k + jb - 1;
@@ -249,7 +227,6 @@ static real c_b30 = 1.f;
 			i__5 = i__ + i__ * a_dim1;
 			work[*n + i__] = a[i__5].r - work[i__];
 
-/* L130: */
 		    }
 
 		    if (j > 1) {
@@ -288,7 +265,6 @@ static real c_b30 = 1.f;
 			    a[i__5].r = q__1.r, a[i__5].i = q__1.i;
 			    i__5 = i__ + pvt * a_dim1;
 			    a[i__5].r = ctemp.r, a[i__5].i = ctemp.i;
-/* L140: */
 			}
 			i__4 = j + pvt * a_dim1;
 			r_cnjg(&q__1, &a[j + pvt * a_dim1]);
@@ -326,7 +302,6 @@ static real c_b30 = 1.f;
 			csscal_(&i__4, &r__1, &a[j + (j + 1) * a_dim1], lda);
 		    }
 
-/* L150: */
 		}
 
 /*              Update trailing matrix, J already incremented */
@@ -337,7 +312,6 @@ static real c_b30 = 1.f;
 			    j * a_dim1], lda, &c_b30, &a[j + j * a_dim1], lda);
 		}
 
-/* L160: */
 	    }
 
 	} else {
@@ -360,7 +334,6 @@ static real c_b30 = 1.f;
 		i__3 = *n;
 		for (i__ = k; i__ <= i__3; ++i__) {
 		    work[i__] = 0.f;
-/* L170: */
 		}
 
 		i__3 = k + jb - 1;
@@ -384,7 +357,6 @@ static real c_b30 = 1.f;
 			i__5 = i__ + i__ * a_dim1;
 			work[*n + i__] = a[i__5].r - work[i__];
 
-/* L180: */
 		    }
 
 		    if (j > 1) {
@@ -423,7 +395,6 @@ static real c_b30 = 1.f;
 			    a[i__5].r = q__1.r, a[i__5].i = q__1.i;
 			    i__5 = pvt + i__ * a_dim1;
 			    a[i__5].r = ctemp.r, a[i__5].i = ctemp.i;
-/* L190: */
 			}
 			i__4 = pvt + j * a_dim1;
 			r_cnjg(&q__1, &a[pvt + j * a_dim1]);
@@ -461,7 +432,6 @@ static real c_b30 = 1.f;
 			csscal_(&i__4, &r__1, &a[j + 1 + j * a_dim1], &c__1);
 		    }
 
-/* L200: */
 		}
 
 /*              Update trailing matrix, J already incremented */
@@ -472,7 +442,6 @@ static real c_b30 = 1.f;
 			     a_dim1], lda, &c_b30, &a[j + j * a_dim1], lda);
 		}
 
-/* L210: */
 	    }
 
 	}

@@ -52,7 +52,6 @@ static real c_b35 = 1.f;
     integer rowskip;
     real roottol;
 
-
 /*  -- LAPACK routine (version 3.2)                                    -- */
 
 /*  -- Contributed by Zlatko Drmac of the University of Zagreb and     -- */
@@ -60,7 +59,6 @@ static real c_b35 = 1.f;
 /*  -- November 2008                                                   -- */
 
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
 
 /* This routine is also part of SIGMA (version 1.23, October 23. 2008.) */
 /* SIGMA is a library of algorithms for highly accurate algorithms for */
@@ -69,10 +67,7 @@ static real c_b35 = 1.f;
 
 /*     -#- Scalar Arguments -#- */
 
-
 /*     -#- Array Arguments -#- */
-
-/*     .. */
 
 /*  Purpose */
 /*  ~~~~~~~ */
@@ -207,7 +202,6 @@ static real c_b35 = 1.f;
 
 /*     -#- Local Scalars -#- */
 
-
 /*     Local Arrays */
 
 /*     Intrinsic Functions */
@@ -215,7 +209,6 @@ static real c_b35 = 1.f;
 /*     External Functions */
 
 /*     External Subroutines */
-
 
     /* Parameter adjustments */
     --sva;
@@ -292,7 +285,6 @@ static real c_b35 = 1.f;
     if (nblr * kbl != *n1) {
 	++nblr;
     }
-/*     .. the tiling is nblr-by-nblc [tiles] */
     nblc = (*n - *n1) / kbl;
     if (nblc * kbl != *n - *n1) {
 	++nblc;
@@ -308,7 +300,6 @@ static real c_b35 = 1.f;
 /*     if SGESVJ is used as a computational routine in the preconditioned */
 /*     Jacobi SVD algorithm SGESVJ. */
 
-
 /*     | *   *   * [x] [x] [x]| */
 /*     | *   *   * [x] [x] [x]|    Row-cycling in the nblr-by-nblc [x] blocks. */
 /*     | *   *   * [x] [x] [x]|    Row-cyclic pivoting inside each [x] block. */
@@ -316,10 +307,8 @@ static real c_b35 = 1.f;
 /*     |[x] [x] [x] *   *   * | */
 /*     |[x] [x] [x] *   *   * | */
 
-
     i__1 = *nsweep;
     for (i__ = 1; i__ <= i__1; ++i__) {
-/*     .. go go go ... */
 
 	mxaapq = 0.f;
 	mxsinj = 0.f;
@@ -332,9 +321,6 @@ static real c_b35 = 1.f;
 	for (ibr = 1; ibr <= i__2; ++ibr) {
 	    igl = (ibr - 1) * kbl + 1;
 
-
-/* ........................................................ */
-/* ... go to the off diagonal blocks */
 	    igl = (ibr - 1) * kbl + 1;
 	    i__3 = nblc;
 	    for (jbc = 1; jbc <= i__3; ++jbc) {
@@ -407,7 +393,6 @@ static real c_b35 = 1.f;
 /* Computing MAX */
 				r__1 = mxaapq, r__2 = dabs(aapq);
 				mxaapq = dmax(r__1,r__2);
-/*        TO rotate or NOT to rotate, THAT is the question ... */
 
 				if (dabs(aapq) > *tol) {
 				    notrot = 0;
@@ -448,8 +433,6 @@ static real c_b35 = 1.f;
 					    r__1 = mxsinj, r__2 = dabs(t);
 					    mxsinj = dmax(r__1,r__2);
 					} else {
-
-/*                 .. choose correct signum for THETA and rotate */
 
 					    thsign = -r_sign(&c_b35, &aapq);
 					    if (aaqq > aapp0) {
@@ -610,10 +593,8 @@ static real c_b35 = 1.f;
 					    mxsinj = dmax(mxsinj,*sfmin);
 					}
 				    }
-/*           END IF ROTOK THEN ... ELSE */
 
 /*           In the case of cancellation in updating SVA(q) */
-/*           .. recompute SVA(q) */
 /* Computing 2nd power */
 				    r__1 = sva[q] / aaqq;
 				    if (r__1 * r__1 <= rooteps) {
@@ -669,7 +650,6 @@ static real c_b35 = 1.f;
 				goto L2203;
 			    }
 
-/* L2200: */
 			}
 /*        end of the q-loop */
 L2203:
@@ -686,10 +666,8 @@ L2203:
 			}
 /* **      IF ( NOTROT .GE. EMPTSW )  GO TO 2011 */
 		    }
-/* L2100: */
 		}
 /*     end of the p-loop */
-/* L2010: */
 	    }
 /*     end of the jbc-loop */
 L2011:
@@ -699,14 +677,11 @@ L2011:
 	    i__3 = min(i__4,*n);
 	    for (p = igl; p <= i__3; ++p) {
 		sva[p] = (r__1 = sva[p], dabs(r__1));
-/* L2012: */
 	    }
 /* **   IF ( NOTROT .GE. EMPTSW ) GO TO 1994 */
-/* L2000: */
 	}
 /* 2000 :: end of the ibr-loop */
 
-/*     .. update SVA(N) */
 	if (sva[*n] < rootbig && sva[*n] > rootsfmin) {
 	    sva[*n] = snrm2_(m, &a[*n * a_dim1 + 1], &c__1) * d__[*n];
 	} else {
@@ -729,7 +704,6 @@ L2011:
 	if (notrot >= emptsw) {
 	    goto L1994;
 	}
-/* L1993: */
     }
 /*     end i=1:NSWEEP loop */
 /* #:) Reaching this point means that the procedure has completed the given */
@@ -762,11 +736,7 @@ L1995:
 			c__1);
 	    }
 	}
-/* L5991: */
     }
 
     return 0;
-/*     .. */
-/*     .. END OF SGSVJ1 */
-/*     .. */
 } /* sgsvj1_ */

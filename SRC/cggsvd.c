@@ -39,15 +39,8 @@ static integer c__1 = 1;
     logical wantu, wantv;
     integer ncycle;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -79,8 +72,6 @@ static integer c__1 = 1;
 /*              L (  0    0   R22 ) */
 /*  where */
 
-/*    C = diag( ALPHA(K+1), ... , ALPHA(K+L) ), */
-/*    S = diag( BETA(K+1),  ... , BETA(K+L) ), */
 /*    C**2 + S**2 = I. */
 
 /*    R is stored in A(1:K+L,N-K-L+1:N) on exit. */
@@ -103,8 +94,6 @@ static integer c__1 = 1;
 
 /*  where */
 
-/*    C = diag( ALPHA(K+1), ... , ALPHA(M) ), */
-/*    S = diag( BETA(K+1),  ... , BETA(M) ), */
 /*    C**2 + S**2 = I. */
 
 /*    (R11 R12 R13 ) is stored in A(1:M, N-K-L+1:N), and R33 is stored */
@@ -226,7 +215,6 @@ static integer c__1 = 1;
 /*             for I = K+1, min(M,K+L) */
 /*                 swap ALPHA(I) and ALPHA(IWORK(I)) */
 /*             endfor */
-/*          such that ALPHA(1) >= ALPHA(2) >= ... >= ALPHA(N). */
 
 /*  INFO    (output) INTEGER */
 /*          = 0:  successful exit. */
@@ -254,16 +242,6 @@ static integer c__1 = 1;
 /*     California at Berkeley, USA */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode and test the input parameters */
 
@@ -369,7 +347,6 @@ static integer c__1 = 1;
 		isub = j;
 		smax = temp;
 	    }
-/* L10: */
 	}
 	if (isub != i__) {
 	    rwork[*k + isub] = rwork[*k + i__];
@@ -378,7 +355,6 @@ static integer c__1 = 1;
 	} else {
 	    iwork[*k + i__] = *k + i__;
 	}
-/* L20: */
     }
 
     return 0;

@@ -30,15 +30,8 @@ static real c_b16 = 0.f;
     integer i__, iw;
     real alpha;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -163,18 +156,6 @@ static real c_b16 = 0.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -261,7 +242,6 @@ static real c_b16 = 0.f;
 			w_dim1 + 1], &c__1);
 	    }
 
-/* L10: */
 	}
     } else {
 
@@ -331,7 +311,6 @@ static real c_b16 = 0.f;
 			i__ + 1 + i__ * w_dim1], &c__1);
 	    }
 
-/* L20: */
 	}
     }
 

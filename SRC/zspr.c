@@ -24,15 +24,8 @@
     integer i__, j, k, kk, ix, jx, kx, info;
     doublecomplex temp;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -102,16 +95,6 @@
 
 /* ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -177,7 +160,6 @@
 				z__2.i;
 			ap[i__3].r = z__1.r, ap[i__3].i = z__1.i;
 			++k;
-/* L10: */
 		    }
 		    i__2 = kk + j - 1;
 		    i__3 = kk + j - 1;
@@ -193,7 +175,6 @@
 		    ap[i__2].r = ap[i__3].r, ap[i__2].i = ap[i__3].i;
 		}
 		kk += j;
-/* L20: */
 	    }
 	} else {
 	    jx = kx;
@@ -219,7 +200,6 @@
 				z__2.i;
 			ap[i__3].r = z__1.r, ap[i__3].i = z__1.i;
 			ix += *incx;
-/* L30: */
 		    }
 		    i__2 = kk + j - 1;
 		    i__3 = kk + j - 1;
@@ -236,7 +216,6 @@
 		}
 		jx += *incx;
 		kk += j;
-/* L40: */
 	    }
 	}
     } else {
@@ -274,7 +253,6 @@
 				z__2.i;
 			ap[i__3].r = z__1.r, ap[i__3].i = z__1.i;
 			++k;
-/* L50: */
 		    }
 		} else {
 		    i__2 = kk;
@@ -282,7 +260,6 @@
 		    ap[i__2].r = ap[i__3].r, ap[i__2].i = ap[i__3].i;
 		}
 		kk = kk + *n - j + 1;
-/* L60: */
 	    }
 	} else {
 	    jx = kx;
@@ -316,7 +293,6 @@
 			z__1.r = ap[i__4].r + z__2.r, z__1.i = ap[i__4].i + 
 				z__2.i;
 			ap[i__3].r = z__1.r, ap[i__3].i = z__1.i;
-/* L70: */
 		    }
 		} else {
 		    i__2 = kk;
@@ -325,7 +301,6 @@
 		}
 		jx += *incx;
 		kk = kk + *n - j + 1;
-/* L80: */
 	    }
 	}
     }

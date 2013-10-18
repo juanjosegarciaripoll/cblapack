@@ -34,15 +34,8 @@ static integer c__2 = 2;
     logical upper;
     logical nounit;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -90,18 +83,6 @@ static integer c__2 = 2;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -143,7 +124,6 @@ static integer c__2 = 2;
 	    if (a[i__2].r == 0. && a[i__2].i == 0.) {
 		return 0;
 	    }
-/* L10: */
 	}
 	*info = 0;
     }
@@ -189,7 +169,6 @@ static integer c__2 = 2;
 /*              Compute inverse of current diagonal block */
 
 		ztrti2_("Upper", diag, &jb, &a[j + j * a_dim1], lda, info);
-/* L20: */
 	    }
 	} else {
 
@@ -219,7 +198,6 @@ static integer c__2 = 2;
 /*              Compute inverse of current diagonal block */
 
 		ztrti2_("Lower", diag, &jb, &a[j + j * a_dim1], lda, info);
-/* L30: */
 	    }
 	}
     }

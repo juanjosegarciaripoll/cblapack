@@ -29,15 +29,8 @@
     real tmp1, tmp2;
     integer itmp1, itmp2, kfnew, klnew;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -51,9 +44,7 @@
 /*  IJOB=2: It takes as input a list of intervals and returns a list of */
 /*          sufficiently small intervals whose union contains the same */
 /*          eigenvalues as the union of the original intervals. */
-/*          The input intervals are (AB(j,1),AB(j,2)], j=1,...,MINP. */
 /*          The output interval (AB(j,1),AB(j,2)] will contain */
-/*          eigenvalues NAB(j,1)+1,...,NAB(j,2), where 1 <= j <= MOUT. */
 
 /*  IJOB=3: It performs a binary search in each input interval */
 /*          (AB(j,1),AB(j,2)] for a point  w(j)  such that */
@@ -179,7 +170,6 @@
 /*             satisfy the condition: */
 /*             N(AB(i,1)) <= NAB(i,1) <= NAB(i,2) <= N(AB(i,2)), */
 /*             which means that in interval i only eigenvalues */
-/*             NAB(i,1)+1,...,NAB(i,2) will be considered.  Usually, */
 /*             NAB(i,j)=N(AB(i,j)), from a previous call to SLAEBZ with */
 /*             IJOB=1. */
 /*             On output, NAB(i,j) will contain */
@@ -227,7 +217,6 @@
 /*      through NAB(i,2) are approximately AB(i,1) (or AB(i,2)) to the */
 /*      tolerance specified by ABSTOL and RELTOL. */
 
-/*  (b) finding an interval (a',b'] containing eigenvalues w(f),...,w(l). */
 /*      In this case, start with a Gershgorin interval  (a,b).  Set up */
 /*      AB to contain 2 search intervals, both initially (a,b).  One */
 /*      NVAL element should contain  f-1  and the other should contain  l */
@@ -236,20 +225,10 @@
 /*      interval does not lie in (a,b).  SLAEBZ is then called with */
 /*      IJOB=3.  On exit, if w(f-1) < w(f), then one of the intervals -- */
 /*      j -- will have AB(j,1)=AB(j,2) and NAB(j,1)=NAB(j,2)=f-1, while */
-/*      if, to the specified tolerance, w(f-k)=...=w(f+r), k > 0 and r */
 /*      >= 0, then the interval will have  N(AB(j,1))=NAB(j,1)=f-k and */
 /*      N(AB(j,2))=NAB(j,2)=f+r.  The cases w(l) < w(l+1) and */
-/*      w(l-r)=...=w(l+k) are handled similarly. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Check for Errors */
 
@@ -304,12 +283,9 @@
 		    if (tmp1 <= 0.f) {
 			++nab[ji + jp * nab_dim1];
 		    }
-/* L10: */
 		}
-/* L20: */
 	    }
 	    *mout = *mout + nab[ji + (nab_dim1 << 1)] - nab[ji + nab_dim1];
-/* L30: */
 	}
 	return 0;
     }
@@ -317,8 +293,6 @@
 /*     Initialize for loop */
 
 /*     KF and KL have the following meaning: */
-/*        Intervals 1,...,KF-1 have converged. */
-/*        Intervals KF,...,KL  still need to be refined. */
 
     kf = 1;
     kl = *minp;
@@ -330,7 +304,6 @@
 	i__1 = *minp;
 	for (ji = 1; ji <= i__1; ++ji) {
 	    c__[ji] = (ab[ji + ab_dim1] + ab[ji + (ab_dim1 << 1)]) * .5f;
-/* L40: */
 	}
     }
 
@@ -368,9 +341,7 @@
 			r__1 = work[ji], r__2 = -(*pivmin);
 			work[ji] = dmin(r__1,r__2);
 		    }
-/* L50: */
 		}
-/* L60: */
 	    }
 
 	    if (*ijob <= 2) {
@@ -424,7 +395,6 @@
 			    *info = *mmax + 1;
 			}
 		    }
-/* L70: */
 		}
 		if (*info != 0) {
 		    return 0;
@@ -445,7 +415,6 @@
 			ab[ji + (ab_dim1 << 1)] = c__[ji];
 			nab[ji + (nab_dim1 << 1)] = iwork[ji];
 		    }
-/* L80: */
 		}
 	    }
 
@@ -495,7 +464,6 @@
 			r__1 = tmp2, r__2 = -(*pivmin);
 			tmp2 = dmin(r__1,r__2);
 		    }
-/* L90: */
 		}
 
 		if (*ijob <= 2) {
@@ -556,7 +524,6 @@
 			nab[ji + (nab_dim1 << 1)] = itmp1;
 		    }
 		}
-/* L100: */
 	    }
 	    kl = klnew;
 
@@ -604,7 +571,6 @@
 		}
 		++kfnew;
 	    }
-/* L110: */
 	}
 	kf = kfnew;
 
@@ -613,7 +579,6 @@
 	i__2 = kl;
 	for (ji = kf; ji <= i__2; ++ji) {
 	    c__[ji] = (ab[ji + ab_dim1] + ab[ji + (ab_dim1 << 1)]) * .5f;
-/* L120: */
 	}
 
 /*        If no more intervals to refine, quit. */
@@ -621,7 +586,6 @@
 	if (kf > kl) {
 	    goto L140;
 	}
-/* L130: */
     }
 
 /*     Converged */

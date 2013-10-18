@@ -23,15 +23,8 @@
     integer i__, k;
     doublecomplex alpha;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -85,16 +78,6 @@
 /*  A(i,i+1:n), and tau in TAU(i). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -151,7 +134,6 @@
 	a[i__2].r = alpha.r, a[i__2].i = alpha.i;
 	i__2 = *n - i__ + 1;
 	zlacgv_(&i__2, &a[i__ + i__ * a_dim1], lda);
-/* L10: */
     }
     return 0;
 

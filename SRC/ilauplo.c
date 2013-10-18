@@ -20,12 +20,8 @@ integer ilauplo_(char *uplo)
 
     /* Local variables */
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     October 2008 */
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -45,11 +41,6 @@ integer ilauplo_(char *uplo)
 /*          = 'L':  A is lower triangular. */
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
     if (lsame_(uplo, "U")) {
 	ret_val = 121;
     } else if (lsame_(uplo, "L")) {

@@ -34,15 +34,8 @@ static real c_b25 = -1.f;
     integer lastv;
     char transt[1];
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -118,16 +111,6 @@ static real c_b25 = -1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -181,7 +164,6 @@ static real c_b25 = -1.f;
 		for (j = 1; j <= i__1; ++j) {
 		    scopy_(&lastc, &c__[j + c_dim1], ldc, &work[j * work_dim1 
 			    + 1], &c__1);
-/* L10: */
 		}
 
 /*              W := W * V1 */
@@ -228,9 +210,7 @@ static real c_b25 = -1.f;
 		    i__2 = lastc;
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			c__[j + i__ * c_dim1] -= work[i__ + j * work_dim1];
-/* L20: */
 		    }
-/* L30: */
 		}
 
 	    } else if (lsame_(side, "R")) {
@@ -250,7 +230,6 @@ static real c_b25 = -1.f;
 		for (j = 1; j <= i__1; ++j) {
 		    scopy_(&lastc, &c__[j * c_dim1 + 1], &c__1, &work[j * 
 			    work_dim1 + 1], &c__1);
-/* L40: */
 		}
 
 /*              W := W * V1 */
@@ -298,9 +277,7 @@ static real c_b25 = -1.f;
 		    i__2 = lastc;
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			c__[i__ + j * c_dim1] -= work[i__ + j * work_dim1];
-/* L50: */
 		    }
-/* L60: */
 		}
 	    }
 
@@ -328,7 +305,6 @@ static real c_b25 = -1.f;
 		for (j = 1; j <= i__1; ++j) {
 		    scopy_(&lastc, &c__[lastv - *k + j + c_dim1], ldc, &work[
 			    j * work_dim1 + 1], &c__1);
-/* L70: */
 		}
 
 /*              W := W * V2 */
@@ -377,9 +353,7 @@ static real c_b25 = -1.f;
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			c__[lastv - *k + j + i__ * c_dim1] -= work[i__ + j * 
 				work_dim1];
-/* L80: */
 		    }
-/* L90: */
 		}
 
 	    } else if (lsame_(side, "R")) {
@@ -399,7 +373,6 @@ static real c_b25 = -1.f;
 		for (j = 1; j <= i__1; ++j) {
 		    scopy_(&lastc, &c__[(*n - *k + j) * c_dim1 + 1], &c__1, &
 			    work[j * work_dim1 + 1], &c__1);
-/* L100: */
 		}
 
 /*              W := W * V2 */
@@ -448,9 +421,7 @@ static real c_b25 = -1.f;
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			c__[i__ + (lastv - *k + j) * c_dim1] -= work[i__ + j *
 				 work_dim1];
-/* L110: */
 		    }
-/* L120: */
 		}
 	    }
 	}
@@ -480,7 +451,6 @@ static real c_b25 = -1.f;
 		for (j = 1; j <= i__1; ++j) {
 		    scopy_(&lastc, &c__[j + c_dim1], ldc, &work[j * work_dim1 
 			    + 1], &c__1);
-/* L130: */
 		}
 
 /*              W := W * V1' */
@@ -527,9 +497,7 @@ static real c_b25 = -1.f;
 		    i__2 = lastc;
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			c__[j + i__ * c_dim1] -= work[i__ + j * work_dim1];
-/* L140: */
 		    }
-/* L150: */
 		}
 
 	    } else if (lsame_(side, "R")) {
@@ -549,7 +517,6 @@ static real c_b25 = -1.f;
 		for (j = 1; j <= i__1; ++j) {
 		    scopy_(&lastc, &c__[j * c_dim1 + 1], &c__1, &work[j * 
 			    work_dim1 + 1], &c__1);
-/* L160: */
 		}
 
 /*              W := W * V1' */
@@ -597,9 +564,7 @@ static real c_b25 = -1.f;
 		    i__2 = lastc;
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			c__[i__ + j * c_dim1] -= work[i__ + j * work_dim1];
-/* L170: */
 		    }
-/* L180: */
 		}
 
 	    }
@@ -627,7 +592,6 @@ static real c_b25 = -1.f;
 		for (j = 1; j <= i__1; ++j) {
 		    scopy_(&lastc, &c__[lastv - *k + j + c_dim1], ldc, &work[
 			    j * work_dim1 + 1], &c__1);
-/* L190: */
 		}
 
 /*              W := W * V2' */
@@ -676,9 +640,7 @@ static real c_b25 = -1.f;
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			c__[lastv - *k + j + i__ * c_dim1] -= work[i__ + j * 
 				work_dim1];
-/* L200: */
 		    }
-/* L210: */
 		}
 
 	    } else if (lsame_(side, "R")) {
@@ -698,7 +660,6 @@ static real c_b25 = -1.f;
 		for (j = 1; j <= i__1; ++j) {
 		    scopy_(&lastc, &c__[(lastv - *k + j) * c_dim1 + 1], &c__1, 
 			     &work[j * work_dim1 + 1], &c__1);
-/* L220: */
 		}
 
 /*              W := W * V2' */
@@ -747,9 +708,7 @@ static real c_b25 = -1.f;
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			c__[i__ + (lastv - *k + j) * c_dim1] -= work[i__ + j *
 				 work_dim1];
-/* L230: */
 		    }
-/* L240: */
 		}
 
 	    }

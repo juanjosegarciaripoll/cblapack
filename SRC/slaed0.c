@@ -40,15 +40,8 @@ static integer c__1 = 1;
     integer igivnm, submat;
     integer curprb, subpbs, igivpt, curlvl, matsiz, iprmpt, smlsiz;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -139,18 +132,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -204,7 +185,6 @@ L10:
 	for (j = subpbs; j >= 1; --j) {
 	    iwork[j * 2] = (iwork[j] + 1) / 2;
 	    iwork[(j << 1) - 1] = iwork[j] / 2;
-/* L20: */
 	}
 	++tlvls;
 	subpbs <<= 1;
@@ -213,7 +193,6 @@ L10:
     i__1 = subpbs;
     for (j = 2; j <= i__1; ++j) {
 	iwork[j] += iwork[j - 1];
-/* L30: */
     }
 
 /*     Divide the matrix into SUBPBS submatrices of size at most SMLSIZ+1 */
@@ -226,7 +205,6 @@ L10:
 	smm1 = submat - 1;
 	d__[smm1] -= (r__1 = e[smm1], dabs(r__1));
 	d__[submat] -= (r__1 = e[smm1], dabs(r__1));
-/* L40: */
     }
 
     indxq = (*n << 2) + 3;
@@ -261,7 +239,6 @@ L10:
 	for (i__ = 0; i__ <= i__1; ++i__) {
 	    iwork[iprmpt + i__] = 1;
 	    iwork[igivpt + i__] = 1;
-/* L50: */
 	}
 	iwork[iqptr] = 1;
     }
@@ -307,9 +284,7 @@ L10:
 	for (j = submat; j <= i__2; ++j) {
 	    iwork[indxq + j] = k;
 	    ++k;
-/* L60: */
 	}
-/* L70: */
     }
 
 /*     Successively merge eigensystems of adjacent submatrices */
@@ -359,7 +334,6 @@ L80:
 		goto L130;
 	    }
 	    iwork[i__ / 2 + 1] = iwork[i__ + 2];
-/* L90: */
 	}
 	subpbs /= 2;
 	++curlvl;
@@ -378,7 +352,6 @@ L80:
 	    work[i__] = d__[j];
 	    scopy_(qsiz, &qstore[j * qstore_dim1 + 1], &c__1, &q[i__ * q_dim1 
 		    + 1], &c__1);
-/* L100: */
 	}
 	scopy_(n, &work[1], &c__1, &d__[1], &c__1);
     } else if (*icompq == 2) {
@@ -387,7 +360,6 @@ L80:
 	    j = iwork[indxq + i__];
 	    work[i__] = d__[j];
 	    scopy_(n, &q[j * q_dim1 + 1], &c__1, &work[*n * i__ + 1], &c__1);
-/* L110: */
 	}
 	scopy_(n, &work[1], &c__1, &d__[1], &c__1);
 	slacpy_("A", n, n, &work[*n + 1], n, &q[q_offset], ldq);
@@ -396,7 +368,6 @@ L80:
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    j = iwork[indxq + i__];
 	    work[i__] = d__[j];
-/* L120: */
 	}
 	scopy_(n, &work[1], &c__1, &d__[1], &c__1);
     }

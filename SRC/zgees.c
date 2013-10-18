@@ -43,17 +43,8 @@ static integer c_n1 = -1;
     integer hswork;
     logical wantst, lquery, wantvs;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-/*     .. Function Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -149,24 +140,9 @@ static integer c_n1 = -1;
 /*               = N+2: after reordering, roundoff changed values of */
 /*                      some complex eigenvalues so that leading */
 /*                      eigenvalues in the Schur form no longer satisfy */
-/*                      SELECT = .TRUE..  This could also be caused by */
 /*                      underflow due to scaling. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -337,7 +313,6 @@ static integer c_n1 = -1;
 	i__1 = *n;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    bwork[i__] = (*select)(&w[i__]);
-/* L10: */
 	}
 
 /*        Reorder eigenvalues and transform Schur vectors */

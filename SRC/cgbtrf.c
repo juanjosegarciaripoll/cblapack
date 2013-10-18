@@ -33,15 +33,8 @@ static integer c__65 = 65;
     complex work13[4160]	/* was [65][64] */, work31[4160]	/* 
 	    was [65][64] */;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -115,20 +108,6 @@ static integer c__65 = 65;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     KV is the number of superdiagonals in the factor U, allowing for */
 /*     fill-in */
 
@@ -193,9 +172,7 @@ static integer c__65 = 65;
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		i__3 = i__ + j * 65 - 66;
 		work13[i__3].r = 0.f, work13[i__3].i = 0.f;
-/* L10: */
 	    }
-/* L20: */
 	}
 
 /*        Zero the subdiagonal elements of the work array WORK31 */
@@ -206,9 +183,7 @@ static integer c__65 = 65;
 	    for (i__ = j + 1; i__ <= i__2; ++i__) {
 		i__3 = i__ + j * 65 - 66;
 		work31[i__3].r = 0.f, work31[i__3].i = 0.f;
-/* L30: */
 	    }
-/* L40: */
 	}
 
 /*        Gaussian elimination with partial pivoting */
@@ -221,9 +196,7 @@ static integer c__65 = 65;
 	    for (i__ = kv - j + 2; i__ <= i__2; ++i__) {
 		i__3 = i__ + j * ab_dim1;
 		ab[i__3].r = 0.f, ab[i__3].i = 0.f;
-/* L50: */
 	    }
-/* L60: */
 	}
 
 /*        JU is the index of the last column affected by the current */
@@ -271,7 +244,6 @@ static integer c__65 = 65;
 		    for (i__ = 1; i__ <= i__4; ++i__) {
 			i__5 = i__ + (jj + kv) * ab_dim1;
 			ab[i__5].r = 0.f, ab[i__5].i = 0.f;
-/* L70: */
 		    }
 		}
 
@@ -360,7 +332,6 @@ static integer c__65 = 65;
 		    ccopy_(&nw, &ab[kv + *kl + 1 - jj + j + jj * ab_dim1], &
 			    c__1, &work31[(jj - j + 1) * 65 - 65], &c__1);
 		}
-/* L80: */
 	    }
 	    if (j + jb <= *n) {
 
@@ -385,7 +356,6 @@ static integer c__65 = 65;
 		i__3 = j + jb - 1;
 		for (i__ = j; i__ <= i__3; ++i__) {
 		    ipiv[i__] = ipiv[i__] + j - 1;
-/* L90: */
 		}
 
 /*              Apply the row interchanges to A13, A23, and A33 */
@@ -407,9 +377,7 @@ static integer c__65 = 65;
 			    i__5 = kv + 1 + ip - jj + jj * ab_dim1;
 			    ab[i__5].r = temp.r, ab[i__5].i = temp.i;
 			}
-/* L100: */
 		    }
-/* L110: */
 		}
 
 /*              Update the relevant part of the trailing submatrix */
@@ -466,9 +434,7 @@ static integer c__65 = 65;
 			    i__6 = ii - jj + 1 + (jj + j + kv - 1) * ab_dim1;
 			    work13[i__5].r = ab[i__6].r, work13[i__5].i = ab[
 				    i__6].i;
-/* L120: */
 			}
-/* L130: */
 		    }
 
 /*                 Update A13 in the work array */
@@ -512,9 +478,7 @@ static integer c__65 = 65;
 			    i__6 = ii + jj * 65 - 66;
 			    ab[i__5].r = work13[i__6].r, ab[i__5].i = work13[
 				    i__6].i;
-/* L140: */
 			}
-/* L150: */
 		    }
 		}
 	    } else {
@@ -524,7 +488,6 @@ static integer c__65 = 65;
 		i__3 = j + jb - 1;
 		for (i__ = j; i__ <= i__3; ++i__) {
 		    ipiv[i__] = ipiv[i__] + j - 1;
-/* L160: */
 		}
 	    }
 
@@ -569,9 +532,7 @@ static integer c__65 = 65;
 		    ccopy_(&nw, &work31[(jj - j + 1) * 65 - 65], &c__1, &ab[
 			    kv + *kl + 1 - jj + j + jj * ab_dim1], &c__1);
 		}
-/* L170: */
 	    }
-/* L180: */
 	}
     }
 

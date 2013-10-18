@@ -58,16 +58,9 @@ static integer c__0 = 0;
     doublereal pivmin;
     logical toofew;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
 /*     8-18-00:  Increase FUDGE factor for T3E (eca) */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -222,20 +215,6 @@ static integer c__0 = 0;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --iwork;
     --work;
@@ -363,7 +342,6 @@ static integer c__0 = 0;
 	    work[j - 1] = tmp1;
 	    pivmin = max(pivmin,tmp1);
 	}
-/* L10: */
     }
     isplit[*nsplit] = *n;
     pivmin *= safemn;
@@ -392,7 +370,6 @@ static integer c__0 = 0;
 	    d__1 = gl, d__2 = d__[j] - tmp1 - tmp2;
 	    gl = min(d__1,d__2);
 	    tmp1 = tmp2;
-/* L20: */
 	}
 
 /* Computing MAX */
@@ -468,7 +445,6 @@ static integer c__0 = 0;
 	    d__4 = tnorm, d__5 = (d__1 = d__[j], abs(d__1)) + (d__2 = e[j - 1]
 		    , abs(d__2)) + (d__3 = e[j], abs(d__3));
 	    tnorm = max(d__4,d__5);
-/* L30: */
 	}
 
 	if (*abstol <= 0.) {
@@ -540,7 +516,6 @@ static integer c__0 = 0;
 		d__1 = gl, d__2 = d__[j] - tmp1 - tmp2;
 		gl = min(d__1,d__2);
 		tmp1 = tmp2;
-/* L40: */
 	    }
 
 /* Computing MAX */
@@ -619,9 +594,7 @@ static integer c__0 = 0;
 		for (je = iwork[j] + 1 + iwoff; je <= i__3; ++je) {
 		    w[je] = tmp1;
 		    iblock[je] = ib;
-/* L50: */
 		}
-/* L60: */
 	    }
 
 	    *m += im;
@@ -630,7 +603,6 @@ L70:
 	;
     }
 
-/*     If RANGE='I', then (WL,WU) contains eigenvalues NWL+1,...,NWU */
 /*     If NWL+1 < IL or NWU > IU, discard extra eigenvalues. */
 
     if (irange == 3) {
@@ -650,7 +622,6 @@ L70:
 		    w[im] = w[je];
 		    iblock[im] = iblock[je];
 		}
-/* L80: */
 	    }
 	    *m = im;
 	}
@@ -677,10 +648,8 @@ L70:
 			    iw = je;
 			    wkill = w[je];
 			}
-/* L90: */
 		    }
 		    iblock[iw] = 0;
-/* L100: */
 		}
 	    }
 	    if (idiscu > 0) {
@@ -695,10 +664,8 @@ L70:
 			    iw = je;
 			    wkill = w[je];
 			}
-/* L110: */
 		    }
 		    iblock[iw] = 0;
-/* L120: */
 		}
 	    }
 	    im = 0;
@@ -709,7 +676,6 @@ L70:
 		    w[im] = w[je];
 		    iblock[im] = iblock[je];
 		}
-/* L130: */
 	    }
 	    *m = im;
 	}
@@ -733,7 +699,6 @@ L70:
 		    ie = j;
 		    tmp1 = w[j];
 		}
-/* L140: */
 	    }
 
 	    if (ie != 0) {
@@ -743,7 +708,6 @@ L70:
 		w[je] = tmp1;
 		iblock[je] = itmp1;
 	    }
-/* L150: */
 	}
     }
 

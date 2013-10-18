@@ -82,15 +82,8 @@ static integer c__2 = 2;
     logical tryrqc;
     integer isupmx;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -241,18 +234,6 @@ static integer c__2 = 2;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-/*     .. */
 /*     The first N entries of WORK are reserved for the eigenvalues */
     /* Parameter adjustments */
     --d__;
@@ -279,7 +260,6 @@ static integer c__2 = 2;
     i__1 = minwsize;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	work[i__] = 0.;
-/* L5: */
     }
 /*     IWORK(IINDR+1:IINDR+N) hold the twist indices R for the */
 /*     factorization used to compute the FP vector */
@@ -293,7 +273,6 @@ static integer c__2 = 2;
     i__1 = miniwsize;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	iwork[i__] = 0;
-/* L10: */
     }
     zusedl = 1;
     if (*dol > 1) {
@@ -363,7 +342,6 @@ L15:
 /* Computing MAX */
 	    d__1 = gers[i__ * 2];
 	    gu = max(d__1,gu);
-/* L20: */
 	}
 	spdiam = gu - gl;
 /*        OLDIEN is the last index of the previous block */
@@ -396,7 +374,6 @@ L15:
 	i__2 = im;
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    w[wbegin + i__ - 1] += sigma;
-/* L30: */
 	}
 /*        NDEPTH is the current depth of the representation tree */
 	ndepth = 0;
@@ -479,7 +456,6 @@ L40:
 		    tmp = d__[j] * l[j];
 		    work[indld - 1 + j] = tmp;
 		    work[indlld - 1 + j] = tmp * l[j];
-/* L50: */
 		}
 		if (ndepth > 0) {
 /*                 P and Q are index of the first and last eigenvalue to compute */
@@ -527,7 +503,6 @@ L40:
 		    i__3 = oldlst;
 		    for (j = oldfst; j <= i__3; ++j) {
 			w[wbegin + j - 1] = work[wbegin + j - 1] + sigma;
-/* L53: */
 		    }
 		}
 /*              Process the current node. */
@@ -541,7 +516,6 @@ L40:
 		    } else if (wgap[wbegin + j - 1] >= *minrgp * (d__1 = work[
 			    wbegin + j - 1], abs(d__1))) {
 /*                    the right relative gap is big enough, the child cluster */
-/*                    (NEWFST,..,NEWLST) is well separated from the following */
 			newlst = j;
 		    } else {
 /*                    inside a child cluster, the relative gap is not */
@@ -571,7 +545,6 @@ L40:
 
 /*                    Current child is not a singleton but a cluster. */
 /*                    Compute and store new representation of child. */
-
 
 /*                    Compute left and right cluster gap. */
 
@@ -608,7 +581,6 @@ L40:
 				    work[wbegin], &wgap[wbegin], &werr[wbegin]
 , &work[indwrk], &iwork[iindwk], pivmin, &
 				    spdiam, &in, &iinfo);
-/* L55: */
 			}
 
 			if (wbegin + newlst - 1 < *dol || wbegin + newfst - 1 
@@ -657,7 +629,6 @@ L40:
 /*                          of judging eigenvalues 'separated' which in */
 /*                          reality are not. This could have a negative impact */
 /*                          on the orthogonality of the computed eigenvectors. */
-/* L116: */
 			    }
 			    ++nclus;
 			    k = newcls + (nclus << 1);
@@ -900,14 +871,12 @@ L120:
 			    i__4 = zfrom - 1;
 			    for (ii = isupmn; ii <= i__4; ++ii) {
 				z__[ii + windex * z_dim1] = 0.;
-/* L122: */
 			    }
 			}
 			if (isupmx > zto) {
 			    i__4 = isupmx;
 			    for (ii = zto + 1; ii <= i__4; ++ii) {
 				z__[ii + windex * z_dim1] = 0.;
-/* L123: */
 			    }
 			}
 			i__4 = zto - zfrom + 1;
@@ -946,7 +915,6 @@ L139:
 L140:
 		    ;
 		}
-/* L150: */
 	    }
 	    ++ndepth;
 	    goto L40;

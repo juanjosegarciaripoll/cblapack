@@ -25,15 +25,8 @@
     integer i__, j;
     doublecomplex temp;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -87,12 +80,6 @@
 /*          The leading dimension of the array B.  LDB >= max(1,N). */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Quick return if possible */
 
@@ -149,7 +136,6 @@ L10:
 		    z__1.r = temp.r - z__2.r, z__1.i = temp.i - z__2.i;
 		    b[i__2].r = z__1.r, b[i__2].i = z__1.i;
 		}
-/* L20: */
 	    }
 
 /*           Solve U*x = b. */
@@ -186,7 +172,6 @@ L10:
 		z__2.r = z__3.r - z__5.r, z__2.i = z__3.i - z__5.i;
 		z_div(&z__1, &z__2, &d__[i__]);
 		b[i__1].r = z__1.r, b[i__1].i = z__1.i;
-/* L30: */
 	    }
 	    if (j < *nrhs) {
 		++j;
@@ -226,7 +211,6 @@ L10:
 			z__1.r = temp.r - z__2.r, z__1.i = temp.i - z__2.i;
 			b[i__3].r = z__1.r, b[i__3].i = z__1.i;
 		    }
-/* L40: */
 		}
 
 /*           Solve U*x = b. */
@@ -263,9 +247,7 @@ L10:
 		    z__2.r = z__3.r - z__5.r, z__2.i = z__3.i - z__5.i;
 		    z_div(&z__1, &z__2, &d__[i__]);
 		    b[i__2].r = z__1.r, b[i__2].i = z__1.i;
-/* L50: */
 		}
-/* L60: */
 	    }
 	}
     } else if (*itrans == 1) {
@@ -309,7 +291,6 @@ L70:
 		z__2.r = z__3.r - z__5.r, z__2.i = z__3.i - z__5.i;
 		z_div(&z__1, &z__2, &d__[i__]);
 		b[i__2].r = z__1.r, b[i__2].i = z__1.i;
-/* L80: */
 	    }
 
 /*           Solve L**T * x = b. */
@@ -339,7 +320,6 @@ L70:
 		    i__1 = i__ + j * b_dim1;
 		    b[i__1].r = temp.r, b[i__1].i = temp.i;
 		}
-/* L90: */
 	    }
 	    if (j < *nrhs) {
 		++j;
@@ -383,7 +363,6 @@ L70:
 		    z__2.r = z__3.r - z__5.r, z__2.i = z__3.i - z__5.i;
 		    z_div(&z__1, &z__2, &d__[i__]);
 		    b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L100: */
 		}
 
 /*           Solve L**T * x = b. */
@@ -415,9 +394,7 @@ L70:
 			i__2 = i__ + j * b_dim1;
 			b[i__2].r = temp.r, b[i__2].i = temp.i;
 		    }
-/* L110: */
 		}
-/* L120: */
 	    }
 	}
     } else {
@@ -463,7 +440,6 @@ L130:
 		d_cnjg(&z__8, &d__[i__]);
 		z_div(&z__1, &z__2, &z__8);
 		b[i__2].r = z__1.r, b[i__2].i = z__1.i;
-/* L140: */
 	    }
 
 /*           Solve L**H * x = b. */
@@ -491,7 +467,6 @@ L130:
 		    i__1 = i__ + j * b_dim1;
 		    b[i__1].r = temp.r, b[i__1].i = temp.i;
 		}
-/* L150: */
 	    }
 	    if (j < *nrhs) {
 		++j;
@@ -536,7 +511,6 @@ L130:
 		    d_cnjg(&z__8, &d__[i__]);
 		    z_div(&z__1, &z__2, &z__8);
 		    b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L160: */
 		}
 
 /*           Solve L**H * x = b. */
@@ -567,9 +541,7 @@ L130:
 			i__2 = i__ + j * b_dim1;
 			b[i__2].r = temp.r, b[i__2].i = temp.i;
 		    }
-/* L170: */
 		}
-/* L180: */
 	    }
 	}
     }

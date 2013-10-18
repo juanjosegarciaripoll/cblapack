@@ -24,15 +24,8 @@
     /* Local variables */
     integer i__, j;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -81,14 +74,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -128,7 +113,6 @@ L5:
 			i__4].r * q__3.i + b[i__4].i * q__3.r;
 		q__1.r = b[i__3].r - q__2.r, q__1.i = b[i__3].i - q__2.i;
 		b[i__2].r = q__1.r, b[i__2].i = q__1.i;
-/* L10: */
 	    }
 
 /*           Solve D * U * x = b. */
@@ -141,7 +125,6 @@ L5:
 		q__1.r = b[i__3].r / d__[i__4], q__1.i = b[i__3].i / d__[i__4]
 			;
 		b[i__2].r = q__1.r, b[i__2].i = q__1.i;
-/* L20: */
 	    }
 	    for (i__ = *n - 1; i__ >= 1; --i__) {
 		i__1 = i__ + j * b_dim1;
@@ -153,7 +136,6 @@ L5:
 			.r;
 		q__1.r = b[i__2].r - q__2.r, q__1.i = b[i__2].i - q__2.i;
 		b[i__1].r = q__1.r, b[i__1].i = q__1.i;
-/* L30: */
 	    }
 	    if (j < *nrhs) {
 		++j;
@@ -175,7 +157,6 @@ L5:
 			     b[i__5].r * q__3.i + b[i__5].i * q__3.r;
 		    q__1.r = b[i__4].r - q__2.r, q__1.i = b[i__4].i - q__2.i;
 		    b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L40: */
 		}
 
 /*              Solve D * U * x = b. */
@@ -199,9 +180,7 @@ L5:
 			    i__6].r;
 		    q__1.r = q__2.r - q__3.r, q__1.i = q__2.i - q__3.i;
 		    b[i__2].r = q__1.r, b[i__2].i = q__1.i;
-/* L50: */
 		}
-/* L60: */
 	    }
 	}
     } else {
@@ -226,7 +205,6 @@ L65:
 			.r;
 		q__1.r = b[i__3].r - q__2.r, q__1.i = b[i__3].i - q__2.i;
 		b[i__2].r = q__1.r, b[i__2].i = q__1.i;
-/* L70: */
 	    }
 
 /*           Solve D * L' * x = b. */
@@ -239,7 +217,6 @@ L65:
 		q__1.r = b[i__3].r / d__[i__4], q__1.i = b[i__3].i / d__[i__4]
 			;
 		b[i__2].r = q__1.r, b[i__2].i = q__1.i;
-/* L80: */
 	    }
 	    for (i__ = *n - 1; i__ >= 1; --i__) {
 		i__1 = i__ + j * b_dim1;
@@ -250,7 +227,6 @@ L65:
 			i__3].r * q__3.i + b[i__3].i * q__3.r;
 		q__1.r = b[i__2].r - q__2.r, q__1.i = b[i__2].i - q__2.i;
 		b[i__1].r = q__1.r, b[i__1].i = q__1.i;
-/* L90: */
 	    }
 	    if (j < *nrhs) {
 		++j;
@@ -273,7 +249,6 @@ L65:
 			    i__6].r;
 		    q__1.r = b[i__4].r - q__2.r, q__1.i = b[i__4].i - q__2.i;
 		    b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L100: */
 		}
 
 /*              Solve D * L' * x = b. */
@@ -296,9 +271,7 @@ L65:
 			     b[i__5].r * q__4.i + b[i__5].i * q__4.r;
 		    q__1.r = q__2.r - q__3.r, q__1.i = q__2.i - q__3.i;
 		    b[i__2].r = q__1.r, b[i__2].i = q__1.i;
-/* L110: */
 		}
-/* L120: */
 	    }
 	}
     }

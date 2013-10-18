@@ -23,15 +23,8 @@
     integer i__, k;
     complex alpha;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -88,16 +81,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input arguments */
 
     /* Parameter adjustments */
@@ -148,7 +131,6 @@
 	a[i__1].r = alpha.r, a[i__1].i = alpha.i;
 	i__1 = *n - k + i__ - 1;
 	clacgv_(&i__1, &a[*m - k + i__ + a_dim1], lda);
-/* L10: */
     }
     return 0;
 

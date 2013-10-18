@@ -39,15 +39,8 @@ static integer c__1 = 1;
     real sminpr;
     real smaxpr, smlnum;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -144,18 +137,6 @@ static integer c__1 = 1;
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     a_dim1 = *lda;
@@ -306,7 +287,6 @@ L10:
 		q__1.r = s2.r * work[i__3].r - s2.i * work[i__3].i, q__1.i = 
 			s2.r * work[i__3].i + s2.i * work[i__3].r;
 		work[i__2].r = q__1.r, work[i__2].i = q__1.i;
-/* L20: */
 	    }
 	    i__1 = ismin + *rank;
 	    work[i__1].r = c1.r, work[i__1].i = c1.i;
@@ -349,9 +329,7 @@ L10:
 	for (j = 1; j <= i__2; ++j) {
 	    i__3 = i__ + j * b_dim1;
 	    b[i__3].r = 0.f, b[i__3].i = 0.f;
-/* L30: */
 	}
-/* L40: */
     }
 
 /*     B(1:N,1:NRHS) := Y' * B(1:N,1:NRHS) */
@@ -364,7 +342,6 @@ L10:
 	    clatzm_("Left", &i__2, nrhs, &a[i__ + (*rank + 1) * a_dim1], lda, 
 		    &q__1, &b[i__ + b_dim1], &b[*rank + 1 + b_dim1], ldb, &
 		    work[(mn << 1) + 1]);
-/* L50: */
 	}
     }
 
@@ -378,7 +355,6 @@ L10:
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    i__3 = (mn << 1) + i__;
 	    work[i__3].r = 1.f, work[i__3].i = 0.f;
-/* L60: */
 	}
 	i__2 = *n;
 	for (i__ = 1; i__ <= i__2; ++i__) {
@@ -408,9 +384,7 @@ L70:
 		    work[i__3].r = 0.f, work[i__3].i = 0.f;
 		}
 	    }
-/* L80: */
 	}
-/* L90: */
     }
 
 /*     Undo scaling */

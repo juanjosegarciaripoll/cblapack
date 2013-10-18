@@ -33,15 +33,8 @@ static integer c__1 = 1;
     integer i__;
     doublecomplex alpha;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -164,16 +157,6 @@ static integer c__1 = 1;
 /*  of the vector defining G(i). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Quick return if possible */
 
@@ -338,7 +321,6 @@ static integer c__1 = 1;
 		i__2 = *n - i__;
 		zlacgv_(&i__2, &a[i__ + (i__ + 1) * a_dim1], lda);
 	    }
-/* L10: */
 	}
     } else {
 
@@ -486,7 +468,6 @@ static integer c__1 = 1;
 		i__2 = *n - i__ + 1;
 		zlacgv_(&i__2, &a[i__ + i__ * a_dim1], lda);
 	    }
-/* L20: */
 	}
     }
     return 0;

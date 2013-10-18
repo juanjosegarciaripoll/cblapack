@@ -23,15 +23,8 @@
     integer i__, j, k, i1, i2, n32, ip, ix, ix0, inc;
     doublecomplex temp;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -78,10 +71,6 @@
 
 /* ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Interchange row I with row IPIV(I) for each of rows K1 through K2. */
 
     /* Parameter adjustments */
@@ -125,13 +114,10 @@
 			a[i__5].r = a[i__6].r, a[i__5].i = a[i__6].i;
 			i__5 = ip + k * a_dim1;
 			a[i__5].r = temp.r, a[i__5].i = temp.i;
-/* L10: */
 		    }
 		}
 		ix += *incx;
-/* L20: */
 	    }
-/* L30: */
 	}
     }
     if (n32 != *n) {
@@ -151,11 +137,9 @@
 		    a[i__4].r = a[i__5].r, a[i__4].i = a[i__5].i;
 		    i__4 = ip + k * a_dim1;
 		    a[i__4].r = temp.r, a[i__4].i = temp.i;
-/* L40: */
 		}
 	    }
 	    ix += *incx;
-/* L50: */
 	}
     }
 

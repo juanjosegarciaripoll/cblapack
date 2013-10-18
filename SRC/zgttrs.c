@@ -31,15 +31,8 @@ static integer c_n1 = -1;
     integer itrans;
     logical notran;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -97,16 +90,6 @@ static integer c_n1 = -1;
 /*          < 0:  if INFO = -k, the k-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --dl;
@@ -178,7 +161,6 @@ static integer c_n1 = -1;
 	    jb = min(i__3,nb);
 	    zgtts2_(&itrans, n, &jb, &dl[1], &d__[1], &du[1], &du2[1], &ipiv[
 		    1], &b[j * b_dim1 + 1], ldb);
-/* L10: */
 	}
     }
 

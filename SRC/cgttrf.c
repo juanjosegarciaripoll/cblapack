@@ -25,15 +25,8 @@
     integer i__;
     complex fact, temp;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -93,20 +86,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --ipiv;
     --du2;
@@ -134,13 +113,11 @@
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	ipiv[i__] = i__;
-/* L10: */
     }
     i__1 = *n - 2;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	i__2 = i__;
 	du2[i__2].r = 0.f, du2[i__2].i = 0.f;
-/* L20: */
     }
 
     i__1 = *n - 2;
@@ -201,7 +178,6 @@
 	    du[i__2].r = q__1.r, du[i__2].i = q__1.i;
 	    ipiv[i__] = i__ + 1;
 	}
-/* L30: */
     }
     if (*n > 1) {
 	i__ = *n - 1;
@@ -258,7 +234,6 @@
 	    *info = i__;
 	    goto L50;
 	}
-/* L40: */
     }
 L50:
 

@@ -36,15 +36,8 @@ static integer c__1 = 1;
     integer icompq;
     integer icompz;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -158,18 +151,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Decode COMPQ */
 
     /* Parameter adjustments */
@@ -265,9 +246,7 @@ static integer c__1 = 1;
 	i__2 = *n;
 	for (jrow = jcol + 1; jrow <= i__2; ++jrow) {
 	    b[jrow + jcol * b_dim1] = 0.f;
-/* L10: */
 	}
-/* L20: */
     }
 
 /*     Reduce A and B */
@@ -310,9 +289,7 @@ static integer c__1 = 1;
 		srot_(n, &z__[jrow * z_dim1 + 1], &c__1, &z__[(jrow - 1) * 
 			z_dim1 + 1], &c__1, &c__, &s);
 	    }
-/* L30: */
 	}
-/* L40: */
     }
 
     return 0;

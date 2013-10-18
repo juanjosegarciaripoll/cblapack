@@ -27,7 +27,6 @@
     integer j4, j4p2;
     doublereal emin, temp;
 
-
 /*  -- LAPACK routine (version 3.2)                                    -- */
 
 /*  -- Contributed by Osni Marques of the Lawrence Berkeley National   -- */
@@ -36,12 +35,6 @@
 /*  -- November 2008                                                   -- */
 
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -91,14 +84,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameter .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --z__;
 
@@ -128,7 +113,6 @@
 /* Computing MIN */
 		d__1 = z__[j4];
 		emin = min(d__1,emin);
-/* L10: */
 	    }
 	} else {
 	    i__1 = *n0 - 3 << 2;
@@ -141,7 +125,6 @@
 /* Computing MIN */
 		d__1 = z__[j4 - 1];
 		emin = min(d__1,emin);
-/* L20: */
 	    }
 	}
 
@@ -182,7 +165,6 @@
 /* Computing MIN */
 		d__1 = emin, d__2 = z__[j4];
 		emin = min(d__1,d__2);
-/* L30: */
 	    }
 	} else {
 	    i__1 = *n0 - 3 << 2;
@@ -198,7 +180,6 @@
 /* Computing MIN */
 		d__1 = emin, d__2 = z__[j4 - 1];
 		emin = min(d__1,d__2);
-/* L40: */
 	    }
 	}
 

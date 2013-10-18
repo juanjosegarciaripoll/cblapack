@@ -21,18 +21,11 @@ integer ilaslr_(integer *m, integer *n, real *a, integer *lda)
     /* Local variables */
     integer i__, j;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2.1)                        -- */
 
 /*  -- April 2009                                                      -- */
 
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -55,12 +48,6 @@ integer ilaslr_(integer *m, integer *n, real *a, integer *lda)
 /*          The leading dimension of the array A. LDA >= max(1,M). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Quick test for the common case where one corner is non-zero. */
     /* Parameter adjustments */

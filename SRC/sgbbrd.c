@@ -39,15 +39,8 @@ static integer c__1 = 1;
     logical wantq;
     logical wantpt;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -133,18 +126,6 @@ static integer c__1 = 1;
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters */
 
@@ -285,7 +266,6 @@ static integer c__1 = 1;
 				+ l - 1) * ab_dim1], &inca, &work[mn + j1], &
 				work[j1], &kb1);
 		    }
-/* L10: */
 		}
 
 		if (ml > ml0) {
@@ -324,7 +304,6 @@ static integer c__1 = 1;
 			    {
 			srot_(m, &q[(j - 1) * q_dim1 + 1], &c__1, &q[j * 
 				q_dim1 + 1], &c__1, &work[mn + j], &work[j]);
-/* L20: */
 		    }
 		}
 
@@ -338,7 +317,6 @@ static integer c__1 = 1;
 			    {
 			srot_(ncc, &c__[j - 1 + c_dim1], ldc, &c__[j + c_dim1]
 , ldc, &work[mn + j], &work[j]);
-/* L30: */
 		    }
 		}
 
@@ -360,7 +338,6 @@ static integer c__1 = 1;
 		    work[j + kun] = work[j] * ab[(j + kun) * ab_dim1 + 1];
 		    ab[(j + kun) * ab_dim1 + 1] = work[mn + j] * ab[(j + kun) 
 			    * ab_dim1 + 1];
-/* L40: */
 		}
 
 /*              generate plane rotations to annihilate nonzero elements */
@@ -385,7 +362,6 @@ static integer c__1 = 1;
 				inca, &ab[l + (j1 + kun) * ab_dim1], &inca, &
 				work[mn + j1 + kun], &work[j1 + kun], &kb1);
 		    }
-/* L50: */
 		}
 
 		if (ml == ml0 && mu > mu0) {
@@ -422,7 +398,6 @@ static integer c__1 = 1;
 			srot_(n, &pt[j + kun - 1 + pt_dim1], ldpt, &pt[j + 
 				kun + pt_dim1], ldpt, &work[mn + j + kun], &
 				work[j + kun]);
-/* L60: */
 		    }
 		}
 
@@ -445,7 +420,6 @@ static integer c__1 = 1;
 			    ab_dim1];
 		    ab[klu1 + (j + kun) * ab_dim1] = work[mn + j + kun] * ab[
 			    klu1 + (j + kun) * ab_dim1];
-/* L70: */
 		}
 
 		if (ml > ml0) {
@@ -453,9 +427,7 @@ static integer c__1 = 1;
 		} else {
 		    --mu;
 		}
-/* L80: */
 	    }
-/* L90: */
 	}
     }
 
@@ -487,7 +459,6 @@ static integer c__1 = 1;
 		srot_(ncc, &c__[i__ + c_dim1], ldc, &c__[i__ + 1 + c_dim1], 
 			ldc, &rc, &rs);
 	    }
-/* L100: */
 	}
 	if (*m <= *n) {
 	    d__[*m] = ab[*m * ab_dim1 + 1];
@@ -514,7 +485,6 @@ static integer c__1 = 1;
 		    srot_(n, &pt[i__ + pt_dim1], ldpt, &pt[*m + 1 + pt_dim1], 
 			    ldpt, &rc, &rs);
 		}
-/* L110: */
 	    }
 	} else {
 
@@ -523,12 +493,10 @@ static integer c__1 = 1;
 	    i__1 = minmn - 1;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 		e[i__] = ab[*ku + (i__ + 1) * ab_dim1];
-/* L120: */
 	    }
 	    i__1 = minmn;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 		d__[i__] = ab[*ku + 1 + i__ * ab_dim1];
-/* L130: */
 	    }
 	}
     } else {
@@ -539,12 +507,10 @@ static integer c__1 = 1;
 	i__1 = minmn - 1;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    e[i__] = 0.f;
-/* L140: */
 	}
 	i__1 = minmn;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    d__[i__] = ab[i__ * ab_dim1 + 1];
-/* L150: */
 	}
     }
     return 0;

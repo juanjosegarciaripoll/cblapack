@@ -41,15 +41,8 @@ static integer c__1 = 1;
     logical initq, wantq, upper;
     integer iqaend;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -126,18 +119,6 @@ static integer c__1 = 1;
 /*  Modified by Linda Kaufman, Bell Labs. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters */
 
@@ -237,7 +218,6 @@ static integer c__1 = 1;
 
 /*                    apply rotations from the right */
 
-
 /*                    Dependent on the the number of diagonals either */
 /*                    ZLARTV or ZROT is used */
 
@@ -247,7 +227,6 @@ static integer c__1 = 1;
 				zlartv_(&nr, &ab[l + 1 + (j1 - 1) * ab_dim1], 
 					&inca, &ab[l + j1 * ab_dim1], &inca, &
 					d__[j1], &work[j1], &kd1);
-/* L10: */
 			    }
 
 			} else {
@@ -259,11 +238,9 @@ static integer c__1 = 1;
 				zrot_(&kdm1, &ab[(jinc - 1) * ab_dim1 + 2], &
 					c__1, &ab[jinc * ab_dim1 + 1], &c__1, 
 					&d__[jinc], &work[jinc]);
-/* L20: */
 			    }
 			}
 		    }
-
 
 		    if (k > 2) {
 			if (k <= *n - i__ + 1) {
@@ -321,7 +298,6 @@ static integer c__1 = 1;
 					    + (j1 + l) * ab_dim1], &inca, &
 					    d__[j1], &work[j1], &kd1);
 				}
-/* L30: */
 			    }
 			} else {
 			    j1end = j1 + kd1 * (nr - 2);
@@ -335,7 +311,6 @@ static integer c__1 = 1;
 					    ab_dim1], &incx, &ab[*kd + (jin + 
 					    1) * ab_dim1], &incx, &d__[jin], &
 					    work[jin]);
-/* L40: */
 				}
 			    }
 /* Computing MIN */
@@ -386,7 +361,6 @@ static integer c__1 = 1;
 				zrot_(&nq, &q[iqb + (j - 1) * q_dim1], &c__1, 
 					&q[iqb + j * q_dim1], &c__1, &d__[j], 
 					&z__1);
-/* L50: */
 			    }
 			} else {
 
@@ -398,7 +372,6 @@ static integer c__1 = 1;
 				zrot_(n, &q[(j - 1) * q_dim1 + 1], &c__1, &q[
 					j * q_dim1 + 1], &c__1, &d__[j], &
 					z__1);
-/* L60: */
 			    }
 			}
 
@@ -433,11 +406,8 @@ static integer c__1 = 1;
 			z__1.r = d__[i__5] * ab[i__6].r, z__1.i = d__[i__5] * 
 				ab[i__6].i;
 			ab[i__4].r = z__1.r, ab[i__4].i = z__1.i;
-/* L70: */
 		    }
-/* L80: */
 		}
-/* L90: */
 	    }
 	}
 
@@ -470,7 +440,6 @@ static integer c__1 = 1;
 		    d_cnjg(&z__1, &t);
 		    zscal_(n, &z__1, &q[(i__ + 1) * q_dim1 + 1], &c__1);
 		}
-/* L100: */
 	    }
 	} else {
 
@@ -479,7 +448,6 @@ static integer c__1 = 1;
 	    i__1 = *n - 1;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 		e[i__] = 0.;
-/* L110: */
 	    }
 	}
 
@@ -490,7 +458,6 @@ static integer c__1 = 1;
 	    i__3 = i__;
 	    i__2 = kd1 + i__ * ab_dim1;
 	    d__[i__3] = ab[i__2].r;
-/* L120: */
 	}
 
     } else {
@@ -527,7 +494,6 @@ static integer c__1 = 1;
 
 /*                    apply plane rotations from one side */
 
-
 /*                    Dependent on the the number of diagonals either */
 /*                    ZLARTV or ZROT is used */
 
@@ -538,7 +504,6 @@ static integer c__1 = 1;
 					ab_dim1], &inca, &ab[kd1 - l + 1 + (
 					j1 - kd1 + l) * ab_dim1], &inca, &d__[
 					j1], &work[j1], &kd1);
-/* L130: */
 			    }
 			} else {
 			    jend = j1 + kd1 * (nr - 1);
@@ -550,7 +515,6 @@ static integer c__1 = 1;
 , &incx, &ab[kd1 + (jinc - *kd) * 
 					ab_dim1], &incx, &d__[jinc], &work[
 					jinc]);
-/* L140: */
 			    }
 			}
 
@@ -593,7 +557,6 @@ static integer c__1 = 1;
 
 /*                 apply plane rotations from the right */
 
-
 /*                    Dependent on the the number of diagonals either */
 /*                    ZLARTV or ZROT is used */
 
@@ -613,7 +576,6 @@ static integer c__1 = 1;
 					    ab_dim1], &inca, &d__[j1], &work[
 					    j1], &kd1);
 				}
-/* L150: */
 			    }
 			} else {
 			    j1end = j1 + kd1 * (nr - 2);
@@ -626,7 +588,6 @@ static integer c__1 = 1;
 					    3], &c__1, &ab[j1inc * ab_dim1 + 
 					    2], &c__1, &d__[j1inc], &work[
 					    j1inc]);
-/* L160: */
 				}
 			    }
 /* Computing MIN */
@@ -640,8 +601,6 @@ static integer c__1 = 1;
 			    }
 			}
 		    }
-
-
 
 		    if (wantq) {
 
@@ -677,7 +636,6 @@ static integer c__1 = 1;
 				zrot_(&nq, &q[iqb + (j - 1) * q_dim1], &c__1, 
 					&q[iqb + j * q_dim1], &c__1, &d__[j], 
 					&work[j]);
-/* L170: */
 			    }
 			} else {
 
@@ -688,7 +646,6 @@ static integer c__1 = 1;
 				zrot_(n, &q[(j - 1) * q_dim1 + 1], &c__1, &q[
 					j * q_dim1 + 1], &c__1, &d__[j], &
 					work[j]);
-/* L180: */
 			    }
 			}
 		    }
@@ -722,11 +679,8 @@ static integer c__1 = 1;
 			z__1.r = d__[i__5] * ab[i__6].r, z__1.i = d__[i__5] * 
 				ab[i__6].i;
 			ab[i__4].r = z__1.r, ab[i__4].i = z__1.i;
-/* L190: */
 		    }
-/* L200: */
 		}
-/* L210: */
 	    }
 	}
 
@@ -758,7 +712,6 @@ static integer c__1 = 1;
 		if (wantq) {
 		    zscal_(n, &t, &q[(i__ + 1) * q_dim1 + 1], &c__1);
 		}
-/* L220: */
 	    }
 	} else {
 
@@ -767,7 +720,6 @@ static integer c__1 = 1;
 	    i__1 = *n - 1;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 		e[i__] = 0.;
-/* L230: */
 	    }
 	}
 
@@ -778,7 +730,6 @@ static integer c__1 = 1;
 	    i__2 = i__;
 	    i__3 = i__ * ab_dim1 + 1;
 	    d__[i__2] = ab[i__3].r;
-/* L240: */
 	}
     }
 

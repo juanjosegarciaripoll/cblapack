@@ -42,15 +42,8 @@ static integer c__1 = 1;
     real safmin;
     real safmax, rtdisc, smlnum;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*     Purpose */
 /*     ======= */
@@ -80,7 +73,6 @@ static integer c__1 = 1;
 /*          rows and columns IHI+1:N, and that H(ILO,ILO-1) = 0 (unless */
 /*          ILO = 1). SLAHQR works primarily with the Hessenberg */
 /*          submatrix in rows and columns ILO to IHI, but applies */
-/*          transformations to all of H if WANTT is .TRUE.. */
 /*          1 <= ILO <= max(1,IHI); IHI <= N. */
 
 /*     H       (input/output) REAL array, dimension (LDH,N) */
@@ -111,7 +103,6 @@ static integer c__1 = 1;
 /*     ILOZ    (input) INTEGER */
 /*     IHIZ    (input) INTEGER */
 /*          Specify the rows of Z to which transformations must be */
-/*          applied if WANTZ is .TRUE.. */
 /*          1 <= ILOZ <= ILO; IHI <= IHIZ <= N. */
 
 /*     Z       (input/output) REAL array, dimension (LDZ,N) */
@@ -164,20 +155,6 @@ static integer c__1 = 1;
 
 /*     ========================================================= */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     h_dim1 = *ldh;
     h_offset = 1 + h_dim1;
@@ -207,7 +184,6 @@ static integer c__1 = 1;
     for (j = *ilo; j <= i__1; ++j) {
 	h__[j + 2 + j * h_dim1] = 0.f;
 	h__[j + 3 + j * h_dim1] = 0.f;
-/* L10: */
     }
     if (*ilo <= *ihi - 2) {
 	h__[*ihi + (*ihi - 2) * h_dim1] = 0.f;
@@ -299,7 +275,6 @@ L20:
 		    goto L40;
 		}
 	    }
-/* L30: */
 	}
 L40:
 	l = k;
@@ -429,7 +404,6 @@ L40:
 		    h_dim1], dabs(r__4)))) {
 		goto L60;
 	    }
-/* L50: */
 	}
 L60:
 
@@ -483,7 +457,6 @@ L60:
 		    h__[k + j * h_dim1] -= sum * t1;
 		    h__[k + 1 + j * h_dim1] -= sum * t2;
 		    h__[k + 2 + j * h_dim1] -= sum * t3;
-/* L70: */
 		}
 
 /*              Apply G from the right to transform the columns of the */
@@ -498,7 +471,6 @@ L60:
 		    h__[j + k * h_dim1] -= sum * t1;
 		    h__[j + (k + 1) * h_dim1] -= sum * t2;
 		    h__[j + (k + 2) * h_dim1] -= sum * t3;
-/* L80: */
 		}
 
 		if (*wantz) {
@@ -512,7 +484,6 @@ L60:
 			z__[j + k * z_dim1] -= sum * t1;
 			z__[j + (k + 1) * z_dim1] -= sum * t2;
 			z__[j + (k + 2) * z_dim1] -= sum * t3;
-/* L90: */
 		    }
 		}
 	    } else if (nr == 2) {
@@ -525,7 +496,6 @@ L60:
 		    sum = h__[k + j * h_dim1] + v2 * h__[k + 1 + j * h_dim1];
 		    h__[k + j * h_dim1] -= sum * t1;
 		    h__[k + 1 + j * h_dim1] -= sum * t2;
-/* L100: */
 		}
 
 /*              Apply G from the right to transform the columns of the */
@@ -537,7 +507,6 @@ L60:
 			    ;
 		    h__[j + k * h_dim1] -= sum * t1;
 		    h__[j + (k + 1) * h_dim1] -= sum * t2;
-/* L110: */
 		}
 
 		if (*wantz) {
@@ -550,14 +519,11 @@ L60:
 				z_dim1];
 			z__[j + k * z_dim1] -= sum * t1;
 			z__[j + (k + 1) * z_dim1] -= sum * t2;
-/* L120: */
 		    }
 		}
 	    }
-/* L130: */
 	}
 
-/* L140: */
     }
 
 /*     Failure to converge in remaining number of iterations */

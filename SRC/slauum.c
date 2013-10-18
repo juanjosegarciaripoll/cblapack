@@ -29,15 +29,8 @@ static real c_b15 = 1.f;
     integer i__, ib, nb;
     logical upper;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -80,18 +73,6 @@ static real c_b15 = 1.f;
 /*          < 0: if INFO = -k, the k-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -163,7 +144,6 @@ static real c_b15 = 1.f;
 			    i__ + (i__ + ib) * a_dim1], lda, &c_b15, &a[i__ + 
 			    i__ * a_dim1], lda);
 		}
-/* L10: */
 	    }
 	} else {
 
@@ -191,7 +171,6 @@ static real c_b15 = 1.f;
 			    ib + i__ * a_dim1], lda, &c_b15, &a[i__ + i__ * 
 			    a_dim1], lda);
 		}
-/* L20: */
 	    }
 	}
     }

@@ -37,15 +37,8 @@ static real c_b24 = 1.f;
     complex pmone;
     real rtemp, sminu, rwork[2], splus;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -136,20 +129,6 @@ static real c_b24 = 1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     z_dim1 = *ldz;
     z_offset = 1 + z_dim1;
@@ -223,7 +202,6 @@ static real c_b24 = 1.f;
 	    i__2 = *n - j;
 	    caxpy_(&i__2, &temp, &z__[j + 1 + j * z_dim1], &c__1, &rhs[j + 1], 
 		     &c__1);
-/* L10: */
 	}
 
 /*        Solve for U- part, lockahead for RHS(N) = +-1. This is not done */
@@ -280,11 +258,9 @@ static real c_b24 = 1.f;
 			 rhs[i__4].r * q__3.i + rhs[i__4].i * q__3.r;
 		q__1.r = rhs[i__3].r - q__2.r, q__1.i = rhs[i__3].i - q__2.i;
 		rhs[i__2].r = q__1.r, rhs[i__2].i = q__1.i;
-/* L20: */
 	    }
 	    splus += c_abs(&work[i__ - 1]);
 	    sminu += c_abs(&rhs[i__]);
-/* L30: */
 	}
 	if (splus > sminu) {
 	    ccopy_(n, work, &c__1, &rhs[1], &c__1);

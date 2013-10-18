@@ -43,15 +43,8 @@ static real c_b36 = .5f;
     real smlnum;
     logical nounit;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -141,7 +134,6 @@ static real c_b36 = .5f;
 /*  if A is lower triangular is */
 
 /*       x[1:n] := b[1:n] */
-/*       for j = 1, ..., n */
 /*            x(j) := x(j) / A(j,j) */
 /*            x[j+1:n] := x[j+1:n] - x(j) * A[j+1:n,j] */
 /*       end */
@@ -149,7 +141,6 @@ static real c_b36 = .5f;
 /*  Define bounds on the components of x after j iterations of the loop: */
 /*     M(j) = bound on x[1:j] */
 /*     G(j) = bound on x[j+1:n] */
-/*  Initially, let M(0) = 0 and G(0) = max{x(i), i=1,...,n}. */
 
 /*  Then for iteration j+1 we have */
 /*     M(j+1) <= G(j) / | A(j+1,j+1) | */
@@ -167,7 +158,6 @@ static real c_b36 = .5f;
 /*                                   1<=i< j */
 
 /*  Since |x(j)| <= M(j), we use the Level 2 BLAS routine STPSV if the */
-/*  reciprocal of the largest M(j), j=1,..,n, is larger than */
 /*  max(underflow, 1/overflow). */
 
 /*  The bound on x(j) is also used to determine when a step in the */
@@ -179,7 +169,6 @@ static real c_b36 = .5f;
 /*  Similarly, a row-wise scheme is used to solve A'*x = b.  The basic */
 /*  algorithm for A upper triangular is */
 
-/*       for j = 1, ..., n */
 /*            x(j) := ( b(j) - A[1:j-1,j]' * x[1:j-1] ) / A(j,j) */
 /*       end */
 
@@ -187,7 +176,6 @@ static real c_b36 = .5f;
 /*       G(j) = bound on ( b(i) - A[1:i-1,i]' * x[1:i-1] ), 1<=i<=j */
 /*       M(j) = bound on x(i), 1<=i<=j */
 
-/*  The initial values are G(0) = 0, M(0) = max{b(i), i=1,..,n}, and we */
 /*  add the constraint G(j) >= G(j-1) and M(j) >= M(j-1) for j >= 1. */
 /*  Then the bound on x(j) is */
 
@@ -200,18 +188,6 @@ static real c_b36 = .5f;
 /*  than max(underflow, 1/overflow). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --cnorm;
@@ -271,7 +247,6 @@ static real c_b36 = .5f;
 		i__2 = j - 1;
 		cnorm[j] = sasum_(&i__2, &ap[ip], &c__1);
 		ip += j;
-/* L10: */
 	    }
 	} else {
 
@@ -283,7 +258,6 @@ static real c_b36 = .5f;
 		i__2 = *n - j;
 		cnorm[j] = sasum_(&i__2, &ap[ip + 1], &c__1);
 		ip = ip + *n - j + 1;
-/* L20: */
 	    }
 	    cnorm[*n] = 0.f;
 	}
@@ -331,7 +305,6 @@ static real c_b36 = .5f;
 /*           A is non-unit triangular. */
 
 /*           Compute GROW = 1/G(j) and XBND = 1/M(j). */
-/*           Initially, G(0) = max{x(i), i=1,...,n}. */
 
 	    grow = 1.f / dmax(xbnd,smlnum);
 	    xbnd = grow;
@@ -366,14 +339,11 @@ static real c_b36 = .5f;
 		}
 		ip += jinc * jlen;
 		--jlen;
-/* L30: */
 	    }
 	    grow = xbnd;
 	} else {
 
 /*           A is unit triangular. */
-
-/*           Compute GROW = 1/G(j), where G(0) = max{x(i), i=1,...,n}. */
 
 /* Computing MIN */
 	    r__1 = 1.f, r__2 = 1.f / dmax(xbnd,smlnum);
@@ -391,7 +361,6 @@ static real c_b36 = .5f;
 /*              G(j) = G(j-1)*( 1 + CNORM(j) ) */
 
 		grow *= 1.f / (cnorm[j] + 1.f);
-/* L40: */
 	    }
 	}
 L50:
@@ -421,7 +390,6 @@ L50:
 /*           A is non-unit triangular. */
 
 /*           Compute GROW = 1/G(j) and XBND = 1/M(j). */
-/*           Initially, M(0) = max{x(i), i=1,...,n}. */
 
 	    grow = 1.f / dmax(xbnd,smlnum);
 	    xbnd = grow;
@@ -452,14 +420,11 @@ L50:
 		}
 		++jlen;
 		ip += jinc * jlen;
-/* L60: */
 	    }
 	    grow = dmin(grow,xbnd);
 	} else {
 
 /*           A is unit triangular. */
-
-/*           Compute GROW = 1/G(j), where G(0) = max{x(i), i=1,...,n}. */
 
 /* Computing MIN */
 	    r__1 = 1.f, r__2 = 1.f / dmax(xbnd,smlnum);
@@ -478,7 +443,6 @@ L50:
 
 		xj = cnorm[j] + 1.f;
 		grow /= xj;
-/* L70: */
 	    }
 	}
 L80:
@@ -574,7 +538,6 @@ L80:
 		    i__3 = *n;
 		    for (i__ = 1; i__ <= i__3; ++i__) {
 			x[i__] = 0.f;
-/* L90: */
 		    }
 		    x[j] = 1.f;
 		    xj = 1.f;
@@ -635,7 +598,6 @@ L95:
 		    }
 		    ip = ip + *n - j + 1;
 		}
-/* L100: */
 	    }
 
 	} else {
@@ -704,13 +666,11 @@ L95:
 			i__3 = j - 1;
 			for (i__ = 1; i__ <= i__3; ++i__) {
 			    sumj += ap[ip - j + i__] * uscal * x[i__];
-/* L110: */
 			}
 		    } else if (j < *n) {
 			i__3 = *n - j;
 			for (i__ = 1; i__ <= i__3; ++i__) {
 			    sumj += ap[ip + i__] * uscal * x[j + i__];
-/* L120: */
 			}
 		    }
 		}
@@ -772,7 +732,6 @@ L95:
 			i__3 = *n;
 			for (i__ = 1; i__ <= i__3; ++i__) {
 			    x[i__] = 0.f;
-/* L130: */
 			}
 			x[j] = 1.f;
 			*scale = 0.f;
@@ -792,7 +751,6 @@ L135:
 		xmax = dmax(r__2,r__3);
 		++jlen;
 		ip += jinc * jlen;
-/* L140: */
 	    }
 	}
 	*scale /= tscal;

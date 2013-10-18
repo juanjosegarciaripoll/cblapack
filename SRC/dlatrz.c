@@ -22,15 +22,8 @@
     /* Local variables */
     integer i__;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -93,22 +86,11 @@
 
 /*  The scalar tau is returned in the kth element of TAU and the vector */
 /*  u( k ) in the kth row of A2, such that the elements of z( k ) are */
-/*  in  a( k, l + 1 ), ..., a( k, n ). The elements of R are returned in */
 /*  the upper triangular part of A1. */
 
 /*  Z is given by */
 
-/*     Z =  Z( 1 ) * Z( 2 ) * ... * Z( m ). */
-
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -128,7 +110,6 @@
 	i__1 = *n;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    tau[i__] = 0.;
-/* L10: */
 	}
 	return 0;
     }
@@ -149,7 +130,6 @@
 	dlarz_("Right", &i__1, &i__2, l, &a[i__ + (*n - *l + 1) * a_dim1], 
 		lda, &tau[i__], &a[i__ * a_dim1 + 1], lda, &work[1]);
 
-/* L20: */
     }
 
     return 0;

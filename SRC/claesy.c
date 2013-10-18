@@ -31,13 +31,8 @@ static integer c__2 = 2;
     complex tmp;
     real babs, tabs, evnorm;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -87,15 +82,6 @@ static integer c__2 = 2;
 /*          for RT1. */
 
 /* ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 
 /*     Special case:  The matrix is actually diagonal. */
 /*     To avoid divide by zero later, we treat this case separately. */

@@ -51,19 +51,11 @@ static logical c_true = TRUE_;
     doublereal smlnum;
     integer lwkopt;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2.1)                        -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd.. */
 /*  -- April 2009                                                      -- */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*     This subroutine is identical to DLAQR3 except that it avoids */
 /*     recursion by calling DLAHQR instead of DLAQR4. */
-
 
 /*     ****************************************************************** */
 /*     Aggressive early deflation: */
@@ -124,7 +116,6 @@ static logical c_true = TRUE_;
 /*     ILOZ    (input) INTEGER */
 /*     IHIZ    (input) INTEGER */
 /*          Specify the rows of Z to which transformations must be */
-/*          applied if WANTZ is .TRUE.. 1 .LE. ILOZ .LE. IHIZ .LE. N. */
 
 /*     Z       (input/output) DOUBLE PRECISION array, dimension (LDZ,N) */
 /*          IF WANTZ is .TRUE., then on output, the orthogonal */
@@ -202,17 +193,6 @@ static logical c_true = TRUE_;
 /*        University of Kansas, USA */
 
 /*     ================================================================ */
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     ==== Estimate optimal workspace. ==== */
 
@@ -270,15 +250,12 @@ static logical c_true = TRUE_;
 	return 0;
     }
 
-/*     ==== Nothing to do ... */
-/*     ... for an empty active block ... ==== */
     *ns = 0;
     *nd = 0;
     work[1] = 1.;
     if (*ktop > *kbot) {
 	return 0;
     }
-/*     ... nor for an empty deflation window. ==== */
     if (*nw < 1) {
 	return 0;
     }
@@ -349,7 +326,6 @@ static logical c_true = TRUE_;
     for (j = 1; j <= i__1; ++j) {
 	t[j + 2 + j * t_dim1] = 0.;
 	t[j + 3 + j * t_dim1] = 0.;
-/* L10: */
     }
     if (jw > 2) {
 	t[jw + (jw - 2) * t_dim1] = 0.;
@@ -603,7 +579,6 @@ L60:
 		    ldwv);
 	    dlacpy_("A", &kln, &jw, &wv[wv_offset], ldwv, &h__[krow + kwtop * 
 		    h_dim1], ldh);
-/* L70: */
 	}
 
 /*        ==== Update horizontal slab in H ==== */
@@ -621,7 +596,6 @@ L60:
 			 ldt);
 		dlacpy_("A", &jw, &kln, &t[t_offset], ldt, &h__[kwtop + kcol *
 			 h_dim1], ldh);
-/* L80: */
 	    }
 	}
 
@@ -640,16 +614,12 @@ L60:
 			wv_offset], ldwv);
 		dlacpy_("A", &kln, &jw, &wv[wv_offset], ldwv, &z__[krow + 
 			kwtop * z_dim1], ldz);
-/* L90: */
 	    }
 	}
     }
 
-/*     ==== Return the number of deflations ... ==== */
-
     *nd = jw - *ns;
 
-/*     ==== ... and the number of shifts. (Subtracting */
 /*     .    INFQR from the spike length takes care */
 /*     .    of the case of a rare QR failure while */
 /*     .    calculating eigenvalues of the deflation */

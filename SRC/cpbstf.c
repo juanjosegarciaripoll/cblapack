@@ -31,15 +31,8 @@ static real c_b9 = -1.f;
     integer kld;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -128,18 +121,6 @@ static real c_b9 = -1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -209,7 +190,6 @@ static real c_b9 = -1.f;
 	    csscal_(&km, &r__1, &ab[*kd + 1 - km + j * ab_dim1], &c__1);
 	    cher_("Upper", &km, &c_b9, &ab[*kd + 1 - km + j * ab_dim1], &c__1, 
 		     &ab[*kd + 1 + (j - km) * ab_dim1], &kld);
-/* L10: */
 	}
 
 /*        Factorize the updated submatrix A(1:m,1:m) as U**H*U. */
@@ -244,7 +224,6 @@ static real c_b9 = -1.f;
 			 &ab[*kd + 1 + (j + 1) * ab_dim1], &kld);
 		clacgv_(&km, &ab[*kd + (j + 1) * ab_dim1], &kld);
 	    }
-/* L20: */
 	}
     } else {
 
@@ -278,7 +257,6 @@ static real c_b9 = -1.f;
 	    cher_("Lower", &km, &c_b9, &ab[km + 1 + (j - km) * ab_dim1], &kld, 
 		     &ab[(j - km) * ab_dim1 + 1], &kld);
 	    clacgv_(&km, &ab[km + 1 + (j - km) * ab_dim1], &kld);
-/* L30: */
 	}
 
 /*        Factorize the updated submatrix A(1:m,1:m) as U**H*U. */
@@ -311,7 +289,6 @@ static real c_b9 = -1.f;
 		cher_("Lower", &km, &c_b9, &ab[j * ab_dim1 + 2], &c__1, &ab[(
 			j + 1) * ab_dim1 + 1], &kld);
 	    }
-/* L40: */
 	}
     }
     return 0;

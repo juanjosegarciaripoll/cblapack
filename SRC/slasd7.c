@@ -37,15 +37,8 @@ static integer c__1 = 1;
     integer idxjp, jprev;
     real hlftol;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -191,19 +184,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -268,7 +248,6 @@ static integer c__1 = 1;
 	vf[i__ + 1] = vf[i__];
 	d__[i__ + 1] = d__[i__];
 	idxq[i__ + 1] = idxq[i__] + 1;
-/* L10: */
     }
     vf[1] = tau;
 
@@ -278,7 +257,6 @@ static integer c__1 = 1;
     for (i__ = nlp2; i__ <= i__1; ++i__) {
 	z__[i__] = *beta * vf[i__];
 	vf[i__] = 0.f;
-/* L20: */
     }
 
 /*     Sort the singular values into increasing order */
@@ -286,7 +264,6 @@ static integer c__1 = 1;
     i__1 = n;
     for (i__ = nlp2; i__ <= i__1; ++i__) {
 	idxq[i__] += nlp1;
-/* L30: */
     }
 
 /*     DSIGMA, IDXC, IDXC, and ZW are used as storage space. */
@@ -297,7 +274,6 @@ static integer c__1 = 1;
 	zw[i__] = z__[idxq[i__]];
 	vfw[i__] = vf[idxq[i__]];
 	vlw[i__] = vl[idxq[i__]];
-/* L40: */
     }
 
     slamrg_(nl, nr, &dsigma[2], &c__1, &c__1, &idx[2]);
@@ -309,7 +285,6 @@ static integer c__1 = 1;
 	z__[i__] = zw[idxi];
 	vf[i__] = vfw[idxi];
 	vl[i__] = vlw[idxi];
-/* L50: */
     }
 
 /*     Calculate the allowable deflation tolerence */
@@ -358,7 +333,6 @@ static integer c__1 = 1;
 	    jprev = j;
 	    goto L70;
 	}
-/* L60: */
     }
 L70:
     j = jprev;
@@ -445,7 +419,6 @@ L100:
 	dsigma[j] = d__[jp];
 	vfw[j] = vf[jp];
 	vlw[j] = vl[jp];
-/* L110: */
     }
     if (*icompq == 1) {
 	i__1 = n;
@@ -455,7 +428,6 @@ L100:
 	    if (perm[j] <= nlp1) {
 		--perm[j];
 	    }
-/* L120: */
 	}
     }
 

@@ -31,15 +31,8 @@ static real c_b12 = 1.f;
     real ajj;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -89,18 +82,6 @@ static real c_b12 = 1.f;
 /*               completed. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -162,7 +143,6 @@ static real c_b12 = 1.f;
 		r__1 = 1.f / ajj;
 		sscal_(&i__2, &r__1, &a[j + (j + 1) * a_dim1], lda);
 	    }
-/* L10: */
 	}
     } else {
 
@@ -195,7 +175,6 @@ static real c_b12 = 1.f;
 		r__1 = 1.f / ajj;
 		sscal_(&i__2, &r__1, &a[j + 1 + j * a_dim1], &c__1);
 	    }
-/* L20: */
 	}
     }
     goto L40;

@@ -37,15 +37,8 @@ static doublereal c_b13 = 0.;
     logical upper;
     integer kcnext;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -92,18 +85,6 @@ static doublereal c_b13 = 0.;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -143,7 +124,6 @@ static doublereal c_b13 = 0.;
 		return 0;
 	    }
 	    kp -= *info;
-/* L10: */
 	}
     } else {
 
@@ -156,7 +136,6 @@ static doublereal c_b13 = 0.;
 		return 0;
 	    }
 	    kp = kp + *n - *info + 1;
-/* L20: */
 	}
     }
     *info = 0;
@@ -258,7 +237,6 @@ L30:
 		temp = ap[kc + j - 1];
 		ap[kc + j - 1] = ap[kx];
 		ap[kx] = temp;
-/* L40: */
 	    }
 	    temp = ap[kc + k - 1];
 	    ap[kc + k - 1] = ap[kpc + kp - 1];
@@ -375,7 +353,6 @@ L60:
 		temp = ap[kc + j - k];
 		ap[kc + j - k] = ap[kx];
 		ap[kx] = temp;
-/* L70: */
 	    }
 	    temp = ap[kc];
 	    ap[kc] = ap[kpc];

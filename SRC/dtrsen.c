@@ -42,15 +42,8 @@ static integer c_n1 = -1;
     integer liwmin;
     logical wantsp, lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -88,7 +81,6 @@ static integer c_n1 = -1;
 /*  SELECT  (input) LOGICAL array, dimension (N) */
 /*          SELECT specifies the eigenvalues in the selected cluster. To */
 /*          select a real eigenvalue w(j), SELECT(j) must be set to */
-/*          .TRUE.. To select a complex conjugate pair of eigenvalues */
 /*          w(j) and w(j+1), corresponding to a 2-by-2 diagonal block, */
 /*          either SELECT(j) or SELECT(j+1) or both must be set to */
 /*          .TRUE.; a complex conjugate pair of eigenvalues must be */
@@ -256,20 +248,6 @@ static integer c_n1 = -1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Decode and test the input parameters */
 
     /* Parameter adjustments */
@@ -332,7 +310,6 @@ static integer c_n1 = -1;
 		    }
 		}
 	    }
-/* L10: */
 	}
 
 	n1 = *m;
@@ -429,7 +406,6 @@ static integer c_n1 = -1;
 		}
 	    }
 	}
-/* L20: */
     }
 
     if (wants) {
@@ -491,7 +467,6 @@ L40:
     for (k = 1; k <= i__1; ++k) {
 	wr[k] = t[k + k * t_dim1];
 	wi[k] = 0.;
-/* L50: */
     }
     i__1 = *n - 1;
     for (k = 1; k <= i__1; ++k) {
@@ -500,7 +475,6 @@ L40:
 		    d__2 = t[k + 1 + k * t_dim1], abs(d__2)));
 	    wi[k + 1] = -wi[k];
 	}
-/* L60: */
     }
 
     work[1] = (doublereal) lwmin;

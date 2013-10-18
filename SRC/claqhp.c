@@ -26,15 +26,8 @@
     real cj, large;
     real small;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -92,16 +85,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -143,14 +126,12 @@
 		    i__4 = jc + i__ - 1;
 		    q__1.r = r__1 * ap[i__4].r, q__1.i = r__1 * ap[i__4].i;
 		    ap[i__3].r = q__1.r, ap[i__3].i = q__1.i;
-/* L10: */
 		}
 		i__2 = jc + j - 1;
 		i__3 = jc + j - 1;
 		r__1 = cj * cj * ap[i__3].r;
 		ap[i__2].r = r__1, ap[i__2].i = 0.f;
 		jc += j;
-/* L20: */
 	    }
 	} else {
 
@@ -171,10 +152,8 @@
 		    i__4 = jc + i__ - j;
 		    q__1.r = r__1 * ap[i__4].r, q__1.i = r__1 * ap[i__4].i;
 		    ap[i__3].r = q__1.r, ap[i__3].i = q__1.i;
-/* L30: */
 		}
 		jc = jc + *n - j + 1;
-/* L40: */
 	    }
 	}
 	*(unsigned char *)equed = 'Y';

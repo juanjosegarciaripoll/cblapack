@@ -54,15 +54,8 @@ static logical c_true = TRUE_;
     logical rightv;
     doublereal smlnum;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -106,12 +99,10 @@ static logical c_true = TRUE_;
 /*          If HOWMNY = 'S', SELECT specifies the eigenvectors to be */
 /*          computed. */
 /*          If w(j) is a real eigenvalue, the corresponding real */
-/*          eigenvector is computed if SELECT(j) is .TRUE.. */
 /*          If w(j) and w(j+1) are the real and imaginary parts of a */
 /*          complex eigenvalue, the corresponding complex eigenvector is */
 /*          computed if either SELECT(j) or SELECT(j+1) is .TRUE., and */
 /*          on exit SELECT(j) is set to .TRUE. and SELECT(j+1) is set to */
-/*          .FALSE.. */
 /*          Not referenced if HOWMNY = 'A' or 'B'. */
 
 /*  N       (input) INTEGER */
@@ -192,20 +183,6 @@ static logical c_true = TRUE_;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Decode and test the input parameters */
 
     /* Parameter adjustments */
@@ -276,7 +253,6 @@ static logical c_true = TRUE_;
 			}
 		    }
 		}
-/* L10: */
 	    }
 	} else {
 	    *m = *n;
@@ -317,9 +293,7 @@ static logical c_true = TRUE_;
 	i__2 = j - 1;
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    work[j] += (d__1 = t[i__ + j * t_dim1], abs(d__1));
-/* L20: */
 	}
-/* L30: */
     }
 
 /*     Index IP is used to specify the real or complex eigenvalue: */
@@ -384,7 +358,6 @@ L40:
 		i__1 = ki - 1;
 		for (k = 1; k <= i__1; ++k) {
 		    work[k + *n] = -t[k + ki * t_dim1];
-/* L50: */
 		}
 
 /*              Solve the upper quasi-triangular system: */
@@ -497,7 +470,6 @@ L60:
 		    i__1 = *n;
 		    for (k = ki + 1; k <= i__1; ++k) {
 			vr[k + is * vr_dim1] = 0.;
-/* L70: */
 		    }
 		} else {
 		    if (ki > 1) {
@@ -538,7 +510,6 @@ L60:
 		    work[k + *n] = -work[ki - 1 + *n] * t[k + (ki - 1) * 
 			    t_dim1];
 		    work[k + n2] = -work[ki + n2] * t[k + ki * t_dim1];
-/* L80: */
 		}
 
 /*              Solve upper quasi-triangular system: */
@@ -675,7 +646,6 @@ L90:
 				, abs(d__1)) + (d__2 = vr[k + is * vr_dim1], 
 				abs(d__2));
 			emax = max(d__3,d__4);
-/* L100: */
 		    }
 
 		    remax = 1. / emax;
@@ -686,7 +656,6 @@ L90:
 		    for (k = ki + 1; k <= i__1; ++k) {
 			vr[k + (is - 1) * vr_dim1] = 0.;
 			vr[k + is * vr_dim1] = 0.;
-/* L110: */
 		    }
 
 		} else {
@@ -715,7 +684,6 @@ L90:
 				, abs(d__1)) + (d__2 = vr[k + ki * vr_dim1], 
 				abs(d__2));
 			emax = max(d__3,d__4);
-/* L120: */
 		    }
 		    remax = 1. / emax;
 		    dscal_(n, &remax, &vr[(ki - 1) * vr_dim1 + 1], &c__1);
@@ -734,7 +702,6 @@ L130:
 	    if (ip == -1) {
 		ip = 1;
 	    }
-/* L140: */
 	}
     }
 
@@ -788,7 +755,6 @@ L150:
 		i__2 = *n;
 		for (k = ki + 1; k <= i__2; ++k) {
 		    work[k + *n] = -t[ki + k * t_dim1];
-/* L160: */
 		}
 
 /*              Solve the quasi-triangular system: */
@@ -924,7 +890,6 @@ L170:
 		    i__2 = ki - 1;
 		    for (k = 1; k <= i__2; ++k) {
 			vl[k + is * vl_dim1] = 0.;
-/* L180: */
 		    }
 
 		} else {
@@ -968,7 +933,6 @@ L170:
 		    work[k + *n] = -work[ki + *n] * t[ki + k * t_dim1];
 		    work[k + n2] = -work[ki + 1 + n2] * t[ki + 1 + k * t_dim1]
 			    ;
-/* L190: */
 		}
 
 /*              Solve complex quasi-triangular system: */
@@ -1130,7 +1094,6 @@ L200:
 				d__1)) + (d__2 = vl[k + (is + 1) * vl_dim1], 
 				abs(d__2));
 			emax = max(d__3,d__4);
-/* L220: */
 		    }
 		    remax = 1. / emax;
 		    i__2 = *n - ki + 1;
@@ -1143,7 +1106,6 @@ L200:
 		    for (k = 1; k <= i__2; ++k) {
 			vl[k + is * vl_dim1] = 0.;
 			vl[k + (is + 1) * vl_dim1] = 0.;
-/* L230: */
 		    }
 		} else {
 		    if (ki < *n - 1) {
@@ -1171,7 +1133,6 @@ L200:
 				d__1)) + (d__2 = vl[k + (ki + 1) * vl_dim1], 
 				abs(d__2));
 			emax = max(d__3,d__4);
-/* L240: */
 		    }
 		    remax = 1. / emax;
 		    dscal_(n, &remax, &vl[ki * vl_dim1 + 1], &c__1);
@@ -1193,7 +1154,6 @@ L250:
 		ip = -1;
 	    }
 
-/* L260: */
 	}
 
     }

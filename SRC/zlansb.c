@@ -29,15 +29,8 @@ doublereal zlansb_(char *norm, char *uplo, integer *n, integer *k,
     doublereal sum, absa, scale;
     doublereal value;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -101,18 +94,6 @@ doublereal zlansb_(char *norm, char *uplo, integer *n, integer *k,
 
 /* ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     ab_dim1 = *ldab;
     ab_offset = 1 + ab_dim1;
@@ -137,9 +118,7 @@ doublereal zlansb_(char *norm, char *uplo, integer *n, integer *k,
 /* Computing MAX */
 		    d__1 = value, d__2 = z_abs(&ab[i__ + j * ab_dim1]);
 		    value = max(d__1,d__2);
-/* L10: */
 		}
-/* L20: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -151,9 +130,7 @@ doublereal zlansb_(char *norm, char *uplo, integer *n, integer *k,
 /* Computing MAX */
 		    d__1 = value, d__2 = z_abs(&ab[i__ + j * ab_dim1]);
 		    value = max(d__1,d__2);
-/* L30: */
 		}
-/* L40: */
 	    }
 	}
     } else if (lsame_(norm, "I") || lsame_(norm, "O") || *(unsigned char *)norm == '1') {
@@ -173,23 +150,19 @@ doublereal zlansb_(char *norm, char *uplo, integer *n, integer *k,
 		    absa = z_abs(&ab[l + i__ + j * ab_dim1]);
 		    sum += absa;
 		    work[i__] += absa;
-/* L50: */
 		}
 		work[j] = sum + z_abs(&ab[*k + 1 + j * ab_dim1]);
-/* L60: */
 	    }
 	    i__1 = *n;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 /* Computing MAX */
 		d__1 = value, d__2 = work[i__];
 		value = max(d__1,d__2);
-/* L70: */
 	    }
 	} else {
 	    i__1 = *n;
 	    for (i__ = 1; i__ <= i__1; ++i__) {
 		work[i__] = 0.;
-/* L80: */
 	    }
 	    i__1 = *n;
 	    for (j = 1; j <= i__1; ++j) {
@@ -202,10 +175,8 @@ doublereal zlansb_(char *norm, char *uplo, integer *n, integer *k,
 		    absa = z_abs(&ab[l + i__ + j * ab_dim1]);
 		    sum += absa;
 		    work[i__] += absa;
-/* L90: */
 		}
 		value = max(value,sum);
-/* L100: */
 	    }
 	}
     } else if (lsame_(norm, "F") || lsame_(norm, "E")) {
@@ -225,7 +196,6 @@ doublereal zlansb_(char *norm, char *uplo, integer *n, integer *k,
 		    i__2 = *k + 2 - j;
 		    zlassq_(&i__4, &ab[max(i__2, 1)+ j * ab_dim1], &c__1, &
 			    scale, &sum);
-/* L110: */
 		}
 		l = *k + 1;
 	    } else {
@@ -235,7 +205,6 @@ doublereal zlansb_(char *norm, char *uplo, integer *n, integer *k,
 		    i__3 = *n - j;
 		    i__4 = min(i__3,*k);
 		    zlassq_(&i__4, &ab[j * ab_dim1 + 2], &c__1, &scale, &sum);
-/* L120: */
 		}
 		l = 1;
 	    }

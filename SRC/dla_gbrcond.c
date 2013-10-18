@@ -34,7 +34,6 @@ doublereal dla_gbrcond__(char *trans, integer *n, integer *kl, integer *ku,
     doublereal ainvnm;
     logical notrans;
 
-
 /*     -- LAPACK routine (version 3.2.1)                               -- */
 /*     -- Contributed by James Demmel, Deaglan Halligan, Yozo Hida and -- */
 /*     -- Jason Riedy of Univ. of California Berkeley.                 -- */
@@ -42,12 +41,6 @@ doublereal dla_gbrcond__(char *trans, integer *n, integer *kl, integer *ku,
 
 /*     -- LAPACK is a software package provided by Univ. of Tennessee, -- */
 /*     -- Univ. of California Berkeley and NAG Ltd.                    -- */
-
-/*     .. */
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -125,18 +118,6 @@ doublereal dla_gbrcond__(char *trans, integer *n, integer *kl, integer *ku,
 /*     Workspace. */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     ab_dim1 = *ldab;

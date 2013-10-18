@@ -18,13 +18,8 @@ logical dlaisnan_(doublereal *din1, doublereal *din2)
     /* System generated locals */
     logical ret_val;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -52,7 +47,6 @@ logical dlaisnan_(doublereal *din1, doublereal *din2)
 
 /*  ===================================================================== */
 
-/*  .. Executable Statements .. */
     ret_val = *din1 != *din2;
     return ret_val;
 } /* dlaisnan_ */

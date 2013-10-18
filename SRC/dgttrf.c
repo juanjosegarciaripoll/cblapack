@@ -24,15 +24,8 @@
     integer i__;
     doublereal fact, temp;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -92,16 +85,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --ipiv;
     --du2;
@@ -129,12 +112,10 @@
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	ipiv[i__] = i__;
-/* L10: */
     }
     i__1 = *n - 2;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	du2[i__] = 0.;
-/* L20: */
     }
 
     i__1 = *n - 2;
@@ -162,7 +143,6 @@
 	    du[i__ + 1] = -fact * du[i__ + 1];
 	    ipiv[i__] = i__ + 1;
 	}
-/* L30: */
     }
     if (*n > 1) {
 	i__ = *n - 1;
@@ -191,7 +171,6 @@
 	    *info = i__;
 	    goto L50;
 	}
-/* L40: */
     }
 L50:
 

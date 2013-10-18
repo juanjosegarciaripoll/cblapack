@@ -23,12 +23,8 @@ integer iparmq_(integer *ispec, char *name__, char *opts, integer *n, integer
     /* Local variables */
     integer nh, ns;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
 
 /*  Purpose */
 /*  ======= */
@@ -123,7 +119,6 @@ integer iparmq_(integer *ispec, char *name__, char *opts, integer *n, integer
 /*       times during the iteration, but this has not been */
 /*       implemented --- yet. */
 
-
 /*       The best choices of most of the parameters depend */
 /*       in an ill-understood way on the relative execution */
 /*       rate of xLAQR3 and xLAQR5 and on the nature of each */
@@ -150,11 +145,6 @@ integer iparmq_(integer *ispec, char *name__, char *opts, integer *n, integer
 /*       IPARMQ(ISPEC=15) Number of simultaneous shifts, NS. */
 /*                        a multi-shift QR iteration. */
 
-/*                        If IHI-ILO+1 is ... */
-
-/*                        greater than      ...but less    ... the */
-/*                        or equal to ...      than        default is */
-
 /*                                0               30       NS =   2+ */
 /*                               30               60       NS =   4+ */
 /*                               60              150       NS =  10 */
@@ -177,13 +167,6 @@ integer iparmq_(integer *ispec, char *name__, char *opts, integer *n, integer
 /*                        Default: 3. */
 
 /*     ================================================================ */
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
     if (*ispec == 15 || *ispec == 13 || *ispec == 16) {
 
 /*        ==== Set the number simultaneous shifts ==== */
@@ -217,7 +200,6 @@ integer iparmq_(integer *ispec, char *name__, char *opts, integer *n, integer
     }
 
     if (*ispec == 12) {
-
 
 /*        ===== Matrices of order smaller than NMIN get sent */
 /*        .     to xLAHQR, the classic double shift algorithm. */

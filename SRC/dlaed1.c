@@ -31,15 +31,8 @@ static integer c_n1 = -1;
     integer idlmda;
     integer coltyp;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -127,14 +120,6 @@ static integer c_n1 = -1;
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -186,7 +171,6 @@ static integer c_n1 = -1;
     coltyp = indxc + *n;
     indxp = coltyp + *n;
 
-
 /*     Form the z-vector which consists of the last row of Q_1 and the */
 /*     first row of Q_2. */
 
@@ -226,7 +210,6 @@ static integer c_n1 = -1;
 	i__1 = *n;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    indxq[i__] = i__;
-/* L10: */
 	}
     }
 

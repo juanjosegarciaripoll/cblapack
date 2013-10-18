@@ -42,15 +42,8 @@ static integer c_n1 = -1;
     integer blksiz;
     doublereal onenrm, dtpcrt, pertol;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -66,7 +59,6 @@ static integer c_n1 = -1;
 /*  array, which may be passed to ZUNMTR or ZUPMTR for back */
 /*  transformation to the eigenvectors of a complex Hermitian matrix */
 /*  which was reduced to tridiagonal form. */
-
 
 /*  Arguments */
 /*  ========= */
@@ -144,20 +136,6 @@ static integer c_n1 = -1;
 
 /* ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -178,7 +156,6 @@ static integer c_n1 = -1;
     i__1 = *m;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	ifail[i__] = 0;
-/* L10: */
     }
 
     if (*n < 0) {
@@ -198,7 +175,6 @@ static integer c_n1 = -1;
 		*info = -5;
 		goto L30;
 	    }
-/* L20: */
 	}
 L30:
 	;
@@ -228,7 +204,6 @@ L30:
 
     for (i__ = 1; i__ <= 4; ++i__) {
 	iseed[i__ - 1] = 1;
-/* L40: */
     }
 
 /*     Initialize pointers. */
@@ -272,7 +247,6 @@ L30:
 	    d__4 = onenrm, d__5 = (d__1 = d__[i__], abs(d__1)) + (d__2 = e[
 		    i__ - 1], abs(d__2)) + (d__3 = e[i__], abs(d__3));
 	    onenrm = max(d__4,d__5);
-/* L50: */
 	}
 	ortol = onenrm * .001;
 
@@ -370,15 +344,12 @@ L70:
 		    for (jr = 1; jr <= i__4; ++jr) {
 			i__5 = b1 - 1 + jr + i__ * z_dim1;
 			ztr += work[indrv1 + jr] * z__[i__5].r;
-/* L80: */
 		    }
 		    i__4 = blksiz;
 		    for (jr = 1; jr <= i__4; ++jr) {
 			i__5 = b1 - 1 + jr + i__ * z_dim1;
 			work[indrv1 + jr] -= ztr * z__[i__5].r;
-/* L90: */
 		    }
-/* L100: */
 		}
 	    }
 
@@ -422,7 +393,6 @@ L140:
 	    for (i__ = 1; i__ <= i__3; ++i__) {
 		i__4 = i__ + j * z_dim1;
 		z__[i__4].r = 0., z__[i__4].i = 0.;
-/* L150: */
 	    }
 	    i__3 = blksiz;
 	    for (i__ = 1; i__ <= i__3; ++i__) {
@@ -430,7 +400,6 @@ L140:
 		i__5 = indrv1 + i__;
 		z__1.r = work[i__5], z__1.i = 0.;
 		z__[i__4].r = z__1.r, z__[i__4].i = z__1.i;
-/* L160: */
 	    }
 
 /*           Save the shift to check eigenvalue spacing at next */
@@ -438,7 +407,6 @@ L140:
 
 	    xjm = xj;
 
-/* L170: */
 	}
 L180:
 	;

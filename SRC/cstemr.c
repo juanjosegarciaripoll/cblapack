@@ -64,15 +64,8 @@ static real c_b18 = .003f;
     real smlnum;
     logical lquery, zquery;
 
-
 /*  -- LAPACK computational routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -134,7 +127,6 @@ static real c_b18 = .003f;
 /*  (Any complex Hermitean tridiagonal matrix has real values on its diagonal */
 /*  and potentially complex numbers on its off-diagonals. By applying a */
 /*  similarity transform with an appropriate diagonal matrix */
-/*  diag(1,e^{i \phy_1}, ... , e^{i \phy_{n-1}}), the complex Hermitean */
 /*  matrix can be transformed into a real symmetric matrix and complex */
 /*  arithmetic can be entirely avoided.) */
 
@@ -226,13 +218,11 @@ static real c_b18 = .003f;
 /*          is split. ISUPPZ is only accessed when JOBZ is 'V' and N > 0. */
 
 /*  TRYRAC  (input/output) LOGICAL */
-/*          If TRYRAC.EQ..TRUE., indicates that the code should check whether */
 /*          the tridiagonal matrix defines its eigenvalues to high relative */
 /*          accuracy.  If so, the code uses relative-accuracy preserving */
 /*          algorithms that might be (a bit) slower depending on the matrix. */
 /*          If the matrix does not define its eigenvalues to high relative */
 /*          accuracy, the code can uses possibly faster algorithms. */
-/*          If TRYRAC.EQ..FALSE., the code is not required to guarantee */
 /*          relatively accurate eigenvalues and can use the fastest possible */
 /*          techniques. */
 /*          On exit, a .TRUE. TRYRAC will be set to .FALSE. if the matrix */
@@ -272,7 +262,6 @@ static real c_b18 = .003f;
 /*                the nonzero error code returned by SLARRE or */
 /*                CLARRV, respectively. */
 
-
 /*  Further Details */
 /*  =============== */
 
@@ -284,19 +273,6 @@ static real c_b18 = .003f;
 /*     Christof Voemel, University of California, Berkeley, USA */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -564,7 +540,6 @@ static real c_b18 = .003f;
 /* Computing 2nd power */
 	r__1 = e[j];
 	work[inde2 + j - 1] = r__1 * r__1;
-/* L5: */
     }
 /*     Set the tolerance parameters for bisection */
     if (! wantz) {
@@ -618,7 +593,6 @@ static real c_b18 = .003f;
 	for (j = 1; j <= i__1; ++j) {
 	    itmp = iwork[iindbl + j - 1];
 	    w[j] += e[iwork[iinspl + itmp - 1]];
-/* L20: */
 	}
     }
 
@@ -687,7 +661,6 @@ L39:
 			i__ = jj;
 			tmp = w[jj];
 		    }
-/* L50: */
 		}
 		if (i__ != 0) {
 		    w[i__] = w[j];
@@ -703,11 +676,9 @@ L39:
 			isuppz[j * 2] = itmp;
 		    }
 		}
-/* L60: */
 	    }
 	}
     }
-
 
     work[1] = (real) lwmin;
     iwork[1] = liwmin;

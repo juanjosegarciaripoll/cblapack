@@ -41,15 +41,8 @@ static integer c__0 = 0;
     real smlnum;
     logical lquery;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -152,20 +145,6 @@ static integer c__0 = 0;
 /*                computed. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments. */
 
@@ -379,9 +358,7 @@ static integer c__0 = 0;
 		for (i__ = *n + 1; i__ <= i__2; ++i__) {
 		    i__3 = i__ + j * b_dim1;
 		    b[i__3].r = 0.f, b[i__3].i = 0.f;
-/* L10: */
 		}
-/* L20: */
 	    }
 
 /*           B(1:M,1:NRHS) := Q(1:N,:) * B(1:N,1:NRHS) */
@@ -427,9 +404,7 @@ static integer c__0 = 0;
 		for (i__ = *m + 1; i__ <= i__2; ++i__) {
 		    i__3 = i__ + j * b_dim1;
 		    b[i__3].r = 0.f, b[i__3].i = 0.f;
-/* L30: */
 		}
-/* L40: */
 	    }
 
 /*           B(1:N,1:NRHS) := Q(1:N,:)' * B(1:M,1:NRHS) */

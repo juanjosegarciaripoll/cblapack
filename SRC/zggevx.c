@@ -63,15 +63,8 @@ static integer c__0 = 0;
     doublereal smlnum;
     logical lquery, wantsv;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -99,7 +92,6 @@ static integer c__0 = 0;
 /*  of (A,B) satisfies */
 /*                   u(j)**H * A  = lambda(j) * u(j)**H * B. */
 /*  where u(j)**H is the conjugate-transpose of u(j). */
-
 
 /*  Arguments */
 /*  ========= */
@@ -153,7 +145,6 @@ static integer c__0 = 0;
 
 /*  ALPHA   (output) COMPLEX*16 array, dimension (N) */
 /*  BETA    (output) COMPLEX*16 array, dimension (N) */
-/*          On exit, ALPHA(j)/BETA(j), j=1,...,N, will be the generalized */
 /*          eigenvalues. */
 
 /*          Note: the quotient ALPHA(j)/BETA(j) ) may easily over- or */
@@ -191,7 +182,6 @@ static integer c__0 = 0;
 /*  IHI     (output) INTEGER */
 /*          ILO and IHI are integer values such that on exit */
 /*          A(i,j) = 0 and B(i,j) = 0 if i > j and */
-/*          j = 1,...,ILO-1 or i = IHI+1,...,N. */
 /*          If BALANC = 'N' or 'S', ILO = 1 and IHI = N. */
 
 /*  LSCALE  (output) DOUBLE PRECISION array, dimension (N) */
@@ -199,9 +189,6 @@ static integer c__0 = 0;
 /*          to the left side of A and B.  If PL(j) is the index of the */
 /*          row interchanged with row j, and DL(j) is the scaling */
 /*          factor applied to row j, then */
-/*            LSCALE(j) = PL(j)  for j = 1,...,ILO-1 */
-/*                      = DL(j)  for j = ILO,...,IHI */
-/*                      = PL(j)  for j = IHI+1,...,N. */
 /*          The order in which the interchanges are made is N to IHI+1, */
 /*          then 1 to ILO-1. */
 
@@ -210,9 +197,6 @@ static integer c__0 = 0;
 /*          to the right side of A and B.  If PR(j) is the index of the */
 /*          column interchanged with column j, and DR(j) is the scaling */
 /*          factor applied to column j, then */
-/*            RSCALE(j) = PR(j)  for j = 1,...,ILO-1 */
-/*                      = DR(j)  for j = ILO,...,IHI */
-/*                      = PR(j)  for j = IHI+1,...,N */
 /*          The order in which the interchanges are made is N to IHI+1, */
 /*          then 1 to ILO-1. */
 
@@ -262,10 +246,8 @@ static integer c__0 = 0;
 /*  INFO    (output) INTEGER */
 /*          = 0:  successful exit */
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value. */
-/*          = 1,...,N: */
 /*                The QZ iteration failed.  No eigenvectors have been */
 /*                calculated, but ALPHA(j) and BETA(j) should be correct */
-/*                for j=INFO+1,...,N. */
 /*          > N:  =N+1: other than QZ iteration failed in ZHGEQZ. */
 /*                =N+2: error return from ZTGEVC. */
 
@@ -294,24 +276,6 @@ static integer c__0 = 0;
 
 /*  For further explanation of the reciprocal condition numbers RCONDE */
 /*  and RCONDV, see section 4.11 of LAPACK User's Guide. */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode the input arguments */
 
@@ -644,7 +608,6 @@ static integer c__0 = 0;
 		i__2 = *n;
 		for (j = 1; j <= i__2; ++j) {
 		    bwork[j] = FALSE_;
-/* L10: */
 		}
 		bwork[i__] = TRUE_;
 
@@ -667,7 +630,6 @@ static integer c__0 = 0;
 			i__], &rcondv[i__], &c__1, &m, &work[iwrk1], &i__2, &
 			iwork[1], &ierr);
 
-/* L20: */
 	    }
 	}
     }
@@ -689,7 +651,6 @@ static integer c__0 = 0;
 		d__3 = temp, d__4 = (d__1 = vl[i__3].r, abs(d__1)) + (d__2 = 
 			d_imag(&vl[jr + jc * vl_dim1]), abs(d__2));
 		temp = max(d__3,d__4);
-/* L30: */
 	    }
 	    if (temp < smlnum) {
 		goto L50;
@@ -701,7 +662,6 @@ static integer c__0 = 0;
 		i__4 = jr + jc * vl_dim1;
 		z__1.r = temp * vl[i__4].r, z__1.i = temp * vl[i__4].i;
 		vl[i__3].r = z__1.r, vl[i__3].i = z__1.i;
-/* L40: */
 	    }
 L50:
 	    ;
@@ -721,7 +681,6 @@ L50:
 		d__3 = temp, d__4 = (d__1 = vr[i__3].r, abs(d__1)) + (d__2 = 
 			d_imag(&vr[jr + jc * vr_dim1]), abs(d__2));
 		temp = max(d__3,d__4);
-/* L60: */
 	    }
 	    if (temp < smlnum) {
 		goto L80;
@@ -733,7 +692,6 @@ L50:
 		i__4 = jr + jc * vr_dim1;
 		z__1.r = temp * vr[i__4].r, z__1.i = temp * vr[i__4].i;
 		vr[i__3].r = z__1.r, vr[i__3].i = z__1.i;
-/* L70: */
 	    }
 L80:
 	    ;

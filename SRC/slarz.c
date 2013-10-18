@@ -28,15 +28,8 @@ static real c_b5 = 1.f;
 
     /* Local variables */
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -50,7 +43,6 @@ static real c_b5 = 1.f;
 /*  where tau is a real scalar and v is a real vector. */
 
 /*  If tau = 0, then H is taken to be the unit matrix. */
-
 
 /*  H is a product of k elementary reflectors as returned by STZRZF. */
 
@@ -102,14 +94,6 @@ static real c_b5 = 1.f;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --v;
     c_dim1 = *ldc;
@@ -138,7 +122,6 @@ static real c_b5 = 1.f;
 	    r__1 = -(*tau);
 	    saxpy_(n, &r__1, &work[1], &c__1, &c__[c_offset], ldc);
 
-/*           C( m-l+1:m, 1:n ) = C( m-l+1:m, 1:n ) - ... */
 /*                               tau * v( 1:l ) * w( 1:n )' */
 
 	    r__1 = -(*tau);
@@ -166,7 +149,6 @@ static real c_b5 = 1.f;
 	    r__1 = -(*tau);
 	    saxpy_(m, &r__1, &work[1], &c__1, &c__[c_offset], &c__1);
 
-/*           C( 1:m, n-l+1:n ) = C( 1:m, n-l+1:n ) - ... */
 /*                               tau * w( 1:m ) * v( 1:l )' */
 
 	    r__1 = -(*tau);

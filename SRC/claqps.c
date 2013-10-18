@@ -37,16 +37,9 @@ static integer c__1 = 1;
     integer lsticc;
     integer lastrk;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -128,18 +121,6 @@ static integer c__1 = 1;
 /*  For more details see LAPACK Working Note 176. */
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     a_dim1 = *lda;
     a_offset = 1 + a_dim1;
@@ -192,7 +173,6 @@ L10:
 		i__2 = k + j * f_dim1;
 		r_cnjg(&q__1, &f[k + j * f_dim1]);
 		f[i__2].r = q__1.r, f[i__2].i = q__1.i;
-/* L20: */
 	    }
 	    i__1 = *m - rk + 1;
 	    i__2 = k - 1;
@@ -204,7 +184,6 @@ L10:
 		i__2 = k + j * f_dim1;
 		r_cnjg(&q__1, &f[k + j * f_dim1]);
 		f[i__2].r = q__1.r, f[i__2].i = q__1.i;
-/* L30: */
 	    }
 	}
 
@@ -242,7 +221,6 @@ L10:
 	for (j = 1; j <= i__1; ++j) {
 	    i__2 = j + k * f_dim1;
 	    f[i__2].r = 0.f, f[i__2].i = 0.f;
-/* L40: */
 	}
 
 /*        Incremental updating of F: */
@@ -297,7 +275,6 @@ L10:
 			vn1[j] *= sqrt(temp);
 		    }
 		}
-/* L50: */
 	    }
 	}
 

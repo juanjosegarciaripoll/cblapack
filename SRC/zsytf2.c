@@ -39,15 +39,8 @@ static integer c__1 = 1;
     doublereal colmax;
     doublereal rowmax;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -123,7 +116,6 @@ static integer c__1 = 1;
 /*         Company */
 
 /*  If UPLO = 'U', then A = U*D*U', where */
-/*     U = P(n)*U(n)* ... *P(k)U(k)* ..., */
 /*  i.e., U is a product of terms P(k)*U(k), where k decreases from n to */
 /*  1 in steps of 1 or 2, and D is a block diagonal matrix with 1-by-1 */
 /*  and 2-by-2 diagonal blocks D(k).  P(k) is a permutation matrix as */
@@ -140,7 +132,6 @@ static integer c__1 = 1;
 /*  and A(k,k), and v overwrites A(1:k-2,k-1:k). */
 
 /*  If UPLO = 'L', then A = L*D*L', where */
-/*     L = P(1)*L(1)* ... *P(k)*L(k)* ..., */
 /*  i.e., L is a product of terms P(k)*L(k), where k increases from 1 to */
 /*  n in steps of 1 or 2, and D is a block diagonal matrix with 1-by-1 */
 /*  and 2-by-2 diagonal blocks D(k).  P(k) is a permutation matrix as */
@@ -157,22 +148,6 @@ static integer c__1 = 1;
 /*  and A(k+1,k+1), and v overwrites A(k+2:n,k:k+1). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -423,13 +398,11 @@ L10:
 			    z__1.r = z__2.r - z__4.r, z__1.i = z__2.i - 
 				    z__4.i;
 			    a[i__1].r = z__1.r, a[i__1].i = z__1.i;
-/* L20: */
 			}
 			i__1 = j + k * a_dim1;
 			a[i__1].r = wk.r, a[i__1].i = wk.i;
 			i__1 = j + (k - 1) * a_dim1;
 			a[i__1].r = wkm1.r, a[i__1].i = wkm1.i;
-/* L30: */
 		    }
 
 		}
@@ -677,13 +650,11 @@ L40:
 			    z__1.r = z__2.r - z__4.r, z__1.i = z__2.i - 
 				    z__4.i;
 			    a[i__3].r = z__1.r, a[i__3].i = z__1.i;
-/* L50: */
 			}
 			i__2 = j + k * a_dim1;
 			a[i__2].r = wk.r, a[i__2].i = wk.i;
 			i__2 = j + (k + 1) * a_dim1;
 			a[i__2].r = wkp1.r, a[i__2].i = wkp1.i;
-/* L60: */
 		    }
 		}
 	    }

@@ -40,15 +40,8 @@ static integer c__65 = 65;
     integer ldwork, lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -142,20 +135,6 @@ static integer c__65 = 65;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters */
 
     /* Parameter adjustments */
@@ -198,13 +177,11 @@ static integer c__65 = 65;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	i__2 = i__;
 	tau[i__2].r = 0.f, tau[i__2].i = 0.f;
-/* L10: */
     }
     i__1 = *n - 1;
     for (i__ = max(1,*ihi); i__ <= i__1; ++i__) {
 	i__2 = i__;
 	tau[i__2].r = 0.f, tau[i__2].i = 0.f;
-/* L20: */
     }
 
 /*     Quick return if possible */
@@ -307,7 +284,6 @@ static integer c__65 = 65;
 		q__1.r = -1.f, q__1.i = -0.f;
 		caxpy_(&i__, &q__1, &work[ldwork * j + 1], &c__1, &a[(i__ + j 
 			+ 1) * a_dim1 + 1], &c__1);
-/* L30: */
 	    }
 
 /*           Apply the block reflector H to A(i+1:ihi,i+ib:n) from the */
@@ -319,7 +295,6 @@ static integer c__65 = 65;
 		    i__3, &i__4, &ib, &a[i__ + 1 + i__ * a_dim1], lda, t, &
 		    c__65, &a[i__ + 1 + (i__ + ib) * a_dim1], lda, &work[1], &
 		    ldwork);
-/* L40: */
 	}
     }
 

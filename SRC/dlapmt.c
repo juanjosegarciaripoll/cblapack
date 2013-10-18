@@ -23,28 +23,16 @@
     integer i__, j, ii, in;
     doublereal temp;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
 
 /*  DLAPMT rearranges the columns of the M by N matrix X as specified */
-/*  by the permutation K(1),K(2),...,K(N) of the integers 1,...,N. */
 /*  If FORWRD = .TRUE.,  forward permutation: */
 
-/*       X(*,K(J)) is moved X(*,J) for J = 1,2,...,N. */
-
 /*  If FORWRD = .FALSE., backward permutation: */
-
-/*       X(*,J) is moved to X(*,K(J)) for J = 1,2,...,N. */
 
 /*  Arguments */
 /*  ========= */
@@ -73,10 +61,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     x_dim1 = *ldx;
     x_offset = 1 + x_dim1;
@@ -91,7 +75,6 @@
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	k[i__] = -k[i__];
-/* L10: */
     }
 
     if (*forwrd) {
@@ -119,7 +102,6 @@ L20:
 		temp = x[ii + j * x_dim1];
 		x[ii + j * x_dim1] = x[ii + in * x_dim1];
 		x[ii + in * x_dim1] = temp;
-/* L30: */
 	    }
 
 	    k[in] = -k[in];
@@ -129,7 +111,6 @@ L20:
 
 L40:
 
-/* L50: */
 	    ;
 	}
 
@@ -156,7 +137,6 @@ L60:
 		temp = x[ii + i__ * x_dim1];
 		x[ii + i__ * x_dim1] = x[ii + j * x_dim1];
 		x[ii + j * x_dim1] = temp;
-/* L70: */
 	    }
 
 	    k[j] = -k[j];
@@ -165,7 +145,6 @@ L60:
 
 L80:
 
-/* L90: */
 	    ;
 	}
 

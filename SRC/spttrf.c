@@ -22,15 +22,8 @@
     integer i__, i4;
     real ei;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -67,16 +60,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -110,7 +93,6 @@
 	ei = e[i__];
 	e[i__] = ei / d__[i__];
 	d__[i__ + 1] -= e[i__] * ei;
-/* L10: */
     }
 
     i__1 = *n - 4;
@@ -162,7 +144,6 @@
 	ei = e[i__ + 3];
 	e[i__ + 3] = ei / d__[i__ + 3];
 	d__[i__ + 4] -= e[i__ + 3] * ei;
-/* L20: */
     }
 
 /*     Check d(n) for positive definiteness. */

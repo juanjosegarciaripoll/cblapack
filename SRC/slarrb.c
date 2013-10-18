@@ -31,15 +31,8 @@
     real mnwdth;
     integer olnint, maxitr;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -134,17 +127,6 @@
 /*     Christof Voemel, University of California, Berkeley, USA */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --iwork;
@@ -243,7 +225,6 @@ L50:
 	}
 	work[k - 1] = left;
 	work[k] = right;
-/* L75: */
     }
 
 /*     Do while( NINT.GT.0 ), i.e. there are still unconverged intervals */
@@ -314,7 +295,6 @@ L100:
 	goto L80;
     }
 
-
 /*     At this point, all the intervals have converged */
     i__1 = *ilast;
     for (i__ = *ifirst; i__ <= i__1; ++i__) {
@@ -325,7 +305,6 @@ L100:
 	    w[ii] = (work[k - 1] + work[k]) * .5f;
 	    werr[ii] = work[k] - w[ii];
 	}
-/* L110: */
     }
 
     i__1 = *ilast;
@@ -335,7 +314,6 @@ L100:
 /* Computing MAX */
 	r__1 = 0.f, r__2 = w[ii] - werr[ii] - w[ii - 1] - werr[ii - 1];
 	wgap[ii - 1] = dmax(r__1,r__2);
-/* L111: */
     }
     return 0;
 

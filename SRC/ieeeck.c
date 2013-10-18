@@ -21,13 +21,8 @@ integer ieeeck_(integer *ispec, real *zero, real *one)
     /* Local variables */
     real nan1, nan2, nan3, nan4, nan5, nan6, neginf, posinf, negzro, newzro;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -58,9 +53,6 @@ integer ieeeck_(integer *ispec, real *zero, real *one)
 /*          = 0:  Arithmetic failed to produce the correct answers */
 /*          = 1:  Arithmetic produced the correct answers */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Executable Statements .. */
     ret_val = 1;
 
     posinf = *one / *zero;
@@ -110,9 +102,6 @@ integer ieeeck_(integer *ispec, real *zero, real *one)
 	ret_val = 0;
 	return ret_val;
     }
-
-
-
 
 /*     Return if we were only asked to check infinity arithmetic */
 

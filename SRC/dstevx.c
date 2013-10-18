@@ -49,15 +49,8 @@ static integer c__1 = 1;
     integer nsplit;
     doublereal smlnum;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -173,18 +166,6 @@ static integer c__1 = 1;
 /*                Their indices are stored in array IFAIL. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -323,7 +304,6 @@ static integer c__1 = 1;
 		i__1 = *n;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    ifail[i__] = 0;
-/* L10: */
 		}
 	    }
 	}
@@ -382,7 +362,6 @@ L20:
 		    i__ = jj;
 		    tmp1 = w[jj];
 		}
-/* L30: */
 	    }
 
 	    if (i__ != 0) {
@@ -399,7 +378,6 @@ L20:
 		    ifail[j] = itmp1;
 		}
 	    }
-/* L40: */
 	}
     }
 

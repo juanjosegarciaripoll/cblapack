@@ -30,17 +30,10 @@ static integer c__1 = 1;
     logical upper;
     real ainvnm;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
 
 /*     Modified to call SLACN2 in place of SLACON, 7 Feb 03, SJH. */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -93,20 +86,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -155,7 +134,6 @@ static integer c__1 = 1;
 	    if (ipiv[i__] > 0 && a[i__ + i__ * a_dim1] == 0.f) {
 		return 0;
 	    }
-/* L10: */
 	}
     } else {
 
@@ -166,7 +144,6 @@ static integer c__1 = 1;
 	    if (ipiv[i__] > 0 && a[i__ + i__ * a_dim1] == 0.f) {
 		return 0;
 	    }
-/* L20: */
 	}
     }
 

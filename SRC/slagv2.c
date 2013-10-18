@@ -32,15 +32,8 @@ static integer c__1 = 1;
     real ascale, bscale;
     real safmin;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -69,7 +62,6 @@ static integer c__1 = 1;
 /*     [  0  b22 ]    [ -SNL  CSL ] [  0  b22 ] [  SNR  CSR ] */
 
 /*     where b11 >= b22 > 0. */
-
 
 /*  Arguments */
 /*  ========= */
@@ -116,18 +108,6 @@ static integer c__1 = 1;
 /*     Mark Fahey, Department of Mathematics, Univ. of Kentucky, USA */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     a_dim1 = *lda;

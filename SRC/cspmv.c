@@ -25,15 +25,8 @@
     integer i__, j, k, kk, ix, iy, jx, jy, kx, ky, info;
     complex temp1, temp2;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -113,16 +106,6 @@
 
 /* ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -178,7 +161,6 @@
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    i__2 = i__;
 		    y[i__2].r = 0.f, y[i__2].i = 0.f;
-/* L10: */
 		}
 	    } else {
 		i__1 = *n;
@@ -189,7 +171,6 @@
 			    q__1.i = beta->r * y[i__3].i + beta->i * y[i__3]
 			    .r;
 		    y[i__2].r = q__1.r, y[i__2].i = q__1.i;
-/* L20: */
 		}
 	    }
 	} else {
@@ -200,7 +181,6 @@
 		    i__2 = iy;
 		    y[i__2].r = 0.f, y[i__2].i = 0.f;
 		    iy += *incy;
-/* L30: */
 		}
 	    } else {
 		i__1 = *n;
@@ -212,7 +192,6 @@
 			    .r;
 		    y[i__2].r = q__1.r, y[i__2].i = q__1.i;
 		    iy += *incy;
-/* L40: */
 		}
 	    }
 	}
@@ -252,7 +231,6 @@
 		    q__1.r = temp2.r + q__2.r, q__1.i = temp2.i + q__2.i;
 		    temp2.r = q__1.r, temp2.i = q__1.i;
 		    ++k;
-/* L50: */
 		}
 		i__2 = j;
 		i__3 = j;
@@ -265,7 +243,6 @@
 		q__1.r = q__2.r + q__4.r, q__1.i = q__2.i + q__4.i;
 		y[i__2].r = q__1.r, y[i__2].i = q__1.i;
 		kk += j;
-/* L60: */
 	    }
 	} else {
 	    jx = kx;
@@ -298,7 +275,6 @@
 		    temp2.r = q__1.r, temp2.i = q__1.i;
 		    ix += *incx;
 		    iy += *incy;
-/* L70: */
 		}
 		i__2 = jy;
 		i__3 = jy;
@@ -313,7 +289,6 @@
 		jx += *incx;
 		jy += *incy;
 		kk += j;
-/* L80: */
 	    }
 	}
     } else {
@@ -354,7 +329,6 @@
 		    q__1.r = temp2.r + q__2.r, q__1.i = temp2.i + q__2.i;
 		    temp2.r = q__1.r, temp2.i = q__1.i;
 		    ++k;
-/* L90: */
 		}
 		i__2 = j;
 		i__3 = j;
@@ -363,7 +337,6 @@
 		q__1.r = y[i__3].r + q__2.r, q__1.i = y[i__3].i + q__2.i;
 		y[i__2].r = q__1.r, y[i__2].i = q__1.i;
 		kk += *n - j + 1;
-/* L100: */
 	    }
 	} else {
 	    jx = kx;
@@ -403,7 +376,6 @@
 			    i__4].r;
 		    q__1.r = temp2.r + q__2.r, q__1.i = temp2.i + q__2.i;
 		    temp2.r = q__1.r, temp2.i = q__1.i;
-/* L110: */
 		}
 		i__2 = jy;
 		i__3 = jy;
@@ -414,7 +386,6 @@
 		jx += *incx;
 		jy += *incy;
 		kk += *n - j + 1;
-/* L120: */
 	    }
 	}
     }

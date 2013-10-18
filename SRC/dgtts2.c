@@ -24,15 +24,8 @@
     integer i__, j, ip;
     doublereal temp;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -87,10 +80,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -126,7 +115,6 @@ L10:
 			j * b_dim1];
 		b[i__ + j * b_dim1] = b[ip + j * b_dim1];
 		b[i__ + 1 + j * b_dim1] = temp;
-/* L20: */
 	    }
 
 /*           Solve U*x = b. */
@@ -140,7 +128,6 @@ L10:
 		b[i__ + j * b_dim1] = (b[i__ + j * b_dim1] - du[i__] * b[i__ 
 			+ 1 + j * b_dim1] - du2[i__] * b[i__ + 2 + j * b_dim1]
 			) / d__[i__];
-/* L30: */
 	    }
 	    if (j < *nrhs) {
 		++j;
@@ -163,7 +150,6 @@ L10:
 			b[i__ + 1 + j * b_dim1] = temp - dl[i__] * b[i__ + j *
 				 b_dim1];
 		    }
-/* L40: */
 		}
 
 /*              Solve U*x = b. */
@@ -177,9 +163,7 @@ L10:
 		    b[i__ + j * b_dim1] = (b[i__ + j * b_dim1] - du[i__] * b[
 			    i__ + 1 + j * b_dim1] - du2[i__] * b[i__ + 2 + j *
 			     b_dim1]) / d__[i__];
-/* L50: */
 		}
-/* L60: */
 	    }
 	}
     } else {
@@ -202,7 +186,6 @@ L70:
 		b[i__ + j * b_dim1] = (b[i__ + j * b_dim1] - du[i__ - 1] * b[
 			i__ - 1 + j * b_dim1] - du2[i__ - 2] * b[i__ - 2 + j *
 			 b_dim1]) / d__[i__];
-/* L80: */
 	    }
 
 /*           Solve L'*x = b. */
@@ -213,7 +196,6 @@ L70:
 			;
 		b[i__ + j * b_dim1] = b[ip + j * b_dim1];
 		b[ip + j * b_dim1] = temp;
-/* L90: */
 	    }
 	    if (j < *nrhs) {
 		++j;
@@ -236,7 +218,6 @@ L70:
 		    b[i__ + j * b_dim1] = (b[i__ + j * b_dim1] - du[i__ - 1] *
 			     b[i__ - 1 + j * b_dim1] - du2[i__ - 2] * b[i__ - 
 			    2 + j * b_dim1]) / d__[i__];
-/* L100: */
 		}
 		for (i__ = *n - 1; i__ >= 1; --i__) {
 		    if (ipiv[i__] == i__) {
@@ -248,9 +229,7 @@ L70:
 				i__] * temp;
 			b[i__ + j * b_dim1] = temp;
 		    }
-/* L110: */
 		}
-/* L120: */
 	    }
 	}
     }

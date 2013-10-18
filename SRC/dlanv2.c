@@ -28,13 +28,8 @@ static doublereal c_b4 = 1.;
     doublereal p, z__, aa, bb, cc, dd, cs1, sn1, sab, sac, eps, tau, temp, 
 	    scale, bcmax, bcmis, sigma;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -81,16 +76,6 @@ static doublereal c_b4 = 1.;
 /*  abs(RT1R) >= abs(RT2R). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     eps = dlamch_("P");
     if (*c__ == 0.) {

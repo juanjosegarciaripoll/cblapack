@@ -33,15 +33,8 @@ static doublecomplex c_b10 = {-1.,-0.};
     doublereal smin, xmax;
     doublereal bignum, smlnum;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -92,18 +85,6 @@ static doublecomplex c_b10 = {-1.,-0.};
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Set constants to control overflow */
 
     /* Parameter adjustments */
@@ -138,9 +119,7 @@ static doublecomplex c_b10 = {-1.,-0.};
 		    ipv = ip;
 		    jpv = jp;
 		}
-/* L10: */
 	    }
-/* L20: */
 	}
 	if (i__ == 1) {
 /* Computing MAX */
@@ -176,14 +155,12 @@ static doublecomplex c_b10 = {-1.,-0.};
 	    i__3 = j + i__ * a_dim1;
 	    z_div(&z__1, &a[j + i__ * a_dim1], &a[i__ + i__ * a_dim1]);
 	    a[i__3].r = z__1.r, a[i__3].i = z__1.i;
-/* L30: */
 	}
 	i__2 = *n - i__;
 	i__3 = *n - i__;
 	zgeru_(&i__2, &i__3, &c_b10, &a[i__ + 1 + i__ * a_dim1], &c__1, &a[
 		i__ + (i__ + 1) * a_dim1], lda, &a[i__ + 1 + (i__ + 1) * 
 		a_dim1], lda);
-/* L40: */
     }
 
     if (z_abs(&a[*n + *n * a_dim1]) < smin) {

@@ -34,15 +34,8 @@ static real c_b22 = 1.f;
     logical wantq, wantu, wantv;
     logical forwrd;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -162,7 +155,6 @@ static real c_b22 = 1.f;
 /*          = 0:  successful exit */
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value. */
 
-
 /*  Further Details */
 /*  =============== */
 
@@ -171,18 +163,6 @@ static real c_b22 = 1.f;
 /*  a matrix. It may be replaced by a better rank determination strategy. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters */
 
@@ -248,7 +228,6 @@ static real c_b22 = 1.f;
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	iwork[i__] = 0;
-/* L10: */
     }
     sgeqpf_(p, n, &b[b_offset], ldb, &iwork[1], &tau[1], &work[1], info);
 
@@ -264,7 +243,6 @@ static real c_b22 = 1.f;
 	if ((r__1 = b[i__ + i__ * b_dim1], dabs(r__1)) > *tolb) {
 	    ++(*l);
 	}
-/* L20: */
     }
 
     if (wantv) {
@@ -288,9 +266,7 @@ static real c_b22 = 1.f;
 	i__2 = *l;
 	for (i__ = j + 1; i__ <= i__2; ++i__) {
 	    b[i__ + j * b_dim1] = 0.f;
-/* L30: */
 	}
-/* L40: */
     }
     if (*p > *l) {
 	i__1 = *p - *l;
@@ -333,9 +309,7 @@ static real c_b22 = 1.f;
 	    i__2 = *l;
 	    for (i__ = j - *n + *l + 1; i__ <= i__2; ++i__) {
 		b[i__ + j * b_dim1] = 0.f;
-/* L50: */
 	    }
-/* L60: */
 	}
 
     }
@@ -351,7 +325,6 @@ static real c_b22 = 1.f;
     i__1 = *n - *l;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	iwork[i__] = 0;
-/* L70: */
     }
     i__1 = *n - *l;
     sgeqpf_(m, &i__1, &a[a_offset], lda, &iwork[1], &tau[1], &work[1], info);
@@ -366,7 +339,6 @@ static real c_b22 = 1.f;
 	if ((r__1 = a[i__ + i__ * a_dim1], dabs(r__1)) > *tola) {
 	    ++(*k);
 	}
-/* L80: */
     }
 
 /*     Update A12 := U'*A12, where A12 = A( 1:M, N-L+1:N ) */
@@ -410,9 +382,7 @@ static real c_b22 = 1.f;
 	i__2 = *k;
 	for (i__ = j + 1; i__ <= i__2; ++i__) {
 	    a[i__ + j * a_dim1] = 0.f;
-/* L90: */
 	}
-/* L100: */
     }
     if (*m > *k) {
 	i__1 = *m - *k;
@@ -446,9 +416,7 @@ static real c_b22 = 1.f;
 	    i__2 = *k;
 	    for (i__ = j - *n + *l + *k + 1; i__ <= i__2; ++i__) {
 		a[i__ + j * a_dim1] = 0.f;
-/* L110: */
 	    }
-/* L120: */
 	}
 
     }
@@ -481,9 +449,7 @@ static real c_b22 = 1.f;
 	    i__2 = *m;
 	    for (i__ = j - *n + *k + *l + 1; i__ <= i__2; ++i__) {
 		a[i__ + j * a_dim1] = 0.f;
-/* L130: */
 	    }
-/* L140: */
 	}
 
     }

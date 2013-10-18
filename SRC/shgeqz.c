@@ -65,16 +65,9 @@ static integer c__3 = 3;
     integer icompz, ifirst, ifrstm, istart;
     logical ilpivt, lquery;
 
-
 /*  -- LAPACK routine (version 3.2.1)                                  -- */
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
 /*  -- April 2009                                                      -- */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -249,12 +242,8 @@ static integer c__3 = 3;
 /*  INFO    (output) INTEGER */
 /*          = 0: successful exit */
 /*          < 0: if INFO = -i, the i-th argument had an illegal value */
-/*          = 1,...,N: the QZ iteration did not converge.  (H,T) is not */
 /*                     in Schur form, but ALPHAR(i), ALPHAI(i), and */
-/*                     BETA(i), i=INFO+1,...,N should be correct. */
-/*          = N+1,...,2*N: the shift calculation failed.  (H,T) is not */
 /*                     in Schur form, but ALPHAR(i), ALPHAI(i), and */
-/*                     BETA(i), i=INFO-N+1,...,N should be correct. */
 
 /*  Further Details */
 /*  =============== */
@@ -268,20 +257,7 @@ static integer c__3 = 3;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
 /*    $                     SAFETY = 1.0E+0 ) */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode JOB, COMPQ, COMPZ */
 
@@ -419,7 +395,6 @@ static integer c__3 = 3;
 		for (jr = 1; jr <= i__2; ++jr) {
 		    h__[jr + j * h_dim1] = -h__[jr + j * h_dim1];
 		    t[jr + j * t_dim1] = -t[jr + j * t_dim1];
-/* L10: */
 		}
 	    } else {
 		h__[j + j * h_dim1] = -h__[j + j * h_dim1];
@@ -429,14 +404,12 @@ static integer c__3 = 3;
 		i__2 = *n;
 		for (jr = 1; jr <= i__2; ++jr) {
 		    z__[jr + j * z_dim1] = -z__[jr + j * z_dim1];
-/* L20: */
 		}
 	    }
 	}
 	alphar[j] = h__[j + j * h_dim1];
 	alphai[j] = 0.f;
 	beta[j] = t[j + j * t_dim1];
-/* L30: */
     }
 
 /*     If IHI < ILO, skip QZ steps */
@@ -577,7 +550,6 @@ static integer c__3 = 3;
 			    }
 			}
 			t[jch + 1 + (jch + 1) * t_dim1] = 0.f;
-/* L40: */
 		    }
 		    goto L70;
 		} else {
@@ -621,7 +593,6 @@ static integer c__3 = 3;
 			    srot_(n, &z__[jch * z_dim1 + 1], &c__1, &z__[(jch 
 				    - 1) * z_dim1 + 1], &c__1, &c__, &s);
 			}
-/* L50: */
 		    }
 		    goto L70;
 		}
@@ -635,7 +606,6 @@ static integer c__3 = 3;
 
 /*           Neither test passed -- try next J */
 
-/* L60: */
 	}
 
 /*        (Drop-through is "impossible") */
@@ -672,7 +642,6 @@ L80:
 		for (j = ifrstm; j <= i__2; ++j) {
 		    h__[j + ilast * h_dim1] = -h__[j + ilast * h_dim1];
 		    t[j + ilast * t_dim1] = -t[j + ilast * t_dim1];
-/* L90: */
 		}
 	    } else {
 		h__[ilast + ilast * h_dim1] = -h__[ilast + ilast * h_dim1];
@@ -682,7 +651,6 @@ L80:
 		i__2 = *n;
 		for (j = 1; j <= i__2; ++j) {
 		    z__[j + ilast * z_dim1] = -z__[j + ilast * z_dim1];
-/* L100: */
 		}
 	    }
 	}
@@ -799,7 +767,6 @@ L110:
 		    <= ascale * atol * temp2) {
 		goto L130;
 	    }
-/* L120: */
 	}
 
 	istart = ifirst;
@@ -836,7 +803,6 @@ L130:
 		t[j + 1 + jc * t_dim1] = -s * t[j + jc * t_dim1] + c__ * t[j 
 			+ 1 + jc * t_dim1];
 		t[j + jc * t_dim1] = temp2;
-/* L140: */
 	    }
 	    if (ilq) {
 		i__3 = *n;
@@ -846,7 +812,6 @@ L130:
 		    q[jr + (j + 1) * q_dim1] = -s * q[jr + j * q_dim1] + c__ *
 			     q[jr + (j + 1) * q_dim1];
 		    q[jr + j * q_dim1] = temp;
-/* L150: */
 		}
 	    }
 
@@ -864,7 +829,6 @@ L130:
 		h__[jr + j * h_dim1] = -s * h__[jr + (j + 1) * h_dim1] + c__ *
 			 h__[jr + j * h_dim1];
 		h__[jr + (j + 1) * h_dim1] = temp;
-/* L160: */
 	    }
 	    i__3 = j;
 	    for (jr = ifrstm; jr <= i__3; ++jr) {
@@ -873,7 +837,6 @@ L130:
 		t[jr + j * t_dim1] = -s * t[jr + (j + 1) * t_dim1] + c__ * t[
 			jr + j * t_dim1];
 		t[jr + (j + 1) * t_dim1] = temp;
-/* L170: */
 	    }
 	    if (ilz) {
 		i__3 = *n;
@@ -883,10 +846,8 @@ L130:
 		    z__[jr + j * z_dim1] = -s * z__[jr + (j + 1) * z_dim1] + 
 			    c__ * z__[jr + j * z_dim1];
 		    z__[jr + (j + 1) * z_dim1] = temp;
-/* L180: */
 		}
 	    }
-/* L190: */
 	}
 
 	goto L350;
@@ -959,14 +920,12 @@ L200:
 		for (j = ifrstm; j <= i__2; ++j) {
 		    h__[j + ilast * h_dim1] = -h__[j + ilast * h_dim1];
 		    t[j + ilast * t_dim1] = -t[j + ilast * t_dim1];
-/* L210: */
 		}
 
 		if (ilz) {
 		    i__2 = *n;
 		    for (j = 1; j <= i__2; ++j) {
 			z__[j + ilast * z_dim1] = -z__[j + ilast * z_dim1];
-/* L220: */
 		    }
 		}
 	    }
@@ -1183,7 +1142,6 @@ L200:
 		    t[j + jc * t_dim1] -= temp2;
 		    t[j + 1 + jc * t_dim1] -= temp2 * v[1];
 		    t[j + 2 + jc * t_dim1] -= temp2 * v[2];
-/* L230: */
 		}
 		if (ilq) {
 		    i__3 = *n;
@@ -1194,7 +1152,6 @@ L200:
 			q[jr + j * q_dim1] -= temp;
 			q[jr + (j + 1) * q_dim1] -= temp * v[1];
 			q[jr + (j + 2) * q_dim1] -= temp * v[2];
-/* L240: */
 		    }
 		}
 
@@ -1307,7 +1264,6 @@ L250:
 		    h__[jr + j * h_dim1] -= temp;
 		    h__[jr + (j + 1) * h_dim1] -= temp * v[1];
 		    h__[jr + (j + 2) * h_dim1] -= temp * v[2];
-/* L260: */
 		}
 		i__3 = j + 2;
 		for (jr = ifrstm; jr <= i__3; ++jr) {
@@ -1316,7 +1272,6 @@ L250:
 		    t[jr + j * t_dim1] -= temp;
 		    t[jr + (j + 1) * t_dim1] -= temp * v[1];
 		    t[jr + (j + 2) * t_dim1] -= temp * v[2];
-/* L270: */
 		}
 		if (ilz) {
 		    i__3 = *n;
@@ -1327,12 +1282,10 @@ L250:
 			z__[jr + j * z_dim1] -= temp;
 			z__[jr + (j + 1) * z_dim1] -= temp * v[1];
 			z__[jr + (j + 2) * z_dim1] -= temp * v[2];
-/* L280: */
 		    }
 		}
 		t[j + 1 + j * t_dim1] = 0.f;
 		t[j + 2 + j * t_dim1] = 0.f;
-/* L290: */
 	    }
 
 /*           Last elements: Use Givens rotations */
@@ -1356,7 +1309,6 @@ L250:
 		t[j + 1 + jc * t_dim1] = -s * t[j + jc * t_dim1] + c__ * t[j 
 			+ 1 + jc * t_dim1];
 		t[j + jc * t_dim1] = temp2;
-/* L300: */
 	    }
 	    if (ilq) {
 		i__2 = *n;
@@ -1366,7 +1318,6 @@ L250:
 		    q[jr + (j + 1) * q_dim1] = -s * q[jr + j * q_dim1] + c__ *
 			     q[jr + (j + 1) * q_dim1];
 		    q[jr + j * q_dim1] = temp;
-/* L310: */
 		}
 	    }
 
@@ -1384,7 +1335,6 @@ L250:
 		h__[jr + j * h_dim1] = -s * h__[jr + (j + 1) * h_dim1] + c__ *
 			 h__[jr + j * h_dim1];
 		h__[jr + (j + 1) * h_dim1] = temp;
-/* L320: */
 	    }
 	    i__2 = ilast - 1;
 	    for (jr = ifrstm; jr <= i__2; ++jr) {
@@ -1393,7 +1343,6 @@ L250:
 		t[jr + j * t_dim1] = -s * t[jr + (j + 1) * t_dim1] + c__ * t[
 			jr + j * t_dim1];
 		t[jr + (j + 1) * t_dim1] = temp;
-/* L330: */
 	    }
 	    if (ilz) {
 		i__2 = *n;
@@ -1403,7 +1352,6 @@ L250:
 		    z__[jr + j * z_dim1] = -s * z__[jr + (j + 1) * z_dim1] + 
 			    c__ * z__[jr + j * z_dim1];
 		    z__[jr + (j + 1) * z_dim1] = temp;
-/* L340: */
 		}
 	    }
 
@@ -1416,7 +1364,6 @@ L250:
 /*        End of iteration loop */
 
 L350:
-/* L360: */
 	;
     }
 
@@ -1439,7 +1386,6 @@ L380:
 		for (jr = 1; jr <= i__2; ++jr) {
 		    h__[jr + j * h_dim1] = -h__[jr + j * h_dim1];
 		    t[jr + j * t_dim1] = -t[jr + j * t_dim1];
-/* L390: */
 		}
 	    } else {
 		h__[j + j * h_dim1] = -h__[j + j * h_dim1];
@@ -1449,14 +1395,12 @@ L380:
 		i__2 = *n;
 		for (jr = 1; jr <= i__2; ++jr) {
 		    z__[jr + j * z_dim1] = -z__[jr + j * z_dim1];
-/* L400: */
 		}
 	    }
 	}
 	alphar[j] = h__[j + j * h_dim1];
 	alphai[j] = 0.f;
 	beta[j] = t[j + j * t_dim1];
-/* L410: */
     }
 
 /*     Normal Termination */

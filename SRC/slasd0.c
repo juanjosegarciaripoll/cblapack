@@ -33,15 +33,8 @@ static integer c__2 = 2;
     real alpha;
     integer inode, ndiml, idxqc, ndimr, itemp, sqrei;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -109,12 +102,6 @@ static integer c__2 = 2;
 /*     California at Berkeley, USA */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -205,7 +192,6 @@ static integer c__2 = 2;
 	i__2 = nl;
 	for (j = 1; j <= i__2; ++j) {
 	    iwork[itemp + j] = j;
-/* L10: */
 	}
 	if (i__ == nd) {
 	    sqrei = *sqre;
@@ -223,9 +209,7 @@ static integer c__2 = 2;
 	i__2 = nr;
 	for (j = 1; j <= i__2; ++j) {
 	    iwork[itemp + j - 1] = j;
-/* L20: */
 	}
-/* L30: */
     }
 
 /*     Now conquer each subproblem bottom-up. */
@@ -264,9 +248,7 @@ static integer c__2 = 2;
 	    if (*info != 0) {
 		return 0;
 	    }
-/* L40: */
 	}
-/* L50: */
     }
 
     return 0;

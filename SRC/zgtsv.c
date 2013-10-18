@@ -26,15 +26,8 @@
     integer j, k;
     doublecomplex temp, mult;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -64,7 +57,6 @@
 /*          A. */
 /*          On exit, DL is overwritten by the (n-2) elements of the */
 /*          second superdiagonal of the upper triangular matrix U from */
-/*          the LU factorization of A, in DL(1), ..., DL(n-2). */
 
 /*  D       (input/output) COMPLEX*16 array, dimension (N) */
 /*          On entry, D must contain the diagonal elements of A. */
@@ -91,20 +83,6 @@
 /*                completed unless i = N. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
     /* Parameter adjustments */
     --dl;
@@ -176,7 +154,6 @@
 			     mult.r * b[i__5].i + mult.i * b[i__5].r;
 		    z__1.r = b[i__4].r - z__2.r, z__1.i = b[i__4].i - z__2.i;
 		    b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L10: */
 		}
 		if (k < *n - 1) {
 		    i__2 = k;
@@ -226,11 +203,9 @@
 			     mult.r * b[i__4].i + mult.i * b[i__4].r;
 		    z__1.r = temp.r - z__2.r, z__1.i = temp.i - z__2.i;
 		    b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L20: */
 		}
 	    }
 	}
-/* L30: */
     }
     i__1 = *n;
     if (d__[i__1].r == 0. && d__[i__1].i == 0.) {
@@ -271,9 +246,7 @@
 	    z__2.r = z__3.r - z__5.r, z__2.i = z__3.i - z__5.i;
 	    z_div(&z__1, &z__2, &d__[k]);
 	    b[i__2].r = z__1.r, b[i__2].i = z__1.i;
-/* L40: */
 	}
-/* L50: */
     }
 
     return 0;

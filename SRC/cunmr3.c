@@ -27,15 +27,8 @@
     complex taui;
     logical notran;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -90,7 +83,6 @@
 /*                               (LDA,M) if SIDE = 'L', */
 /*                               (LDA,N) if SIDE = 'R' */
 /*          The i-th row must contain the vector which defines the */
-/*          elementary reflector H(i), for i = 1,2,...,k, as returned by */
 /*          CTZRZF in the last k rows of its array argument A. */
 /*          A is modified by the routine but restored on exit. */
 
@@ -123,16 +115,6 @@
 /*    A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville, USA */
 
 /*  ===================================================================== */
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -236,7 +218,6 @@
 	clarz_(side, &mi, &ni, l, &a[i__ + ja * a_dim1], lda, &taui, &c__[ic 
 		+ jc * c_dim1], ldc, &work[1]);
 
-/* L10: */
     }
 
     return 0;

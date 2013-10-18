@@ -37,15 +37,8 @@ static integer c__1 = 1;
     logical upper;
     integer kcnext;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -92,18 +85,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -144,7 +125,6 @@ static integer c__1 = 1;
 		return 0;
 	    }
 	    kp -= *info;
-/* L10: */
 	}
     } else {
 
@@ -158,7 +138,6 @@ static integer c__1 = 1;
 		return 0;
 	    }
 	    kp = kp + *n - *info + 1;
-/* L20: */
 	}
     }
     *info = 0;
@@ -296,7 +275,6 @@ L30:
 		ap[i__2].r = z__1.r, ap[i__2].i = z__1.i;
 		i__2 = kx;
 		ap[i__2].r = temp.r, ap[i__2].i = temp.i;
-/* L40: */
 	    }
 	    i__1 = kc + kp - 1;
 	    d_cnjg(&z__1, &ap[kc + kp - 1]);
@@ -463,7 +441,6 @@ L60:
 		ap[i__2].r = z__1.r, ap[i__2].i = z__1.i;
 		i__2 = kx;
 		ap[i__2].r = temp.r, ap[i__2].i = temp.i;
-/* L70: */
 	    }
 	    i__1 = kc + kp - k;
 	    d_cnjg(&z__1, &ap[kc + kp - k]);

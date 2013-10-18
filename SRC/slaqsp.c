@@ -24,15 +24,8 @@
     real cj, large;
     real small;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -90,14 +83,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -135,10 +120,8 @@
 		i__2 = j;
 		for (i__ = 1; i__ <= i__2; ++i__) {
 		    ap[jc + i__ - 1] = cj * s[i__] * ap[jc + i__ - 1];
-/* L10: */
 		}
 		jc += j;
-/* L20: */
 	    }
 	} else {
 
@@ -151,10 +134,8 @@
 		i__2 = *n;
 		for (i__ = j; i__ <= i__2; ++i__) {
 		    ap[jc + i__ - j] = cj * s[i__] * ap[jc + i__ - j];
-/* L30: */
 		}
 		jc = jc + *n - j + 1;
-/* L40: */
 	    }
 	}
 	*(unsigned char *)equed = 'Y';

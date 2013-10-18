@@ -36,15 +36,8 @@
     doublereal dminus;
     logical sawnan1, sawnan2;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -160,16 +153,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --work;
     --isuppz;
@@ -215,7 +198,6 @@
 	}
 	work[inds + i__] = s * work[indlpl + i__] * l[i__];
 	s = work[inds + i__] - *lambda;
-/* L50: */
     }
     sawnan1 = disnan_(&s);
     if (sawnan1) {
@@ -227,7 +209,6 @@
 	work[indlpl + i__] = ld[i__] / dplus;
 	work[inds + i__] = s * work[indlpl + i__] * l[i__];
 	s = work[inds + i__] - *lambda;
-/* L51: */
     }
     sawnan1 = disnan_(&s);
 
@@ -251,7 +232,6 @@ L60:
 		work[inds + i__] = lld[i__];
 	    }
 	    s = work[inds + i__] - *lambda;
-/* L70: */
 	}
 	i__1 = r2 - 1;
 	for (i__ = r1; i__ <= i__1; ++i__) {
@@ -265,7 +245,6 @@ L60:
 		work[inds + i__] = lld[i__];
 	    }
 	    s = work[inds + i__] - *lambda;
-/* L71: */
 	}
     }
 
@@ -284,7 +263,6 @@ L60:
 	}
 	work[indumn + i__] = l[i__] * tmp;
 	work[indp + i__ - 1] = work[indp + i__] * tmp - *lambda;
-/* L80: */
     }
     tmp = work[indp + r1 - 1];
     sawnan2 = disnan_(&tmp);
@@ -306,7 +284,6 @@ L60:
 	    if (tmp == 0.) {
 		work[indp + i__ - 1] = d__[i__] - *lambda;
 	    }
-/* L100: */
 	}
     }
 
@@ -336,7 +313,6 @@ L60:
 	    *mingma = tmp;
 	    *r__ = i__ + 1;
 	}
-/* L110: */
     }
 
 /*     Compute the FP vector: solve N^T v = e_r */
@@ -372,7 +348,6 @@ L60:
 		    z__1.i = z__[i__2].r * z__[i__3].i + z__[i__2].i * z__[
 		    i__3].r;
 	    *ztz += z__1.r;
-/* L210: */
 	}
 L220:
 	;
@@ -409,7 +384,6 @@ L220:
 		    z__1.i = z__[i__2].r * z__[i__3].i + z__[i__2].i * z__[
 		    i__3].r;
 	    *ztz += z__1.r;
-/* L230: */
 	}
 L240:
 	;
@@ -438,7 +412,6 @@ L240:
 		    z__1.i = z__[i__2].r * z__[i__3].i + z__[i__2].i * z__[
 		    i__3].r;
 	    *ztz += z__1.r;
-/* L250: */
 	}
 L260:
 	;
@@ -475,7 +448,6 @@ L260:
 		    z__1.i = z__[i__2].r * z__[i__3].i + z__[i__2].i * z__[
 		    i__3].r;
 	    *ztz += z__1.r;
-/* L270: */
 	}
 L280:
 	;
@@ -487,7 +459,6 @@ L280:
     *nrminv = sqrt(tmp);
     *resid = abs(*mingma) * *nrminv;
     *rqcorr = *mingma * tmp;
-
 
     return 0;
 

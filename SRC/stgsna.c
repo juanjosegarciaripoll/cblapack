@@ -57,15 +57,8 @@ static integer c__3 = 3;
     real alprqt, smlnum;
     logical lquery;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -79,7 +72,6 @@ static integer c__3 = 3;
 /*  (A, B) must be in generalized real Schur form (as returned by SGGES), */
 /*  i.e. A is block upper triangular with 1-by-1 and 2-by-2 diagonal */
 /*  blocks. B is upper triangular. */
-
 
 /*  Arguments */
 /*  ========= */
@@ -100,10 +92,8 @@ static integer c__3 = 3;
 /*          If HOWMNY = 'S', SELECT specifies the eigenpairs for which */
 /*          condition numbers are required. To select condition numbers */
 /*          for the eigenpair corresponding to a real eigenvalue w(j), */
-/*          SELECT(j) must be set to .TRUE.. To select condition numbers */
 /*          corresponding to a complex conjugate pair of eigenvalues w(j) */
 /*          and w(j+1), either SELECT(j) or SELECT(j+1) or both, must be */
-/*          set to .TRUE.. */
 /*          If HOWMNY = 'A', SELECT is not referenced. */
 
 /*  N       (input) INTEGER */
@@ -191,7 +181,6 @@ static integer c__3 = 3;
 /*  INFO    (output) INTEGER */
 /*          =0: Successful exit */
 /*          <0: If INFO = -i, the i-th argument had an illegal value */
-
 
 /*  Further Details */
 /*  =============== */
@@ -329,20 +318,6 @@ static integer c__3 = 3;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Decode and test the input parameters */
 
     /* Parameter adjustments */
@@ -418,7 +393,6 @@ static integer c__3 = 3;
 			}
 		    }
 		}
-/* L10: */
 	    }
 	} else {
 	    *m = *n;

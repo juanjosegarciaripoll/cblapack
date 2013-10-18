@@ -52,7 +52,6 @@ static real c_b42 = 1.f;
     integer rowskip;
     real roottol;
 
-
 /*  -- LAPACK routine (version 3.2)                                    -- */
 
 /*  -- Contributed by Zlatko Drmac of the University of Zagreb and     -- */
@@ -60,7 +59,6 @@ static real c_b42 = 1.f;
 /*  -- November 2008                                                   -- */
 
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
 
 /* This routine is also part of SIGMA (version 1.23, October 23. 2008.) */
 /* SIGMA is a library of algorithms for highly accurate algorithms for */
@@ -69,10 +67,7 @@ static real c_b42 = 1.f;
 
 /*     Scalar Arguments */
 
-
 /*     Array Arguments */
-
-/*     .. */
 
 /*  Purpose */
 /*  ~~~~~~~ */
@@ -255,7 +250,6 @@ static real c_b42 = 1.f;
     bigtheta = 1.f / rooteps;
     roottol = sqrt(*tol);
 
-
 /*     -#- Row-cyclic Jacobi SVD algorithm with column pivoting -#- */
 
     emptsw = *n * (*n - 1) / 2;
@@ -268,7 +262,6 @@ static real c_b42 = 1.f;
 /* [TP] SWBAND is a tuning parameter. It is meaningful and effective */
 /*     if SGESVJ is used as a computational routine in the preconditioned */
 /*     Jacobi SVD algorithm SGESVJ. For sweeps i=1:SWBAND the procedure */
-/*     ...... */
     kbl = min(8,*n);
 /* [TP] KBL is a tuning parameter that defines the tile size in the */
 /*     tiling of the p-q loops of pivot pairs. In general, an optimal */
@@ -292,7 +285,6 @@ static real c_b42 = 1.f;
 
     i__1 = *nsweep;
     for (i__ = 1; i__ <= i__1; ++i__) {
-/*     .. go go go ... */
 
 	mxaapq = 0.f;
 	mxsinj = 0.f;
@@ -316,7 +308,6 @@ static real c_b42 = 1.f;
 		i__5 = igl + kbl - 1, i__6 = *n - 1;
 		i__4 = min(i__5,i__6);
 		for (p = igl; p <= i__4; ++p) {
-/*     .. de Rijk's pivoting */
 		    i__5 = *n - p + 1;
 		    q = isamax_(&i__5, &sva[p], &c__1) + p - 1;
 		    if (p != q) {
@@ -416,11 +407,8 @@ static real c_b42 = 1.f;
 				r__1 = mxaapq, r__2 = dabs(aapq);
 				mxaapq = dmax(r__1,r__2);
 
-/*        TO rotate or NOT to rotate, THAT is the question ... */
-
 				if (dabs(aapq) > *tol) {
 
-/*           .. rotate */
 /*           ROTATED = ROTATED + ONE */
 
 				    if (ir1 == 0) {
@@ -460,8 +448,6 @@ static real c_b42 = 1.f;
 					    mxsinj = dmax(r__1,r__2);
 
 					} else {
-
-/*                 .. choose correct signum for THETA and rotate */
 
 					    thsign = -r_sign(&c_b42, &aapq);
 					    t = 1.f / (theta + thsign * sqrt(
@@ -577,7 +563,6 @@ static real c_b42 = 1.f;
 					}
 
 				    } else {
-/*              .. have to use modified Gram-Schmidt like transformation */
 					scopy_(m, &a[p * a_dim1 + 1], &c__1, &
 						work[1], &c__1);
 					slascl_("G", &c__0, &c__0, &aapp, &
@@ -598,7 +583,6 @@ static real c_b42 = 1.f;
 						);
 					mxsinj = dmax(mxsinj,*sfmin);
 				    }
-/*           END IF ROTOK THEN ... ELSE */
 
 /*           In the case of cancellation in updating SVA(q), SVA(p) */
 /*           recompute SVA(q), SVA(p). */
@@ -655,7 +639,6 @@ static real c_b42 = 1.f;
 				goto L2103;
 			    }
 
-/* L2002: */
 			}
 /*     END q-LOOP */
 
@@ -671,16 +654,11 @@ L2103:
 			}
 		    }
 
-/* L2001: */
 		}
 /*     end of the p-loop */
 /*     end of doing the block ( ibr, ibr ) */
-/* L1002: */
 	    }
 /*     end of ir1-loop */
-
-/* ........................................................ */
-/* ... go to the off diagonal blocks */
 
 	    igl = (ibr - 1) * kbl + 1;
 
@@ -765,8 +743,6 @@ L2103:
 				r__1 = mxaapq, r__2 = dabs(aapq);
 				mxaapq = dmax(r__1,r__2);
 
-/*        TO rotate or NOT to rotate, THAT is the question ... */
-
 				if (dabs(aapq) > *tol) {
 				    notrot = 0;
 /*           ROTATED  = ROTATED + 1 */
@@ -807,8 +783,6 @@ L2103:
 					    r__1 = mxsinj, r__2 = dabs(t);
 					    mxsinj = dmax(r__1,r__2);
 					} else {
-
-/*                 .. choose correct signum for THETA and rotate */
 
 					    thsign = -r_sign(&c_b42, &aapq);
 					    if (aaqq > aapp0) {
@@ -971,10 +945,8 @@ L2103:
 					    mxsinj = dmax(mxsinj,*sfmin);
 					}
 				    }
-/*           END IF ROTOK THEN ... ELSE */
 
 /*           In the case of cancellation in updating SVA(q) */
-/*           .. recompute SVA(q) */
 /* Computing 2nd power */
 				    r__1 = sva[q] / aaqq;
 				    if (r__1 * r__1 <= rooteps) {
@@ -1029,7 +1001,6 @@ L2103:
 				goto L2203;
 			    }
 
-/* L2200: */
 			}
 /*        end of the q-loop */
 L2203:
@@ -1046,10 +1017,8 @@ L2203:
 			    notrot = 0;
 			}
 		    }
-/* L2100: */
 		}
 /*     end of the p-loop */
-/* L2010: */
 	    }
 /*     end of the jbc-loop */
 L2011:
@@ -1059,14 +1028,11 @@ L2011:
 	    i__3 = min(i__4,*n);
 	    for (p = igl; p <= i__3; ++p) {
 		sva[p] = (r__1 = sva[p], dabs(r__1));
-/* L2012: */
 	    }
 
-/* L2000: */
 	}
 /* 2000 :: end of the ibr-loop */
 
-/*     .. update SVA(N) */
 	if (sva[*n] < rootbig && sva[*n] > rootsfmin) {
 	    sva[*n] = snrm2_(m, &a[*n * a_dim1 + 1], &c__1) * d__[*n];
 	} else {
@@ -1090,7 +1056,6 @@ L2011:
 	if (notrot >= emptsw) {
 	    goto L1994;
 	}
-/* L1993: */
     }
 /*     end i=1:NSWEEP loop */
 /* #:) Reaching this point means that the procedure has comleted the given */
@@ -1123,11 +1088,7 @@ L1995:
 			c__1);
 	    }
 	}
-/* L5991: */
     }
 
     return 0;
-/*     .. */
-/*     .. END OF SGSVJ0 */
-/*     .. */
 } /* sgsvj0_ */

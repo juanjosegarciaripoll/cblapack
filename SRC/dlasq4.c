@@ -27,7 +27,6 @@
     integer i4, nn, np;
     doublereal gam, gap1, gap2;
 
-
 /*  -- LAPACK routine (version 3.2)                                    -- */
 
 /*  -- Contributed by Osni Marques of the Lawrence Berkeley National   -- */
@@ -36,12 +35,6 @@
 /*  -- November 2008                                                   -- */
 
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -97,14 +90,6 @@
 /*  CNST1 = 9/16 */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     A negative DMIN forces the shift to take that absolute value */
 /*     TTYPE records the type of shift. */
@@ -205,7 +190,6 @@
 		    if (max(b2,b1) * 100. < a2 || .563 < a2) {
 			goto L20;
 		    }
-/* L10: */
 		}
 L20:
 		a2 *= 1.05;
@@ -253,7 +237,6 @@ L20:
 		    if (max(b2,b1) * 100. < a2 || .563 < a2) {
 			goto L40;
 		    }
-/* L30: */
 		}
 L40:
 		a2 *= 1.05;
@@ -306,7 +289,6 @@ L40:
 		if (max(b1,a2) * 100. < b2) {
 		    goto L60;
 		}
-/* L50: */
 	    }
 L60:
 	    b2 = sqrt(b2 * 1.05);
@@ -362,7 +344,6 @@ L60:
 		if (b1 * 100. < b2) {
 		    goto L80;
 		}
-/* L70: */
 	    }
 L80:
 	    b2 = sqrt(b2 * 1.05);

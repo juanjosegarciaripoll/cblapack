@@ -40,15 +40,9 @@ static integer c__49 = 49;
     logical wantt, wantz;
     logical lquery;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd.. */
 /*     November 2006 */
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 /*     Purpose */
 /*     ======= */
 
@@ -102,8 +96,6 @@ static integer c__49 = 49;
 /*           below.) */
 
 /*           Unlike earlier versions of SHSEQR, this subroutine may */
-/*           explicitly H(i,j) = 0 for i.GT.j and j = 1, 2, ... ILO-1 */
-/*           or j = IHI+1, IHI+2, ... N. */
 
 /*     LDH   (input) INTEGER */
 /*           The leading dimension of the array H. LDH .GE. max(1,N). */
@@ -155,7 +147,6 @@ static integer c__49 = 49;
 /*           values of N, ILO and IHI.  The estimate is returned */
 /*           in WORK(1).  No error message related to LWORK is */
 /*           issued by XERBLA.  Neither H nor Z are accessed. */
-
 
 /*     INFO  (output) INTEGER */
 /*             =  0:  successful exit */
@@ -219,11 +210,6 @@ static integer c__49 = 49;
 /*            ISPEC=15: Number of simultaneous shifts in a multishift */
 /*                      QR iteration. */
 
-/*                      If IHI-ILO+1 is ... */
-
-/*                      greater than      ...but less    ... the */
-/*                      or equal to ...      than        default is */
-
 /*                           1               30          NS =   2(+) */
 /*                          30               60          NS =   4(+) */
 /*                          60              150          NS =  10(+) */
@@ -264,7 +250,6 @@ static integer c__49 = 49;
 /*       of Matrix Analysis, volume 23, pages 948--973, 2002. */
 
 /*     ================================================================ */
-/*     .. Parameters .. */
 
 /*     ==== Matrices of order NTINY or smaller must be processed by */
 /*     .    SLAHQR because of insufficient subdiagonal scratch space. */
@@ -272,22 +257,9 @@ static integer c__49 = 49;
 
 /*     ==== NL allocates some local workspace to help small matrices */
 /*     .    through a rare SLAHQR failure.  NL .GT. NTINY = 11 is */
-/*     .    required and NL .LE. NMIN = ILAENV(ISPEC=12,...) is recom- */
 /*     .    mended.  (The default value of NMIN is 75.)  Using NL = 49 */
 /*     .    allows up to six simultaneous shifts and a 16-by-16 */
 /*     .    deflation window.  ==== */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     ==== Decode and check the input parameters. ==== */
 
@@ -363,13 +335,11 @@ static integer c__49 = 49;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    wr[i__] = h__[i__ + i__ * h_dim1];
 	    wi[i__] = 0.f;
-/* L10: */
 	}
 	i__1 = *n;
 	for (i__ = *ihi + 1; i__ <= i__1; ++i__) {
 	    wr[i__] = h__[i__ + i__ * h_dim1];
 	    wi[i__] = 0.f;
-/* L20: */
 	}
 
 /*        ==== Initialize Z, if requested ==== */

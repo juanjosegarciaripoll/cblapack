@@ -38,15 +38,8 @@ static integer c__2 = 2;
 	    nlp1, lvl2, nrp1, nlvl, sqre, inode, ndiml;
     integer ndimr;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -64,7 +57,6 @@ static integer c__2 = 2;
 
 /*  Arguments */
 /*  ========= */
-
 
 /*  ICOMPQ (input) INTEGER */
 /*         Specifies whether the left or the right singular vector */
@@ -184,14 +176,6 @@ static integer c__2 = 2;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -302,7 +286,6 @@ static integer c__2 = 2;
 		+ b_dim1], ldb, &c_b8, &bx[nlf + bx_dim1], ldbx);
 	sgemm_("T", "N", &nr, nrhs, &nr, &c_b7, &u[nrf + u_dim1], ldu, &b[nrf 
 		+ b_dim1], ldb, &c_b8, &bx[nrf + bx_dim1], ldbx);
-/* L10: */
     }
 
 /*     Next copy the rows of B that correspond to unchanged rows */
@@ -312,7 +295,6 @@ static integer c__2 = 2;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	ic = iwork[inode + i__ - 1];
 	scopy_(nrhs, &b[ic + b_dim1], ldb, &bx[ic + bx_dim1], ldbx);
-/* L20: */
     }
 
 /*     Finally go through the left singular vector matrices of all */
@@ -351,9 +333,7 @@ static integer c__2 = 2;
 		     poles_dim1], &difl[nlf + lvl * difl_dim1], &difr[nlf + 
 		    lvl2 * difr_dim1], &z__[nlf + lvl * z_dim1], &k[j], &c__[
 		    j], &s[j], &work[1], info);
-/* L30: */
 	}
-/* L40: */
     }
     goto L90;
 
@@ -401,9 +381,7 @@ L50:
 		     poles_dim1], &difl[nlf + lvl * difl_dim1], &difr[nlf + 
 		    lvl2 * difr_dim1], &z__[nlf + lvl * z_dim1], &k[j], &c__[
 		    j], &s[j], &work[1], info);
-/* L60: */
 	}
-/* L70: */
     }
 
 /*     The nodes on the bottom level of the tree were solved */
@@ -429,7 +407,6 @@ L50:
 		b[nlf + b_dim1], ldb, &c_b8, &bx[nlf + bx_dim1], ldbx);
 	sgemm_("T", "N", &nrp1, nrhs, &nrp1, &c_b7, &vt[nrf + vt_dim1], ldu, &
 		b[nrf + b_dim1], ldb, &c_b8, &bx[nrf + bx_dim1], ldbx);
-/* L80: */
     }
 
 L90:

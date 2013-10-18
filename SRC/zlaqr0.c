@@ -53,15 +53,8 @@ static integer c__3 = 3;
     logical sorted;
     integer lwkopt;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*     Purpose */
 /*     ======= */
@@ -111,7 +104,6 @@ static integer c__3 = 3;
 /*           description of INFO below.) */
 
 /*           This subroutine may explicitly set H(i,j) = 0 for i.GT.j and */
-/*           j = 1, 2, ... ILO-1 or j = IHI+1, IHI+2, ... N. */
 
 /*     LDH   (input) INTEGER */
 /*           The leading dimension of the array H. LDH .GE. max(1,N). */
@@ -150,7 +142,6 @@ static integer c__3 = 3;
 /*           values of N, ILO and IHI.  The estimate is returned */
 /*           in WORK(1).  No error message related to LWORK is */
 /*           issued by XERBLA.  Neither H nor Z are accessed. */
-
 
 /*     INFO  (output) INTEGER */
 /*             =  0:  successful exit */
@@ -201,7 +192,6 @@ static integer c__3 = 3;
 /*       of Matrix Analysis, volume 23, pages 948--973, 2002. */
 
 /*     ================================================================ */
-/*     .. Parameters .. */
 
 /*     ==== Matrices of order NTINY or smaller must be processed by */
 /*     .    ZLAHQR because of insufficient subdiagonal scratch space. */
@@ -217,22 +207,6 @@ static integer c__3 = 3;
 
 /*     ==== The constant WILK1 is used to form the exceptional */
 /*     .    shifts. ==== */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
     /* Parameter adjustments */
     h_dim1 = *ldh;
     h_offset = 1 + h_dim1;
@@ -401,7 +375,6 @@ static integer c__3 = 3;
 		if (h__[i__3].r == 0. && h__[i__3].i == 0.) {
 		    goto L20;
 		}
-/* L10: */
 	    }
 	    k = *ilo;
 L20:
@@ -532,7 +505,6 @@ L20:
 			i__3 = i__ - 1;
 			i__4 = i__;
 			w[i__3].r = w[i__4].r, w[i__3].i = w[i__4].i;
-/* L30: */
 		    }
 		} else {
 
@@ -656,9 +628,7 @@ L20:
 				    i__4 = i__ + 1;
 				    w[i__4].r = swap.r, w[i__4].i = swap.i;
 				}
-/* L40: */
 			    }
-/* L50: */
 			}
 L60:
 			;
@@ -739,7 +709,6 @@ L60:
 	    }
 
 /*           ==== End of main loop ==== */
-/* L70: */
 	}
 
 /*        ==== Iteration limit exceeded.  Set INFO to show where */

@@ -18,9 +18,7 @@
 {
 
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     January 2007 */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */

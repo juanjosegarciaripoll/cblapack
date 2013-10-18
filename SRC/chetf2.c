@@ -45,15 +45,8 @@ static integer c__1 = 1;
     real colmax;
     real rowmax;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -130,7 +123,6 @@ static integer c__1 = 1;
 /*    A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville, USA */
 
 /*  If UPLO = 'U', then A = U*D*U', where */
-/*     U = P(n)*U(n)* ... *P(k)U(k)* ..., */
 /*  i.e., U is a product of terms P(k)*U(k), where k decreases from n to */
 /*  1 in steps of 1 or 2, and D is a block diagonal matrix with 1-by-1 */
 /*  and 2-by-2 diagonal blocks D(k).  P(k) is a permutation matrix as */
@@ -147,7 +139,6 @@ static integer c__1 = 1;
 /*  and A(k,k), and v overwrites A(1:k-2,k-1:k). */
 
 /*  If UPLO = 'L', then A = L*D*L', where */
-/*     L = P(1)*L(1)* ... *P(k)*L(k)* ..., */
 /*  i.e., L is a product of terms P(k)*L(k), where k increases from 1 to */
 /*  n in steps of 1 or 2, and D is a block diagonal matrix with 1-by-1 */
 /*  and 2-by-2 diagonal blocks D(k).  P(k) is a permutation matrix as */
@@ -164,22 +155,6 @@ static integer c__1 = 1;
 /*  and A(k+1,k+1), and v overwrites A(k+2:n,k:k+1). */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Statement Functions .. */
-/*     .. */
-/*     .. Statement Function definitions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -327,7 +302,6 @@ L10:
 		    a[i__2].r = q__1.r, a[i__2].i = q__1.i;
 		    i__2 = kp + j * a_dim1;
 		    a[i__2].r = t.r, a[i__2].i = t.i;
-/* L20: */
 		}
 		i__1 = kp + kk * a_dim1;
 		r_cnjg(&q__1, &a[kp + kk * a_dim1]);
@@ -459,7 +433,6 @@ L10:
 			    q__1.r = q__2.r - q__5.r, q__1.i = q__2.i - 
 				    q__5.i;
 			    a[i__1].r = q__1.r, a[i__1].i = q__1.i;
-/* L30: */
 			}
 			i__1 = j + k * a_dim1;
 			a[i__1].r = wk.r, a[i__1].i = wk.i;
@@ -470,7 +443,6 @@ L10:
 			r__1 = a[i__2].r;
 			q__1.r = r__1, q__1.i = 0.f;
 			a[i__1].r = q__1.r, a[i__1].i = q__1.i;
-/* L40: */
 		    }
 
 		}
@@ -612,7 +584,6 @@ L50:
 		    a[i__2].r = q__1.r, a[i__2].i = q__1.i;
 		    i__2 = kp + j * a_dim1;
 		    a[i__2].r = t.r, a[i__2].i = t.i;
-/* L60: */
 		}
 		i__1 = kp + kk * a_dim1;
 		r_cnjg(&q__1, &a[kp + kk * a_dim1]);
@@ -747,7 +718,6 @@ L50:
 			    q__1.r = q__2.r - q__5.r, q__1.i = q__2.i - 
 				    q__5.i;
 			    a[i__3].r = q__1.r, a[i__3].i = q__1.i;
-/* L70: */
 			}
 			i__2 = j + k * a_dim1;
 			a[i__2].r = wk.r, a[i__2].i = wk.i;
@@ -758,7 +728,6 @@ L50:
 			r__1 = a[i__3].r;
 			q__1.r = r__1, q__1.i = 0.f;
 			a[i__2].r = q__1.r, a[i__2].i = q__1.i;
-/* L80: */
 		    }
 		}
 	    }

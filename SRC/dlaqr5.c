@@ -55,15 +55,8 @@ static integer c__2 = 2;
     integer mstart;
     doublereal smlnum;
 
-
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*     This auxiliary subroutine called by DLAQR0 performs a */
 /*     single small-bulge multi-shift QR sweep. */
@@ -126,7 +119,6 @@ static integer c__2 = 2;
 /*      ILOZ   (input) INTEGER */
 /*      IHIZ   (input) INTEGER */
 /*             Specify the rows of Z to which transformations must be */
-/*             applied if WANTZ is .TRUE.. 1 .LE. ILOZ .LE. IHIZ .LE. N */
 
 /*      Z      (input/output) DOUBLE PRECISION array of size (LDZ,IHI) */
 /*             If WANTZ = .TRUE., then the QR Sweep orthogonal */
@@ -186,20 +178,6 @@ static integer c__2 = 2;
 /*     volume 23, pages 929--947, 2002. */
 
 /*     ================================================================ */
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     ==== If there are no shifts, then there is nothing to do. ==== */
 
@@ -256,7 +234,6 @@ static integer c__2 = 2;
 	    si[i__ + 1] = si[i__ + 2];
 	    si[i__ + 2] = swap;
 	}
-/* L10: */
     }
 
 /*     ==== NSHFTS is supposed to be even, but if it is odd, */
@@ -421,7 +398,6 @@ static integer c__2 = 2;
 			}
 		    }
 		}
-/* L20: */
 	    }
 
 /*           ==== Generate a 2-by-2 reflection, if needed. ==== */
@@ -468,9 +444,7 @@ static integer c__2 = 2;
 		    h__[k + 1 + j * h_dim1] -= refsum;
 		    h__[k + 2 + j * h_dim1] -= refsum * v[m * v_dim1 + 2];
 		    h__[k + 3 + j * h_dim1] -= refsum * v[m * v_dim1 + 3];
-/* L30: */
 		}
-/* L40: */
 	    }
 	    if (bmp22) {
 		k = krcol + (m22 - 1) * 3;
@@ -482,7 +456,6 @@ static integer c__2 = 2;
 			    v[m22 * v_dim1 + 2] * h__[k + 2 + j * h_dim1]);
 		    h__[k + 1 + j * h_dim1] -= refsum;
 		    h__[k + 2 + j * h_dim1] -= refsum * v[m22 * v_dim1 + 2];
-/* L50: */
 		}
 	    }
 
@@ -514,7 +487,6 @@ static integer c__2 = 2;
 				2];
 			h__[j + (k + 3) * h_dim1] -= refsum * v[m * v_dim1 + 
 				3];
-/* L60: */
 		    }
 
 		    if (accum) {
@@ -537,7 +509,6 @@ static integer c__2 = 2;
 				    v_dim1 + 2];
 			    u[j + (kms + 3) * u_dim1] -= refsum * v[m * 
 				    v_dim1 + 3];
-/* L70: */
 			}
 		    } else if (*wantz) {
 
@@ -556,11 +527,9 @@ static integer c__2 = 2;
 				    v_dim1 + 2];
 			    z__[j + (k + 3) * z_dim1] -= refsum * v[m * 
 				    v_dim1 + 3];
-/* L80: */
 			}
 		    }
 		}
-/* L90: */
 	    }
 
 /*           ==== Special case: 2-by-2 reflection (if needed) ==== */
@@ -576,7 +545,6 @@ static integer c__2 = 2;
 			    ;
 		    h__[j + (k + 1) * h_dim1] -= refsum;
 		    h__[j + (k + 2) * h_dim1] -= refsum * v[m22 * v_dim1 + 2];
-/* L100: */
 		}
 
 		if (accum) {
@@ -591,7 +559,6 @@ static integer c__2 = 2;
 			u[j + (kms + 1) * u_dim1] -= refsum;
 			u[j + (kms + 2) * u_dim1] -= refsum * v[m22 * v_dim1 
 				+ 2];
-/* L110: */
 		    }
 		} else if (*wantz) {
 		    i__4 = *ihiz;
@@ -602,7 +569,6 @@ static integer c__2 = 2;
 			z__[j + (k + 1) * z_dim1] -= refsum;
 			z__[j + (k + 2) * z_dim1] -= refsum * v[m22 * v_dim1 
 				+ 2];
-/* L120: */
 		    }
 		}
 	    }
@@ -699,7 +665,6 @@ static integer c__2 = 2;
 			}
 		    }
 		}
-/* L130: */
 	    }
 
 /*           ==== Fill in the last row of each bulge. ==== */
@@ -715,12 +680,10 @@ static integer c__2 = 2;
 		h__[k + 4 + (k + 1) * h_dim1] = -refsum;
 		h__[k + 4 + (k + 2) * h_dim1] = -refsum * v[m * v_dim1 + 2];
 		h__[k + 4 + (k + 3) * h_dim1] -= refsum * v[m * v_dim1 + 3];
-/* L140: */
 	    }
 
 /*           ==== End of near-the-diagonal bulge chase. ==== */
 
-/* L150: */
 	}
 
 /*        ==== Use U (if accumulated) to update far-from-diagonal */
@@ -767,7 +730,6 @@ static integer c__2 = 2;
 			    ldh, &c_b7, &wh[wh_offset], ldwh);
 		    dlacpy_("ALL", &nu, &jlen, &wh[wh_offset], ldwh, &h__[
 			    incol + k1 + jcol * h_dim1], ldh);
-/* L160: */
 		}
 
 /*              ==== Vertical multiply ==== */
@@ -784,7 +746,6 @@ static integer c__2 = 2;
 			    ldu, &c_b7, &wv[wv_offset], ldwv);
 		    dlacpy_("ALL", &jlen, &nu, &wv[wv_offset], ldwv, &h__[
 			    jrow + (incol + k1) * h_dim1], ldh);
-/* L170: */
 		}
 
 /*              ==== Z multiply (also vertical) ==== */
@@ -803,7 +764,6 @@ static integer c__2 = 2;
 			dlacpy_("ALL", &jlen, &nu, &wv[wv_offset], ldwv, &z__[
 				jrow + (incol + k1) * z_dim1], ldz)
 				;
-/* L180: */
 		    }
 		}
 	    } else {
@@ -877,7 +837,6 @@ static integer c__2 = 2;
 
 		    dlacpy_("ALL", &kdu, &jlen, &wh[wh_offset], ldwh, &h__[
 			    incol + 1 + jcol * h_dim1], ldh);
-/* L190: */
 		}
 
 /*              ==== Vertical multiply ==== */
@@ -935,7 +894,6 @@ static integer c__2 = 2;
 
 		    dlacpy_("ALL", &jlen, &kdu, &wv[wv_offset], ldwv, &h__[
 			    jrow + (incol + 1) * h_dim1], ldh);
-/* L200: */
 		}
 
 /*              ==== Multiply Z (also vertical) ==== */
@@ -996,12 +954,10 @@ static integer c__2 = 2;
 
 			dlacpy_("ALL", &jlen, &kdu, &wv[wv_offset], ldwv, &
 				z__[jrow + (incol + 1) * z_dim1], ldz);
-/* L210: */
 		    }
 		}
 	    }
 	}
-/* L220: */
     }
 
 /*     ==== End of DLAQR5 ==== */

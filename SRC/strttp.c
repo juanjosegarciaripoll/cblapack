@@ -23,19 +23,12 @@
     integer i__, j, k;
     logical lower;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
 /*  -- Contributed by Fred Gustavson of the IBM Watson Research Center -- */
 /*  --            and Julien Langou of the Univ. of Colorado Denver    -- */
 /*  -- November 2008 -- */
 
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -77,16 +70,6 @@
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 

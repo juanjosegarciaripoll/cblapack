@@ -44,15 +44,8 @@ static doublereal c_b32 = 1.;
     integer nmaxit;
     doublereal ssfmax;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -83,18 +76,6 @@ static doublereal c_b32 = 1.;
 /*                elements of E have not converged to zero. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -154,7 +135,6 @@ L10:
 	    e[m] = 0.;
 	    goto L30;
 	}
-/* L20: */
     }
     m = *n;
 
@@ -196,7 +176,6 @@ L30:
 /* Computing 2nd power */
 	d__1 = e[i__];
 	e[i__] = d__1 * d__1;
-/* L40: */
     }
 
 /*     Choose between QL and QR iteration */
@@ -220,7 +199,6 @@ L50:
 			+ 1], abs(d__1))) {
 		    goto L70;
 		}
-/* L60: */
 	    }
 	}
 	m = lend;
@@ -288,7 +266,6 @@ L70:
 	    } else {
 		p = oldc * bb;
 	    }
-/* L80: */
 	}
 
 	e[l] = s * p;
@@ -319,7 +296,6 @@ L100:
 		    - 1], abs(d__1))) {
 		goto L120;
 	    }
-/* L110: */
 	}
 	m = lend;
 
@@ -386,7 +362,6 @@ L120:
 	    } else {
 		p = oldc * bb;
 	    }
-/* L130: */
 	}
 
 	e[l - 1] = s * p;
@@ -431,7 +406,6 @@ L150:
 	if (e[i__] != 0.) {
 	    ++(*info);
 	}
-/* L160: */
     }
     goto L180;
 

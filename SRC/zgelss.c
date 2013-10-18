@@ -49,15 +49,8 @@ static doublereal c_b78 = 0.;
     integer irwork;
     logical lquery;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -146,20 +139,6 @@ static doublereal c_b78 = 0.;
 /*                bidiagonal form did not converge to zero. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input arguments */
 
@@ -476,7 +455,6 @@ static doublereal c_b78 = 0.;
 	    } else {
 		zlaset_("F", &c__1, nrhs, &c_b1, &c_b1, &b[i__ + b_dim1], ldb);
 	    }
-/* L10: */
 	}
 
 /*        Multiply B by right singular vectors */
@@ -499,7 +477,6 @@ static doublereal c_b78 = 0.;
 		zgemm_("C", "N", n, &bl, n, &c_b2, &a[a_offset], lda, &b[i__ *
 			 b_dim1 + 1], ldb, &c_b1, &work[1], n);
 		zlacpy_("G", n, &bl, &work[1], n, &b[i__ * b_dim1 + 1], ldb);
-/* L20: */
 	    }
 	} else {
 	    zgemv_("C", n, n, &c_b2, &a[a_offset], lda, &b[b_offset], &c__1, &
@@ -605,7 +582,6 @@ static doublereal c_b78 = 0.;
 		    zlaset_("F", &c__1, nrhs, &c_b1, &c_b1, &b[i__ + b_dim1], 
 			    ldb);
 		}
-/* L30: */
 	    }
 	    iwork = il + *m * ldwork;
 
@@ -630,7 +606,6 @@ static doublereal c_b78 = 0.;
 			    i__ * b_dim1 + 1], ldb, &c_b1, &work[iwork], m);
 		    zlacpy_("G", m, &bl, &work[iwork], m, &b[i__ * b_dim1 + 1]
 , ldb);
-/* L40: */
 		}
 	    } else {
 		zgemv_("C", m, m, &c_b2, &work[il], &ldwork, &b[b_dim1 + 1], &
@@ -718,7 +693,6 @@ static doublereal c_b78 = 0.;
 		    zlaset_("F", &c__1, nrhs, &c_b1, &c_b1, &b[i__ + b_dim1], 
 			    ldb);
 		}
-/* L50: */
 	    }
 
 /*        Multiply B by right singular vectors of A */
@@ -742,7 +716,6 @@ static doublereal c_b78 = 0.;
 			    i__ * b_dim1 + 1], ldb, &c_b1, &work[1], n);
 		    zlacpy_("F", n, &bl, &work[1], n, &b[i__ * b_dim1 + 1], 
 			    ldb);
-/* L60: */
 		}
 	    } else {
 		zgemv_("C", m, n, &c_b2, &a[a_offset], lda, &b[b_offset], &

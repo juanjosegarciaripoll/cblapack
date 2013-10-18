@@ -23,15 +23,8 @@
     /* Local variables */
     integer i__, j;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -73,12 +66,6 @@
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Quick return if possible */
 
     /* Parameter adjustments */
@@ -108,7 +95,6 @@
 	i__2 = *n;
 	for (i__ = 2; i__ <= i__2; ++i__) {
 	    b[i__ + j * b_dim1] -= b[i__ - 1 + j * b_dim1] * e[i__ - 1];
-/* L10: */
 	}
 
 /*           Solve D * L' * x = b. */
@@ -117,9 +103,7 @@
 	for (i__ = *n - 1; i__ >= 1; --i__) {
 	    b[i__ + j * b_dim1] = b[i__ + j * b_dim1] / d__[i__] - b[i__ + 1 
 		    + j * b_dim1] * e[i__];
-/* L20: */
 	}
-/* L30: */
     }
 
     return 0;

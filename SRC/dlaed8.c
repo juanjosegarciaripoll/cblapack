@@ -37,15 +37,8 @@ static integer c__1 = 1;
     doublereal eps, tau, tol;
     integer jlam, imax, jmax;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -172,19 +165,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input parameters. */
 
     /* Parameter adjustments */
@@ -247,7 +227,6 @@ static integer c__1 = 1;
     i__1 = *n;
     for (j = 1; j <= i__1; ++j) {
 	indx[j] = j;
-/* L10: */
     }
     dscal_(n, &t, &z__[1], &c__1);
     *rho = (d__1 = *rho * 2., abs(d__1));
@@ -257,13 +236,11 @@ static integer c__1 = 1;
     i__1 = *n;
     for (i__ = *cutpnt + 1; i__ <= i__1; ++i__) {
 	indxq[i__] += *cutpnt;
-/* L20: */
     }
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	dlamda[i__] = d__[indxq[i__]];
 	w[i__] = z__[indxq[i__]];
-/* L30: */
     }
     i__ = 1;
     j = *cutpnt + 1;
@@ -272,7 +249,6 @@ static integer c__1 = 1;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	d__[i__] = dlamda[indx[i__]];
 	z__[i__] = w[indx[i__]];
-/* L40: */
     }
 
 /*     Calculate the allowable deflation tolerence */
@@ -292,7 +268,6 @@ static integer c__1 = 1;
 	    i__1 = *n;
 	    for (j = 1; j <= i__1; ++j) {
 		perm[j] = indxq[indx[j]];
-/* L50: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -300,7 +275,6 @@ static integer c__1 = 1;
 		perm[j] = indxq[indx[j]];
 		dcopy_(qsiz, &q[perm[j] * q_dim1 + 1], &c__1, &q2[j * q2_dim1 
 			+ 1], &c__1);
-/* L60: */
 	    }
 	    dlacpy_("A", qsiz, n, &q2[q2_dim1 + 1], ldq2, &q[q_dim1 + 1], ldq);
 	}
@@ -331,7 +305,6 @@ static integer c__1 = 1;
 	    jlam = j;
 	    goto L80;
 	}
-/* L70: */
     }
 L80:
     ++j;
@@ -426,7 +399,6 @@ L110:
 	    jp = indxp[j];
 	    dlamda[j] = d__[jp];
 	    perm[j] = indxq[indx[jp]];
-/* L120: */
 	}
     } else {
 	i__1 = *n;
@@ -436,7 +408,6 @@ L110:
 	    perm[j] = indxq[indx[jp]];
 	    dcopy_(qsiz, &q[perm[j] * q_dim1 + 1], &c__1, &q2[j * q2_dim1 + 1]
 , &c__1);
-/* L130: */
 	}
     }
 

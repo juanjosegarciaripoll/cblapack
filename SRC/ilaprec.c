@@ -20,12 +20,8 @@ integer ilaprec_(char *prec)
 
     /* Local variables */
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     October 2008 */
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -48,11 +44,6 @@ integer ilaprec_(char *prec)
 /*          = 'X', 'E':  Extra */
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
     if (lsame_(prec, "S")) {
 	ret_val = 211;
     } else if (lsame_(prec, "D")) {

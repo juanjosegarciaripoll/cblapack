@@ -44,15 +44,8 @@ static integer c__1 = 1;
     logical wantx;
     logical update;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -127,18 +120,6 @@ static integer c__1 = 1;
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters */
 
@@ -215,12 +196,7 @@ static integer c__1 = 1;
 
 /*     S is treated as a product of elementary matrices: */
 
-/*     S = S(m)*S(m-1)*...*S(2)*S(1)*S(m+1)*S(m+2)*...*S(n-1)*S(n) */
-
 /*     where S(i) is determined by the i-th row of S. */
-
-/*     In phase 1, the index i takes the values n, n-1, ... , m+1; */
-/*     in phase 2, it takes the values 1, 2, ... , m. */
 
 /*     For each value of i, the current matrix A is updated by forming */
 /*     inv(S(i))**H*A*inv(S(i)). This creates a triangular bulge outside */
@@ -312,7 +288,6 @@ L10:
 		i__3 = i__ - j + ka1 + j * ab_dim1;
 		z__1.r = ab[i__3].r / bii, z__1.i = ab[i__3].i / bii;
 		ab[i__2].r = z__1.r, ab[i__2].i = z__1.i;
-/* L20: */
 	    }
 /* Computing MAX */
 	    i__1 = 1, i__2 = i__ - *ka;
@@ -322,7 +297,6 @@ L10:
 		i__2 = j - i__ + ka1 + i__ * ab_dim1;
 		z__1.r = ab[i__2].r / bii, z__1.i = ab[i__2].i / bii;
 		ab[i__1].r = z__1.r, ab[i__1].i = z__1.i;
-/* L30: */
 	    }
 	    i__3 = i__ - 1;
 	    for (k = i__ - kbt; k <= i__3; ++k) {
@@ -352,7 +326,6 @@ L10:
 			    z__9.r * z__10.i + z__9.i * z__10.r;
 		    z__1.r = z__2.r + z__8.r, z__1.i = z__2.i + z__8.i;
 		    ab[i__2].r = z__1.r, ab[i__2].i = z__1.i;
-/* L40: */
 		}
 /* Computing MAX */
 		i__1 = 1, i__2 = i__ - *ka;
@@ -368,9 +341,7 @@ L10:
 		    z__1.r = ab[i__2].r - z__2.r, z__1.i = ab[i__2].i - 
 			    z__2.i;
 		    ab[i__1].r = z__1.r, ab[i__1].i = z__1.i;
-/* L50: */
 		}
-/* L60: */
 	    }
 	    i__3 = i1;
 	    for (j = i__; j <= i__3; ++j) {
@@ -388,9 +359,7 @@ L10:
 		    z__1.r = ab[i__1].r - z__2.r, z__1.i = ab[i__1].i - 
 			    z__2.i;
 		    ab[i__4].r = z__1.r, ab[i__4].i = z__1.i;
-/* L70: */
 		}
-/* L80: */
 	    }
 
 	    if (wantx) {
@@ -498,7 +467,6 @@ L10:
 		z__1.r = rwork[i__5] * ab[i__6].r, z__1.i = rwork[i__5] * ab[
 			i__6].i;
 		ab[i__1].r = z__1.r, ab[i__1].i = z__1.i;
-/* L90: */
 	    }
 
 /*           generate rotations in 1st set to annihilate elements which */
@@ -517,7 +485,6 @@ L10:
 		    zlartv_(&nr, &ab[ka1 - l + j2 * ab_dim1], &inca, &ab[*ka 
 			    - l + (j2 + 1) * ab_dim1], &inca, &rwork[j2 - m], 
 			    &work[j2 - m], &ka1);
-/* L100: */
 		}
 
 /*              apply rotations in 1st set from both sides to diagonal */
@@ -540,7 +507,6 @@ L10:
 			    ab[l + 1 + (j2 + ka1 - l) * ab_dim1], &inca, &
 			    rwork[j2 - m], &work[j2 - m], &ka1);
 		}
-/* L110: */
 	    }
 
 	    if (wantx) {
@@ -554,10 +520,8 @@ L10:
 		    d_cnjg(&z__1, &work[j - m]);
 		    zrot_(&i__1, &x[m + 1 + j * x_dim1], &c__1, &x[m + 1 + (j 
 			    + 1) * x_dim1], &c__1, &rwork[j - m], &z__1);
-/* L120: */
 		}
 	    }
-/* L130: */
 	}
 
 	if (update) {
@@ -595,7 +559,6 @@ L10:
 			    l + 1 + (j2 - l + 1) * ab_dim1], &inca, &rwork[j2 
 			    - *ka], &work[j2 - *ka], &ka1);
 		}
-/* L140: */
 	    }
 	    nr = (*n - j2 + *ka) / ka1;
 	    j1 = j2 + (nr - 1) * ka1;
@@ -606,7 +569,6 @@ L10:
 		i__1 = j - *ka;
 		work[i__4].r = work[i__1].r, work[i__4].i = work[i__1].i;
 		rwork[j] = rwork[j - *ka];
-/* L150: */
 	    }
 	    i__2 = j1;
 	    i__3 = ka1;
@@ -628,7 +590,6 @@ L10:
 		z__1.r = rwork[i__1] * ab[i__5].r, z__1.i = rwork[i__1] * ab[
 			i__5].i;
 		ab[i__4].r = z__1.r, ab[i__4].i = z__1.i;
-/* L160: */
 	    }
 	    if (update) {
 		if (i__ - k < *n - *ka && k <= kbt) {
@@ -637,7 +598,6 @@ L10:
 		    work[i__3].r = work[i__2].r, work[i__3].i = work[i__2].i;
 		}
 	    }
-/* L170: */
 	}
 
 	for (k = *kb; k >= 1; --k) {
@@ -661,7 +621,6 @@ L10:
 		    zlartv_(&nr, &ab[ka1 - l + j2 * ab_dim1], &inca, &ab[*ka 
 			    - l + (j2 + 1) * ab_dim1], &inca, &rwork[j2], &
 			    work[j2], &ka1);
-/* L180: */
 		}
 
 /*              apply rotations in 2nd set from both sides to diagonal */
@@ -684,7 +643,6 @@ L10:
 			    ab[l + 1 + (j2 + ka1 - l) * ab_dim1], &inca, &
 			    rwork[j2], &work[j2], &ka1);
 		}
-/* L190: */
 	    }
 
 	    if (wantx) {
@@ -698,10 +656,8 @@ L10:
 		    d_cnjg(&z__1, &work[j]);
 		    zrot_(&i__4, &x[m + 1 + j * x_dim1], &c__1, &x[m + 1 + (j 
 			    + 1) * x_dim1], &c__1, &rwork[j], &z__1);
-/* L200: */
 		}
 	    }
-/* L210: */
 	}
 
 	i__2 = *kb - 1;
@@ -719,9 +675,7 @@ L10:
 			    ab[l + 1 + (j2 + ka1 - l) * ab_dim1], &inca, &
 			    rwork[j2 - m], &work[j2 - m], &ka1);
 		}
-/* L220: */
 	    }
-/* L230: */
 	}
 
 	if (*kb > 1) {
@@ -731,7 +685,6 @@ L10:
 		i__3 = j - m;
 		i__4 = j - *ka - m;
 		work[i__3].r = work[i__4].r, work[i__3].i = work[i__4].i;
-/* L240: */
 	    }
 	}
 
@@ -755,7 +708,6 @@ L10:
 		i__4 = j - i__ + 1 + i__ * ab_dim1;
 		z__1.r = ab[i__4].r / bii, z__1.i = ab[i__4].i / bii;
 		ab[i__3].r = z__1.r, ab[i__3].i = z__1.i;
-/* L250: */
 	    }
 /* Computing MAX */
 	    i__2 = 1, i__3 = i__ - *ka;
@@ -765,7 +717,6 @@ L10:
 		i__3 = i__ - j + 1 + j * ab_dim1;
 		z__1.r = ab[i__3].r / bii, z__1.i = ab[i__3].i / bii;
 		ab[i__2].r = z__1.r, ab[i__2].i = z__1.i;
-/* L260: */
 	    }
 	    i__4 = i__ - 1;
 	    for (k = i__ - kbt; k <= i__4; ++k) {
@@ -795,7 +746,6 @@ L10:
 			    z__9.r * z__10.i + z__9.i * z__10.r;
 		    z__1.r = z__2.r + z__8.r, z__1.i = z__2.i + z__8.i;
 		    ab[i__3].r = z__1.r, ab[i__3].i = z__1.i;
-/* L270: */
 		}
 /* Computing MAX */
 		i__2 = 1, i__3 = i__ - *ka;
@@ -811,9 +761,7 @@ L10:
 		    z__1.r = ab[i__3].r - z__2.r, z__1.i = ab[i__3].i - 
 			    z__2.i;
 		    ab[i__2].r = z__1.r, ab[i__2].i = z__1.i;
-/* L280: */
 		}
-/* L290: */
 	    }
 	    i__4 = i1;
 	    for (j = i__; j <= i__4; ++j) {
@@ -831,9 +779,7 @@ L10:
 		    z__1.r = ab[i__2].r - z__2.r, z__1.i = ab[i__2].i - 
 			    z__2.i;
 		    ab[i__1].r = z__1.r, ab[i__1].i = z__1.i;
-/* L300: */
 		}
-/* L310: */
 	    }
 
 	    if (wantx) {
@@ -941,7 +887,6 @@ L10:
 		z__1.r = rwork[i__5] * ab[i__6].r, z__1.i = rwork[i__5] * ab[
 			i__6].i;
 		ab[i__2].r = z__1.r, ab[i__2].i = z__1.i;
-/* L320: */
 	    }
 
 /*           generate rotations in 1st set to annihilate elements which */
@@ -960,7 +905,6 @@ L10:
 		    zlartv_(&nr, &ab[l + 1 + (j2 - l) * ab_dim1], &inca, &ab[
 			    l + 2 + (j2 - l) * ab_dim1], &inca, &rwork[j2 - m]
 , &work[j2 - m], &ka1);
-/* L330: */
 		}
 
 /*              apply rotations in 1st set from both sides to diagonal */
@@ -983,7 +927,6 @@ L10:
 			    ka1 - l + (j2 + 1) * ab_dim1], &inca, &rwork[j2 - 
 			    m], &work[j2 - m], &ka1);
 		}
-/* L340: */
 	    }
 
 	    if (wantx) {
@@ -997,10 +940,8 @@ L10:
 		    zrot_(&i__2, &x[m + 1 + j * x_dim1], &c__1, &x[m + 1 + (j 
 			    + 1) * x_dim1], &c__1, &rwork[j - m], &work[j - m]
 );
-/* L350: */
 		}
 	    }
-/* L360: */
 	}
 
 	if (update) {
@@ -1038,7 +979,6 @@ L10:
 			    inca, &ab[ka1 - l + (j2 - *ka + 1) * ab_dim1], &
 			    inca, &rwork[j2 - *ka], &work[j2 - *ka], &ka1);
 		}
-/* L370: */
 	    }
 	    nr = (*n - j2 + *ka) / ka1;
 	    j1 = j2 + (nr - 1) * ka1;
@@ -1049,7 +989,6 @@ L10:
 		i__2 = j - *ka;
 		work[i__1].r = work[i__2].r, work[i__1].i = work[i__2].i;
 		rwork[j] = rwork[j - *ka];
-/* L380: */
 	    }
 	    i__3 = j1;
 	    i__4 = ka1;
@@ -1071,7 +1010,6 @@ L10:
 		z__1.r = rwork[i__2] * ab[i__5].r, z__1.i = rwork[i__2] * ab[
 			i__5].i;
 		ab[i__1].r = z__1.r, ab[i__1].i = z__1.i;
-/* L390: */
 	    }
 	    if (update) {
 		if (i__ - k < *n - *ka && k <= kbt) {
@@ -1080,7 +1018,6 @@ L10:
 		    work[i__4].r = work[i__3].r, work[i__4].i = work[i__3].i;
 		}
 	    }
-/* L400: */
 	}
 
 	for (k = *kb; k >= 1; --k) {
@@ -1104,7 +1041,6 @@ L10:
 		    zlartv_(&nr, &ab[l + 1 + (j2 - l) * ab_dim1], &inca, &ab[
 			    l + 2 + (j2 - l) * ab_dim1], &inca, &rwork[j2], &
 			    work[j2], &ka1);
-/* L410: */
 		}
 
 /*              apply rotations in 2nd set from both sides to diagonal */
@@ -1127,7 +1063,6 @@ L10:
 			    ka1 - l + (j2 + 1) * ab_dim1], &inca, &rwork[j2], 
 			    &work[j2], &ka1);
 		}
-/* L420: */
 	    }
 
 	    if (wantx) {
@@ -1140,10 +1075,8 @@ L10:
 		    i__1 = *n - m;
 		    zrot_(&i__1, &x[m + 1 + j * x_dim1], &c__1, &x[m + 1 + (j 
 			    + 1) * x_dim1], &c__1, &rwork[j], &work[j]);
-/* L430: */
 		}
 	    }
-/* L440: */
 	}
 
 	i__3 = *kb - 1;
@@ -1161,9 +1094,7 @@ L10:
 			    ka1 - l + (j2 + 1) * ab_dim1], &inca, &rwork[j2 - 
 			    m], &work[j2 - m], &ka1);
 		}
-/* L450: */
 	    }
-/* L460: */
 	}
 
 	if (*kb > 1) {
@@ -1173,7 +1104,6 @@ L10:
 		i__4 = j - m;
 		i__1 = j - *ka - m;
 		work[i__4].r = work[i__1].r, work[i__4].i = work[i__1].i;
-/* L470: */
 	    }
 	}
 
@@ -1254,7 +1184,6 @@ L490:
 		i__1 = j - i__ + ka1 + i__ * ab_dim1;
 		z__1.r = ab[i__1].r / bii, z__1.i = ab[i__1].i / bii;
 		ab[i__4].r = z__1.r, ab[i__4].i = z__1.i;
-/* L500: */
 	    }
 /* Computing MIN */
 	    i__4 = *n, i__1 = i__ + *ka;
@@ -1264,7 +1193,6 @@ L490:
 		i__1 = i__ - j + ka1 + j * ab_dim1;
 		z__1.r = ab[i__1].r / bii, z__1.i = ab[i__1].i / bii;
 		ab[i__4].r = z__1.r, ab[i__4].i = z__1.i;
-/* L510: */
 	    }
 	    i__3 = i__ + kbt;
 	    for (k = i__ + 1; k <= i__3; ++k) {
@@ -1294,7 +1222,6 @@ L490:
 			    z__9.r * z__10.i + z__9.i * z__10.r;
 		    z__1.r = z__2.r + z__8.r, z__1.i = z__2.i + z__8.i;
 		    ab[i__1].r = z__1.r, ab[i__1].i = z__1.i;
-/* L520: */
 		}
 /* Computing MIN */
 		i__1 = *n, i__2 = i__ + *ka;
@@ -1310,9 +1237,7 @@ L490:
 		    z__1.r = ab[i__2].r - z__2.r, z__1.i = ab[i__2].i - 
 			    z__2.i;
 		    ab[i__1].r = z__1.r, ab[i__1].i = z__1.i;
-/* L530: */
 		}
-/* L540: */
 	    }
 	    i__3 = i__;
 	    for (j = i1; j <= i__3; ++j) {
@@ -1330,9 +1255,7 @@ L490:
 		    z__1.r = ab[i__2].r - z__2.r, z__1.i = ab[i__2].i - 
 			    z__2.i;
 		    ab[i__1].r = z__1.r, ab[i__1].i = z__1.i;
-/* L550: */
 		}
-/* L560: */
 	    }
 
 	    if (wantx) {
@@ -1437,7 +1360,6 @@ L490:
 		z__1.r = rwork[i__5] * ab[i__6].r, z__1.i = rwork[i__5] * ab[
 			i__6].i;
 		ab[i__2].r = z__1.r, ab[i__2].i = z__1.i;
-/* L570: */
 	    }
 
 /*           generate rotations in 1st set to annihilate elements which */
@@ -1456,7 +1378,6 @@ L490:
 		    zlartv_(&nr, &ab[ka1 - l + (j1 + l) * ab_dim1], &inca, &
 			    ab[*ka - l + (j1 + l) * ab_dim1], &inca, &rwork[
 			    j1], &work[j1], &ka1);
-/* L580: */
 		}
 
 /*              apply rotations in 1st set from both sides to diagonal */
@@ -1480,7 +1401,6 @@ L490:
 			    j1t - 1) * ab_dim1], &inca, &rwork[j1t], &work[
 			    j1t], &ka1);
 		}
-/* L590: */
 	    }
 
 	    if (wantx) {
@@ -1492,10 +1412,8 @@ L490:
 		for (j = j1; i__4 < 0 ? j >= i__1 : j <= i__1; j += i__4) {
 		    zrot_(&nx, &x[j * x_dim1 + 1], &c__1, &x[(j - 1) * x_dim1 
 			    + 1], &c__1, &rwork[j], &work[j]);
-/* L600: */
 		}
 	    }
-/* L610: */
 	}
 
 	if (update) {
@@ -1535,7 +1453,6 @@ L490:
 			    m - *kb + j1t + *ka], &work[m - *kb + j1t + *ka], 
 			    &ka1);
 		}
-/* L620: */
 	    }
 	    nr = (j2 + *ka - 1) / ka1;
 	    j1 = j2 - (nr - 1) * ka1;
@@ -1546,7 +1463,6 @@ L490:
 		i__2 = m - *kb + j + *ka;
 		work[i__1].r = work[i__2].r, work[i__1].i = work[i__2].i;
 		rwork[m - *kb + j] = rwork[m - *kb + j + *ka];
-/* L630: */
 	    }
 	    i__4 = j2;
 	    i__3 = ka1;
@@ -1568,7 +1484,6 @@ L490:
 		z__1.r = rwork[i__2] * ab[i__5].r, z__1.i = rwork[i__2] * ab[
 			i__5].i;
 		ab[i__1].r = z__1.r, ab[i__1].i = z__1.i;
-/* L640: */
 	    }
 	    if (update) {
 		if (i__ + k > ka1 && k <= kbt) {
@@ -1577,7 +1492,6 @@ L490:
 		    work[i__3].r = work[i__4].r, work[i__3].i = work[i__4].i;
 		}
 	    }
-/* L650: */
 	}
 
 	for (k = *kb; k >= 1; --k) {
@@ -1601,7 +1515,6 @@ L490:
 		    zlartv_(&nr, &ab[ka1 - l + (j1 + l) * ab_dim1], &inca, &
 			    ab[*ka - l + (j1 + l) * ab_dim1], &inca, &rwork[m 
 			    - *kb + j1], &work[m - *kb + j1], &ka1);
-/* L660: */
 		}
 
 /*              apply rotations in 2nd set from both sides to diagonal */
@@ -1625,7 +1538,6 @@ L490:
 			    j1t - 1) * ab_dim1], &inca, &rwork[m - *kb + j1t], 
 			     &work[m - *kb + j1t], &ka1);
 		}
-/* L670: */
 	    }
 
 	    if (wantx) {
@@ -1638,10 +1550,8 @@ L490:
 		    zrot_(&nx, &x[j * x_dim1 + 1], &c__1, &x[(j - 1) * x_dim1 
 			    + 1], &c__1, &rwork[m - *kb + j], &work[m - *kb + 
 			    j]);
-/* L680: */
 		}
 	    }
-/* L690: */
 	}
 
 	i__4 = *kb - 1;
@@ -1660,9 +1570,7 @@ L490:
 			    j1t - 1) * ab_dim1], &inca, &rwork[j1t], &work[
 			    j1t], &ka1);
 		}
-/* L700: */
 	    }
-/* L710: */
 	}
 
 	if (*kb > 1) {
@@ -1672,7 +1580,6 @@ L490:
 		i__3 = j;
 		i__1 = j + *ka;
 		work[i__3].r = work[i__1].r, work[i__3].i = work[i__1].i;
-/* L720: */
 	    }
 	}
 
@@ -1696,7 +1603,6 @@ L490:
 		i__1 = i__ - j + 1 + j * ab_dim1;
 		z__1.r = ab[i__1].r / bii, z__1.i = ab[i__1].i / bii;
 		ab[i__3].r = z__1.r, ab[i__3].i = z__1.i;
-/* L730: */
 	    }
 /* Computing MIN */
 	    i__3 = *n, i__1 = i__ + *ka;
@@ -1706,7 +1612,6 @@ L490:
 		i__1 = j - i__ + 1 + i__ * ab_dim1;
 		z__1.r = ab[i__1].r / bii, z__1.i = ab[i__1].i / bii;
 		ab[i__3].r = z__1.r, ab[i__3].i = z__1.i;
-/* L740: */
 	    }
 	    i__4 = i__ + kbt;
 	    for (k = i__ + 1; k <= i__4; ++k) {
@@ -1736,7 +1641,6 @@ L490:
 			    z__9.r * z__10.i + z__9.i * z__10.r;
 		    z__1.r = z__2.r + z__8.r, z__1.i = z__2.i + z__8.i;
 		    ab[i__1].r = z__1.r, ab[i__1].i = z__1.i;
-/* L750: */
 		}
 /* Computing MIN */
 		i__1 = *n, i__2 = i__ + *ka;
@@ -1752,9 +1656,7 @@ L490:
 		    z__1.r = ab[i__2].r - z__2.r, z__1.i = ab[i__2].i - 
 			    z__2.i;
 		    ab[i__1].r = z__1.r, ab[i__1].i = z__1.i;
-/* L760: */
 		}
-/* L770: */
 	    }
 	    i__4 = i__;
 	    for (j = i1; j <= i__4; ++j) {
@@ -1772,9 +1674,7 @@ L490:
 		    z__1.r = ab[i__2].r - z__2.r, z__1.i = ab[i__2].i - 
 			    z__2.i;
 		    ab[i__1].r = z__1.r, ab[i__1].i = z__1.i;
-/* L780: */
 		}
-/* L790: */
 	    }
 
 	    if (wantx) {
@@ -1878,7 +1778,6 @@ L490:
 		z__1.r = rwork[i__5] * ab[i__6].r, z__1.i = rwork[i__5] * ab[
 			i__6].i;
 		ab[i__2].r = z__1.r, ab[i__2].i = z__1.i;
-/* L800: */
 	    }
 
 /*           generate rotations in 1st set to annihilate elements which */
@@ -1897,7 +1796,6 @@ L490:
 		    zlartv_(&nr, &ab[l + 1 + j1 * ab_dim1], &inca, &ab[l + 2 
 			    + (j1 - 1) * ab_dim1], &inca, &rwork[j1], &work[
 			    j1], &ka1);
-/* L810: */
 		}
 
 /*              apply rotations in 1st set from both sides to diagonal */
@@ -1921,7 +1819,6 @@ L490:
 , &inca, &ab[ka1 - l + (j1t - ka1 + l) * ab_dim1], 
 			     &inca, &rwork[j1t], &work[j1t], &ka1);
 		}
-/* L820: */
 	    }
 
 	    if (wantx) {
@@ -1934,10 +1831,8 @@ L490:
 		    d_cnjg(&z__1, &work[j]);
 		    zrot_(&nx, &x[j * x_dim1 + 1], &c__1, &x[(j - 1) * x_dim1 
 			    + 1], &c__1, &rwork[j], &z__1);
-/* L830: */
 		}
 	    }
-/* L840: */
 	}
 
 	if (update) {
@@ -1977,7 +1872,6 @@ L490:
 			    inca, &rwork[m - *kb + j1t + *ka], &work[m - *kb 
 			    + j1t + *ka], &ka1);
 		}
-/* L850: */
 	    }
 	    nr = (j2 + *ka - 1) / ka1;
 	    j1 = j2 - (nr - 1) * ka1;
@@ -1988,7 +1882,6 @@ L490:
 		i__2 = m - *kb + j + *ka;
 		work[i__1].r = work[i__2].r, work[i__1].i = work[i__2].i;
 		rwork[m - *kb + j] = rwork[m - *kb + j + *ka];
-/* L860: */
 	    }
 	    i__3 = j2;
 	    i__4 = ka1;
@@ -2010,7 +1903,6 @@ L490:
 		z__1.r = rwork[i__2] * ab[i__5].r, z__1.i = rwork[i__2] * ab[
 			i__5].i;
 		ab[i__1].r = z__1.r, ab[i__1].i = z__1.i;
-/* L870: */
 	    }
 	    if (update) {
 		if (i__ + k > ka1 && k <= kbt) {
@@ -2019,7 +1911,6 @@ L490:
 		    work[i__4].r = work[i__3].r, work[i__4].i = work[i__3].i;
 		}
 	    }
-/* L880: */
 	}
 
 	for (k = *kb; k >= 1; --k) {
@@ -2043,7 +1934,6 @@ L490:
 		    zlartv_(&nr, &ab[l + 1 + j1 * ab_dim1], &inca, &ab[l + 2 
 			    + (j1 - 1) * ab_dim1], &inca, &rwork[m - *kb + j1]
 , &work[m - *kb + j1], &ka1);
-/* L890: */
 		}
 
 /*              apply rotations in 2nd set from both sides to diagonal */
@@ -2068,7 +1958,6 @@ L490:
 			     &inca, &rwork[m - *kb + j1t], &work[m - *kb + 
 			    j1t], &ka1);
 		}
-/* L900: */
 	    }
 
 	    if (wantx) {
@@ -2081,10 +1970,8 @@ L490:
 		    d_cnjg(&z__1, &work[m - *kb + j]);
 		    zrot_(&nx, &x[j * x_dim1 + 1], &c__1, &x[(j - 1) * x_dim1 
 			    + 1], &c__1, &rwork[m - *kb + j], &z__1);
-/* L910: */
 		}
 	    }
-/* L920: */
 	}
 
 	i__3 = *kb - 1;
@@ -2103,9 +1990,7 @@ L490:
 , &inca, &ab[ka1 - l + (j1t - ka1 + l) * ab_dim1], 
 			     &inca, &rwork[j1t], &work[j1t], &ka1);
 		}
-/* L930: */
 	    }
-/* L940: */
 	}
 
 	if (*kb > 1) {
@@ -2115,7 +2000,6 @@ L490:
 		i__4 = j;
 		i__1 = j + *ka;
 		work[i__4].r = work[i__1].r, work[i__4].i = work[i__1].i;
-/* L950: */
 	    }
 	}
 

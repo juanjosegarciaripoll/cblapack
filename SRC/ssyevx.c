@@ -52,15 +52,8 @@ static integer c_n1 = -1;
     integer lwkopt;
     logical lquery;
 
-
 /*  -- LAPACK driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -194,18 +187,6 @@ static integer c_n1 = -1;
 /*                Their indices are stored in array IFAIL. */
 
 /* ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -345,13 +326,11 @@ static integer c_n1 = -1;
 	    for (j = 1; j <= i__1; ++j) {
 		i__2 = *n - j + 1;
 		sscal_(&i__2, &sigma, &a[j + j * a_dim1], &c__1);
-/* L10: */
 	    }
 	} else {
 	    i__1 = *n;
 	    for (j = 1; j <= i__1; ++j) {
 		sscal_(&j, &sigma, &a[j * a_dim1 + 1], &c__1);
-/* L20: */
 	    }
 	}
 	if (*abstol > 0.f) {
@@ -402,7 +381,6 @@ static integer c_n1 = -1;
 		i__1 = *n;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    ifail[i__] = 0;
-/* L30: */
 		}
 	    }
 	}
@@ -468,7 +446,6 @@ L40:
 		    i__ = jj;
 		    tmp1 = w[jj];
 		}
-/* L50: */
 	    }
 
 	    if (i__ != 0) {
@@ -485,7 +462,6 @@ L40:
 		    ifail[j] = itmp1;
 		}
 	    }
-/* L60: */
 	}
     }
 

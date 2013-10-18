@@ -40,15 +40,8 @@ static real c_b43 = -1.f;
     logical wantu, wantv;
     integer kcycle;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -102,8 +95,6 @@ static real c_b43 = -1.f;
 
 /*  where */
 
-/*    C = diag( ALPHA(K+1), ... , ALPHA(K+L) ), */
-/*    S = diag( BETA(K+1),  ... , BETA(K+L) ), */
 /*    C**2 + S**2 = I. */
 
 /*    R is stored in A(1:K+L,N-K-L+1:N) on exit. */
@@ -125,8 +116,6 @@ static real c_b43 = -1.f;
 /*          K+L-M ( 0     0    0   R33  ) */
 
 /*  where */
-/*  C = diag( ALPHA(K+1), ... , ALPHA(M) ), */
-/*  S = diag( BETA(K+1),  ... , BETA(M) ), */
 /*  C**2 + S**2 = I. */
 
 /*  R = ( R11 R12 R13 ) is stored in A(1:M, N-K-L+1:N) and R33 is stored */
@@ -288,19 +277,6 @@ static real c_b43 = -1.f;
 /*  and R1 is an L-by-L nonsingular upper triangular matrix. */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Decode and test the input parameters */
 
@@ -471,9 +447,7 @@ static real c_b43 = -1.f;
 			    l + i__) * q_dim1 + 1], &c__1, &csq, &snq);
 		}
 
-/* L10: */
 	    }
-/* L20: */
 	}
 
 	if (! upper) {
@@ -498,7 +472,6 @@ static real c_b43 = -1.f;
 		i__2 = *l - i__ + 1;
 		slapll_(&i__2, &work[1], &c__1, &work[*l + 1], &c__1, &ssmin);
 		error = dmax(error,ssmin);
-/* L30: */
 	    }
 
 	    if (dabs(error) <= dmin(*tola,*tolb)) {
@@ -508,7 +481,6 @@ static real c_b43 = -1.f;
 
 /*        End of cycle loop */
 
-/* L40: */
     }
 
 /*     The algorithm has not converged after MAXIT cycles. */
@@ -526,7 +498,6 @@ L50:
     for (i__ = 1; i__ <= i__1; ++i__) {
 	alpha[i__] = 1.f;
 	beta[i__] = 0.f;
-/* L60: */
     }
 
 /* Computing MIN */
@@ -578,7 +549,6 @@ L50:
 
 	}
 
-/* L70: */
     }
 
 /*     Post-assignment */
@@ -587,7 +557,6 @@ L50:
     for (i__ = *m + 1; i__ <= i__1; ++i__) {
 	alpha[i__] = 0.f;
 	beta[i__] = 1.f;
-/* L80: */
     }
 
     if (*k + *l < *n) {
@@ -595,7 +564,6 @@ L50:
 	for (i__ = *k + *l + 1; i__ <= i__1; ++i__) {
 	    alpha[i__] = 0.f;
 	    beta[i__] = 0.f;
-/* L90: */
 	}
     }
 

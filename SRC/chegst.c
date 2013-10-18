@@ -32,15 +32,8 @@ static real c_b18 = 1.f;
     integer k, kb, nb;
     logical upper;
 
-
 /*  -- LAPACK routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -99,18 +92,6 @@ static real c_b18 = 1.f;
 /*          < 0:  if INFO = -i, the i-th argument had an illegal value */
 
 /*  ===================================================================== */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
 
 /*     Test the input parameters. */
 
@@ -204,7 +185,6 @@ static real c_b18 = 1.f;
 				 &i__3, &c_b1, &b[k + kb + (k + kb) * b_dim1], 
 				 ldb, &a[k + (k + kb) * a_dim1], lda);
 		    }
-/* L10: */
 		}
 	    } else {
 
@@ -247,7 +227,6 @@ static real c_b18 = 1.f;
 				i__3, &kb, &c_b1, &b[k + kb + (k + kb) * 
 				b_dim1], ldb, &a[k + kb + k * a_dim1], lda);
 		    }
-/* L20: */
 		}
 	    }
 	} else {
@@ -286,7 +265,6 @@ static real c_b18 = 1.f;
 			    a_dim1 + 1], lda);
 		    chegs2_(itype, uplo, &kb, &a[k + k * a_dim1], lda, &b[k + 
 			    k * b_dim1], ldb, info);
-/* L30: */
 		}
 	    } else {
 
@@ -323,7 +301,6 @@ static real c_b18 = 1.f;
 			    a_dim1], lda);
 		    chegs2_(itype, uplo, &kb, &a[k + k * a_dim1], lda, &b[k + 
 			    k * b_dim1], ldb, info);
-/* L40: */
 		}
 	    }
 	}

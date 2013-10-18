@@ -35,7 +35,6 @@ static integer c__0 = 0;
     doublereal sigmx;
     doublereal safmin;
 
-
 /*  -- LAPACK routine (version 3.2)                                    -- */
 
 /*  -- Contributed by Osni Marques of the Lawrence Berkeley National   -- */
@@ -44,12 +43,6 @@ static integer c__0 = 0;
 /*  -- November 2008                                                   -- */
 
 /*  -- LAPACK is a software package provided by Univ. of Tennessee,    -- */
-/*  -- Univ. of California Berkeley, Univ. of Colorado Denver and NAG Ltd..-- */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -97,18 +90,6 @@ static integer c__0 = 0;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --work;
     --e;
@@ -142,7 +123,6 @@ static integer c__0 = 0;
 /* Computing MAX */
 	d__2 = sigmx, d__3 = (d__1 = e[i__], abs(d__1));
 	sigmx = max(d__2,d__3);
-/* L10: */
     }
     d__[*n] = (d__1 = d__[*n], abs(d__1));
 
@@ -158,7 +138,6 @@ static integer c__0 = 0;
 /* Computing MAX */
 	d__1 = sigmx, d__2 = d__[i__];
 	sigmx = max(d__1,d__2);
-/* L20: */
     }
 
 /*     Copy D and E into WORK (in the Z format) and scale (squaring the */
@@ -182,7 +161,6 @@ static integer c__0 = 0;
 /* Computing 2nd power */
 	d__1 = work[i__];
 	work[i__] = d__1 * d__1;
-/* L30: */
     }
     work[*n * 2] = 0.;
 
@@ -192,7 +170,6 @@ static integer c__0 = 0;
 	i__1 = *n;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    d__[i__] = sqrt(work[i__]);
-/* L40: */
 	}
 	dlascl_("G", &c__0, &c__0, &scale, &sigmx, n, &c__1, &d__[1], n, &
 		iinfo);

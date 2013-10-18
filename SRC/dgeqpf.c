@@ -32,15 +32,8 @@ static integer c__1 = 1;
     doublereal temp2, tol3z;
     integer itemp;
 
-
 /*  -- LAPACK deprecated driver routine (version 3.2) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -112,18 +105,6 @@ static integer c__1 = 1;
 
 /*  ===================================================================== */
 
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 /*     Test the input arguments */
 
     /* Parameter adjustments */
@@ -170,7 +151,6 @@ static integer c__1 = 1;
 	} else {
 	    jpvt[i__] = i__;
 	}
-/* L10: */
     }
     --itemp;
 
@@ -196,7 +176,6 @@ static integer c__1 = 1;
 	    i__2 = *m - itemp;
 	    work[i__] = dnrm2_(&i__2, &a[itemp + 1 + i__ * a_dim1], &c__1);
 	    work[*n + i__] = work[i__];
-/* L20: */
 	}
 
 /*        Compute factorization */
@@ -274,10 +253,8 @@ static integer c__1 = 1;
 			work[j] *= sqrt(temp);
 		    }
 		}
-/* L30: */
 	    }
 
-/* L40: */
 	}
     }
     return 0;
