@@ -46,10 +46,7 @@ static integer c__1 = 1;
     doublecomplex a[1]	/* was [1][1] */, b[1]	/* was [1][1] */, beta;
     integer info;
     doublecomplex alpha;
-    extern /* Subroutine */ int zhfrk_(char *, char *, char *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, doublecomplex *), ztfsm_(
-	    char *, char *, char *, char *, char *, integer *, integer *, 
+    extern ztfsm_(char *, char *, char *, char *, char *, integer *, integer *, 
 	    doublecomplex *, doublecomplex *, doublecomplex *, integer *), chkxer_(char *, integer *
 , integer *, logical *, logical *), zpftrf_(char *, char *
 , integer *, doublecomplex *, integer *), zpftri_(
@@ -315,27 +312,27 @@ static integer c__1 = 1;
 
     s_copy(srnamc_1.srnamt, "ZHFRK ", (ftnlen)32, (ftnlen)6);
     infoc_1.infot = 1;
-    zhfrk_("/", "U", "N", &c__0, &c__0, &alpha, a, &c__1, &beta, b);
+    zhfrk_("/", "U", "N", &c__0, &c__0, &alpha.r, a, &c__1, &beta, b);
     chkxer_("ZHFRK ", &infoc_1.infot, &infoc_1.nout, &infoc_1.lerr, &
 	    infoc_1.ok);
     infoc_1.infot = 2;
-    zhfrk_("N", "/", "N", &c__0, &c__0, &alpha, a, &c__1, &beta, b);
+    zhfrk_("N", "/", "N", &c__0, &c__0, &alpha.r, a, &c__1, &beta, b);
     chkxer_("ZHFRK ", &infoc_1.infot, &infoc_1.nout, &infoc_1.lerr, &
 	    infoc_1.ok);
     infoc_1.infot = 3;
-    zhfrk_("N", "U", "/", &c__0, &c__0, &alpha, a, &c__1, &beta, b);
+    zhfrk_("N", "U", "/", &c__0, &c__0, &alpha.r, a, &c__1, &beta, b);
     chkxer_("ZHFRK ", &infoc_1.infot, &infoc_1.nout, &infoc_1.lerr, &
 	    infoc_1.ok);
     infoc_1.infot = 4;
-    zhfrk_("N", "U", "N", &c_n1, &c__0, &alpha, a, &c__1, &beta, b);
+    zhfrk_("N", "U", "N", &c_n1, &c__0, &alpha.r, a, &c__1, &beta, b);
     chkxer_("ZHFRK ", &infoc_1.infot, &infoc_1.nout, &infoc_1.lerr, &
 	    infoc_1.ok);
     infoc_1.infot = 5;
-    zhfrk_("N", "U", "N", &c__0, &c_n1, &alpha, a, &c__1, &beta, b);
+    zhfrk_("N", "U", "N", &c__0, &c_n1, &alpha.r, a, &c__1, &beta, b);
     chkxer_("ZHFRK ", &infoc_1.infot, &infoc_1.nout, &infoc_1.lerr, &
 	    infoc_1.ok);
     infoc_1.infot = 8;
-    zhfrk_("N", "U", "N", &c__0, &c__0, &alpha, a, &c__0, &beta, b);
+    zhfrk_("N", "U", "N", &c__0, &c__0, &alpha.r, a, &c__0, &beta, b);
     chkxer_("ZHFRK ", &infoc_1.infot, &infoc_1.nout, &infoc_1.lerr, &
 	    infoc_1.ok);
 

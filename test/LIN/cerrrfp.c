@@ -46,8 +46,7 @@ static integer c__1 = 1;
     complex a[1]	/* was [1][1] */, b[1]	/* was [1][1] */, beta;
     integer info;
     complex alpha;
-    extern /* Subroutine */ int chfrk_(char *, char *, char *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, complex *), ctfsm_(char *, char *, char *, char *, 
+    extern /* Subroutine */ int ctfsm_(char *, char *, char *, char *, 
 	    char *, integer *, integer *, complex *, complex *, complex *, 
 	    integer *), chkxer_(char *
 , integer *, integer *, logical *, logical *), cpftrf_(
@@ -313,27 +312,27 @@ static integer c__1 = 1;
 
     s_copy(srnamc_1.srnamt, "CHFRK ", (ftnlen)32, (ftnlen)6);
     infoc_1.infot = 1;
-    chfrk_("/", "U", "N", &c__0, &c__0, &alpha, a, &c__1, &beta, b);
+    chfrk_("/", "U", "N", &c__0, &c__0, &alpha.r, a, &c__1, &beta, b);
     chkxer_("CHFRK ", &infoc_1.infot, &infoc_1.nout, &infoc_1.lerr, &
 	    infoc_1.ok);
     infoc_1.infot = 2;
-    chfrk_("N", "/", "N", &c__0, &c__0, &alpha, a, &c__1, &beta, b);
+    chfrk_("N", "/", "N", &c__0, &c__0, &alpha.r, a, &c__1, &beta, b);
     chkxer_("CHFRK ", &infoc_1.infot, &infoc_1.nout, &infoc_1.lerr, &
 	    infoc_1.ok);
     infoc_1.infot = 3;
-    chfrk_("N", "U", "/", &c__0, &c__0, &alpha, a, &c__1, &beta, b);
+    chfrk_("N", "U", "/", &c__0, &c__0, &alpha.r, a, &c__1, &beta, b);
     chkxer_("CHFRK ", &infoc_1.infot, &infoc_1.nout, &infoc_1.lerr, &
 	    infoc_1.ok);
     infoc_1.infot = 4;
-    chfrk_("N", "U", "N", &c_n1, &c__0, &alpha, a, &c__1, &beta, b);
+    chfrk_("N", "U", "N", &c_n1, &c__0, &alpha.r, a, &c__1, &beta, b);
     chkxer_("CHFRK ", &infoc_1.infot, &infoc_1.nout, &infoc_1.lerr, &
 	    infoc_1.ok);
     infoc_1.infot = 5;
-    chfrk_("N", "U", "N", &c__0, &c_n1, &alpha, a, &c__1, &beta, b);
+    chfrk_("N", "U", "N", &c__0, &c_n1, &alpha.r, a, &c__1, &beta, b);
     chkxer_("CHFRK ", &infoc_1.infot, &infoc_1.nout, &infoc_1.lerr, &
 	    infoc_1.ok);
     infoc_1.infot = 8;
-    chfrk_("N", "U", "N", &c__0, &c__0, &alpha, a, &c__0, &beta, b);
+    chfrk_("N", "U", "N", &c__0, &c__0, &alpha.r, a, &c__0, &beta, b);
     chkxer_("CHFRK ", &infoc_1.infot, &infoc_1.nout, &infoc_1.lerr, &
 	    infoc_1.ok);
 
