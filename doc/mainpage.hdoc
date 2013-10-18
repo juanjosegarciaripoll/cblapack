@@ -1,0 +1,7 @@
+// -*- mode: c++; fill-column: 80; c-basic-offset: 2; indent-tabs-mode: nil -*-
+/*!\mainpage CBLAPACK Library Documentation
+
+CBLAPACK is a C library that implements the C/FORTRAN interfaces of the BLAS
+and LAPACK libraries.
+
+*/

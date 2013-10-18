@@ -1,4 +1,4 @@
-dnl -*- Autoconf -*-
+odnl -*- Autoconf -*-
 AC_INIT([CBLAPACK - BLAS and LAPACK in C],
 	[12.02.01],
 	[jjgarcia@users.sourceforge.net],
@@ -25,6 +25,18 @@ AM_INIT_AUTOMAKE([1.9 foreign dist-bzip2 dist-zip subdir-objects])
 AC_PROG_CC
 AC_LANG([C])
 AC_PROG_LIBTOOL
+
+# Doxygen support
+
+DX_HTML_FEATURE(ON)
+DX_CHM_FEATURE(OFF)
+DX_CHI_FEATURE(OFF)
+DX_MAN_FEATURE(OFF)
+DX_RTF_FEATURE(OFF)
+DX_XML_FEATURE(OFF)
+DX_PDF_FEATURE(OFF)
+DX_PS_FEATURE(OFF)
+DX_INIT_DOXYGEN(tensor, doxygen.cfg, doc)
 
 # libf2c must be available
 AC_CHECK_HEADER([f2c.h],[],[AC_MSG_ERROR([Unable to find f2c.h])])

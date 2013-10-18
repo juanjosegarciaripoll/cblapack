@@ -17,3 +17,27 @@ include lapack.inc
 lib_LTLIBRARIES = libcblapack.la
 
 libcblapack_la_SOURCES = $(BLAS) $(LAPACK)
+
+#
+# Doxygen documentation
+#
+
+include aminclude.am
+
+upload-doc: doxygen-doc
+	rsync -rauvz doc/html dreamhost:tream.dreamhosters.com/cblapack/
+
+install-doxygen-doc: doxygen-doc
+	$(MKDIR_P) $(DESTDIR)$(docdir)/{html,html/search}
+	for i in doc/html/*.{html,js,css,png}; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(docdir)/html/; \
+	done
+	for i in doc/html/search/*.{js,html,png,css}; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(docdir)/html/search/; \
+	done
+
+uninstall-doxygen-doc:
+	rm $(DESTDIR)$(docdir)/html/search/*
+	rm $(DESTDIR)$(docdir)/html/*
+	-rmdir $(DESTDIR)$(docdir)/html/search
+	-rmdir $(DESTDIR)$(docdir)/html
