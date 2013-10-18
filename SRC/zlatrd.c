@@ -31,21 +31,6 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__, iw;
     doublecomplex alpha;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *);
-    extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern /* Subroutine */ int zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), 
-	    zhemv_(char *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *), zaxpy_(integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *), zlarfg_(integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *), zlacgv_(integer *, doublecomplex *, 
-	    integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

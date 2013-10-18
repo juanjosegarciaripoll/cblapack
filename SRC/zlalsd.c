@@ -45,45 +45,9 @@ static doublereal c_b35 = 0.;
     integer difl, difr;
     doublereal rcnd;
     integer jcol, irwb, perm, nsub, nlvl, sqre, bxst, jrow, irwu, jimag;
-    extern /* Subroutine */ int dgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *);
     integer jreal, irwib, poles, sizei, irwrb, nsize;
-    extern /* Subroutine */ int zdrot_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *), zcopy_(
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *)
-	    ;
     integer irwvt, icmpq1, icmpq2;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dlasda_(integer *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, doublereal *, 
-	     doublereal *, integer *, integer *, integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, integer *, 
-	     integer *), dlascl_(char *, integer *, integer *, doublereal *, 
-	    doublereal *, integer *, integer *, doublereal *, integer *, 
-	    integer *);
-    extern integer idamax_(integer *, doublereal *, integer *);
-    extern /* Subroutine */ int dlasdq_(char *, integer *, integer *, integer 
-	    *, integer *, integer *, doublereal *, doublereal *, doublereal *, 
-	     integer *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *), dlaset_(char *, integer *, 
-	    integer *, doublereal *, doublereal *, doublereal *, integer *), dlartg_(doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *), xerbla_(char *, integer *);
     integer givcol;
-    extern doublereal dlanst_(char *, integer *, doublereal *, doublereal *);
-    extern /* Subroutine */ int zlalsa_(integer *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	     doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, integer *, integer *, 
-	    integer *, integer *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, integer *, integer *), zlascl_(char *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *), dlasrt_(char *, 
-	    integer *, doublereal *, integer *), zlacpy_(char *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     integer *), zlaset_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *);
     doublereal orgnrm;
     integer givnum, givptr, nrwork, irwwrk, smlszp;
 

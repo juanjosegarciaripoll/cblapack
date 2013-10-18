@@ -28,15 +28,7 @@ static complex c_b5 = {1.f,0.f};
     /* Local variables */
     integer j, knt;
     real beta;
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *);
     real alphi, alphr, xnorm;
-    extern doublereal scnrm2_(integer *, complex *, integer *), slapy2_(real *
-, real *), slapy3_(real *, real *, real *);
-    extern /* Complex */ void cladiv_(complex *, complex *, complex *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *);
     real safmin, rsafmn;
 
 

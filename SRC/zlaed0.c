@@ -32,26 +32,9 @@ static integer c__1 = 1;
     integer i__, j, k, ll, iq, lgn, msd2, smm1, spm1, spm2;
     doublereal temp;
     integer curr, iperm;
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
     integer indxq, iwrem, iqptr, tlvls;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zlaed7_(integer *, integer *, 
-	    integer *, integer *, integer *, integer *, doublereal *, 
-	    doublecomplex *, integer *, doublereal *, integer *, doublereal *, 
-	     integer *, integer *, integer *, integer *, integer *, 
-	    doublereal *, doublecomplex *, doublereal *, integer *, integer *)
-	    ;
     integer igivcl;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int zlacrm_(integer *, integer *, doublecomplex *, 
-	     integer *, doublereal *, integer *, doublecomplex *, integer *, 
-	    doublereal *);
     integer igivnm, submat, curprb, subpbs, igivpt;
-    extern /* Subroutine */ int dsteqr_(char *, integer *, doublereal *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *);
     integer curlvl, matsiz, iprmpt, smlsiz;
 
 

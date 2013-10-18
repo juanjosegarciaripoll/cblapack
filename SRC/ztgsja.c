@@ -42,26 +42,11 @@ static doublereal c_b42 = 1.;
     doublecomplex snq;
     doublereal rwk;
     doublecomplex snu, snv;
-    extern /* Subroutine */ int zrot_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublecomplex *);
     doublereal gamma;
-    extern logical lsame_(char *, char *);
     logical initq, initu, initv, wantq, upper;
     doublereal error, ssmin;
     logical wantu, wantv;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zlags2_(logical *, doublereal *, 
-	    doublecomplex *, doublereal *, doublereal *, doublecomplex *, 
-	    doublereal *, doublereal *, doublecomplex *, doublereal *, 
-	    doublecomplex *, doublereal *, doublecomplex *);
     integer kcycle;
-    extern /* Subroutine */ int dlartg_(doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *), xerbla_(char *, 
-	    integer *), zdscal_(integer *, doublereal *, 
-	    doublecomplex *, integer *), zlapll_(integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, doublereal *), zlaset_(
-	    char *, integer *, integer *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

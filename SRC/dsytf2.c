@@ -30,20 +30,10 @@ static integer c__1 = 1;
     integer kk, kp;
     doublereal wk, wkm1, wkp1;
     integer imax, jmax;
-    extern /* Subroutine */ int dsyr_(char *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *);
     doublereal alpha;
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int dswap_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
     integer kstep;
     logical upper;
     doublereal absakk;
-    extern integer idamax_(integer *, doublereal *, integer *);
-    extern logical disnan_(doublereal *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal colmax, rowmax;
 
 

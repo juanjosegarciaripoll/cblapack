@@ -36,36 +36,17 @@ static real c_b18 = 1.f;
     real rmin, rmax;
     integer lopt;
     real sigma;
-    extern logical lsame_(char *, char *);
     integer iinfo;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     integer lwmin, liopt;
     logical lower;
     integer llrwk, lropt;
     logical wantz;
     integer indwk2, llwrk2;
-    extern doublereal clanhe_(char *, char *, integer *, complex *, integer *, 
-	     real *);
     integer iscale;
-    extern /* Subroutine */ int clascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, complex *, integer *, integer *), cstedc_(char *, integer *, real *, real *, complex *, 
-	    integer *, complex *, integer *, real *, integer *, integer *, 
-	    integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int chetrd_(char *, integer *, complex *, integer 
-	    *, real *, real *, complex *, complex *, integer *, integer *), clacpy_(char *, integer *, integer *, complex *, integer 
-	    *, complex *, integer *);
     real safmin;
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
     integer indtau, indrwk, indwrk, liwmin;
-    extern /* Subroutine */ int ssterf_(integer *, real *, real *, integer *);
     integer lrwmin;
-    extern /* Subroutine */ int cunmtr_(char *, char *, char *, integer *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *, 
-	    complex *, integer *, integer *);
     integer llwork;
     real smlnum;
     logical lquery;

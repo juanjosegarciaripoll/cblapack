@@ -42,22 +42,8 @@ static integer c__0 = 0;
     integer nlp1, jcol;
     doublereal temp;
     integer jrow;
-    extern doublereal dnrm2_(integer *, doublereal *, integer *);
     doublereal diflj, difrj, dsigj;
-    extern /* Subroutine */ int dgemv_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *), zdrot_(integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *);
-    extern doublereal dlamc3_(doublereal *, doublereal *);
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), xerbla_(char *, integer *);
     doublereal dsigjp;
-    extern /* Subroutine */ int zdscal_(integer *, doublereal *, 
-	    doublecomplex *, integer *), zlascl_(char *, integer *, integer *, 
-	     doublereal *, doublereal *, integer *, integer *, doublecomplex *
-, integer *, integer *), zlacpy_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -43,58 +43,19 @@ static integer c__0 = 0;
     real temp;
     logical ilvl, ilvr;
     integer iwrk, iwrk1;
-    extern logical lsame_(char *, char *);
     integer icols;
     logical noscl;
     integer irows;
-    extern /* Subroutine */ int cggbak_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, complex *, integer *, 
-	    integer *), cggbal_(char *, integer *, complex *, 
-	    integer *, complex *, integer *, integer *, integer *, real *, 
-	    real *, real *, integer *), slabad_(real *, real *);
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *);
-    extern /* Subroutine */ int cgghrd_(char *, char *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, complex *, 
-	    integer *, complex *, integer *, integer *), 
-	    clascl_(char *, integer *, integer *, real *, real *, integer *, 
-	    integer *, complex *, integer *, integer *);
     logical ilascl, ilbscl;
-    extern /* Subroutine */ int cgeqrf_(integer *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *, integer *), clacpy_(
-	    char *, integer *, integer *, complex *, integer *, complex *, 
-	    integer *), claset_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *), ctgevc_(char *, char 
-	    *, logical *, integer *, complex *, integer *, complex *, integer 
-	    *, complex *, integer *, complex *, integer *, integer *, integer 
-	    *, complex *, real *, integer *);
     logical ldumma[1];
     char chtemp[1];
     real bignum;
-    extern /* Subroutine */ int chgeqz_(char *, char *, char *, integer *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, integer *, real *, integer *), 
-	    ctgsna_(char *, char *, logical *, integer *, complex *, integer *
-, complex *, integer *, complex *, integer *, complex *, integer *
-, real *, real *, integer *, integer *, complex *, integer *, 
-	    integer *, integer *);
     integer ijobvl;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern doublereal slamch_(char *);
     integer ijobvr;
     logical wantsb;
-    extern /* Subroutine */ int cungqr_(integer *, integer *, integer *, 
-	    complex *, integer *, complex *, complex *, integer *, integer *);
     real anrmto;
     logical wantse;
     real bnrmto;
-    extern /* Subroutine */ int cunmqr_(char *, char *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *, 
-	    complex *, integer *, integer *);
     integer minwrk, maxwrk;
     logical wantsn;
     real smlnum;

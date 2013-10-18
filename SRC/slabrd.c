@@ -30,10 +30,6 @@ static real c_b16 = 0.f;
 
     /* Local variables */
     integer i__;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    sgemv_(char *, integer *, integer *, real *, real *, integer *, 
-	    real *, integer *, real *, real *, integer *), slarfg_(
-	    integer *, real *, real *, integer *, real *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

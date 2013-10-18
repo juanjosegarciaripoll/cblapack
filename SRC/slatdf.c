@@ -33,23 +33,11 @@ static real c_b37 = -1.f;
     real bm, bp, xm[8], xp[8];
     integer info;
     real temp;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
     real work[32];
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     real pmone;
-    extern doublereal sasum_(integer *, real *, integer *);
     real sminu;
     integer iwork[8];
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), saxpy_(integer *, real *, real *, integer *, real *, 
-	    integer *);
     real splus;
-    extern /* Subroutine */ int sgesc2_(integer *, real *, integer *, real *, 
-	    integer *, integer *, real *), sgecon_(char *, integer *, real *, 
-	    integer *, real *, real *, real *, integer *, integer *), 
-	    slassq_(integer *, real *, integer *, real *, real *), slaswp_(
-	    integer *, real *, integer *, integer *, integer *, integer *, 
-	    integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

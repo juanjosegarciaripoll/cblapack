@@ -36,34 +36,12 @@ static real c_b54 = 1.f;
     integer nb, mn, nb1, nb2, nb3, nb4;
     real anrm, bnrm, smin, smax;
     integer iascl, ibscl, ismin, ismax;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     real wsize;
-    extern /* Subroutine */ int strsm_(char *, char *, char *, char *, 
-	    integer *, integer *, real *, real *, integer *, real *, integer *
-), slaic1_(integer *, integer *, 
-	    real *, real *, real *, real *, real *, real *, real *), sgeqp3_(
-	    integer *, integer *, real *, integer *, integer *, real *, real *
-, integer *, integer *), slabad_(real *, real *);
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     real bignum;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *), slaset_(char *, integer *, integer *, real *, real *, 
-	    real *, integer *);
     integer lwkmin;
     real sminpr, smaxpr, smlnum;
     integer lwkopt;
     logical lquery;
-    extern /* Subroutine */ int sormqr_(char *, char *, integer *, integer *, 
-	    integer *, real *, integer *, real *, real *, integer *, real *, 
-	    integer *, integer *), sormrz_(char *, char *, 
-	    integer *, integer *, integer *, integer *, real *, integer *, 
-	    real *, real *, integer *, real *, integer *, integer *), stzrzf_(integer *, integer *, real *, integer *, real *, 
-	    real *, integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

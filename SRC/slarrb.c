@@ -27,8 +27,6 @@
     real gap, mid, tmp, back, lgap, rgap, left;
     integer iter, nint, prev, next;
     real cvrgd, right, width;
-    extern integer slaneg_(integer *, real *, real *, real *, real *, integer 
-	    *);
     integer negcnt;
     real mnwdth;
     integer olnint, maxitr;

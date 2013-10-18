@@ -36,14 +36,9 @@
     real dtisq;
     logical swtch;
     real dtnsq;
-    extern /* Subroutine */ int slaed6_(integer *, logical *, real *, real *, 
-	    real *, real *, real *, integer *);
     real delsq2;
-    extern /* Subroutine */ int slasd5_(integer *, real *, real *, real *, 
-	    real *, real *, real *);
     real dtnsq1;
     logical swtch3;
-    extern doublereal slamch_(char *);
     logical orgati;
     real erretm, dtipsq, rhoinv;
 

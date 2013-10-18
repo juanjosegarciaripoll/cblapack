@@ -33,52 +33,22 @@ static real c_b37 = 1.f;
     integer nb, nb1, nb2, nb3, ihi, ilo;
     real eps, anrm, bnrm;
     integer itau, lopt;
-    extern logical lsame_(char *, char *);
     integer ileft, iinfo, icols;
     logical ilvsl;
     integer iwork;
     logical ilvsr;
     integer irows;
-    extern /* Subroutine */ int sggbak_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, integer *
-), sggbal_(char *, integer *, real *, integer *, 
-	    real *, integer *, integer *, integer *, real *, real *, real *, 
-	    integer *);
     logical ilascl, ilbscl;
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
     real safmin;
-    extern /* Subroutine */ int sgghrd_(char *, char *, integer *, integer *, 
-	    integer *, real *, integer *, real *, integer *, real *, integer *
-, real *, integer *, integer *), xerbla_(char *, 
-	    integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     real bignum;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *);
     integer ijobvl, iright;
-    extern /* Subroutine */ int sgeqrf_(integer *, integer *, real *, integer 
-	    *, real *, real *, integer *, integer *);
     integer ijobvr;
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *), slaset_(char *, integer *, 
-	    integer *, real *, real *, real *, integer *);
     real anrmto;
     integer lwkmin;
     real bnrmto;
-    extern /* Subroutine */ int shgeqz_(char *, char *, char *, integer *, 
-	    integer *, integer *, real *, integer *, real *, integer *, real *
-, real *, real *, real *, integer *, real *, integer *, real *, 
-	    integer *, integer *);
     real smlnum;
-    extern /* Subroutine */ int sorgqr_(integer *, integer *, integer *, real 
-	    *, integer *, real *, real *, integer *, integer *);
     integer lwkopt;
     logical lquery;
-    extern /* Subroutine */ int sormqr_(char *, char *, integer *, integer *, 
-	    integer *, real *, integer *, real *, real *, integer *, real *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

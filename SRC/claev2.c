@@ -23,8 +23,6 @@
     /* Local variables */
     real t;
     complex w;
-    extern /* Subroutine */ int slaev2_(real *, real *, real *, real *, real *
-, real *, real *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

@@ -22,7 +22,6 @@
 
     /* Local variables */
     integer i__, j;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

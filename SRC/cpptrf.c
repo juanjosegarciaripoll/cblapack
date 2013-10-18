@@ -29,16 +29,7 @@ static real c_b16 = -1.f;
     /* Local variables */
     integer j, jc, jj;
     real ajj;
-    extern /* Subroutine */ int chpr_(char *, integer *, real *, complex *, 
-	    integer *, complex *);
-    extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern logical lsame_(char *, char *);
     logical upper;
-    extern /* Subroutine */ int ctpsv_(char *, char *, char *, integer *, 
-	    complex *, complex *, integer *), csscal_(
-	    integer *, real *, complex *, integer *), xerbla_(char *, integer 
-	    *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

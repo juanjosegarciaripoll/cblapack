@@ -30,10 +30,6 @@ static integer c__1 = 1;
     doublecomplex aii;
     logical left;
     doublecomplex taui;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int zlarf_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *), xerbla_(char *, integer *);
     logical notran;
 
 

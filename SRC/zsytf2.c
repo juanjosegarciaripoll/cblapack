@@ -32,21 +32,11 @@ static integer c__1 = 1;
     integer kk, kp;
     doublecomplex wk, wkm1, wkp1;
     integer imax, jmax;
-    extern /* Subroutine */ int zsyr_(char *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     doublereal alpha;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *);
     integer kstep;
     logical upper;
-    extern /* Subroutine */ int zswap_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
     doublereal absakk;
-    extern logical disnan_(doublereal *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal colmax;
-    extern integer izamax_(integer *, doublecomplex *, integer *);
     doublereal rowmax;
 
 

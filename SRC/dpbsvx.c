@@ -31,33 +31,11 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__, j, j1, j2;
     doublereal amax, smin, smax;
-    extern logical lsame_(char *, char *);
     doublereal scond, anorm;
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
     logical equil, rcequ, upper;
-    extern doublereal dlamch_(char *), dlansb_(char *, char *, 
-	    integer *, integer *, doublereal *, integer *, doublereal *);
-    extern /* Subroutine */ int dpbcon_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, doublereal *, 
-	     integer *, integer *), dlaqsb_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    doublereal *, char *);
     logical nofact;
-    extern /* Subroutine */ int dlacpy_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *), 
-	    xerbla_(char *, integer *), dpbequ_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *);
     doublereal bignum;
-    extern /* Subroutine */ int dpbrfs_(char *, integer *, integer *, integer 
-	    *, doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	     integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *, integer *), dpbtrf_(char *, 
-	    integer *, integer *, doublereal *, integer *, integer *);
     integer infequ;
-    extern /* Subroutine */ int dpbtrs_(char *, integer *, integer *, integer 
-	    *, doublereal *, integer *, doublereal *, integer *, integer *);
     doublereal smlnum;
 
 

@@ -38,36 +38,15 @@ static real c_b11 = 1.f;
     real dxratmax, dzratmax;
     integer i__, j;
     logical incr_prec__;
-    extern /* Subroutine */ int sla_syamv__(integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *);
     real prev_dz_z__, yk, final_dx_x__, final_dz_z__;
-    extern /* Subroutine */ int sla_wwaddw__(integer *, real *, real *, real *
-	    );
     real prevnormdx;
     integer cnt;
     real dyk, eps, incr_thresh__, dx_x__, dz_z__, ymin;
-    extern /* Subroutine */ int sla_lin_berr__(integer *, integer *, integer *
-	    , real *, real *, real *);
     integer y_prec_state__, uplo2;
-    extern /* Subroutine */ int blas_ssymv_x__(integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *, 
-	    integer *);
-    extern logical lsame_(char *, char *);
     real dxrat, dzrat;
-    extern /* Subroutine */ int blas_ssymv2_x__(integer *, integer *, real *, 
-	    real *, integer *, real *, real *, integer *, real *, real *, 
-	    integer *, integer *), scopy_(integer *, real *, integer *, real *
-, integer *);
     real normx, normy;
-    extern /* Subroutine */ int saxpy_(integer *, real *, real *, integer *, 
-	    real *, integer *), ssymv_(char *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, real *, integer *);
-    extern doublereal slamch_(char *);
     real normdx;
-    extern /* Subroutine */ int ssytrs_(char *, integer *, integer *, real *, 
-	    integer *, integer *, real *, integer *, integer *);
     real hugeval;
-    extern integer ilauplo_(char *);
     integer x_state__, z_state__;
 
 

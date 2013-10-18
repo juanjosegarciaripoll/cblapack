@@ -24,13 +24,10 @@
     integer i__, k;
     real eps;
     logical decr, left, incr, sing, eigen;
-    extern logical lsame_(char *, char *);
     real anorm;
     logical right;
     real oldgap;
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real newgap, thresh;
 
 

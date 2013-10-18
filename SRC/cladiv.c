@@ -21,8 +21,6 @@
 
     /* Local variables */
     real zi, zr;
-    extern /* Subroutine */ int sladiv_(real *, real *, real *, real *, real *
-, real *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

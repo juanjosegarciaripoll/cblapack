@@ -44,16 +44,9 @@ static integer c__2 = 2;
     integer nfail;
     real desig, trace, sigma;
     integer iinfo, ttype;
-    extern /* Subroutine */ int slasq3_(integer *, integer *, real *, integer 
-	    *, real *, real *, real *, real *, integer *, integer *, integer *
-, logical *, integer *, real *, real *, real *, real *, real *, 
-	    real *, real *);
     real deemin;
-    extern doublereal slamch_(char *);
     integer iwhila, iwhilb;
     real oldemn, safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *), slasrt_(
-	    char *, integer *, real *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2)                                    -- */

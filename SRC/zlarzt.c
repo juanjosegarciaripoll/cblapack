@@ -28,14 +28,6 @@ static integer c__1 = 1;
 
     /* Local variables */
     integer i__, j, info;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), 
-	    ztrmv_(char *, char *, char *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *), 
-	    xerbla_(char *, integer *), zlacgv_(integer *, 
-	    doublecomplex *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

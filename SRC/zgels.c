@@ -34,34 +34,12 @@ static integer c__0 = 0;
     integer brow;
     logical tpsd;
     integer iascl, ibscl;
-    extern logical lsame_(char *, char *);
     integer wsize;
     doublereal rwork[1];
-    extern /* Subroutine */ int dlabad_(doublereal *, doublereal *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer scllen;
     doublereal bignum;
-    extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int zgelqf_(integer *, integer *, doublecomplex *, 
-	     integer *, doublecomplex *, doublecomplex *, integer *, integer *
-), zlascl_(char *, integer *, integer *, doublereal *, doublereal 
-	    *, integer *, integer *, doublecomplex *, integer *, integer *), zgeqrf_(integer *, integer *, doublecomplex *, integer *, 
-	     doublecomplex *, doublecomplex *, integer *, integer *), zlaset_(
-	    char *, integer *, integer *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, integer *);
     doublereal smlnum;
     logical lquery;
-    extern /* Subroutine */ int zunmlq_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *), zunmqr_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *), ztrtrs_(char *, char *, char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	     integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

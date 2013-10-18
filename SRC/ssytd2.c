@@ -28,17 +28,8 @@ static real c_b14 = -1.f;
     /* Local variables */
     integer i__;
     real taui;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
-    extern /* Subroutine */ int ssyr2_(char *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, integer *);
     real alpha;
-    extern logical lsame_(char *, char *);
     logical upper;
-    extern /* Subroutine */ int saxpy_(integer *, real *, real *, integer *, 
-	    real *, integer *), ssymv_(char *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, real *, integer *), 
-	    xerbla_(char *, integer *), slarfg_(integer *, real *, 
-	    real *, integer *, real *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

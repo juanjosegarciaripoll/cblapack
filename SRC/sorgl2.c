@@ -22,9 +22,6 @@
 
     /* Local variables */
     integer i__, j, l;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    slarf_(char *, integer *, integer *, real *, integer *, real *, 
-	    real *, integer *, real *), xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -27,12 +27,6 @@ static integer c__1 = 1;
 
     /* Local variables */
     integer i__, j, km, jp, ju, kv;
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *), cgeru_(integer *, integer *, complex *, complex *, 
-	    integer *, complex *, integer *, complex *, integer *), cswap_(
-	    integer *, complex *, integer *, complex *, integer *);
-    extern integer icamax_(integer *, complex *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

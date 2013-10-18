@@ -29,25 +29,8 @@ static real c_b33 = 1.f;
 
     /* Local variables */
     integer nb, mn, nr, nb1, nb2, nb3, nb4, lopt;
-    extern /* Subroutine */ int sgemv_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *), scopy_(integer *, real *, integer *, real *, integer *), 
-	    saxpy_(integer *, real *, real *, integer *, real *, integer *), 
-	    strmv_(char *, char *, char *, integer *, real *, integer *, real 
-	    *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int sggrqf_(integer *, integer *, integer *, real 
-	    *, integer *, real *, real *, integer *, real *, real *, integer *
-, integer *);
     integer lwkmin, lwkopt;
     logical lquery;
-    extern /* Subroutine */ int sormqr_(char *, char *, integer *, integer *, 
-	    integer *, real *, integer *, real *, real *, integer *, real *, 
-	    integer *, integer *), sormrq_(char *, char *, 
-	    integer *, integer *, integer *, real *, integer *, real *, real *
-, integer *, real *, integer *, integer *), 
-	    strtrs_(char *, char *, char *, integer *, integer *, real *, 
-	    integer *, real *, integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

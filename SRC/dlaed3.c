@@ -31,18 +31,6 @@ static doublereal c_b23 = 0.;
     /* Local variables */
     integer i__, j, n2, n12, ii, n23, iq2;
     doublereal temp;
-    extern doublereal dnrm2_(integer *, doublereal *, integer *);
-    extern /* Subroutine */ int dgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *),
-	     dcopy_(integer *, doublereal *, integer *, doublereal *, integer 
-	    *), dlaed4_(integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, integer *);
-    extern doublereal dlamc3_(doublereal *, doublereal *);
-    extern /* Subroutine */ int dlacpy_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *), 
-	    dlaset_(char *, integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *), xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

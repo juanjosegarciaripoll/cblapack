@@ -28,25 +28,10 @@ static integer c__2 = 2;
 
     /* Local variables */
     integer j, jb, na, nb, sm, sn, nx, fjb, iws, nfxd;
-    extern doublereal snrm2_(integer *, real *, integer *);
     integer nbmin, minmn, minws;
-    extern /* Subroutine */ int sswap_(integer *, real *, integer *, real *, 
-	    integer *), slaqp2_(integer *, integer *, integer *, real *, 
-	    integer *, integer *, real *, real *, real *, real *), xerbla_(
-	    char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int sgeqrf_(integer *, integer *, real *, integer 
-	    *, real *, real *, integer *, integer *);
     integer topbmn, sminmn;
-    extern /* Subroutine */ int slaqps_(integer *, integer *, integer *, 
-	    integer *, integer *, real *, integer *, integer *, real *, real *
-, real *, real *, real *, integer *);
     integer lwkopt;
     logical lquery;
-    extern /* Subroutine */ int sormqr_(char *, char *, integer *, integer *, 
-	    integer *, real *, integer *, real *, real *, integer *, real *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -41,30 +41,15 @@ static logical c_false = FALSE_;
     real dumm, prod;
     integer ifst;
     real lnrm;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
     integer ilst;
     real rnrm, prod1, prod2;
-    extern doublereal snrm2_(integer *, real *, integer *);
     real scale, delta;
-    extern logical lsame_(char *, char *);
     integer isave[3];
     logical wants;
     real dummy[1];
-    extern /* Subroutine */ int slacn2_(integer *, real *, real *, integer *, 
-	    real *, integer *, integer *);
-    extern doublereal slapy2_(real *, real *);
-    extern /* Subroutine */ int slabad_(real *, real *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
     logical wantbh;
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *);
     logical somcon;
-    extern /* Subroutine */ int slaqtr_(logical *, logical *, integer *, real 
-	    *, integer *, real *, real *, real *, real *, real *, integer *), 
-	    strexc_(char *, integer *, real *, integer *, real *, integer *, 
-	    integer *, integer *, real *, integer *);
     real smlnum;
     logical wantsp;
 

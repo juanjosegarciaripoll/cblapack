@@ -32,23 +32,7 @@ static doublereal c_b22 = 1.;
 
     /* Local variables */
     integer i__, j;
-    extern logical lsame_(char *, char *);
     logical wantq, wantu, wantv;
-    extern /* Subroutine */ int dgeqr2_(integer *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *), dgerq2_(
-	    integer *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *), dorg2r_(integer *, integer *, integer *, 
-	     doublereal *, integer *, doublereal *, doublereal *, integer *), 
-	    dorm2r_(char *, char *, integer *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *), dormr2_(char *, char *, 
-	    integer *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *), dgeqpf_(integer *, integer *, doublereal *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *), 
-	    dlacpy_(char *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *), dlaset_(char *, integer *, 
-	    integer *, doublereal *, doublereal *, doublereal *, integer *), xerbla_(char *, integer *), dlapmt_(logical *, 
-	    integer *, integer *, doublereal *, integer *, integer *);
     logical forwrd;
 
 

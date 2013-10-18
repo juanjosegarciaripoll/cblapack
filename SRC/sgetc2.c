@@ -29,12 +29,7 @@ static real c_b10 = -1.f;
     integer i__, j, ip, jp;
     real eps;
     integer ipv, jpv;
-    extern /* Subroutine */ int sger_(integer *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, integer *);
     real smin, xmax;
-    extern /* Subroutine */ int sswap_(integer *, real *, integer *, real *, 
-	    integer *), slabad_(real *, real *);
-    extern doublereal slamch_(char *);
     real bignum, smlnum;
 
 

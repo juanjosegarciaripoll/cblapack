@@ -31,9 +31,7 @@
     real eps, tmp;
     integer neg1, neg2, indp, inds;
     real dplus;
-    extern doublereal slamch_(char *);
     integer indlpl, indumn;
-    extern logical sisnan_(real *);
     real dminus;
     logical sawnan1, sawnan2;
 

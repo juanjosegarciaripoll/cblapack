@@ -46,29 +46,8 @@ static logical c_true = TRUE_;
     integer lwk1, lwk2;
     complex beta;
     integer kcol, info, ifst, ilst, ltop, krow;
-    extern /* Subroutine */ int clarf_(char *, integer *, integer *, complex *
-, integer *, complex *, complex *, integer *, complex *), 
-	    cgemm_(char *, char *, integer *, integer *, integer *, complex *, 
-	     complex *, integer *, complex *, integer *, complex *, complex *, 
-	     integer *), ccopy_(integer *, complex *, integer 
-	    *, complex *, integer *);
     integer infqr, kwtop;
-    extern /* Subroutine */ int slabad_(real *, real *), cgehrd_(integer *, 
-	    integer *, integer *, complex *, integer *, complex *, complex *, 
-	    integer *, integer *), clarfg_(integer *, complex *, complex *, 
-	    integer *, complex *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int clahqr_(logical *, logical *, integer *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *, 
-	    integer *, complex *, integer *, integer *), clacpy_(char *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *), claset_(char *, integer *, integer *, complex *, complex 
-	    *, complex *, integer *);
     real safmin, safmax;
-    extern /* Subroutine */ int ctrexc_(char *, integer *, complex *, integer 
-	    *, complex *, integer *, integer *, integer *, integer *),
-	     cunmhr_(char *, char *, integer *, integer *, integer *, integer 
-	    *, complex *, integer *, complex *, complex *, integer *, complex 
-	    *, integer *, integer *);
     real smlnum;
     integer lwkopt;
 

@@ -31,16 +31,6 @@ static real c_b38 = 0.f;
     /* Local variables */
     integer i__;
     real ei;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    sgemm_(char *, char *, integer *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *), sgemv_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *), scopy_(integer *, real *, integer *, real *, integer *), 
-	    strmm_(char *, char *, char *, char *, integer *, integer *, real 
-	    *, real *, integer *, real *, integer *), saxpy_(integer *, real *, real *, integer *, real *, 
-	    integer *), strmv_(char *, char *, char *, integer *, real *, 
-	    integer *, real *, integer *), slarfg_(
-	    integer *, real *, real *, integer *, real *), slacpy_(char *, 
-	    integer *, integer *, real *, integer *, real *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

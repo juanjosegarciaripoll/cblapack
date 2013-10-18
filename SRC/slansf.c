@@ -31,11 +31,7 @@ doublereal slansf_(char *norm, char *transr, char *uplo, integer *n, real *a,
     real aa;
     integer lda, ifm, noe, ilu;
     real scale;
-    extern logical lsame_(char *, char *);
     real value;
-    extern integer isamax_(integer *, real *, integer *);
-    extern /* Subroutine */ int slassq_(integer *, real *, integer *, real *, 
-	    real *);
 
 
 /*  -- LAPACK routine (version 3.2)                                    -- */

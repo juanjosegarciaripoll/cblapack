@@ -30,17 +30,10 @@ doublereal sla_syrcond__(char *uplo, integer *n, real *a, integer *lda, real *
     logical up;
     real tmp;
     integer kase;
-    extern logical lsame_(char *, char *);
     integer isave[3];
-    extern /* Subroutine */ int slacn2_(integer *, real *, real *, integer *, 
-	    real *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real ainvnm;
     char normin[1];
     real smlnum;
-    extern /* Subroutine */ int ssytrs_(char *, integer *, integer *, real *, 
-	    integer *, integer *, real *, integer *, integer *);
 
 
 /*     -- LAPACK routine (version 3.2.1)                                 -- */

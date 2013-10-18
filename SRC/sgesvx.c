@@ -28,34 +28,15 @@
     integer i__, j;
     real amax;
     char norm[1];
-    extern logical lsame_(char *, char *);
     real rcmin, rcmax, anorm;
     logical equil;
     real colcnd;
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
     logical nofact;
-    extern /* Subroutine */ int slaqge_(integer *, integer *, real *, integer 
-	    *, real *, real *, real *, real *, real *, char *), 
-	    xerbla_(char *, integer *), sgecon_(char *, integer *, 
-	    real *, integer *, real *, real *, real *, integer *, integer *);
     real bignum;
     integer infequ;
     logical colequ;
-    extern /* Subroutine */ int sgeequ_(integer *, integer *, real *, integer 
-	    *, real *, real *, real *, real *, real *, integer *), sgerfs_(
-	    char *, integer *, integer *, real *, integer *, real *, integer *
-, integer *, real *, integer *, real *, integer *, real *, real *, 
-	     real *, integer *, integer *), sgetrf_(integer *, 
-	    integer *, real *, integer *, integer *, integer *);
     real rowcnd;
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *);
     logical notran;
-    extern doublereal slantr_(char *, char *, char *, integer *, integer *, 
-	    real *, integer *, real *);
-    extern /* Subroutine */ int sgetrs_(char *, integer *, integer *, real *, 
-	    integer *, integer *, real *, integer *, integer *);
     real smlnum;
     logical rowequ;
     real rpvgrw;

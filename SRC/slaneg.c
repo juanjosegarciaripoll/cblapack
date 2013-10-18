@@ -28,7 +28,6 @@ integer slaneg_(integer *n, real *d__, real *lld, real *sigma, real *pivmin,
     real bsav, gamma, dplus;
     integer negcnt;
     logical sawnan;
-    extern logical sisnan_(real *);
     real dminus;
 
 

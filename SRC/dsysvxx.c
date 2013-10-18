@@ -30,34 +30,12 @@
     /* Local variables */
     integer j;
     doublereal amax, smin, smax;
-    extern doublereal dla_syrpvgrw__(char *, integer *, integer *, doublereal 
-	    *, integer *, doublereal *, integer *, integer *, doublereal *, 
-	    ftnlen);
-    extern logical lsame_(char *, char *);
     doublereal scond;
     logical equil, rcequ;
-    extern doublereal dlamch_(char *);
     logical nofact;
-    extern /* Subroutine */ int dlacpy_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *), 
-	    xerbla_(char *, integer *);
     doublereal bignum;
     integer infequ;
-    extern /* Subroutine */ int dlaqsy_(char *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, doublereal *, char *);
     doublereal smlnum;
-    extern /* Subroutine */ int dsytrf_(char *, integer *, doublereal *, 
-	    integer *, integer *, doublereal *, integer *, integer *),
-	     dlascl2_(integer *, integer *, doublereal *, doublereal *, 
-	    integer *), dsytrs_(char *, integer *, integer *, doublereal *, 
-	    integer *, integer *, doublereal *, integer *, integer *),
-	     dsyequb_(char *, integer *, doublereal *, integer *, doublereal *
-, doublereal *, doublereal *, doublereal *, integer *), 
-	    dsyrfsx_(char *, char *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *);
 
 
 /*     -- LAPACK routine (version 3.2.1)                               -- */

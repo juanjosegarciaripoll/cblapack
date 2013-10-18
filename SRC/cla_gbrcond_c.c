@@ -31,13 +31,8 @@ doublereal cla_gbrcond_c__(char *trans, integer *n, integer *kl, integer *ku,
     integer i__, j, kd, ke;
     real tmp;
     integer kase;
-    extern logical lsame_(char *, char *);
     integer isave[3];
     real anorm;
-    extern /* Subroutine */ int clacn2_(integer *, complex *, complex *, real 
-	    *, integer *, integer *), xerbla_(char *, integer *), 
-	    cgbtrs_(char *, integer *, integer *, integer *, integer *, 
-	    complex *, integer *, integer *, complex *, integer *, integer *);
     real ainvnm;
     logical notrans;
 

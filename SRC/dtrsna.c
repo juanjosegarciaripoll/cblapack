@@ -37,8 +37,6 @@ static logical c_false = FALSE_;
     doublereal sn, mu, eps, est;
     integer kase;
     doublereal cond;
-    extern doublereal ddot_(integer *, doublereal *, integer *, doublereal *, 
-	    integer *);
     logical pair;
     integer ierr;
     doublereal dumm, prod;
@@ -46,27 +44,12 @@ static logical c_false = FALSE_;
     doublereal lnrm;
     integer ilst;
     doublereal rnrm;
-    extern doublereal dnrm2_(integer *, doublereal *, integer *);
     doublereal prod1, prod2, scale, delta;
-    extern logical lsame_(char *, char *);
     integer isave[3];
     logical wants;
     doublereal dummy[1];
-    extern /* Subroutine */ int dlacn2_(integer *, doublereal *, doublereal *, 
-	     integer *, doublereal *, integer *, integer *);
-    extern doublereal dlapy2_(doublereal *, doublereal *);
-    extern /* Subroutine */ int dlabad_(doublereal *, doublereal *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dlacpy_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *), 
-	    xerbla_(char *, integer *);
     doublereal bignum;
     logical wantbh;
-    extern /* Subroutine */ int dlaqtr_(logical *, logical *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, doublereal *, 
-	     doublereal *, doublereal *, integer *), dtrexc_(char *, integer *
-, doublereal *, integer *, doublereal *, integer *, integer *, 
-	    integer *, doublereal *, integer *);
     logical somcon;
     doublereal smlnum;
     logical wantsp;

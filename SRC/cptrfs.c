@@ -36,18 +36,10 @@ static complex c_b16 = {1.f,0.f};
     complex bi, cx, dx, ex;
     integer ix, nz;
     real eps, safe1, safe2;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *);
     integer count;
     logical upper;
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer isamax_(integer *, real *, integer *);
     real lstres;
-    extern /* Subroutine */ int cpttrs_(char *, integer *, integer *, real *, 
-	    complex *, complex *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

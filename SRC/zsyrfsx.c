@@ -40,30 +40,9 @@ static logical c_false = FALSE_;
     integer prec_type__;
     doublereal cwise_wrong__;
     char norm[1];
-    extern /* Subroutine */ int zla_syrfsx_extended__(integer *, char *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *,
-	     integer *, integer *, logical *, doublereal *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, doublecomplex *, doublereal *, 
-	    doublecomplex *, doublecomplex *, doublereal *, integer *, 
-	    doublereal *, doublereal *, logical *, integer *, ftnlen);
     logical ignore_cwise__;
-    extern logical lsame_(char *, char *);
     doublereal anorm;
     logical rcequ;
-    extern doublereal zla_syrcond_c__(char *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, integer *, doublereal *, 
-	    logical *, integer *, doublecomplex *, doublereal *, ftnlen), 
-	    zla_syrcond_x__(char *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, integer *, doublecomplex *, integer *,
-	     doublecomplex *, doublereal *, ftnlen), dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern doublereal zlansy_(char *, char *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int zsycon_(char *, integer *, doublecomplex *, 
-	    integer *, integer *, doublereal *, doublereal *, doublecomplex *, 
-	     integer *);
-    extern integer ilaprec_(char *);
     integer ithresh, n_norms__;
     doublereal rthresh;
 

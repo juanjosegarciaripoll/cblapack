@@ -30,9 +30,6 @@ static integer c__1 = 1;
     integer j;
     complex t1, t2, t3, t4, t5, t6, t7, t8, t9, v1, v2, v3, v4, v5, v6, v7, 
 	    v8, v9, t10, v10, sum;
-    extern /* Subroutine */ int clarf_(char *, integer *, integer *, complex *
-, integer *, complex *, complex *, integer *, complex *);
-    extern logical lsame_(char *, char *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

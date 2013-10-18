@@ -30,42 +30,18 @@
 
     /* Local variables */
     integer j;
-    extern doublereal zla_rpvgrw__(integer *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *);
     doublereal amax;
-    extern logical lsame_(char *, char *);
     doublereal rcmin, rcmax;
     logical equil;
-    extern doublereal dlamch_(char *);
     doublereal colcnd;
     logical nofact;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal bignum;
-    extern /* Subroutine */ int zlaqge_(integer *, integer *, doublecomplex *, 
-	     integer *, doublereal *, doublereal *, doublereal *, doublereal *
-, doublereal *, char *);
     integer infequ;
     logical colequ;
     doublereal rowcnd;
     logical notran;
-    extern /* Subroutine */ int zgetrf_(integer *, integer *, doublecomplex *, 
-	     integer *, integer *, integer *), zlacpy_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *);
     doublereal smlnum;
-    extern /* Subroutine */ int zgetrs_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *, doublecomplex *, integer *, 
-	     integer *);
     logical rowequ;
-    extern /* Subroutine */ int zlascl2_(integer *, integer *, doublereal *, 
-	    doublecomplex *, integer *), zgeequb_(integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, integer *), zgerfsx_(
-	    char *, char *, integer *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, integer *, doublereal *, doublereal *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *, 
-	     integer *, doublereal *, doublecomplex *, doublereal *, integer *
-);
 
 
 /*     -- LAPACK driver routine (version 3.2)                          -- */

@@ -28,18 +28,9 @@ static doublecomplex c_b5 = {1.,0.};
     /* Local variables */
     integer j, knt;
     doublereal beta, alphi, alphr;
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *);
     doublereal xnorm;
-    extern doublereal dlapy2_(doublereal *, doublereal *), dlapy3_(doublereal 
-	    *, doublereal *, doublereal *), dznrm2_(integer *, doublecomplex *
-, integer *), dlamch_(char *);
     doublereal safmin;
-    extern /* Subroutine */ int zdscal_(integer *, doublereal *, 
-	    doublecomplex *, integer *);
     doublereal rsafmn;
-    extern /* Double Complex */ void zladiv_(doublecomplex *, doublecomplex *, 
-	     doublecomplex *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

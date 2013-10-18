@@ -30,25 +30,9 @@ static real c_b31 = 1.f;
     /* Local variables */
     integer i__, j, i2, i3, j2, j3, k2, jb, nb, ii, jj, jm, ip, jp, km, ju, 
 	    kv, nw;
-    extern /* Subroutine */ int sger_(integer *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, integer *);
     real temp;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    sgemm_(char *, char *, integer *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *);
     real work13[4160]	/* was [65][64] */, work31[4160]	/* was [65][
 	    64] */;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), sswap_(integer *, real *, integer *, real *, integer *
-), strsm_(char *, char *, char *, char *, integer *, integer *, 
-	    real *, real *, integer *, real *, integer *), sgbtf2_(integer *, integer *, integer *, integer 
-	    *, real *, integer *, integer *, integer *), xerbla_(char *, 
-	    integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *), isamax_(integer *, real *, 
-	    integer *);
-    extern /* Subroutine */ int slaswp_(integer *, real *, integer *, integer 
-	    *, integer *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

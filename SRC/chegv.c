@@ -28,23 +28,8 @@ static integer c_n1 = -1;
 
     /* Local variables */
     integer nb, neig;
-    extern /* Subroutine */ int cheev_(char *, char *, integer *, complex *, 
-	    integer *, real *, complex *, integer *, real *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int ctrmm_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *);
     char trans[1];
-    extern /* Subroutine */ int ctrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *);
     logical upper, wantz;
-    extern /* Subroutine */ int chegst_(integer *, char *, integer *, complex 
-	    *, integer *, complex *, integer *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), cpotrf_(
-	    char *, integer *, complex *, integer *, integer *);
     integer lwkopt;
     logical lquery;
 

@@ -55,42 +55,22 @@ static doublereal c_b28 = 0.;
     doublereal resid;
     logical eskip;
     doublereal right;
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
     integer nclus, zfrom;
     doublereal rqtol;
     integer iindc1, iindc2, indin1, indin2;
     logical stp2ii;
-    extern /* Subroutine */ int zlar1v_(integer *, integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublecomplex *, 
-	    logical *, integer *, doublereal *, doublereal *, integer *, 
-	    integer *, doublereal *, doublereal *, doublereal *, doublereal *)
-	    ;
     doublereal lambda;
-    extern doublereal dlamch_(char *);
     integer ibegin, indeig;
     logical needbs;
     integer indlld;
     doublereal sgndef, mingma;
-    extern /* Subroutine */ int dlarrb_(integer *, doublereal *, doublereal *, 
-	     integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, integer *, 
-	     doublereal *, doublereal *, integer *, integer *);
     integer oldien, oldncl, wbegin;
     doublereal spdiam;
     integer negcnt;
-    extern /* Subroutine */ int dlarrf_(integer *, doublereal *, doublereal *, 
-	     doublereal *, integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, integer *);
     integer oldcls;
     doublereal savgap;
     integer ndepth;
     doublereal ssigma;
-    extern /* Subroutine */ int zdscal_(integer *, doublereal *, 
-	    doublecomplex *, integer *);
     logical usedbs;
     integer iindwk, offset;
     doublereal gaptol;
@@ -103,8 +83,6 @@ static doublereal c_b28 = 0.;
     logical tryrqc;
     integer isupmx;
     doublereal rqcorr;
-    extern /* Subroutine */ int zlaset_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

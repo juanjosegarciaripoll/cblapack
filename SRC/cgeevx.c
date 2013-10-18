@@ -39,45 +39,11 @@ static integer c_n1 = -1;
     char side[1];
     real anrm;
     integer ierr, itau, iwrk, nout;
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *);
     integer icond;
-    extern logical lsame_(char *, char *);
-    extern doublereal scnrm2_(integer *, complex *, integer *);
-    extern /* Subroutine */ int cgebak_(char *, char *, integer *, integer *, 
-	    integer *, real *, integer *, complex *, integer *, integer *), cgebal_(char *, integer *, complex *, integer *, 
-	    integer *, integer *, real *, integer *), slabad_(real *, 
-	    real *);
     logical scalea;
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *);
     real cscale;
-    extern /* Subroutine */ int cgehrd_(integer *, integer *, integer *, 
-	    complex *, integer *, complex *, complex *, integer *, integer *),
-	     clascl_(char *, integer *, integer *, real *, real *, integer *, 
-	    integer *, complex *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *), clacpy_(char *, integer *, integer *, complex *, integer *, 
-	    complex *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     logical select[1];
     real bignum;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *);
-    extern integer isamax_(integer *, real *, integer *);
-    extern /* Subroutine */ int chseqr_(char *, char *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *, 
-	    complex *, integer *, integer *), ctrevc_(char *, 
-	    char *, logical *, integer *, complex *, integer *, complex *, 
-	    integer *, complex *, integer *, integer *, integer *, complex *, 
-	    real *, integer *), cunghr_(integer *, integer *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *, 
-	    integer *), ctrsna_(char *, char *, logical *, integer *, complex 
-	    *, integer *, complex *, integer *, complex *, integer *, real *, 
-	    real *, integer *, integer *, complex *, integer *, real *, 
-	    integer *);
     integer minwrk, maxwrk;
     logical wantvl, wntsnb;
     integer hswork;

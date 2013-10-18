@@ -30,39 +30,17 @@
     /* Local variables */
     integer i__, j;
     real amax;
-    extern doublereal sla_gbrpvgrw__(integer *, integer *, integer *, integer 
-	    *, real *, integer *, real *, integer *);
-    extern logical lsame_(char *, char *);
     real rcmin, rcmax;
     logical equil;
     real colcnd;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int slaqgb_(integer *, integer *, integer *, 
-	    integer *, real *, integer *, real *, real *, real *, real *, 
-	    real *, char *);
     logical nofact;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
     integer infequ;
     logical colequ;
-    extern /* Subroutine */ int sgbtrf_(integer *, integer *, integer *, 
-	    integer *, real *, integer *, integer *, integer *), slacpy_(char 
-	    *, integer *, integer *, real *, integer *, real *, integer *);
     real rowcnd;
     logical notran;
-    extern /* Subroutine */ int sgbtrs_(char *, integer *, integer *, integer 
-	    *, integer *, real *, integer *, integer *, real *, integer *, 
-	    integer *);
     real smlnum;
     logical rowequ;
-    extern /* Subroutine */ int slascl2_(integer *, integer *, real *, real *, 
-	     integer *), sgbequb_(integer *, integer *, integer *, integer *, 
-	    real *, integer *, real *, real *, real *, real *, real *, 
-	    integer *), sgbrfsx_(char *, char *, integer *, integer *, 
-	    integer *, integer *, real *, integer *, real *, integer *, 
-	    integer *, real *, real *, real *, integer *, real *, integer *, 
-	    real *, real *, integer *, real *, real *, integer *, real *, 
-	    real *, integer *, integer *);
 
 
 /*     -- LAPACK driver routine (version 3.2)                          -- */

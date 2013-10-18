@@ -28,25 +28,12 @@ static complex c_b1 = {1.f,0.f};
 
     /* Local variables */
     integer lopt;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int ctrmm_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *);
     integer lwmin;
     char trans[1];
     integer liopt;
-    extern /* Subroutine */ int ctrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *);
     logical upper;
     integer lropt;
     logical wantz;
-    extern /* Subroutine */ int cheevd_(char *, char *, integer *, complex *, 
-	    integer *, real *, complex *, integer *, real *, integer *, 
-	    integer *, integer *, integer *), chegst_(integer 
-	    *, char *, integer *, complex *, integer *, complex *, integer *, 
-	    integer *), xerbla_(char *, integer *), cpotrf_(
-	    char *, integer *, complex *, integer *, integer *);
     integer liwmin, lrwmin;
     logical lquery;
 

@@ -40,55 +40,16 @@ static integer c_n1 = -1;
     char side[1];
     doublereal anrm;
     integer ierr, itau, iwrk, nout, icond;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *), dlabad_(doublereal *, doublereal *);
-    extern doublereal dznrm2_(integer *, doublecomplex *, integer *);
     logical scalea;
-    extern doublereal dlamch_(char *);
     doublereal cscale;
-    extern /* Subroutine */ int dlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, integer *), zgebak_(char *, char *, integer *, 
-	    integer *, integer *, doublereal *, integer *, doublecomplex *, 
-	    integer *, integer *), zgebal_(char *, integer *, 
-	    doublecomplex *, integer *, integer *, integer *, doublereal *, 
-	    integer *);
-    extern integer idamax_(integer *, doublereal *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     logical select[1];
-    extern /* Subroutine */ int zdscal_(integer *, doublereal *, 
-	    doublecomplex *, integer *);
     doublereal bignum;
-    extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int zgehrd_(integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, integer *), zlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublecomplex *, 
-	     integer *, integer *), zlacpy_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *);
     integer minwrk, maxwrk;
     logical wantvl, wntsnb;
     integer hswork;
     logical wntsne;
     doublereal smlnum;
-    extern /* Subroutine */ int zhseqr_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *);
     logical lquery, wantvr;
-    extern /* Subroutine */ int ztrevc_(char *, char *, logical *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, integer *, integer *, doublecomplex *, 
-	     doublereal *, integer *), ztrsna_(char *, char *, 
-	     logical *, integer *, doublecomplex *, integer *, doublecomplex *
-, integer *, doublecomplex *, integer *, doublereal *, doublereal 
-	    *, integer *, integer *, doublecomplex *, integer *, doublereal *, 
-	     integer *), zunghr_(integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, integer *);
     logical wntsnn, wntsnv;
 
 

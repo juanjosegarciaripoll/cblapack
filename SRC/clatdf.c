@@ -33,24 +33,9 @@ static real c_b24 = 1.f;
     complex bm, bp, xm[2], xp[2];
     integer info;
     complex temp, work[8];
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *);
     real scale;
-    extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *);
     complex pmone;
-    extern /* Subroutine */ int caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *);
     real rtemp, sminu, rwork[2], splus;
-    extern /* Subroutine */ int cgesc2_(integer *, complex *, integer *, 
-	    complex *, integer *, integer *, real *), cgecon_(char *, integer 
-	    *, complex *, integer *, real *, real *, complex *, real *, 
-	    integer *), classq_(integer *, complex *, integer *, real 
-	    *, real *), claswp_(integer *, complex *, integer *, integer *, 
-	    integer *, integer *, integer *);
-    extern doublereal scasum_(integer *, complex *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

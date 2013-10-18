@@ -28,20 +28,7 @@ static doublereal c_b21 = 1.;
 
     /* Local variables */
     integer i__, ib, nb;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), zherk_(char *, char *, integer *, 
-	    integer *, doublereal *, doublecomplex *, integer *, doublereal *, 
-	     doublecomplex *, integer *);
     logical upper;
-    extern /* Subroutine */ int ztrmm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *), 
-	    zlauu2_(char *, integer *, doublecomplex *, integer *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

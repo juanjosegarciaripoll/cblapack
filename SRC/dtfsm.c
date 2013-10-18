@@ -28,16 +28,8 @@ static doublereal c_b27 = 1.;
     /* Local variables */
     integer i__, j, k, m1, m2, n1, n2, info;
     logical normaltransr;
-    extern /* Subroutine */ int dgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *);
     logical lside;
-    extern logical lsame_(char *, char *);
     logical lower;
-    extern /* Subroutine */ int dtrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *), xerbla_(
-	    char *, integer *);
     logical misodd, nisodd, notrans;
 
 

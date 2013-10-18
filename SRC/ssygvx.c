@@ -30,30 +30,13 @@ static real c_b19 = 1.f;
 
     /* Local variables */
     integer nb;
-    extern logical lsame_(char *, char *);
     char trans[1];
     logical upper;
-    extern /* Subroutine */ int strmm_(char *, char *, char *, char *, 
-	    integer *, integer *, real *, real *, integer *, real *, integer *
-);
     logical wantz;
-    extern /* Subroutine */ int strsm_(char *, char *, char *, char *, 
-	    integer *, integer *, real *, real *, integer *, real *, integer *
-);
     logical alleig, indeig, valeig;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer lwkmin;
-    extern /* Subroutine */ int spotrf_(char *, integer *, real *, integer *, 
-	    integer *);
     integer lwkopt;
     logical lquery;
-    extern /* Subroutine */ int ssygst_(integer *, char *, integer *, real *, 
-	    integer *, real *, integer *, integer *), ssyevx_(char *, 
-	    char *, char *, integer *, real *, integer *, real *, real *, 
-	    integer *, integer *, real *, integer *, real *, real *, integer *
-, real *, integer *, integer *, integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

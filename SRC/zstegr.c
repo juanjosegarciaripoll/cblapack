@@ -24,11 +24,6 @@
 
     /* Local variables */
     logical tryrac;
-    extern /* Subroutine */ int zstemr_(char *, char *, integer *, doublereal 
-	    *, doublereal *, doublereal *, doublereal *, integer *, integer *, 
-	     integer *, doublereal *, doublecomplex *, integer *, integer *, 
-	    integer *, logical *, doublereal *, integer *, integer *, integer 
-	    *, integer *);
 
 
 

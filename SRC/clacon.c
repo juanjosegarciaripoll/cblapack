@@ -31,11 +31,6 @@ static integer c__1 = 1;
     static integer jump;
     static real absxi;
     static integer jlast;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *);
-    extern integer icmax1_(integer *, complex *, integer *);
-    extern doublereal scsum1_(integer *, complex *, integer *), slamch_(char *
-);
     static real safmin, altsgn, estold;
 
 

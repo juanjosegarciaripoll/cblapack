@@ -22,7 +22,6 @@
     /* Local variables */
     integer i__;
     real eps, tmp, tmp2, rmin, offdig;
-    extern doublereal slamch_(char *);
     real safmin;
     logical yesrel;
     real smlnum, offdig2;

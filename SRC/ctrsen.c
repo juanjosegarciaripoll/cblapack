@@ -30,25 +30,12 @@ static integer c_n1 = -1;
     real est;
     integer kase, ierr;
     real scale;
-    extern logical lsame_(char *, char *);
     integer isave[3], lwmin;
     logical wantq, wants;
     real rnorm;
-    extern /* Subroutine */ int clacn2_(integer *, complex *, complex *, real 
-	    *, integer *, integer *);
     real rwork[1];
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *);
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), xerbla_(char *, 
-	    integer *);
     logical wantbh;
-    extern /* Subroutine */ int ctrexc_(char *, integer *, complex *, integer 
-	    *, complex *, integer *, integer *, integer *, integer *);
     logical wantsp;
-    extern /* Subroutine */ int ctrsyl_(char *, char *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, complex *, 
-	    integer *, real *, integer *);
     logical lquery;
 
 

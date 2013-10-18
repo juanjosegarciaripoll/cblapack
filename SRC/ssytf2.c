@@ -30,20 +30,11 @@ static integer c__1 = 1;
     integer kk, kp;
     real wk, wkm1, wkp1;
     integer imax, jmax;
-    extern /* Subroutine */ int ssyr_(char *, integer *, real *, real *, 
-	    integer *, real *, integer *);
     real alpha;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     integer kstep;
     logical upper;
-    extern /* Subroutine */ int sswap_(integer *, real *, integer *, real *, 
-	    integer *);
     real absakk;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer isamax_(integer *, real *, integer *);
     real colmax;
-    extern logical sisnan_(real *);
     real rowmax;
 
 

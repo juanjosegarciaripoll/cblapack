@@ -34,22 +34,7 @@ static integer c__1 = 1;
     doublereal akk;
     integer k1k1;
     doublereal bjj, bkk;
-    extern /* Subroutine */ int zhpr2_(char *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *);
-    extern logical lsame_(char *, char *);
-    extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     logical upper;
-    extern /* Subroutine */ int zhpmv_(char *, integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *), zaxpy_(integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *), ztpmv_(char *, char *, char *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *), ztpsv_(char *, char *, char *, integer *, doublecomplex *
-, doublecomplex *, integer *), xerbla_(
-	    char *, integer *), zdscal_(integer *, doublereal *, 
-	    doublecomplex *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

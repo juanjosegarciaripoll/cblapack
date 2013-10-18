@@ -27,10 +27,6 @@ static integer c__1 = 1;
 
     /* Local variables */
     integer i__, j, l, ii;
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *), zlarf_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *), xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

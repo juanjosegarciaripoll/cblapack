@@ -40,40 +40,24 @@ static logical c_false = FALSE_;
     integer ibeg, ieig, iend;
     doublereal dmin__, temp, xmax, sump[4]	/* was [2][2] */, sums[4]	
 	    /* was [2][2] */;
-    extern /* Subroutine */ int dlag2_(doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, doublereal *, doublereal *, 
-	     doublereal *, doublereal *);
     doublereal cim2a, cim2b, cre2a, cre2b, temp2, bdiag[2], acoef, scale;
     logical ilall;
     integer iside;
     doublereal sbeta;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int dgemv_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *);
     logical il2by2;
     integer iinfo;
     doublereal small;
     logical compl;
     doublereal anorm, bnorm;
     logical compr;
-    extern /* Subroutine */ int dlaln2_(logical *, integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *, doublereal *, 
-	     doublereal *, doublereal *, integer *, doublereal *, doublereal *
-, doublereal *, integer *, doublereal *, doublereal *, integer *);
     doublereal temp2i;
-    extern /* Subroutine */ int dlabad_(doublereal *, doublereal *);
     doublereal temp2r;
     logical ilabad, ilbbad;
     doublereal acoefa, bcoefa, cimaga, cimagb;
     logical ilback;
     doublereal bcoefi, ascale, bscale, creala, crealb;
-    extern doublereal dlamch_(char *);
     doublereal bcoefr, salfar, safmin;
-    extern /* Subroutine */ int dlacpy_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *);
     doublereal xscale, bignum;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     logical ilcomp, ilcplx;
     integer ihwmny;
 

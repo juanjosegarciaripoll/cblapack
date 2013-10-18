@@ -30,20 +30,10 @@ static real c_b18 = 1.f;
     integer i__, j, maxlocval;
     real ajj;
     integer pvt;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     integer itemp;
-    extern /* Subroutine */ int sgemv_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *);
     real stemp;
     logical upper;
-    extern /* Subroutine */ int sswap_(integer *, real *, integer *, real *, 
-	    integer *);
     real sstop;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern logical sisnan_(real *);
-    extern integer smaxloc_(real *, integer *);
 
 
 /*  -- LAPACK PROTOTYPE routine (version 3.2) -- */

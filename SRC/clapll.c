@@ -23,15 +23,7 @@
 
     /* Local variables */
     complex c__, a11, a12, a22, tau;
-    extern /* Subroutine */ int slas2_(real *, real *, real *, real *, real *)
-	    ;
-    extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern /* Subroutine */ int caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *);
     real ssmax;
-    extern /* Subroutine */ int clarfg_(integer *, complex *, complex *, 
-	    integer *, complex *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

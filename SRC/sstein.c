@@ -33,29 +33,12 @@ static integer c_n1 = -1;
     integer its;
     real xjm, eps1;
     integer jblk, nblk, jmax;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *), 
-	    snrm2_(integer *, real *, integer *);
     integer iseed[4], gpind, iinfo;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
-    extern doublereal sasum_(integer *, real *, integer *);
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     real ortol;
-    extern /* Subroutine */ int saxpy_(integer *, real *, real *, integer *, 
-	    real *, integer *);
     integer indrv1, indrv2, indrv3, indrv4, indrv5;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), slagtf_(
-	    integer *, real *, real *, real *, real *, real *, real *, 
-	    integer *, integer *);
     integer nrmchk;
-    extern integer isamax_(integer *, real *, integer *);
-    extern /* Subroutine */ int slagts_(integer *, integer *, real *, real *, 
-	    real *, real *, integer *, real *, real *, integer *);
     integer blksiz;
     real onenrm, pertol;
-    extern /* Subroutine */ int slarnv_(integer *, integer *, integer *, real 
-	    *);
     real stpcrt;
 
 

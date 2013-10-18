@@ -28,16 +28,8 @@ static complex c_b1 = {1.f,0.f};
     /* Local variables */
     integer i__, j, k, m1, m2, n1, n2, info;
     logical normaltransr;
-    extern /* Subroutine */ int cgemm_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *);
     logical lside;
-    extern logical lsame_(char *, char *);
     logical lower;
-    extern /* Subroutine */ int ctrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *), xerbla_(char *, 
-	    integer *);
     logical misodd, nisodd, notrans;
 
 

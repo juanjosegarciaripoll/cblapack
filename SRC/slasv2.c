@@ -32,7 +32,6 @@ static real c_b4 = 1.f;
     logical swap;
     real tsign;
     logical gasmal;
-    extern doublereal slamch_(char *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

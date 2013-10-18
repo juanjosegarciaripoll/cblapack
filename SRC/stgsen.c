@@ -39,31 +39,15 @@ static real c_b28 = 1.f;
     integer ierr;
     real dsum;
     logical swap;
-    extern /* Subroutine */ int slag2_(real *, integer *, real *, integer *, 
-	    real *, real *, real *, real *, real *, real *);
     integer isave[3];
     logical wantd;
     integer lwmin;
     logical wantp;
-    extern /* Subroutine */ int slacn2_(integer *, real *, real *, integer *, 
-	    real *, integer *, integer *);
     logical wantd1, wantd2;
     real dscale, rdscal;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), slacpy_(
-	    char *, integer *, integer *, real *, integer *, real *, integer *
-), stgexc_(logical *, logical *, integer *, real *, 
-	    integer *, real *, integer *, real *, integer *, real *, integer *
-, integer *, integer *, real *, integer *, integer *);
     integer liwmin;
-    extern /* Subroutine */ int slassq_(integer *, real *, integer *, real *, 
-	    real *);
     real smlnum;
     logical lquery;
-    extern /* Subroutine */ int stgsyl_(char *, integer *, integer *, integer 
-	    *, real *, integer *, real *, integer *, real *, integer *, real *
-, integer *, real *, integer *, real *, integer *, real *, real *, 
-	     real *, integer *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

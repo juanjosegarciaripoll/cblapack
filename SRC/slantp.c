@@ -28,10 +28,7 @@ doublereal slantp_(char *norm, char *uplo, char *diag, integer *n, real *ap,
     integer i__, j, k;
     real sum, scale;
     logical udiag;
-    extern logical lsame_(char *, char *);
     real value;
-    extern /* Subroutine */ int slassq_(integer *, real *, integer *, real *, 
-	    real *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

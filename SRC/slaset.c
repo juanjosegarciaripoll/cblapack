@@ -21,7 +21,6 @@
 
     /* Local variables */
     integer i__, j;
-    extern logical lsame_(char *, char *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

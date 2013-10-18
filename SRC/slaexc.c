@@ -40,23 +40,8 @@ static integer c__3 = 3;
     real cs, t11, t22, t33, sn, wi1, wi2, wr1, wr2, eps, tau, tau1, tau2;
     integer ierr;
     real temp;
-    extern /* Subroutine */ int srot_(integer *, real *, integer *, real *, 
-	    integer *, real *, real *);
     real scale, dnorm, xnorm;
-    extern /* Subroutine */ int slanv2_(real *, real *, real *, real *, real *
-, real *, real *, real *, real *, real *), slasy2_(logical *, 
-	    logical *, integer *, integer *, integer *, real *, integer *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *, 
-	    real *, integer *);
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
-    extern /* Subroutine */ int slarfg_(integer *, real *, real *, integer *, 
-	    real *), slacpy_(char *, integer *, integer *, real *, integer *, 
-	    real *, integer *), slartg_(real *, real *, real *, real *
-, real *);
     real thresh;
-    extern /* Subroutine */ int slarfx_(char *, integer *, integer *, real *, 
-	    real *, real *, integer *, real *);
     real smlnum;
 
 

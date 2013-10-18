@@ -35,18 +35,7 @@ static integer c__65 = 65;
     complex t[4160]	/* was [65][64] */;
     integer i1, i2, i3, ib, ic, jc, nb, mi, ni, nq, nw, iws;
     logical left;
-    extern logical lsame_(char *, char *);
     integer nbmin, iinfo;
-    extern /* Subroutine */ int cunm2r_(char *, char *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *, 
-	    complex *, integer *), clarfb_(char *, char *, 
-	    char *, char *, integer *, integer *, integer *, complex *, 
-	    integer *, complex *, integer *, complex *, integer *, complex *, 
-	    integer *), clarft_(char *, char *
-, integer *, integer *, complex *, integer *, complex *, complex *
-, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     logical notran;
     integer ldwork, lwkopt;
     logical lquery;

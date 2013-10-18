@@ -34,24 +34,10 @@ static integer c__1 = 1;
     real tola;
     integer isub;
     real tolb, unfl, temp, smax;
-    extern logical lsame_(char *, char *);
     real anorm, bnorm;
     logical wantq;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     logical wantu, wantv;
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
     integer ncycle;
-    extern /* Subroutine */ int xerbla_(char *, integer *), stgsja_(
-	    char *, char *, char *, integer *, integer *, integer *, integer *
-, integer *, real *, integer *, real *, integer *, real *, real *, 
-	     real *, real *, real *, integer *, real *, integer *, real *, 
-	    integer *, real *, integer *, integer *), 
-	    sggsvp_(char *, char *, char *, integer *, integer *, integer *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *, 
-	    integer *, real *, integer *, real *, integer *, real *, integer *
-, integer *, real *, real *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

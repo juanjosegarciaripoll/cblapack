@@ -33,19 +33,8 @@ static integer c__1 = 1;
     complex akk;
     integer pvt;
     real temp, temp2, tol3z;
-    extern /* Subroutine */ int cgemm_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *), cgemv_(char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *), cswap_(
-	    integer *, complex *, integer *, complex *, integer *);
     integer itemp;
-    extern doublereal scnrm2_(integer *, complex *, integer *);
-    extern /* Subroutine */ int clarfp_(integer *, complex *, complex *, 
-	    integer *, complex *);
-    extern doublereal slamch_(char *);
     integer lsticc;
-    extern integer isamax_(integer *, real *, integer *);
     integer lastrk;
 
 

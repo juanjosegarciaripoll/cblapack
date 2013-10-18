@@ -31,14 +31,8 @@ static integer c_n1 = -1;
     integer i__, j;
     doublereal eps;
     doublecomplex temp;
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *), dlabad_(doublereal *, doublereal *);
-    extern doublereal dlamch_(char *);
     doublereal bignum;
-    extern integer izamax_(integer *, doublecomplex *, integer *);
     doublereal smlnum;
-    extern /* Subroutine */ int zlaswp_(integer *, doublecomplex *, integer *, 
-	     integer *, integer *, integer *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

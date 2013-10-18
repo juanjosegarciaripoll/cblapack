@@ -23,7 +23,6 @@
     integer i__;
     real u[128];
     integer il, iv, il2;
-    extern /* Subroutine */ int slaruv_(integer *, integer *, real *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

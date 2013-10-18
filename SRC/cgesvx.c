@@ -29,34 +29,13 @@
     integer i__, j;
     real amax;
     char norm[1];
-    extern logical lsame_(char *, char *);
     real rcmin, rcmax, anorm;
     logical equil;
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *);
-    extern /* Subroutine */ int claqge_(integer *, integer *, complex *, 
-	    integer *, real *, real *, real *, real *, real *, char *)
-	    , cgecon_(char *, integer *, complex *, integer *, real *, real *, 
-	     complex *, real *, integer *);
     real colcnd;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int cgeequ_(integer *, integer *, complex *, 
-	    integer *, real *, real *, real *, real *, real *, integer *);
     logical nofact;
-    extern /* Subroutine */ int cgerfs_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *, integer *, complex *, integer 
-	    *, complex *, integer *, real *, real *, complex *, real *, 
-	    integer *), cgetrf_(integer *, integer *, complex *, 
-	    integer *, integer *, integer *), clacpy_(char *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *), 
-	    xerbla_(char *, integer *);
     real bignum;
-    extern doublereal clantr_(char *, char *, char *, integer *, integer *, 
-	    complex *, integer *, real *);
     integer infequ;
     logical colequ;
-    extern /* Subroutine */ int cgetrs_(char *, integer *, integer *, complex 
-	    *, integer *, integer *, complex *, integer *, integer *);
     real rowcnd;
     logical notran;
     real smlnum;

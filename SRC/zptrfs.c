@@ -37,19 +37,10 @@ static doublecomplex c_b16 = {1.,0.};
     doublecomplex bi, cx, dx, ex;
     integer ix, nz;
     doublereal eps, safe1, safe2;
-    extern logical lsame_(char *, char *);
     integer count;
     logical upper;
-    extern /* Subroutine */ int zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
-    extern integer idamax_(integer *, doublereal *, integer *);
     doublereal safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal lstres;
-    extern /* Subroutine */ int zpttrs_(char *, integer *, integer *, 
-	    doublereal *, doublecomplex *, doublecomplex *, integer *, 
-	    integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

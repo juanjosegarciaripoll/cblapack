@@ -31,17 +31,7 @@ static integer c__2 = 2;
 
     /* Local variables */
     integer j, jb, nb, nn;
-    extern logical lsame_(char *, char *);
     logical upper;
-    extern /* Subroutine */ int ztrmm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *), 
-	    ztrsm_(char *, char *, char *, char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *), ztrti2_(char *, char *
-, integer *, doublecomplex *, integer *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     logical nounit;
 
 

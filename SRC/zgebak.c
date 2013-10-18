@@ -24,11 +24,7 @@
     integer i__, k;
     doublereal s;
     integer ii;
-    extern logical lsame_(char *, char *);
     logical leftv;
-    extern /* Subroutine */ int zswap_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), xerbla_(char *, integer *), 
-	    zdscal_(integer *, doublereal *, doublecomplex *, integer *);
     logical rightv;
 
 

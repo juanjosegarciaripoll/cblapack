@@ -28,17 +28,6 @@ static real c_b19 = -1.f;
 
     /* Local variables */
     integer i__, j, jb, nb, iinfo;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *), strsm_(char *, char *, char *, 
-	     char *, integer *, integer *, real *, real *, integer *, real *, 
-	    integer *), sgetf2_(integer *, 
-	    integer *, real *, integer *, integer *, integer *), xerbla_(char 
-	    *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int slaswp_(integer *, real *, integer *, integer 
-	    *, integer *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

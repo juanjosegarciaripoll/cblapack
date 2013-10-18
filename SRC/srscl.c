@@ -18,9 +18,6 @@
     real mul, cden;
     logical done;
     real cnum, cden1, cnum1;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    slabad_(real *, real *);
-    extern doublereal slamch_(char *);
     real bignum, smlnum;
 
 

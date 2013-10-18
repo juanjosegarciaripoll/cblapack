@@ -25,11 +25,7 @@ static integer c__1 = 1;
 
     /* Local variables */
     integer i__;
-    extern logical lsame_(char *, char *);
     logical upper;
-    extern /* Subroutine */ int stpsv_(char *, char *, char *, integer *, 
-	    real *, real *, integer *), xerbla_(char *
-, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

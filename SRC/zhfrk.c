@@ -25,17 +25,9 @@
     integer j, n1, n2, nk, info;
     doublecomplex cbeta;
     logical normaltransr;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), zherk_(char *, char *, integer *, 
-	    integer *, doublereal *, doublecomplex *, integer *, doublereal *, 
-	     doublecomplex *, integer *);
     integer nrowa;
     logical lower;
     doublecomplex calpha;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     logical nisodd, notrans;
 
 

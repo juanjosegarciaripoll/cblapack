@@ -42,7 +42,6 @@ static integer c__0 = 0;
     integer nwu;
     real tmp1, tmp2;
     integer iend, ioff, iout, itmp1, jdisc;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     real atoli;
     integer iwoff;
@@ -50,17 +49,9 @@ static integer c__0 = 0;
     integer itmax;
     real wkill, rtoli, tnorm;
     integer ibegin, irange, idiscl;
-    extern doublereal slamch_(char *);
     real safemn;
     integer idumma[1];
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer idiscu;
-    extern /* Subroutine */ int slaebz_(integer *, integer *, integer *, 
-	    integer *, integer *, integer *, real *, real *, real *, real *, 
-	    real *, real *, integer *, real *, real *, integer *, integer *, 
-	    real *, integer *, integer *);
     integer iorder;
     logical ncnvrg;
     real pivmin;

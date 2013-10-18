@@ -31,11 +31,6 @@
     doublecomplex ua11, ua12, ua21, ua22, vb11, vb12, vb21, vb22;
     doublereal csl, csr, snl, snr, aua11, aua12, aua21, aua22, avb12, avb11, 
 	    avb21, avb22, ua11r, ua22r, vb11r, vb22r;
-    extern /* Subroutine */ int dlasv2_(doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *), zlartg_(doublecomplex *
-, doublecomplex *, doublereal *, doublecomplex *, doublecomplex *)
-	    ;
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

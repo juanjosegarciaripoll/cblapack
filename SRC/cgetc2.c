@@ -31,11 +31,6 @@ static complex c_b10 = {-1.f,-0.f};
     real eps;
     integer ipv, jpv;
     real smin, xmax;
-    extern /* Subroutine */ int cgeru_(integer *, integer *, complex *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *),
-	     cswap_(integer *, complex *, integer *, complex *, integer *), 
-	    slabad_(real *, real *);
-    extern doublereal slamch_(char *);
     real bignum, smlnum;
 
 

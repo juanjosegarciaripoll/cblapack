@@ -29,9 +29,6 @@ static real c_b7 = 0.f;
 
     /* Local variables */
     integer i__, j, l;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

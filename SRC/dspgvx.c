@@ -28,21 +28,9 @@ static integer c__1 = 1;
 
     /* Local variables */
     integer j;
-    extern logical lsame_(char *, char *);
     char trans[1];
     logical upper;
-    extern /* Subroutine */ int dtpmv_(char *, char *, char *, integer *, 
-	    doublereal *, doublereal *, integer *), 
-	    dtpsv_(char *, char *, char *, integer *, doublereal *, 
-	    doublereal *, integer *);
     logical wantz, alleig, indeig, valeig;
-    extern /* Subroutine */ int xerbla_(char *, integer *), dpptrf_(
-	    char *, integer *, doublereal *, integer *), dspgst_(
-	    integer *, char *, integer *, doublereal *, doublereal *, integer 
-	    *), dspevx_(char *, char *, char *, integer *, doublereal 
-	    *, doublereal *, doublereal *, integer *, integer *, doublereal *, 
-	     integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

@@ -27,21 +27,12 @@ static integer c__1 = 1;
 
     /* Local variables */
     real eps, rmin, rmax, tnrm, sigma;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     integer lwmin;
     logical wantz;
     integer iscale;
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
-    extern /* Subroutine */ int sstedc_(char *, integer *, real *, real *, 
-	    real *, integer *, real *, integer *, integer *, integer *, 
-	    integer *);
     integer liwmin;
-    extern doublereal slanst_(char *, integer *, real *, real *);
-    extern /* Subroutine */ int ssterf_(integer *, real *, real *, integer *);
     real smlnum;
     logical lquery;
 

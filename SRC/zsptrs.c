@@ -31,17 +31,8 @@ static integer c__1 = 1;
     doublecomplex ak, bk;
     integer kc, kp;
     doublecomplex akm1, bkm1, akm1k;
-    extern logical lsame_(char *, char *);
     doublecomplex denom;
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *), zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *);
     logical upper;
-    extern /* Subroutine */ int zgeru_(integer *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zswap_(integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *), xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

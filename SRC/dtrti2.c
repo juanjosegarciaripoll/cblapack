@@ -26,12 +26,7 @@ static integer c__1 = 1;
     /* Local variables */
     integer j;
     doublereal ajj;
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *);
-    extern logical lsame_(char *, char *);
     logical upper;
-    extern /* Subroutine */ int dtrmv_(char *, char *, char *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *), xerbla_(char *, integer *);
     logical nounit;
 
 

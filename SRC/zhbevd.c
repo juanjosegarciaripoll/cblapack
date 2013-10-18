@@ -36,39 +36,17 @@ static integer c__1 = 1;
     integer imax;
     doublereal rmin, rmax;
     integer llwk2;
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *);
     doublereal sigma;
-    extern logical lsame_(char *, char *);
     integer iinfo;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
     integer lwmin;
     logical lower;
     integer llrwk;
     logical wantz;
     integer indwk2;
-    extern doublereal dlamch_(char *);
     integer iscale;
     doublereal safmin;
-    extern doublereal zlanhb_(char *, char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal bignum;
-    extern /* Subroutine */ int dsterf_(integer *, doublereal *, doublereal *, 
-	     integer *), zlascl_(char *, integer *, integer *, doublereal *, 
-	    doublereal *, integer *, integer *, doublecomplex *, integer *, 
-	    integer *), zstedc_(char *, integer *, doublereal *, 
-	    doublereal *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublereal *, integer *, integer *, integer *, integer 
-	    *), zhbtrd_(char *, char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     integer indwrk, liwmin;
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     integer lrwmin;
     doublereal smlnum;
     logical lquery;

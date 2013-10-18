@@ -30,27 +30,8 @@ static integer c__65 = 65;
     integer i__, j, i2, i3, j2, j3, k2, jb, nb, ii, jj, jm, ip, jp, km, ju, 
 	    kv, nw;
     complex temp;
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *), cgemm_(char *, char *, integer *, integer *, integer *
-, complex *, complex *, integer *, complex *, integer *, complex *
-, complex *, integer *), cgeru_(integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, integer *), ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *), cswap_(integer *, complex *, integer *, 
-	    complex *, integer *);
     complex work13[4160]	/* was [65][64] */, work31[4160]	/* 
 	    was [65][64] */;
-    extern /* Subroutine */ int ctrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *), cgbtf2_(integer *, 
-	    integer *, integer *, integer *, complex *, integer *, integer *, 
-	    integer *);
-    extern integer icamax_(integer *, complex *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int claswp_(integer *, complex *, integer *, 
-	    integer *, integer *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -32,19 +32,8 @@ static integer c__1 = 1;
     complex t, r1, d11, d21, d22;
     integer jb, jj, kk, jp, kp, kw, kkw, imax, jmax;
     real alpha;
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *), cgemm_(char *, char *, integer *, integer *, integer *
-, complex *, complex *, integer *, complex *, integer *, complex *
-, complex *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int cgemv_(char *, integer *, integer *, complex *
-, complex *, integer *, complex *, integer *, complex *, complex *
-, integer *), ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *), cswap_(integer *, complex *, integer *, 
-	    complex *, integer *);
     integer kstep;
     real absakk;
-    extern integer icamax_(integer *, complex *, integer *);
     real colmax, rowmax;
 
 

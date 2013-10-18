@@ -23,9 +23,7 @@
     /* Local variables */
     integer i__, j, info;
     complex temp;
-    extern logical lsame_(char *, char *);
     real ctemp, stemp;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

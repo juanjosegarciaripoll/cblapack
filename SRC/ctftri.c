@@ -27,15 +27,8 @@ static complex c_b1 = {1.f,0.f};
     /* Local variables */
     integer k, n1, n2;
     logical normaltransr;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int ctrmm_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *);
     logical lower;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     logical nisodd;
-    extern /* Subroutine */ int ctrtri_(char *, char *, integer *, complex *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2)                                    -- */

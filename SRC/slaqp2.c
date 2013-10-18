@@ -30,18 +30,9 @@ static integer c__1 = 1;
     real aii;
     integer pvt;
     real temp, temp2;
-    extern doublereal snrm2_(integer *, real *, integer *);
     real tol3z;
     integer offpi;
-    extern /* Subroutine */ int slarf_(char *, integer *, integer *, real *, 
-	    integer *, real *, real *, integer *, real *);
     integer itemp;
-    extern /* Subroutine */ int sswap_(integer *, real *, integer *, real *, 
-	    integer *);
-    extern doublereal slamch_(char *);
-    extern integer isamax_(integer *, real *, integer *);
-    extern /* Subroutine */ int slarfp_(integer *, real *, real *, integer *, 
-	    real *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

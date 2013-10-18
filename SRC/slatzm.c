@@ -27,12 +27,6 @@ static real c_b5 = 1.f;
     real r__1;
 
     /* Local variables */
-    extern /* Subroutine */ int sger_(integer *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sgemv_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *), scopy_(integer *, real *, integer *, real *, integer *), 
-	    saxpy_(integer *, real *, real *, integer *, real *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

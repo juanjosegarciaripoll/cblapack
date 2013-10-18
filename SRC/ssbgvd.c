@@ -29,26 +29,11 @@ static real c_b13 = 0.f;
     /* Local variables */
     integer inde;
     char vect[1];
-    extern logical lsame_(char *, char *);
     integer iinfo;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     integer lwmin;
     logical upper, wantz;
     integer indwk2, llwrk2;
-    extern /* Subroutine */ int xerbla_(char *, integer *), sstedc_(
-	    char *, integer *, real *, real *, real *, integer *, real *, 
-	    integer *, integer *, integer *, integer *), slacpy_(char 
-	    *, integer *, integer *, real *, integer *, real *, integer *);
     integer indwrk, liwmin;
-    extern /* Subroutine */ int spbstf_(char *, integer *, integer *, real *, 
-	    integer *, integer *), ssbtrd_(char *, char *, integer *, 
-	    integer *, real *, integer *, real *, real *, real *, integer *, 
-	    real *, integer *), ssbgst_(char *, char *, 
-	    integer *, integer *, integer *, real *, integer *, real *, 
-	    integer *, real *, integer *, real *, integer *), 
-	    ssterf_(integer *, real *, real *, integer *);
     logical lquery;
 
 

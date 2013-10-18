@@ -35,17 +35,7 @@ static integer c__65 = 65;
     real t[4160]	/* was [65][64] */;
     integer i1, i2, i3, ib, nb, mi, ni, nq, nw, iws;
     logical left;
-    extern logical lsame_(char *, char *);
     integer nbmin, iinfo;
-    extern /* Subroutine */ int sorm2l_(char *, char *, integer *, integer *, 
-	    integer *, real *, integer *, real *, real *, integer *, real *, 
-	    integer *), slarfb_(char *, char *, char *, char *
-, integer *, integer *, integer *, real *, integer *, real *, 
-	    integer *, real *, integer *, real *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int slarft_(char *, char *, integer *, integer *, 
-	    real *, integer *, real *, real *, integer *);
     logical notran;
     integer ldwork, lwkopt;
     logical lquery;

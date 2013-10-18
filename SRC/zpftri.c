@@ -27,19 +27,8 @@ static doublereal c_b12 = 1.;
     /* Local variables */
     integer k, n1, n2;
     logical normaltransr;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int zherk_(char *, char *, integer *, integer *, 
-	    doublereal *, doublecomplex *, integer *, doublereal *, 
-	    doublecomplex *, integer *);
     logical lower;
-    extern /* Subroutine */ int ztrmm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *), 
-	    xerbla_(char *, integer *);
     logical nisodd;
-    extern /* Subroutine */ int zlauum_(char *, integer *, doublecomplex *, 
-	    integer *, integer *), ztftri_(char *, char *, char *, 
-	    integer *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2)                                    -- */

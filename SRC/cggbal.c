@@ -40,22 +40,11 @@ static real c_b72 = .5f;
     real beta, coef;
     integer irab, lrab;
     real basl, cmax;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
     real coef2, coef5, gamma, alpha;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     real sfmin;
-    extern /* Subroutine */ int cswap_(integer *, complex *, integer *, 
-	    complex *, integer *);
     real sfmax;
     integer iflow, kount;
-    extern /* Subroutine */ int saxpy_(integer *, real *, real *, integer *, 
-	    real *, integer *);
     real pgamma;
-    extern integer icamax_(integer *, complex *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *), xerbla_(char *, integer *);
     integer lsfmin, lsfmax;
 
 

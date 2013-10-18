@@ -26,17 +26,9 @@ static integer c__1 = 1;
 
     /* Local variables */
     integer j, neig;
-    extern logical lsame_(char *, char *);
     char trans[1];
     logical upper;
-    extern /* Subroutine */ int sspev_(char *, char *, integer *, real *, 
-	    real *, real *, integer *, real *, integer *);
     logical wantz;
-    extern /* Subroutine */ int stpmv_(char *, char *, char *, integer *, 
-	    real *, real *, integer *), stpsv_(char *, 
-	     char *, char *, integer *, real *, real *, integer *), xerbla_(char *, integer *), spptrf_(char 
-	    *, integer *, real *, integer *), sspgst_(integer *, char 
-	    *, integer *, real *, real *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

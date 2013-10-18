@@ -43,21 +43,13 @@ static integer c__0 = 0;
     integer nwu;
     real tmp1, tmp2;
     integer iend, jblk, ioff, iout, itmp1, itmp2, jdisc;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     real atoli;
     integer iwoff, itmax;
     real wkill, rtoli, uflow, tnorm;
     integer ibegin, irange, idiscl;
-    extern doublereal slamch_(char *);
     integer idumma[1];
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer idiscu;
-    extern /* Subroutine */ int slaebz_(integer *, integer *, integer *, 
-	    integer *, integer *, integer *, real *, real *, real *, real *, 
-	    real *, real *, integer *, real *, real *, integer *, integer *, 
-	    real *, integer *, integer *);
     logical ncnvrg, toofew;
 
 

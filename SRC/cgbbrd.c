@@ -39,19 +39,9 @@ static integer c__1 = 1;
     complex rs;
     integer kb1, ml0, mu0, klm, kun, nrt, klu1, inca;
     real abst;
-    extern /* Subroutine */ int crot_(integer *, complex *, integer *, 
-	    complex *, integer *, real *, complex *), cscal_(integer *, 
-	    complex *, complex *, integer *);
-    extern logical lsame_(char *, char *);
     logical wantb, wantc;
     integer minmn;
     logical wantq;
-    extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *), clartg_(complex *, 
-	    complex *, real *, complex *, complex *), xerbla_(char *, integer 
-	    *), clargv_(integer *, complex *, integer *, complex *, 
-	    integer *, real *, integer *), clartv_(integer *, complex *, 
-	    integer *, complex *, integer *, real *, complex *, integer *);
     logical wantpt;
 
 

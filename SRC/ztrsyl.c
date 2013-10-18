@@ -37,22 +37,8 @@ static integer c__1 = 1;
     doublecomplex vec;
     doublereal dum[1], eps, sgn, smin;
     doublecomplex suml, sumr;
-    extern logical lsame_(char *, char *);
-    extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), zdotu_(
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
-    extern /* Subroutine */ int dlabad_(doublereal *, doublereal *);
-    extern doublereal dlamch_(char *);
     doublereal scaloc;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
     doublereal bignum;
-    extern /* Subroutine */ int zdscal_(integer *, doublereal *, 
-	    doublecomplex *, integer *);
-    extern /* Double Complex */ void zladiv_(doublecomplex *, doublecomplex *, 
-	     doublecomplex *);
     logical notrna, notrnb;
     doublereal smlnum;
 

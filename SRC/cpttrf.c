@@ -23,7 +23,6 @@
     real f, g;
     integer i__, i4;
     real eii, eir;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

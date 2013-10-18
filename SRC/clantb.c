@@ -28,10 +28,7 @@ doublereal clantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
     integer i__, j, l;
     real sum, scale;
     logical udiag;
-    extern logical lsame_(char *, char *);
     real value;
-    extern /* Subroutine */ int classq_(integer *, complex *, integer *, real 
-	    *, real *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

@@ -31,17 +31,7 @@ static real c_b22 = -1.f;
 
     /* Local variables */
     integer j, jb, nb, nn;
-    extern logical lsame_(char *, char *);
     logical upper;
-    extern /* Subroutine */ int strmm_(char *, char *, char *, char *, 
-	    integer *, integer *, real *, real *, integer *, real *, integer *
-), strsm_(char *, char *, char *, 
-	    char *, integer *, integer *, real *, real *, integer *, real *, 
-	    integer *), strti2_(char *, char *
-, integer *, real *, integer *, integer *), 
-	    xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     logical nounit;
 
 

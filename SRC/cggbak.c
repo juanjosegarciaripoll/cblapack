@@ -22,12 +22,7 @@
 
     /* Local variables */
     integer i__, k;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int cswap_(integer *, complex *, integer *, 
-	    complex *, integer *);
     logical leftv;
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *), xerbla_(char *, integer *);
     logical rightv;
 
 

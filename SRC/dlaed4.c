@@ -35,12 +35,7 @@
     doublereal temp, prew, temp1, dltlb, dltub, midpt;
     integer niter;
     logical swtch;
-    extern /* Subroutine */ int dlaed5_(integer *, doublereal *, doublereal *, 
-	     doublereal *, doublereal *, doublereal *), dlaed6_(integer *, 
-	    logical *, doublereal *, doublereal *, doublereal *, doublereal *, 
-	     doublereal *, integer *);
     logical swtch3;
-    extern doublereal dlamch_(char *);
     logical orgati;
     doublereal erretm, rhoinv;
 

@@ -31,13 +31,7 @@ static integer c_n1 = -1;
     integer i__, j;
     real eps;
     complex temp;
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *), slabad_(real *, real *);
-    extern integer icamax_(integer *, complex *, integer *);
-    extern doublereal slamch_(char *);
     real bignum;
-    extern /* Subroutine */ int claswp_(integer *, complex *, integer *, 
-	    integer *, integer *, integer *, integer *);
     real smlnum;
 
 

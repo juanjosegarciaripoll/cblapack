@@ -36,21 +36,10 @@ static real c_b14 = 1.f;
     real eps;
     integer kase;
     real safe1, safe2;
-    extern logical lsame_(char *, char *);
     integer isave[3], count;
     logical upper;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), saxpy_(integer *, real *, real *, integer *, real *, 
-	    integer *), ssymv_(char *, integer *, real *, real *, integer *, 
-	    real *, integer *, real *, real *, integer *), slacn2_(
-	    integer *, real *, real *, integer *, real *, integer *, integer *
-);
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real lstres;
-    extern /* Subroutine */ int ssytrs_(char *, integer *, integer *, real *, 
-	    integer *, integer *, real *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

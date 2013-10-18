@@ -27,15 +27,8 @@ static integer c__2 = 2;
 
     /* Local variables */
     integer j, k, kb, nb, iws;
-    extern logical lsame_(char *, char *);
     integer nbmin, iinfo;
     logical upper;
-    extern /* Subroutine */ int ssytf2_(char *, integer *, real *, integer *, 
-	    integer *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int slasyf_(char *, integer *, integer *, integer 
-	    *, real *, integer *, integer *, real *, integer *, integer *);
     integer ldwork, lwkopt;
     logical lquery;
 

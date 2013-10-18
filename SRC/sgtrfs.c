@@ -35,22 +35,11 @@ static real c_b19 = 1.f;
     real eps;
     integer kase;
     real safe1, safe2;
-    extern logical lsame_(char *, char *);
     integer isave[3], count;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), saxpy_(integer *, real *, real *, integer *, real *, 
-	    integer *), slacn2_(integer *, real *, real *, integer *, real *, 
-	    integer *, integer *);
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *), slagtm_(
-	    char *, integer *, integer *, real *, real *, real *, real *, 
-	    real *, integer *, real *, real *, integer *);
     logical notran;
     char transn[1], transt[1];
     real lstres;
-    extern /* Subroutine */ int sgttrs_(char *, integer *, integer *, real *, 
-	    real *, real *, real *, integer *, real *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

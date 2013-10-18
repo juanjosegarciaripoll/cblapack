@@ -28,18 +28,6 @@ static integer c_n1 = -1;
 
     /* Local variables */
     integer i__, j, jb, nb, iinfo;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), ztrsm_(char *, char *, char *, char *, 
-	     integer *, integer *, doublecomplex *, doublecomplex *, integer *
-, doublecomplex *, integer *), 
-	    zgetf2_(integer *, integer *, doublecomplex *, integer *, integer 
-	    *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int zlaswp_(integer *, doublecomplex *, integer *, 
-	     integer *, integer *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

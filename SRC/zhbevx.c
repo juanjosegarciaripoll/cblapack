@@ -42,52 +42,20 @@ static integer c__1 = 1;
     logical test;
     doublecomplex ctmp1;
     integer itmp1, indee;
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *);
     doublereal sigma;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     char order[1];
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
     logical lower;
-    extern /* Subroutine */ int zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *);
     logical wantz;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zswap_(integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
     logical alleig, indeig;
     integer iscale, indibl;
     logical valeig;
     doublereal safmin;
-    extern doublereal zlanhb_(char *, char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal abstll, bignum;
     integer indiwk, indisp;
-    extern /* Subroutine */ int dsterf_(integer *, doublereal *, doublereal *, 
-	     integer *), zlascl_(char *, integer *, integer *, doublereal *, 
-	    doublereal *, integer *, integer *, doublecomplex *, integer *, 
-	    integer *), dstebz_(char *, char *, integer *, doublereal 
-	    *, doublereal *, integer *, integer *, doublereal *, doublereal *, 
-	     doublereal *, integer *, integer *, doublereal *, integer *, 
-	    integer *, doublereal *, integer *, integer *), 
-	    zhbtrd_(char *, char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *, doublereal *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *);
     integer indrwk, indwrk;
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     integer nsplit;
     doublereal smlnum;
-    extern /* Subroutine */ int zstein_(integer *, doublereal *, doublereal *, 
-	     integer *, doublereal *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *, integer *, integer *, integer *), 
-	    zsteqr_(char *, integer *, doublereal *, doublereal *, 
-	    doublecomplex *, integer *, doublereal *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

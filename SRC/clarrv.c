@@ -55,38 +55,24 @@ static real c_b28 = 0.f;
     logical eskip;
     real right;
     integer nclus, zfrom;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     real rqtol;
     integer iindc1, iindc2, indin1, indin2;
-    extern /* Subroutine */ int clar1v_(integer *, integer *, integer *, real 
-	    *, real *, real *, real *, real *, real *, real *, complex *, 
-	    logical *, integer *, real *, real *, integer *, integer *, real *
-, real *, real *, real *);
     logical stp2ii;
     real lambda;
     integer ibegin, indeig;
     logical needbs;
     integer indlld;
     real sgndef, mingma;
-    extern doublereal slamch_(char *);
     integer oldien, oldncl, wbegin;
     real spdiam;
     integer negcnt;
-    extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *);
     integer oldcls;
     real savgap;
     integer ndepth;
     real ssigma;
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *);
     logical usedbs;
     integer iindwk, offset;
     real gaptol;
-    extern /* Subroutine */ int slarrb_(integer *, real *, real *, integer *, 
-	    integer *, real *, real *, integer *, real *, real *, real *, 
-	    real *, integer *, real *, real *, integer *, integer *);
     integer newcls, oldfst, indwrk, windex, oldlst;
     logical usedrq;
     integer newfst, newftt, parity, windmn, windpl, isupmn, newlst, zusedl;
@@ -95,9 +81,6 @@ static real c_b28 = 0.f;
     real nrminv, rqcorr;
     logical tryrqc;
     integer isupmx;
-    extern /* Subroutine */ int slarrf_(integer *, real *, real *, real *, 
-	    integer *, integer *, real *, real *, real *, real *, real *, 
-	    real *, real *, real *, real *, real *, real *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

@@ -24,9 +24,7 @@
     /* Local variables */
     integer i__, j;
     real cj, large;
-    extern logical lsame_(char *, char *);
     real small;
-    extern doublereal slamch_(char *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

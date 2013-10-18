@@ -33,22 +33,12 @@ static real c_b36 = .5f;
     real xbnd;
     integer imax;
     real tmax, tjjs;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
     real xmax, grow, sumj;
     integer maind;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     real tscal, uscal;
     integer jlast;
-    extern doublereal sasum_(integer *, real *, integer *);
     logical upper;
-    extern /* Subroutine */ int stbsv_(char *, char *, char *, integer *, 
-	    integer *, real *, integer *, real *, integer *), saxpy_(integer *, real *, real *, integer *, real *, 
-	    integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
-    extern integer isamax_(integer *, real *, integer *);
     logical notran;
     integer jfirst;
     real smlnum;

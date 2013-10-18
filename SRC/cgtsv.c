@@ -24,7 +24,6 @@
     /* Local variables */
     integer j, k;
     complex temp, mult;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

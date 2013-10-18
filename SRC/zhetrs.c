@@ -32,17 +32,8 @@ static integer c__1 = 1;
     doublecomplex ak, bk;
     integer kp;
     doublecomplex akm1, bkm1, akm1k;
-    extern logical lsame_(char *, char *);
     doublecomplex denom;
-    extern /* Subroutine */ int zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *);
     logical upper;
-    extern /* Subroutine */ int zgeru_(integer *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zswap_(integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *), xerbla_(char *, integer *), zdscal_(integer *, doublereal *, doublecomplex *, 
-	    integer *), zlacgv_(integer *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

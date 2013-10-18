@@ -28,10 +28,7 @@ doublereal zlantp_(char *norm, char *uplo, char *diag, integer *n,
     integer i__, j, k;
     doublereal sum, scale;
     logical udiag;
-    extern logical lsame_(char *, char *);
     doublereal value;
-    extern /* Subroutine */ int zlassq_(integer *, doublecomplex *, integer *, 
-	     doublereal *, doublereal *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

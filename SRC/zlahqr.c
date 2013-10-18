@@ -49,17 +49,8 @@ static integer c__2 = 2;
     doublecomplex sum;
     doublereal tst;
     doublecomplex temp;
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *);
     doublereal rtemp;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), dlabad_(doublereal *, doublereal *);
-    extern doublereal dlamch_(char *);
     doublereal safmin, safmax;
-    extern /* Subroutine */ int zlarfg_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *);
-    extern /* Double Complex */ void zladiv_(doublecomplex *, doublecomplex *, 
-	     doublecomplex *);
     doublereal smlnum;
 
 

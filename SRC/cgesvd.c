@@ -42,43 +42,9 @@ static integer c_n1 = -1;
     integer iscl;
     real anrm;
     integer ierr, itau, ncvt, nrvt;
-    extern /* Subroutine */ int cgemm_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *);
-    extern logical lsame_(char *, char *);
     integer chunk, minmn, wrkbl, itaup, itauq, mnthr, iwork;
     logical wntua, wntva, wntun, wntuo, wntvn, wntvo, wntus, wntvs;
-    extern /* Subroutine */ int cgebrd_(integer *, integer *, complex *, 
-	    integer *, real *, real *, complex *, complex *, complex *, 
-	    integer *, integer *);
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *);
-    extern /* Subroutine */ int cgelqf_(integer *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *, integer *), clascl_(
-	    char *, integer *, integer *, real *, real *, integer *, integer *
-, complex *, integer *, integer *), cgeqrf_(integer *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *, 
-	    integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), claset_(char *, 
-	    integer *, integer *, complex *, complex *, complex *, integer *), cbdsqr_(char *, integer *, integer *, integer *, integer 
-	    *, real *, real *, complex *, integer *, complex *, integer *, 
-	    complex *, integer *, real *, integer *), xerbla_(char *, 
-	    integer *), cungbr_(char *, integer *, integer *, integer 
-	    *, complex *, integer *, complex *, complex *, integer *, integer 
-	    *);
     real bignum;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int cunmbr_(char *, char *, char *, integer *, 
-	    integer *, integer *, complex *, integer *, complex *, complex *, 
-	    integer *, complex *, integer *, integer *), cunglq_(integer *, integer *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *, integer *), cungqr_(
-	    integer *, integer *, integer *, complex *, integer *, complex *, 
-	    complex *, integer *, integer *);
     integer ldwrkr, minwrk, ldwrku, maxwrk;
     real smlnum;
     integer irwork;

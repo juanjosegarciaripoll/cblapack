@@ -20,9 +20,6 @@
     integer a_dim1, a_offset, b_dim1, b_offset, i__1;
 
     /* Local variables */
-    extern /* Subroutine */ int cgetrf_(integer *, integer *, complex *, 
-	    integer *, integer *, integer *), xerbla_(char *, integer *), cgetrs_(char *, integer *, integer *, complex *, integer 
-	    *, integer *, complex *, integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

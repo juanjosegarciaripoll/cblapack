@@ -36,38 +36,14 @@ static integer c__1 = 1;
     real p;
     integer ii, ll, lgn;
     real eps, tiny;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int cswap_(integer *, complex *, integer *, 
-	    complex *, integer *);
     integer lwmin;
-    extern /* Subroutine */ int claed0_(integer *, integer *, real *, real *, 
-	    complex *, integer *, complex *, integer *, real *, integer *, 
-	    integer *);
     integer start;
-    extern /* Subroutine */ int clacrm_(integer *, integer *, complex *, 
-	    integer *, real *, integer *, complex *, integer *, real *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), xerbla_(char *, 
-	    integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer finish;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *), sstedc_(char *, integer *, real *, real *, real *, 
-	    integer *, real *, integer *, integer *, integer *, integer *), slaset_(char *, integer *, integer *, real *, real *, 
-	    real *, integer *);
     integer liwmin, icompz;
-    extern /* Subroutine */ int csteqr_(char *, integer *, real *, real *, 
-	    complex *, integer *, real *, integer *);
     real orgnrm;
-    extern doublereal slanst_(char *, integer *, real *, real *);
-    extern /* Subroutine */ int ssterf_(integer *, real *, real *, integer *);
     integer lrwmin;
     logical lquery;
     integer smlsiz;
-    extern /* Subroutine */ int ssteqr_(char *, integer *, real *, real *, 
-	    real *, integer *, real *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

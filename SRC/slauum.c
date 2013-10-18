@@ -27,19 +27,7 @@ static real c_b15 = 1.f;
 
     /* Local variables */
     integer i__, ib, nb;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     logical upper;
-    extern /* Subroutine */ int strmm_(char *, char *, char *, char *, 
-	    integer *, integer *, real *, real *, integer *, real *, integer *
-), ssyrk_(char *, char *, integer 
-	    *, integer *, real *, real *, integer *, real *, real *, integer *
-), slauu2_(char *, integer *, real *, integer *, 
-	    integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

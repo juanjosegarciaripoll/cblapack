@@ -39,66 +39,25 @@ static integer c_n1 = -1;
     doublereal aapp, aaqq;
     logical kill;
     integer ierr;
-    extern doublereal dnrm2_(integer *, doublereal *, integer *);
     doublereal temp1;
     logical jracc;
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *);
-    extern logical lsame_(char *, char *);
     doublereal small, entra, sfmin;
     logical lsvec;
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *), dswap_(integer *, doublereal *, integer 
-	    *, doublereal *, integer *);
     doublereal epsln;
     logical rsvec;
-    extern /* Subroutine */ int dtrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *);
     logical l2aber;
-    extern /* Subroutine */ int dgeqp3_(integer *, integer *, doublereal *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    integer *);
     doublereal condr1, condr2, uscal1, uscal2;
     logical l2kill, l2rank, l2tran, l2pert;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dgelqf_(integer *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *, integer *);
-    extern integer idamax_(integer *, doublereal *, integer *);
     doublereal scalem;
-    extern /* Subroutine */ int dlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, integer *);
     doublereal sconda;
     logical goscal;
     doublereal aatmin;
-    extern /* Subroutine */ int dgeqrf_(integer *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *, integer *);
     doublereal aatmax;
-    extern /* Subroutine */ int dlacpy_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *), 
-	    dlaset_(char *, integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *), xerbla_(char *, integer *);
     logical noscal;
-    extern /* Subroutine */ int dpocon_(char *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, doublereal *, integer *, 
-	    integer *), dgesvj_(char *, char *, char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, integer *), dlassq_(integer *, doublereal *, integer 
-	    *, doublereal *, doublereal *), dlaswp_(integer *, doublereal *, 
-	    integer *, integer *, integer *, integer *, integer *);
     doublereal entrat;
     logical almort;
-    extern /* Subroutine */ int dorgqr_(integer *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    integer *), dormlq_(char *, char *, integer *, integer *, integer 
-	    *, doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	     doublereal *, integer *, integer *);
     doublereal maxprj;
     logical errest;
-    extern /* Subroutine */ int dormqr_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *, integer *);
     logical transp, rowpiv;
     doublereal cond_ok__;
     integer warning, numrank;

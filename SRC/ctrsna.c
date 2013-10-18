@@ -34,30 +34,12 @@ static integer c__1 = 1;
     integer kase, ierr;
     complex prod;
     real lnrm, rnrm, scale;
-    extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern logical lsame_(char *, char *);
     integer isave[3];
     complex dummy[1];
     logical wants;
-    extern /* Subroutine */ int clacn2_(integer *, complex *, complex *, real 
-	    *, integer *, integer *);
     real xnorm;
-    extern doublereal scnrm2_(integer *, complex *, integer *);
-    extern /* Subroutine */ int slabad_(real *, real *);
-    extern integer icamax_(integer *, complex *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), xerbla_(char *, 
-	    integer *);
     real bignum;
     logical wantbh;
-    extern /* Subroutine */ int clatrs_(char *, char *, char *, char *, 
-	    integer *, complex *, integer *, complex *, real *, real *, 
-	    integer *), csrscl_(integer *, 
-	    real *, complex *, integer *), ctrexc_(char *, integer *, complex 
-	    *, integer *, complex *, integer *, integer *, integer *, integer 
-	    *);
     logical somcon;
     char normin[1];
     real smlnum;

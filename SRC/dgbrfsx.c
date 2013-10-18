@@ -37,34 +37,14 @@ static integer c__1 = 1;
     /* Local variables */
     doublereal illrcond_thresh__, unstable_thresh__, err_lbnd__;
     integer ref_type__;
-    extern integer ilatrans_(char *);
     integer j;
     doublereal rcond_tmp__;
     integer prec_type__, trans_type__;
-    extern doublereal dla_gbrcond__(char *, integer *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    ftnlen);
     doublereal cwise_wrong__;
-    extern /* Subroutine */ int dla_gbrfsx_extended__(integer *, integer *, 
-	    integer *, integer *, integer *, integer *, doublereal *, integer 
-	    *, doublereal *, integer *, integer *, logical *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, doublereal *, doublereal *,
-	     doublereal *, doublereal *, doublereal *, integer *, doublereal *
-	    , doublereal *, logical *, integer *);
     char norm[1];
     logical ignore_cwise__;
-    extern logical lsame_(char *, char *);
     doublereal anorm;
-    extern doublereal dlangb_(char *, integer *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *), dlamch_(char *);
-    extern /* Subroutine */ int dgbcon_(char *, integer *, integer *, integer 
-	    *, doublereal *, integer *, integer *, doublereal *, doublereal *, 
-	     doublereal *, integer *, integer *), xerbla_(char *, 
-	    integer *);
     logical colequ, notran, rowequ;
-    extern integer ilaprec_(char *);
     integer ithresh, n_norms__;
     doublereal rthresh;
 

@@ -33,39 +33,11 @@ static integer c__1 = 1;
     integer i__, j, j1, j2;
     real amax;
     char norm[1];
-    extern logical lsame_(char *, char *);
     real rcmin, rcmax, anorm;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *);
     logical equil;
-    extern doublereal clangb_(char *, integer *, integer *, integer *, 
-	    complex *, integer *, real *);
-    extern /* Subroutine */ int claqgb_(integer *, integer *, integer *, 
-	    integer *, complex *, integer *, real *, real *, real *, real *, 
-	    real *, char *), cgbcon_(char *, integer *, integer *, 
-	    integer *, complex *, integer *, integer *, real *, real *, 
-	    complex *, real *, integer *);
     real colcnd;
-    extern doublereal clantb_(char *, char *, char *, integer *, integer *, 
-	    complex *, integer *, real *);
-    extern /* Subroutine */ int cgbequ_(integer *, integer *, integer *, 
-	    integer *, complex *, integer *, real *, real *, real *, real *, 
-	    real *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int cgbrfs_(char *, integer *, integer *, integer 
-	    *, integer *, complex *, integer *, complex *, integer *, integer 
-	    *, complex *, integer *, complex *, integer *, real *, real *, 
-	    complex *, real *, integer *), cgbtrf_(integer *, integer 
-	    *, integer *, integer *, complex *, integer *, integer *, integer 
-	    *);
     logical nofact;
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), xerbla_(char *, 
-	    integer *);
     real bignum;
-    extern /* Subroutine */ int cgbtrs_(char *, integer *, integer *, integer 
-	    *, integer *, complex *, integer *, integer *, complex *, integer 
-	    *, integer *);
     integer infequ;
     logical colequ;
     real rowcnd;

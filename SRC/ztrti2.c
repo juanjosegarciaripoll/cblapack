@@ -28,12 +28,7 @@ static integer c__1 = 1;
     /* Local variables */
     integer j;
     doublecomplex ajj;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *);
     logical upper;
-    extern /* Subroutine */ int ztrmv_(char *, char *, char *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), xerbla_(char *, integer *);
     logical nounit;
 
 

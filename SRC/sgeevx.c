@@ -38,44 +38,12 @@ static integer c_n1 = -1;
     char side[1];
     real anrm;
     integer ierr, itau, iwrk, nout;
-    extern /* Subroutine */ int srot_(integer *, real *, integer *, real *, 
-	    integer *, real *, real *);
-    extern doublereal snrm2_(integer *, real *, integer *);
     integer icond;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
-    extern doublereal slapy2_(real *, real *);
-    extern /* Subroutine */ int slabad_(real *, real *);
     logical scalea;
     real cscale;
-    extern /* Subroutine */ int sgebak_(char *, char *, integer *, integer *, 
-	    integer *, real *, integer *, real *, integer *, integer *), sgebal_(char *, integer *, real *, integer *, 
-	    integer *, integer *, real *, integer *);
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
-    extern /* Subroutine */ int sgehrd_(integer *, integer *, integer *, real 
-	    *, integer *, real *, real *, integer *, integer *), xerbla_(char 
-	    *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     logical select[1];
     real bignum;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *);
-    extern integer isamax_(integer *, real *, integer *);
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *), slartg_(real *, real *, 
-	    real *, real *, real *), sorghr_(integer *, integer *, integer *, 
-	    real *, integer *, real *, real *, integer *, integer *), shseqr_(
-	    char *, char *, integer *, integer *, integer *, real *, integer *
-, real *, real *, real *, integer *, real *, integer *, integer *), strevc_(char *, char *, logical *, integer *, 
-	    real *, integer *, real *, integer *, real *, integer *, integer *
-, integer *, real *, integer *);
     integer minwrk, maxwrk;
-    extern /* Subroutine */ int strsna_(char *, char *, logical *, integer *, 
-	    real *, integer *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *, 
-	    integer *);
     logical wantvl, wntsnb;
     integer hswork;
     logical wntsne;

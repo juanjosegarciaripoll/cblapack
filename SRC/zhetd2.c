@@ -30,21 +30,8 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__;
     doublecomplex taui;
-    extern /* Subroutine */ int zher2_(char *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
     doublecomplex alpha;
-    extern logical lsame_(char *, char *);
-    extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern /* Subroutine */ int zhemv_(char *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *);
     logical upper;
-    extern /* Subroutine */ int zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), xerbla_(
-	    char *, integer *), zlarfg_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

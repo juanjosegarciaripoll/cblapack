@@ -31,19 +31,9 @@ static integer c__1 = 1;
     integer i__, j, k, l, i2, j1, j2, nq, nr, kd1, ibl, iqb, kdn, jin, nrt, 
 	    kdm1, inca, jend, lend, jinc, incx, last;
     real temp;
-    extern /* Subroutine */ int srot_(integer *, real *, integer *, real *, 
-	    integer *, real *, real *);
     integer j1end, j1inc, iqend;
-    extern logical lsame_(char *, char *);
     logical initq, wantq, upper;
-    extern /* Subroutine */ int slar2v_(integer *, real *, real *, real *, 
-	    integer *, real *, real *, integer *);
     integer iqaend;
-    extern /* Subroutine */ int xerbla_(char *, integer *), slaset_(
-	    char *, integer *, integer *, real *, real *, real *, integer *), slartg_(real *, real *, real *, real *, real *), slargv_(
-	    integer *, real *, integer *, real *, integer *, real *, integer *
-), slartv_(integer *, real *, integer *, real *, integer *, real *
-, real *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -25,14 +25,9 @@ static integer c__1 = 1;
 
     /* Local variables */
     integer i__, ip, kase;
-    extern logical lsame_(char *, char *);
     integer isave[3];
     logical upper;
-    extern /* Subroutine */ int slacn2_(integer *, real *, real *, integer *, 
-	    real *, integer *, integer *), xerbla_(char *, integer *);
     real ainvnm;
-    extern /* Subroutine */ int ssptrs_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

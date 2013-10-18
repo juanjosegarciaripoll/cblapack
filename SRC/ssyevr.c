@@ -42,48 +42,21 @@ static integer c_n1 = -1;
     logical test;
     integer inddd, indee;
     real sigma;
-    extern logical lsame_(char *, char *);
     integer iinfo;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     char order[1];
     integer indwk, lwmin;
     logical lower;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), sswap_(integer *, real *, integer *, real *, integer *
-);
     logical wantz, alleig, indeig;
     integer iscale, ieeeok, indibl, indifl;
     logical valeig;
-    extern doublereal slamch_(char *);
     real safmin;
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real abstll, bignum;
     integer indtau, indisp, indiwo, indwkn, liwmin;
     logical tryrac;
-    extern /* Subroutine */ int sstein_(integer *, real *, real *, integer *, 
-	    real *, integer *, integer *, real *, integer *, real *, integer *
-, integer *, integer *), ssterf_(integer *, real *, real *, 
-	    integer *);
     integer llwrkn, llwork, nsplit;
     real smlnum;
-    extern doublereal slansy_(char *, char *, integer *, real *, integer *, 
-	    real *);
-    extern /* Subroutine */ int sstebz_(char *, char *, integer *, real *, 
-	    real *, integer *, integer *, real *, real *, real *, integer *, 
-	    integer *, real *, integer *, integer *, real *, integer *, 
-	    integer *), sstemr_(char *, char *, integer *, 
-	    real *, real *, real *, real *, integer *, integer *, integer *, 
-	    real *, real *, integer *, integer *, integer *, logical *, real *
-, integer *, integer *, integer *, integer *);
     integer lwkopt;
     logical lquery;
-    extern /* Subroutine */ int sormtr_(char *, char *, char *, integer *, 
-	    integer *, real *, integer *, real *, real *, integer *, real *, 
-	    integer *, integer *), ssytrd_(char *, 
-	    integer *, real *, integer *, real *, real *, real *, real *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

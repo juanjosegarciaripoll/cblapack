@@ -41,36 +41,14 @@ static integer c__3 = 3;
     doublecomplex yhax, yhbx;
     integer ilst;
     doublereal rnrm, scale;
-    extern logical lsame_(char *, char *);
-    extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     integer lwmin;
-    extern /* Subroutine */ int zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *);
     logical wants;
     doublecomplex dummy[1];
-    extern doublereal dlapy2_(doublereal *, doublereal *);
-    extern /* Subroutine */ int dlabad_(doublereal *, doublereal *);
     doublecomplex dummy1[1];
-    extern doublereal dznrm2_(integer *, doublecomplex *, integer *), dlamch_(
-	    char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal bignum;
     logical wantbh, wantdf, somcon;
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), 
-	    ztgexc_(logical *, logical *, integer *, doublecomplex *, integer 
-	    *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, integer *, integer *, integer *);
     doublereal smlnum;
     logical lquery;
-    extern /* Subroutine */ int ztgsyl_(char *, integer *, integer *, integer 
-	    *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *, doublecomplex *, integer *, integer *, 
-	     integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

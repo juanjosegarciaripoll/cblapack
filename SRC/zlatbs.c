@@ -36,34 +36,15 @@ static doublereal c_b36 = .5;
     doublereal tmax;
     doublecomplex tjjs;
     doublereal xmax, grow;
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *);
     integer maind;
-    extern logical lsame_(char *, char *);
     doublereal tscal;
     doublecomplex uscal;
     integer jlast;
     doublecomplex csumj;
-    extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     logical upper;
-    extern /* Double Complex */ void zdotu_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern /* Subroutine */ int ztbsv_(char *, char *, char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *), zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), dlabad_(
-	    doublereal *, doublereal *);
-    extern doublereal dlamch_(char *);
-    extern integer idamax_(integer *, doublereal *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), zdscal_(
-	    integer *, doublereal *, doublecomplex *, integer *);
     doublereal bignum;
-    extern integer izamax_(integer *, doublecomplex *, integer *);
-    extern /* Double Complex */ void zladiv_(doublecomplex *, doublecomplex *, 
-	     doublecomplex *);
     logical notran;
     integer jfirst;
-    extern doublereal dzasum_(integer *, doublecomplex *, integer *);
     doublereal smlnum;
     logical nounit;
 

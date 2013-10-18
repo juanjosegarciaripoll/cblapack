@@ -36,32 +36,8 @@ static integer c__1 = 1;
     integer mn;
     doublereal anrm, bnrm, smin, smax;
     integer iascl, ibscl, ismin, ismax;
-    extern /* Subroutine */ int ztrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *), 
-	    zlaic1_(integer *, integer *, doublecomplex *, doublereal *, 
-	    doublecomplex *, doublecomplex *, doublereal *, doublecomplex *, 
-	    doublecomplex *), dlabad_(doublereal *, doublereal *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int zunm2r_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), xerbla_(char *, integer *);
-    extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
     doublereal bignum;
-    extern /* Subroutine */ int zlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublecomplex *, 
-	     integer *, integer *), zgeqpf_(integer *, integer *, 
-	    doublecomplex *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, doublereal *, integer *), zlaset_(char *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, integer *);
     doublereal sminpr, smaxpr, smlnum;
-    extern /* Subroutine */ int zlatzm_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *), ztzrqf_(
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

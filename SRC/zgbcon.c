@@ -32,24 +32,10 @@ static integer c__1 = 1;
     doublecomplex t;
     integer kd, lm, jp, ix, kase, kase1;
     doublereal scale;
-    extern logical lsame_(char *, char *);
     integer isave[3];
-    extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     logical lnoti;
-    extern /* Subroutine */ int zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), zlacn2_(
-	    integer *, doublecomplex *, doublecomplex *, doublereal *, 
-	    integer *, integer *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal ainvnm;
-    extern integer izamax_(integer *, doublecomplex *, integer *);
     logical onenrm;
-    extern /* Subroutine */ int zlatbs_(char *, char *, char *, char *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     doublereal *, doublereal *, integer *), zdrscl_(integer *, doublereal *, doublecomplex *, 
-	    integer *);
     char normin[1];
     doublereal smlnum;
 

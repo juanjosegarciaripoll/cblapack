@@ -30,22 +30,7 @@ static real c_b18 = 1.f;
 
     /* Local variables */
     integer k, kb, nb;
-    extern /* Subroutine */ int chemm_(char *, char *, integer *, integer *, 
-	    complex *, complex *, integer *, complex *, integer *, complex *, 
-	    complex *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int ctrmm_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *), ctrsm_(char *, char *, 
-	     char *, char *, integer *, integer *, complex *, complex *, 
-	    integer *, complex *, integer *);
     logical upper;
-    extern /* Subroutine */ int chegs2_(integer *, char *, integer *, complex 
-	    *, integer *, complex *, integer *, integer *), cher2k_(
-	    char *, char *, integer *, integer *, complex *, complex *, 
-	    integer *, complex *, integer *, real *, complex *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

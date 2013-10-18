@@ -32,27 +32,8 @@ static doublecomplex c_b2 = {1.,0.};
 
     /* Local variables */
     integer i__, j;
-    extern logical lsame_(char *, char *);
     logical wantq, wantu, wantv;
-    extern /* Subroutine */ int zgeqr2_(integer *, integer *, doublecomplex *, 
-	     integer *, doublecomplex *, doublecomplex *, integer *), zgerq2_(
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     doublecomplex *, integer *), zung2r_(integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *), zunm2r_(char *, char *, integer *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *), zunmr2_(char *, char *, integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *), xerbla_(
-	    char *, integer *), zgeqpf_(integer *, integer *, 
-	    doublecomplex *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, doublereal *, integer *), zlacpy_(char *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     integer *);
     logical forwrd;
-    extern /* Subroutine */ int zlaset_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *), zlapmt_(logical *, integer *, integer *, doublecomplex *, 
-	     integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -37,23 +37,10 @@ static integer c__1 = 1;
     doublereal eps;
     integer kase;
     doublereal safe1, safe2;
-    extern logical lsame_(char *, char *);
     integer isave[3], count;
-    extern /* Subroutine */ int zhemv_(char *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *);
     logical upper;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), zlacn2_(
-	    integer *, doublecomplex *, doublecomplex *, doublereal *, 
-	    integer *, integer *);
-    extern doublereal dlamch_(char *);
     doublereal safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal lstres;
-    extern /* Subroutine */ int zpotrs_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

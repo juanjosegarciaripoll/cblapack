@@ -34,20 +34,10 @@ static integer c__1 = 1;
     doublereal w1, ei, ej, xi, xr, rec;
     integer its, ierr;
     doublereal temp, norm, vmax;
-    extern doublereal dnrm2_(integer *, doublereal *, integer *);
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *);
     doublereal scale;
-    extern doublereal dasum_(integer *, doublereal *, integer *);
     char trans[1];
     doublereal vcrit, rootn, vnorm;
-    extern doublereal dlapy2_(doublereal *, doublereal *);
     doublereal absbii, absbjj;
-    extern integer idamax_(integer *, doublereal *, integer *);
-    extern /* Subroutine */ int dladiv_(doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *), dlatrs_(
-	    char *, char *, char *, char *, integer *, doublereal *, integer *
-, doublereal *, doublereal *, doublereal *, integer *);
     char normin[1];
     doublereal nrmsml, growto;
 

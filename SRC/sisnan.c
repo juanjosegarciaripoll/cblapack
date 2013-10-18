@@ -19,7 +19,6 @@ logical sisnan_(real *sin__)
     logical ret_val;
 
     /* Local variables */
-    extern logical slaisnan_(real *, real *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

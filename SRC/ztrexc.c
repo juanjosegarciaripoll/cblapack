@@ -29,13 +29,7 @@ static integer c__1 = 1;
     integer k, m1, m2, m3;
     doublereal cs;
     doublecomplex t11, t22, sn, temp;
-    extern /* Subroutine */ int zrot_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublecomplex *);
-    extern logical lsame_(char *, char *);
     logical wantq;
-    extern /* Subroutine */ int xerbla_(char *, integer *), zlartg_(
-	    doublecomplex *, doublecomplex *, doublereal *, doublecomplex *, 
-	    doublecomplex *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

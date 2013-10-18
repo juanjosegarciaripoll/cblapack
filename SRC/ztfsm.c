@@ -28,16 +28,7 @@ static doublecomplex c_b1 = {1.,0.};
     /* Local variables */
     integer i__, j, k, m1, m2, n1, n2, info;
     logical normaltransr, lside;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
     logical lower;
-    extern /* Subroutine */ int ztrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *), 
-	    xerbla_(char *, integer *);
     logical misodd, nisodd, notrans;
 
 

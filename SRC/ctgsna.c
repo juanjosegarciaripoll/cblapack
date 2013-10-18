@@ -41,31 +41,12 @@ static integer c__3 = 3;
     complex yhax, yhbx;
     integer ilst;
     real rnrm, scale;
-    extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int cgemv_(char *, integer *, integer *, complex *
-, complex *, integer *, complex *, integer *, complex *, complex *
-, integer *);
     integer lwmin;
     logical wants;
     complex dummy[1];
-    extern doublereal scnrm2_(integer *, complex *, integer *), slapy2_(real *
-, real *);
     complex dummy1[1];
-    extern /* Subroutine */ int slabad_(real *, real *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), ctgexc_(logical *, 
-	    logical *, integer *, complex *, integer *, complex *, integer *, 
-	    complex *, integer *, complex *, integer *, integer *, integer *, 
-	    integer *), xerbla_(char *, integer *);
     real bignum;
     logical wantbh, wantdf, somcon;
-    extern /* Subroutine */ int ctgsyl_(char *, integer *, integer *, integer 
-	    *, complex *, integer *, complex *, integer *, complex *, integer 
-	    *, complex *, integer *, complex *, integer *, complex *, integer 
-	    *, real *, real *, complex *, integer *, integer *, integer *);
     real smlnum;
     logical lquery;
 

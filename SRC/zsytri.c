@@ -32,18 +32,8 @@ static integer c__1 = 1;
     doublecomplex t, ak;
     integer kp;
     doublecomplex akp1, temp, akkp1;
-    extern logical lsame_(char *, char *);
     integer kstep;
     logical upper;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
-    extern /* Double Complex */ void zdotu_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern /* Subroutine */ int zswap_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zsymv_(char *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), 
-	    xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

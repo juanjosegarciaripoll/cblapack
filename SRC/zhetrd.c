@@ -31,18 +31,8 @@ static doublereal c_b23 = 1.;
 
     /* Local variables */
     integer i__, j, nb, kk, nx, iws;
-    extern logical lsame_(char *, char *);
     integer nbmin, iinfo;
     logical upper;
-    extern /* Subroutine */ int zhetd2_(char *, integer *, doublecomplex *, 
-	    integer *, doublereal *, doublereal *, doublecomplex *, integer *), zher2k_(char *, char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublereal *, doublecomplex *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int zlatrd_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublecomplex *, 
-	    doublecomplex *, integer *);
     integer ldwork, lwkopt;
     logical lquery;
 

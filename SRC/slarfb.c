@@ -30,17 +30,8 @@ static real c_b25 = -1.f;
 
     /* Local variables */
     integer i__, j;
-    extern logical lsame_(char *, char *);
     integer lastc;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     integer lastv;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), strmm_(char *, char *, char *, char *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *);
-    extern integer ilaslc_(integer *, integer *, real *, integer *), ilaslr_(
-	    integer *, integer *, real *, integer *);
     char transt[1];
 
 

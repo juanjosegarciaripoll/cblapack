@@ -35,45 +35,16 @@ static integer c__1 = 1;
     integer i__, j, j1, j2;
     doublereal amax;
     char norm[1];
-    extern logical lsame_(char *, char *);
     doublereal rcmin, rcmax, anorm;
     logical equil;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
     doublereal colcnd;
     logical nofact;
-    extern doublereal zlangb_(char *, integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), zlaqgb_(
-	    integer *, integer *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *, doublereal *, doublereal *, doublereal *, 
-	     doublereal *, char *);
     doublereal bignum;
-    extern /* Subroutine */ int zgbcon_(char *, integer *, integer *, integer 
-	    *, doublecomplex *, integer *, integer *, doublereal *, 
-	    doublereal *, doublecomplex *, doublereal *, integer *);
     integer infequ;
     logical colequ;
-    extern doublereal zlantb_(char *, char *, char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *);
     doublereal rowcnd;
-    extern /* Subroutine */ int zgbequ_(integer *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublereal *, doublereal *, 
-	     doublereal *, doublereal *, doublereal *, integer *), zgbrfs_(
-	    char *, integer *, integer *, integer *, integer *, doublecomplex 
-	    *, integer *, doublecomplex *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *, doublecomplex *, doublereal *, 
-	    integer *), zgbtrf_(integer *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, integer *, integer *);
     logical notran;
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     doublereal smlnum;
-    extern /* Subroutine */ int zgbtrs_(char *, integer *, integer *, integer 
-	    *, integer *, doublecomplex *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *);
     logical rowequ;
     doublereal rpvgrw;
 

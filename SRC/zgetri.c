@@ -29,23 +29,8 @@ static integer c__2 = 2;
 
     /* Local variables */
     integer i__, j, jb, nb, jj, jp, nn, iws, nbmin;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), 
-	    zswap_(integer *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *), ztrsm_(char *, char *, char *, char *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), 
-	    xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer ldwork, lwkopt;
     logical lquery;
-    extern /* Subroutine */ int ztrtri_(char *, char *, integer *, 
-	    doublecomplex *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

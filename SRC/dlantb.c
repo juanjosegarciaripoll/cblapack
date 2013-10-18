@@ -28,10 +28,7 @@ doublereal dlantb_(char *norm, char *uplo, char *diag, integer *n, integer *k,
     integer i__, j, l;
     doublereal sum, scale;
     logical udiag;
-    extern logical lsame_(char *, char *);
     doublereal value;
-    extern /* Subroutine */ int dlassq_(integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

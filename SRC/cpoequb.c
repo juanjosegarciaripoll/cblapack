@@ -23,8 +23,6 @@
     /* Local variables */
     integer i__;
     real tmp, base, smin;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
 
 
 /*     -- LAPACK routine (version 3.2)                                 -- */

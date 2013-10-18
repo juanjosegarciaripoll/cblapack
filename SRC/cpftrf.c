@@ -28,17 +28,8 @@ static real c_b16 = 1.f;
     /* Local variables */
     integer k, n1, n2;
     logical normaltransr;
-    extern /* Subroutine */ int cherk_(char *, char *, integer *, integer *, 
-	    real *, complex *, integer *, real *, complex *, integer *);
-    extern logical lsame_(char *, char *);
     logical lower;
-    extern /* Subroutine */ int ctrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *), xerbla_(char *, 
-	    integer *);
     logical nisodd;
-    extern /* Subroutine */ int cpotrf_(char *, integer *, complex *, integer 
-	    *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2)                                    -- */

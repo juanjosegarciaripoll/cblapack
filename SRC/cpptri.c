@@ -30,17 +30,7 @@ static integer c__1 = 1;
     integer j, jc, jj;
     real ajj;
     integer jjn;
-    extern /* Subroutine */ int chpr_(char *, integer *, real *, complex *, 
-	    integer *, complex *);
-    extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int ctpmv_(char *, char *, char *, integer *, 
-	    complex *, complex *, integer *);
     logical upper;
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *), xerbla_(char *, integer *), ctptri_(char *, char *, 
-	    integer *, complex *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

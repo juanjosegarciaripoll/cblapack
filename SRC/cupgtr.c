@@ -21,13 +21,8 @@
 
     /* Local variables */
     integer i__, j, ij;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     logical upper;
-    extern /* Subroutine */ int cung2l_(integer *, integer *, integer *, 
-	    complex *, integer *, complex *, complex *, integer *), cung2r_(
-	    integer *, integer *, integer *, complex *, integer *, complex *, 
-	    complex *, integer *), xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -29,19 +29,10 @@ static integer c__0 = 0;
     /* Local variables */
     integer i__;
     real eps;
-    extern /* Subroutine */ int slas2_(real *, real *, real *, real *, real *)
-	    ;
     real scale;
     integer iinfo;
     real sigmn, sigmx;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), slasq2_(integer *, real *, integer *);
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *), slascl_(
-	    char *, integer *, integer *, real *, real *, integer *, integer *
-, real *, integer *, integer *), slasrt_(char *, integer *
-, real *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2)                                    -- */

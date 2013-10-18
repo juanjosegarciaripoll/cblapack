@@ -27,24 +27,13 @@ static integer c__1 = 1;
     /* Local variables */
     integer ix, kase, kase1;
     real scale;
-    extern logical lsame_(char *, char *);
     integer isave[3];
     real anorm;
-    extern /* Subroutine */ int srscl_(integer *, real *, real *, integer *);
     logical upper;
     real xnorm;
-    extern /* Subroutine */ int slacn2_(integer *, real *, real *, integer *, 
-	    real *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer isamax_(integer *, real *, integer *);
     real ainvnm;
     logical onenrm;
-    extern doublereal slantp_(char *, char *, char *, integer *, real *, real 
-	    *);
     char normin[1];
-    extern /* Subroutine */ int slatps_(char *, char *, char *, char *, 
-	    integer *, real *, real *, real *, real *, integer *);
     real smlnum;
     logical nounit;
 

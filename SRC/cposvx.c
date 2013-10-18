@@ -28,29 +28,11 @@
     /* Local variables */
     integer i__, j;
     real amax, smin, smax;
-    extern logical lsame_(char *, char *);
     real scond, anorm;
     logical equil, rcequ;
-    extern doublereal clanhe_(char *, char *, integer *, complex *, integer *, 
-	     real *);
-    extern /* Subroutine */ int claqhe_(char *, integer *, complex *, integer 
-	    *, real *, real *, real *, char *);
-    extern doublereal slamch_(char *);
     logical nofact;
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), xerbla_(char *, 
-	    integer *);
     real bignum;
-    extern /* Subroutine */ int cpocon_(char *, integer *, complex *, integer 
-	    *, real *, real *, complex *, real *, integer *);
     integer infequ;
-    extern /* Subroutine */ int cpoequ_(integer *, complex *, integer *, real 
-	    *, real *, real *, integer *), cporfs_(char *, integer *, integer 
-	    *, complex *, integer *, complex *, integer *, complex *, integer 
-	    *, complex *, integer *, real *, real *, complex *, real *, 
-	    integer *), cpotrf_(char *, integer *, complex *, integer 
-	    *, integer *), cpotrs_(char *, integer *, integer *, 
-	    complex *, integer *, complex *, integer *, integer *);
     real smlnum;
 
 

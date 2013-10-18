@@ -39,39 +39,10 @@ static integer c__2 = 2;
     doublereal anrm, bnrm, smin, smax;
     integer iascl, ibscl, ismin, ismax;
     doublereal wsize;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), ztrsm_(char *, char *, char *, char *
-, integer *, integer *, doublecomplex *, doublecomplex *, integer 
-	    *, doublecomplex *, integer *), 
-	    zlaic1_(integer *, integer *, doublecomplex *, doublereal *, 
-	    doublecomplex *, doublecomplex *, doublereal *, doublecomplex *, 
-	    doublecomplex *), dlabad_(doublereal *, doublereal *), zgeqp3_(
-	    integer *, integer *, doublecomplex *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublereal *, 
-	    integer *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
     doublereal bignum;
-    extern /* Subroutine */ int zlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublecomplex *, 
-	     integer *, integer *), zlaset_(char *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    integer *);
     doublereal sminpr, smaxpr, smlnum;
     integer lwkopt;
     logical lquery;
-    extern /* Subroutine */ int zunmqr_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *), zunmrz_(char *, char *, integer *, integer *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *, integer *
-), ztzrzf_(integer *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, integer *)
-	    ;
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

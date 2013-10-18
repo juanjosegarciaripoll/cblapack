@@ -35,17 +35,10 @@ static logical c_true = TRUE_;
     real ulp, wkr, eps3;
     logical pair;
     real unfl;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     logical leftv, bothv;
     real hnorm;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int slaein_(logical *, logical *, integer *, real 
-	    *, integer *, real *, real *, real *, real *, real *, integer *, 
-	    real *, real *, real *, real *, integer *), xerbla_(char *, 
-	    integer *);
     real bignum;
-    extern doublereal slanhs_(char *, integer *, real *, integer *, real *);
     logical noinit;
     integer ldwork;
     logical rightv, fromqr;

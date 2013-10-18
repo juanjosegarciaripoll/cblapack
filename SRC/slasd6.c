@@ -34,19 +34,7 @@ static integer c_n1 = -1;
 
     /* Local variables */
     integer i__, m, n, n1, n2, iw, idx, idxc, idxp, ivfw, ivlw;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), slasd7_(integer *, integer *, integer *, integer *, 
-	    integer *, real *, real *, real *, real *, real *, real *, real *, 
-	     real *, real *, real *, integer *, integer *, integer *, integer 
-	    *, integer *, integer *, integer *, real *, integer *, real *, 
-	    real *, integer *), slasd8_(integer *, integer *, real *, real *, 
-	    real *, real *, real *, real *, integer *, real *, real *, 
-	    integer *);
     integer isigma;
-    extern /* Subroutine */ int xerbla_(char *, integer *), slascl_(
-	    char *, integer *, integer *, real *, real *, integer *, integer *
-, real *, integer *, integer *), slamrg_(integer *, 
-	    integer *, real *, integer *, integer *, integer *);
     real orgnrm;
 
 

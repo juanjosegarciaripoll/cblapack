@@ -31,17 +31,8 @@ static integer c__1 = 1;
     complex aii;
     integer pvt;
     real temp, temp2, tol3z;
-    extern /* Subroutine */ int clarf_(char *, integer *, integer *, complex *
-, integer *, complex *, complex *, integer *, complex *);
     integer offpi;
-    extern /* Subroutine */ int cswap_(integer *, complex *, integer *, 
-	    complex *, integer *);
     integer itemp;
-    extern doublereal scnrm2_(integer *, complex *, integer *);
-    extern /* Subroutine */ int clarfp_(integer *, complex *, complex *, 
-	    integer *, complex *);
-    extern doublereal slamch_(char *);
-    extern integer isamax_(integer *, real *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

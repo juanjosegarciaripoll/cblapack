@@ -31,24 +31,9 @@ static integer c__1 = 1;
     complex t;
     integer kd, lm, jp, ix, kase, kase1;
     real scale;
-    extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern logical lsame_(char *, char *);
     integer isave[3];
-    extern /* Subroutine */ int caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *);
     logical lnoti;
-    extern /* Subroutine */ int clacn2_(integer *, complex *, complex *, real 
-	    *, integer *, integer *);
-    extern integer icamax_(integer *, complex *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int clatbs_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, integer *, complex *, real *, 
-	    real *, integer *), xerbla_(char *
-, integer *);
     real ainvnm;
-    extern /* Subroutine */ int csrscl_(integer *, real *, complex *, integer 
-	    *);
     logical onenrm;
     char normin[1];
     real smlnum;

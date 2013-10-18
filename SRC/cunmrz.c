@@ -36,19 +36,7 @@ static integer c__65 = 65;
     complex t[4160]	/* was [65][64] */;
     integer i1, i2, i3, ib, ic, ja, jc, nb, mi, ni, nq, nw, iws;
     logical left;
-    extern logical lsame_(char *, char *);
     integer nbmin, iinfo;
-    extern /* Subroutine */ int cunmr3_(char *, char *, integer *, integer *, 
-	    integer *, integer *, complex *, integer *, complex *, complex *, 
-	    integer *, complex *, integer *), clarzb_(char *, 
-	    char *, char *, char *, integer *, integer *, integer *, integer *
-, complex *, integer *, complex *, integer *, complex *, integer *
-, complex *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), clarzt_(
-	    char *, char *, integer *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *);
     logical notran;
     integer ldwork;
     char transt[1];

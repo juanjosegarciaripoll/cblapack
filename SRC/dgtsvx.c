@@ -29,27 +29,9 @@ static integer c__1 = 1;
 
     /* Local variables */
     char norm[1];
-    extern logical lsame_(char *, char *);
     doublereal anorm;
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
-    extern doublereal dlamch_(char *), dlangt_(char *, integer *, 
-	    doublereal *, doublereal *, doublereal *);
     logical nofact;
-    extern /* Subroutine */ int dlacpy_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *), 
-	    xerbla_(char *, integer *), dgtcon_(char *, integer *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, integer *, 
-	     doublereal *, doublereal *, doublereal *, integer *, integer *), dgtrfs_(char *, integer *, integer *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, doublereal *, 
-	     integer *, integer *), dgttrf_(integer *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, integer *, integer *);
     logical notran;
-    extern /* Subroutine */ int dgttrs_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, integer *, 
-	     doublereal *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

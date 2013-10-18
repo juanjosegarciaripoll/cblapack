@@ -28,30 +28,15 @@ static doublecomplex c_b1 = {1.,0.};
 
     /* Local variables */
     integer lopt;
-    extern logical lsame_(char *, char *);
     integer lwmin;
     char trans[1];
     integer liopt;
     logical upper;
     integer lropt;
     logical wantz;
-    extern /* Subroutine */ int ztrmm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *), 
-	    ztrsm_(char *, char *, char *, char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *), xerbla_(char *, 
-	    integer *), zheevd_(char *, char *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublecomplex *, 
-	    integer *, doublereal *, integer *, integer *, integer *, integer 
-	    *);
     integer liwmin;
-    extern /* Subroutine */ int zhegst_(integer *, char *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *);
     integer lrwmin;
     logical lquery;
-    extern /* Subroutine */ int zpotrf_(char *, integer *, doublecomplex *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

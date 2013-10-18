@@ -31,16 +31,9 @@ doublereal zla_gbrcond_c__(char *trans, integer *n, integer *kl, integer *ku,
     integer i__, j, kd, ke;
     doublereal tmp;
     integer kase;
-    extern logical lsame_(char *, char *);
     integer isave[3];
     doublereal anorm;
-    extern /* Subroutine */ int zlacn2_(integer *, doublecomplex *, 
-	    doublecomplex *, doublereal *, integer *, integer *), xerbla_(
-	    char *, integer *);
     doublereal ainvnm;
-    extern /* Subroutine */ int zgbtrs_(char *, integer *, integer *, integer 
-	    *, integer *, doublecomplex *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *);
     logical notrans;
 
 

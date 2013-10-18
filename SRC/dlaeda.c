@@ -30,14 +30,7 @@ static doublereal c_b26 = 0.;
 
     /* Local variables */
     integer i__, k, mid, ptr;
-    extern /* Subroutine */ int drot_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *);
     integer curr, bsiz1, bsiz2, psiz1, psiz2, zptr1;
-    extern /* Subroutine */ int dgemv_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *), dcopy_(integer *, 
-	    doublereal *, integer *, doublereal *, integer *), xerbla_(char *, 
-	     integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

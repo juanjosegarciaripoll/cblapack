@@ -35,18 +35,6 @@ static integer c__1 = 1;
     integer k2, n1, n2, jp, n1p1;
     real eps, tau, tol;
     integer jlam, imax, jmax;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    ccopy_(integer *, complex *, integer *, complex *, integer *), 
-	    csrot_(integer *, complex *, integer *, complex *, integer *, 
-	    real *, real *), scopy_(integer *, real *, integer *, real *, 
-	    integer *);
-    extern doublereal slapy2_(real *, real *), slamch_(char *);
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), xerbla_(char *, 
-	    integer *);
-    extern integer isamax_(integer *, real *, integer *);
-    extern /* Subroutine */ int slamrg_(integer *, integer *, real *, integer 
-	    *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

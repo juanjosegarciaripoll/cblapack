@@ -30,17 +30,7 @@ static integer c__1 = 1;
     integer k;
     complex ct;
     real akk, bkk;
-    extern /* Subroutine */ int cher2_(char *, integer *, complex *, complex *
-, integer *, complex *, integer *, complex *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *);
     logical upper;
-    extern /* Subroutine */ int ctrmv_(char *, char *, char *, integer *, 
-	    complex *, integer *, complex *, integer *), ctrsv_(char *, char *, char *, integer *, complex *, 
-	    integer *, complex *, integer *), clacgv_(
-	    integer *, complex *, integer *), csscal_(integer *, real *, 
-	    complex *, integer *), xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

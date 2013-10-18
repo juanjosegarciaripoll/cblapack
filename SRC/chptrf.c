@@ -39,20 +39,11 @@ static integer c__1 = 1;
     real tt;
     integer knc, kpc, npp;
     complex wkm1, wkp1;
-    extern /* Subroutine */ int chpr_(char *, integer *, real *, complex *, 
-	    integer *, complex *);
     integer imax, jmax;
     real alpha;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int cswap_(integer *, complex *, integer *, 
-	    complex *, integer *);
     integer kstep;
     logical upper;
-    extern doublereal slapy2_(real *, real *);
     real absakk;
-    extern integer icamax_(integer *, complex *, integer *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *), xerbla_(char *, integer *);
     real colmax, rowmax;
 
 

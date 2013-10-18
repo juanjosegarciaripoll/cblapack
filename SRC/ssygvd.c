@@ -27,26 +27,13 @@ static real c_b11 = 1.f;
 
     /* Local variables */
     integer lopt;
-    extern logical lsame_(char *, char *);
     integer lwmin;
     char trans[1];
     integer liopt;
     logical upper;
-    extern /* Subroutine */ int strmm_(char *, char *, char *, char *, 
-	    integer *, integer *, real *, real *, integer *, real *, integer *
-);
     logical wantz;
-    extern /* Subroutine */ int strsm_(char *, char *, char *, char *, 
-	    integer *, integer *, real *, real *, integer *, real *, integer *
-), xerbla_(char *, integer *);
     integer liwmin;
-    extern /* Subroutine */ int spotrf_(char *, integer *, real *, integer *, 
-	    integer *), ssyevd_(char *, char *, integer *, real *, 
-	    integer *, real *, real *, integer *, integer *, integer *, 
-	    integer *);
     logical lquery;
-    extern /* Subroutine */ int ssygst_(integer *, char *, integer *, real *, 
-	    integer *, real *, integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

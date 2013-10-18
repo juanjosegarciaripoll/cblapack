@@ -39,36 +39,12 @@ static real c_b29 = 0.f;
     integer nm1;
     real eps;
     integer ivt, difl, difr, ierr, perm, mlvl, sqre;
-    extern logical lsame_(char *, char *);
     integer poles;
-    extern /* Subroutine */ int slasr_(char *, char *, char *, integer *, 
-	    integer *, real *, real *, real *, integer *);
     integer iuplo, nsize, start;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), sswap_(integer *, real *, integer *, real *, integer *
-), slasd0_(integer *, integer *, real *, real *, real *, integer *
-, real *, integer *, integer *, integer *, real *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int slasda_(integer *, integer *, integer *, 
-	    integer *, real *, real *, real *, integer *, real *, integer *, 
-	    real *, real *, real *, real *, integer *, integer *, integer *, 
-	    integer *, real *, real *, real *, real *, integer *, integer *), 
-	    xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *);
     integer givcol;
-    extern /* Subroutine */ int slasdq_(char *, integer *, integer *, integer 
-	    *, integer *, integer *, real *, real *, real *, integer *, real *
-, integer *, real *, integer *, real *, integer *);
     integer icompq;
-    extern /* Subroutine */ int slaset_(char *, integer *, integer *, real *, 
-	    real *, real *, integer *), slartg_(real *, real *, real *
-, real *, real *);
     real orgnrm;
     integer givnum;
-    extern doublereal slanst_(char *, integer *, real *, real *);
     integer givptr, qstart, smlsiz, wstart, smlszp;
 
 

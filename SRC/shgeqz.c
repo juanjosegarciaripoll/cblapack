@@ -48,36 +48,19 @@ static integer c__3 = 3;
     logical ilz;
     real ulp, sqr, szi, szr, ad11l, ad12l, ad21l, ad22l, ad32l, wabs, atol, 
 	    btol, temp;
-    extern /* Subroutine */ int srot_(integer *, real *, integer *, real *, 
-	    integer *, real *, real *), slag2_(real *, integer *, real *, 
-	    integer *, real *, real *, real *, real *, real *, real *);
     real temp2, s1inv, scale;
-    extern logical lsame_(char *, char *);
     integer iiter, ilast, jiter;
     real anorm, bnorm;
     integer maxit;
     real tempi, tempr;
     logical ilazr2;
-    extern doublereal slapy2_(real *, real *), slapy3_(real *, real *, real *)
-	    ;
-    extern /* Subroutine */ int slasv2_(real *, real *, real *, real *, real *
-, real *, real *, real *, real *);
     real ascale, bscale;
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int slarfg_(integer *, real *, real *, integer *, 
-	    real *);
     real safmax;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real eshift;
     logical ilschr;
     integer icompq, ilastm;
-    extern doublereal slanhs_(char *, integer *, real *, integer *, real *);
-    extern /* Subroutine */ int slartg_(real *, real *, real *, real *, real *
-);
     integer ischur;
-    extern /* Subroutine */ int slaset_(char *, integer *, integer *, real *, 
-	    real *, real *, integer *);
     logical ilazro;
     integer icompz, ifirst, ifrstm, istart;
     logical ilpivt, lquery;

@@ -35,35 +35,14 @@ static logical c_false = FALSE_;
     /* Local variables */
     real illrcond_thresh__, unstable_thresh__, err_lbnd__;
     integer ref_type__;
-    extern integer ilatrans_(char *);
     integer j;
     real rcond_tmp__;
     integer prec_type__, trans_type__;
     real cwise_wrong__;
-    extern /* Subroutine */ int cla_gbrfsx_extended__(integer *, integer *, 
-	    integer *, integer *, integer *, integer *, complex *, integer *, 
-	    complex *, integer *, integer *, logical *, real *, complex *, 
-	    integer *, complex *, integer *, real *, integer *, real *, real *
-	    , complex *, real *, complex *, complex *, real *, integer *, 
-	    real *, real *, logical *, integer *);
     char norm[1];
     logical ignore_cwise__;
-    extern doublereal cla_gbrcond_c__(char *, integer *, integer *, integer *,
-	     complex *, integer *, complex *, integer *, integer *, real *, 
-	    logical *, integer *, complex *, real *, ftnlen);
-    extern logical lsame_(char *, char *);
     real anorm;
-    extern doublereal cla_gbrcond_x__(char *, integer *, integer *, integer *,
-	     complex *, integer *, complex *, integer *, integer *, complex *,
-	     integer *, complex *, real *, ftnlen), clangb_(char *, integer *, 
-	     integer *, integer *, complex *, integer *, real *);
-    extern /* Subroutine */ int cgbcon_(char *, integer *, integer *, integer 
-	    *, complex *, integer *, integer *, real *, real *, complex *, 
-	    real *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     logical colequ, notran, rowequ;
-    extern integer ilaprec_(char *);
     integer ithresh, n_norms__;
     real rthresh;
 

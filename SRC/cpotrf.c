@@ -30,20 +30,7 @@ static real c_b15 = 1.f;
 
     /* Local variables */
     integer j, jb, nb;
-    extern /* Subroutine */ int cgemm_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *), cherk_(char *, 
-	    char *, integer *, integer *, real *, complex *, integer *, real *
-, complex *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int ctrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *);
     logical upper;
-    extern /* Subroutine */ int cpotf2_(char *, integer *, complex *, integer 
-	    *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

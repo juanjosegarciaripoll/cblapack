@@ -49,27 +49,8 @@ static integer c__3 = 3;
     integer ktop;
     real zdum[1]	/* was [1][1] */;
     integer kacc22, itmax, nsmax, nwmax, kwtop;
-    extern /* Subroutine */ int slanv2_(real *, real *, real *, real *, real *
-, real *, real *, real *, real *, real *), slaqr3_(logical *, 
-	    logical *, integer *, integer *, integer *, integer *, real *, 
-	    integer *, integer *, integer *, real *, integer *, integer *, 
-	    integer *, real *, real *, real *, integer *, integer *, real *, 
-	    integer *, integer *, real *, integer *, real *, integer *), 
-	    slaqr4_(logical *, logical *, integer *, integer *, integer *, 
-	    real *, integer *, real *, real *, integer *, integer *, real *, 
-	    integer *, real *, integer *, integer *), slaqr5_(logical *, 
-	    logical *, integer *, integer *, integer *, integer *, integer *, 
-	    real *, real *, real *, integer *, integer *, integer *, real *, 
-	    integer *, real *, integer *, real *, integer *, integer *, real *
-, integer *, integer *, real *, integer *);
     integer nibble;
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     char jbcmpz[1];
-    extern /* Subroutine */ int slahqr_(logical *, logical *, integer *, 
-	    integer *, integer *, real *, integer *, real *, real *, integer *
-, integer *, real *, integer *, integer *), slacpy_(char *, 
-	    integer *, integer *, real *, integer *, real *, integer *);
     integer nwupbd;
     logical sorted;
     integer lwkopt;

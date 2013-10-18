@@ -30,40 +30,17 @@
     /* Local variables */
     integer i__, j;
     real amax;
-    extern doublereal cla_gbrpvgrw__(integer *, integer *, integer *, integer 
-	    *, complex *, integer *, complex *, integer *);
-    extern logical lsame_(char *, char *);
     real rcmin, rcmax;
     logical equil;
-    extern /* Subroutine */ int claqgb_(integer *, integer *, integer *, 
-	    integer *, complex *, integer *, real *, real *, real *, real *, 
-	    real *, char *);
     real colcnd;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int cgbtrf_(integer *, integer *, integer *, 
-	    integer *, complex *, integer *, integer *, integer *);
     logical nofact;
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), xerbla_(char *, 
-	    integer *);
     real bignum;
-    extern /* Subroutine */ int cgbtrs_(char *, integer *, integer *, integer 
-	    *, integer *, complex *, integer *, integer *, complex *, integer 
-	    *, integer *);
     integer infequ;
     logical colequ;
     real rowcnd;
     logical notran;
     real smlnum;
     logical rowequ;
-    extern /* Subroutine */ int clascl2_(integer *, integer *, real *, 
-	    complex *, integer *), cgbequb_(integer *, integer *, integer *, 
-	    integer *, complex *, integer *, real *, real *, real *, real *, 
-	    real *, integer *), cgbrfsx_(char *, char *, integer *, integer *, 
-	     integer *, integer *, complex *, integer *, complex *, integer *, 
-	     integer *, real *, real *, complex *, integer *, complex *, 
-	    integer *, real *, real *, integer *, real *, real *, integer *, 
-	    real *, complex *, real *, integer *);
 
 
 /*     -- LAPACK driver routine (version 3.2)                          -- */

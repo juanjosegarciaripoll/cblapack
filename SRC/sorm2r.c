@@ -28,10 +28,6 @@ static integer c__1 = 1;
     integer i__, i1, i2, i3, ic, jc, mi, ni, nq;
     real aii;
     logical left;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int slarf_(char *, integer *, integer *, real *, 
-	    integer *, real *, real *, integer *, real *), xerbla_(
-	    char *, integer *);
     logical notran;
 
 

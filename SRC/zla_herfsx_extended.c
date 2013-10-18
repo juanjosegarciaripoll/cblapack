@@ -40,43 +40,16 @@ static doublereal c_b33 = 1.;
     doublereal dxratmax, dzratmax;
     integer i__, j;
     logical incr_prec__;
-    extern /* Subroutine */ int zla_heamv__(integer *, integer *, doublereal *
-	    , doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *, integer *);
     doublereal prev_dz_z__, yk, final_dx_x__, final_dz_z__;
-    extern /* Subroutine */ int zla_wwaddw__(integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *);
     doublereal prevnormdx;
     integer cnt;
     doublereal dyk, eps, incr_thresh__, dx_x__, dz_z__, ymin;
-    extern /* Subroutine */ int zla_lin_berr__(integer *, integer *, integer *
-	    , doublecomplex *, doublereal *, doublereal *);
     integer y_prec_state__;
-    extern /* Subroutine */ int blas_zhemv_x__(integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, integer *)
-	    ;
     integer uplo2;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int blas_zhemv2_x__(integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, integer *);
     doublereal dxrat, dzrat;
-    extern /* Subroutine */ int zhemv_(char *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *);
     doublereal normx, normy;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
     doublereal normdx;
-    extern /* Subroutine */ int zhetrs_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *, doublecomplex *, integer *, 
-	     integer *);
     doublereal hugeval;
-    extern integer ilauplo_(char *);
     integer x_state__, z_state__;
 
 

@@ -34,25 +34,9 @@ static doublereal c_b24 = 1.;
     integer info;
     doublecomplex temp, work[8];
     doublereal scale;
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *);
     doublecomplex pmone;
-    extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     doublereal rtemp, sminu, rwork[2];
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
     doublereal splus;
-    extern /* Subroutine */ int zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), zgesc2_(
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	     integer *, doublereal *), zgecon_(char *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *, 
-	    doublecomplex *, doublereal *, integer *);
-    extern doublereal dzasum_(integer *, doublecomplex *, integer *);
-    extern /* Subroutine */ int zlassq_(integer *, doublecomplex *, integer *, 
-	     doublereal *, doublereal *), zlaswp_(integer *, doublecomplex *, 
-	    integer *, integer *, integer *, integer *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

@@ -36,22 +36,8 @@ static integer c__1 = 1;
     real unfl, ovfl, smin;
     logical over;
     real scale;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int cgemv_(char *, integer *, integer *, complex *
-, complex *, integer *, complex *, integer *, complex *, complex *
-, integer *);
     real remax;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *);
     logical leftv, bothv, somev;
-    extern /* Subroutine */ int slabad_(real *, real *);
-    extern integer icamax_(integer *, complex *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *), xerbla_(char *, integer *), clatrs_(char *, char *, 
-	    char *, char *, integer *, complex *, integer *, complex *, real *
-, real *, integer *);
-    extern doublereal scasum_(integer *, complex *, integer *);
     logical rightv;
     real smlnum;
 

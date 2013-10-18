@@ -36,29 +36,12 @@ static real c_b36 = .5f;
     real tmax;
     complex tjjs;
     real xmax, grow;
-    extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     real tscal;
     complex uscal;
     integer jlast;
-    extern /* Complex */ void cdotu_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
     complex csumj;
-    extern /* Subroutine */ int caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *);
     logical upper;
-    extern /* Subroutine */ int ctrsv_(char *, char *, char *, integer *, 
-	    complex *, integer *, complex *, integer *), slabad_(real *, real *);
-    extern integer icamax_(integer *, complex *, integer *);
-    extern /* Complex */ void cladiv_(complex *, complex *, complex *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *), xerbla_(char *, integer *);
     real bignum;
-    extern integer isamax_(integer *, real *, integer *);
-    extern doublereal scasum_(integer *, complex *, integer *);
     logical notran;
     integer jfirst;
     real smlnum;

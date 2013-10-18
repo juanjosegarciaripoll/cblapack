@@ -39,42 +39,17 @@ static doublereal c_b8 = 1.;
     /* Local variables */
     doublereal dxratmax, dzratmax;
     integer i__, j, m;
-    extern /* Subroutine */ int dla_gbamv__(integer *, integer *, integer *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *);
     logical incr_prec__;
     doublereal prev_dz_z__, yk, final_dx_x__;
-    extern /* Subroutine */ int dla_wwaddw__(integer *, doublereal *, 
-	    doublereal *, doublereal *);
     doublereal final_dz_z__, prevnormdx;
     integer cnt;
     doublereal dyk, eps, incr_thresh__, dx_x__, dz_z__;
-    extern /* Subroutine */ int dla_lin_berr__(integer *, integer *, integer *
-	    , doublereal *, doublereal *, doublereal *);
     doublereal ymin;
-    extern /* Subroutine */ int blas_dgbmv_x__(integer *, integer *, integer *
-	    , integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    integer *);
     integer y_prec_state__;
-    extern /* Subroutine */ int blas_dgbmv2_x__(integer *, integer *, integer 
-	    *, integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *,
-	     integer *, integer *), dgbmv_(char *, integer *, integer *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *), dcopy_(integer *, doublereal *, integer *, doublereal *, 
-	    integer *);
     doublereal dxrat, dzrat;
-    extern /* Subroutine */ int daxpy_(integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *);
     char trans[1];
     doublereal normx, normy;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dgbtrs_(char *, integer *, integer *, integer 
-	    *, integer *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, integer *);
     doublereal normdx;
-    extern /* Character */ void chla_transtype__(char *, ftnlen, integer *);
     doublereal hugeval;
     integer x_state__, z_state__;
 

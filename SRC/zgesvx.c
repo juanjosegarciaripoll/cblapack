@@ -30,41 +30,16 @@
     integer i__, j;
     doublereal amax;
     char norm[1];
-    extern logical lsame_(char *, char *);
     doublereal rcmin, rcmax, anorm;
     logical equil;
-    extern doublereal dlamch_(char *);
     doublereal colcnd;
     logical nofact;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
     doublereal bignum;
-    extern /* Subroutine */ int zlaqge_(integer *, integer *, doublecomplex *, 
-	     integer *, doublereal *, doublereal *, doublereal *, doublereal *
-, doublereal *, char *), zgecon_(char *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *, 
-	    doublecomplex *, doublereal *, integer *);
     integer infequ;
     logical colequ;
     doublereal rowcnd;
-    extern /* Subroutine */ int zgeequ_(integer *, integer *, doublecomplex *, 
-	     integer *, doublereal *, doublereal *, doublereal *, doublereal *
-, doublereal *, integer *);
     logical notran;
-    extern /* Subroutine */ int zgerfs_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *, doublecomplex *, doublereal *, 
-	    integer *), zgetrf_(integer *, integer *, doublecomplex *, 
-	     integer *, integer *, integer *), zlacpy_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *);
-    extern doublereal zlantr_(char *, char *, char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *);
     doublereal smlnum;
-    extern /* Subroutine */ int zgetrs_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *, doublecomplex *, integer *, 
-	     integer *);
     logical rowequ;
     doublereal rpvgrw;
 

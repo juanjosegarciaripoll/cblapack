@@ -33,33 +33,12 @@ static integer c__0 = 0;
     integer brow;
     logical tpsd;
     integer iascl, ibscl;
-    extern logical lsame_(char *, char *);
     integer wsize;
     real rwork[1];
-    extern /* Subroutine */ int slabad_(real *, real *);
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer scllen;
     real bignum;
-    extern /* Subroutine */ int sgelqf_(integer *, integer *, real *, integer 
-	    *, real *, real *, integer *, integer *), slascl_(char *, integer 
-	    *, integer *, real *, real *, integer *, integer *, real *, 
-	    integer *, integer *), sgeqrf_(integer *, integer *, real 
-	    *, integer *, real *, real *, integer *, integer *), slaset_(char 
-	    *, integer *, integer *, real *, real *, real *, integer *);
     real smlnum;
-    extern /* Subroutine */ int sormlq_(char *, char *, integer *, integer *, 
-	    integer *, real *, integer *, real *, real *, integer *, real *, 
-	    integer *, integer *);
     logical lquery;
-    extern /* Subroutine */ int sormqr_(char *, char *, integer *, integer *, 
-	    integer *, real *, integer *, real *, real *, integer *, real *, 
-	    integer *, integer *), strtrs_(char *, char *, 
-	    char *, integer *, integer *, real *, integer *, real *, integer *
-, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

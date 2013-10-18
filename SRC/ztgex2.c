@@ -40,19 +40,10 @@ static integer c__1 = 1;
     doublereal eps, sum;
     logical weak;
     doublecomplex cdum, work[8];
-    extern /* Subroutine */ int zrot_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublecomplex *);
     doublereal scale;
-    extern doublereal dlamch_(char *);
     logical dtrong;
     doublereal thresh;
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), 
-	    zlartg_(doublecomplex *, doublecomplex *, doublereal *, 
-	    doublecomplex *, doublecomplex *);
     doublereal smlnum;
-    extern /* Subroutine */ int zlassq_(integer *, doublecomplex *, integer *, 
-	     doublereal *, doublereal *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

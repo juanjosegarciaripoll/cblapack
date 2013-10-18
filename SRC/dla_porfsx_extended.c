@@ -39,41 +39,17 @@ static doublereal c_b11 = 1.;
     doublereal dxratmax, dzratmax;
     integer i__, j;
     logical incr_prec__;
-    extern /* Subroutine */ int dla_syamv__(integer *, integer *, doublereal *
-	    , doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *);
     doublereal prev_dz_z__, yk, final_dx_x__;
-    extern /* Subroutine */ int dla_wwaddw__(integer *, doublereal *, 
-	    doublereal *, doublereal *);
     doublereal final_dz_z__, prevnormdx;
     integer cnt;
     doublereal dyk, eps, incr_thresh__, dx_x__, dz_z__;
-    extern /* Subroutine */ int dla_lin_berr__(integer *, integer *, integer *
-	    , doublereal *, doublereal *, doublereal *);
     doublereal ymin;
     integer y_prec_state__;
-    extern /* Subroutine */ int blas_dsymv_x__(integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *);
     integer uplo2;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int blas_dsymv2_x__(integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *,
-	     integer *, doublereal *, doublereal *, integer *, integer *), 
-	    dcopy_(integer *, doublereal *, integer *, doublereal *, integer *
-);
     doublereal dxrat, dzrat;
-    extern /* Subroutine */ int daxpy_(integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *), dsymv_(char *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *);
     doublereal normx, normy;
-    extern doublereal dlamch_(char *);
     doublereal normdx;
-    extern /* Subroutine */ int dpotrs_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, integer *);
     doublereal hugeval;
-    extern integer ilauplo_(char *);
     integer x_state__, z_state__;
 
 

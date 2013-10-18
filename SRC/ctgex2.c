@@ -39,15 +39,8 @@ static integer c__1 = 1;
     real eps, sum;
     logical weak;
     complex cdum;
-    extern /* Subroutine */ int crot_(integer *, complex *, integer *, 
-	    complex *, integer *, real *, complex *);
     complex work[8];
     real scale;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), clartg_(complex *, 
-	    complex *, real *, complex *, complex *), classq_(integer *, 
-	    complex *, integer *, real *, real *);
     real thresh, smlnum;
     logical strong;
 

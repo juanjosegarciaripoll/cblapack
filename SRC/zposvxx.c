@@ -30,33 +30,12 @@
     /* Local variables */
     integer j;
     doublereal amax, smin, smax;
-    extern doublereal zla_porpvgrw__(char *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, doublereal *, ftnlen);
-    extern logical lsame_(char *, char *);
     doublereal scond;
     logical equil, rcequ;
-    extern doublereal dlamch_(char *);
     logical nofact;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal bignum;
-    extern /* Subroutine */ int zlaqhe_(char *, integer *, doublecomplex *, 
-	    integer *, doublereal *, doublereal *, doublereal *, char *);
     integer infequ;
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     doublereal smlnum;
-    extern /* Subroutine */ int zpotrf_(char *, integer *, doublecomplex *, 
-	    integer *, integer *), zpotrs_(char *, integer *, integer 
-	    *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	    integer *), zlascl2_(integer *, integer *, doublereal *, 
-	    doublecomplex *, integer *), zpoequb_(integer *, doublecomplex *, 
-	    integer *, doublereal *, doublereal *, doublereal *, integer *), 
-	    zporfsx_(char *, char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, doublereal *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *, 
-	     integer *, doublereal *, doublecomplex *, doublereal *, integer *
-);
 
 
 /*     -- LAPACK driver routine (version 3.2.1)                          -- */

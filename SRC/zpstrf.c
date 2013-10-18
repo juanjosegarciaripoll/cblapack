@@ -34,32 +34,11 @@ static doublereal c_b30 = 1.;
     integer i__, j, k, maxlocval, jb, nb;
     doublereal ajj;
     integer pvt;
-    extern logical lsame_(char *, char *);
     doublereal dtemp;
     integer itemp;
-    extern /* Subroutine */ int zherk_(char *, char *, integer *, integer *, 
-	    doublereal *, doublecomplex *, integer *, doublereal *, 
-	    doublecomplex *, integer *), zgemv_(char *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
     doublereal dstop;
     logical upper;
     doublecomplex ztemp;
-    extern /* Subroutine */ int zswap_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int zpstf2_(char *, integer *, doublecomplex *, 
-	    integer *, integer *, integer *, doublereal *, doublereal *, 
-	    integer *);
-    extern logical disnan_(doublereal *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int zdscal_(integer *, doublereal *, 
-	    doublecomplex *, integer *), zlacgv_(integer *, doublecomplex *, 
-	    integer *);
-    extern integer dmaxloc_(doublereal *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2.1)                                  -- */

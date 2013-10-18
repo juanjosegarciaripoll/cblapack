@@ -30,17 +30,6 @@
     doublereal eps, tol;
     integer n0in, ipn4;
     doublereal tol2, temp;
-    extern /* Subroutine */ int dlasq4_(integer *, integer *, doublereal *, 
-	    integer *, integer *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, integer *, 
-	     doublereal *), dlasq5_(integer *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, doublereal *, doublereal *, 
-	     doublereal *, doublereal *, doublereal *, logical *), dlasq6_(
-	    integer *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *);
-    extern doublereal dlamch_(char *);
-    extern logical disnan_(doublereal *);
 
 
 /*  -- LAPACK routine (version 3.2)                                    -- */

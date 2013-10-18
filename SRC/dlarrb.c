@@ -28,8 +28,6 @@
     doublereal gap, mid, tmp, back, lgap, rgap, left;
     integer iter, nint, prev, next;
     doublereal cvrgd, right, width;
-    extern integer dlaneg_(integer *, doublereal *, doublereal *, doublereal *
-, doublereal *, integer *);
     integer negcnt;
     doublereal mnwdth;
     integer olnint, maxitr;

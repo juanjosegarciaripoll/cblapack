@@ -30,20 +30,7 @@ static real c_b52 = .5f;
 
     /* Local variables */
     integer k, kb, nb;
-    extern logical lsame_(char *, char *);
     logical upper;
-    extern /* Subroutine */ int strmm_(char *, char *, char *, char *, 
-	    integer *, integer *, real *, real *, integer *, real *, integer *
-), ssymm_(char *, char *, integer 
-	    *, integer *, real *, real *, integer *, real *, integer *, real *
-, real *, integer *), strsm_(char *, char *, char 
-	    *, char *, integer *, integer *, real *, real *, integer *, real *
-, integer *), ssygs2_(integer *, 
-	    char *, integer *, real *, integer *, real *, integer *, integer *
-), ssyr2k_(char *, char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

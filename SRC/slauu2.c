@@ -27,13 +27,7 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__;
     real aii;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    sgemv_(char *, integer *, integer *, real *, real *, integer *, 
-	    real *, integer *, real *, real *, integer *);
     logical upper;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

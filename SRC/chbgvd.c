@@ -31,28 +31,12 @@ static complex c_b2 = {0.f,0.f};
     integer inde;
     char vect[1];
     integer llwk2;
-    extern /* Subroutine */ int cgemm_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *);
-    extern logical lsame_(char *, char *);
     integer iinfo, lwmin;
     logical upper;
     integer llrwk;
     logical wantz;
     integer indwk2;
-    extern /* Subroutine */ int cstedc_(char *, integer *, real *, real *, 
-	    complex *, integer *, complex *, integer *, real *, integer *, 
-	    integer *, integer *, integer *), chbtrd_(char *, char *, 
-	    integer *, integer *, complex *, integer *, real *, real *, 
-	    complex *, integer *, complex *, integer *), 
-	    chbgst_(char *, char *, integer *, integer *, integer *, complex *
-, integer *, complex *, integer *, complex *, integer *, complex *
-, real *, integer *), clacpy_(char *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *), 
-	    xerbla_(char *, integer *), cpbstf_(char *, integer *, 
-	    integer *, complex *, integer *, integer *);
     integer indwrk, liwmin;
-    extern /* Subroutine */ int ssterf_(integer *, real *, real *, integer *);
     integer lrwmin;
     logical lquery;
 

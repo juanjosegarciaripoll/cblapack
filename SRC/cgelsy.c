@@ -38,40 +38,12 @@ static integer c__2 = 2;
     integer nb, mn, nb1, nb2, nb3, nb4;
     real anrm, bnrm, smin, smax;
     integer iascl, ibscl;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *);
     integer ismin, ismax;
-    extern /* Subroutine */ int ctrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *), claic1_(integer *, 
-	    integer *, complex *, real *, complex *, complex *, real *, 
-	    complex *, complex *);
     real wsize;
-    extern /* Subroutine */ int cgeqp3_(integer *, integer *, complex *, 
-	    integer *, integer *, complex *, complex *, integer *, real *, 
-	    integer *), slabad_(real *, real *);
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *);
-    extern /* Subroutine */ int clascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, complex *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *), xerbla_(char *, 
-	    integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     real bignum;
-    extern /* Subroutine */ int cunmqr_(char *, char *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *, 
-	    complex *, integer *, integer *);
     real sminpr, smaxpr, smlnum;
-    extern /* Subroutine */ int cunmrz_(char *, char *, integer *, integer *, 
-	    integer *, integer *, complex *, integer *, complex *, complex *, 
-	    integer *, complex *, integer *, integer *);
     integer lwkopt;
     logical lquery;
-    extern /* Subroutine */ int ctzrzf_(integer *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

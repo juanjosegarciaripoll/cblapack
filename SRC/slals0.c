@@ -39,20 +39,8 @@ static integer c__0 = 0;
     real dj;
     integer nlp1;
     real temp;
-    extern /* Subroutine */ int srot_(integer *, real *, integer *, real *, 
-	    integer *, real *, real *);
-    extern doublereal snrm2_(integer *, real *, integer *);
     real diflj, difrj, dsigj;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    sgemv_(char *, integer *, integer *, real *, real *, integer *, 
-	    real *, integer *, real *, real *, integer *), scopy_(
-	    integer *, real *, integer *, real *, integer *);
-    extern doublereal slamc3_(real *, real *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real dsigjp;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *), slacpy_(char *, integer *, integer *, real *, integer *, 
-	    real *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

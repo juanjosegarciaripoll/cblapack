@@ -27,18 +27,8 @@ static real c_b12 = 1.f;
     /* Local variables */
     integer k, n1, n2;
     logical normaltransr;
-    extern /* Subroutine */ int cherk_(char *, char *, integer *, integer *, 
-	    real *, complex *, integer *, real *, complex *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int ctrmm_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *);
     logical lower;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     logical nisodd;
-    extern /* Subroutine */ int clauum_(char *, integer *, complex *, integer 
-	    *, integer *), ctftri_(char *, char *, char *, integer *, 
-	    complex *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2)                                    -- */

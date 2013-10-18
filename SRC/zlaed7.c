@@ -31,22 +31,7 @@ static integer c_n1 = -1;
 
     /* Local variables */
     integer i__, k, n1, n2, iq, iw, iz, ptr, indx, curr, indxc, indxp;
-    extern /* Subroutine */ int dlaed9_(integer *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, integer *, integer *), 
-	    zlaed8_(integer *, integer *, integer *, doublecomplex *, integer 
-	    *, doublereal *, doublereal *, integer *, doublereal *, 
-	    doublereal *, doublecomplex *, integer *, doublereal *, integer *, 
-	     integer *, integer *, integer *, integer *, integer *, 
-	    doublereal *, integer *), dlaeda_(integer *, integer *, integer *, 
-	     integer *, integer *, integer *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *, 
-	     integer *);
     integer idlmda;
-    extern /* Subroutine */ int dlamrg_(integer *, integer *, doublereal *, 
-	    integer *, integer *, integer *), xerbla_(char *, integer *), zlacrm_(integer *, integer *, doublecomplex *, integer *, 
-	     doublereal *, integer *, doublecomplex *, integer *, doublereal *
-);
     integer coltyp;
 
 

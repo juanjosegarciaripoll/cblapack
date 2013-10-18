@@ -24,10 +24,6 @@
 
     /* Local variables */
     integer here;
-    extern /* Subroutine */ int ctgex2_(logical *, logical *, integer *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *, 
-	    complex *, integer *, integer *, integer *), xerbla_(char *, 
-	    integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

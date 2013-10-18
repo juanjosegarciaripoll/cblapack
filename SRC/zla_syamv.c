@@ -26,9 +26,6 @@
     logical symb_zero__;
     integer iy, jx, kx, ky, info;
     doublereal temp, safe1;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilauplo_(char *);
 
 
 /*     -- LAPACK routine (version 3.2)                                 -- */

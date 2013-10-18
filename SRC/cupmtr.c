@@ -30,11 +30,7 @@ static integer c__1 = 1;
     complex aii;
     logical left;
     complex taui;
-    extern /* Subroutine */ int clarf_(char *, integer *, integer *, complex *
-, integer *, complex *, complex *, integer *, complex *);
-    extern logical lsame_(char *, char *);
     logical upper;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     logical notran, forwrd;
 
 

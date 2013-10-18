@@ -29,12 +29,7 @@ static integer c__1 = 1;
     integer j, kn;
     real ajj;
     integer kld;
-    extern /* Subroutine */ int ssyr_(char *, integer *, real *, real *, 
-	    integer *, real *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     logical upper;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

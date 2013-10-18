@@ -35,18 +35,6 @@ static integer c__2 = 2;
     integer i__, j, nb, nx;
     doublereal ws;
     integer nbmin, iinfo, minmn;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), zgebd2_(integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *), 
-	    xerbla_(char *, integer *), zlabrd_(integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublereal *, doublereal *, 
-	     doublecomplex *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer ldwrkx, ldwrky, lwkopt;
     logical lquery;
 

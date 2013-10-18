@@ -50,23 +50,9 @@ static integer c__2 = 2;
     real alpha;
     logical accum;
     integer ndcol, incol;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     integer krcol, nbmps;
-    extern /* Subroutine */ int strmm_(char *, char *, char *, char *, 
-	    integer *, integer *, real *, real *, integer *, real *, integer *
-), slaqr1_(integer *, real *, 
-	    integer *, real *, real *, real *, real *, real *), slabad_(real *
-, real *);
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int slarfg_(integer *, real *, real *, integer *, 
-	    real *);
     real safmax;
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *), slaset_(char *, integer *, 
-	    integer *, real *, real *, real *, integer *);
     real refsum;
     integer mstart;
     real smlnum;

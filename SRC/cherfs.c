@@ -36,23 +36,10 @@ static integer c__1 = 1;
     real eps;
     integer kase;
     real safe1, safe2;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int chemv_(char *, integer *, complex *, complex *
-, integer *, complex *, integer *, complex *, complex *, integer *
-);
     integer isave[3];
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *), caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *);
     integer count;
     logical upper;
-    extern /* Subroutine */ int clacn2_(integer *, complex *, complex *, real 
-	    *, integer *, integer *);
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *), chetrs_(
-	    char *, integer *, integer *, complex *, integer *, integer *, 
-	    complex *, integer *, integer *);
     real lstres;
 
 

@@ -37,24 +37,10 @@ static integer c__1 = 1;
     real abst;
     integer incx, last;
     complex temp;
-    extern /* Subroutine */ int crot_(integer *, complex *, integer *, 
-	    complex *, integer *, real *, complex *);
     integer j1end, j1inc;
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *);
     integer iqend;
-    extern logical lsame_(char *, char *);
     logical initq, wantq, upper;
-    extern /* Subroutine */ int clar2v_(integer *, complex *, complex *, 
-	    complex *, integer *, real *, complex *, integer *), clacgv_(
-	    integer *, complex *, integer *);
     integer iqaend;
-    extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *), clartg_(complex *, 
-	    complex *, real *, complex *, complex *), xerbla_(char *, integer 
-	    *), clargv_(integer *, complex *, integer *, complex *, 
-	    integer *, real *, integer *), clartv_(integer *, complex *, 
-	    integer *, complex *, integer *, real *, complex *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

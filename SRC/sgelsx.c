@@ -35,26 +35,8 @@ static real c_b36 = 1.f;
     integer mn;
     real anrm, bnrm, smin, smax;
     integer iascl, ibscl, ismin, ismax;
-    extern /* Subroutine */ int strsm_(char *, char *, char *, char *, 
-	    integer *, integer *, real *, real *, integer *, real *, integer *
-), slaic1_(integer *, integer *, 
-	    real *, real *, real *, real *, real *, real *, real *), sorm2r_(
-	    char *, char *, integer *, integer *, integer *, real *, integer *
-, real *, real *, integer *, real *, integer *), 
-	    slabad_(real *, real *);
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *), sgeqpf_(integer *, integer *, real *, integer *, integer 
-	    *, real *, real *, integer *), slaset_(char *, integer *, integer 
-	    *, real *, real *, real *, integer *);
     real sminpr, smaxpr, smlnum;
-    extern /* Subroutine */ int slatzm_(char *, integer *, integer *, real *, 
-	    integer *, real *, real *, real *, integer *, real *), 
-	    stzrqf_(integer *, integer *, real *, integer *, real *, integer *
-);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

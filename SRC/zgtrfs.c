@@ -41,25 +41,11 @@ static doublecomplex c_b26 = {1.,0.};
     doublereal eps;
     integer kase;
     doublereal safe1, safe2;
-    extern logical lsame_(char *, char *);
     integer isave[3], count;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), zlacn2_(
-	    integer *, doublecomplex *, doublecomplex *, doublereal *, 
-	    integer *, integer *);
-    extern doublereal dlamch_(char *);
     doublereal safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *), zlagtm_(
-	    char *, integer *, integer *, doublereal *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *, 
-	    doublereal *, doublecomplex *, integer *);
     logical notran;
     char transn[1], transt[1];
     doublereal lstres;
-    extern /* Subroutine */ int zgttrs_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, doublecomplex *
-, integer *, doublecomplex *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

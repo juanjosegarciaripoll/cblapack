@@ -39,25 +39,8 @@ static integer c__1 = 1;
     integer j1t, j2t;
     real bii;
     integer kbt, nrt, inca;
-    extern /* Subroutine */ int crot_(integer *, complex *, integer *, 
-	    complex *, integer *, real *, complex *), cgerc_(integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int cgeru_(integer *, integer *, complex *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *);
     logical upper, wantx;
-    extern /* Subroutine */ int clar2v_(integer *, complex *, complex *, 
-	    complex *, integer *, real *, complex *, integer *), clacgv_(
-	    integer *, complex *, integer *), csscal_(integer *, real *, 
-	    complex *, integer *), claset_(char *, integer *, integer *, 
-	    complex *, complex *, complex *, integer *), clartg_(
-	    complex *, complex *, real *, complex *, complex *), xerbla_(char 
-	    *, integer *), clargv_(integer *, complex *, integer *, 
-	    complex *, integer *, real *, integer *);
     logical update;
-    extern /* Subroutine */ int clartv_(integer *, complex *, integer *, 
-	    complex *, integer *, real *, complex *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -28,11 +28,6 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__;
     doublecomplex alpha;
-    extern /* Subroutine */ int zlarf_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *), xerbla_(char *, integer *), zlarfg_(integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *), zlacgv_(integer *, doublecomplex *, 
-	    integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

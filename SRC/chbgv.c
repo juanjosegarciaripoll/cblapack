@@ -24,19 +24,9 @@
     /* Local variables */
     integer inde;
     char vect[1];
-    extern logical lsame_(char *, char *);
     integer iinfo;
     logical upper, wantz;
-    extern /* Subroutine */ int chbtrd_(char *, char *, integer *, integer *, 
-	    complex *, integer *, real *, real *, complex *, integer *, 
-	    complex *, integer *), chbgst_(char *, char *, 
-	    integer *, integer *, integer *, complex *, integer *, complex *, 
-	    integer *, complex *, integer *, complex *, real *, integer *), xerbla_(char *, integer *), cpbstf_(char 
-	    *, integer *, integer *, complex *, integer *, integer *);
     integer indwrk;
-    extern /* Subroutine */ int csteqr_(char *, integer *, real *, real *, 
-	    complex *, integer *, real *, integer *), ssterf_(integer 
-	    *, real *, real *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

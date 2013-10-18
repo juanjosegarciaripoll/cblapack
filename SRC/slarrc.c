@@ -25,7 +25,6 @@
     integer i__;
     real sl, su, tmp, tmp2;
     logical matt;
-    extern logical lsame_(char *, char *);
     real lpivot, rpivot;
 
 

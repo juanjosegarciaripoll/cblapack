@@ -30,16 +30,7 @@ static integer c__1 = 1;
     integer j, jc, jj;
     doublereal ajj;
     integer jjn;
-    extern /* Subroutine */ int zhpr_(char *, integer *, doublereal *, 
-	    doublecomplex *, integer *, doublecomplex *);
-    extern logical lsame_(char *, char *);
-    extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     logical upper;
-    extern /* Subroutine */ int ztpmv_(char *, char *, char *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *), xerbla_(char *, integer *), zdscal_(integer *, 
-	    doublereal *, doublecomplex *, integer *), ztptri_(char *, char *, 
-	     integer *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

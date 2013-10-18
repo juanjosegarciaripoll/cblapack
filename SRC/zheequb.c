@@ -34,13 +34,8 @@ static integer c__1 = 1;
     doublereal avg, std, tol, base;
     integer iter;
     doublereal smin, smax, scale;
-    extern logical lsame_(char *, char *);
     doublereal sumsq;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal bignum, smlnum;
-    extern /* Subroutine */ int zlassq_(integer *, doublecomplex *, integer *, 
-	     doublereal *, doublereal *);
 
 
 /*     -- LAPACK routine (version 3.2)                                 -- */

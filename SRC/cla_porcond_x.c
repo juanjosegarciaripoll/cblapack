@@ -31,14 +31,9 @@ doublereal cla_porcond_x__(char *uplo, integer *n, complex *a, integer *lda,
     logical up;
     real tmp;
     integer kase;
-    extern logical lsame_(char *, char *);
     integer isave[3];
     real anorm;
-    extern /* Subroutine */ int clacn2_(integer *, complex *, complex *, real 
-	    *, integer *, integer *), xerbla_(char *, integer *);
     real ainvnm;
-    extern /* Subroutine */ int cpotrs_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *, integer *);
 
 
 /*     -- LAPACK routine (version 3.2.1)                                 -- */

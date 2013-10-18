@@ -39,31 +39,10 @@ static logical c_false = FALSE_;
     doublereal rcond_tmp__;
     integer prec_type__;
     doublereal cwise_wrong__;
-    extern /* Subroutine */ int zla_porfsx_extended__(integer *, char *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *,
-	     integer *, logical *, doublereal *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, integer *, doublereal *,
-	     doublereal *, doublecomplex *, doublereal *, doublecomplex *, 
-	    doublecomplex *, doublereal *, integer *, doublereal *, 
-	    doublereal *, logical *, integer *, ftnlen);
     char norm[1];
     logical ignore_cwise__;
-    extern logical lsame_(char *, char *);
     doublereal anorm;
     logical rcequ;
-    extern doublereal zla_porcond_c__(char *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, doublereal *, logical *, 
-	    integer *, doublecomplex *, doublereal *, ftnlen), 
-	    zla_porcond_x__(char *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, doublereal *, ftnlen), dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern doublereal zlanhe_(char *, char *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int zpocon_(char *, integer *, doublecomplex *, 
-	    integer *, doublereal *, doublereal *, doublecomplex *, 
-	    doublereal *, integer *);
-    extern integer ilaprec_(char *);
     integer ithresh, n_norms__;
     doublereal rthresh;
 

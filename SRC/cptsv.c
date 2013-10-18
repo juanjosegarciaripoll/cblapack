@@ -20,9 +20,6 @@
     integer b_dim1, b_offset, i__1;
 
     /* Local variables */
-    extern /* Subroutine */ int xerbla_(char *, integer *), cpttrf_(
-	    integer *, real *, complex *, integer *), cpttrs_(char *, integer 
-	    *, integer *, real *, complex *, complex *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

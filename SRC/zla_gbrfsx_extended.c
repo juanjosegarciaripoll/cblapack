@@ -41,44 +41,16 @@ static doublereal c_b31 = 1.;
     /* Local variables */
     doublereal dxratmax, dzratmax;
     integer i__, j, m;
-    extern /* Subroutine */ int zla_gbamv__(integer *, integer *, integer *, 
-	    integer *, integer *, doublereal *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *, integer *)
-	    ;
     logical incr_prec__;
     doublereal prev_dz_z__, yk, final_dx_x__, final_dz_z__;
-    extern /* Subroutine */ int zla_wwaddw__(integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *);
     doublereal prevnormdx;
     integer cnt;
     doublereal dyk, eps, incr_thresh__, dx_x__, dz_z__, ymin;
-    extern /* Subroutine */ int zla_lin_berr__(integer *, integer *, integer *
-	    , doublecomplex *, doublereal *, doublereal *), blas_zgbmv_x__(
-	    integer *, integer *, integer *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, integer *)
-	    ;
     integer y_prec_state__;
-    extern /* Subroutine */ int blas_zgbmv2_x__(integer *, integer *, integer 
-	    *, integer *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, integer *);
     doublereal dxrat, dzrat;
-    extern /* Subroutine */ int zgbmv_(char *, integer *, integer *, integer *
-, integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
     char trans[1];
     doublereal normx, normy;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
     doublereal normdx;
-    extern /* Subroutine */ int zgbtrs_(char *, integer *, integer *, integer 
-	    *, integer *, doublecomplex *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *);
-    extern /* Character */ void chla_transtype__(char *, ftnlen, integer *);
     doublereal hugeval;
     integer x_state__, z_state__;
 

@@ -22,9 +22,7 @@
     /* Local variables */
     integer i__, j;
     doublereal rmax;
-    extern logical lsame_(char *, char *);
     logical upper;
-    extern doublereal slamch_(char *);
 
 
 /*  -- LAPACK PROTOTYPE auxiliary routine (version 3.1.2) -- */

@@ -27,19 +27,10 @@ static integer c_n1 = -1;
 
     /* Local variables */
     integer i__, j, nb, mn;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     logical wantq;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer lwkopt;
     logical lquery;
-    extern /* Subroutine */ int zunglq_(integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, integer *), zungqr_(integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

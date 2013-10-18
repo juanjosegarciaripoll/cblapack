@@ -24,7 +24,6 @@ doublereal zla_syrpvgrw__(char *uplo, integer *n, integer *info,
     /* Local variables */
     integer i__, j, k, kp;
     doublereal tmp, amax, umax;
-    extern logical lsame_(char *, char *);
     integer ncols;
     logical upper;
     doublereal rpvgrw;

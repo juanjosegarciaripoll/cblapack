@@ -37,38 +37,16 @@ static real c_b8 = 1.f;
     /* Local variables */
     real dxratmax, dzratmax;
     integer i__, j;
-    extern /* Subroutine */ int sla_geamv__(integer *, integer *, integer *, 
-	    real *, real *, integer *, real *, integer *, real *, real *, 
-	    integer *);
     logical incr_prec__;
     real prev_dz_z__, yk, final_dx_x__, final_dz_z__;
-    extern /* Subroutine */ int sla_wwaddw__(integer *, real *, real *, real *
-	    );
     real prevnormdx;
     integer cnt;
     real dyk, eps, incr_thresh__, dx_x__, dz_z__, ymin;
-    extern /* Subroutine */ int sla_lin_berr__(integer *, integer *, integer *
-	    , real *, real *, real *), blas_sgemv_x__(integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *, integer *);
     integer y_prec_state__;
-    extern /* Subroutine */ int blas_sgemv2_x__(integer *, integer *, integer 
-	    *, real *, real *, integer *, real *, real *, integer *, real *, 
-	    real *, integer *, integer *), sgemv_(char *, integer *, integer *
-, real *, real *, integer *, real *, integer *, real *, real *, 
-	    integer *);
     real dxrat, dzrat;
     char trans[1];
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     real normx, normy;
-    extern /* Subroutine */ int saxpy_(integer *, real *, real *, integer *, 
-	    real *, integer *);
-    extern doublereal slamch_(char *);
     real normdx;
-    extern /* Subroutine */ int sgetrs_(char *, integer *, integer *, real *, 
-	    integer *, integer *, real *, integer *, integer *);
-    extern /* Character */ void chla_transtype__(char *, ftnlen, integer *);
     real hugeval;
     integer x_state__, z_state__;
 

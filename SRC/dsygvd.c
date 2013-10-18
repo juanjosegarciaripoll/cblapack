@@ -28,25 +28,11 @@ static doublereal c_b11 = 1.;
 
     /* Local variables */
     integer lopt;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int dtrmm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *);
     integer lwmin;
     char trans[1];
     integer liopt;
-    extern /* Subroutine */ int dtrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *);
     logical upper, wantz;
-    extern /* Subroutine */ int xerbla_(char *, integer *), dpotrf_(
-	    char *, integer *, doublereal *, integer *, integer *);
     integer liwmin;
-    extern /* Subroutine */ int dsyevd_(char *, char *, integer *, doublereal 
-	    *, integer *, doublereal *, doublereal *, integer *, integer *, 
-	    integer *, integer *), dsygst_(integer *, char *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *);
     logical lquery;
 
 

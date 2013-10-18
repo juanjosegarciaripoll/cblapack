@@ -29,36 +29,14 @@
     doublereal d__1, d__2;
 
     /* Local variables */
-    extern /* Subroutine */ int zsyrfsx_(char *, char *, integer *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *, integer *
-, doublereal *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, doublecomplex *, 
-	    doublereal *, integer *);
     integer j;
     doublereal amax, smin, smax;
-    extern logical lsame_(char *, char *);
     doublereal scond;
-    extern doublereal zla_syrpvgrw__(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *,
-	     doublereal *, ftnlen);
     logical equil, rcequ;
-    extern doublereal dlamch_(char *);
     logical nofact;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal bignum;
     integer infequ;
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     doublereal smlnum;
-    extern /* Subroutine */ int zlaqsy_(char *, integer *, doublecomplex *, 
-	    integer *, doublereal *, doublereal *, doublereal *, char *), zsytrf_(char *, integer *, doublecomplex *, 
-	    integer *, integer *, doublecomplex *, integer *, integer *), zlascl2_(integer *, integer *, doublereal *, 
-	    doublecomplex *, integer *), zsytrs_(char *, integer *, integer *, 
-	     doublecomplex *, integer *, integer *, doublecomplex *, integer *
-, integer *), zsyequb_(char *, integer *, doublecomplex *, 
-	     integer *, doublereal *, doublereal *, doublereal *, 
-	    doublecomplex *, integer *);
 
 
 /*     -- LAPACK driver routine (version 3.2.1)                          -- */

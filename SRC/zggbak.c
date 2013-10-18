@@ -22,11 +22,7 @@
 
     /* Local variables */
     integer i__, k;
-    extern logical lsame_(char *, char *);
     logical leftv;
-    extern /* Subroutine */ int zswap_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), xerbla_(char *, integer *), 
-	    zdscal_(integer *, doublereal *, doublecomplex *, integer *);
     logical rightv;
 
 

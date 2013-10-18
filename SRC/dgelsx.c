@@ -36,30 +36,8 @@ static doublereal c_b36 = 1.;
     integer mn;
     doublereal anrm, bnrm, smin, smax;
     integer iascl, ibscl, ismin, ismax;
-    extern /* Subroutine */ int dtrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *), dlaic1_(
-	    integer *, integer *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *), dorm2r_(
-	    char *, char *, integer *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *), dlabad_(doublereal *, doublereal *);
-    extern doublereal dlamch_(char *), dlange_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *);
-    extern /* Subroutine */ int dlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, integer *), dgeqpf_(integer *, integer *, 
-	    doublereal *, integer *, integer *, doublereal *, doublereal *, 
-	    integer *), dlaset_(char *, integer *, integer *, doublereal *, 
-	    doublereal *, doublereal *, integer *), xerbla_(char *, 
-	    integer *);
     doublereal bignum;
-    extern /* Subroutine */ int dlatzm_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, doublereal *, 
-	     integer *, doublereal *);
     doublereal sminpr, smaxpr, smlnum;
-    extern /* Subroutine */ int dtzrqf_(integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

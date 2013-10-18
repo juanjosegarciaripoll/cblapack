@@ -29,25 +29,8 @@ static integer c__2 = 2;
 
     /* Local variables */
     integer j, jb, na, nb, sm, sn, nx, fjb, iws, nfxd, nbmin;
-    extern /* Subroutine */ int cswap_(integer *, complex *, integer *, 
-	    complex *, integer *);
     integer minmn, minws;
-    extern /* Subroutine */ int claqp2_(integer *, integer *, integer *, 
-	    complex *, integer *, integer *, complex *, real *, real *, 
-	    complex *);
-    extern doublereal scnrm2_(integer *, complex *, integer *);
-    extern /* Subroutine */ int cgeqrf_(integer *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *, integer *), xerbla_(
-	    char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int claqps_(integer *, integer *, integer *, 
-	    integer *, integer *, complex *, integer *, integer *, complex *, 
-	    real *, real *, complex *, complex *, integer *);
     integer topbmn, sminmn;
-    extern /* Subroutine */ int cunmqr_(char *, char *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *, 
-	    complex *, integer *, integer *);
     integer lwkopt;
     logical lquery;
 

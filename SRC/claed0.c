@@ -32,28 +32,12 @@ static integer c__1 = 1;
     integer i__, j, k, ll, iq, lgn, msd2, smm1, spm1, spm2;
     real temp;
     integer curr, iperm;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *);
     integer indxq, iwrem;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     integer iqptr;
-    extern /* Subroutine */ int claed7_(integer *, integer *, integer *, 
-	    integer *, integer *, integer *, real *, complex *, integer *, 
-	    real *, integer *, real *, integer *, integer *, integer *, 
-	    integer *, integer *, real *, complex *, real *, integer *, 
-	    integer *);
     integer tlvls;
-    extern /* Subroutine */ int clacrm_(integer *, integer *, complex *, 
-	    integer *, real *, integer *, complex *, integer *, real *);
     integer igivcl;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer igivnm, submat, curprb, subpbs, igivpt, curlvl, matsiz, iprmpt, 
 	    smlsiz;
-    extern /* Subroutine */ int ssteqr_(char *, integer *, real *, real *, 
-	    real *, integer *, real *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

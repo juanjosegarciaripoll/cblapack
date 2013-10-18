@@ -44,34 +44,11 @@ static logical c_true = TRUE_;
     real beta;
     integer kend, kcol, info, ifst, ilst, ltop, krow;
     logical bulge;
-    extern /* Subroutine */ int slarf_(char *, integer *, integer *, real *, 
-	    integer *, real *, real *, integer *, real *), sgemm_(
-	    char *, char *, integer *, integer *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, real *, integer *);
     integer infqr;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     integer kwtop;
-    extern /* Subroutine */ int slanv2_(real *, real *, real *, real *, real *
-, real *, real *, real *, real *, real *), slabad_(real *, real *)
-	    ;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int sgehrd_(integer *, integer *, integer *, real 
-	    *, integer *, real *, real *, integer *, integer *);
     real safmin;
-    extern /* Subroutine */ int slarfg_(integer *, real *, real *, integer *, 
-	    real *);
     real safmax;
-    extern /* Subroutine */ int slahqr_(logical *, logical *, integer *, 
-	    integer *, integer *, real *, integer *, real *, real *, integer *
-, integer *, real *, integer *, integer *), slacpy_(char *, 
-	    integer *, integer *, real *, integer *, real *, integer *), slaset_(char *, integer *, integer *, real *, real *, 
-	    real *, integer *);
     logical sorted;
-    extern /* Subroutine */ int strexc_(char *, integer *, real *, integer *, 
-	    real *, integer *, integer *, integer *, real *, integer *), sormhr_(char *, char *, integer *, integer *, integer *, 
-	    integer *, real *, integer *, real *, real *, integer *, real *, 
-	    integer *, integer *);
     real smlnum;
     integer lwkopt;
 

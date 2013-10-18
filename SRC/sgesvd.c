@@ -39,41 +39,13 @@ static real c_b443 = 1.f;
     integer nru, iscl;
     real anrm;
     integer ierr, itau, ncvt, nrvt;
-    extern logical lsame_(char *, char *);
     integer chunk;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     integer minmn, wrkbl, itaup, itauq, mnthr, iwork;
     logical wntua, wntva, wntun, wntuo, wntvn, wntvo, wntus, wntvs;
     integer bdspac;
-    extern /* Subroutine */ int sgebrd_(integer *, integer *, real *, integer 
-	    *, real *, real *, real *, real *, real *, integer *, integer *);
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     real bignum;
-    extern /* Subroutine */ int sgelqf_(integer *, integer *, real *, integer 
-	    *, real *, real *, integer *, integer *), slascl_(char *, integer 
-	    *, integer *, real *, real *, integer *, integer *, real *, 
-	    integer *, integer *), sgeqrf_(integer *, integer *, real 
-	    *, integer *, real *, real *, integer *, integer *), slacpy_(char 
-	    *, integer *, integer *, real *, integer *, real *, integer *), slaset_(char *, integer *, integer *, real *, real *, 
-	    real *, integer *), sbdsqr_(char *, integer *, integer *, 
-	    integer *, integer *, real *, real *, real *, integer *, real *, 
-	    integer *, real *, integer *, real *, integer *), sorgbr_(
-	    char *, integer *, integer *, integer *, real *, integer *, real *
-, real *, integer *, integer *), sormbr_(char *, char *, 
-	    char *, integer *, integer *, integer *, real *, integer *, real *
-, real *, integer *, real *, integer *, integer *);
     integer ldwrkr, minwrk, ldwrku, maxwrk;
-    extern /* Subroutine */ int sorglq_(integer *, integer *, integer *, real 
-	    *, integer *, real *, real *, integer *, integer *);
     real smlnum;
-    extern /* Subroutine */ int sorgqr_(integer *, integer *, integer *, real 
-	    *, integer *, real *, real *, integer *, integer *);
     logical lquery, wntuas, wntvas;
 
 

@@ -33,17 +33,7 @@ static integer c__2 = 2;
     /* Local variables */
     integer i__, j, nb, nx;
     real ws;
-    extern /* Subroutine */ int cgemm_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *);
     integer nbmin, iinfo, minmn;
-    extern /* Subroutine */ int cgebd2_(integer *, integer *, complex *, 
-	    integer *, real *, real *, complex *, complex *, complex *, 
-	    integer *), clabrd_(integer *, integer *, integer *, complex *, 
-	    integer *, real *, real *, complex *, complex *, complex *, 
-	    integer *, complex *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer ldwrkx, ldwrky, lwkopt;
     logical lquery;
 

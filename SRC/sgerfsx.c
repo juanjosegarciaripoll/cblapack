@@ -35,30 +35,14 @@ static integer c__1 = 1;
     /* Local variables */
     real illrcond_thresh__, unstable_thresh__, err_lbnd__;
     integer ref_type__;
-    extern integer ilatrans_(char *);
     integer j;
     real rcond_tmp__;
     integer prec_type__, trans_type__;
-    extern doublereal sla_gercond__(char *, integer *, real *, integer *, 
-	    real *, integer *, integer *, integer *, real *, integer *, real *
-	    , integer *, ftnlen);
     real cwise_wrong__;
-    extern /* Subroutine */ int sla_gerfsx_extended__(integer *, integer *, 
-	    integer *, integer *, real *, integer *, real *, integer *, 
-	    integer *, logical *, real *, real *, integer *, real *, integer *
-	    , real *, integer *, real *, real *, real *, real *, real *, real 
-	    *, real *, integer *, real *, real *, logical *, integer *);
     char norm[1];
     logical ignore_cwise__;
-    extern logical lsame_(char *, char *);
     real anorm;
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), sgecon_(
-	    char *, integer *, real *, integer *, real *, real *, real *, 
-	    integer *, integer *);
     logical colequ, notran, rowequ;
-    extern integer ilaprec_(char *);
     integer ithresh, n_norms__;
     real rthresh;
 

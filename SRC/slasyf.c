@@ -32,17 +32,8 @@ static real c_b9 = 1.f;
     real t, r1, d11, d21, d22;
     integer jb, jj, kk, jp, kp, kw, kkw, imax, jmax;
     real alpha;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    sgemm_(char *, char *, integer *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *), sgemv_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *);
     integer kstep;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), sswap_(integer *, real *, integer *, real *, integer *
-);
     real absakk;
-    extern integer isamax_(integer *, real *, integer *);
     real colmax, rowmax;
 
 

@@ -30,9 +30,6 @@ static doublereal c_b7 = 0.;
 
     /* Local variables */
     integer i__, j, l;
-    extern /* Subroutine */ int dgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

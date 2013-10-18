@@ -37,25 +37,9 @@ static integer c__49 = 49;
     /* Local variables */
     doublecomplex hl[2401]	/* was [49][49] */;
     integer kbot, nmin;
-    extern logical lsame_(char *, char *);
     logical initz;
     doublecomplex workl[49];
     logical wantt, wantz;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zlaqr0_(logical *, logical *, 
-	    integer *, integer *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, integer *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *, integer *), xerbla_(char *, integer *
-);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int zlahqr_(logical *, logical *, integer *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     integer *, integer *, doublecomplex *, integer *, integer *), 
-	    zlacpy_(char *, integer *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zlaset_(char *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    integer *);
     logical lquery;
 
 

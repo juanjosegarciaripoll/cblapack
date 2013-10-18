@@ -30,15 +30,8 @@ doublereal dla_gercond__(char *trans, integer *n, doublereal *a, integer *lda,
     integer i__, j;
     doublereal tmp;
     integer kase;
-    extern logical lsame_(char *, char *);
     integer isave[3];
-    extern /* Subroutine */ int dlacn2_(integer *, doublereal *, doublereal *, 
-	     integer *, doublereal *, integer *, integer *), xerbla_(char *, 
-	    integer *);
     doublereal ainvnm;
-    extern /* Subroutine */ int dgetrs_(char *, integer *, integer *, 
-	    doublereal *, integer *, integer *, doublereal *, integer *, 
-	    integer *);
     logical notrans;
 
 

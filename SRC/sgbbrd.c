@@ -34,17 +34,9 @@ static integer c__1 = 1;
     integer kk, ml, mn, nr, mu;
     real rs;
     integer kb1, ml0, mu0, klm, kun, nrt, klu1, inca;
-    extern /* Subroutine */ int srot_(integer *, real *, integer *, real *, 
-	    integer *, real *, real *);
-    extern logical lsame_(char *, char *);
     logical wantb, wantc;
     integer minmn;
     logical wantq;
-    extern /* Subroutine */ int xerbla_(char *, integer *), slaset_(
-	    char *, integer *, integer *, real *, real *, real *, integer *), slartg_(real *, real *, real *, real *, real *), slargv_(
-	    integer *, real *, integer *, real *, integer *, real *, integer *
-), slartv_(integer *, real *, integer *, real *, integer *, real *
-, real *, integer *);
     logical wantpt;
 
 

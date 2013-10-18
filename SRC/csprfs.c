@@ -37,23 +37,11 @@ static integer c__1 = 1;
     real eps;
     integer kase;
     real safe1, safe2;
-    extern logical lsame_(char *, char *);
     integer isave[3];
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *), caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *);
     integer count;
-    extern /* Subroutine */ int cspmv_(char *, integer *, complex *, complex *
-, complex *, integer *, complex *, complex *, integer *);
     logical upper;
-    extern /* Subroutine */ int clacn2_(integer *, complex *, complex *, real 
-	    *, integer *, integer *);
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real lstres;
-    extern /* Subroutine */ int csptrs_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

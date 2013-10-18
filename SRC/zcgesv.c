@@ -35,28 +35,6 @@ static integer c__1 = 1;
     integer ptsa;
     doublereal rnrm, xnrm;
     integer ptsx, iiter;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), clag2z_(
-	    integer *, integer *, complex *, integer *, doublecomplex *, 
-	    integer *, integer *), zlag2c_(integer *, integer *, 
-	    doublecomplex *, integer *, complex *, integer *, integer *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int cgetrf_(integer *, integer *, complex *, 
-	    integer *, integer *, integer *), xerbla_(char *, integer *);
-    extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int cgetrs_(char *, integer *, integer *, complex 
-	    *, integer *, integer *, complex *, integer *, integer *);
-    extern integer izamax_(integer *, doublecomplex *, integer *);
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), 
-	    zgetrf_(integer *, integer *, doublecomplex *, integer *, integer 
-	    *, integer *), zgetrs_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *, doublecomplex *, integer *, 
-	     integer *);
 
 
 /*  -- LAPACK PROTOTYPE driver routine (version 3.2) -- */

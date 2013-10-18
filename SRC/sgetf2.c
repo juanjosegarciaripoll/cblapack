@@ -27,15 +27,7 @@ static real c_b8 = -1.f;
 
     /* Local variables */
     integer i__, j, jp;
-    extern /* Subroutine */ int sger_(integer *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, integer *), sscal_(integer *
-, real *, real *, integer *);
     real sfmin;
-    extern /* Subroutine */ int sswap_(integer *, real *, integer *, real *, 
-	    integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer isamax_(integer *, real *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

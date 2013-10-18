@@ -33,17 +33,7 @@ static real c_b22 = 1.f;
     integer i__, j, nb, nx;
     real ws;
     integer nbmin, iinfo;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     integer minmn;
-    extern /* Subroutine */ int sgebd2_(integer *, integer *, real *, integer 
-	    *, real *, real *, real *, real *, real *, integer *), slabrd_(
-	    integer *, integer *, integer *, real *, integer *, real *, real *
-, real *, real *, real *, integer *, real *, integer *), xerbla_(
-	    char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer ldwrkx, ldwrky, lwkopt;
     logical lquery;
 

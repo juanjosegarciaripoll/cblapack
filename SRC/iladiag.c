@@ -19,7 +19,6 @@ integer iladiag_(char *diag)
     integer ret_val;
 
     /* Local variables */
-    extern logical lsame_(char *, char *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

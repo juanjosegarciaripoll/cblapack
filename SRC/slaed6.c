@@ -29,7 +29,6 @@
     logical scale;
     integer niter;
     real small1, small2, sminv1, sminv2, dscale[3], sclfac;
-    extern doublereal slamch_(char *);
     real zscale[3], erretm, sclinv;
 
 

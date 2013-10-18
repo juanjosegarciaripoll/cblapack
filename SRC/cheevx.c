@@ -38,49 +38,19 @@ static integer c_n1 = -1;
     logical test;
     integer itmp1, indee;
     real sigma;
-    extern logical lsame_(char *, char *);
     integer iinfo;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     char order[1];
-    extern /* Subroutine */ int cswap_(integer *, complex *, integer *, 
-	    complex *, integer *);
     logical lower;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     logical wantz;
-    extern doublereal clanhe_(char *, char *, integer *, complex *, integer *, 
-	     real *);
     logical alleig, indeig;
     integer iscale, indibl;
     logical valeig;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int chetrd_(char *, integer *, complex *, integer 
-	    *, real *, real *, complex *, complex *, integer *, integer *), csscal_(integer *, real *, complex *, integer *), 
-	    clacpy_(char *, integer *, integer *, complex *, integer *, 
-	    complex *, integer *);
     real safmin;
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real abstll, bignum;
     integer indiwk, indisp, indtau;
-    extern /* Subroutine */ int cstein_(integer *, real *, real *, integer *, 
-	    real *, integer *, integer *, complex *, integer *, real *, 
-	    integer *, integer *, integer *);
     integer indrwk, indwrk, lwkmin;
-    extern /* Subroutine */ int csteqr_(char *, integer *, real *, real *, 
-	    complex *, integer *, real *, integer *), cungtr_(char *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *, 
-	    integer *), ssterf_(integer *, real *, real *, integer *),
-	     cunmtr_(char *, char *, char *, integer *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    integer *);
     integer nsplit, llwork;
     real smlnum;
-    extern /* Subroutine */ int sstebz_(char *, char *, integer *, real *, 
-	    real *, integer *, integer *, real *, real *, real *, integer *, 
-	    integer *, real *, integer *, integer *, real *, integer *, 
-	    integer *);
     integer lwkopt;
     logical lquery;
 

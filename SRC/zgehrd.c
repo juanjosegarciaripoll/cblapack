@@ -36,25 +36,6 @@ static integer c__65 = 65;
     integer ib;
     doublecomplex ei;
     integer nb, nh, nx, iws, nbmin, iinfo;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), ztrmm_(char *, char *, char *, char *, 
-	     integer *, integer *, doublecomplex *, doublecomplex *, integer *
-, doublecomplex *, integer *), 
-	    zaxpy_(integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zgehd2_(integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *), zlahr2_(integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), xerbla_(
-	    char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int zlarfb_(char *, char *, char *, char *, 
-	    integer *, integer *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
     integer ldwork, lwkopt;
     logical lquery;
 

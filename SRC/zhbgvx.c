@@ -38,43 +38,15 @@ static integer c__1 = 1;
     char vect[1];
     logical test;
     integer itmp1, indee;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     char order[1];
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *), zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *);
     logical upper, wantz;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zswap_(integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *);
     logical alleig, indeig;
     integer indibl;
     logical valeig;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer indiwk, indisp;
-    extern /* Subroutine */ int dsterf_(integer *, doublereal *, doublereal *, 
-	     integer *), dstebz_(char *, char *, integer *, doublereal *, 
-	    doublereal *, integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *, integer *, doublereal *, integer *, 
-	    integer *, doublereal *, integer *, integer *), 
-	    zhbtrd_(char *, char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *, doublereal *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *);
     integer indrwk, indwrk;
-    extern /* Subroutine */ int zhbgst_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, doublereal *, 
-	    integer *), zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     integer nsplit;
-    extern /* Subroutine */ int zpbstf_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *), zstein_(integer *, 
-	     doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *, doublecomplex *, integer *, doublereal *, integer *, 
-	    integer *, integer *), zsteqr_(char *, integer *, doublereal *, 
-	    doublereal *, doublecomplex *, integer *, doublereal *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

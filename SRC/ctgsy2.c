@@ -35,17 +35,7 @@ static integer c__1 = 1;
     complex z__[4]	/* was [2][2] */, rhs[2];
     integer ierr, ipiv[2], jpiv[2];
     complex alpha;
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *), cgesc2_(integer *, complex *, 
-	    integer *, complex *, integer *, integer *, real *), cgetc2_(
-	    integer *, complex *, integer *, integer *, integer *, integer *),
-	     clatdf_(integer *, integer *, complex *, integer *, complex *, 
-	    real *, real *, integer *, integer *);
     real scaloc;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     logical notran;
 
 

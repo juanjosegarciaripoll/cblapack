@@ -27,19 +27,9 @@ static integer c__1 = 1;
 
     /* Local variables */
     integer j, neig;
-    extern logical lsame_(char *, char *);
     char trans[1];
     logical upper;
-    extern /* Subroutine */ int zhpev_(char *, char *, integer *, 
-	    doublecomplex *, doublereal *, doublecomplex *, integer *, 
-	    doublecomplex *, doublereal *, integer *);
     logical wantz;
-    extern /* Subroutine */ int ztpmv_(char *, char *, char *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *), ztpsv_(char *, char *, char *, integer *, doublecomplex *
-, doublecomplex *, integer *), xerbla_(
-	    char *, integer *), zhpgst_(integer *, char *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *), zpptrf_(
-	    char *, integer *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

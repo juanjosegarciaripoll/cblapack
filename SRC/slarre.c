@@ -47,36 +47,17 @@ static integer c__2 = 2;
     real rtol;
     integer iseed[4];
     real avgap, sigma;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     logical norep;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), slasq2_(integer *, real *, integer *);
     integer ibegin;
     logical forceb;
     integer irange;
     real sgndef;
-    extern doublereal slamch_(char *);
     integer wbegin;
     real safmin, spdiam;
-    extern /* Subroutine */ int slarra_(integer *, real *, real *, real *, 
-	    real *, real *, integer *, integer *, integer *);
     logical usedqd;
     real clwdth, isleft;
-    extern /* Subroutine */ int slarrb_(integer *, real *, real *, integer *, 
-	    integer *, real *, real *, integer *, real *, real *, real *, 
-	    real *, integer *, real *, real *, integer *, integer *), slarrc_(
-	    char *, integer *, real *, real *, real *, real *, real *, 
-	    integer *, integer *, integer *, integer *), slarrd_(char 
-	    *, char *, integer *, real *, real *, integer *, integer *, real *
-, real *, real *, real *, real *, real *, integer *, integer *, 
-	    integer *, real *, real *, real *, real *, integer *, integer *, 
-	    real *, integer *, integer *), slarrk_(integer *, 
-	    integer *, real *, real *, real *, real *, real *, real *, real *, 
-	     real *, integer *);
     real isrght, bsrtol, dpivot;
-    extern /* Subroutine */ int slarnv_(integer *, integer *, integer *, real 
-	    *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

@@ -39,41 +39,17 @@ static real c_b31 = 1.f;
     /* Local variables */
     real dxratmax, dzratmax;
     integer i__, j, m;
-    extern /* Subroutine */ int cla_gbamv__(integer *, integer *, integer *, 
-	    integer *, integer *, real *, complex *, integer *, complex *, 
-	    integer *, real *, real *, integer *);
     logical incr_prec__;
     real prev_dz_z__, yk, final_dx_x__;
-    extern /* Subroutine */ int cla_wwaddw__(integer *, complex *, complex *, 
-	    complex *);
     real final_dz_z__, prevnormdx;
     integer cnt;
     real dyk, eps, incr_thresh__, dx_x__, dz_z__;
-    extern /* Subroutine */ int cla_lin_berr__(integer *, integer *, integer *
-	    , complex *, real *, real *);
     real ymin;
-    extern /* Subroutine */ int blas_cgbmv_x__(integer *, integer *, integer *
-	    , integer *, integer *, complex *, complex *, integer *, complex *
-	    , integer *, complex *, complex *, integer *, integer *);
     integer y_prec_state__;
-    extern /* Subroutine */ int blas_cgbmv2_x__(integer *, integer *, integer 
-	    *, integer *, integer *, complex *, complex *, integer *, complex 
-	    *, complex *, integer *, complex *, complex *, integer *, integer 
-	    *), cgbmv_(char *, integer *, integer *, integer *, integer *, 
-	    complex *, complex *, integer *, complex *, integer *, complex *, 
-	    complex *, integer *), ccopy_(integer *, complex *, 
-	    integer *, complex *, integer *);
     real dxrat, dzrat;
-    extern /* Subroutine */ int caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *);
     char trans[1];
     real normx, normy;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int cgbtrs_(char *, integer *, integer *, integer 
-	    *, integer *, complex *, integer *, integer *, complex *, integer 
-	    *, integer *);
     real normdx;
-    extern /* Character */ void chla_transtype__(char *, ftnlen, integer *);
     real hugeval;
     integer x_state__, z_state__;
 

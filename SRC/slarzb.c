@@ -30,14 +30,6 @@ static real c_b23 = -1.f;
 
     /* Local variables */
     integer i__, j, info;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *), scopy_(integer *, real *, 
-	    integer *, real *, integer *), strmm_(char *, char *, char *, 
-	    char *, integer *, integer *, real *, real *, integer *, real *, 
-	    integer *), xerbla_(char *, 
-	    integer *);
     char transt[1];
 
 

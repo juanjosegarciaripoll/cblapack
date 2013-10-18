@@ -37,9 +37,7 @@
     doublereal f2s, g2s, eps, scale;
     integer count;
     doublereal safmn2;
-    extern doublereal dlapy2_(doublereal *, doublereal *);
     doublereal safmx2;
-    extern doublereal dlamch_(char *);
     doublereal safmin;
 
 

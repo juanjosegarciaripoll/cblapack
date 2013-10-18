@@ -38,27 +38,10 @@ static logical c_false = FALSE_;
     real rcond_tmp__;
     integer prec_type__;
     real cwise_wrong__;
-    extern /* Subroutine */ int cla_porfsx_extended__(integer *, char *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *, 
-	    logical *, real *, complex *, integer *, complex *, integer *, 
-	    real *, integer *, real *, real *, complex *, real *, complex *, 
-	    complex *, real *, integer *, real *, real *, logical *, integer *
-	    , ftnlen);
     char norm[1];
     logical ignore_cwise__;
-    extern logical lsame_(char *, char *);
     real anorm;
     logical rcequ;
-    extern doublereal cla_porcond_c__(char *, integer *, complex *, integer *,
-	     complex *, integer *, real *, logical *, integer *, complex *, 
-	    real *, ftnlen), cla_porcond_x__(char *, integer *, complex *, 
-	    integer *, complex *, integer *, complex *, integer *, complex *, 
-	    real *, ftnlen), clanhe_(char *, char *, integer *, complex *, 
-	    integer *, real *), slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), cpocon_(
-	    char *, integer *, complex *, integer *, real *, real *, complex *
-, real *, integer *);
-    extern integer ilaprec_(char *);
     integer ithresh, n_norms__;
     real rthresh;
 

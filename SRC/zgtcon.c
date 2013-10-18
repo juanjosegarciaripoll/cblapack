@@ -27,16 +27,9 @@ static integer c__1 = 1;
 
     /* Local variables */
     integer i__, kase, kase1;
-    extern logical lsame_(char *, char *);
     integer isave[3];
-    extern /* Subroutine */ int zlacn2_(integer *, doublecomplex *, 
-	    doublecomplex *, doublereal *, integer *, integer *), xerbla_(
-	    char *, integer *);
     doublereal ainvnm;
     logical onenrm;
-    extern /* Subroutine */ int zgttrs_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, doublecomplex *
-, integer *, doublecomplex *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

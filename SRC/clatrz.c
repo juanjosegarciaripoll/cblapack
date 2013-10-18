@@ -23,10 +23,6 @@
     /* Local variables */
     integer i__;
     complex alpha;
-    extern /* Subroutine */ int clarz_(char *, integer *, integer *, integer *
-, complex *, integer *, complex *, complex *, integer *, complex *
-), clacgv_(integer *, complex *, integer *), clarfp_(
-	    integer *, complex *, complex *, integer *, complex *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

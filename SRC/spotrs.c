@@ -24,11 +24,7 @@ static real c_b9 = 1.f;
     integer a_dim1, a_offset, b_dim1, b_offset, i__1;
 
     /* Local variables */
-    extern logical lsame_(char *, char *);
     logical upper;
-    extern /* Subroutine */ int strsm_(char *, char *, char *, char *, 
-	    integer *, integer *, real *, real *, integer *, real *, integer *
-), xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

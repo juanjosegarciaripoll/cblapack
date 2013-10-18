@@ -23,8 +23,6 @@
 
     /* Local variables */
     integer i__, j;
-    extern /* Subroutine */ int zdscal_(integer *, doublereal *, 
-	    doublecomplex *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -22,7 +22,6 @@
     /* Local variables */
     integer i__, j;
     doublereal rmax;
-    extern doublereal slamch_(char *);
 
 
 /*  -- LAPACK PROTOTYPE auxiliary routine (version 3.1.2) -- */

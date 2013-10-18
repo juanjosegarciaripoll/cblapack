@@ -23,10 +23,6 @@
 
     /* Local variables */
     logical tryrac;
-    extern /* Subroutine */ int sstemr_(char *, char *, integer *, real *, 
-	    real *, real *, real *, integer *, integer *, integer *, real *, 
-	    real *, integer *, integer *, integer *, logical *, real *, 
-	    integer *, integer *, integer *, integer *);
 
 
 

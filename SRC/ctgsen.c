@@ -34,31 +34,15 @@ static integer c__1 = 1;
     real dsum;
     logical swap;
     complex temp1, temp2;
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *);
     integer isave[3];
     logical wantd;
     integer lwmin;
     logical wantp;
-    extern /* Subroutine */ int clacn2_(integer *, complex *, complex *, real 
-	    *, integer *, integer *);
     logical wantd1, wantd2;
     real dscale;
-    extern doublereal slamch_(char *);
     real rdscal;
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *);
     real safmin;
-    extern /* Subroutine */ int ctgexc_(logical *, logical *, integer *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *, 
-	    complex *, integer *, integer *, integer *, integer *), xerbla_(
-	    char *, integer *), classq_(integer *, complex *, integer 
-	    *, real *, real *);
     integer liwmin;
-    extern /* Subroutine */ int ctgsyl_(char *, integer *, integer *, integer 
-	    *, complex *, integer *, complex *, integer *, complex *, integer 
-	    *, complex *, integer *, complex *, integer *, complex *, integer 
-	    *, real *, real *, complex *, integer *, integer *, integer *);
     logical lquery;
 
 

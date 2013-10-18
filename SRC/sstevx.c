@@ -35,33 +35,15 @@ static integer c__1 = 1;
     real tnrm;
     integer itmp1;
     real sigma;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     char order[1];
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), sswap_(integer *, real *, integer *, real *, integer *
-);
     logical wantz, alleig, indeig;
     integer iscale, indibl;
     logical valeig;
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
     integer indisp, indiwo, indwrk;
-    extern doublereal slanst_(char *, integer *, real *, real *);
-    extern /* Subroutine */ int sstein_(integer *, real *, real *, integer *, 
-	    real *, integer *, integer *, real *, integer *, real *, integer *
-, integer *, integer *), ssterf_(integer *, real *, real *, 
-	    integer *);
     integer nsplit;
-    extern /* Subroutine */ int sstebz_(char *, char *, integer *, real *, 
-	    real *, integer *, integer *, real *, real *, real *, integer *, 
-	    integer *, real *, integer *, integer *, real *, integer *, 
-	    integer *);
     real smlnum;
-    extern /* Subroutine */ int ssteqr_(char *, integer *, real *, real *, 
-	    real *, integer *, real *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

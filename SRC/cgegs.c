@@ -33,49 +33,18 @@ static integer c_n1 = -1;
     integer nb, nb1, nb2, nb3, ihi, ilo;
     real eps, anrm, bnrm;
     integer itau, lopt;
-    extern logical lsame_(char *, char *);
     integer ileft, iinfo, icols;
     logical ilvsl;
     integer iwork;
     logical ilvsr;
     integer irows;
-    extern /* Subroutine */ int cggbak_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, complex *, integer *, 
-	    integer *), cggbal_(char *, integer *, complex *, 
-	    integer *, complex *, integer *, integer *, integer *, real *, 
-	    real *, real *, integer *);
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *);
-    extern /* Subroutine */ int cgghrd_(char *, char *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, complex *, 
-	    integer *, complex *, integer *, integer *), 
-	    clascl_(char *, integer *, integer *, real *, real *, integer *, 
-	    integer *, complex *, integer *, integer *);
     logical ilascl, ilbscl;
-    extern /* Subroutine */ int cgeqrf_(integer *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), claset_(char *, 
-	    integer *, integer *, complex *, complex *, complex *, integer *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     real bignum;
-    extern /* Subroutine */ int chgeqz_(char *, char *, char *, integer *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, integer *, real *, integer *);
     integer ijobvl, iright, ijobvr;
     real anrmto;
     integer lwkmin;
     real bnrmto;
-    extern /* Subroutine */ int cungqr_(integer *, integer *, integer *, 
-	    complex *, integer *, complex *, complex *, integer *, integer *),
-	     cunmqr_(char *, char *, integer *, integer *, integer *, complex 
-	    *, integer *, complex *, complex *, integer *, complex *, integer 
-	    *, integer *);
     real smlnum;
     integer irwork, lwkopt;
     logical lquery;

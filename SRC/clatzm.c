@@ -27,16 +27,6 @@ static integer c__1 = 1;
     complex q__1;
 
     /* Local variables */
-    extern /* Subroutine */ int cgerc_(integer *, integer *, complex *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *),
-	     cgemv_(char *, integer *, integer *, complex *, complex *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int cgeru_(integer *, integer *, complex *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *),
-	     ccopy_(integer *, complex *, integer *, complex *, integer *), 
-	    caxpy_(integer *, complex *, complex *, integer *, complex *, 
-	    integer *), clacgv_(integer *, complex *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

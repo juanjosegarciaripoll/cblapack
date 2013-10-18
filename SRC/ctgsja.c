@@ -42,25 +42,11 @@ static real c_b42 = 1.f;
     complex snq;
     real rwk;
     complex snu, snv;
-    extern /* Subroutine */ int crot_(integer *, complex *, integer *, 
-	    complex *, integer *, real *, complex *);
     real gamma;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *);
     logical initq, initu, initv, wantq, upper;
     real error, ssmin;
     logical wantu, wantv;
-    extern /* Subroutine */ int clags2_(logical *, real *, complex *, real *, 
-	    real *, complex *, real *, real *, complex *, real *, complex *, 
-	    real *, complex *), clapll_(integer *, complex *, integer *, 
-	    complex *, integer *, real *), csscal_(integer *, real *, complex 
-	    *, integer *);
     integer kcycle;
-    extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *), xerbla_(char *, 
-	    integer *), slartg_(real *, real *, real *, real *, real *
-);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -26,10 +26,6 @@ static integer c_n1 = -1;
 
     /* Local variables */
     integer j, jb, nb;
-    extern /* Subroutine */ int sptts2_(integer *, integer *, real *, real *, 
-	    real *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

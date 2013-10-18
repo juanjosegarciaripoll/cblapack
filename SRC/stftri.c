@@ -27,14 +27,8 @@ static real c_b18 = 1.f;
     /* Local variables */
     integer k, n1, n2;
     logical normaltransr;
-    extern logical lsame_(char *, char *);
     logical lower;
-    extern /* Subroutine */ int strmm_(char *, char *, char *, char *, 
-	    integer *, integer *, real *, real *, integer *, real *, integer *
-), xerbla_(char *, integer *);
     logical nisodd;
-    extern /* Subroutine */ int strtri_(char *, char *, integer *, real *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2)                                    -- */

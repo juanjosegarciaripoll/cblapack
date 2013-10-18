@@ -23,7 +23,6 @@ doublereal cla_porpvgrw__(char *uplo, integer *ncols, complex *a, integer *
     /* Local variables */
     integer i__, j;
     real amax, umax;
-    extern logical lsame_(char *, char *);
     logical upper;
     real rpvgrw;
 

@@ -22,10 +22,6 @@
     /* Local variables */
     integer i__, k;
     real aii;
-    extern /* Subroutine */ int slarf_(char *, integer *, integer *, real *, 
-	    integer *, real *, real *, integer *, real *), xerbla_(
-	    char *, integer *), slarfp_(integer *, real *, real *, 
-	    integer *, real *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

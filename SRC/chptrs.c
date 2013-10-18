@@ -31,17 +31,8 @@ static integer c__1 = 1;
     complex ak, bk;
     integer kc, kp;
     complex akm1, bkm1, akm1k;
-    extern logical lsame_(char *, char *);
     complex denom;
-    extern /* Subroutine */ int cgemv_(char *, integer *, integer *, complex *
-, complex *, integer *, complex *, integer *, complex *, complex *
-, integer *), cgeru_(integer *, integer *, complex *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *),
-	     cswap_(integer *, complex *, integer *, complex *, integer *);
     logical upper;
-    extern /* Subroutine */ int clacgv_(integer *, complex *, integer *), 
-	    csscal_(integer *, real *, complex *, integer *), xerbla_(char *, 
-	    integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

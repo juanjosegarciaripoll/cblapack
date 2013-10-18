@@ -32,15 +32,7 @@ static integer c__1 = 1;
     integer i__;
     doublecomplex vt[1]	/* was [1][1] */;
     integer nru;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer icompz;
-    extern /* Subroutine */ int zlaset_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *), dpttrf_(integer *, doublereal *, doublereal *, integer *)
-	    , zbdsqr_(char *, integer *, integer *, integer *, integer *, 
-	    doublereal *, doublereal *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

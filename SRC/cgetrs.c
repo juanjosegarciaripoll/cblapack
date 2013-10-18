@@ -27,12 +27,6 @@ static integer c_n1 = -1;
     integer a_dim1, a_offset, b_dim1, b_offset, i__1;
 
     /* Local variables */
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int ctrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *), xerbla_(char *, 
-	    integer *), claswp_(integer *, complex *, integer *, 
-	    integer *, integer *, integer *, integer *);
     logical notran;
 
 

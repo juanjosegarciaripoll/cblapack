@@ -49,14 +49,7 @@ static integer c__2 = 2;
     complex sum;
     real tst;
     complex temp;
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *), ccopy_(integer *, complex *, integer *, complex *, 
-	    integer *);
     real rtemp;
-    extern /* Subroutine */ int slabad_(real *, real *), clarfg_(integer *, 
-	    complex *, complex *, integer *, complex *);
-    extern /* Complex */ void cladiv_(complex *, complex *, complex *);
-    extern doublereal slamch_(char *);
     real safmin, safmax, smlnum;
 
 

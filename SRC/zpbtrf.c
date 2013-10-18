@@ -32,20 +32,6 @@ static integer c__33 = 33;
     /* Local variables */
     integer i__, j, i2, i3, ib, nb, ii, jj;
     doublecomplex work[1056]	/* was [33][32] */;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), zherk_(char *, char *, integer *, 
-	    integer *, doublereal *, doublecomplex *, integer *, doublereal *, 
-	     doublecomplex *, integer *), ztrsm_(char *, char 
-	    *, char *, char *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), zpbtf2_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *), zpotf2_(char *, 
-	    integer *, doublecomplex *, integer *, integer *), 
-	    xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

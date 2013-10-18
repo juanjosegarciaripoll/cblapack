@@ -20,11 +20,6 @@
     integer a_dim1, a_offset, i__1;
 
     /* Local variables */
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), zlauum_(
-	    char *, integer *, doublecomplex *, integer *, integer *),
-	     ztrtri_(char *, char *, integer *, doublecomplex *, integer *, 
-	    integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

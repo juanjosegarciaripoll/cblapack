@@ -21,9 +21,6 @@
 
     /* Local variables */
     integer i__;
-    extern /* Subroutine */ int slarz_(char *, integer *, integer *, integer *
-, real *, integer *, real *, real *, integer *, real *), 
-	    slarfp_(integer *, real *, real *, integer *, real *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

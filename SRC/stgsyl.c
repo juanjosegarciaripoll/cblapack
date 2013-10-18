@@ -38,26 +38,11 @@ static real c_b52 = 1.f;
     integer i__, j, k, p, q, ie, je, mb, nb, is, js, pq;
     real dsum;
     integer ppqq;
-    extern logical lsame_(char *, char *);
     integer ifunc;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     integer linfo;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     integer lwmin;
     real scale2, dscale;
-    extern /* Subroutine */ int stgsy2_(char *, integer *, integer *, integer 
-	    *, real *, integer *, real *, integer *, real *, integer *, real *
-, integer *, real *, integer *, real *, integer *, real *, real *, 
-	     real *, integer *, integer *, integer *);
     real scaloc;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *), slaset_(char *, integer *, 
-	    integer *, real *, real *, real *, integer *);
     integer iround;
     logical notran;
     integer isolve;

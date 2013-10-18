@@ -29,31 +29,12 @@
     /* Local variables */
     integer j;
     real amax, smin, smax;
-    extern doublereal cla_herpvgrw__(char *, integer *, integer *, complex *, 
-	    integer *, complex *, integer *, integer *, real *, ftnlen);
-    extern logical lsame_(char *, char *);
     real scond;
     logical equil, rcequ;
-    extern /* Subroutine */ int claqhe_(char *, integer *, complex *, integer 
-	    *, real *, real *, real *, char *);
-    extern doublereal slamch_(char *);
     logical nofact;
-    extern /* Subroutine */ int chetrf_(char *, integer *, complex *, integer 
-	    *, integer *, complex *, integer *, integer *), clacpy_(
-	    char *, integer *, integer *, complex *, integer *, complex *, 
-	    integer *), xerbla_(char *, integer *);
     real bignum;
     integer infequ;
-    extern /* Subroutine */ int chetrs_(char *, integer *, integer *, complex 
-	    *, integer *, integer *, complex *, integer *, integer *);
     real smlnum;
-    extern /* Subroutine */ int clascl2_(integer *, integer *, real *, 
-	    complex *, integer *), cheequb_(char *, integer *, complex *, 
-	    integer *, real *, real *, real *, complex *, integer *), 
-	    cherfsx_(char *, char *, integer *, integer *, complex *, integer 
-	    *, complex *, integer *, integer *, real *, complex *, integer *, 
-	    complex *, integer *, real *, real *, integer *, real *, real *, 
-	    integer *, real *, complex *, real *, integer *);
 
 
 /*     -- LAPACK driver routine (version 3.2.1)                          -- */

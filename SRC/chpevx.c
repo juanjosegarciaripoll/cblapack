@@ -36,42 +36,17 @@ static integer c__1 = 1;
     logical test;
     integer itmp1, indee;
     real sigma;
-    extern logical lsame_(char *, char *);
     integer iinfo;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     char order[1];
-    extern /* Subroutine */ int cswap_(integer *, complex *, integer *, 
-	    complex *, integer *), scopy_(integer *, real *, integer *, real *
-, integer *);
     logical wantz, alleig, indeig;
     integer iscale, indibl;
-    extern doublereal clanhp_(char *, char *, integer *, complex *, real *);
     logical valeig;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real abstll, bignum;
     integer indiwk, indisp, indtau;
-    extern /* Subroutine */ int chptrd_(char *, integer *, complex *, real *, 
-	    real *, complex *, integer *), cstein_(integer *, real *, 
-	    real *, integer *, real *, integer *, integer *, complex *, 
-	    integer *, real *, integer *, integer *, integer *);
     integer indrwk, indwrk;
-    extern /* Subroutine */ int csteqr_(char *, integer *, real *, real *, 
-	    complex *, integer *, real *, integer *), cupgtr_(char *, 
-	    integer *, complex *, complex *, complex *, integer *, complex *, 
-	    integer *), ssterf_(integer *, real *, real *, integer *);
     integer nsplit;
-    extern /* Subroutine */ int cupmtr_(char *, char *, char *, integer *, 
-	    integer *, complex *, complex *, complex *, integer *, complex *, 
-	    integer *);
     real smlnum;
-    extern /* Subroutine */ int sstebz_(char *, char *, integer *, real *, 
-	    real *, integer *, integer *, real *, real *, real *, integer *, 
-	    integer *, real *, integer *, integer *, real *, integer *, 
-	    integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

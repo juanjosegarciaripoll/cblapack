@@ -27,10 +27,7 @@ doublereal clangb_(char *norm, integer *n, integer *kl, integer *ku, complex *
     /* Local variables */
     integer i__, j, k, l;
     real sum, scale;
-    extern logical lsame_(char *, char *);
     real value;
-    extern /* Subroutine */ int classq_(integer *, complex *, integer *, real 
-	    *, real *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

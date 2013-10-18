@@ -39,41 +39,17 @@ static doublereal c_b8 = 1.;
     /* Local variables */
     doublereal dxratmax, dzratmax;
     integer i__, j;
-    extern /* Subroutine */ int dla_geamv__(integer *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *);
     logical incr_prec__;
     doublereal prev_dz_z__, yk, final_dx_x__;
-    extern /* Subroutine */ int dla_wwaddw__(integer *, doublereal *, 
-	    doublereal *, doublereal *);
     doublereal final_dz_z__, prevnormdx;
     integer cnt;
     doublereal dyk, eps, incr_thresh__, dx_x__, dz_z__;
-    extern /* Subroutine */ int dla_lin_berr__(integer *, integer *, integer *
-	    , doublereal *, doublereal *, doublereal *);
     doublereal ymin;
-    extern /* Subroutine */ int blas_dgemv_x__(integer *, integer *, integer *
-	    , doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *);
     integer y_prec_state__;
-    extern /* Subroutine */ int blas_dgemv2_x__(integer *, integer *, integer 
-	    *, doublereal *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    integer *), dgemv_(char *, integer *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *), dcopy_(integer *, doublereal *, 
-	    integer *, doublereal *, integer *);
     doublereal dxrat, dzrat;
-    extern /* Subroutine */ int daxpy_(integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *);
     char trans[1];
     doublereal normx, normy;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dgetrs_(char *, integer *, integer *, 
-	    doublereal *, integer *, integer *, doublereal *, integer *, 
-	    integer *);
     doublereal normdx;
-    extern /* Character */ void chla_transtype__(char *, ftnlen, integer *);
     doublereal hugeval;
     integer x_state__, z_state__;
 

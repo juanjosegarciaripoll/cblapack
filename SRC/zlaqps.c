@@ -35,20 +35,7 @@ static integer c__1 = 1;
     integer pvt;
     doublereal temp, temp2, tol3z;
     integer itemp;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), 
-	    zswap_(integer *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *);
-    extern doublereal dznrm2_(integer *, doublecomplex *, integer *), dlamch_(
-	    char *);
-    extern integer idamax_(integer *, doublereal *, integer *);
     integer lsticc;
-    extern /* Subroutine */ int zlarfp_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *);
     integer lastrk;
 
 

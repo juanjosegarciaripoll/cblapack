@@ -30,18 +30,6 @@ static integer c__33 = 33;
     /* Local variables */
     integer i__, j, i2, i3, ib, nb, ii, jj;
     real work[1056]	/* was [33][32] */;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *), strsm_(char *, char *, char *, 
-	     char *, integer *, integer *, real *, real *, integer *, real *, 
-	    integer *), ssyrk_(char *, char *, 
-	     integer *, integer *, real *, real *, integer *, real *, real *, 
-	    integer *), spbtf2_(char *, integer *, integer *, 
-	    real *, integer *, integer *), spotf2_(char *, integer *, 
-	    real *, integer *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

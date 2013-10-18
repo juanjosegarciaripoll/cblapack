@@ -29,14 +29,6 @@
     real eps, tol;
     integer n0in, ipn4;
     real tol2, temp;
-    extern /* Subroutine */ int slasq4_(integer *, integer *, real *, integer 
-	    *, integer *, real *, real *, real *, real *, real *, real *, 
-	    real *, integer *, real *), slasq5_(integer *, integer *, real *, 
-	    integer *, real *, real *, real *, real *, real *, real *, real *, 
-	     logical *), slasq6_(integer *, integer *, real *, integer *, 
-	    real *, real *, real *, real *, real *, real *);
-    extern doublereal slamch_(char *);
-    extern logical sisnan_(real *);
 
 
 /*  -- LAPACK routine (version 3.2)                                    -- */

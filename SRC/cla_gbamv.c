@@ -22,15 +22,12 @@
     real r__1, r__2;
 
     /* Local variables */
-    extern integer ilatrans_(char *);
     integer i__, j;
     logical symb_zero__;
     integer kd, iy, jx, kx, ky, info;
     real temp;
     integer lenx, leny;
     real safe1;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
 
 
 /*     -- LAPACK routine (version 3.2)                                 -- */

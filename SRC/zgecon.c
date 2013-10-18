@@ -31,22 +31,11 @@ static integer c__1 = 1;
     doublereal su;
     integer kase, kase1;
     doublereal scale;
-    extern logical lsame_(char *, char *);
     integer isave[3];
-    extern /* Subroutine */ int zlacn2_(integer *, doublecomplex *, 
-	    doublecomplex *, doublereal *, integer *, integer *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal ainvnm;
-    extern integer izamax_(integer *, doublecomplex *, integer *);
     logical onenrm;
-    extern /* Subroutine */ int zdrscl_(integer *, doublereal *, 
-	    doublecomplex *, integer *);
     char normin[1];
     doublereal smlnum;
-    extern /* Subroutine */ int zlatrs_(char *, char *, char *, char *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublereal *, doublereal *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

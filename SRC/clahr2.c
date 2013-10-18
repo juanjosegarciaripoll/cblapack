@@ -31,21 +31,6 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__;
     complex ei;
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *), cgemm_(char *, char *, integer *, integer *, integer *
-, complex *, complex *, integer *, complex *, integer *, complex *
-, complex *, integer *), cgemv_(char *, integer *, 
-	     integer *, complex *, complex *, integer *, complex *, integer *, 
-	     complex *, complex *, integer *), ccopy_(integer *, 
-	    complex *, integer *, complex *, integer *), ctrmm_(char *, char *
-, char *, char *, integer *, integer *, complex *, complex *, 
-	    integer *, complex *, integer *), 
-	    caxpy_(integer *, complex *, complex *, integer *, complex *, 
-	    integer *), ctrmv_(char *, char *, char *, integer *, complex *, 
-	    integer *, complex *, integer *), clarfg_(
-	    integer *, complex *, complex *, integer *, complex *), clacgv_(
-	    integer *, complex *, integer *), clacpy_(char *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

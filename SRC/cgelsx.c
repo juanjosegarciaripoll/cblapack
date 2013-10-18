@@ -35,29 +35,8 @@ static integer c__1 = 1;
     integer mn;
     real anrm, bnrm, smin, smax;
     integer iascl, ibscl, ismin, ismax;
-    extern /* Subroutine */ int ctrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *), claic1_(integer *, 
-	    integer *, complex *, real *, complex *, complex *, real *, 
-	    complex *, complex *), cunm2r_(char *, char *, integer *, integer 
-	    *, integer *, complex *, integer *, complex *, complex *, integer 
-	    *, complex *, integer *), slabad_(real *, real *);
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *);
-    extern /* Subroutine */ int clascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, complex *, integer *, integer *), cgeqpf_(integer *, integer *, complex *, integer *, 
-	    integer *, complex *, complex *, real *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *), xerbla_(char *, 
-	    integer *);
     real bignum;
-    extern /* Subroutine */ int clatzm_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, complex *, complex *, integer *, complex 
-	    *);
     real sminpr;
-    extern /* Subroutine */ int ctzrqf_(integer *, integer *, complex *, 
-	    integer *, complex *, integer *);
     real smaxpr, smlnum;
 
 

@@ -22,7 +22,6 @@ logical lsamen_(integer *n, char *ca, char *cb)
 
     /* Local variables */
     integer i__;
-    extern logical lsame_(char *, char *);
 
     ftnlen ca_len, cb_len;
 

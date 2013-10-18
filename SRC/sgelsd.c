@@ -35,41 +35,13 @@ static real c_b81 = 0.f;
     integer itau, nlvl, iascl, ibscl;
     real sfmin;
     integer minmn, maxmn, itaup, itauq, mnthr, nwork;
-    extern /* Subroutine */ int slabad_(real *, real *), sgebrd_(integer *, 
-	    integer *, real *, integer *, real *, real *, real *, real *, 
-	    real *, integer *, integer *);
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     real bignum;
-    extern /* Subroutine */ int sgelqf_(integer *, integer *, real *, integer 
-	    *, real *, real *, integer *, integer *), slalsd_(char *, integer 
-	    *, integer *, integer *, real *, real *, real *, integer *, real *
-, integer *, real *, integer *, integer *), slascl_(char *
-, integer *, integer *, real *, real *, integer *, integer *, 
-	    real *, integer *, integer *);
     integer wlalsd;
-    extern /* Subroutine */ int sgeqrf_(integer *, integer *, real *, integer 
-	    *, real *, real *, integer *, integer *), slacpy_(char *, integer 
-	    *, integer *, real *, integer *, real *, integer *), 
-	    slaset_(char *, integer *, integer *, real *, real *, real *, 
-	    integer *);
     integer ldwork;
-    extern /* Subroutine */ int sormbr_(char *, char *, char *, integer *, 
-	    integer *, integer *, real *, integer *, real *, real *, integer *
-, real *, integer *, integer *);
     integer liwork, minwrk, maxwrk;
     real smlnum;
-    extern /* Subroutine */ int sormlq_(char *, char *, integer *, integer *, 
-	    integer *, real *, integer *, real *, real *, integer *, real *, 
-	    integer *, integer *);
     logical lquery;
     integer smlsiz;
-    extern /* Subroutine */ int sormqr_(char *, char *, integer *, integer *, 
-	    integer *, real *, integer *, real *, real *, integer *, real *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

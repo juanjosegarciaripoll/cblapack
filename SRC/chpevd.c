@@ -32,31 +32,15 @@ static integer c__1 = 1;
     real anrm;
     integer imax;
     real rmin, rmax, sigma;
-    extern logical lsame_(char *, char *);
     integer iinfo;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     integer lwmin, llrwk, llwrk;
     logical wantz;
     integer iscale;
-    extern doublereal clanhp_(char *, char *, integer *, complex *, real *);
-    extern /* Subroutine */ int cstedc_(char *, integer *, real *, real *, 
-	    complex *, integer *, complex *, integer *, real *, integer *, 
-	    integer *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
     integer indtau;
-    extern /* Subroutine */ int chptrd_(char *, integer *, complex *, real *, 
-	    real *, complex *, integer *);
     integer indrwk, indwrk, liwmin;
-    extern /* Subroutine */ int ssterf_(integer *, real *, real *, integer *);
     integer lrwmin;
-    extern /* Subroutine */ int cupmtr_(char *, char *, char *, integer *, 
-	    integer *, complex *, complex *, complex *, integer *, complex *, 
-	    integer *);
     real smlnum;
     logical lquery;
 

@@ -34,15 +34,8 @@ static integer c__1 = 1;
     doublecomplex s;
     logical ilq, ilz;
     integer jcol, jrow;
-    extern /* Subroutine */ int zrot_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublecomplex *);
-    extern logical lsame_(char *, char *);
     doublecomplex ctemp;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer icompq, icompz;
-    extern /* Subroutine */ int zlaset_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *), zlartg_(doublecomplex *, doublecomplex *, doublereal *, 
-	    doublecomplex *, doublecomplex *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

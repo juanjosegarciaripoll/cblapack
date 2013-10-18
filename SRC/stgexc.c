@@ -29,10 +29,6 @@ static integer c__2 = 2;
 
     /* Local variables */
     integer nbf, nbl, here, lwmin;
-    extern /* Subroutine */ int stgex2_(logical *, logical *, integer *, real 
-	    *, integer *, real *, integer *, real *, integer *, real *, 
-	    integer *, integer *, integer *, integer *, real *, integer *, 
-	    integer *), xerbla_(char *, integer *);
     integer nbnext;
     logical lquery;
 

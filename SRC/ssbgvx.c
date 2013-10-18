@@ -36,38 +36,15 @@ static real c_b27 = 0.f;
     char vect[1];
     logical test;
     integer itmp1, indee;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     char order[1];
-    extern /* Subroutine */ int sgemv_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *);
     logical upper;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), sswap_(integer *, real *, integer *, real *, integer *
-);
     logical wantz, alleig, indeig;
     integer indibl;
     logical valeig;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer indisp, indiwo;
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *);
     integer indwrk;
-    extern /* Subroutine */ int spbstf_(char *, integer *, integer *, real *, 
-	    integer *, integer *), ssbtrd_(char *, char *, integer *, 
-	    integer *, real *, integer *, real *, real *, real *, integer *, 
-	    real *, integer *), ssbgst_(char *, char *, 
-	    integer *, integer *, integer *, real *, integer *, real *, 
-	    integer *, real *, integer *, real *, integer *), 
-	    sstein_(integer *, real *, real *, integer *, real *, integer *, 
-	    integer *, real *, integer *, real *, integer *, integer *, 
-	    integer *), ssterf_(integer *, real *, real *, integer *);
     integer nsplit;
-    extern /* Subroutine */ int sstebz_(char *, char *, integer *, real *, 
-	    real *, integer *, integer *, real *, real *, real *, integer *, 
-	    integer *, real *, integer *, integer *, real *, integer *, 
-	    integer *), ssteqr_(char *, integer *, real *, 
-	    real *, real *, integer *, real *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

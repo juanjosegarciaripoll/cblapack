@@ -33,39 +33,11 @@ static integer c__1 = 1;
     integer i__, j, j1, j2;
     doublereal amax;
     char norm[1];
-    extern logical lsame_(char *, char *);
     doublereal rcmin, rcmax, anorm;
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
     logical equil;
-    extern doublereal dlangb_(char *, integer *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *), dlamch_(char *);
-    extern /* Subroutine */ int dlaqgb_(integer *, integer *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, char *), 
-	    dgbcon_(char *, integer *, integer *, integer *, doublereal *, 
-	    integer *, integer *, doublereal *, doublereal *, doublereal *, 
-	    integer *, integer *);
     doublereal colcnd;
-    extern doublereal dlantb_(char *, char *, char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *);
-    extern /* Subroutine */ int dgbequ_(integer *, integer *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, integer *), dgbrfs_(
-	    char *, integer *, integer *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *, integer *), dgbtrf_(integer *, 
-	    integer *, integer *, integer *, doublereal *, integer *, integer 
-	    *, integer *);
     logical nofact;
-    extern /* Subroutine */ int dlacpy_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *), 
-	    xerbla_(char *, integer *);
     doublereal bignum;
-    extern /* Subroutine */ int dgbtrs_(char *, integer *, integer *, integer 
-	    *, integer *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, integer *);
     integer infequ;
     logical colequ;
     doublereal rowcnd;

@@ -28,21 +28,10 @@ static integer c__1 = 1;
 
     /* Local variables */
     integer j, neig;
-    extern logical lsame_(char *, char *);
     integer lwmin;
     char trans[1];
-    extern /* Subroutine */ int ctpmv_(char *, char *, char *, integer *, 
-	    complex *, complex *, integer *);
     logical upper;
-    extern /* Subroutine */ int ctpsv_(char *, char *, char *, integer *, 
-	    complex *, complex *, integer *);
     logical wantz;
-    extern /* Subroutine */ int chpevd_(char *, char *, integer *, complex *, 
-	    real *, complex *, integer *, complex *, integer *, real *, 
-	    integer *, integer *, integer *, integer *), 
-	    xerbla_(char *, integer *), chpgst_(integer *, char *, 
-	    integer *, complex *, complex *, integer *), cpptrf_(char 
-	    *, integer *, complex *, integer *);
     integer liwmin, lrwmin;
     logical lquery;
 

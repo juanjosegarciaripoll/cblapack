@@ -30,23 +30,11 @@ static integer c__1 = 1;
     integer i__, j, maxlocval;
     real ajj;
     integer pvt;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int cgemv_(char *, integer *, integer *, complex *
-, complex *, integer *, complex *, integer *, complex *, complex *
-, integer *);
     complex ctemp;
-    extern /* Subroutine */ int cswap_(integer *, complex *, integer *, 
-	    complex *, integer *);
     integer itemp;
     real stemp;
     logical upper;
     real sstop;
-    extern /* Subroutine */ int clacgv_(integer *, complex *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *), xerbla_(char *, integer *);
-    extern logical sisnan_(real *);
-    extern integer smaxloc_(real *, integer *);
 
 
 /*  -- LAPACK PROTOTYPE routine (version 3.2) -- */

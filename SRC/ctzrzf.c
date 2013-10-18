@@ -28,14 +28,6 @@ static integer c__2 = 2;
 
     /* Local variables */
     integer i__, m1, ib, nb, ki, kk, mu, nx, iws, nbmin;
-    extern /* Subroutine */ int clarzb_(char *, char *, char *, char *, 
-	    integer *, integer *, integer *, integer *, complex *, integer *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int clarzt_(char *, char *, integer *, integer *, 
-	    complex *, integer *, complex *, complex *, integer *), clatrz_(integer *, integer *, integer *, complex *, 
-	    integer *, complex *, complex *);
     integer ldwork, lwkopt;
     logical lquery;
 

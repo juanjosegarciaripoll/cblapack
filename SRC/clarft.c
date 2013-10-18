@@ -28,13 +28,7 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__, j, prevlastv;
     complex vii;
-    extern /* Subroutine */ int cgemv_(char *, integer *, integer *, complex *
-, complex *, integer *, complex *, integer *, complex *, complex *
-, integer *);
-    extern logical lsame_(char *, char *);
     integer lastv;
-    extern /* Subroutine */ int ctrmv_(char *, char *, char *, integer *, 
-	    complex *, integer *, complex *, integer *), clacgv_(integer *, complex *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

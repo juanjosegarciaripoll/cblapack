@@ -34,37 +34,17 @@ static real c_b17 = 1.f;
     real anrm, rmin, rmax;
     integer lopt;
     real sigma;
-    extern logical lsame_(char *, char *);
     integer iinfo;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     integer lwmin, liopt;
     logical lower, wantz;
     integer indwk2, llwrk2, iscale;
-    extern doublereal slamch_(char *);
     real safmin;
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *);
     integer indtau;
-    extern /* Subroutine */ int sstedc_(char *, integer *, real *, real *, 
-	    real *, integer *, real *, integer *, integer *, integer *, 
-	    integer *), slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *);
     integer indwrk, liwmin;
-    extern /* Subroutine */ int ssterf_(integer *, real *, real *, integer *);
-    extern doublereal slansy_(char *, char *, integer *, real *, integer *, 
-	    real *);
     integer llwork;
     real smlnum;
     logical lquery;
-    extern /* Subroutine */ int sormtr_(char *, char *, char *, integer *, 
-	    integer *, real *, integer *, real *, real *, integer *, real *, 
-	    integer *, integer *), ssytrd_(char *, 
-	    integer *, real *, integer *, real *, real *, real *, real *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

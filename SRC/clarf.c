@@ -30,14 +30,7 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__;
     logical applyleft;
-    extern /* Subroutine */ int cgerc_(integer *, integer *, complex *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *),
-	     cgemv_(char *, integer *, integer *, complex *, complex *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *);
-    extern logical lsame_(char *, char *);
     integer lastc, lastv;
-    extern integer ilaclc_(integer *, integer *, complex *, integer *), 
-	    ilaclr_(integer *, integer *, complex *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

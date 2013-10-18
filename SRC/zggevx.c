@@ -44,71 +44,24 @@ static integer c__0 = 0;
     doublereal temp;
     logical ilvl, ilvr;
     integer iwrk, iwrk1;
-    extern logical lsame_(char *, char *);
     integer icols;
     logical noscl;
     integer irows;
-    extern /* Subroutine */ int dlabad_(doublereal *, doublereal *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, integer *), zggbak_(char *, char *, integer *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublecomplex *, integer *, integer *), zggbal_(
-	    char *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *);
     logical ilascl, ilbscl;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     logical ldumma[1];
     char chtemp[1];
     doublereal bignum;
-    extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
     integer ijobvl;
-    extern /* Subroutine */ int zgghrd_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *, integer *
-), zlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublecomplex *, 
-	     integer *, integer *);
     integer ijobvr;
     logical wantsb;
-    extern /* Subroutine */ int zgeqrf_(integer *, integer *, doublecomplex *, 
-	     integer *, doublecomplex *, doublecomplex *, integer *, integer *
-);
     doublereal anrmto;
     logical wantse;
     doublereal bnrmto;
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), 
-	    zlaset_(char *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, integer *), ztgevc_(
-	    char *, char *, logical *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, integer *, integer *, doublecomplex *, 
-	     doublereal *, integer *), ztgsna_(char *, char *, 
-	     logical *, integer *, doublecomplex *, integer *, doublecomplex *
-, integer *, doublecomplex *, integer *, doublecomplex *, integer 
-	    *, doublereal *, doublereal *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *, integer *);
     integer minwrk;
-    extern /* Subroutine */ int zhgeqz_(char *, char *, char *, integer *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     integer *, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	     doublereal *, integer *);
     integer maxwrk;
     logical wantsn;
     doublereal smlnum;
     logical lquery, wantsv;
-    extern /* Subroutine */ int zungqr_(integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, integer *), zunmqr_(char *, char *, integer *, integer 
-	    *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

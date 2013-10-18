@@ -33,17 +33,8 @@ static integer c__1 = 1;
     integer kc, kp, kx, kpc, npp;
     doublereal akp1;
     doublecomplex temp, akkp1;
-    extern logical lsame_(char *, char *);
-    extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     integer kstep;
     logical upper;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zhpmv_(char *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *), zswap_(
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *)
-	    , xerbla_(char *, integer *);
     integer kcnext;
 
 

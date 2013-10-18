@@ -30,9 +30,6 @@
     complex ua11, ua12, ua21, ua22, vb11, vb12, vb21, vb22;
     real csl, csr, snl, snr, aua11, aua12, aua21, aua22, avb11, avb12, avb21, 
 	    avb22, ua11r, ua22r, vb11r, vb22r;
-    extern /* Subroutine */ int slasv2_(real *, real *, real *, real *, real *
-, real *, real *, real *, real *), clartg_(complex *, complex *, 
-	    real *, complex *, complex *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

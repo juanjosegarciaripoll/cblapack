@@ -32,18 +32,10 @@ static integer c__1 = 1;
     integer kx, knc, kpc, npp;
     real wkm1, wkp1;
     integer imax, jmax;
-    extern /* Subroutine */ int sspr_(char *, integer *, real *, real *, 
-	    integer *, real *);
     real alpha;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     integer kstep;
     logical upper;
-    extern /* Subroutine */ int sswap_(integer *, real *, integer *, real *, 
-	    integer *);
     real absakk;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer isamax_(integer *, real *, integer *);
     real colmax, rowmax;
 
 

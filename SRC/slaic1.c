@@ -26,9 +26,7 @@ static real c_b5 = 1.f;
 
     /* Local variables */
     real b, t, s1, s2, eps, tmp, sine;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
     real test, zeta1, zeta2, alpha, norma, absgam, absalp;
-    extern doublereal slamch_(char *);
     real cosine, absest;
 
 

@@ -29,13 +29,7 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__, j, prevlastv;
     doublecomplex vii;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *);
     integer lastv;
-    extern /* Subroutine */ int ztrmv_(char *, char *, char *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), zlacgv_(integer *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

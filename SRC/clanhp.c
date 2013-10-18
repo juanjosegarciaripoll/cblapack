@@ -27,10 +27,7 @@ doublereal clanhp_(char *norm, char *uplo, integer *n, complex *ap, real *
     /* Local variables */
     integer i__, j, k;
     real sum, absa, scale;
-    extern logical lsame_(char *, char *);
     real value;
-    extern /* Subroutine */ int classq_(integer *, complex *, integer *, real 
-	    *, real *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

@@ -32,21 +32,6 @@ static integer c__1 = 1;
     integer pvt;
     doublereal temp, temp2, tol3z;
     integer itemp;
-    extern /* Subroutine */ int zlarf_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *), zswap_(integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), zgeqr2_(
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     doublecomplex *, integer *);
-    extern doublereal dznrm2_(integer *, doublecomplex *, integer *), dlamch_(
-	    char *);
-    extern /* Subroutine */ int zunm2r_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern integer idamax_(integer *, doublereal *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), zlarfp_(
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *);
 
 
 /*  -- LAPACK deprecated driver routine (version 3.2) -- */

@@ -39,35 +39,15 @@ static doublereal c_b41 = 1.;
     integer lsv;
     doublereal tst, eps2;
     integer lend, jtot;
-    extern /* Subroutine */ int dlae2_(doublereal *, doublereal *, doublereal 
-	    *, doublereal *, doublereal *);
-    extern logical lsame_(char *, char *);
     doublereal anorm;
-    extern /* Subroutine */ int zlasr_(char *, char *, char *, integer *, 
-	    integer *, doublereal *, doublereal *, doublecomplex *, integer *), zswap_(integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *), dlaev2_(doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *);
     integer lendm1, lendp1;
-    extern doublereal dlapy2_(doublereal *, doublereal *), dlamch_(char *);
     integer iscale;
-    extern /* Subroutine */ int dlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, integer *);
     doublereal safmin;
-    extern /* Subroutine */ int dlartg_(doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *);
     doublereal safmax;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern doublereal dlanst_(char *, integer *, doublereal *, doublereal *);
-    extern /* Subroutine */ int dlasrt_(char *, integer *, doublereal *, 
-	    integer *);
     integer lendsv;
     doublereal ssfmin;
     integer nmaxit, icompz;
     doublereal ssfmax;
-    extern /* Subroutine */ int zlaset_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

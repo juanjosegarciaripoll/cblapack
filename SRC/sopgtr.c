@@ -21,13 +21,8 @@
 
     /* Local variables */
     integer i__, j, ij;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     logical upper;
-    extern /* Subroutine */ int sorg2l_(integer *, integer *, integer *, real 
-	    *, integer *, real *, real *, integer *), sorg2r_(integer *, 
-	    integer *, integer *, real *, integer *, real *, real *, integer *
-), xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

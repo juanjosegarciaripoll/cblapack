@@ -33,15 +33,6 @@ static integer c__2 = 2;
     integer idxq, nlvl;
     doublereal alpha;
     integer inode, ndiml, idxqc, ndimr, itemp, sqrei;
-    extern /* Subroutine */ int dlasd1_(integer *, integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, integer *, 
-	     doublereal *, integer *, integer *, integer *, doublereal *, 
-	    integer *), dlasdq_(char *, integer *, integer *, integer *, 
-	    integer *, integer *, doublereal *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *), dlasdt_(integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *), xerbla_(
-	    char *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

@@ -48,20 +48,9 @@ static integer c__11 = 11;
     integer nfail;
     doublereal desig, trace, sigma;
     integer iinfo, ttype;
-    extern /* Subroutine */ int dlasq3_(integer *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, doublereal *, doublereal *, 
-	     integer *, integer *, integer *, logical *, integer *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *);
-    extern doublereal dlamch_(char *);
     doublereal deemin;
     integer iwhila, iwhilb;
     doublereal oldemn, safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int dlasrt_(char *, integer *, doublereal *, 
-	    integer *);
 
 
 /*  -- LAPACK routine (version 3.2)                                    -- */

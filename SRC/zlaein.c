@@ -35,18 +35,8 @@ static integer c__1 = 1;
     doublereal scale;
     char trans[1];
     doublereal rtemp, rootn, vnorm;
-    extern doublereal dznrm2_(integer *, doublecomplex *, integer *);
-    extern /* Subroutine */ int zdscal_(integer *, doublereal *, 
-	    doublecomplex *, integer *);
-    extern integer izamax_(integer *, doublecomplex *, integer *);
-    extern /* Double Complex */ void zladiv_(doublecomplex *, doublecomplex *, 
-	     doublecomplex *);
     char normin[1];
-    extern doublereal dzasum_(integer *, doublecomplex *, integer *);
     doublereal nrmsml;
-    extern /* Subroutine */ int zlatrs_(char *, char *, char *, char *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublereal *, doublereal *, integer *);
     doublereal growto;
 
 

@@ -29,30 +29,17 @@ static integer c__1 = 1;
     real eps;
     integer inde;
     real anrm, rmin, rmax, sigma;
-    extern logical lsame_(char *, char *);
     integer iinfo;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     integer lwmin;
     logical wantz;
     integer iscale;
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
     integer indtau;
-    extern /* Subroutine */ int sstedc_(char *, integer *, real *, real *, 
-	    real *, integer *, real *, integer *, integer *, integer *, 
-	    integer *);
     integer indwrk, liwmin;
-    extern doublereal slansp_(char *, char *, integer *, real *, real *);
-    extern /* Subroutine */ int ssterf_(integer *, real *, real *, integer *);
     integer llwork;
     real smlnum;
-    extern /* Subroutine */ int ssptrd_(char *, integer *, real *, real *, 
-	    real *, real *, integer *);
     logical lquery;
-    extern /* Subroutine */ int sopmtr_(char *, char *, char *, integer *, 
-	    integer *, real *, real *, real *, integer *, real *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

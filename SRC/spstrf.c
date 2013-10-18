@@ -31,25 +31,10 @@ static real c_b24 = 1.f;
     integer i__, j, k, maxlocval, jb, nb;
     real ajj;
     integer pvt;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     integer itemp;
-    extern /* Subroutine */ int sgemv_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *);
     real stemp;
     logical upper;
-    extern /* Subroutine */ int sswap_(integer *, real *, integer *, real *, 
-	    integer *);
     real sstop;
-    extern /* Subroutine */ int ssyrk_(char *, char *, integer *, integer *, 
-	    real *, real *, integer *, real *, real *, integer *), spstf2_(char *, integer *, real *, integer *, integer *, 
-	    integer *, real *, real *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern logical sisnan_(real *);
-    extern integer smaxloc_(real *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

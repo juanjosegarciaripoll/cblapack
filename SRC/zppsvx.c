@@ -31,33 +31,12 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__, j;
     doublereal amax, smin, smax;
-    extern logical lsame_(char *, char *);
     doublereal scond, anorm;
     logical equil, rcequ;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
     logical nofact;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal bignum;
     integer infequ;
-    extern doublereal zlanhp_(char *, char *, integer *, doublecomplex *, 
-	    doublereal *);
-    extern /* Subroutine */ int zlaqhp_(char *, integer *, doublecomplex *, 
-	    doublereal *, doublereal *, doublereal *, char *),
-	     zlacpy_(char *, integer *, integer *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *), zppcon_(char *, integer *, 
-	    doublecomplex *, doublereal *, doublereal *, doublecomplex *, 
-	    doublereal *, integer *);
     doublereal smlnum;
-    extern /* Subroutine */ int zppequ_(char *, integer *, doublecomplex *, 
-	    doublereal *, doublereal *, doublereal *, integer *), 
-	    zpprfs_(char *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublereal *, doublereal *, doublecomplex *, 
-	    doublereal *, integer *), zpptrf_(char *, integer *, 
-	    doublecomplex *, integer *), zpptrs_(char *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

@@ -23,15 +23,7 @@
 
     /* Local variables */
     doublecomplex c__, a11, a12, a22, tau;
-    extern /* Subroutine */ int dlas2_(doublereal *, doublereal *, doublereal 
-	    *, doublereal *, doublereal *);
-    extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     doublereal ssmax;
-    extern /* Subroutine */ int zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), zlarfg_(
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

@@ -28,17 +28,7 @@ static integer c__1 = 1;
 
     /* Local variables */
     integer i__, j, l, kd, lm;
-    extern logical lsame_(char *, char *);
     logical lnoti;
-    extern /* Subroutine */ int zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), 
-	    zgeru_(integer *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *)
-	    , zswap_(integer *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *), ztbsv_(char *, char *, char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), xerbla_(char *, integer *), zlacgv_(
-	    integer *, doublecomplex *, integer *);
     logical notran;
 
 

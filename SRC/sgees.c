@@ -35,41 +35,15 @@ static integer c_n1 = -1;
     integer ibal;
     real anrm;
     integer idum[1], ierr, itau, iwrk, inxt, icond, ieval;
-    extern logical lsame_(char *, char *);
     logical cursl;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), sswap_(integer *, real *, integer *, real *, integer *
-);
     logical lst2sl;
-    extern /* Subroutine */ int slabad_(real *, real *);
     logical scalea;
     real cscale;
-    extern /* Subroutine */ int sgebak_(char *, char *, integer *, integer *, 
-	    integer *, real *, integer *, real *, integer *, integer *), sgebal_(char *, integer *, real *, integer *, 
-	    integer *, integer *, real *, integer *);
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
-    extern /* Subroutine */ int sgehrd_(integer *, integer *, integer *, real 
-	    *, integer *, real *, real *, integer *, integer *), xerbla_(char 
-	    *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     real bignum;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *), slacpy_(char *, integer *, integer *, real *, integer *, 
-	    real *, integer *);
     logical lastsl;
-    extern /* Subroutine */ int sorghr_(integer *, integer *, integer *, real 
-	    *, integer *, real *, real *, integer *, integer *), shseqr_(char 
-	    *, char *, integer *, integer *, integer *, real *, integer *, 
-	    real *, real *, real *, integer *, real *, integer *, integer *);
     integer minwrk, maxwrk;
     real smlnum;
     integer hswork;
-    extern /* Subroutine */ int strsen_(char *, char *, logical *, integer *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *, 
-	    real *, real *, real *, integer *, integer *, integer *, integer *
-);
     logical wantst, lquery, wantvs;
 
 

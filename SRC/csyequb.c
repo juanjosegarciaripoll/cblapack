@@ -34,13 +34,8 @@ static integer c__1 = 1;
     real avg, std, tol, base;
     integer iter;
     real smin, smax, scale;
-    extern logical lsame_(char *, char *);
     real sumsq;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
-    extern /* Subroutine */ int classq_(integer *, complex *, integer *, real 
-	    *, real *);
     real smlnum;
 
 

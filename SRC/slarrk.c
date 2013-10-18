@@ -26,7 +26,6 @@
     real mid, eps, tmp1, tmp2, left, atoli, right;
     integer itmax;
     real rtoli, tnorm;
-    extern doublereal slamch_(char *);
     integer negcnt;
 
 

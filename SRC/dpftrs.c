@@ -25,12 +25,7 @@ static doublereal c_b10 = 1.;
 
     /* Local variables */
     logical normaltransr;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int dtfsm_(char *, char *, char *, char *, char *, 
-	     integer *, integer *, doublereal *, doublereal *, doublereal *, 
-	    integer *);
     logical lower;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2)                                    -- */

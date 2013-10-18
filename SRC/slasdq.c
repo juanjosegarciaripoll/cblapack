@@ -32,17 +32,8 @@ static integer c__1 = 1;
     integer np1, isub;
     real smin;
     integer sqre1;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int slasr_(char *, char *, char *, integer *, 
-	    integer *, real *, real *, real *, integer *);
     integer iuplo;
-    extern /* Subroutine */ int sswap_(integer *, real *, integer *, real *, 
-	    integer *), xerbla_(char *, integer *), slartg_(real *, 
-	    real *, real *, real *, real *);
     logical rotate;
-    extern /* Subroutine */ int sbdsqr_(char *, integer *, integer *, integer 
-	    *, integer *, real *, real *, real *, integer *, real *, integer *
-, real *, integer *, real *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

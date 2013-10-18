@@ -44,29 +44,14 @@ static real c_b72 = -1.f;
     real cosl;
     integer isub, iter;
     real unfl, sinl, cosr, smin, smax, sinr;
-    extern /* Subroutine */ int srot_(integer *, real *, integer *, real *, 
-	    integer *, real *, real *), slas2_(real *, real *, real *, real *, 
-	     real *);
-    extern logical lsame_(char *, char *);
     real oldcs;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     integer oldll;
     real shift, sigmn, oldsn;
     integer maxit;
     real sminl;
-    extern /* Subroutine */ int slasr_(char *, char *, char *, integer *, 
-	    integer *, real *, real *, real *, integer *);
     real sigmx;
     logical lower;
-    extern /* Subroutine */ int sswap_(integer *, real *, integer *, real *, 
-	    integer *), slasq1_(integer *, real *, real *, real *, integer *),
-	     slasv2_(real *, real *, real *, real *, real *, real *, real *, 
-	    real *, real *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real sminoa;
-    extern /* Subroutine */ int slartg_(real *, real *, real *, real *, real *
-);
     real thresh;
     logical rotate;
     real tolmul;

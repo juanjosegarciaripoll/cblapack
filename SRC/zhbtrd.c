@@ -37,26 +37,9 @@ static integer c__1 = 1;
     doublereal abst;
     integer incx, last;
     doublecomplex temp;
-    extern /* Subroutine */ int zrot_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublecomplex *);
     integer j1end, j1inc, iqend;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *);
     logical initq, wantq, upper;
-    extern /* Subroutine */ int zlar2v_(integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, integer *, doublereal *, 
-	    doublecomplex *, integer *);
     integer iqaend;
-    extern /* Subroutine */ int xerbla_(char *, integer *), zlacgv_(
-	    integer *, doublecomplex *, integer *), zlaset_(char *, integer *, 
-	     integer *, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    integer *), zlartg_(doublecomplex *, doublecomplex *, 
-	    doublereal *, doublecomplex *, doublecomplex *), zlargv_(integer *
-, doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, integer *), zlartv_(integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, doublereal *, 
-	    doublecomplex *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

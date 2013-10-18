@@ -29,13 +29,7 @@ static doublereal c_b9 = -1.;
     integer j, m, km;
     doublereal ajj;
     integer kld;
-    extern /* Subroutine */ int zher_(char *, integer *, doublereal *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern logical lsame_(char *, char *);
     logical upper;
-    extern /* Subroutine */ int xerbla_(char *, integer *), zdscal_(
-	    integer *, doublereal *, doublecomplex *, integer *), zlacgv_(
-	    integer *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

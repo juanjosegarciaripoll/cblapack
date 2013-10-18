@@ -35,29 +35,7 @@ static integer c__1 = 1;
     integer ptsa;
     doublereal rnrm, xnrm;
     integer ptsx;
-    extern logical lsame_(char *, char *);
     integer iiter;
-    extern /* Subroutine */ int zhemm_(char *, char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), zaxpy_(integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *), zlag2c_(integer *, 
-	    integer *, doublecomplex *, integer *, complex *, integer *, 
-	    integer *), clag2z_(integer *, integer *, complex *, integer *, 
-	    doublecomplex *, integer *, integer *), zlat2c_(char *, integer *, 
-	     doublecomplex *, integer *, complex *, integer *, integer *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern doublereal zlanhe_(char *, char *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
-    extern integer izamax_(integer *, doublecomplex *, integer *);
-    extern /* Subroutine */ int cpotrf_(char *, integer *, complex *, integer 
-	    *, integer *), zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), 
-	    cpotrs_(char *, integer *, integer *, complex *, integer *, 
-	    complex *, integer *, integer *), zpotrf_(char *, integer 
-	    *, doublecomplex *, integer *, integer *), zpotrs_(char *, 
-	     integer *, integer *, doublecomplex *, integer *, doublecomplex *
-, integer *, integer *);
 
 
 /*  -- LAPACK PROTOTYPE driver routine (version 3.2.1)                 -- */

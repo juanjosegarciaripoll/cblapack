@@ -29,27 +29,10 @@ static integer c_n1 = -1;
 
     /* Local variables */
     integer nb, neig;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int zheev_(char *, char *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublecomplex *, 
-	    integer *, doublereal *, integer *);
     char trans[1];
     logical upper, wantz;
-    extern /* Subroutine */ int ztrmm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *), 
-	    ztrsm_(char *, char *, char *, char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *), xerbla_(char *, 
-	    integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int zhegst_(integer *, char *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *);
     integer lwkopt;
     logical lquery;
-    extern /* Subroutine */ int zpotrf_(char *, integer *, doublecomplex *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

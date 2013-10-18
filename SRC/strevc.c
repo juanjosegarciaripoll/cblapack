@@ -39,32 +39,17 @@ static logical c_true = TRUE_;
     logical pair, allv;
     integer ierr;
     real unfl, ovfl, smin;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
     logical over;
     real vmax;
     integer jnxt;
     real scale;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     real remax;
     logical leftv;
-    extern /* Subroutine */ int sgemv_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *);
     logical bothv;
     real vcrit;
     logical somev;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     real xnorm;
-    extern /* Subroutine */ int saxpy_(integer *, real *, real *, integer *, 
-	    real *, integer *), slaln2_(logical *, integer *, integer *, real 
-	    *, real *, real *, integer *, real *, real *, real *, integer *, 
-	    real *, real *, real *, integer *, real *, real *, integer *), 
-	    slabad_(real *, real *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
-    extern integer isamax_(integer *, real *, integer *);
     logical rightv;
     real smlnum;
 

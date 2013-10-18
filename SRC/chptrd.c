@@ -29,19 +29,8 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__, i1, ii, i1i1;
     complex taui;
-    extern /* Subroutine */ int chpr2_(char *, integer *, complex *, complex *
-, integer *, complex *, integer *, complex *);
     complex alpha;
-    extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int chpmv_(char *, integer *, complex *, complex *
-, complex *, integer *, complex *, complex *, integer *), 
-	    caxpy_(integer *, complex *, complex *, integer *, complex *, 
-	    integer *);
     logical upper;
-    extern /* Subroutine */ int clarfg_(integer *, complex *, complex *, 
-	    integer *, complex *), xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

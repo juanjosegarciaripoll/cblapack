@@ -36,39 +36,16 @@ static integer c__1 = 1;
     logical test;
     integer itmp1, indee;
     real sigma;
-    extern logical lsame_(char *, char *);
     integer iinfo;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     char order[1];
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), sswap_(integer *, real *, integer *, real *, integer *
-);
     logical wantz, alleig, indeig;
     integer iscale, indibl;
     logical valeig;
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real abstll, bignum;
     integer indtau, indisp, indiwo, indwrk;
-    extern doublereal slansp_(char *, char *, integer *, real *, real *);
-    extern /* Subroutine */ int sstein_(integer *, real *, real *, integer *, 
-	    real *, integer *, integer *, real *, integer *, real *, integer *
-, integer *, integer *), ssterf_(integer *, real *, real *, 
-	    integer *);
     integer nsplit;
-    extern /* Subroutine */ int sstebz_(char *, char *, integer *, real *, 
-	    real *, integer *, integer *, real *, real *, real *, integer *, 
-	    integer *, real *, integer *, integer *, real *, integer *, 
-	    integer *);
     real smlnum;
-    extern /* Subroutine */ int sopgtr_(char *, integer *, real *, real *, 
-	    real *, integer *, real *, integer *), ssptrd_(char *, 
-	    integer *, real *, real *, real *, real *, integer *), 
-	    ssteqr_(char *, integer *, real *, real *, real *, integer *, 
-	    real *, integer *), sopmtr_(char *, char *, char *, 
-	    integer *, integer *, real *, real *, real *, integer *, real *, 
-	    integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

@@ -32,20 +32,9 @@ static real c_b8 = 1.f;
     real dj, rho;
     integer iwk1, iwk2, iwk3;
     real temp;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
     integer iwk2i, iwk3i;
-    extern doublereal snrm2_(integer *, real *, integer *);
     real diflj, difrj, dsigj;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
-    extern doublereal slamc3_(real *, real *);
-    extern /* Subroutine */ int slasd4_(integer *, integer *, real *, real *, 
-	    real *, real *, real *, real *, integer *), xerbla_(char *, 
-	    integer *);
     real dsigjp;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *), slaset_(char *, integer *, integer *, real *, real *, 
-	    real *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

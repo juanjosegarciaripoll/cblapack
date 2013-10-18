@@ -52,24 +52,8 @@ static integer c__2 = 2;
     doublecomplex alpha;
     logical accum;
     integer ndcol, incol, krcol, nbmps;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), ztrmm_(char *, char *, char *, char *, 
-	     integer *, integer *, doublecomplex *, doublecomplex *, integer *
-, doublecomplex *, integer *), 
-	    dlabad_(doublereal *, doublereal *), zlaqr1_(integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *);
-    extern doublereal dlamch_(char *);
     doublereal safmin, safmax;
-    extern /* Subroutine */ int zlarfg_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *);
     doublecomplex refsum;
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), 
-	    zlaset_(char *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, integer *);
     integer mstart;
     doublereal smlnum;
 

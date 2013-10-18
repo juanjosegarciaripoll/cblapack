@@ -38,18 +38,8 @@ static real c_b30 = 0.f;
     integer ct, jp;
     real eps, tau, tol;
     integer psm[4], nlp1, nlp2, idxi, idxj, ctot[4];
-    extern /* Subroutine */ int srot_(integer *, real *, integer *, real *, 
-	    integer *, real *, real *);
     integer idxjp, jprev;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
-    extern doublereal slapy2_(real *, real *), slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), slamrg_(
-	    integer *, integer *, real *, integer *, integer *, integer *);
     real hlftol;
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *), slaset_(char *, integer *, 
-	    integer *, real *, real *, real *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

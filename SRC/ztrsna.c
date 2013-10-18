@@ -35,34 +35,16 @@ static integer c__1 = 1;
     integer kase, ierr;
     doublecomplex prod;
     doublereal lnrm, rnrm, scale;
-    extern logical lsame_(char *, char *);
     integer isave[3];
-    extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     doublecomplex dummy[1];
     logical wants;
     doublereal xnorm;
-    extern /* Subroutine */ int zlacn2_(integer *, doublecomplex *, 
-	    doublecomplex *, doublereal *, integer *, integer *), dlabad_(
-	    doublereal *, doublereal *);
-    extern doublereal dznrm2_(integer *, doublecomplex *, integer *), dlamch_(
-	    char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal bignum;
     logical wantbh;
-    extern integer izamax_(integer *, doublecomplex *, integer *);
     logical somcon;
-    extern /* Subroutine */ int zdrscl_(integer *, doublereal *, 
-	    doublecomplex *, integer *);
     char normin[1];
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     doublereal smlnum;
     logical wantsp;
-    extern /* Subroutine */ int zlatrs_(char *, char *, char *, char *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublereal *, doublereal *, integer *), ztrexc_(char *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, integer *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -25,7 +25,6 @@
     doublereal f1, g1, eps, scale;
     integer count;
     doublereal safmn2, safmx2;
-    extern doublereal dlamch_(char *);
     doublereal safmin;
 
 

@@ -36,25 +36,11 @@ static integer c__1 = 1;
     doublereal unfl, ovfl, smin;
     logical over;
     doublereal scale;
-    extern logical lsame_(char *, char *);
     doublereal remax;
     logical leftv, bothv;
-    extern /* Subroutine */ int zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *);
     logical somev;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), dlabad_(doublereal *, doublereal *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), zdscal_(
-	    integer *, doublereal *, doublecomplex *, integer *);
-    extern integer izamax_(integer *, doublecomplex *, integer *);
     logical rightv;
-    extern doublereal dzasum_(integer *, doublecomplex *, integer *);
     doublereal smlnum;
-    extern /* Subroutine */ int zlatrs_(char *, char *, char *, char *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublereal *, doublereal *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

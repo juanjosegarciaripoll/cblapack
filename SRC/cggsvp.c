@@ -32,23 +32,7 @@ static complex c_b2 = {1.f,0.f};
 
     /* Local variables */
     integer i__, j;
-    extern logical lsame_(char *, char *);
     logical wantq, wantu, wantv;
-    extern /* Subroutine */ int cgeqr2_(integer *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *), cgerq2_(integer *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *),
-	     cung2r_(integer *, integer *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *), cunm2r_(char *, char *, integer 
-	    *, integer *, integer *, complex *, integer *, complex *, complex 
-	    *, integer *, complex *, integer *), cunmr2_(char 
-	    *, char *, integer *, integer *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *, complex *, integer *), cgeqpf_(integer *, integer *, complex *, integer *, 
-	    integer *, complex *, complex *, real *, integer *), clacpy_(char 
-	    *, integer *, integer *, complex *, integer *, complex *, integer 
-	    *), claset_(char *, integer *, integer *, complex *, 
-	    complex *, complex *, integer *), xerbla_(char *, integer 
-	    *), clapmt_(logical *, integer *, integer *, complex *, 
-	    integer *, integer *);
     logical forwrd;
 
 

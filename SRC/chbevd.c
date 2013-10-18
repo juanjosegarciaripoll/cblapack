@@ -36,35 +36,17 @@ static integer c__1 = 1;
     integer imax;
     real rmin, rmax;
     integer llwk2;
-    extern /* Subroutine */ int cgemm_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *);
     real sigma;
-    extern logical lsame_(char *, char *);
     integer iinfo;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     integer lwmin;
     logical lower;
     integer llrwk;
     logical wantz;
     integer indwk2;
-    extern doublereal clanhb_(char *, char *, integer *, integer *, complex *, 
-	     integer *, real *);
     integer iscale;
-    extern /* Subroutine */ int clascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, complex *, integer *, integer *), cstedc_(char *, integer *, real *, real *, complex *, 
-	    integer *, complex *, integer *, real *, integer *, integer *, 
-	    integer *, integer *), chbtrd_(char *, char *, integer *, 
-	    integer *, complex *, integer *, real *, real *, complex *, 
-	    integer *, complex *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
     integer indwrk, liwmin;
-    extern /* Subroutine */ int ssterf_(integer *, real *, real *, integer *);
     integer lrwmin;
     real smlnum;
     logical lquery;

@@ -25,7 +25,6 @@
     doublereal d__;
     integer j4, j4p2;
     doublereal emin, temp;
-    extern doublereal dlamch_(char *);
     doublereal safmin;
 
 

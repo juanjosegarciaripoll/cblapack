@@ -33,17 +33,8 @@ static integer c__1 = 1;
     integer kp;
     real akp1;
     complex temp, akkp1;
-    extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int chemv_(char *, integer *, complex *, complex *
-, integer *, complex *, integer *, complex *, complex *, integer *
-), ccopy_(integer *, complex *, integer *, complex *, 
-	    integer *), cswap_(integer *, complex *, integer *, complex *, 
-	    integer *);
     integer kstep;
     logical upper;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -31,23 +31,6 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__;
     doublecomplex ei;
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *), zgemm_(char *, char *, integer *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), 
-	    zcopy_(integer *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *), ztrmm_(char *, char *, char *, char *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), 
-	    zaxpy_(integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), ztrmv_(char *, char *, char *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *), zlarfg_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *), zlacgv_(integer *, 
-	    doublecomplex *, integer *), zlacpy_(char *, integer *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

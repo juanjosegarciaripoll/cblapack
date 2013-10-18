@@ -23,14 +23,8 @@
     /* Local variables */
     integer j, n1, n2, nk, info;
     logical normaltransr;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     integer nrowa;
     logical lower;
-    extern /* Subroutine */ int ssyrk_(char *, char *, integer *, integer *, 
-	    real *, real *, integer *, real *, real *, integer *), xerbla_(char *, integer *);
     logical nisodd, notrans;
 
 

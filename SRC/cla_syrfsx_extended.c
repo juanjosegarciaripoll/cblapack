@@ -39,40 +39,17 @@ static real c_b33 = 1.f;
     real dxratmax, dzratmax;
     integer i__, j;
     logical incr_prec__;
-    extern /* Subroutine */ int cla_syamv__(integer *, integer *, real *, 
-	    complex *, integer *, complex *, integer *, real *, real *, 
-	    integer *);
     real prev_dz_z__, yk, final_dx_x__;
-    extern /* Subroutine */ int cla_wwaddw__(integer *, complex *, complex *, 
-	    complex *);
     real final_dz_z__, prevnormdx;
     integer cnt;
     real dyk, eps, incr_thresh__, dx_x__, dz_z__;
-    extern /* Subroutine */ int cla_lin_berr__(integer *, integer *, integer *
-	    , complex *, real *, real *);
     real ymin;
     integer y_prec_state__;
-    extern /* Subroutine */ int blas_csymv_x__(integer *, integer *, complex *
-	    , complex *, integer *, complex *, integer *, complex *, complex *
-	    , integer *, integer *);
     integer uplo2;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int blas_csymv2_x__(integer *, integer *, complex 
-	    *, complex *, integer *, complex *, complex *, integer *, complex 
-	    *, complex *, integer *, integer *), ccopy_(integer *, complex *, 
-	    integer *, complex *, integer *);
     real dxrat, dzrat;
-    extern /* Subroutine */ int caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *), csymv_(char *, integer *, 
-	    complex *, complex *, integer *, complex *, integer *, complex *, 
-	    complex *, integer *);
     real normx, normy;
-    extern doublereal slamch_(char *);
     real normdx;
-    extern /* Subroutine */ int csytrs_(char *, integer *, integer *, complex 
-	    *, integer *, integer *, complex *, integer *, integer *);
     real hugeval;
-    extern integer ilauplo_(char *);
     integer x_state__, z_state__;
 
 

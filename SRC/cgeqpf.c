@@ -31,20 +31,7 @@ static integer c__1 = 1;
     complex aii;
     integer pvt;
     real temp, temp2, tol3z;
-    extern /* Subroutine */ int clarf_(char *, integer *, integer *, complex *
-, integer *, complex *, complex *, integer *, complex *), 
-	    cswap_(integer *, complex *, integer *, complex *, integer *);
     integer itemp;
-    extern /* Subroutine */ int cgeqr2_(integer *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *);
-    extern doublereal scnrm2_(integer *, complex *, integer *);
-    extern /* Subroutine */ int cunm2r_(char *, char *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *, 
-	    complex *, integer *), clarfp_(integer *, complex 
-	    *, complex *, integer *, complex *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer isamax_(integer *, real *, integer *);
 
 
 /*  -- LAPACK deprecated driver routine (version 3.2) -- */

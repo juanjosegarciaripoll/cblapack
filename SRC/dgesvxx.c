@@ -30,40 +30,18 @@
 
     /* Local variables */
     integer j;
-    extern doublereal dla_rpvgrw__(integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *);
     doublereal amax;
-    extern logical lsame_(char *, char *);
     doublereal rcmin, rcmax;
     logical equil;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dlaqge_(integer *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, doublereal *, doublereal *, 
-	     doublereal *, char *);
     doublereal colcnd;
     logical nofact;
-    extern /* Subroutine */ int dgetrf_(integer *, integer *, doublereal *, 
-	    integer *, integer *, integer *), dlacpy_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *), xerbla_(char *, integer *);
     doublereal bignum;
     integer infequ;
     logical colequ;
-    extern /* Subroutine */ int dgetrs_(char *, integer *, integer *, 
-	    doublereal *, integer *, integer *, doublereal *, integer *, 
-	    integer *);
     doublereal rowcnd;
     logical notran;
     doublereal smlnum;
     logical rowequ;
-    extern /* Subroutine */ int dlascl2_(integer *, integer *, doublereal *, 
-	    doublereal *, integer *), dgeequb_(integer *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, doublereal *, 
-	     doublereal *, doublereal *, integer *), dgerfsx_(char *, char *, 
-	    integer *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, integer *, doublereal *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *, integer *);
 
 
 /*     -- LAPACK driver routine (version 3.2)                          -- */

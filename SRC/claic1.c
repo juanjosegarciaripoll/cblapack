@@ -29,10 +29,7 @@ static integer c__1 = 1;
     complex sine;
     real test, zeta1, zeta2;
     complex alpha;
-    extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
     real norma, absgam, absalp;
-    extern doublereal slamch_(char *);
     complex cosine;
     real absest;
 

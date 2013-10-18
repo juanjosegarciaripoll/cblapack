@@ -34,22 +34,11 @@ static real c_b43 = -1.f;
     /* Local variables */
     integer i__, j;
     real a1, a2, a3, b1, b2, b3, csq, csu, csv, snq, rwk, snu, snv;
-    extern /* Subroutine */ int srot_(integer *, real *, integer *, real *, 
-	    integer *, real *, real *);
     real gamma;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     logical initq, initu, initv, wantq, upper;
     real error, ssmin;
     logical wantu, wantv;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), slags2_(logical *, real *, real *, real *, real *, 
-	    real *, real *, real *, real *, real *, real *, real *, real *);
     integer kcycle;
-    extern /* Subroutine */ int xerbla_(char *, integer *), slapll_(
-	    integer *, real *, integer *, real *, integer *, real *), slartg_(
-	    real *, real *, real *, real *, real *), slaset_(char *, integer *
-, integer *, real *, real *, real *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

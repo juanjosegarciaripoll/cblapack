@@ -42,55 +42,26 @@ static real c_b18 = .003f;
     integer itmp;
     real tnrm;
     integer inde2;
-    extern /* Subroutine */ int slae2_(real *, real *, real *, real *, real *)
-	    ;
     integer itmp2;
     real rtol1, rtol2, scale;
     integer indgp;
-    extern logical lsame_(char *, char *);
     integer iinfo;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     integer iindw, ilast, lwmin;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), sswap_(integer *, real *, integer *, real *, integer *
-);
     logical wantz;
-    extern /* Subroutine */ int slaev2_(real *, real *, real *, real *, real *
-, real *, real *);
     logical alleig;
     integer ibegin;
     logical indeig;
     integer iindbl;
     logical valeig;
-    extern doublereal slamch_(char *);
     integer wbegin;
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
     integer inderr, iindwk, indgrs, offset;
-    extern /* Subroutine */ int slarrc_(char *, integer *, real *, real *, 
-	    real *, real *, real *, integer *, integer *, integer *, integer *
-), slarre_(char *, integer *, real *, real *, integer *, 
-	    integer *, real *, real *, real *, real *, real *, real *, 
-	    integer *, integer *, integer *, real *, real *, real *, integer *
-, integer *, real *, real *, real *, integer *, integer *)
-	    ;
     real thresh;
     integer iinspl, indwrk, ifirst, liwmin, nzcmin;
     real pivmin;
-    extern doublereal slanst_(char *, integer *, real *, real *);
-    extern /* Subroutine */ int slarrj_(integer *, real *, real *, integer *, 
-	    integer *, real *, integer *, real *, real *, real *, integer *, 
-	    real *, real *, integer *), slarrr_(integer *, real *, real *, 
-	    integer *);
     integer nsplit;
-    extern /* Subroutine */ int slarrv_(integer *, real *, real *, real *, 
-	    real *, real *, integer *, integer *, integer *, integer *, real *
-, real *, real *, real *, real *, real *, integer *, integer *, 
-	    real *, real *, integer *, integer *, real *, integer *, integer *
-);
     real smlnum;
-    extern /* Subroutine */ int slasrt_(char *, integer *, real *, integer *);
     logical lquery, zquery;
 
 

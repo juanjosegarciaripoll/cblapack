@@ -33,18 +33,7 @@ static real c_b11 = 1.f;
     real akk;
     integer k1k1;
     real bjj, bkk;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
-    extern /* Subroutine */ int sspr2_(char *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     logical upper;
-    extern /* Subroutine */ int saxpy_(integer *, real *, real *, integer *, 
-	    real *, integer *), sspmv_(char *, integer *, real *, real *, 
-	    real *, integer *, real *, real *, integer *), stpmv_(
-	    char *, char *, char *, integer *, real *, real *, integer *), stpsv_(char *, char *, char *, integer *, 
-	     real *, real *, integer *), xerbla_(char 
-	    *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

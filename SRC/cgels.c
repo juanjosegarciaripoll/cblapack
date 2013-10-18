@@ -34,34 +34,12 @@ static integer c__0 = 0;
     integer brow;
     logical tpsd;
     integer iascl, ibscl;
-    extern logical lsame_(char *, char *);
     integer wsize;
     real rwork[1];
-    extern /* Subroutine */ int slabad_(real *, real *);
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *);
-    extern /* Subroutine */ int cgelqf_(integer *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *, integer *), clascl_(
-	    char *, integer *, integer *, real *, real *, integer *, integer *
-, complex *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int cgeqrf_(integer *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *, integer *), claset_(
-	    char *, integer *, integer *, complex *, complex *, complex *, 
-	    integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer scllen;
     real bignum;
-    extern /* Subroutine */ int cunmlq_(char *, char *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *, 
-	    complex *, integer *, integer *), cunmqr_(char *, 
-	    char *, integer *, integer *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *, complex *, integer *, integer *);
     real smlnum;
     logical lquery;
-    extern /* Subroutine */ int ctrtrs_(char *, char *, char *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

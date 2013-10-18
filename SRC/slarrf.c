@@ -35,16 +35,12 @@ static integer c__1 = 1;
     integer ktry;
     real fail2, avgap, ldmax, rdmax;
     integer shift;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     logical dorrr1;
     real ldelta;
-    extern doublereal slamch_(char *);
     logical nofail;
     real mingap, lsigma, rdelta;
     logical forcer;
     real rsigma, clwdth;
-    extern logical sisnan_(real *);
     logical sawnan1, sawnan2, tryrrr1;
 
 

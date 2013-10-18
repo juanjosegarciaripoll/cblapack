@@ -24,11 +24,7 @@
     integer i__, k;
     real s;
     integer ii;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     logical leftv;
-    extern /* Subroutine */ int sswap_(integer *, real *, integer *, real *, 
-	    integer *), xerbla_(char *, integer *);
     logical rightv;
 
 

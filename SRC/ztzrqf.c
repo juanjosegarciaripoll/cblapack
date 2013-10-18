@@ -28,16 +28,6 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__, k, m1;
     doublecomplex alpha;
-    extern /* Subroutine */ int zgerc_(integer *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), 
-	    zcopy_(integer *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *), zaxpy_(integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *), xerbla_(char *, integer *), zlacgv_(integer *, doublecomplex *, integer *), zlarfp_(
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

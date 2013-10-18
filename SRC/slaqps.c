@@ -33,19 +33,9 @@ static real c_b16 = 0.f;
     real akk;
     integer pvt;
     real temp, temp2;
-    extern doublereal snrm2_(integer *, real *, integer *);
     real tol3z;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     integer itemp;
-    extern /* Subroutine */ int sgemv_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *), sswap_(integer *, real *, integer *, real *, integer *);
-    extern doublereal slamch_(char *);
     integer lsticc;
-    extern integer isamax_(integer *, real *, integer *);
-    extern /* Subroutine */ int slarfp_(integer *, real *, real *, integer *, 
-	    real *);
     integer lastrk;
 
 

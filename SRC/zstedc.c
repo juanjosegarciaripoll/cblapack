@@ -36,38 +36,13 @@ static integer c__1 = 1;
     doublereal p;
     integer ii, ll, lgn;
     doublereal eps, tiny;
-    extern logical lsame_(char *, char *);
     integer lwmin, start;
-    extern /* Subroutine */ int zswap_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zlaed0_(integer *, integer *, 
-	    doublereal *, doublereal *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, integer *, integer *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, integer *), dstedc_(char *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *, doublereal *, 
-	     integer *, integer *, integer *, integer *), dlaset_(
-	    char *, integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer finish;
-    extern doublereal dlanst_(char *, integer *, doublereal *, doublereal *);
-    extern /* Subroutine */ int dsterf_(integer *, doublereal *, doublereal *, 
-	     integer *), zlacrm_(integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *, integer *, doublecomplex *, integer *, 
-	    doublereal *);
     integer liwmin, icompz;
-    extern /* Subroutine */ int dsteqr_(char *, integer *, doublereal *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *), zlacpy_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *);
     doublereal orgnrm;
     integer lrwmin;
     logical lquery;
     integer smlsiz;
-    extern /* Subroutine */ int zsteqr_(char *, integer *, doublereal *, 
-	    doublereal *, doublecomplex *, integer *, doublereal *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

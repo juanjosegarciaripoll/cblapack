@@ -46,39 +46,26 @@ static integer c__2 = 2;
     doublereal ulp;
     doublecomplex abi22;
     doublereal absb, atol, btol, temp;
-    extern /* Subroutine */ int zrot_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublecomplex *);
     doublereal temp2;
-    extern logical lsame_(char *, char *);
     doublecomplex ctemp;
     integer iiter, ilast, jiter;
     doublereal anorm, bnorm;
     integer maxit;
     doublecomplex shift;
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *);
     doublereal tempr;
     doublecomplex ctemp2, ctemp3;
     logical ilazr2;
     doublereal ascale, bscale;
-    extern doublereal dlamch_(char *);
     doublecomplex signbc;
     doublereal safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublecomplex eshift;
     logical ilschr;
     integer icompq, ilastm;
     doublecomplex rtdisc;
     integer ischur;
-    extern doublereal zlanhs_(char *, integer *, doublecomplex *, integer *, 
-	    doublereal *);
     logical ilazro;
     integer icompz, ifirst;
-    extern /* Subroutine */ int zlartg_(doublecomplex *, doublecomplex *, 
-	    doublereal *, doublecomplex *, doublecomplex *);
     integer ifrstm;
-    extern /* Subroutine */ int zlaset_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *);
     integer istart;
     logical lquery;
 

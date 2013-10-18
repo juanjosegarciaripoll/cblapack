@@ -21,11 +21,6 @@
     integer ab_dim1, ab_offset, b_dim1, b_offset, i__1;
 
     /* Local variables */
-    extern /* Subroutine */ int cgbtrf_(integer *, integer *, integer *, 
-	    integer *, complex *, integer *, integer *, integer *), xerbla_(
-	    char *, integer *), cgbtrs_(char *, integer *, integer *, 
-	    integer *, integer *, complex *, integer *, integer *, complex *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

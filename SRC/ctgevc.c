@@ -48,10 +48,6 @@ static integer c__1 = 1;
     logical ilall;
     integer iside;
     real sbeta;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int cgemv_(char *, integer *, integer *, complex *
-, complex *, integer *, complex *, integer *, complex *, complex *
-, integer *);
     real small;
     logical compl;
     real anorm, bnorm;
@@ -59,13 +55,9 @@ static integer c__1 = 1;
     real acoefa, bcoefa, acoeff;
     complex bcoeff;
     logical ilback;
-    extern /* Subroutine */ int slabad_(real *, real *);
     real ascale, bscale;
-    extern /* Complex */ void cladiv_(complex *, complex *, complex *);
-    extern doublereal slamch_(char *);
     complex salpha;
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
     logical ilcomp;
     integer ihwmny;

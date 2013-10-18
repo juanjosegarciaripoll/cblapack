@@ -29,14 +29,7 @@ static integer c__1 = 1;
     integer i__, j, k, l, m;
     real r__, s, ca, ra;
     integer ica, ira, iexc;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int cswap_(integer *, complex *, integer *, 
-	    complex *, integer *);
     real sfmin1, sfmin2, sfmax1, sfmax2;
-    extern integer icamax_(integer *, complex *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *), xerbla_(char *, integer *);
     logical noconv;
 
 

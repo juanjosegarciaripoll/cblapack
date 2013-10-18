@@ -27,10 +27,6 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__, k;
     complex alpha;
-    extern /* Subroutine */ int clarf_(char *, integer *, integer *, complex *
-, integer *, complex *, complex *, integer *, complex *), 
-	    clarfp_(integer *, complex *, complex *, integer *, complex *), 
-	    xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

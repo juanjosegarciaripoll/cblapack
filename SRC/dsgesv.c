@@ -35,27 +35,7 @@ static integer c__1 = 1;
     integer ptsa;
     doublereal rnrm, xnrm;
     integer ptsx;
-    extern /* Subroutine */ int dgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *);
     integer iiter;
-    extern /* Subroutine */ int daxpy_(integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *), dlag2s_(integer *, integer *, 
-	     doublereal *, integer *, real *, integer *, integer *), slag2d_(
-	    integer *, integer *, real *, integer *, doublereal *, integer *, 
-	    integer *);
-    extern doublereal dlamch_(char *), dlange_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *);
-    extern integer idamax_(integer *, doublereal *, integer *);
-    extern /* Subroutine */ int dlacpy_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *), 
-	    xerbla_(char *, integer *), dgetrf_(integer *, integer *, 
-	    doublereal *, integer *, integer *, integer *), dgetrs_(char *, 
-	    integer *, integer *, doublereal *, integer *, integer *, 
-	    doublereal *, integer *, integer *), sgetrf_(integer *, 
-	    integer *, real *, integer *, integer *, integer *), sgetrs_(char 
-	    *, integer *, integer *, real *, integer *, integer *, real *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK PROTOTYPE driver routine (version 3.2) -- */

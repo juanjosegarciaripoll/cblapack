@@ -25,10 +25,6 @@
     integer i__, i1, i2, i3, ja, ic, jc, mi, ni, nq;
     logical left;
     complex taui;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int clarz_(char *, integer *, integer *, integer *
-, complex *, integer *, complex *, complex *, integer *, complex *
-), xerbla_(char *, integer *);
     logical notran;
 
 

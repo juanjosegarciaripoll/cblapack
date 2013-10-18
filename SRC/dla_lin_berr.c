@@ -23,7 +23,6 @@
     /* Local variables */
     integer i__, j;
     doublereal tmp, safe1;
-    extern doublereal dlamch_(char *);
 
 
 /*     -- LAPACK routine (version 3.2.1)                                 -- */

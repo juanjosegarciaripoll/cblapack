@@ -38,29 +38,10 @@ static logical c_false = FALSE_;
     real rcond_tmp__;
     integer prec_type__;
     real cwise_wrong__;
-    extern /* Subroutine */ int cla_herfsx_extended__(integer *, char *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *, 
-	    integer *, logical *, real *, complex *, integer *, complex *, 
-	    integer *, real *, integer *, real *, real *, complex *, real *, 
-	    complex *, complex *, real *, integer *, real *, real *, logical *
-	    , integer *, ftnlen);
     char norm[1];
     logical ignore_cwise__;
-    extern logical lsame_(char *, char *);
-    extern doublereal cla_hercond_c__(char *, integer *, complex *, integer *,
-	     complex *, integer *, integer *, real *, logical *, integer *, 
-	    complex *, real *, ftnlen);
     real anorm;
     logical rcequ;
-    extern doublereal cla_hercond_x__(char *, integer *, complex *, integer *,
-	     complex *, integer *, integer *, complex *, integer *, complex *,
-	     real *, ftnlen), clanhe_(char *, char *, integer *, complex *, 
-	    integer *, real *);
-    extern /* Subroutine */ int checon_(char *, integer *, complex *, integer 
-	    *, integer *, real *, real *, complex *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaprec_(char *);
     integer ithresh, n_norms__;
     real rthresh;
 

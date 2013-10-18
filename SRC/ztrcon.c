@@ -28,28 +28,15 @@ static integer c__1 = 1;
     /* Local variables */
     integer ix, kase, kase1;
     doublereal scale;
-    extern logical lsame_(char *, char *);
     integer isave[3];
     doublereal anorm;
     logical upper;
     doublereal xnorm;
-    extern /* Subroutine */ int zlacn2_(integer *, doublecomplex *, 
-	    doublecomplex *, doublereal *, integer *, integer *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal ainvnm;
-    extern integer izamax_(integer *, doublecomplex *, integer *);
     logical onenrm;
-    extern /* Subroutine */ int zdrscl_(integer *, doublereal *, 
-	    doublecomplex *, integer *);
     char normin[1];
-    extern doublereal zlantr_(char *, char *, char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *);
     doublereal smlnum;
     logical nounit;
-    extern /* Subroutine */ int zlatrs_(char *, char *, char *, char *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublereal *, doublereal *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -27,15 +27,8 @@ static doublecomplex c_b1 = {1.,0.};
     /* Local variables */
     integer k, n1, n2;
     logical normaltransr;
-    extern logical lsame_(char *, char *);
     logical lower;
-    extern /* Subroutine */ int ztrmm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *), 
-	    xerbla_(char *, integer *);
     logical nisodd;
-    extern /* Subroutine */ int ztrtri_(char *, char *, integer *, 
-	    doublecomplex *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2)                                    -- */

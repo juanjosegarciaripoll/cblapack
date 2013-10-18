@@ -28,11 +28,6 @@ static integer c_n1 = -1;
     /* Local variables */
     integer j, jb, nb, iuplo;
     logical upper;
-    extern /* Subroutine */ int zptts2_(integer *, integer *, integer *, 
-	    doublereal *, doublecomplex *, doublecomplex *, integer *), 
-	    xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

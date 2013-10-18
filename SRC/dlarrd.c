@@ -45,21 +45,12 @@ static integer c__0 = 0;
     integer nwu;
     doublereal tmp1, tmp2;
     integer iend, jblk, ioff, iout, itmp1, itmp2, jdisc;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     doublereal atoli;
     integer iwoff, itmax;
     doublereal wkill, rtoli, uflow, tnorm;
-    extern doublereal dlamch_(char *);
     integer ibegin;
-    extern /* Subroutine */ int dlaebz_(integer *, integer *, integer *, 
-	    integer *, integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, integer *, 
-	     doublereal *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, integer *);
     integer irange, idiscl, idumma[1];
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer idiscu;
     logical ncnvrg, toofew;
 

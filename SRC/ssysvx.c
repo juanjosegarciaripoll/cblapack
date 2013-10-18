@@ -30,28 +30,10 @@ static integer c_n1 = -1;
 
     /* Local variables */
     integer nb;
-    extern logical lsame_(char *, char *);
     real anorm;
-    extern doublereal slamch_(char *);
     logical nofact;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *);
-    extern doublereal slansy_(char *, char *, integer *, real *, integer *, 
-	    real *);
-    extern /* Subroutine */ int ssycon_(char *, integer *, real *, integer *, 
-	    integer *, real *, real *, real *, integer *, integer *);
     integer lwkopt;
     logical lquery;
-    extern /* Subroutine */ int ssyrfs_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *, integer *, real *, integer *, real *
-, integer *, real *, real *, real *, integer *, integer *)
-	    , ssytrf_(char *, integer *, real *, integer *, integer *, real *, 
-	     integer *, integer *), ssytrs_(char *, integer *, 
-	    integer *, real *, integer *, integer *, real *, integer *, 
-	    integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

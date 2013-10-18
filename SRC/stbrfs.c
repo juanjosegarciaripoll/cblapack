@@ -35,20 +35,9 @@ static real c_b19 = -1.f;
     real eps;
     integer kase;
     real safe1, safe2;
-    extern logical lsame_(char *, char *);
     integer isave[3];
     logical upper;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), stbmv_(char *, char *, char *, integer *, integer *, 
-	    real *, integer *, real *, integer *), 
-	    stbsv_(char *, char *, char *, integer *, integer *, real *, 
-	    integer *, real *, integer *), saxpy_(
-	    integer *, real *, real *, integer *, real *, integer *), slacn2_(
-	    integer *, real *, real *, integer *, real *, integer *, integer *
-);
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     logical notran;
     char transt[1];
     logical nounit;

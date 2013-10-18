@@ -38,23 +38,9 @@ static complex c_b45 = {1.f,0.f};
     /* Local variables */
     integer i__, j, k, p, q, ie, je, mb, nb, is, js, pq;
     real dsum;
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *), cgemm_(char *, char *, integer *, integer *, integer *
-, complex *, complex *, integer *, complex *, integer *, complex *
-, complex *, integer *);
-    extern logical lsame_(char *, char *);
     integer ifunc, linfo, lwmin;
     real scale2;
-    extern /* Subroutine */ int ctgsy2_(char *, integer *, integer *, integer 
-	    *, complex *, integer *, complex *, integer *, complex *, integer 
-	    *, complex *, integer *, complex *, integer *, complex *, integer 
-	    *, real *, real *, real *, integer *);
     real dscale, scaloc;
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), claset_(char *, 
-	    integer *, integer *, complex *, complex *, complex *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer iround;
     logical notran;
     integer isolve;

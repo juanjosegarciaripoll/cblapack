@@ -21,10 +21,6 @@
     integer ab_dim1, ab_offset, b_dim1, b_offset, i__1;
 
     /* Local variables */
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), dpbtrf_(
-	    char *, integer *, integer *, doublereal *, integer *, integer *), dpbtrs_(char *, integer *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

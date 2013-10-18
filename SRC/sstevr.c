@@ -37,39 +37,17 @@ static integer c__4 = 4;
     real rmin, rmax;
     logical test;
     real tnrm, sigma;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     char order[1];
     integer lwmin;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), sswap_(integer *, real *, integer *, real *, integer *
-);
     logical wantz, alleig, indeig;
     integer iscale, ieeeok, indibl, indifl;
     logical valeig;
-    extern doublereal slamch_(char *);
     real safmin;
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
     integer indisp, indiwo, liwmin;
     logical tryrac;
-    extern doublereal slanst_(char *, integer *, real *, real *);
-    extern /* Subroutine */ int sstein_(integer *, real *, real *, integer *, 
-	    real *, integer *, integer *, real *, integer *, real *, integer *
-, integer *, integer *), ssterf_(integer *, real *, real *, 
-	    integer *);
     integer nsplit;
-    extern /* Subroutine */ int sstebz_(char *, char *, integer *, real *, 
-	    real *, integer *, integer *, real *, real *, real *, integer *, 
-	    integer *, real *, integer *, integer *, real *, integer *, 
-	    integer *);
     real smlnum;
-    extern /* Subroutine */ int sstemr_(char *, char *, integer *, real *, 
-	    real *, real *, real *, integer *, integer *, integer *, real *, 
-	    real *, integer *, integer *, integer *, logical *, real *, 
-	    integer *, integer *, integer *, integer *);
     logical lquery;
 
 

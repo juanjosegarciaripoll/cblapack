@@ -30,30 +30,12 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__, j;
     real amax, smin, smax;
-    extern logical lsame_(char *, char *);
     real scond, anorm;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *);
     logical equil, rcequ;
-    extern doublereal clanhp_(char *, char *, integer *, complex *, real *), slamch_(char *);
-    extern /* Subroutine */ int claqhp_(char *, integer *, complex *, real *, 
-	    real *, real *, char *);
     logical nofact;
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), xerbla_(char *, 
-	    integer *);
     real bignum;
-    extern /* Subroutine */ int cppcon_(char *, integer *, complex *, real *, 
-	    real *, complex *, real *, integer *);
     integer infequ;
-    extern /* Subroutine */ int cppequ_(char *, integer *, complex *, real *, 
-	    real *, real *, integer *), cpprfs_(char *, integer *, 
-	    integer *, complex *, complex *, complex *, integer *, complex *, 
-	    integer *, real *, real *, complex *, real *, integer *), 
-	    cpptrf_(char *, integer *, complex *, integer *);
     real smlnum;
-    extern /* Subroutine */ int cpptrs_(char *, integer *, integer *, complex 
-	    *, complex *, integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

@@ -30,19 +30,10 @@ static integer c__1 = 1;
     real su;
     integer kase, kase1;
     real scale;
-    extern logical lsame_(char *, char *);
     integer isave[3];
-    extern /* Subroutine */ int srscl_(integer *, real *, real *, integer *), 
-	    slacn2_(integer *, real *, real *, integer *, real *, integer *, 
-	    integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer isamax_(integer *, real *, integer *);
     real ainvnm;
     logical onenrm;
     char normin[1];
-    extern /* Subroutine */ int slatrs_(char *, char *, char *, char *, 
-	    integer *, real *, integer *, real *, real *, real *, integer *);
     real smlnum;
 
 

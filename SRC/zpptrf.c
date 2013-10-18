@@ -29,15 +29,7 @@ static doublereal c_b16 = -1.;
     /* Local variables */
     integer j, jc, jj;
     doublereal ajj;
-    extern /* Subroutine */ int zhpr_(char *, integer *, doublereal *, 
-	    doublecomplex *, integer *, doublecomplex *);
-    extern logical lsame_(char *, char *);
-    extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     logical upper;
-    extern /* Subroutine */ int ztpsv_(char *, char *, char *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *), xerbla_(char *, integer *), zdscal_(integer *, 
-	    doublereal *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

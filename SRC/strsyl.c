@@ -38,22 +38,10 @@ static logical c_true = TRUE_;
     real a11, db, da11, vec[4]	/* was [2][2] */, dum[1], eps, sgn;
     integer ierr;
     real smin;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
     real suml, sumr;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     integer knext, lnext;
     real xnorm;
-    extern /* Subroutine */ int slaln2_(logical *, integer *, integer *, real 
-	    *, real *, real *, integer *, real *, real *, real *, integer *, 
-	    real *, real *, real *, integer *, real *, real *, integer *), 
-	    slasy2_(logical *, logical *, integer *, integer *, integer *, 
-	    real *, integer *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *, real *, integer *), slabad_(real *, real *);
     real scaloc;
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
     logical notrna, notrnb;
     real smlnum;

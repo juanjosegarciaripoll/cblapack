@@ -21,10 +21,6 @@
 
     /* Local variables */
     integer i__;
-    extern /* Subroutine */ int dlarz_(char *, integer *, integer *, integer *
-, doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *), dlarfp_(integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -39,60 +39,25 @@ static integer c_n1 = -1;
     logical kill;
     integer ierr;
     real temp1;
-    extern doublereal snrm2_(integer *, real *, integer *);
     logical jracc;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     real small, entra, sfmin;
     logical lsvec;
     real epsln;
     logical rsvec;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), sswap_(integer *, real *, integer *, real *, integer *
-);
     logical l2aber;
-    extern /* Subroutine */ int strsm_(char *, char *, char *, char *, 
-	    integer *, integer *, real *, real *, integer *, real *, integer *
-);
     real condr1, condr2, uscal1, uscal2;
     logical l2kill, l2rank, l2tran;
-    extern /* Subroutine */ int sgeqp3_(integer *, integer *, real *, integer 
-	    *, integer *, real *, real *, integer *, integer *);
     logical l2pert;
     real scalem, sconda;
     logical goscal;
     real aatmin;
-    extern doublereal slamch_(char *);
     real aatmax;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     logical noscal;
-    extern /* Subroutine */ int sgelqf_(integer *, integer *, real *, integer 
-	    *, real *, real *, integer *, integer *);
-    extern integer isamax_(integer *, real *, integer *);
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *), sgeqrf_(integer *, integer *, real *, integer *, real *, 
-	    real *, integer *, integer *), slacpy_(char *, integer *, integer 
-	    *, real *, integer *, real *, integer *), slaset_(char *, 
-	    integer *, integer *, real *, real *, real *, integer *);
     real entrat;
     logical almort;
     real maxprj;
-    extern /* Subroutine */ int spocon_(char *, integer *, real *, integer *, 
-	    real *, real *, real *, integer *, integer *);
     logical errest;
-    extern /* Subroutine */ int sgesvj_(char *, char *, char *, integer *, 
-	    integer *, real *, integer *, real *, integer *, real *, integer *
-, real *, integer *, integer *), slassq_(
-	    integer *, real *, integer *, real *, real *);
     logical transp;
-    extern /* Subroutine */ int slaswp_(integer *, real *, integer *, integer 
-	    *, integer *, integer *, integer *), sorgqr_(integer *, integer *, 
-	     integer *, real *, integer *, real *, real *, integer *, integer 
-	    *), sormlq_(char *, char *, integer *, integer *, integer *, real 
-	    *, integer *, real *, real *, integer *, real *, integer *, 
-	    integer *), sormqr_(char *, char *, integer *, 
-	    integer *, integer *, real *, integer *, real *, real *, integer *
-, real *, integer *, integer *);
     logical rowpiv;
     real cond_ok__;
     integer warning, numrank;

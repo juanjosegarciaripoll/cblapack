@@ -35,27 +35,11 @@ static doublereal c_b43 = -1.;
     /* Local variables */
     integer i__, j;
     doublereal a1, a2, a3, b1, b2, b3, csq, csu, csv, snq, rwk, snu, snv;
-    extern /* Subroutine */ int drot_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *);
     doublereal gamma;
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
     logical initq, initu, initv, wantq, upper;
     doublereal error, ssmin;
     logical wantu, wantv;
-    extern /* Subroutine */ int dlags2_(logical *, doublereal *, doublereal *, 
-	     doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *), dlapll_(integer *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *);
     integer kcycle;
-    extern /* Subroutine */ int dlartg_(doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *), dlaset_(char *, 
-	    integer *, integer *, doublereal *, doublereal *, doublereal *, 
-	    integer *), xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

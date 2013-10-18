@@ -32,25 +32,12 @@ static integer c__1 = 1;
     real anrm;
     integer imax;
     real rmin, rmax, sigma;
-    extern logical lsame_(char *, char *);
     integer iinfo;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     logical lower, wantz;
-    extern doublereal clanhb_(char *, char *, integer *, integer *, complex *, 
-	     integer *, real *);
     integer iscale;
-    extern /* Subroutine */ int clascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, complex *, integer *, integer *), chbtrd_(char *, char *, integer *, integer *, complex *, 
-	    integer *, real *, real *, complex *, integer *, complex *, 
-	    integer *);
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
     integer indrwk;
-    extern /* Subroutine */ int csteqr_(char *, integer *, real *, real *, 
-	    complex *, integer *, real *, integer *), ssterf_(integer 
-	    *, real *, real *, integer *);
     real smlnum;
 
 

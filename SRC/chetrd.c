@@ -31,17 +31,8 @@ static real c_b23 = 1.f;
 
     /* Local variables */
     integer i__, j, nb, kk, nx, iws;
-    extern logical lsame_(char *, char *);
     integer nbmin, iinfo;
     logical upper;
-    extern /* Subroutine */ int chetd2_(char *, integer *, complex *, integer 
-	    *, real *, real *, complex *, integer *), cher2k_(char *, 
-	    char *, integer *, integer *, complex *, complex *, integer *, 
-	    complex *, integer *, real *, complex *, integer *), clatrd_(char *, integer *, integer *, complex *, integer 
-	    *, real *, complex *, complex *, integer *), xerbla_(char 
-	    *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer ldwork, lwkopt;
     logical lquery;
 

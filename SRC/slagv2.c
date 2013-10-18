@@ -28,18 +28,9 @@ static integer c__1 = 1;
 
     /* Local variables */
     real r__, t, h1, h2, h3, wi, qq, rr, wr1, wr2, ulp;
-    extern /* Subroutine */ int srot_(integer *, real *, integer *, real *, 
-	    integer *, real *, real *), slag2_(real *, integer *, real *, 
-	    integer *, real *, real *, real *, real *, real *, real *);
     real anorm, bnorm, scale1, scale2;
-    extern /* Subroutine */ int slasv2_(real *, real *, real *, real *, real *
-, real *, real *, real *, real *);
-    extern doublereal slapy2_(real *, real *);
     real ascale, bscale;
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int slartg_(real *, real *, real *, real *, real *
-);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

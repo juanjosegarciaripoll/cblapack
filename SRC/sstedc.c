@@ -35,33 +35,12 @@ static integer c__1 = 1;
     real p;
     integer ii, lgn;
     real eps, tiny;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     integer lwmin, start;
-    extern /* Subroutine */ int sswap_(integer *, real *, integer *, real *, 
-	    integer *), slaed0_(integer *, integer *, integer *, real *, real 
-	    *, real *, integer *, real *, integer *, real *, integer *, 
-	    integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer finish;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *), slacpy_(char *, integer *, integer *, real *, integer *, 
-	    real *, integer *), slaset_(char *, integer *, integer *, 
-	    real *, real *, real *, integer *);
     integer liwmin, icompz;
     real orgnrm;
-    extern doublereal slanst_(char *, integer *, real *, real *);
-    extern /* Subroutine */ int ssterf_(integer *, real *, real *, integer *),
-	     slasrt_(char *, integer *, real *, integer *);
     logical lquery;
     integer smlsiz;
-    extern /* Subroutine */ int ssteqr_(char *, integer *, real *, real *, 
-	    real *, integer *, real *, integer *);
     integer storez, strtrw;
 
 

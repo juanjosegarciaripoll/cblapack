@@ -49,28 +49,19 @@ static integer c__1 = 1;
     logical ilall;
     integer iside;
     doublereal sbeta;
-    extern logical lsame_(char *, char *);
     doublereal small;
     logical compl;
     doublereal anorm, bnorm;
     logical compr;
-    extern /* Subroutine */ int zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), 
-	    dlabad_(doublereal *, doublereal *);
     logical ilbbad;
     doublereal acoefa, bcoefa, acoeff;
     doublecomplex bcoeff;
     logical ilback;
     doublereal ascale, bscale;
-    extern doublereal dlamch_(char *);
     doublecomplex salpha;
     doublereal safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal bignum;
     logical ilcomp;
-    extern /* Double Complex */ void zladiv_(doublecomplex *, doublecomplex *, 
-	     doublecomplex *);
     integer ihwmny;
 
 

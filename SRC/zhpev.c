@@ -31,31 +31,15 @@ static integer c__1 = 1;
     doublereal anrm;
     integer imax;
     doublereal rmin, rmax;
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *);
     doublereal sigma;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     logical wantz;
-    extern doublereal dlamch_(char *);
     integer iscale;
     doublereal safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *), zdscal_(
-	    integer *, doublereal *, doublecomplex *, integer *);
     doublereal bignum;
     integer indtau;
-    extern /* Subroutine */ int dsterf_(integer *, doublereal *, doublereal *, 
-	     integer *);
-    extern doublereal zlanhp_(char *, char *, integer *, doublecomplex *, 
-	    doublereal *);
     integer indrwk, indwrk;
     doublereal smlnum;
-    extern /* Subroutine */ int zhptrd_(char *, integer *, doublecomplex *, 
-	    doublereal *, doublereal *, doublecomplex *, integer *), 
-	    zsteqr_(char *, integer *, doublereal *, doublereal *, 
-	    doublecomplex *, integer *, doublereal *, integer *), 
-	    zupgtr_(char *, integer *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

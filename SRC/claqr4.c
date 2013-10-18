@@ -46,22 +46,7 @@ static integer c__3 = 3;
     integer ktop;
     complex zdum[1]	/* was [1][1] */;
     integer kacc22, itmax, nsmax, nwmax, kwtop;
-    extern /* Subroutine */ int claqr2_(logical *, logical *, integer *, 
-	    integer *, integer *, integer *, complex *, integer *, integer *, 
-	    integer *, complex *, integer *, integer *, integer *, complex *, 
-	    complex *, integer *, integer *, complex *, integer *, integer *, 
-	    complex *, integer *, complex *, integer *), claqr5_(logical *, 
-	    logical *, integer *, integer *, integer *, integer *, integer *, 
-	    complex *, complex *, integer *, integer *, integer *, complex *, 
-	    integer *, complex *, integer *, complex *, integer *, integer *, 
-	    complex *, integer *, integer *, complex *, integer *);
     integer nibble;
-    extern /* Subroutine */ int clahqr_(logical *, logical *, integer *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *, 
-	    integer *, complex *, integer *, integer *), clacpy_(char *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     char jbcmpz[1];
     complex rtdisc;
     integer nwupbd;

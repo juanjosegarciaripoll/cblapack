@@ -30,21 +30,8 @@ static integer c__1 = 1;
 
     /* Local variables */
     integer i__, j;
-    extern logical lsame_(char *, char *);
     integer lastc;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
     integer lastv;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), ztrmm_(char *, char *, char *, char *
-, integer *, integer *, doublecomplex *, doublecomplex *, integer 
-	    *, doublecomplex *, integer *);
-    extern integer ilazlc_(integer *, integer *, doublecomplex *, integer *);
-    extern /* Subroutine */ int zlacgv_(integer *, doublecomplex *, integer *)
-	    ;
-    extern integer ilazlr_(integer *, integer *, doublecomplex *, integer *);
     char transt[1];
 
 

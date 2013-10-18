@@ -28,11 +28,6 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__;
     complex alpha;
-    extern /* Subroutine */ int clarf_(char *, integer *, integer *, complex *
-, integer *, complex *, complex *, integer *, complex *), 
-	    clarfg_(integer *, complex *, complex *, integer *, complex *), 
-	    clacgv_(integer *, complex *, integer *), xerbla_(char *, integer 
-	    *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

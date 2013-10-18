@@ -36,15 +36,6 @@ static integer c__1 = 1;
     integer k2, n1, n2, jp, n1p1;
     doublereal eps, tau, tol;
     integer jlam, imax, jmax;
-    extern /* Subroutine */ int drot_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *), dscal_(
-	    integer *, doublereal *, doublereal *, integer *), dcopy_(integer 
-	    *, doublereal *, integer *, doublereal *, integer *);
-    extern doublereal dlapy2_(doublereal *, doublereal *), dlamch_(char *);
-    extern integer idamax_(integer *, doublereal *, integer *);
-    extern /* Subroutine */ int dlamrg_(integer *, integer *, doublereal *, 
-	    integer *, integer *, integer *), dlacpy_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *), xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

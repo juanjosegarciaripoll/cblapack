@@ -23,10 +23,6 @@
     /* Local variables */
     integer i__, i1, i2, i3, ja, ic, jc, mi, ni, nq;
     logical left;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int slarz_(char *, integer *, integer *, integer *
-, real *, integer *, real *, real *, integer *, real *), 
-	    xerbla_(char *, integer *);
     logical notran;
 
 

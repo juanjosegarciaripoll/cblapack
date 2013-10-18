@@ -27,11 +27,7 @@ static integer c__2 = 2;
 
     /* Local variables */
     integer nbf, nbl, here;
-    extern logical lsame_(char *, char *);
     logical wantq;
-    extern /* Subroutine */ int dlaexc_(logical *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, integer *, integer *, integer 
-	    *, doublereal *, integer *), xerbla_(char *, integer *);
     integer nbnext;
 
 

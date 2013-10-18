@@ -34,14 +34,7 @@ static integer c__1 = 1;
     integer jp;
     real eps, tau, tol;
     integer nlp1, nlp2, idxi, idxj;
-    extern /* Subroutine */ int srot_(integer *, real *, integer *, real *, 
-	    integer *, real *, real *);
     integer idxjp, jprev;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
-    extern doublereal slapy2_(real *, real *), slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), slamrg_(
-	    integer *, integer *, real *, integer *, integer *, integer *);
     real hlftol;
 
 

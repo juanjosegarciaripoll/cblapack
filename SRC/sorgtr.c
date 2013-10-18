@@ -26,16 +26,8 @@ static integer c_n1 = -1;
 
     /* Local variables */
     integer i__, j, nb;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     logical upper;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int sorgql_(integer *, integer *, integer *, real 
-	    *, integer *, real *, real *, integer *, integer *), sorgqr_(
-	    integer *, integer *, integer *, real *, integer *, real *, real *
-, integer *, integer *);
     logical lquery;
     integer lwkopt;
 

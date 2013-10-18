@@ -32,15 +32,6 @@ static integer c__1 = 1;
     integer pvt;
     doublereal temp, temp2, tol3z;
     integer offpi, itemp;
-    extern /* Subroutine */ int zlarf_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *), zswap_(integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern doublereal dznrm2_(integer *, doublecomplex *, integer *), dlamch_(
-	    char *);
-    extern integer idamax_(integer *, doublereal *, integer *);
-    extern /* Subroutine */ int zlarfp_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

@@ -32,18 +32,8 @@ static integer c__1 = 1;
     complex t, ak;
     integer kc, kp, kx, kpc, npp;
     complex akp1, temp, akkp1;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *);
-    extern /* Complex */ void cdotu_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern /* Subroutine */ int cswap_(integer *, complex *, integer *, 
-	    complex *, integer *);
     integer kstep;
-    extern /* Subroutine */ int cspmv_(char *, integer *, complex *, complex *
-, complex *, integer *, complex *, complex *, integer *);
     logical upper;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer kcnext;
 
 

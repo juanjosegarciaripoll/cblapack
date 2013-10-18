@@ -33,22 +33,13 @@ static integer c__1 = 1;
     real w1, ei, ej, xi, xr, rec;
     integer its, ierr;
     real temp, norm, vmax;
-    extern doublereal snrm2_(integer *, real *, integer *);
     real scale;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     char trans[1];
     real vcrit;
-    extern doublereal sasum_(integer *, real *, integer *);
     real rootn, vnorm;
-    extern doublereal slapy2_(real *, real *);
     real absbii, absbjj;
-    extern integer isamax_(integer *, real *, integer *);
-    extern /* Subroutine */ int sladiv_(real *, real *, real *, real *, real *
-, real *);
     char normin[1];
     real nrmsml;
-    extern /* Subroutine */ int slatrs_(char *, char *, char *, char *, 
-	    integer *, real *, integer *, real *, real *, real *, integer *);
     real growto;
 
 

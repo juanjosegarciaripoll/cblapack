@@ -29,12 +29,7 @@ static integer c__1 = 1;
     integer k, m1, m2, m3;
     real cs;
     complex t11, t22, sn, temp;
-    extern /* Subroutine */ int crot_(integer *, complex *, integer *, 
-	    complex *, integer *, real *, complex *);
-    extern logical lsame_(char *, char *);
     logical wantq;
-    extern /* Subroutine */ int clartg_(complex *, complex *, real *, complex 
-	    *, complex *), xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

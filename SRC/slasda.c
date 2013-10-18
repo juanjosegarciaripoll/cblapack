@@ -40,20 +40,7 @@ static integer c__2 = 2;
     integer idxq, nlvl;
     real alpha;
     integer inode, ndiml, ndimr, idxqi, itemp, sqrei;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), slasd6_(integer *, integer *, integer *, integer *, 
-	    real *, real *, real *, real *, real *, integer *, integer *, 
-	    integer *, integer *, integer *, real *, integer *, real *, real *
-, real *, real *, integer *, real *, real *, real *, integer *, 
-	    integer *);
     integer nwork1, nwork2;
-    extern /* Subroutine */ int xerbla_(char *, integer *), slasdq_(
-	    char *, integer *, integer *, integer *, integer *, integer *, 
-	    real *, real *, real *, integer *, real *, integer *, real *, 
-	    integer *, real *, integer *), slasdt_(integer *, integer 
-	    *, integer *, integer *, integer *, integer *, integer *), 
-	    slaset_(char *, integer *, integer *, real *, real *, real *, 
-	    integer *);
     integer smlszp;
 
 

@@ -35,16 +35,9 @@ static logical c_true = TRUE_;
     complex wk;
     integer kln;
     real ulp, eps3, unfl;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     logical leftv, bothv;
     real hnorm;
-    extern /* Subroutine */ int claein_(logical *, logical *, integer *, 
-	    complex *, integer *, complex *, complex *, complex *, integer *, 
-	    real *, real *, real *, integer *);
-    extern doublereal slamch_(char *), clanhs_(char *, integer *, 
-	    complex *, integer *, real *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     logical noinit;
     integer ldwork;
     logical rightv, fromqr;

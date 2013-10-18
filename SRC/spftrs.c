@@ -25,10 +25,7 @@ static real c_b10 = 1.f;
 
     /* Local variables */
     logical normaltransr;
-    extern logical lsame_(char *, char *);
     logical lower;
-    extern /* Subroutine */ int stfsm_(char *, char *, char *, char *, char *, 
-	     integer *, integer *, real *, real *, real *, integer *), xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2)                                    -- */

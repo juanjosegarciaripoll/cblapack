@@ -29,10 +29,6 @@ static real c_b11 = 1.f;
     integer i__;
     real temp;
     integer jlast;
-    extern doublereal sasum_(integer *, real *, integer *);
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
-    extern integer isamax_(integer *, real *, integer *);
     real altsgn, estold;
 
 

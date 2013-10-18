@@ -36,17 +36,7 @@ static integer c__1 = 1;
     doublecomplex z__[4]	/* was [2][2] */, rhs[2];
     integer ierr, ipiv[2], jpiv[2];
     doublecomplex alpha;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *), zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), zgesc2_(
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	     integer *, doublereal *), zgetc2_(integer *, doublecomplex *, 
-	    integer *, integer *, integer *, integer *);
     doublereal scaloc;
-    extern /* Subroutine */ int xerbla_(char *, integer *), zlatdf_(
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     doublereal *, doublereal *, integer *, integer *);
     logical notran;
 
 

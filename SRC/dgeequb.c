@@ -24,8 +24,6 @@
     /* Local variables */
     integer i__, j;
     doublereal radix, rcmin, rcmax;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal bignum, logrdx, smlnum;
 
 

@@ -28,13 +28,7 @@ static integer c_n1 = -1;
     /* Local variables */
     integer i__, j;
     real eps, temp;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    slabad_(real *, real *);
-    extern doublereal slamch_(char *);
     real bignum;
-    extern integer isamax_(integer *, real *, integer *);
-    extern /* Subroutine */ int slaswp_(integer *, real *, integer *, integer 
-	    *, integer *, integer *, integer *);
     real smlnum;
 
 

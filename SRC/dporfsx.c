@@ -38,29 +38,11 @@ static integer c__1 = 1;
     integer ref_type__, j;
     doublereal rcond_tmp__;
     integer prec_type__;
-    extern doublereal dla_porcond__(char *, integer *, doublereal *, integer *
-	    , doublereal *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *, ftnlen);
     doublereal cwise_wrong__;
-    extern /* Subroutine */ int dla_porfsx_extended__(integer *, char *, 
-	    integer *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, logical *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *,
-	     logical *, integer *, ftnlen);
     char norm[1];
     logical ignore_cwise__;
-    extern logical lsame_(char *, char *);
     doublereal anorm;
     logical rcequ;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), dpocon_(
-	    char *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, doublereal *, integer *, integer *);
-    extern doublereal dlansy_(char *, char *, integer *, doublereal *, 
-	    integer *, doublereal *);
-    extern integer ilaprec_(char *);
     integer ithresh, n_norms__;
     doublereal rthresh;
 

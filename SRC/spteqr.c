@@ -31,13 +31,7 @@ static integer c__1 = 1;
     integer i__;
     real vt[1]	/* was [1][1] */;
     integer nru;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), slaset_(
-	    char *, integer *, integer *, real *, real *, real *, integer *), sbdsqr_(char *, integer *, integer *, integer *, integer 
-	    *, real *, real *, real *, integer *, real *, integer *, real *, 
-	    integer *, real *, integer *);
     integer icompz;
-    extern /* Subroutine */ int spttrf_(integer *, real *, real *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

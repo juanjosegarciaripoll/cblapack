@@ -36,23 +36,7 @@ static doublereal c_b26 = 1.;
     integer ib;
     doublereal ei;
     integer nb, nh, nx, iws;
-    extern /* Subroutine */ int dgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *);
     integer nbmin, iinfo;
-    extern /* Subroutine */ int dtrmm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *), daxpy_(
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *), dgehd2_(integer *, integer *, integer *, doublereal *, 
-	     integer *, doublereal *, doublereal *, integer *), dlahr2_(
-	    integer *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *), 
-	    dlarfb_(char *, char *, char *, char *, integer *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer ldwork, lwkopt;
     logical lquery;
 

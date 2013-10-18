@@ -27,16 +27,7 @@ static integer c__1 = 1;
     integer j, jc, jj;
     real ajj;
     integer jjn;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
-    extern /* Subroutine */ int sspr_(char *, integer *, real *, real *, 
-	    integer *, real *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     logical upper;
-    extern /* Subroutine */ int stpmv_(char *, char *, char *, integer *, 
-	    real *, real *, integer *), xerbla_(char *
-, integer *), stptri_(char *, char *, integer *, real *, 
-	    integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

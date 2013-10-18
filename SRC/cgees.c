@@ -35,34 +35,9 @@ static integer c_n1 = -1;
     integer ibal;
     real anrm;
     integer ierr, itau, iwrk, icond, ieval;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *), cgebak_(char *, char *, integer *, integer 
-	    *, integer *, real *, integer *, complex *, integer *, integer *), cgebal_(char *, integer *, complex *, integer *, 
-	    integer *, integer *, real *, integer *), slabad_(real *, 
-	    real *);
     logical scalea;
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *);
     real cscale;
-    extern /* Subroutine */ int cgehrd_(integer *, integer *, integer *, 
-	    complex *, integer *, complex *, complex *, integer *, integer *),
-	     clascl_(char *, integer *, integer *, real *, real *, integer *, 
-	    integer *, complex *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), xerbla_(char *, 
-	    integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     real bignum;
-    extern /* Subroutine */ int chseqr_(char *, char *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *, 
-	    complex *, integer *, integer *), cunghr_(integer 
-	    *, integer *, integer *, complex *, integer *, complex *, complex 
-	    *, integer *, integer *), ctrsen_(char *, char *, logical *, 
-	    integer *, complex *, integer *, complex *, integer *, complex *, 
-	    integer *, real *, real *, complex *, integer *, integer *);
     integer minwrk, maxwrk;
     real smlnum;
     integer hswork;

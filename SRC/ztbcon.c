@@ -28,24 +28,12 @@ static integer c__1 = 1;
     /* Local variables */
     integer ix, kase, kase1;
     doublereal scale;
-    extern logical lsame_(char *, char *);
     integer isave[3];
     doublereal anorm;
     logical upper;
     doublereal xnorm;
-    extern /* Subroutine */ int zlacn2_(integer *, doublecomplex *, 
-	    doublecomplex *, doublereal *, integer *, integer *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal ainvnm;
-    extern integer izamax_(integer *, doublecomplex *, integer *);
-    extern doublereal zlantb_(char *, char *, char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *);
     logical onenrm;
-    extern /* Subroutine */ int zlatbs_(char *, char *, char *, char *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     doublereal *, doublereal *, integer *), zdrscl_(integer *, doublereal *, doublecomplex *, 
-	    integer *);
     char normin[1];
     doublereal smlnum;
     logical nounit;

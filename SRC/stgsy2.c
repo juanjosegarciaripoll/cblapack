@@ -37,24 +37,9 @@ static real c_b56 = 0.f;
     integer ie, je, mb, nb, ii, jj, is, js;
     real rhs[8];
     integer isp1, jsp1;
-    extern /* Subroutine */ int sger_(integer *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, integer *);
     integer ierr, zdim, ipiv[8], jpiv[8];
     real alpha;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    sgemm_(char *, char *, integer *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *), sgemv_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *), scopy_(integer *, real *, integer *, real *, integer *), 
-	    saxpy_(integer *, real *, real *, integer *, real *, integer *), 
-	    sgesc2_(integer *, real *, integer *, real *, integer *, integer *
-, real *), sgetc2_(integer *, real *, integer *, integer *, 
-	    integer *, integer *);
     real scaloc;
-    extern /* Subroutine */ int slatdf_(integer *, integer *, real *, integer 
-	    *, real *, real *, real *, integer *, integer *), xerbla_(char *, 
-	    integer *), slaset_(char *, integer *, integer *, real *, 
-	    real *, real *, integer *);
     logical notran;
 
 

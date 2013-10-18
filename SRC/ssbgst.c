@@ -39,20 +39,8 @@ static real c_b20 = -1.f;
     integer j1t, j2t;
     real bii;
     integer kbt, nrt, inca;
-    extern /* Subroutine */ int sger_(integer *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, integer *), srot_(integer *, 
-	     real *, integer *, real *, integer *, real *, real *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     logical upper, wantx;
-    extern /* Subroutine */ int slar2v_(integer *, real *, real *, real *, 
-	    integer *, real *, real *, integer *), xerbla_(char *, integer *);
     logical update;
-    extern /* Subroutine */ int slaset_(char *, integer *, integer *, real *, 
-	    real *, real *, integer *), slartg_(real *, real *, real *
-, real *, real *), slargv_(integer *, real *, integer *, real *, 
-	    integer *, real *, integer *), slartv_(integer *, real *, integer 
-	    *, real *, integer *, real *, real *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -31,20 +31,7 @@ static integer c__1 = 1;
     integer k;
     doublecomplex ct;
     doublereal akk, bkk;
-    extern /* Subroutine */ int zher2_(char *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
-    extern logical lsame_(char *, char *);
     logical upper;
-    extern /* Subroutine */ int zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), ztrmv_(
-	    char *, char *, char *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), ztrsv_(char *
-, char *, char *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), xerbla_(char 
-	    *, integer *), zdscal_(integer *, doublereal *, 
-	    doublecomplex *, integer *), zlacgv_(integer *, doublecomplex *, 
-	    integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -23,8 +23,6 @@
 
     /* Local variables */
     integer i__, j;
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

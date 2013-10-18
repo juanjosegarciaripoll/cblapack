@@ -36,20 +36,8 @@ static real c_b26 = 0.f;
     real rho;
     integer nlp1, nlp2, nrp1;
     real temp;
-    extern doublereal snrm2_(integer *, real *, integer *);
     integer ctemp;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     integer ktemp;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
-    extern doublereal slamc3_(real *, real *);
-    extern /* Subroutine */ int slasd4_(integer *, integer *, real *, real *, 
-	    real *, real *, real *, real *, integer *), xerbla_(char *, 
-	    integer *), slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *), slacpy_(char *, integer *, integer *, real *, integer *, 
-	    real *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

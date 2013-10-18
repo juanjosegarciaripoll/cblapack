@@ -44,40 +44,13 @@ static integer c__0 = 0;
     integer idum;
     real taul[4], dsum, taur[4], scpy[16]	/* was [4][4] */, tcpy[16]	
 	    /* was [4][4] */;
-    extern /* Subroutine */ int srot_(integer *, real *, integer *, real *, 
-	    integer *, real *, real *);
     real scale, bqra21, brqa21;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     real licop[16]	/* was [4][4] */;
     integer linfo;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     real ircop[16]	/* was [4][4] */, dnorm;
     integer iwork[4];
-    extern /* Subroutine */ int slagv2_(real *, integer *, real *, integer *, 
-	    real *, real *, real *, real *, real *, real *, real *), sgeqr2_(
-	    integer *, integer *, real *, integer *, real *, real *, integer *
-), sgerq2_(integer *, integer *, real *, integer *, real *, real *
-, integer *), sorg2r_(integer *, integer *, integer *, real *, 
-	    integer *, real *, real *, integer *), sorgr2_(integer *, integer 
-	    *, integer *, real *, integer *, real *, real *, integer *), 
-	    sorm2r_(char *, char *, integer *, integer *, integer *, real *, 
-	    integer *, real *, real *, integer *, real *, integer *), sormr2_(char *, char *, integer *, integer *, integer *, 
-	    real *, integer *, real *, real *, integer *, real *, integer *);
     real dscale;
-    extern /* Subroutine */ int stgsy2_(char *, integer *, integer *, integer 
-	    *, real *, integer *, real *, integer *, real *, integer *, real *
-, integer *, real *, integer *, real *, integer *, real *, real *, 
-	     real *, integer *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *), slartg_(real *, real *, 
-	    real *, real *, real *);
     real thresh;
-    extern /* Subroutine */ int slaset_(char *, integer *, integer *, real *, 
-	    real *, real *, integer *), slassq_(integer *, real *, 
-	    integer *, real *, real *);
     real smlnum;
     logical strong;
 

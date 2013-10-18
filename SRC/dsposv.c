@@ -35,27 +35,7 @@ static integer c__1 = 1;
     integer ptsa;
     doublereal rnrm, xnrm;
     integer ptsx;
-    extern logical lsame_(char *, char *);
     integer iiter;
-    extern /* Subroutine */ int daxpy_(integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *), dsymm_(char *, char *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *), dlag2s_(integer *, integer *, doublereal *, 
-	    integer *, real *, integer *, integer *), slag2d_(integer *, 
-	    integer *, real *, integer *, doublereal *, integer *, integer *),
-	     dlat2s_(char *, integer *, doublereal *, integer *, real *, 
-	    integer *, integer *);
-    extern doublereal dlamch_(char *);
-    extern integer idamax_(integer *, doublereal *, integer *);
-    extern /* Subroutine */ int dlacpy_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *), 
-	    xerbla_(char *, integer *);
-    extern doublereal dlansy_(char *, char *, integer *, doublereal *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int dpotrf_(char *, integer *, doublereal *, 
-	    integer *, integer *), dpotrs_(char *, integer *, integer 
-	    *, doublereal *, integer *, doublereal *, integer *, integer *), spotrf_(char *, integer *, real *, integer *, integer *), spotrs_(char *, integer *, integer *, real *, integer *, 
-	    real *, integer *, integer *);
 
 
 /*  -- LAPACK PROTOTYPE driver routine (version 3.1.2) -- */

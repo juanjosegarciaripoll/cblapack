@@ -40,30 +40,9 @@ static integer c__1 = 1;
     integer j1t, j2t;
     doublereal bii;
     integer kbt, nrt, inca;
-    extern /* Subroutine */ int zrot_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublecomplex *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int zgerc_(integer *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
     logical upper;
-    extern /* Subroutine */ int zgeru_(integer *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
     logical wantx;
-    extern /* Subroutine */ int zlar2v_(integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, integer *, doublereal *, 
-	    doublecomplex *, integer *), xerbla_(char *, integer *), 
-	    zdscal_(integer *, doublereal *, doublecomplex *, integer *);
     logical update;
-    extern /* Subroutine */ int zlacgv_(integer *, doublecomplex *, integer *)
-	    , zlaset_(char *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, integer *), zlartg_(
-	    doublecomplex *, doublecomplex *, doublereal *, doublecomplex *, 
-	    doublecomplex *), zlargv_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, integer *), zlartv_(
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	     doublereal *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

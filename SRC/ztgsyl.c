@@ -39,31 +39,13 @@ static doublecomplex c_b45 = {1.,0.};
     /* Local variables */
     integer i__, j, k, p, q, ie, je, mb, nb, is, js, pq;
     doublereal dsum;
-    extern logical lsame_(char *, char *);
     integer ifunc, linfo;
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *), zgemm_(char *, char *, integer *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
     integer lwmin;
     doublereal scale2, dscale;
-    extern /* Subroutine */ int ztgsy2_(char *, integer *, integer *, integer 
-	    *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *);
     doublereal scaloc;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer iround;
     logical notran;
     integer isolve;
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), 
-	    zlaset_(char *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, integer *);
     logical lquery;
 
 

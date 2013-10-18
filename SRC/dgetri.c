@@ -29,23 +29,8 @@ static doublereal c_b22 = 1.;
 
     /* Local variables */
     integer i__, j, jb, nb, jj, jp, nn, iws;
-    extern /* Subroutine */ int dgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *),
-	     dgemv_(char *, integer *, integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    integer *);
     integer nbmin;
-    extern /* Subroutine */ int dswap_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *), dtrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *), xerbla_(
-	    char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer ldwork;
-    extern /* Subroutine */ int dtrtri_(char *, char *, integer *, doublereal 
-	    *, integer *, integer *);
     integer lwkopt;
     logical lquery;
 

@@ -38,35 +38,15 @@ static real c_b41 = 1.f;
     integer lsv;
     real tst, eps2;
     integer lend, jtot;
-    extern /* Subroutine */ int slae2_(real *, real *, real *, real *, real *)
-	    ;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int clasr_(char *, char *, char *, integer *, 
-	    integer *, real *, real *, complex *, integer *);
     real anorm;
-    extern /* Subroutine */ int cswap_(integer *, complex *, integer *, 
-	    complex *, integer *);
     integer lendm1, lendp1;
-    extern /* Subroutine */ int slaev2_(real *, real *, real *, real *, real *
-, real *, real *);
-    extern doublereal slapy2_(real *, real *);
     integer iscale;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real safmax;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *);
     integer lendsv;
-    extern /* Subroutine */ int slartg_(real *, real *, real *, real *, real *
-);
     real ssfmin;
     integer nmaxit, icompz;
     real ssfmax;
-    extern doublereal slanst_(char *, integer *, real *, real *);
-    extern /* Subroutine */ int slasrt_(char *, integer *, real *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

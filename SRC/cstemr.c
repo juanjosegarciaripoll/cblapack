@@ -42,54 +42,26 @@ static real c_b18 = .003f;
     integer itmp;
     real tnrm;
     integer inde2;
-    extern /* Subroutine */ int slae2_(real *, real *, real *, real *, real *)
-	    ;
     integer itmp2;
     real rtol1, rtol2, scale;
     integer indgp;
-    extern logical lsame_(char *, char *);
     integer iinfo;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     integer iindw, ilast;
-    extern /* Subroutine */ int cswap_(integer *, complex *, integer *, 
-	    complex *, integer *);
     integer lwmin;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     logical wantz;
-    extern /* Subroutine */ int slaev2_(real *, real *, real *, real *, real *
-, real *, real *);
     logical alleig;
     integer ibegin;
     logical indeig;
     integer iindbl;
     logical valeig;
-    extern doublereal slamch_(char *);
     integer wbegin;
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
     integer inderr, iindwk, indgrs, offset;
-    extern /* Subroutine */ int slarrc_(char *, integer *, real *, real *, 
-	    real *, real *, real *, integer *, integer *, integer *, integer *
-), clarrv_(integer *, real *, real *, real *, real *, 
-	    real *, integer *, integer *, integer *, integer *, real *, real *
-, real *, real *, real *, real *, integer *, integer *, real *, 
-	    complex *, integer *, integer *, real *, integer *, integer *), 
-	    slarre_(char *, integer *, real *, real *, integer *, integer *, 
-	    real *, real *, real *, real *, real *, real *, integer *, 
-	    integer *, integer *, real *, real *, real *, integer *, integer *
-, real *, real *, real *, integer *, integer *);
     integer iinspl, indwrk, ifirst, liwmin, nzcmin;
     real pivmin, thresh;
-    extern doublereal slanst_(char *, integer *, real *, real *);
-    extern /* Subroutine */ int slarrj_(integer *, real *, real *, integer *, 
-	    integer *, real *, integer *, real *, real *, real *, integer *, 
-	    real *, real *, integer *);
     integer nsplit;
-    extern /* Subroutine */ int slarrr_(integer *, real *, real *, integer *);
     real smlnum;
-    extern /* Subroutine */ int slasrt_(char *, integer *, real *, integer *);
     logical lquery, zquery;
 
 

@@ -27,16 +27,8 @@ static real c_b15 = -1.f;
     /* Local variables */
     integer k, n1, n2;
     logical normaltransr;
-    extern logical lsame_(char *, char *);
     logical lower;
-    extern /* Subroutine */ int strsm_(char *, char *, char *, char *, 
-	    integer *, integer *, real *, real *, integer *, real *, integer *
-), ssyrk_(char *, char *, integer 
-	    *, integer *, real *, real *, integer *, real *, real *, integer *
-), xerbla_(char *, integer *);
     logical nisodd;
-    extern /* Subroutine */ int spotrf_(char *, integer *, real *, integer *, 
-	    integer *);
 
 
 /*  -- LAPACK routine (version 3.2)                                    -- */

@@ -29,21 +29,8 @@ static integer c__1 = 1;
     real aii;
     integer pvt;
     real temp, temp2;
-    extern doublereal snrm2_(integer *, real *, integer *);
     real tol3z;
-    extern /* Subroutine */ int slarf_(char *, integer *, integer *, real *, 
-	    integer *, real *, real *, integer *, real *);
     integer itemp;
-    extern /* Subroutine */ int sswap_(integer *, real *, integer *, real *, 
-	    integer *), sgeqr2_(integer *, integer *, real *, integer *, real 
-	    *, real *, integer *), sorm2r_(char *, char *, integer *, integer 
-	    *, integer *, real *, integer *, real *, real *, integer *, real *
-, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer isamax_(integer *, real *, integer *);
-    extern /* Subroutine */ int slarfp_(integer *, real *, real *, integer *, 
-	    real *);
 
 
 /*  -- LAPACK deprecated driver routine (version 3.2) -- */

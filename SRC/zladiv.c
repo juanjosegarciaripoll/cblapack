@@ -22,8 +22,6 @@
 
     /* Local variables */
     doublereal zi, zr;
-    extern /* Subroutine */ int dladiv_(doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

@@ -24,7 +24,6 @@
     doublereal f, g;
     integer i__, i4;
     doublereal eii, eir;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

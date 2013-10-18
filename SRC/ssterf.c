@@ -34,24 +34,15 @@ static real c_b32 = 1.f;
     integer lsv;
     real eps2, oldc;
     integer lend, jtot;
-    extern /* Subroutine */ int slae2_(real *, real *, real *, real *, real *)
-	    ;
     real gamma, alpha, sigma, anorm;
-    extern doublereal slapy2_(real *, real *);
     integer iscale;
     real oldgam;
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real safmax;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *);
     integer lendsv;
     real ssfmin;
     integer nmaxit;
     real ssfmax;
-    extern doublereal slanst_(char *, integer *, real *, real *);
-    extern /* Subroutine */ int slasrt_(char *, integer *, real *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -31,18 +31,7 @@ static doublereal c_b22 = -1.;
 
     /* Local variables */
     integer j, jb, nb, nn;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int dtrmm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *), dtrsm_(
-	    char *, char *, char *, char *, integer *, integer *, doublereal *
-, doublereal *, integer *, doublereal *, integer *);
     logical upper;
-    extern /* Subroutine */ int dtrti2_(char *, char *, integer *, doublereal 
-	    *, integer *, integer *), xerbla_(char *, integer 
-	    *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     logical nounit;
 
 

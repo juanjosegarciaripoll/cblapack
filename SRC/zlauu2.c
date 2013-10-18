@@ -29,16 +29,7 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__;
     doublereal aii;
-    extern logical lsame_(char *, char *);
-    extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern /* Subroutine */ int zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *);
     logical upper;
-    extern /* Subroutine */ int xerbla_(char *, integer *), zdscal_(
-	    integer *, doublereal *, doublecomplex *, integer *), zlacgv_(
-	    integer *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

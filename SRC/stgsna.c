@@ -43,38 +43,19 @@ static integer c__3 = 3;
     real uhav, uhbv;
     integer ifst;
     real lnrm;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
     integer ilst;
     real rnrm;
-    extern /* Subroutine */ int slag2_(real *, integer *, real *, integer *, 
-	    real *, real *, real *, real *, real *, real *);
-    extern doublereal snrm2_(integer *, real *, integer *);
     real root1, root2, scale;
-    extern logical lsame_(char *, char *);
     real uhavi, uhbvi;
-    extern /* Subroutine */ int sgemv_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *);
     real tmpii;
     integer lwmin;
     logical wants;
     real tmpir, tmpri, dummy[1], tmprr;
-    extern doublereal slapy2_(real *, real *);
     real dummy1[1], alphai, alphar;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     logical wantbh, wantdf;
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *), stgexc_(logical *, logical 
-	    *, integer *, real *, integer *, real *, integer *, real *, 
-	    integer *, real *, integer *, integer *, integer *, real *, 
-	    integer *, integer *);
     logical somcon;
     real alprqt, smlnum;
     logical lquery;
-    extern /* Subroutine */ int stgsyl_(char *, integer *, integer *, integer 
-	    *, real *, integer *, real *, integer *, real *, integer *, real *
-, integer *, real *, integer *, real *, integer *, real *, real *, 
-	     real *, integer *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

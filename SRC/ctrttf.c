@@ -23,9 +23,7 @@
     /* Local variables */
     integer i__, j, k, l, n1, n2, ij, nt, nx2, np1x2;
     logical normaltransr;
-    extern logical lsame_(char *, char *);
     logical lower;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     logical nisodd;
 
 

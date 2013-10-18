@@ -37,7 +37,6 @@
     real f2s, g2s, eps, scale;
     integer count;
     real safmn2, safmx2;
-    extern doublereal slapy2_(real *, real *), slamch_(char *);
     real safmin;
 
 

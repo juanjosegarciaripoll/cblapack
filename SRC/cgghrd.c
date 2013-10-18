@@ -33,15 +33,8 @@ static integer c__1 = 1;
     complex s;
     logical ilq, ilz;
     integer jcol;
-    extern /* Subroutine */ int crot_(integer *, complex *, integer *, 
-	    complex *, integer *, real *, complex *);
     integer jrow;
-    extern logical lsame_(char *, char *);
     complex ctemp;
-    extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *), clartg_(complex *, 
-	    complex *, real *, complex *, complex *), xerbla_(char *, integer 
-	    *);
     integer icompq, icompz;
 
 

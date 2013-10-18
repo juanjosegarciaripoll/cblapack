@@ -29,26 +29,9 @@ static integer c_n1 = -1;
 
     /* Local variables */
     integer nb, mn, nr, nb1, nb2, nb3, nb4, lopt;
-    extern /* Subroutine */ int cgemv_(char *, integer *, integer *, complex *
-, complex *, integer *, complex *, integer *, complex *, complex *
-, integer *), ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *), caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *), ctrmv_(char *, char *, char *, 
-	    integer *, complex *, integer *, complex *, integer *), cggrqf_(integer *, integer *, integer *, complex 
-	    *, integer *, complex *, complex *, integer *, complex *, complex 
-	    *, integer *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer lwkmin;
-    extern /* Subroutine */ int cunmqr_(char *, char *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *, 
-	    complex *, integer *, integer *), cunmrq_(char *, 
-	    char *, integer *, integer *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *, complex *, integer *, integer *);
     integer lwkopt;
     logical lquery;
-    extern /* Subroutine */ int ctrtrs_(char *, char *, char *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

@@ -39,15 +39,7 @@ static integer c__1 = 1;
     real det, h21s;
     integer its;
     real ulp, sum, tst, rt1i, rt2i, rt1r, rt2r;
-    extern /* Subroutine */ int srot_(integer *, real *, integer *, real *, 
-	    integer *, real *, real *), scopy_(integer *, real *, integer *, 
-	    real *, integer *), slanv2_(real *, real *, real *, real *, real *
-, real *, real *, real *, real *, real *), slabad_(real *, real *)
-	    ;
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int slarfg_(integer *, real *, real *, integer *, 
-	    real *);
     real safmax, rtdisc, smlnum;
 
 

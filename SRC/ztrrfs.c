@@ -36,21 +36,9 @@ static integer c__1 = 1;
     doublereal eps;
     integer kase;
     doublereal safe1, safe2;
-    extern logical lsame_(char *, char *);
     integer isave[3];
     logical upper;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), ztrmv_(
-	    char *, char *, char *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), ztrsv_(char *
-, char *, char *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zlacn2_(
-	    integer *, doublecomplex *, doublecomplex *, doublereal *, 
-	    integer *, integer *);
-    extern doublereal dlamch_(char *);
     doublereal safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     logical notran;
     char transn[1], transt[1];
     logical nounit;

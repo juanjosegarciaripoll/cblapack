@@ -28,16 +28,7 @@ static real c_b23 = 1.f;
 
     /* Local variables */
     integer i__, j, l, kd, lm;
-    extern /* Subroutine */ int sger_(integer *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sgemv_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *);
     logical lnoti;
-    extern /* Subroutine */ int sswap_(integer *, real *, integer *, real *, 
-	    integer *), stbsv_(char *, char *, char *, integer *, integer *, 
-	    real *, integer *, real *, integer *), 
-	    xerbla_(char *, integer *);
     logical notran;
 
 

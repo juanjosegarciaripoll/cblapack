@@ -32,21 +32,8 @@ static integer c__1 = 1;
     doublecomplex t, r1, d11, d21, d22;
     integer jb, jj, kk, jp, kp, kw, kkw, imax, jmax;
     doublereal alpha;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *), zgemm_(char *, char *, integer *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
     integer kstep;
-    extern /* Subroutine */ int zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), 
-	    zcopy_(integer *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *), zswap_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
     doublereal absakk, colmax;
-    extern integer izamax_(integer *, doublecomplex *, integer *);
     doublereal rowmax;
 
 

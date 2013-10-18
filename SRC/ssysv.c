@@ -27,16 +27,8 @@ static integer c_n1 = -1;
 
     /* Local variables */
     integer nb;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer lwkopt;
     logical lquery;
-    extern /* Subroutine */ int ssytrf_(char *, integer *, real *, integer *, 
-	    integer *, real *, integer *, integer *), ssytrs_(char *, 
-	    integer *, integer *, real *, integer *, integer *, real *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

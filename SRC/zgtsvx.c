@@ -30,30 +30,9 @@ static integer c__1 = 1;
 
     /* Local variables */
     char norm[1];
-    extern logical lsame_(char *, char *);
     doublereal anorm;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
     logical nofact;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern doublereal zlangt_(char *, integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *);
     logical notran;
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), 
-	    zgtcon_(char *, integer *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, integer *, doublereal *, 
-	    doublereal *, doublecomplex *, integer *), zgtrfs_(char *, 
-	     integer *, integer *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, doublecomplex *
-, doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *, 
-	    doublecomplex *, doublereal *, integer *), zgttrf_(
-	    integer *, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, integer *, integer *), zgttrs_(char *, integer *, 
-	     integer *, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

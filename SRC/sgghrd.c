@@ -33,14 +33,7 @@ static integer c__1 = 1;
     integer jcol;
     real temp;
     integer jrow;
-    extern /* Subroutine */ int srot_(integer *, real *, integer *, real *, 
-	    integer *, real *, real *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer icompq;
-    extern /* Subroutine */ int slaset_(char *, integer *, integer *, real *, 
-	    real *, real *, integer *), slartg_(real *, real *, real *
-, real *, real *);
     integer icompz;
 
 

@@ -50,20 +50,7 @@ static integer c__2 = 2;
     integer mend, jcol, jlen, jbot, mbot, jtop, jrow, mtop;
     complex alpha;
     logical accum;
-    extern /* Subroutine */ int cgemm_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *);
     integer ndcol, incol, krcol, nbmps;
-    extern /* Subroutine */ int ctrmm_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *), claqr1_(integer *, 
-	    complex *, integer *, complex *, complex *, complex *), slabad_(
-	    real *, real *), clarfg_(integer *, complex *, complex *, integer 
-	    *, complex *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), claset_(char *, 
-	    integer *, integer *, complex *, complex *, complex *, integer *);
     real safmin, safmax;
     complex refsum;
     integer mstart;

@@ -31,22 +31,10 @@ static doublereal c_b18 = 1.;
     integer i__, j, maxlocval;
     doublereal ajj;
     integer pvt;
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int dgemv_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *);
     doublereal dtemp;
     integer itemp;
-    extern /* Subroutine */ int dswap_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
     doublereal dstop;
     logical upper;
-    extern doublereal dlamch_(char *);
-    extern logical disnan_(doublereal *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer dmaxloc_(doublereal *, integer *);
 
 
 /*  -- LAPACK PROTOTYPE routine (version 3.2) -- */

@@ -38,19 +38,7 @@ static integer c__2 = 2;
     /* Local variables */
     integer i__, j, i1, ic, lf, nd, ll, nl, nr, im1, nlf, nrf, lvl, ndb1, 
 	    nlp1, lvl2, nrp1, jcol, nlvl, sqre, jrow, jimag;
-    extern /* Subroutine */ int dgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *);
     integer jreal, inode, ndiml, ndimr;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zlals0_(integer *, integer *, 
-	    integer *, integer *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, integer *, integer *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *, 
-	     doublereal *, integer *), dlasdt_(integer *, integer *, integer *
-, integer *, integer *, integer *, integer *), xerbla_(char *, 
-	    integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

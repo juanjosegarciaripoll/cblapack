@@ -29,16 +29,7 @@ static real c_b27 = 1.f;
     /* Local variables */
     integer k;
     real ct, akk, bkk;
-    extern /* Subroutine */ int ssyr2_(char *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     logical upper;
-    extern /* Subroutine */ int saxpy_(integer *, real *, real *, integer *, 
-	    real *, integer *), strmv_(char *, char *, char *, integer *, 
-	    real *, integer *, real *, integer *), 
-	    strsv_(char *, char *, char *, integer *, real *, integer *, real 
-	    *, integer *), xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

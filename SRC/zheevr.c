@@ -40,60 +40,26 @@ static integer c_n1 = -1;
     doublereal rmin, rmax;
     logical test;
     integer itmp1;
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *);
     integer indrd, indre;
     doublereal sigma;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     char order[1];
     integer indwk;
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
     integer lwmin;
     logical lower, wantz;
-    extern /* Subroutine */ int zswap_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
     logical alleig, indeig;
     integer iscale, ieeeok, indibl, indrdd, indifl, indree;
     logical valeig;
     doublereal safmin;
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), zdscal_(
-	    integer *, doublereal *, doublecomplex *, integer *);
     doublereal abstll, bignum;
     integer indtau, indisp;
-    extern /* Subroutine */ int dsterf_(integer *, doublereal *, doublereal *, 
-	     integer *);
     integer indiwo, indwkn;
-    extern /* Subroutine */ int dstebz_(char *, char *, integer *, doublereal 
-	    *, doublereal *, integer *, integer *, doublereal *, doublereal *, 
-	     doublereal *, integer *, integer *, doublereal *, integer *, 
-	    integer *, doublereal *, integer *, integer *);
     integer indrwk, liwmin;
-    extern /* Subroutine */ int zhetrd_(char *, integer *, doublecomplex *, 
-	    integer *, doublereal *, doublereal *, doublecomplex *, 
-	    doublecomplex *, integer *, integer *);
     logical tryrac;
     integer lrwmin, llwrkn, llwork, nsplit;
     doublereal smlnum;
-    extern /* Subroutine */ int zstein_(integer *, doublereal *, doublereal *, 
-	     integer *, doublereal *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *, integer *, integer *, integer *);
     logical lquery;
     integer lwkopt;
-    extern doublereal zlansy_(char *, char *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int zstemr_(char *, char *, integer *, doublereal 
-	    *, doublereal *, doublereal *, doublereal *, integer *, integer *, 
-	     integer *, doublereal *, doublecomplex *, integer *, integer *, 
-	    integer *, logical *, doublereal *, integer *, integer *, integer 
-	    *, integer *), zunmtr_(char *, char *, char *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *, integer *
-);
     integer llrwork;
 
 

@@ -41,54 +41,18 @@ static doublereal c_b38 = 0.;
     logical ilvl, ilvr;
     integer lopt;
     doublereal anrm1, anrm2, bnrm1, bnrm2, absai, scale, absar, sbeta;
-    extern logical lsame_(char *, char *);
     integer ileft, iinfo, icols, iwork, irows;
-    extern /* Subroutine */ int dggbak_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, integer *), dggbal_(char *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, doublereal *, integer *);
-    extern doublereal dlamch_(char *), dlange_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *);
     doublereal salfai;
-    extern /* Subroutine */ int dgghrd_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, integer *), dlascl_(char *, integer *, integer *, doublereal 
-	    *, doublereal *, integer *, integer *, doublereal *, integer *, 
-	    integer *);
     doublereal salfar;
-    extern /* Subroutine */ int dgeqrf_(integer *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *, integer *), 
-	    dlacpy_(char *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
     doublereal safmin;
-    extern /* Subroutine */ int dlaset_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *);
     doublereal safmax;
     char chtemp[1];
     logical ldumma[1];
-    extern /* Subroutine */ int dhgeqz_(char *, char *, char *, integer *, 
-	    integer *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, doublereal *, doublereal *, 
-	     integer *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *), dtgevc_(char *, char *, 
-	    logical *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *, integer *, doublereal *, integer *), 
-	    xerbla_(char *, integer *);
     integer ijobvl, iright;
     logical ilimit;
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer ijobvr;
-    extern /* Subroutine */ int dorgqr_(integer *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    integer *);
     doublereal onepls;
     integer lwkmin;
-    extern /* Subroutine */ int dormqr_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *, integer *);
     integer lwkopt;
     logical lquery;
 

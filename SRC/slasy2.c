@@ -50,12 +50,7 @@ static integer c__0 = 0;
     real xmax;
     integer ipsv, jpsv;
     logical bswap;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), sswap_(integer *, real *, integer *, real *, integer *
-);
     logical xswap;
-    extern doublereal slamch_(char *);
-    extern integer isamax_(integer *, real *, integer *);
     real smlnum;
 
 

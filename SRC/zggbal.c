@@ -41,25 +41,12 @@ static doublereal c_b72 = .5;
     doublereal beta, coef;
     integer irab, lrab;
     doublereal basl, cmax;
-    extern doublereal ddot_(integer *, doublereal *, integer *, doublereal *, 
-	    integer *);
     doublereal coef2, coef5, gamma, alpha;
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *);
-    extern logical lsame_(char *, char *);
     doublereal sfmin, sfmax;
     integer iflow;
-    extern /* Subroutine */ int daxpy_(integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *);
     integer kount;
-    extern /* Subroutine */ int zswap_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
     doublereal pgamma;
-    extern /* Subroutine */ int xerbla_(char *, integer *), zdscal_(
-	    integer *, doublereal *, doublecomplex *, integer *);
     integer lsfmin;
-    extern integer izamax_(integer *, doublecomplex *, integer *);
     integer lsfmax;
 
 

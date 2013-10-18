@@ -24,9 +24,6 @@
     /* Local variables */
     doublereal t;
     doublecomplex w;
-    extern /* Subroutine */ int dlaev2_(doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

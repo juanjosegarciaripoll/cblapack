@@ -28,14 +28,7 @@ static real c_b27 = 1.f;
     /* Local variables */
     integer i__, j, k, m1, m2, n1, n2, info;
     logical normaltransr, lside;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     logical lower;
-    extern /* Subroutine */ int strsm_(char *, char *, char *, char *, 
-	    integer *, integer *, real *, real *, integer *, real *, integer *
-), xerbla_(char *, integer *);
     logical misodd, nisodd, notrans;
 
 

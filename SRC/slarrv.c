@@ -50,25 +50,17 @@ static integer c__2 = 2;
     real sigma;
     integer iinfo, iindr;
     real resid;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     logical eskip;
     real right;
     integer nclus, zfrom;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     real rqtol;
     integer iindc1, iindc2;
-    extern /* Subroutine */ int slar1v_(integer *, integer *, integer *, real 
-	    *, real *, real *, real *, real *, real *, real *, real *, 
-	    logical *, integer *, real *, real *, integer *, integer *, real *
-, real *, real *, real *);
     logical stp2ii;
     real lambda;
     integer ibegin, indeig;
     logical needbs;
     integer indlld;
     real sgndef, mingma;
-    extern doublereal slamch_(char *);
     integer oldien, oldncl, wbegin;
     real spdiam;
     integer negcnt, oldcls;
@@ -78,12 +70,6 @@ static integer c__2 = 2;
     logical usedbs;
     integer iindwk, offset;
     real gaptol;
-    extern /* Subroutine */ int slarrb_(integer *, real *, real *, integer *, 
-	    integer *, real *, real *, integer *, real *, real *, real *, 
-	    real *, integer *, real *, real *, integer *, integer *), slarrf_(
-	    integer *, real *, real *, real *, integer *, integer *, real *, 
-	    real *, real *, real *, real *, real *, real *, real *, real *, 
-	    real *, real *, integer *);
     integer newcls, oldfst, indwrk, windex, oldlst;
     logical usedrq;
     integer newfst, newftt, parity, windmn, isupmn, newlst, windpl, zusedl, 
@@ -92,8 +78,6 @@ static integer c__2 = 2;
     logical tryrqc;
     integer isupmx;
     real rqcorr;
-    extern /* Subroutine */ int slaset_(char *, integer *, integer *, real *, 
-	    real *, real *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

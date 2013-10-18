@@ -29,16 +29,6 @@ static integer c__2 = 2;
 
     /* Local variables */
     integer i__, j, l, ib, nb, kk, nx, iws, nbmin, iinfo;
-    extern /* Subroutine */ int cung2l_(integer *, integer *, integer *, 
-	    complex *, integer *, complex *, complex *, integer *), clarfb_(
-	    char *, char *, char *, char *, integer *, integer *, integer *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *, 
-	    complex *, integer *), clarft_(
-	    char *, char *, integer *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *), xerbla_(char *, 
-	    integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     integer ldwork, lwkopt;
     logical lquery;
 

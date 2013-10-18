@@ -24,8 +24,6 @@
     /* Local variables */
     integer k;
     doublereal ak, eps, temp, pert, absak, sfmin;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal bignum;
 
 

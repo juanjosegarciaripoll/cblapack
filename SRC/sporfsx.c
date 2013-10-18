@@ -37,27 +37,11 @@ static integer c__1 = 1;
     integer ref_type__, j;
     real rcond_tmp__;
     integer prec_type__;
-    extern doublereal sla_porcond__(char *, integer *, real *, integer *, 
-	    real *, integer *, integer *, real *, integer *, real *, integer *
-	    , ftnlen);
     real cwise_wrong__;
-    extern /* Subroutine */ int sla_porfsx_extended__(integer *, char *, 
-	    integer *, integer *, real *, integer *, real *, integer *, 
-	    logical *, real *, real *, integer *, real *, integer *, real *, 
-	    integer *, real *, real *, real *, real *, real *, real *, real *,
-	     integer *, real *, real *, logical *, integer *, ftnlen);
     char norm[1];
     logical ignore_cwise__;
-    extern logical lsame_(char *, char *);
     real anorm;
     logical rcequ;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), spocon_(
-	    char *, integer *, real *, integer *, real *, real *, real *, 
-	    integer *, integer *);
-    extern doublereal slansy_(char *, char *, integer *, real *, integer *, 
-	    real *);
-    extern integer ilaprec_(char *);
     integer ithresh, n_norms__;
     real rthresh;
 

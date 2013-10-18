@@ -32,17 +32,7 @@ static integer c__1 = 1;
     integer np1, isub;
     doublereal smin;
     integer sqre1;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int dlasr_(char *, char *, char *, integer *, 
-	    integer *, doublereal *, doublereal *, doublereal *, integer *), dswap_(integer *, doublereal *, integer *
-, doublereal *, integer *);
     integer iuplo;
-    extern /* Subroutine */ int dlartg_(doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *), xerbla_(char *, 
-	    integer *), dbdsqr_(char *, integer *, integer *, integer 
-	    *, integer *, doublereal *, doublereal *, doublereal *, integer *, 
-	     doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *);
     logical rotate;
 
 

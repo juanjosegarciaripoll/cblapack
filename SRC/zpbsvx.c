@@ -33,37 +33,12 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__, j, j1, j2;
     doublereal amax, smin, smax;
-    extern logical lsame_(char *, char *);
     doublereal scond, anorm;
     logical equil, rcequ, upper;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
     logical nofact;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern doublereal zlanhb_(char *, char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *);
     doublereal bignum;
-    extern /* Subroutine */ int zlaqhb_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *, 
-	    doublereal *, char *);
     integer infequ;
-    extern /* Subroutine */ int zpbcon_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *, 
-	    doublecomplex *, doublereal *, integer *), zlacpy_(char *, 
-	     integer *, integer *, doublecomplex *, integer *, doublecomplex *
-, integer *), zpbequ_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *), zpbrfs_(char *, integer *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     integer *, doublecomplex *, integer *, doublecomplex *, integer *
-, doublereal *, doublereal *, doublecomplex *, doublereal *, 
-	    integer *), zpbtrf_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *);
     doublereal smlnum;
-    extern /* Subroutine */ int zpbtrs_(char *, integer *, integer *, integer 
-	    *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	    integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

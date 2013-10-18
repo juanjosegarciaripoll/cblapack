@@ -27,10 +27,7 @@ doublereal slange_(char *norm, integer *m, integer *n, real *a, integer *lda,
     /* Local variables */
     integer i__, j;
     real sum, scale;
-    extern logical lsame_(char *, char *);
     real value;
-    extern /* Subroutine */ int slassq_(integer *, real *, integer *, real *, 
-	    real *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

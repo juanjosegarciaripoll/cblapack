@@ -44,51 +44,19 @@ static integer c__2 = 2;
     doublereal tol;
     integer mvl;
     doublereal aapp, aapq, aaqq;
-    extern doublereal ddot_(integer *, doublereal *, integer *, doublereal *, 
-	    integer *);
     doublereal ctol;
     integer ierr;
     doublereal aapp0;
-    extern doublereal dnrm2_(integer *, doublereal *, integer *);
     doublereal temp1;
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *);
     doublereal scale, large, apoaq, aqoap;
-    extern logical lsame_(char *, char *);
     doublereal theta, small, sfmin;
     logical lsvec;
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
     doublereal fastr[5];
-    extern /* Subroutine */ int dswap_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
     logical applv, rsvec;
-    extern /* Subroutine */ int daxpy_(integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *);
     logical uctol;
-    extern /* Subroutine */ int drotm_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *);
     logical lower, upper, rotok;
-    extern /* Subroutine */ int dgsvj0_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, doublereal *, 
-	     integer *, doublereal *, integer *, integer *), dgsvj1_(
-	    char *, integer *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *, doublereal *, 
-	     integer *, integer *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, integer *);
-    extern integer idamax_(integer *, doublereal *, integer *);
-    extern /* Subroutine */ int dlaset_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *), 
-	    xerbla_(char *, integer *);
     integer ijblsk, swband, blskip;
     doublereal mxaapq;
-    extern /* Subroutine */ int dlassq_(integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *);
     doublereal thsign, mxsinj;
     integer emptsw, notrot, iswrot, lkahead;
     logical goscale, noscale;

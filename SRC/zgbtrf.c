@@ -30,28 +30,8 @@ static integer c__65 = 65;
     integer i__, j, i2, i3, j2, j3, k2, jb, nb, ii, jj, jm, ip, jp, km, ju, 
 	    kv, nw;
     doublecomplex temp;
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *), zgemm_(char *, char *, integer *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
     doublecomplex work13[4160]	/* was [65][64] */, work31[4160]	/* 
 	    was [65][64] */;
-    extern /* Subroutine */ int zgeru_(integer *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zcopy_(integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *), zswap_(integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), ztrsm_(
-	    char *, char *, char *, char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *), zgbtf2_(integer *, 
-	    integer *, integer *, integer *, doublecomplex *, integer *, 
-	    integer *, integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *), izamax_(integer *, 
-	    doublecomplex *, integer *);
-    extern /* Subroutine */ int zlaswp_(integer *, doublecomplex *, integer *, 
-	     integer *, integer *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

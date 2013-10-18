@@ -26,28 +26,12 @@
     /* Local variables */
     integer i__, j;
     real amax, smin, smax;
-    extern logical lsame_(char *, char *);
     real scond, anorm;
     logical equil, rcequ;
-    extern doublereal slamch_(char *);
     logical nofact;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
     integer infequ;
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *), spocon_(char *, integer *, 
-	    real *, integer *, real *, real *, real *, integer *, integer *);
-    extern doublereal slansy_(char *, char *, integer *, real *, integer *, 
-	    real *);
     real smlnum;
-    extern /* Subroutine */ int slaqsy_(char *, integer *, real *, integer *, 
-	    real *, real *, real *, char *), spoequ_(integer *
-, real *, integer *, real *, real *, real *, integer *), sporfs_(
-	    char *, integer *, integer *, real *, integer *, real *, integer *
-, real *, integer *, real *, integer *, real *, real *, real *, 
-	    integer *, integer *), spotrf_(char *, integer *, real *, 
-	    integer *, integer *), spotrs_(char *, integer *, integer 
-	    *, real *, integer *, real *, integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

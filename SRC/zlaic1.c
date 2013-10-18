@@ -31,9 +31,6 @@ static integer c__1 = 1;
     doublereal test, zeta1, zeta2;
     doublecomplex alpha;
     doublereal norma;
-    extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
     doublereal absgam, absalp;
     doublecomplex cosine;
     doublereal absest;

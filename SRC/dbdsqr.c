@@ -44,30 +44,12 @@ static doublereal c_b72 = -1.;
     doublereal cosl;
     integer isub, iter;
     doublereal unfl, sinl, cosr, smin, smax, sinr;
-    extern /* Subroutine */ int drot_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *), dlas2_(
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *), dscal_(integer *, doublereal *, doublereal *, 
-	    integer *);
-    extern logical lsame_(char *, char *);
     doublereal oldcs;
-    extern /* Subroutine */ int dlasr_(char *, char *, char *, integer *, 
-	    integer *, doublereal *, doublereal *, doublereal *, integer *);
     integer oldll;
     doublereal shift, sigmn, oldsn;
-    extern /* Subroutine */ int dswap_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
     integer maxit;
     doublereal sminl, sigmx;
     logical lower;
-    extern /* Subroutine */ int dlasq1_(integer *, doublereal *, doublereal *, 
-	     doublereal *, integer *), dlasv2_(doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dlartg_(doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *), xerbla_(char *, 
-	    integer *);
     doublereal sminoa, thresh;
     logical rotate;
     doublereal tolmul;

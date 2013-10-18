@@ -41,17 +41,7 @@ static integer c__0 = 0;
     integer nlp1, jcol;
     real temp;
     integer jrow;
-    extern doublereal snrm2_(integer *, real *, integer *);
     real diflj, difrj, dsigj;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *), sgemv_(char *, integer *, integer *, real *
-, real *, integer *, real *, integer *, real *, real *, integer *), csrot_(integer *, complex *, integer *, complex *, 
-	    integer *, real *, real *);
-    extern doublereal slamc3_(real *, real *);
-    extern /* Subroutine */ int clascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, complex *, integer *, integer *), csscal_(integer *, real *, complex *, integer *), 
-	    clacpy_(char *, integer *, integer *, complex *, integer *, 
-	    complex *, integer *), xerbla_(char *, integer *);
     real dsigjp;
 
 

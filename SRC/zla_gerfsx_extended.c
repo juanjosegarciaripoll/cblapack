@@ -41,40 +41,15 @@ static doublereal c_b31 = 1.;
     doublereal dxratmax, dzratmax;
     integer i__, j;
     logical incr_prec__;
-    extern /* Subroutine */ int zla_geamv__(integer *, integer *, integer *, 
-	    doublereal *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublereal *, doublereal *, integer *);
     doublereal prev_dz_z__, yk, final_dx_x__, final_dz_z__;
-    extern /* Subroutine */ int zla_wwaddw__(integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *);
     doublereal prevnormdx;
     integer cnt;
     doublereal dyk, eps, incr_thresh__, dx_x__, dz_z__, ymin;
-    extern /* Subroutine */ int zla_lin_berr__(integer *, integer *, integer *
-	    , doublecomplex *, doublereal *, doublereal *), blas_zgemv_x__(
-	    integer *, integer *, integer *, doublecomplex *, doublecomplex *,
-	     integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, integer *);
     integer y_prec_state__;
-    extern /* Subroutine */ int blas_zgemv2_x__(integer *, integer *, integer 
-	    *, doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, integer *);
     doublereal dxrat, dzrat;
     char trans[1];
-    extern /* Subroutine */ int zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *);
     doublereal normx, normy;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
     doublereal normdx;
-    extern /* Subroutine */ int zgetrs_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *, doublecomplex *, integer *, 
-	     integer *);
-    extern /* Character */ void chla_transtype__(char *, ftnlen, integer *);
     doublereal hugeval;
     integer x_state__, z_state__;
 

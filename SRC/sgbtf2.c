@@ -27,11 +27,6 @@ static real c_b9 = -1.f;
 
     /* Local variables */
     integer i__, j, km, jp, ju, kv;
-    extern /* Subroutine */ int sger_(integer *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, integer *), sscal_(integer *
-, real *, real *, integer *), sswap_(integer *, real *, integer *, 
-	     real *, integer *), xerbla_(char *, integer *);
-    extern integer isamax_(integer *, real *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

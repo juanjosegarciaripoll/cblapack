@@ -30,26 +30,8 @@ static integer c_n1 = -1;
 
     /* Local variables */
     integer nb;
-    extern logical lsame_(char *, char *);
     doublereal anorm;
-    extern doublereal dlamch_(char *);
     logical nofact;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern doublereal zlanhe_(char *, char *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int zhecon_(char *, integer *, doublecomplex *, 
-	    integer *, integer *, doublereal *, doublereal *, doublecomplex *, 
-	     integer *), zherfs_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *, doublecomplex *, doublereal *, 
-	    integer *), zhetrf_(char *, integer *, doublecomplex *, 
-	    integer *, integer *, doublecomplex *, integer *, integer *), zlacpy_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *), zhetrs_(char *, 
-	    integer *, integer *, doublecomplex *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *);
     integer lwkopt;
     logical lquery;
 

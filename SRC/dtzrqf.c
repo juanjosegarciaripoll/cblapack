@@ -27,15 +27,6 @@ static doublereal c_b8 = 1.;
 
     /* Local variables */
     integer i__, k, m1;
-    extern /* Subroutine */ int dger_(integer *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *), dgemv_(char *, integer *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *), dcopy_(integer *, doublereal *, 
-	    integer *, doublereal *, integer *), daxpy_(integer *, doublereal 
-	    *, doublereal *, integer *, doublereal *, integer *), dlarfp_(
-	    integer *, doublereal *, doublereal *, integer *, doublereal *), 
-	    xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -46,46 +46,12 @@ static real c_b35 = 0.f;
     real rcnd;
     integer jcol, irwb, perm, nsub, nlvl, sqre, bxst, jrow, irwu, jimag, 
 	    jreal;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     integer irwib;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *);
     integer poles, sizei, irwrb, nsize;
-    extern /* Subroutine */ int csrot_(integer *, complex *, integer *, 
-	    complex *, integer *, real *, real *);
     integer irwvt, icmpq1, icmpq2;
-    extern /* Subroutine */ int clalsa_(integer *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, real *, 
-	    integer *, real *, integer *, real *, real *, real *, real *, 
-	    integer *, integer *, integer *, integer *, real *, real *, real *
-, real *, integer *, integer *), clascl_(char *, integer *, 
-	    integer *, real *, real *, integer *, integer *, complex *, 
-	    integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int slasda_(integer *, integer *, integer *, 
-	    integer *, real *, real *, real *, integer *, real *, integer *, 
-	    real *, real *, real *, real *, integer *, integer *, integer *, 
-	    integer *, real *, real *, real *, real *, integer *, integer *), 
-	    clacpy_(char *, integer *, integer *, complex *, integer *, 
-	    complex *, integer *), claset_(char *, integer *, integer 
-	    *, complex *, complex *, complex *, integer *), xerbla_(
-	    char *, integer *), slascl_(char *, integer *, integer *, 
-	    real *, real *, integer *, integer *, real *, integer *, integer *
-);
-    extern integer isamax_(integer *, real *, integer *);
     integer givcol;
-    extern /* Subroutine */ int slasdq_(char *, integer *, integer *, integer 
-	    *, integer *, integer *, real *, real *, real *, integer *, real *
-, integer *, real *, integer *, real *, integer *), 
-	    slaset_(char *, integer *, integer *, real *, real *, real *, 
-	    integer *), slartg_(real *, real *, real *, real *, real *
-);
     real orgnrm;
     integer givnum;
-    extern doublereal slanst_(char *, integer *, real *, real *);
-    extern /* Subroutine */ int slasrt_(char *, integer *, real *, integer *);
     integer givptr, nrwork, irwwrk, smlszp;
 
 

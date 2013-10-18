@@ -24,8 +24,6 @@
     /* Local variables */
     integer i__, j;
     real rcmin, rcmax;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum, smlnum;
 
 

@@ -44,42 +44,18 @@ static integer c__2 = 2;
     integer mvl;
     real aapp, aapq, aaqq, ctol;
     integer ierr;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
     real aapp0, temp1;
-    extern doublereal snrm2_(integer *, real *, integer *);
     real scale, large, apoaq, aqoap;
-    extern logical lsame_(char *, char *);
     real theta;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     real small, sfmin;
     logical lsvec;
     real fastr[5];
     logical applv, rsvec, uctol, lower, upper;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     logical rotok;
-    extern /* Subroutine */ int sswap_(integer *, real *, integer *, real *, 
-	    integer *), saxpy_(integer *, real *, real *, integer *, real *, 
-	    integer *), srotm_(integer *, real *, integer *, real *, integer *
-, real *), sgsvj0_(char *, integer *, integer *, real *, integer *
-, real *, real *, integer *, real *, integer *, real *, real *, 
-	    real *, integer *, real *, integer *, integer *), sgsvj1_(
-	    char *, integer *, integer *, integer *, real *, integer *, real *
-, real *, integer *, real *, integer *, real *, real *, real *, 
-	    integer *, real *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer ijblsk, swband;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *);
-    extern integer isamax_(integer *, real *, integer *);
     integer blskip;
     real mxaapq;
-    extern /* Subroutine */ int slaset_(char *, integer *, integer *, real *, 
-	    real *, real *, integer *);
     real thsign;
-    extern /* Subroutine */ int slassq_(integer *, real *, integer *, real *, 
-	    real *);
     real mxsinj;
     integer emptsw, notrot, iswrot, lkahead;
     logical goscale, noscale;

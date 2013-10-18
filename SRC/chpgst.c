@@ -34,21 +34,7 @@ static integer c__1 = 1;
     real akk;
     integer k1k1;
     real bjj, bkk;
-    extern /* Subroutine */ int chpr2_(char *, integer *, complex *, complex *
-, integer *, complex *, integer *, complex *);
-    extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int chpmv_(char *, integer *, complex *, complex *
-, complex *, integer *, complex *, complex *, integer *), 
-	    caxpy_(integer *, complex *, complex *, integer *, complex *, 
-	    integer *), ctpmv_(char *, char *, char *, integer *, complex *, 
-	    complex *, integer *);
     logical upper;
-    extern /* Subroutine */ int ctpsv_(char *, char *, char *, integer *, 
-	    complex *, complex *, integer *), csscal_(
-	    integer *, real *, complex *, integer *), xerbla_(char *, integer 
-	    *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

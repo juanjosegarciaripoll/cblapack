@@ -25,22 +25,8 @@ static integer c__1 = 1;
     integer b_dim1, b_offset, x_dim1, x_offset, i__1;
 
     /* Local variables */
-    extern logical lsame_(char *, char *);
     real anorm;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
-    extern doublereal slamch_(char *);
     logical nofact;
-    extern /* Subroutine */ int xerbla_(char *, integer *), slacpy_(
-	    char *, integer *, integer *, real *, integer *, real *, integer *
-);
-    extern doublereal slanst_(char *, integer *, real *, real *);
-    extern /* Subroutine */ int sptcon_(integer *, real *, real *, real *, 
-	    real *, real *, integer *), sptrfs_(integer *, integer *, real *, 
-	    real *, real *, real *, real *, integer *, real *, integer *, 
-	    real *, real *, real *, integer *), spttrf_(integer *, real *, 
-	    real *, integer *), spttrs_(integer *, integer *, real *, real *, 
-	    real *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

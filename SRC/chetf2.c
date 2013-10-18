@@ -37,22 +37,12 @@ static integer c__1 = 1;
     complex wk;
     real tt;
     complex wkm1, wkp1;
-    extern /* Subroutine */ int cher_(char *, integer *, real *, complex *, 
-	    integer *, complex *, integer *);
     integer imax, jmax;
     real alpha;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int cswap_(integer *, complex *, integer *, 
-	    complex *, integer *);
     integer kstep;
     logical upper;
-    extern doublereal slapy2_(real *, real *);
     real absakk;
-    extern integer icamax_(integer *, complex *, integer *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *), xerbla_(char *, integer *);
     real colmax;
-    extern logical sisnan_(real *);
     real rowmax;
 
 

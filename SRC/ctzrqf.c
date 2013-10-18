@@ -27,16 +27,7 @@ static integer c__1 = 1;
 
     /* Local variables */
     integer i__, k, m1;
-    extern /* Subroutine */ int cgerc_(integer *, integer *, complex *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *);
     complex alpha;
-    extern /* Subroutine */ int cgemv_(char *, integer *, integer *, complex *
-, complex *, integer *, complex *, integer *, complex *, complex *
-, integer *), ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *), caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *), clacgv_(integer *, complex *, 
-	    integer *), clarfp_(integer *, complex *, complex *, integer *, 
-	    complex *), xerbla_(char *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

@@ -24,11 +24,9 @@
     integer dir;
     real tmp;
     integer endd;
-    extern logical lsame_(char *, char *);
     integer stack[64]	/* was [2][32] */;
     real dmnmx;
     integer start;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer stkpnt;
 
 

@@ -26,20 +26,8 @@ static integer c__1 = 1;
     integer b_dim1, b_offset, x_dim1, x_offset, i__1;
 
     /* Local variables */
-    extern logical lsame_(char *, char *);
     real anorm;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *);
-    extern doublereal clanhp_(char *, char *, integer *, complex *, real *), slamch_(char *);
     logical nofact;
-    extern /* Subroutine */ int chpcon_(char *, integer *, complex *, integer 
-	    *, real *, real *, complex *, integer *), clacpy_(char *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *), xerbla_(char *, integer *), chprfs_(char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *, complex *, integer *, real *, real *, complex *, real *
-, integer *), chptrf_(char *, integer *, complex *, 
-	    integer *, integer *), chptrs_(char *, integer *, integer 
-	    *, complex *, integer *, complex *, integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

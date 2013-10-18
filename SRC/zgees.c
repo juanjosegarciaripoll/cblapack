@@ -35,42 +35,13 @@ static integer c_n1 = -1;
     integer ibal;
     doublereal anrm;
     integer ierr, itau, iwrk, icond, ieval;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), dlabad_(doublereal *, doublereal *);
     logical scalea;
-    extern doublereal dlamch_(char *);
     doublereal cscale;
-    extern /* Subroutine */ int zgebak_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, integer *, doublecomplex *, integer *, 
-	    integer *), zgebal_(char *, integer *, 
-	    doublecomplex *, integer *, integer *, integer *, doublereal *, 
-	    integer *), xerbla_(char *, integer *);
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
     doublereal bignum;
-    extern /* Subroutine */ int zgehrd_(integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, integer *), zlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublecomplex *, 
-	     integer *, integer *), zlacpy_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *);
     integer minwrk, maxwrk;
     doublereal smlnum;
-    extern /* Subroutine */ int zhseqr_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *);
     integer hswork;
-    extern /* Subroutine */ int zunghr_(integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, integer *);
     logical wantst, lquery, wantvs;
-    extern /* Subroutine */ int ztrsen_(char *, char *, logical *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *, 
-	    doublecomplex *, integer *, integer *);
 
 
 /*  -- LAPACK driver routine (version 3.2) -- */

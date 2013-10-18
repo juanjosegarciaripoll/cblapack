@@ -31,33 +31,14 @@ static doublecomplex c_b2 = {0.,0.};
     integer inde;
     char vect[1];
     integer llwk2;
-    extern logical lsame_(char *, char *);
     integer iinfo;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
     integer lwmin;
     logical upper;
     integer llrwk;
     logical wantz;
     integer indwk2;
-    extern /* Subroutine */ int xerbla_(char *, integer *), dsterf_(
-	    integer *, doublereal *, doublereal *, integer *), zstedc_(char *, 
-	     integer *, doublereal *, doublereal *, doublecomplex *, integer *
-, doublecomplex *, integer *, doublereal *, integer *, integer *, 
-	    integer *, integer *), zhbtrd_(char *, char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublereal *, doublereal *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *);
     integer indwrk, liwmin;
-    extern /* Subroutine */ int zhbgst_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, doublereal *, 
-	    integer *), zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     integer lrwmin;
-    extern /* Subroutine */ int zpbstf_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *);
     logical lquery;
 
 

@@ -38,30 +38,11 @@ static integer c__1 = 1;
     integer ref_type__, j;
     doublereal rcond_tmp__;
     integer prec_type__;
-    extern doublereal dla_syrcond__(char *, integer *, doublereal *, integer *
-	    , doublereal *, integer *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, ftnlen);
     doublereal cwise_wrong__;
-    extern /* Subroutine */ int dla_syrfsx_extended__(integer *, char *, 
-	    integer *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, integer *, logical *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, integer *, doublereal *,
-	     doublereal *, logical *, integer *, ftnlen);
     char norm[1];
     logical ignore_cwise__;
-    extern logical lsame_(char *, char *);
     doublereal anorm;
     logical rcequ;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern doublereal dlansy_(char *, char *, integer *, doublereal *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int dsycon_(char *, integer *, doublereal *, 
-	    integer *, integer *, doublereal *, doublereal *, doublereal *, 
-	    integer *, integer *);
-    extern integer ilaprec_(char *);
     integer ithresh, n_norms__;
     doublereal rthresh;
 

@@ -27,19 +27,8 @@ static integer c_n1 = -1;
 
     /* Local variables */
     integer i__, k, n1, n2, is, iw, iz, iq2, zpp1, indx, indxc;
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
     integer indxp;
-    extern /* Subroutine */ int dlaed2_(integer *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, integer *, 
-	     integer *, integer *, integer *, integer *), dlaed3_(integer *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *);
     integer idlmda;
-    extern /* Subroutine */ int dlamrg_(integer *, integer *, doublereal *, 
-	    integer *, integer *, integer *), xerbla_(char *, integer *);
     integer coltyp;
 
 

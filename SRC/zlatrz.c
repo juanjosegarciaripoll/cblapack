@@ -24,11 +24,6 @@
     /* Local variables */
     integer i__;
     doublecomplex alpha;
-    extern /* Subroutine */ int zlarz_(char *, integer *, integer *, integer *
-, doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *), zlacgv_(integer *, 
-	    doublecomplex *, integer *), zlarfp_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

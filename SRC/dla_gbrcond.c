@@ -30,13 +30,7 @@ doublereal dla_gbrcond__(char *trans, integer *n, integer *kl, integer *ku,
     integer i__, j, kd, ke;
     doublereal tmp;
     integer kase;
-    extern logical lsame_(char *, char *);
     integer isave[3];
-    extern /* Subroutine */ int dlacn2_(integer *, doublereal *, doublereal *, 
-	     integer *, doublereal *, integer *, integer *), xerbla_(char *, 
-	    integer *), dgbtrs_(char *, integer *, integer *, integer 
-	    *, integer *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, integer *);
     doublereal ainvnm;
     logical notrans;
 

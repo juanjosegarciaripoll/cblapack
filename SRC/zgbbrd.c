@@ -40,24 +40,10 @@ static integer c__1 = 1;
     doublecomplex rs;
     integer kb1, ml0, mu0, klm, kun, nrt, klu1, inca;
     doublereal abst;
-    extern /* Subroutine */ int zrot_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublecomplex *);
-    extern logical lsame_(char *, char *);
     logical wantb, wantc;
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *);
     integer minmn;
     logical wantq;
-    extern /* Subroutine */ int xerbla_(char *, integer *), zlaset_(
-	    char *, integer *, integer *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, integer *), zlartg_(doublecomplex *, 
-	    doublecomplex *, doublereal *, doublecomplex *, doublecomplex *), 
-	    zlargv_(integer *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublereal *, integer *);
     logical wantpt;
-    extern /* Subroutine */ int zlartv_(integer *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *, doublereal *, doublecomplex *, 
-	    integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

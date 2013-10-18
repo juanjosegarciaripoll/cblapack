@@ -38,28 +38,14 @@ static real c_b35 = 1.f;
     integer kbl, igl, ibr, jgl, mvl, nblc;
     real aapp, aapq, aaqq;
     integer nblr, ierr;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
     real aapp0, temp1;
-    extern doublereal snrm2_(integer *, real *, integer *);
     real large, apoaq, aqoap;
-    extern logical lsame_(char *, char *);
     real theta, small, fastr[5];
     logical applv, rsvec;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     logical rotok;
-    extern /* Subroutine */ int sswap_(integer *, real *, integer *, real *, 
-	    integer *), saxpy_(integer *, real *, real *, integer *, real *, 
-	    integer *), srotm_(integer *, real *, integer *, real *, integer *
-, real *), xerbla_(char *, integer *);
     integer ijblsk, swband;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *);
-    extern integer isamax_(integer *, real *, integer *);
     integer blskip;
     real mxaapq, thsign;
-    extern /* Subroutine */ int slassq_(integer *, real *, integer *, real *, 
-	    real *);
     real mxsinj;
     integer emptsw, notrot, iswrot;
     real rootbig, rooteps;

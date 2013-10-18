@@ -28,17 +28,7 @@ static integer c__1 = 1;
 
     /* Local variables */
     integer i__, j, l, kd, lm;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int cgemv_(char *, integer *, integer *, complex *
-, complex *, integer *, complex *, integer *, complex *, complex *
-, integer *), cgeru_(integer *, integer *, complex *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *),
-	     cswap_(integer *, complex *, integer *, complex *, integer *), 
-	    ctbsv_(char *, char *, char *, integer *, integer *, complex *, 
-	    integer *, complex *, integer *);
     logical lnoti;
-    extern /* Subroutine */ int clacgv_(integer *, complex *, integer *), 
-	    xerbla_(char *, integer *);
     logical notran;
 
 

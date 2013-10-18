@@ -32,15 +32,8 @@ static real c_b11 = 1.f;
     integer ix, nz;
     real eps, safe1, safe2;
     integer count;
-    extern /* Subroutine */ int saxpy_(integer *, real *, real *, integer *, 
-	    real *, integer *);
-    extern doublereal slamch_(char *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern integer isamax_(integer *, real *, integer *);
     real lstres;
-    extern /* Subroutine */ int spttrs_(integer *, integer *, real *, real *, 
-	    real *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

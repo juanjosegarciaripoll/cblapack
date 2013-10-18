@@ -32,41 +32,15 @@ static integer c__1 = 1;
     integer i__, j, j1, j2;
     real amax;
     char norm[1];
-    extern logical lsame_(char *, char *);
     real rcmin, rcmax, anorm;
     logical equil;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     real colcnd;
-    extern doublereal slangb_(char *, integer *, integer *, integer *, real *, 
-	     integer *, real *), slamch_(char *);
-    extern /* Subroutine */ int slaqgb_(integer *, integer *, integer *, 
-	    integer *, real *, integer *, real *, real *, real *, real *, 
-	    real *, char *);
     logical nofact;
-    extern /* Subroutine */ int sgbcon_(char *, integer *, integer *, integer 
-	    *, real *, integer *, integer *, real *, real *, real *, integer *
-, integer *), xerbla_(char *, integer *);
     real bignum;
-    extern doublereal slantb_(char *, char *, char *, integer *, integer *, 
-	    real *, integer *, real *);
-    extern /* Subroutine */ int sgbequ_(integer *, integer *, integer *, 
-	    integer *, real *, integer *, real *, real *, real *, real *, 
-	    real *, integer *);
     integer infequ;
     logical colequ;
-    extern /* Subroutine */ int sgbrfs_(char *, integer *, integer *, integer 
-	    *, integer *, real *, integer *, real *, integer *, integer *, 
-	    real *, integer *, real *, integer *, real *, real *, real *, 
-	    integer *, integer *), sgbtrf_(integer *, integer *, 
-	    integer *, integer *, real *, integer *, integer *, integer *), 
-	    slacpy_(char *, integer *, integer *, real *, integer *, real *, 
-	    integer *);
     real rowcnd;
     logical notran;
-    extern /* Subroutine */ int sgbtrs_(char *, integer *, integer *, integer 
-	    *, integer *, real *, integer *, integer *, real *, integer *, 
-	    integer *);
     real smlnum;
     logical rowequ;
     real rpvgrw;

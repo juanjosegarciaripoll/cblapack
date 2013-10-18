@@ -36,19 +36,7 @@ static integer c__1 = 1;
     complex vec;
     real dum[1], eps, sgn, smin;
     complex suml, sumr;
-    extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Complex */ void cdotu_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern /* Subroutine */ int slabad_(real *, real *);
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *);
-    extern /* Complex */ void cladiv_(complex *, complex *, complex *);
     real scaloc;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *), xerbla_(char *, integer *);
     real bignum;
     logical notrna, notrnb;
     real smlnum;

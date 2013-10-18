@@ -28,16 +28,7 @@ static real c_b16 = 0.f;
 
     /* Local variables */
     integer i__, iw;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
     real alpha;
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    sgemv_(char *, integer *, integer *, real *, real *, integer *, 
-	    real *, integer *, real *, real *, integer *), saxpy_(
-	    integer *, real *, real *, integer *, real *, integer *), ssymv_(
-	    char *, integer *, real *, real *, integer *, real *, integer *, 
-	    real *, real *, integer *), slarfg_(integer *, real *, 
-	    real *, integer *, real *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

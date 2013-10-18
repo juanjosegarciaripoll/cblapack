@@ -40,36 +40,24 @@ static logical c_false = FALSE_;
     integer ibeg, ieig, iend;
     real dmin__, temp, xmax, sump[4]	/* was [2][2] */, sums[4]	/* 
 	    was [2][2] */, cim2a, cim2b, cre2a, cre2b;
-    extern /* Subroutine */ int slag2_(real *, integer *, real *, integer *, 
-	    real *, real *, real *, real *, real *, real *);
     real temp2, bdiag[2], acoef, scale;
     logical ilall;
     integer iside;
     real sbeta;
-    extern logical lsame_(char *, char *);
     logical il2by2;
     integer iinfo;
     real small;
     logical compl;
     real anorm, bnorm;
     logical compr;
-    extern /* Subroutine */ int sgemv_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *), slaln2_(logical *, integer *, integer *, real *, real *, 
-	    real *, integer *, real *, real *, real *, integer *, real *, 
-	    real *, real *, integer *, real *, real *, integer *);
     real temp2i, temp2r;
     logical ilabad, ilbbad;
     real acoefa, bcoefa, cimaga, cimagb;
     logical ilback;
-    extern /* Subroutine */ int slabad_(real *, real *);
     real bcoefi, ascale, bscale, creala, crealb, bcoefr;
-    extern doublereal slamch_(char *);
     real salfar, safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real xscale, bignum;
     logical ilcomp, ilcplx;
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *);
     integer ihwmny;
 
 

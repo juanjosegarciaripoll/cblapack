@@ -48,45 +48,12 @@ static integer c__12 = 12;
     integer lwk1, lwk2, lwk3;
     doublecomplex beta;
     integer kcol, info, nmin, ifst, ilst, ltop, krow;
-    extern /* Subroutine */ int zlarf_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *);
     integer infqr;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
     integer kwtop;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), dlabad_(doublereal *, doublereal *), 
-	    zlaqr4_(logical *, logical *, integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *, integer *
-);
-    extern doublereal dlamch_(char *);
     doublereal safmin;
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
     doublereal safmax;
-    extern /* Subroutine */ int zgehrd_(integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, integer *), zlarfg_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *), zlahqr_(logical *, 
-	    logical *, integer *, integer *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, integer *, doublecomplex *, 
-	     integer *, integer *), zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), 
-	    zlaset_(char *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, integer *);
     doublereal smlnum;
-    extern /* Subroutine */ int ztrexc_(char *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, integer *, integer *, 
-	    integer *);
     integer lwkopt;
-    extern /* Subroutine */ int zunmhr_(char *, char *, integer *, integer *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *, integer *
-);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2.1)                        -- */

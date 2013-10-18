@@ -38,21 +38,11 @@ static integer c__1 = 1;
     doublereal tt;
     doublecomplex wkm1, wkp1;
     integer imax, jmax;
-    extern /* Subroutine */ int zher_(char *, integer *, doublereal *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     doublereal alpha;
-    extern logical lsame_(char *, char *);
     integer kstep;
     logical upper;
-    extern /* Subroutine */ int zswap_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
-    extern doublereal dlapy2_(doublereal *, doublereal *);
     doublereal absakk;
-    extern logical disnan_(doublereal *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), zdscal_(
-	    integer *, doublereal *, doublecomplex *, integer *);
     doublereal colmax;
-    extern integer izamax_(integer *, doublecomplex *, integer *);
     doublereal rowmax;
 
 

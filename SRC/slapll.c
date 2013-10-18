@@ -21,13 +21,7 @@
 
     /* Local variables */
     real c__, a11, a12, a22, tau;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
-    extern /* Subroutine */ int slas2_(real *, real *, real *, real *, real *)
-	    ;
     real ssmax;
-    extern /* Subroutine */ int saxpy_(integer *, real *, real *, integer *, 
-	    real *, integer *), slarfg_(integer *, real *, real *, integer *, 
-	    real *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */

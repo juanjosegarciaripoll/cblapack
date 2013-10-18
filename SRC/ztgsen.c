@@ -36,32 +36,13 @@ static integer c__1 = 1;
     logical swap;
     doublecomplex temp1, temp2;
     integer isave[3];
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *);
     logical wantd;
     integer lwmin;
     logical wantp;
-    extern /* Subroutine */ int zlacn2_(integer *, doublecomplex *, 
-	    doublecomplex *, doublereal *, integer *, integer *);
     logical wantd1, wantd2;
-    extern doublereal dlamch_(char *);
     doublereal dscale, rdscal, safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer liwmin;
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), 
-	    ztgexc_(logical *, logical *, integer *, doublecomplex *, integer 
-	    *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, integer *, integer *, integer *), 
-	    zlassq_(integer *, doublecomplex *, integer *, doublereal *, 
-	    doublereal *);
     logical lquery;
-    extern /* Subroutine */ int ztgsyl_(char *, integer *, integer *, integer 
-	    *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *, doublecomplex *, integer *, integer *, 
-	     integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

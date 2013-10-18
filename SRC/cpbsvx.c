@@ -32,32 +32,11 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__, j, j1, j2;
     real amax, smin, smax;
-    extern logical lsame_(char *, char *);
     real scond, anorm;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *);
     logical equil, rcequ, upper;
-    extern doublereal clanhb_(char *, char *, integer *, integer *, complex *, 
-	     integer *, real *);
-    extern /* Subroutine */ int claqhb_(char *, integer *, integer *, complex 
-	    *, integer *, real *, real *, real *, char *), 
-	    cpbcon_(char *, integer *, integer *, complex *, integer *, real *
-, real *, complex *, real *, integer *);
-    extern doublereal slamch_(char *);
     logical nofact;
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), xerbla_(char *, 
-	    integer *), cpbequ_(char *, integer *, integer *, complex 
-	    *, integer *, real *, real *, real *, integer *), cpbrfs_(
-	    char *, integer *, integer *, integer *, complex *, integer *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *, 
-	    real *, real *, complex *, real *, integer *);
     real bignum;
-    extern /* Subroutine */ int cpbtrf_(char *, integer *, integer *, complex 
-	    *, integer *, integer *);
     integer infequ;
-    extern /* Subroutine */ int cpbtrs_(char *, integer *, integer *, integer 
-	    *, complex *, integer *, complex *, integer *, integer *);
     real smlnum;
 
 

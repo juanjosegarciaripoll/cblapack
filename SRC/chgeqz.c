@@ -45,12 +45,7 @@ static integer c__2 = 2;
     real ulp;
     complex abi22;
     real absb, atol, btol, temp;
-    extern /* Subroutine */ int crot_(integer *, complex *, integer *, 
-	    complex *, integer *, real *, complex *);
     real temp2;
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *);
-    extern logical lsame_(char *, char *);
     complex ctemp;
     integer iiter, ilast, jiter;
     real anorm, bnorm;
@@ -61,13 +56,7 @@ static integer c__2 = 2;
     logical ilazr2;
     real ascale, bscale;
     complex signbc;
-    extern doublereal slamch_(char *), clanhs_(char *, integer *, 
-	    complex *, integer *, real *);
-    extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *), clartg_(complex *, 
-	    complex *, real *, complex *, complex *);
     real safmin;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     complex eshift;
     logical ilschr;
     integer icompq, ilastm;

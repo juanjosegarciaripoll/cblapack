@@ -31,12 +31,6 @@ static doublecomplex c_b10 = {-1.,-0.};
     doublereal eps;
     integer ipv, jpv;
     doublereal smin, xmax;
-    extern /* Subroutine */ int zgeru_(integer *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zswap_(integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *), dlabad_(doublereal *, 
-	    doublereal *);
-    extern doublereal dlamch_(char *);
     doublereal bignum, smlnum;
 
 

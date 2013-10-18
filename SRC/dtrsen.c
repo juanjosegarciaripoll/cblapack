@@ -35,26 +35,12 @@ static integer c_n1 = -1;
     integer ierr;
     logical swap;
     doublereal scale;
-    extern logical lsame_(char *, char *);
     integer isave[3], lwmin;
     logical wantq, wants;
     doublereal rnorm;
-    extern /* Subroutine */ int dlacn2_(integer *, doublereal *, doublereal *, 
-	     integer *, doublereal *, integer *, integer *);
-    extern doublereal dlange_(char *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int dlacpy_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *), 
-	    xerbla_(char *, integer *);
     logical wantbh;
-    extern /* Subroutine */ int dtrexc_(char *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, integer *, integer *, 
-	    doublereal *, integer *);
     integer liwmin;
     logical wantsp, lquery;
-    extern /* Subroutine */ int dtrsyl_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */

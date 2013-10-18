@@ -23,11 +23,6 @@
     integer z_dim1, z_offset;
 
     /* Local variables */
-    extern /* Subroutine */ int dstemr_(char *, char *, integer *, doublereal 
-	    *, doublereal *, doublereal *, doublereal *, integer *, integer *, 
-	     integer *, doublereal *, doublereal *, integer *, integer *, 
-	    integer *, logical *, doublereal *, integer *, integer *, integer 
-	    *, integer *);
     logical tryrac;
 
 

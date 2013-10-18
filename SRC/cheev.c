@@ -35,28 +35,12 @@ static real c_b18 = 1.f;
     real anrm;
     integer imax;
     real rmin, rmax, sigma;
-    extern logical lsame_(char *, char *);
     integer iinfo;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     logical lower, wantz;
-    extern doublereal clanhe_(char *, char *, integer *, complex *, integer *, 
-	     real *);
     integer iscale;
-    extern /* Subroutine */ int clascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, complex *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int chetrd_(char *, integer *, complex *, integer 
-	    *, real *, real *, complex *, complex *, integer *, integer *);
     real safmin;
-    extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
-	    integer *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real bignum;
     integer indtau, indwrk;
-    extern /* Subroutine */ int csteqr_(char *, integer *, real *, real *, 
-	    complex *, integer *, real *, integer *), cungtr_(char *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *, 
-	    integer *), ssterf_(integer *, real *, real *, integer *);
     integer llwork;
     real smlnum;
     integer lwkopt;

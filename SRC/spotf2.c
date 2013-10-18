@@ -29,14 +29,7 @@ static real c_b12 = 1.f;
     /* Local variables */
     integer j;
     real ajj;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    sgemv_(char *, integer *, integer *, real *, real *, integer *, 
-	    real *, integer *, real *, real *, integer *);
     logical upper;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
-    extern logical sisnan_(real *);
 
 
 /*  -- LAPACK routine (version 3.2) -- */
