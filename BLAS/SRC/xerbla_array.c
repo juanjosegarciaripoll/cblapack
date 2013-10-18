@@ -23,15 +23,9 @@
     integer i__;
     char srname[32];
 
-
 /*  -- LAPACK auxiliary routine (version 3.0) -- */
 /*     Univ. of Tennessee, Univ. of California Berkeley, NAG Ltd., */
 /*     September 19, 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -70,16 +64,6 @@
 
 /* ===================================================================== */
 
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Local Arrays .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
     /* Parameter adjustments */
     --srname_array__;
 

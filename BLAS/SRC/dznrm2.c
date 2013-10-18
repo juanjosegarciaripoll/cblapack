@@ -23,11 +23,6 @@ doublereal dznrm2_(integer *n, doublecomplex *x, integer *incx)
     integer ix;
     doublereal ssq, temp, norm, scale;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -36,18 +31,10 @@ doublereal dznrm2_(integer *n, doublecomplex *x, integer *incx)
 
 /*     DZNRM2 := sqrt( conjg( x' )*x ) */
 
-
 /*  -- This version written on 25-October-1982. */
 /*     Modified on 14-October-1993 to inline the call to ZLASSQ. */
 /*     Sven Hammarling, Nag Ltd. */
 
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --x;
 
@@ -92,7 +79,6 @@ doublereal dznrm2_(integer *n, doublecomplex *x, integer *incx)
 		    ssq += d__1 * d__1;
 		}
 	    }
-/* L10: */
 	}
 	norm = scale * sqrt(ssq);
     }

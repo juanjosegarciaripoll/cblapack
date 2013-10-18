@@ -26,20 +26,12 @@ static doublereal c_b4 = 1.;
     /* Local variables */
     doublereal r__, z__, roe, scale;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
 /*     construct givens plane rotation. */
 /*     jack dongarra, linpack, 3/11/78. */
 
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     roe = *db;
     if (abs(*da) > abs(*db)) {
 	roe = *da;

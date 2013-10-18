@@ -23,11 +23,6 @@
     integer i__, j, k, kk, ix, iy, jx, jy, kx, ky, info;
     real temp1, temp2;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -104,7 +99,6 @@
 /*           Y. INCY must not be zero. */
 /*           Unchanged on exit. */
 
-
 /*  Level 2 Blas routine. */
 
 /*  -- Written on 22-October-1986. */
@@ -112,16 +106,6 @@
 /*     Jeremy Du Croz, Nag Central Office. */
 /*     Sven Hammarling, Nag Central Office. */
 /*     Richard Hanson, Sandia National Labs. */
-
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
 
 /*     Test the input parameters. */
 
@@ -176,13 +160,11 @@
 		i__1 = *n;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    y[i__] = 0.f;
-/* L10: */
 		}
 	    } else {
 		i__1 = *n;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    y[i__] = *beta * y[i__];
-/* L20: */
 		}
 	    }
 	} else {
@@ -192,14 +174,12 @@
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    y[iy] = 0.f;
 		    iy += *incy;
-/* L30: */
 		}
 	    } else {
 		i__1 = *n;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    y[iy] = *beta * y[iy];
 		    iy += *incy;
-/* L40: */
 		}
 	    }
 	}
@@ -223,11 +203,9 @@
 		    y[i__] += temp1 * ap[k];
 		    temp2 += ap[k] * x[i__];
 		    ++k;
-/* L50: */
 		}
 		y[j] = y[j] + temp1 * ap[kk + j - 1] + *alpha * temp2;
 		kk += j;
-/* L60: */
 	    }
 	} else {
 	    jx = kx;
@@ -244,13 +222,11 @@
 		    temp2 += ap[k] * x[ix];
 		    ix += *incx;
 		    iy += *incy;
-/* L70: */
 		}
 		y[jy] = y[jy] + temp1 * ap[kk + j - 1] + *alpha * temp2;
 		jx += *incx;
 		jy += *incy;
 		kk += j;
-/* L80: */
 	    }
 	}
     } else {
@@ -269,11 +245,9 @@
 		    y[i__] += temp1 * ap[k];
 		    temp2 += ap[k] * x[i__];
 		    ++k;
-/* L90: */
 		}
 		y[j] += *alpha * temp2;
 		kk += *n - j + 1;
-/* L100: */
 	    }
 	} else {
 	    jx = kx;
@@ -291,13 +265,11 @@
 		    iy += *incy;
 		    y[iy] += temp1 * ap[k];
 		    temp2 += ap[k] * x[ix];
-/* L110: */
 		}
 		y[jy] += *alpha * temp2;
 		jx += *incx;
 		jy += *incy;
 		kk += *n - j + 1;
-/* L120: */
 	    }
 	}
     }

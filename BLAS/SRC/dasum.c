@@ -24,11 +24,6 @@ doublereal dasum_(integer *n, doublereal *dx, integer *incx)
     doublereal dtemp;
     integer nincx;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -37,11 +32,6 @@ doublereal dasum_(integer *n, doublereal *dx, integer *incx)
 /*     modified 3/93 to return if incx .le. 0. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --dx;
 
@@ -62,13 +52,11 @@ doublereal dasum_(integer *n, doublereal *dx, integer *incx)
     i__2 = *incx;
     for (i__ = 1; i__2 < 0 ? i__ >= i__1 : i__ <= i__1; i__ += i__2) {
 	dtemp += (d__1 = dx[i__], abs(d__1));
-/* L10: */
     }
     ret_val = dtemp;
     return ret_val;
 
 /*        code for increment equal to 1 */
-
 
 /*        clean-up loop */
 
@@ -80,7 +68,6 @@ L20:
     i__2 = m;
     for (i__ = 1; i__ <= i__2; ++i__) {
 	dtemp += (d__1 = dx[i__], abs(d__1));
-/* L30: */
     }
     if (*n < 6) {
 	goto L60;
@@ -93,7 +80,6 @@ L40:
 		abs(d__2)) + (d__3 = dx[i__ + 2], abs(d__3)) + (d__4 = dx[i__ 
 		+ 3], abs(d__4)) + (d__5 = dx[i__ + 4], abs(d__5)) + (d__6 = 
 		dx[i__ + 5], abs(d__6));
-/* L50: */
     }
 L60:
     ret_val = dtemp;

@@ -30,11 +30,6 @@
     logical upper;
     logical noconj, nounit;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -141,7 +136,6 @@
 /*           max( 1, m ). */
 /*           Unchanged on exit. */
 
-
 /*  Level 3 Blas routine. */
 
 /*  -- Written on 8-February-1989. */
@@ -149,18 +143,6 @@
 /*     Iain Duff, AERE Harwell. */
 /*     Jeremy Du Croz, Numerical Algorithms Group Ltd. */
 /*     Sven Hammarling, Numerical Algorithms Group Ltd. */
-
-
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Parameters .. */
-/*     .. */
 
 /*     Test the input parameters. */
 
@@ -223,9 +205,7 @@
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		i__3 = i__ + j * b_dim1;
 		b[i__3].r = 0.f, b[i__3].i = 0.f;
-/* L10: */
 	    }
-/* L20: */
 	}
 	return 0;
     }
@@ -260,7 +240,6 @@
 				q__1.r = b[i__5].r + q__2.r, q__1.i = b[i__5]
 					.i + q__2.i;
 				b[i__4].r = q__1.r, b[i__4].i = q__1.i;
-/* L30: */
 			    }
 			    if (nounit) {
 				i__3 = k + k * a_dim1;
@@ -272,9 +251,7 @@
 			    i__3 = k + j * b_dim1;
 			    b[i__3].r = temp.r, b[i__3].i = temp.i;
 			}
-/* L40: */
 		    }
-/* L50: */
 		}
 	    } else {
 		i__1 = *n;
@@ -309,12 +286,9 @@
 				q__1.r = b[i__4].r + q__2.r, q__1.i = b[i__4]
 					.i + q__2.i;
 				b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L60: */
 			    }
 			}
-/* L70: */
 		    }
-/* L80: */
 		}
 	    }
 	} else {
@@ -345,7 +319,6 @@
 				q__1.r = temp.r + q__2.r, q__1.i = temp.i + 
 					q__2.i;
 				temp.r = q__1.r, temp.i = q__1.i;
-/* L90: */
 			    }
 			} else {
 			    if (nounit) {
@@ -365,7 +338,6 @@
 				q__1.r = temp.r + q__2.r, q__1.i = temp.i + 
 					q__2.i;
 				temp.r = q__1.r, temp.i = q__1.i;
-/* L100: */
 			    }
 			}
 			i__2 = i__ + j * b_dim1;
@@ -373,9 +345,7 @@
 				q__1.i = alpha->r * temp.i + alpha->i * 
 				temp.r;
 			b[i__2].r = q__1.r, b[i__2].i = q__1.i;
-/* L110: */
 		    }
-/* L120: */
 		}
 	    } else {
 		i__1 = *n;
@@ -402,7 +372,6 @@
 				q__1.r = temp.r + q__2.r, q__1.i = temp.i + 
 					q__2.i;
 				temp.r = q__1.r, temp.i = q__1.i;
-/* L130: */
 			    }
 			} else {
 			    if (nounit) {
@@ -422,7 +391,6 @@
 				q__1.r = temp.r + q__2.r, q__1.i = temp.i + 
 					q__2.i;
 				temp.r = q__1.r, temp.i = q__1.i;
-/* L140: */
 			    }
 			}
 			i__3 = i__ + j * b_dim1;
@@ -430,9 +398,7 @@
 				q__1.i = alpha->r * temp.i + alpha->i * 
 				temp.r;
 			b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L150: */
 		    }
-/* L160: */
 		}
 	    }
 	}
@@ -459,7 +425,6 @@
 				q__1.i = temp.r * b[i__3].i + temp.i * b[i__3]
 				.r;
 			b[i__2].r = q__1.r, b[i__2].i = q__1.i;
-/* L170: */
 		    }
 		    i__1 = j - 1;
 		    for (k = 1; k <= i__1; ++k) {
@@ -481,12 +446,9 @@
 				q__1.r = b[i__4].r + q__2.r, q__1.i = b[i__4]
 					.i + q__2.i;
 				b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L180: */
 			    }
 			}
-/* L190: */
 		    }
-/* L200: */
 		}
 	    } else {
 		i__1 = *n;
@@ -507,7 +469,6 @@
 				q__1.i = temp.r * b[i__4].i + temp.i * b[i__4]
 				.r;
 			b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L210: */
 		    }
 		    i__2 = *n;
 		    for (k = j + 1; k <= i__2; ++k) {
@@ -529,12 +490,9 @@
 				q__1.r = b[i__5].r + q__2.r, q__1.i = b[i__5]
 					.i + q__2.i;
 				b[i__4].r = q__1.r, b[i__4].i = q__1.i;
-/* L220: */
 			    }
 			}
-/* L230: */
 		    }
-/* L240: */
 		}
 	    }
 	} else {
@@ -572,10 +530,8 @@
 				q__1.r = b[i__5].r + q__2.r, q__1.i = b[i__5]
 					.i + q__2.i;
 				b[i__4].r = q__1.r, b[i__4].i = q__1.i;
-/* L250: */
 			    }
 			}
-/* L260: */
 		    }
 		    temp.r = alpha->r, temp.i = alpha->i;
 		    if (nounit) {
@@ -602,10 +558,8 @@
 				    q__1.i = temp.r * b[i__4].i + temp.i * b[
 				    i__4].r;
 			    b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L270: */
 			}
 		    }
-/* L280: */
 		}
 	    } else {
 		for (k = *n; k >= 1; --k) {
@@ -637,10 +591,8 @@
 				q__1.r = b[i__4].r + q__2.r, q__1.i = b[i__4]
 					.i + q__2.i;
 				b[i__3].r = q__1.r, b[i__3].i = q__1.i;
-/* L290: */
 			    }
 			}
-/* L300: */
 		    }
 		    temp.r = alpha->r, temp.i = alpha->i;
 		    if (nounit) {
@@ -667,10 +619,8 @@
 				    q__1.i = temp.r * b[i__3].i + temp.i * b[
 				    i__3].r;
 			    b[i__2].r = q__1.r, b[i__2].i = q__1.i;
-/* L310: */
 			}
 		    }
-/* L320: */
 		}
 	    }
 	}

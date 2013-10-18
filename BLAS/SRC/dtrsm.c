@@ -28,11 +28,6 @@
     logical upper;
     logical nounit;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -141,27 +136,13 @@
 /*           max( 1, m ). */
 /*           Unchanged on exit. */
 
-
 /*  Level 3 Blas routine. */
-
 
 /*  -- Written on 8-February-1989. */
 /*     Jack Dongarra, Argonne National Laboratory. */
 /*     Iain Duff, AERE Harwell. */
 /*     Jeremy Du Croz, Numerical Algorithms Group Ltd. */
 /*     Sven Hammarling, Numerical Algorithms Group Ltd. */
-
-
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Parameters .. */
-/*     .. */
 
 /*     Test the input parameters. */
 
@@ -222,9 +203,7 @@
 	    i__2 = *m;
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		b[i__ + j * b_dim1] = 0.;
-/* L10: */
 	    }
-/* L20: */
 	}
 	return 0;
     }
@@ -244,7 +223,6 @@
 			for (i__ = 1; i__ <= i__2; ++i__) {
 			    b[i__ + j * b_dim1] = *alpha * b[i__ + j * b_dim1]
 				    ;
-/* L30: */
 			}
 		    }
 		    for (k = *m; k >= 1; --k) {
@@ -256,12 +234,9 @@
 			    for (i__ = 1; i__ <= i__2; ++i__) {
 				b[i__ + j * b_dim1] -= b[k + j * b_dim1] * a[
 					i__ + k * a_dim1];
-/* L40: */
 			    }
 			}
-/* L50: */
 		    }
-/* L60: */
 		}
 	    } else {
 		i__1 = *n;
@@ -271,7 +246,6 @@
 			for (i__ = 1; i__ <= i__2; ++i__) {
 			    b[i__ + j * b_dim1] = *alpha * b[i__ + j * b_dim1]
 				    ;
-/* L70: */
 			}
 		    }
 		    i__2 = *m;
@@ -284,12 +258,9 @@
 			    for (i__ = k + 1; i__ <= i__3; ++i__) {
 				b[i__ + j * b_dim1] -= b[k + j * b_dim1] * a[
 					i__ + k * a_dim1];
-/* L80: */
 			    }
 			}
-/* L90: */
 		    }
-/* L100: */
 		}
 	    }
 	} else {
@@ -305,15 +276,12 @@
 			i__3 = i__ - 1;
 			for (k = 1; k <= i__3; ++k) {
 			    temp -= a[k + i__ * a_dim1] * b[k + j * b_dim1];
-/* L110: */
 			}
 			if (nounit) {
 			    temp /= a[i__ + i__ * a_dim1];
 			}
 			b[i__ + j * b_dim1] = temp;
-/* L120: */
 		    }
-/* L130: */
 		}
 	    } else {
 		i__1 = *n;
@@ -323,15 +291,12 @@
 			i__2 = *m;
 			for (k = i__ + 1; k <= i__2; ++k) {
 			    temp -= a[k + i__ * a_dim1] * b[k + j * b_dim1];
-/* L140: */
 			}
 			if (nounit) {
 			    temp /= a[i__ + i__ * a_dim1];
 			}
 			b[i__ + j * b_dim1] = temp;
-/* L150: */
 		    }
-/* L160: */
 		}
 	    }
 	}
@@ -348,7 +313,6 @@
 			for (i__ = 1; i__ <= i__2; ++i__) {
 			    b[i__ + j * b_dim1] = *alpha * b[i__ + j * b_dim1]
 				    ;
-/* L170: */
 			}
 		    }
 		    i__2 = j - 1;
@@ -358,20 +322,16 @@
 			    for (i__ = 1; i__ <= i__3; ++i__) {
 				b[i__ + j * b_dim1] -= a[k + j * a_dim1] * b[
 					i__ + k * b_dim1];
-/* L180: */
 			    }
 			}
-/* L190: */
 		    }
 		    if (nounit) {
 			temp = 1. / a[j + j * a_dim1];
 			i__2 = *m;
 			for (i__ = 1; i__ <= i__2; ++i__) {
 			    b[i__ + j * b_dim1] = temp * b[i__ + j * b_dim1];
-/* L200: */
 			}
 		    }
-/* L210: */
 		}
 	    } else {
 		for (j = *n; j >= 1; --j) {
@@ -380,7 +340,6 @@
 			for (i__ = 1; i__ <= i__1; ++i__) {
 			    b[i__ + j * b_dim1] = *alpha * b[i__ + j * b_dim1]
 				    ;
-/* L220: */
 			}
 		    }
 		    i__1 = *n;
@@ -390,20 +349,16 @@
 			    for (i__ = 1; i__ <= i__2; ++i__) {
 				b[i__ + j * b_dim1] -= a[k + j * a_dim1] * b[
 					i__ + k * b_dim1];
-/* L230: */
 			    }
 			}
-/* L240: */
 		    }
 		    if (nounit) {
 			temp = 1. / a[j + j * a_dim1];
 			i__1 = *m;
 			for (i__ = 1; i__ <= i__1; ++i__) {
 			    b[i__ + j * b_dim1] = temp * b[i__ + j * b_dim1];
-/* L250: */
 			}
 		    }
-/* L260: */
 		}
 	    }
 	} else {
@@ -417,7 +372,6 @@
 			i__1 = *m;
 			for (i__ = 1; i__ <= i__1; ++i__) {
 			    b[i__ + k * b_dim1] = temp * b[i__ + k * b_dim1];
-/* L270: */
 			}
 		    }
 		    i__1 = k - 1;
@@ -428,20 +382,16 @@
 			    for (i__ = 1; i__ <= i__2; ++i__) {
 				b[i__ + j * b_dim1] -= temp * b[i__ + k * 
 					b_dim1];
-/* L280: */
 			    }
 			}
-/* L290: */
 		    }
 		    if (*alpha != 1.) {
 			i__1 = *m;
 			for (i__ = 1; i__ <= i__1; ++i__) {
 			    b[i__ + k * b_dim1] = *alpha * b[i__ + k * b_dim1]
 				    ;
-/* L300: */
 			}
 		    }
-/* L310: */
 		}
 	    } else {
 		i__1 = *n;
@@ -451,7 +401,6 @@
 			i__2 = *m;
 			for (i__ = 1; i__ <= i__2; ++i__) {
 			    b[i__ + k * b_dim1] = temp * b[i__ + k * b_dim1];
-/* L320: */
 			}
 		    }
 		    i__2 = *n;
@@ -462,20 +411,16 @@
 			    for (i__ = 1; i__ <= i__3; ++i__) {
 				b[i__ + j * b_dim1] -= temp * b[i__ + k * 
 					b_dim1];
-/* L330: */
 			    }
 			}
-/* L340: */
 		    }
 		    if (*alpha != 1.) {
 			i__2 = *m;
 			for (i__ = 1; i__ <= i__2; ++i__) {
 			    b[i__ + k * b_dim1] = *alpha * b[i__ + k * b_dim1]
 				    ;
-/* L350: */
 			}
 		    }
-/* L360: */
 		}
 	    }
 	}

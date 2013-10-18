@@ -25,11 +25,6 @@
     complex temp;
     logical noconj, nounit;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -114,7 +109,6 @@
 /*           X. INCX must not be zero. */
 /*           Unchanged on exit. */
 
-
 /*  Level 2 Blas routine. */
 
 /*  -- Written on 22-October-1986. */
@@ -122,18 +116,6 @@
 /*     Jeremy Du Croz, Nag Central Office. */
 /*     Sven Hammarling, Nag Central Office. */
 /*     Richard Hanson, Sandia National Labs. */
-
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
 
 /*     Test the input parameters. */
 
@@ -212,10 +194,8 @@
 			    q__1.r = x[i__2].r - q__2.r, q__1.i = x[i__2].i - 
 				    q__2.i;
 			    x[i__1].r = q__1.r, x[i__1].i = q__1.i;
-/* L10: */
 			}
 		    }
-/* L20: */
 		}
 	    } else {
 		jx = kx + (*n - 1) * *incx;
@@ -241,11 +221,9 @@
 			    q__1.r = x[i__2].r - q__2.r, q__1.i = x[i__2].i - 
 				    q__2.i;
 			    x[i__1].r = q__1.r, x[i__1].i = q__1.i;
-/* L30: */
 			}
 		    }
 		    jx -= *incx;
-/* L40: */
 		}
 	    }
 	} else {
@@ -272,10 +250,8 @@
 			    q__1.r = x[i__4].r - q__2.r, q__1.i = x[i__4].i - 
 				    q__2.i;
 			    x[i__3].r = q__1.r, x[i__3].i = q__1.i;
-/* L50: */
 			}
 		    }
-/* L60: */
 		}
 	    } else {
 		jx = kx;
@@ -303,11 +279,9 @@
 			    q__1.r = x[i__4].r - q__2.r, q__1.i = x[i__4].i - 
 				    q__2.i;
 			    x[i__3].r = q__1.r, x[i__3].i = q__1.i;
-/* L70: */
 			}
 		    }
 		    jx += *incx;
-/* L80: */
 		}
 	    }
 	}
@@ -332,7 +306,6 @@
 			    q__1.r = temp.r - q__2.r, q__1.i = temp.i - 
 				    q__2.i;
 			    temp.r = q__1.r, temp.i = q__1.i;
-/* L90: */
 			}
 			if (nounit) {
 			    c_div(&q__1, &temp, &a[j + j * a_dim1]);
@@ -349,7 +322,6 @@
 			    q__1.r = temp.r - q__2.r, q__1.i = temp.i - 
 				    q__2.i;
 			    temp.r = q__1.r, temp.i = q__1.i;
-/* L100: */
 			}
 			if (nounit) {
 			    r_cnjg(&q__2, &a[j + j * a_dim1]);
@@ -359,7 +331,6 @@
 		    }
 		    i__2 = j;
 		    x[i__2].r = temp.r, x[i__2].i = temp.i;
-/* L110: */
 		}
 	    } else {
 		jx = kx;
@@ -380,7 +351,6 @@
 				    q__2.i;
 			    temp.r = q__1.r, temp.i = q__1.i;
 			    ix += *incx;
-/* L120: */
 			}
 			if (nounit) {
 			    c_div(&q__1, &temp, &a[j + j * a_dim1]);
@@ -398,7 +368,6 @@
 				    q__2.i;
 			    temp.r = q__1.r, temp.i = q__1.i;
 			    ix += *incx;
-/* L130: */
 			}
 			if (nounit) {
 			    r_cnjg(&q__2, &a[j + j * a_dim1]);
@@ -409,7 +378,6 @@
 		    i__2 = jx;
 		    x[i__2].r = temp.r, x[i__2].i = temp.i;
 		    jx += *incx;
-/* L140: */
 		}
 	    }
 	} else {
@@ -428,7 +396,6 @@
 			    q__1.r = temp.r - q__2.r, q__1.i = temp.i - 
 				    q__2.i;
 			    temp.r = q__1.r, temp.i = q__1.i;
-/* L150: */
 			}
 			if (nounit) {
 			    c_div(&q__1, &temp, &a[j + j * a_dim1]);
@@ -445,7 +412,6 @@
 			    q__1.r = temp.r - q__2.r, q__1.i = temp.i - 
 				    q__2.i;
 			    temp.r = q__1.r, temp.i = q__1.i;
-/* L160: */
 			}
 			if (nounit) {
 			    r_cnjg(&q__2, &a[j + j * a_dim1]);
@@ -455,7 +421,6 @@
 		    }
 		    i__1 = j;
 		    x[i__1].r = temp.r, x[i__1].i = temp.i;
-/* L170: */
 		}
 	    } else {
 		kx += (*n - 1) * *incx;
@@ -476,7 +441,6 @@
 				    q__2.i;
 			    temp.r = q__1.r, temp.i = q__1.i;
 			    ix -= *incx;
-/* L180: */
 			}
 			if (nounit) {
 			    c_div(&q__1, &temp, &a[j + j * a_dim1]);
@@ -494,7 +458,6 @@
 				    q__2.i;
 			    temp.r = q__1.r, temp.i = q__1.i;
 			    ix -= *incx;
-/* L190: */
 			}
 			if (nounit) {
 			    r_cnjg(&q__2, &a[j + j * a_dim1]);
@@ -505,7 +468,6 @@
 		    i__1 = jx;
 		    x[i__1].r = temp.r, x[i__1].i = temp.i;
 		    jx -= *incx;
-/* L200: */
 		}
 	    }
 	}

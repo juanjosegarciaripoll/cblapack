@@ -24,11 +24,6 @@
     integer i__, j, ix, jy, kx, info;
     doublereal temp;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -89,7 +84,6 @@
 /*           max( 1, m ). */
 /*           Unchanged on exit. */
 
-
 /*  Level 2 Blas routine. */
 
 /*  -- Written on 22-October-1986. */
@@ -97,16 +91,6 @@
 /*     Jeremy Du Croz, Nag Central Office. */
 /*     Sven Hammarling, Nag Central Office. */
 /*     Richard Hanson, Sandia National Labs. */
-
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
 
 /*     Test the input parameters. */
 
@@ -157,11 +141,9 @@
 		i__2 = *m;
 		for (i__ = 1; i__ <= i__2; ++i__) {
 		    a[i__ + j * a_dim1] += x[i__] * temp;
-/* L10: */
 		}
 	    }
 	    jy += *incy;
-/* L20: */
 	}
     } else {
 	if (*incx > 0) {
@@ -178,11 +160,9 @@
 		for (i__ = 1; i__ <= i__2; ++i__) {
 		    a[i__ + j * a_dim1] += x[ix] * temp;
 		    ix += *incx;
-/* L30: */
 		}
 	    }
 	    jy += *incy;
-/* L40: */
 	}
     }
 

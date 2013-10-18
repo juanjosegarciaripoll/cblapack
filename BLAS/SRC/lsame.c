@@ -21,13 +21,8 @@ logical lsame_(char *ca, char *cb)
     /* Local variables */
     integer inta, intb, zcode;
 
-
 /*  -- LAPACK auxiliary routine (version 3.1) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -44,11 +39,6 @@ logical lsame_(char *ca, char *cb)
 /*          CA and CB specify the single characters to be compared. */
 
 /* ===================================================================== */
-
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
 
 /*     Test if the characters are equal */
 

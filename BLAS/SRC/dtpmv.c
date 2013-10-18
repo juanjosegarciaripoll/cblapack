@@ -24,11 +24,6 @@
     doublereal temp;
     logical nounit;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -107,7 +102,6 @@
 /*           X. INCX must not be zero. */
 /*           Unchanged on exit. */
 
-
 /*  Level 2 Blas routine. */
 
 /*  -- Written on 22-October-1986. */
@@ -115,16 +109,6 @@
 /*     Jeremy Du Croz, Nag Central Office. */
 /*     Sven Hammarling, Nag Central Office. */
 /*     Richard Hanson, Sandia National Labs. */
-
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
 
 /*     Test the input parameters. */
 
@@ -188,14 +172,12 @@
 			for (i__ = 1; i__ <= i__2; ++i__) {
 			    x[i__] += temp * ap[k];
 			    ++k;
-/* L10: */
 			}
 			if (nounit) {
 			    x[j] *= ap[kk + j - 1];
 			}
 		    }
 		    kk += j;
-/* L20: */
 		}
 	    } else {
 		jx = kx;
@@ -208,7 +190,6 @@
 			for (k = kk; k <= i__2; ++k) {
 			    x[ix] += temp * ap[k];
 			    ix += *incx;
-/* L30: */
 			}
 			if (nounit) {
 			    x[jx] *= ap[kk + j - 1];
@@ -216,7 +197,6 @@
 		    }
 		    jx += *incx;
 		    kk += j;
-/* L40: */
 		}
 	    }
 	} else {
@@ -230,14 +210,12 @@
 			for (i__ = *n; i__ >= i__1; --i__) {
 			    x[i__] += temp * ap[k];
 			    --k;
-/* L50: */
 			}
 			if (nounit) {
 			    x[j] *= ap[kk - *n + j];
 			}
 		    }
 		    kk -= *n - j + 1;
-/* L60: */
 		}
 	    } else {
 		kx += (*n - 1) * *incx;
@@ -250,7 +228,6 @@
 			for (k = kk; k >= i__1; --k) {
 			    x[ix] += temp * ap[k];
 			    ix -= *incx;
-/* L70: */
 			}
 			if (nounit) {
 			    x[jx] *= ap[kk - *n + j];
@@ -258,7 +235,6 @@
 		    }
 		    jx -= *incx;
 		    kk -= *n - j + 1;
-/* L80: */
 		}
 	    }
 	}
@@ -278,11 +254,9 @@
 		    for (i__ = j - 1; i__ >= 1; --i__) {
 			temp += ap[k] * x[i__];
 			--k;
-/* L90: */
 		    }
 		    x[j] = temp;
 		    kk -= j;
-/* L100: */
 		}
 	    } else {
 		jx = kx + (*n - 1) * *incx;
@@ -296,12 +270,10 @@
 		    for (k = kk - 1; k >= i__1; --k) {
 			ix -= *incx;
 			temp += ap[k] * x[ix];
-/* L110: */
 		    }
 		    x[jx] = temp;
 		    jx -= *incx;
 		    kk -= j;
-/* L120: */
 		}
 	    }
 	} else {
@@ -318,11 +290,9 @@
 		    for (i__ = j + 1; i__ <= i__2; ++i__) {
 			temp += ap[k] * x[i__];
 			++k;
-/* L130: */
 		    }
 		    x[j] = temp;
 		    kk += *n - j + 1;
-/* L140: */
 		}
 	    } else {
 		jx = kx;
@@ -337,12 +307,10 @@
 		    for (k = kk + 1; k <= i__2; ++k) {
 			ix += *incx;
 			temp += ap[k] * x[ix];
-/* L150: */
 		    }
 		    x[jx] = temp;
 		    jx += *incx;
 		    kk += *n - j + 1;
-/* L160: */
 		}
 	    }
 	}

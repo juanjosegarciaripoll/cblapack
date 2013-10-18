@@ -23,11 +23,6 @@
     integer i__, ix, iy;
     complex ctemp;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -35,9 +30,6 @@
 /*     jack dongarra, linpack, 3/11/78. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-
-/*     .. Local Scalars .. */
-/*     .. */
     /* Parameter adjustments */
     --cy;
     --cx;
@@ -72,7 +64,6 @@
 	cy[i__2].r = ctemp.r, cy[i__2].i = ctemp.i;
 	ix += *incx;
 	iy += *incy;
-/* L10: */
     }
     return 0;
 
@@ -87,7 +78,6 @@ L20:
 	cx[i__2].r = cy[i__3].r, cx[i__2].i = cy[i__3].i;
 	i__2 = i__;
 	cy[i__2].r = ctemp.r, cy[i__2].i = ctemp.i;
-/* L30: */
     }
     return 0;
 } /* cswap_ */

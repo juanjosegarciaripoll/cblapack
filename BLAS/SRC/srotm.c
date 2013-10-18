@@ -31,11 +31,6 @@
     real sh11, sh12, sh21, sh22, sflag;
     integer nsteps;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -46,7 +41,6 @@
 
 /*     SX(LX+I*INCX), I = 0 TO N-1, WHERE LX = 1 IF INCX .GE. 0, ELSE */
 /*     LX = (-INCX)*N, AND SIMILARLY FOR SY USING USING LY AND INCY. */
-/*     WITH SPARAM(1)=SFLAG, H HAS ONE OF THE FOLLOWING FORMS.. */
 
 /*     SFLAG=-1.E0     SFLAG=0.E0        SFLAG=1.E0     SFLAG=-2.E0 */
 
@@ -54,7 +48,6 @@
 /*     H=(          )    (          )    (          )    (          ) */
 /*       (SH21  SH22),   (SH21  1.E0),   (-1.E0 SH22),   (0.E0  1.E0). */
 /*     SEE  SROTMG FOR A DESCRIPTION OF DATA STORAGE IN SPARAM. */
-
 
 /*  Arguments */
 /*  ========= */
@@ -83,16 +76,12 @@
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Data statements .. */
     /* Parameter adjustments */
     --sparam;
     --sy;
     --sx;
 
     /* Function Body */
-/*     .. */
 
     sflag = sparam[1];
     if (*n <= 0 || sflag + two == zero) {
@@ -120,7 +109,6 @@ L10:
 	z__ = sy[i__];
 	sx[i__] = w + z__ * sh12;
 	sy[i__] = w * sh21 + z__;
-/* L20: */
     }
     goto L140;
 L30:
@@ -133,7 +121,6 @@ L30:
 	z__ = sy[i__];
 	sx[i__] = w * sh11 + z__;
 	sy[i__] = -w + sh22 * z__;
-/* L40: */
     }
     goto L140;
 L50:
@@ -148,7 +135,6 @@ L50:
 	z__ = sy[i__];
 	sx[i__] = w * sh11 + z__ * sh12;
 	sy[i__] = w * sh21 + z__ * sh22;
-/* L60: */
     }
     goto L140;
 L70:
@@ -179,7 +165,6 @@ L80:
 	sy[ky] = w * sh21 + z__;
 	kx += *incx;
 	ky += *incy;
-/* L90: */
     }
     goto L140;
 L100:
@@ -193,7 +178,6 @@ L100:
 	sy[ky] = -w + sh22 * z__;
 	kx += *incx;
 	ky += *incy;
-/* L110: */
     }
     goto L140;
 L120:
@@ -209,7 +193,6 @@ L120:
 	sy[ky] = w * sh21 + z__ * sh22;
 	kx += *incx;
 	ky += *incy;
-/* L130: */
     }
 L140:
     return 0;

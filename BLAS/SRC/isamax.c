@@ -23,11 +23,6 @@ integer isamax_(integer *n, real *sx, integer *incx)
     integer i__, ix;
     real smax;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -36,11 +31,6 @@ integer isamax_(integer *n, real *sx, integer *incx)
 /*     modified 3/93 to return if incx .le. 0. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --sx;
 
@@ -71,7 +61,6 @@ integer isamax_(integer *n, real *sx, integer *incx)
 	smax = (r__1 = sx[ix], dabs(r__1));
 L5:
 	ix += *incx;
-/* L10: */
     }
     return ret_val;
 

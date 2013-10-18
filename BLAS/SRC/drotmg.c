@@ -42,18 +42,12 @@
     /* Assigned format variables */
     static char *igo_fmt;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
 /*     CONSTRUCT THE MODIFIED GIVENS TRANSFORMATION MATRIX H WHICH ZEROS */
 /*     THE SECOND COMPONENT OF THE 2-VECTOR  (DSQRT(DD1)*DX1,DSQRT(DD2)* */
 /*     DY2)**T. */
-/*     WITH DPARAM(1)=DFLAG, H HAS ONE OF THE FOLLOWING FORMS.. */
 
 /*     DFLAG=-1.D0     DFLAG=0.D0        DFLAG=1.D0     DFLAG=-2.D0 */
 
@@ -67,7 +61,6 @@
 /*     THE VALUES OF GAMSQ AND RGAMSQ SET IN THE DATA STATEMENT MAY BE */
 /*     INEXACT.  THIS IS OK AS THEY ARE ONLY USED FOR TESTING THE SIZE */
 /*     OF DD1 AND DD2.  ALL ACTUAL SCALING OF DATA IS DONE USING GAM. */
-
 
 /*  Arguments */
 /*  ========= */
@@ -89,21 +82,13 @@
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Data statements .. */
-
     /* Parameter adjustments */
     --dparam;
 
     /* Function Body */
-/*     .. */
     if (! (*dd1 < zero)) {
 	goto L10;
     }
-/*       GO ZERO-H-D-AND-DX1.. */
     goto L60;
 L10:
 /*     CASE-DD1-NONNEGATIVE */
@@ -113,7 +98,6 @@ L10:
     }
     dflag = -two;
     goto L260;
-/*     REGULAR-CASE.. */
 L20:
     dp1 = *dd1 * *dx1;
     dq2 = dp2 * *dy1;
@@ -130,20 +114,17 @@ L20:
     if (! (du <= zero)) {
 	goto L30;
     }
-/*         GO ZERO-H-D-AND-DX1.. */
     goto L60;
 L30:
     dflag = zero;
     *dd1 /= du;
     *dd2 /= du;
     *dx1 *= du;
-/*         GO SCALE-CHECK.. */
     goto L100;
 L40:
     if (! (dq2 < zero)) {
 	goto L50;
     }
-/*         GO ZERO-H-D-AND-DX1.. */
     goto L60;
 L50:
     dflag = one;
@@ -156,7 +137,6 @@ L50:
     *dx1 = *dy1 * du;
 /*         GO SCALE-CHECK */
     goto L100;
-/*     PROCEDURE..ZERO-H-D-AND-DX1.. */
 L60:
     dflag = -one;
     dh11 = zero;
@@ -167,9 +147,7 @@ L60:
     *dd1 = zero;
     *dd2 = zero;
     *dx1 = zero;
-/*         RETURN.. */
     goto L220;
-/*     PROCEDURE..FIX-H.. */
 L70:
     if (! (dflag >= zero)) {
 	goto L90;
@@ -193,7 +171,6 @@ L90:
 	case 2: goto L180;
 	case 3: goto L210;
     }
-/*     PROCEDURE..SCALE-CHECK */
 L100:
 L110:
     if (! (*dd1 <= rgamsq)) {
@@ -204,7 +181,6 @@ L110:
     }
     igo = 0;
     igo_fmt = fmt_120;
-/*              FIX-H.. */
     goto L70;
 L120:
 /* Computing 2nd power */
@@ -221,7 +197,6 @@ L140:
     }
     igo = 1;
     igo_fmt = fmt_150;
-/*              FIX-H.. */
     goto L70;
 L150:
 /* Computing 2nd power */
@@ -241,7 +216,6 @@ L170:
     }
     igo = 2;
     igo_fmt = fmt_180;
-/*              FIX-H.. */
     goto L70;
 L180:
 /* Computing 2nd power */
@@ -257,7 +231,6 @@ L200:
     }
     igo = 3;
     igo_fmt = fmt_210;
-/*              FIX-H.. */
     goto L70;
 L210:
 /* Computing 2nd power */

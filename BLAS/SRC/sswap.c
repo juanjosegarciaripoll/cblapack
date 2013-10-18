@@ -23,11 +23,6 @@
     integer i__, m, ix, iy, mp1;
     real stemp;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -36,11 +31,6 @@
 /*     jack dongarra, linpack, 3/11/78. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --sy;
     --sx;
@@ -71,12 +61,10 @@
 	sy[iy] = stemp;
 	ix += *incx;
 	iy += *incy;
-/* L10: */
     }
     return 0;
 
 /*       code for both increments equal to 1 */
-
 
 /*       clean-up loop */
 
@@ -90,7 +78,6 @@ L20:
 	stemp = sx[i__];
 	sx[i__] = sy[i__];
 	sy[i__] = stemp;
-/* L30: */
     }
     if (*n < 3) {
 	return 0;
@@ -108,7 +95,6 @@ L40:
 	stemp = sx[i__ + 2];
 	sx[i__ + 2] = sy[i__ + 2];
 	sy[i__ + 2] = stemp;
-/* L50: */
     }
     return 0;
 } /* sswap_ */

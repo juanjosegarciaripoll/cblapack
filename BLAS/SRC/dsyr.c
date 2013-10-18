@@ -23,11 +23,6 @@
     integer i__, j, ix, jx, kx, info;
     doublereal temp;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -94,7 +89,6 @@
 /*           max( 1, n ). */
 /*           Unchanged on exit. */
 
-
 /*  Level 2 Blas routine. */
 
 /*  -- Written on 22-October-1986. */
@@ -102,18 +96,6 @@
 /*     Jeremy Du Croz, Nag Central Office. */
 /*     Sven Hammarling, Nag Central Office. */
 /*     Richard Hanson, Sandia National Labs. */
-
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
 
 /*     Test the input parameters. */
 
@@ -169,10 +151,8 @@
 		    i__2 = j;
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			a[i__ + j * a_dim1] += x[i__] * temp;
-/* L10: */
 		    }
 		}
-/* L20: */
 	    }
 	} else {
 	    jx = kx;
@@ -185,11 +165,9 @@
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			a[i__ + j * a_dim1] += x[ix] * temp;
 			ix += *incx;
-/* L30: */
 		    }
 		}
 		jx += *incx;
-/* L40: */
 	    }
 	}
     } else {
@@ -204,10 +182,8 @@
 		    i__2 = *n;
 		    for (i__ = j; i__ <= i__2; ++i__) {
 			a[i__ + j * a_dim1] += x[i__] * temp;
-/* L50: */
 		    }
 		}
-/* L60: */
 	    }
 	} else {
 	    jx = kx;
@@ -220,11 +196,9 @@
 		    for (i__ = j; i__ <= i__2; ++i__) {
 			a[i__ + j * a_dim1] += x[ix] * temp;
 			ix += *incx;
-/* L70: */
 		    }
 		}
 		jx += *incx;
-/* L80: */
 	    }
 	}
     }

@@ -28,11 +28,6 @@
     integer lenx, leny;
     logical noconj;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -137,12 +132,10 @@
 /*           Before entry, the incremented array Y must contain the */
 /*           vector y. On exit, Y is overwritten by the updated vector y. */
 
-
 /*  INCY   - INTEGER. */
 /*           On entry, INCY specifies the increment for the elements of */
 /*           Y. INCY must not be zero. */
 /*           Unchanged on exit. */
-
 
 /*  Level 2 Blas routine. */
 
@@ -151,18 +144,6 @@
 /*     Jeremy Du Croz, Nag Central Office. */
 /*     Sven Hammarling, Nag Central Office. */
 /*     Richard Hanson, Sandia National Labs. */
-
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
 
 /*     Test the input parameters. */
 
@@ -240,7 +221,6 @@
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    i__2 = i__;
 		    y[i__2].r = 0., y[i__2].i = 0.;
-/* L10: */
 		}
 	    } else {
 		i__1 = leny;
@@ -251,7 +231,6 @@
 			    z__1.i = beta->r * y[i__3].i + beta->i * y[i__3]
 			    .r;
 		    y[i__2].r = z__1.r, y[i__2].i = z__1.i;
-/* L20: */
 		}
 	    }
 	} else {
@@ -262,7 +241,6 @@
 		    i__2 = iy;
 		    y[i__2].r = 0., y[i__2].i = 0.;
 		    iy += *incy;
-/* L30: */
 		}
 	    } else {
 		i__1 = leny;
@@ -274,7 +252,6 @@
 			    .r;
 		    y[i__2].r = z__1.r, y[i__2].i = z__1.i;
 		    iy += *incy;
-/* L40: */
 		}
 	    }
 	}
@@ -314,11 +291,9 @@
 			z__1.r = y[i__3].r + z__2.r, z__1.i = y[i__3].i + 
 				z__2.i;
 			y[i__2].r = z__1.r, y[i__2].i = z__1.i;
-/* L50: */
 		    }
 		}
 		jx += *incx;
-/* L60: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -348,14 +323,12 @@
 				z__2.i;
 			y[i__4].r = z__1.r, y[i__4].i = z__1.i;
 			iy += *incy;
-/* L70: */
 		    }
 		}
 		jx += *incx;
 		if (j > *ku) {
 		    ky += *incy;
 		}
-/* L80: */
 	    }
 	}
     } else {
@@ -382,7 +355,6 @@
 				.i * x[i__4].r;
 			z__1.r = temp.r + z__2.r, z__1.i = temp.i + z__2.i;
 			temp.r = z__1.r, temp.i = z__1.i;
-/* L90: */
 		    }
 		} else {
 /* Computing MAX */
@@ -398,7 +370,6 @@
 				.r;
 			z__1.r = temp.r + z__2.r, z__1.i = temp.i + z__2.i;
 			temp.r = z__1.r, temp.i = z__1.i;
-/* L100: */
 		    }
 		}
 		i__4 = jy;
@@ -408,7 +379,6 @@
 		z__1.r = y[i__2].r + z__2.r, z__1.i = y[i__2].i + z__2.i;
 		y[i__4].r = z__1.r, y[i__4].i = z__1.i;
 		jy += *incy;
-/* L110: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -431,7 +401,6 @@
 			z__1.r = temp.r + z__2.r, z__1.i = temp.i + z__2.i;
 			temp.r = z__1.r, temp.i = z__1.i;
 			ix += *incx;
-/* L120: */
 		    }
 		} else {
 /* Computing MAX */
@@ -448,7 +417,6 @@
 			z__1.r = temp.r + z__2.r, z__1.i = temp.i + z__2.i;
 			temp.r = z__1.r, temp.i = z__1.i;
 			ix += *incx;
-/* L130: */
 		    }
 		}
 		i__2 = jy;
@@ -461,7 +429,6 @@
 		if (j > *ku) {
 		    kx += *incx;
 		}
-/* L140: */
 	    }
 	}
     }

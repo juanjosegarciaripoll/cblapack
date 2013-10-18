@@ -23,11 +23,6 @@
     /* Local variables */
     integer i__, nincx;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -36,11 +31,6 @@
 /*     modified 3/93 to return if incx .le. 0. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --cx;
 
@@ -64,7 +54,6 @@
 	r__2 = *sa * r_imag(&cx[i__]);
 	q__1.r = r__1, q__1.i = r__2;
 	cx[i__3].r = q__1.r, cx[i__3].i = q__1.i;
-/* L10: */
     }
     return 0;
 
@@ -79,7 +68,6 @@ L20:
 	r__2 = *sa * r_imag(&cx[i__]);
 	q__1.r = r__1, q__1.i = r__2;
 	cx[i__1].r = q__1.r, cx[i__1].i = q__1.i;
-/* L30: */
     }
     return 0;
 } /* csscal_ */

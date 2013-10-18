@@ -24,11 +24,6 @@
     integer i__, ix, iy;
     doublecomplex ztemp;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -40,10 +35,6 @@
 /*     jack dongarra, 3/11/78. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --zy;
     --zx;
@@ -79,7 +70,6 @@
 	ztemp.r = z__1.r, ztemp.i = z__1.i;
 	ix += *incx;
 	iy += *incy;
-/* L10: */
     }
      ret_val->r = ztemp.r,  ret_val->i = ztemp.i;
     return ;
@@ -95,7 +85,6 @@ L20:
 		zy[i__2].i + z__3.i * zy[i__2].r;
 	z__1.r = ztemp.r + z__2.r, z__1.i = ztemp.i + z__2.i;
 	ztemp.r = z__1.r, ztemp.i = z__1.i;
-/* L30: */
     }
      ret_val->r = ztemp.r,  ret_val->i = ztemp.i;
     return ;

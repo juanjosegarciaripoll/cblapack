@@ -24,11 +24,6 @@
     doublereal temp;
     logical nounit;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -113,7 +108,6 @@
 /*           X. INCX must not be zero. */
 /*           Unchanged on exit. */
 
-
 /*  Level 2 Blas routine. */
 
 /*  -- Written on 22-October-1986. */
@@ -121,18 +115,6 @@
 /*     Jeremy Du Croz, Nag Central Office. */
 /*     Sven Hammarling, Nag Central Office. */
 /*     Richard Hanson, Sandia National Labs. */
-
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
 
 /*     Test the input parameters. */
 
@@ -198,10 +180,8 @@
 			temp = x[j];
 			for (i__ = j - 1; i__ >= 1; --i__) {
 			    x[i__] -= temp * a[i__ + j * a_dim1];
-/* L10: */
 			}
 		    }
-/* L20: */
 		}
 	    } else {
 		jx = kx + (*n - 1) * *incx;
@@ -215,11 +195,9 @@
 			for (i__ = j - 1; i__ >= 1; --i__) {
 			    ix -= *incx;
 			    x[ix] -= temp * a[i__ + j * a_dim1];
-/* L30: */
 			}
 		    }
 		    jx -= *incx;
-/* L40: */
 		}
 	    }
 	} else {
@@ -234,10 +212,8 @@
 			i__2 = *n;
 			for (i__ = j + 1; i__ <= i__2; ++i__) {
 			    x[i__] -= temp * a[i__ + j * a_dim1];
-/* L50: */
 			}
 		    }
-/* L60: */
 		}
 	    } else {
 		jx = kx;
@@ -253,11 +229,9 @@
 			for (i__ = j + 1; i__ <= i__2; ++i__) {
 			    ix += *incx;
 			    x[ix] -= temp * a[i__ + j * a_dim1];
-/* L70: */
 			}
 		    }
 		    jx += *incx;
-/* L80: */
 		}
 	    }
 	}
@@ -273,13 +247,11 @@
 		    i__2 = j - 1;
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			temp -= a[i__ + j * a_dim1] * x[i__];
-/* L90: */
 		    }
 		    if (nounit) {
 			temp /= a[j + j * a_dim1];
 		    }
 		    x[j] = temp;
-/* L100: */
 		}
 	    } else {
 		jx = kx;
@@ -291,14 +263,12 @@
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			temp -= a[i__ + j * a_dim1] * x[ix];
 			ix += *incx;
-/* L110: */
 		    }
 		    if (nounit) {
 			temp /= a[j + j * a_dim1];
 		    }
 		    x[jx] = temp;
 		    jx += *incx;
-/* L120: */
 		}
 	    }
 	} else {
@@ -308,13 +278,11 @@
 		    i__1 = j + 1;
 		    for (i__ = *n; i__ >= i__1; --i__) {
 			temp -= a[i__ + j * a_dim1] * x[i__];
-/* L130: */
 		    }
 		    if (nounit) {
 			temp /= a[j + j * a_dim1];
 		    }
 		    x[j] = temp;
-/* L140: */
 		}
 	    } else {
 		kx += (*n - 1) * *incx;
@@ -326,14 +294,12 @@
 		    for (i__ = *n; i__ >= i__1; --i__) {
 			temp -= a[i__ + j * a_dim1] * x[ix];
 			ix -= *incx;
-/* L150: */
 		    }
 		    if (nounit) {
 			temp /= a[j + j * a_dim1];
 		    }
 		    x[jx] = temp;
 		    jx -= *incx;
-/* L160: */
 		}
 	    }
 	}

@@ -23,11 +23,6 @@ doublereal snrm2_(integer *n, real *x, integer *incx)
     integer ix;
     real ssq, norm, scale, absxi;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -43,13 +38,6 @@ doublereal snrm2_(integer *n, real *x, integer *incx)
 /*     Modified on 14-October-1993 to inline the call to SLASSQ. */
 /*     Sven Hammarling, Nag Ltd. */
 
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --x;
 
@@ -81,7 +69,6 @@ doublereal snrm2_(integer *n, real *x, integer *incx)
 		    ssq += r__1 * r__1;
 		}
 	    }
-/* L10: */
 	}
 	norm = scale * sqrt(ssq);
     }

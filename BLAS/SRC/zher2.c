@@ -26,11 +26,6 @@
     integer i__, j, ix, iy, jx, jy, kx, ky, info;
     doublecomplex temp1, temp2;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -111,7 +106,6 @@
 /*           max( 1, n ). */
 /*           Unchanged on exit. */
 
-
 /*  Level 2 Blas routine. */
 
 /*  -- Written on 22-October-1986. */
@@ -119,18 +113,6 @@
 /*     Jeremy Du Croz, Nag Central Office. */
 /*     Sven Hammarling, Nag Central Office. */
 /*     Richard Hanson, Sandia National Labs. */
-
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
 
 /*     Test the input parameters. */
 
@@ -224,7 +206,6 @@
 				temp2.r;
 			z__1.r = z__2.r + z__4.r, z__1.i = z__2.i + z__4.i;
 			a[i__3].r = z__1.r, a[i__3].i = z__1.i;
-/* L10: */
 		    }
 		    i__2 = j + j * a_dim1;
 		    i__3 = j + j * a_dim1;
@@ -245,7 +226,6 @@
 		    d__1 = a[i__3].r;
 		    a[i__2].r = d__1, a[i__2].i = 0.;
 		}
-/* L20: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -284,7 +264,6 @@
 			a[i__3].r = z__1.r, a[i__3].i = z__1.i;
 			ix += *incx;
 			iy += *incy;
-/* L30: */
 		    }
 		    i__2 = j + j * a_dim1;
 		    i__3 = j + j * a_dim1;
@@ -307,7 +286,6 @@
 		}
 		jx += *incx;
 		jy += *incy;
-/* L40: */
 	    }
 	}
     } else {
@@ -360,7 +338,6 @@
 				temp2.r;
 			z__1.r = z__2.r + z__4.r, z__1.i = z__2.i + z__4.i;
 			a[i__3].r = z__1.r, a[i__3].i = z__1.i;
-/* L50: */
 		    }
 		} else {
 		    i__2 = j + j * a_dim1;
@@ -368,7 +345,6 @@
 		    d__1 = a[i__3].r;
 		    a[i__2].r = d__1, a[i__2].i = 0.;
 		}
-/* L60: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -420,7 +396,6 @@
 				temp2.r;
 			z__1.r = z__2.r + z__4.r, z__1.i = z__2.i + z__4.i;
 			a[i__3].r = z__1.r, a[i__3].i = z__1.i;
-/* L70: */
 		    }
 		} else {
 		    i__2 = j + j * a_dim1;
@@ -430,7 +405,6 @@
 		}
 		jx += *incx;
 		jy += *incy;
-/* L80: */
 	    }
 	}
     }

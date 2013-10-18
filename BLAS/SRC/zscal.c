@@ -23,11 +23,6 @@
     /* Local variables */
     integer i__, ix;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -36,9 +31,6 @@
 /*     modified 3/93 to return if incx .le. 0. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-
-/*     .. Local Scalars .. */
-/*     .. */
     /* Parameter adjustments */
     --zx;
 
@@ -61,7 +53,6 @@
 		i__3].i + za->i * zx[i__3].r;
 	zx[i__2].r = z__1.r, zx[i__2].i = z__1.i;
 	ix += *incx;
-/* L10: */
     }
     return 0;
 
@@ -75,7 +66,6 @@ L20:
 	z__1.r = za->r * zx[i__3].r - za->i * zx[i__3].i, z__1.i = za->r * zx[
 		i__3].i + za->i * zx[i__3].r;
 	zx[i__2].r = z__1.r, zx[i__2].i = z__1.i;
-/* L30: */
     }
     return 0;
 } /* zscal_ */

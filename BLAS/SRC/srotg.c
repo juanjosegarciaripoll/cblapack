@@ -25,20 +25,12 @@ static real c_b4 = 1.f;
     /* Local variables */
     real r__, z__, roe, scale;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
 /*     construct givens plane rotation. */
 /*     jack dongarra, linpack, 3/11/78. */
 
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     roe = *sb;
     if (dabs(*sa) > dabs(*sb)) {
 	roe = *sa;

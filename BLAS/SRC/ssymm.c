@@ -27,11 +27,6 @@
     integer nrowa;
     logical upper;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -146,7 +141,6 @@
 /*           max( 1, m ). */
 /*           Unchanged on exit. */
 
-
 /*  Level 3 Blas routine. */
 
 /*  -- Written on 8-February-1989. */
@@ -154,18 +148,6 @@
 /*     Iain Duff, AERE Harwell. */
 /*     Jeremy Du Croz, Numerical Algorithms Group Ltd. */
 /*     Sven Hammarling, Numerical Algorithms Group Ltd. */
-
-
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Parameters .. */
-/*     .. */
 
 /*     Set NROWA as the number of rows of A. */
 
@@ -226,9 +208,7 @@
 		i__2 = *m;
 		for (i__ = 1; i__ <= i__2; ++i__) {
 		    c__[i__ + j * c_dim1] = 0.f;
-/* L10: */
 		}
-/* L20: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -236,9 +216,7 @@
 		i__2 = *m;
 		for (i__ = 1; i__ <= i__2; ++i__) {
 		    c__[i__ + j * c_dim1] = *beta * c__[i__ + j * c_dim1];
-/* L30: */
 		}
-/* L40: */
 	    }
 	}
 	return 0;
@@ -261,7 +239,6 @@
 		    for (k = 1; k <= i__3; ++k) {
 			c__[k + j * c_dim1] += temp1 * a[k + i__ * a_dim1];
 			temp2 += b[k + j * b_dim1] * a[k + i__ * a_dim1];
-/* L50: */
 		    }
 		    if (*beta == 0.f) {
 			c__[i__ + j * c_dim1] = temp1 * a[i__ + i__ * a_dim1] 
@@ -271,9 +248,7 @@
 				+ temp1 * a[i__ + i__ * a_dim1] + *alpha * 
 				temp2;
 		    }
-/* L60: */
 		}
-/* L70: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -285,7 +260,6 @@
 		    for (k = i__ + 1; k <= i__2; ++k) {
 			c__[k + j * c_dim1] += temp1 * a[k + i__ * a_dim1];
 			temp2 += b[k + j * b_dim1] * a[k + i__ * a_dim1];
-/* L80: */
 		    }
 		    if (*beta == 0.f) {
 			c__[i__ + j * c_dim1] = temp1 * a[i__ + i__ * a_dim1] 
@@ -295,9 +269,7 @@
 				+ temp1 * a[i__ + i__ * a_dim1] + *alpha * 
 				temp2;
 		    }
-/* L90: */
 		}
-/* L100: */
 	    }
 	}
     } else {
@@ -311,14 +283,12 @@
 		i__2 = *m;
 		for (i__ = 1; i__ <= i__2; ++i__) {
 		    c__[i__ + j * c_dim1] = temp1 * b[i__ + j * b_dim1];
-/* L110: */
 		}
 	    } else {
 		i__2 = *m;
 		for (i__ = 1; i__ <= i__2; ++i__) {
 		    c__[i__ + j * c_dim1] = *beta * c__[i__ + j * c_dim1] + 
 			    temp1 * b[i__ + j * b_dim1];
-/* L120: */
 		}
 	    }
 	    i__2 = j - 1;
@@ -331,9 +301,7 @@
 		i__3 = *m;
 		for (i__ = 1; i__ <= i__3; ++i__) {
 		    c__[i__ + j * c_dim1] += temp1 * b[i__ + k * b_dim1];
-/* L130: */
 		}
-/* L140: */
 	    }
 	    i__2 = *n;
 	    for (k = j + 1; k <= i__2; ++k) {
@@ -345,11 +313,8 @@
 		i__3 = *m;
 		for (i__ = 1; i__ <= i__3; ++i__) {
 		    c__[i__ + j * c_dim1] += temp1 * b[i__ + k * b_dim1];
-/* L150: */
 		}
-/* L160: */
 	    }
-/* L170: */
 	}
     }
 

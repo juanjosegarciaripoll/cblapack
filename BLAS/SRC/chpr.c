@@ -25,11 +25,6 @@
     integer i__, j, k, kk, ix, jx, kx, info;
     complex temp;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -96,7 +91,6 @@
 /*           not be set, they are assumed to be zero, and on exit they */
 /*           are set to zero. */
 
-
 /*  Level 2 Blas routine. */
 
 /*  -- Written on 22-October-1986. */
@@ -104,18 +98,6 @@
 /*     Jeremy Du Croz, Nag Central Office. */
 /*     Sven Hammarling, Nag Central Office. */
 /*     Richard Hanson, Sandia National Labs. */
-
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
 
 /*     Test the input parameters. */
 
@@ -180,7 +162,6 @@
 				q__2.i;
 			ap[i__3].r = q__1.r, ap[i__3].i = q__1.i;
 			++k;
-/* L10: */
 		    }
 		    i__2 = kk + j - 1;
 		    i__3 = kk + j - 1;
@@ -196,7 +177,6 @@
 		    ap[i__2].r = r__1, ap[i__2].i = 0.f;
 		}
 		kk += j;
-/* L20: */
 	    }
 	} else {
 	    jx = kx;
@@ -220,7 +200,6 @@
 				q__2.i;
 			ap[i__3].r = q__1.r, ap[i__3].i = q__1.i;
 			ix += *incx;
-/* L30: */
 		    }
 		    i__2 = kk + j - 1;
 		    i__3 = kk + j - 1;
@@ -237,7 +216,6 @@
 		}
 		jx += *incx;
 		kk += j;
-/* L40: */
 	    }
 	}
     } else {
@@ -272,7 +250,6 @@
 				q__2.i;
 			ap[i__3].r = q__1.r, ap[i__3].i = q__1.i;
 			++k;
-/* L50: */
 		    }
 		} else {
 		    i__2 = kk;
@@ -281,7 +258,6 @@
 		    ap[i__2].r = r__1, ap[i__2].i = 0.f;
 		}
 		kk = kk + *n - j + 1;
-/* L60: */
 	    }
 	} else {
 	    jx = kx;
@@ -312,7 +288,6 @@
 			q__1.r = ap[i__4].r + q__2.r, q__1.i = ap[i__4].i + 
 				q__2.i;
 			ap[i__3].r = q__1.r, ap[i__3].i = q__1.i;
-/* L70: */
 		    }
 		} else {
 		    i__2 = kk;
@@ -322,7 +297,6 @@
 		}
 		jx += *incx;
 		kk = kk + *n - j + 1;
-/* L80: */
 	    }
 	}
     }

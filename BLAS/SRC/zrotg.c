@@ -25,18 +25,11 @@
     doublecomplex alpha;
     doublereal scale;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
 /*     determines a double complex Givens rotation. */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     if (z_abs(ca) != 0.) {
 	goto L10;
     }

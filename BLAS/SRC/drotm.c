@@ -31,11 +31,6 @@
     doublereal dh11, dh12, dh21, dh22, dflag;
     integer nsteps;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -46,7 +41,6 @@
 
 /*     DX(LX+I*INCX), I = 0 TO N-1, WHERE LX = 1 IF INCX .GE. 0, ELSE */
 /*     LX = (-INCX)*N, AND SIMILARLY FOR SY USING LY AND INCY. */
-/*     WITH DPARAM(1)=DFLAG, H HAS ONE OF THE FOLLOWING FORMS.. */
 
 /*     DFLAG=-1.D0     DFLAG=0.D0        DFLAG=1.D0     DFLAG=-2.D0 */
 
@@ -82,16 +76,12 @@
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Data statements .. */
     /* Parameter adjustments */
     --dparam;
     --dy;
     --dx;
 
     /* Function Body */
-/*     .. */
 
     dflag = dparam[1];
     if (*n <= 0 || dflag + two == zero) {
@@ -119,7 +109,6 @@ L10:
 	z__ = dy[i__];
 	dx[i__] = w + z__ * dh12;
 	dy[i__] = w * dh21 + z__;
-/* L20: */
     }
     goto L140;
 L30:
@@ -132,7 +121,6 @@ L30:
 	z__ = dy[i__];
 	dx[i__] = w * dh11 + z__;
 	dy[i__] = -w + dh22 * z__;
-/* L40: */
     }
     goto L140;
 L50:
@@ -147,7 +135,6 @@ L50:
 	z__ = dy[i__];
 	dx[i__] = w * dh11 + z__ * dh12;
 	dy[i__] = w * dh21 + z__ * dh22;
-/* L60: */
     }
     goto L140;
 L70:
@@ -178,7 +165,6 @@ L80:
 	dy[ky] = w * dh21 + z__;
 	kx += *incx;
 	ky += *incy;
-/* L90: */
     }
     goto L140;
 L100:
@@ -192,7 +178,6 @@ L100:
 	dy[ky] = -w + dh22 * z__;
 	kx += *incx;
 	ky += *incy;
-/* L110: */
     }
     goto L140;
 L120:
@@ -208,7 +193,6 @@ L120:
 	dy[ky] = w * dh21 + z__ * dh22;
 	kx += *incx;
 	ky += *incy;
-/* L130: */
     }
 L140:
     return 0;

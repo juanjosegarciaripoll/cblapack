@@ -23,11 +23,6 @@ doublereal scnrm2_(integer *n, complex *x, integer *incx)
     integer ix;
     real ssq, temp, norm, scale;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -36,19 +31,10 @@ doublereal scnrm2_(integer *n, complex *x, integer *incx)
 
 /*     SCNRM2 := sqrt( conjg( x' )*x ) */
 
-
-
 /*  -- This version written on 25-October-1982. */
 /*     Modified on 14-October-1993 to inline the call to CLASSQ. */
 /*     Sven Hammarling, Nag Ltd. */
 
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --x;
 
@@ -93,7 +79,6 @@ doublereal scnrm2_(integer *n, complex *x, integer *incx)
 		    ssq += r__1 * r__1;
 		}
 	    }
-/* L10: */
 	}
 	norm = scale * sqrt(ssq);
     }

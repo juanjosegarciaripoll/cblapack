@@ -22,11 +22,6 @@ integer izamax_(integer *n, doublecomplex *zx, integer *incx)
     integer i__, ix;
     doublereal smax;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -35,11 +30,6 @@ integer izamax_(integer *n, doublecomplex *zx, integer *incx)
 /*     modified 3/93 to return if incx .le. 0. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --zx;
 
@@ -70,7 +60,6 @@ integer izamax_(integer *n, doublecomplex *zx, integer *incx)
 	smax = dcabs1_(&zx[ix]);
 L5:
 	ix += *incx;
-/* L10: */
     }
     return ret_val;
 

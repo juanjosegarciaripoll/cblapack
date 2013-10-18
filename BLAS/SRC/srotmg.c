@@ -42,18 +42,12 @@
     /* Assigned format variables */
     static char *igo_fmt;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
 /*     CONSTRUCT THE MODIFIED GIVENS TRANSFORMATION MATRIX H WHICH ZEROS */
 /*     THE SECOND COMPONENT OF THE 2-VECTOR  (SQRT(SD1)*SX1,SQRT(SD2)* */
 /*     SY2)**T. */
-/*     WITH SPARAM(1)=SFLAG, H HAS ONE OF THE FOLLOWING FORMS.. */
 
 /*     SFLAG=-1.E0     SFLAG=0.E0        SFLAG=1.E0     SFLAG=-2.E0 */
 
@@ -68,10 +62,8 @@
 /*     INEXACT.  THIS IS OK AS THEY ARE ONLY USED FOR TESTING THE SIZE */
 /*     OF SD1 AND SD2.  ALL ACTUAL SCALING OF DATA IS DONE USING GAM. */
 
-
 /*  Arguments */
 /*  ========= */
-
 
 /*  SD1    (input/output) REAL */
 
@@ -80,7 +72,6 @@
 /*  SX1    (input/output) REAL */
 
 /*  SY1    (input) REAL */
-
 
 /*  SPARAM (input/output)  REAL array, dimension 5 */
 /*     SPARAM(1)=SFLAG */
@@ -91,21 +82,13 @@
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Data statements .. */
-
     /* Parameter adjustments */
     --sparam;
 
     /* Function Body */
-/*     .. */
     if (! (*sd1 < zero)) {
 	goto L10;
     }
-/*       GO ZERO-H-D-AND-SX1.. */
     goto L60;
 L10:
 /*     CASE-SD1-NONNEGATIVE */
@@ -115,7 +98,6 @@ L10:
     }
     sflag = -two;
     goto L260;
-/*     REGULAR-CASE.. */
 L20:
     sp1 = *sd1 * *sx1;
     sq2 = sp2 * *sy1;
@@ -132,20 +114,17 @@ L20:
     if (! (su <= zero)) {
 	goto L30;
     }
-/*         GO ZERO-H-D-AND-SX1.. */
     goto L60;
 L30:
     sflag = zero;
     *sd1 /= su;
     *sd2 /= su;
     *sx1 *= su;
-/*         GO SCALE-CHECK.. */
     goto L100;
 L40:
     if (! (sq2 < zero)) {
 	goto L50;
     }
-/*         GO ZERO-H-D-AND-SX1.. */
     goto L60;
 L50:
     sflag = one;
@@ -158,7 +137,6 @@ L50:
     *sx1 = *sy1 * su;
 /*         GO SCALE-CHECK */
     goto L100;
-/*     PROCEDURE..ZERO-H-D-AND-SX1.. */
 L60:
     sflag = -one;
     sh11 = zero;
@@ -169,9 +147,7 @@ L60:
     *sd1 = zero;
     *sd2 = zero;
     *sx1 = zero;
-/*         RETURN.. */
     goto L220;
-/*     PROCEDURE..FIX-H.. */
 L70:
     if (! (sflag >= zero)) {
 	goto L90;
@@ -195,7 +171,6 @@ L90:
 	case 2: goto L180;
 	case 3: goto L210;
     }
-/*     PROCEDURE..SCALE-CHECK */
 L100:
 L110:
     if (! (*sd1 <= rgamsq)) {
@@ -206,7 +181,6 @@ L110:
     }
     igo = 0;
     igo_fmt = fmt_120;
-/*              FIX-H.. */
     goto L70;
 L120:
 /* Computing 2nd power */
@@ -223,7 +197,6 @@ L140:
     }
     igo = 1;
     igo_fmt = fmt_150;
-/*              FIX-H.. */
     goto L70;
 L150:
 /* Computing 2nd power */
@@ -243,7 +216,6 @@ L170:
     }
     igo = 2;
     igo_fmt = fmt_180;
-/*              FIX-H.. */
     goto L70;
 L180:
 /* Computing 2nd power */
@@ -259,7 +231,6 @@ L200:
     }
     igo = 3;
     igo_fmt = fmt_210;
-/*              FIX-H.. */
     goto L70;
 L210:
 /* Computing 2nd power */

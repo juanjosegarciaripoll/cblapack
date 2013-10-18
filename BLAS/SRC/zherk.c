@@ -30,11 +30,6 @@
     doublereal rtemp;
     logical upper;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -134,7 +129,6 @@
 /*           max( 1, n ). */
 /*           Unchanged on exit. */
 
-
 /*  Level 3 Blas routine. */
 
 /*  -- Written on 8-February-1989. */
@@ -145,18 +139,6 @@
 
 /*  -- Modified 8-Nov-93 to set C(J,J) to DBLE( C(J,J) ) when BETA = 1. */
 /*     Ed Anderson, Cray Research Inc. */
-
-
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Parameters .. */
-/*     .. */
 
 /*     Test the input parameters. */
 
@@ -213,9 +195,7 @@
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			i__3 = i__ + j * c_dim1;
 			c__[i__3].r = 0., c__[i__3].i = 0.;
-/* L10: */
 		    }
-/* L20: */
 		}
 	    } else {
 		i__1 = *n;
@@ -227,13 +207,11 @@
 			z__1.r = *beta * c__[i__4].r, z__1.i = *beta * c__[
 				i__4].i;
 			c__[i__3].r = z__1.r, c__[i__3].i = z__1.i;
-/* L30: */
 		    }
 		    i__2 = j + j * c_dim1;
 		    i__3 = j + j * c_dim1;
 		    d__1 = *beta * c__[i__3].r;
 		    c__[i__2].r = d__1, c__[i__2].i = 0.;
-/* L40: */
 		}
 	    }
 	} else {
@@ -244,9 +222,7 @@
 		    for (i__ = j; i__ <= i__2; ++i__) {
 			i__3 = i__ + j * c_dim1;
 			c__[i__3].r = 0., c__[i__3].i = 0.;
-/* L50: */
 		    }
-/* L60: */
 		}
 	    } else {
 		i__1 = *n;
@@ -262,9 +238,7 @@
 			z__1.r = *beta * c__[i__4].r, z__1.i = *beta * c__[
 				i__4].i;
 			c__[i__3].r = z__1.r, c__[i__3].i = z__1.i;
-/* L70: */
 		    }
-/* L80: */
 		}
 	    }
 	}
@@ -285,7 +259,6 @@
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			i__3 = i__ + j * c_dim1;
 			c__[i__3].r = 0., c__[i__3].i = 0.;
-/* L90: */
 		    }
 		} else if (*beta != 1.) {
 		    i__2 = j - 1;
@@ -295,7 +268,6 @@
 			z__1.r = *beta * c__[i__4].r, z__1.i = *beta * c__[
 				i__4].i;
 			c__[i__3].r = z__1.r, c__[i__3].i = z__1.i;
-/* L100: */
 		    }
 		    i__2 = j + j * c_dim1;
 		    i__3 = j + j * c_dim1;
@@ -325,7 +297,6 @@
 			    z__1.r = c__[i__5].r + z__2.r, z__1.i = c__[i__5]
 				    .i + z__2.i;
 			    c__[i__4].r = z__1.r, c__[i__4].i = z__1.i;
-/* L110: */
 			}
 			i__3 = j + j * c_dim1;
 			i__4 = j + j * c_dim1;
@@ -336,9 +307,7 @@
 			d__1 = c__[i__4].r + z__1.r;
 			c__[i__3].r = d__1, c__[i__3].i = 0.;
 		    }
-/* L120: */
 		}
-/* L130: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -348,7 +317,6 @@
 		    for (i__ = j; i__ <= i__2; ++i__) {
 			i__3 = i__ + j * c_dim1;
 			c__[i__3].r = 0., c__[i__3].i = 0.;
-/* L140: */
 		    }
 		} else if (*beta != 1.) {
 		    i__2 = j + j * c_dim1;
@@ -362,7 +330,6 @@
 			z__1.r = *beta * c__[i__4].r, z__1.i = *beta * c__[
 				i__4].i;
 			c__[i__3].r = z__1.r, c__[i__3].i = z__1.i;
-/* L150: */
 		    }
 		} else {
 		    i__2 = j + j * c_dim1;
@@ -396,12 +363,9 @@
 			    z__1.r = c__[i__5].r + z__2.r, z__1.i = c__[i__5]
 				    .i + z__2.i;
 			    c__[i__4].r = z__1.r, c__[i__4].i = z__1.i;
-/* L160: */
 			}
 		    }
-/* L170: */
 		}
-/* L180: */
 	    }
 	}
     } else {
@@ -423,7 +387,6 @@
 				.r;
 			z__1.r = temp.r + z__2.r, z__1.i = temp.i + z__2.i;
 			temp.r = z__1.r, temp.i = z__1.i;
-/* L190: */
 		    }
 		    if (*beta == 0.) {
 			i__3 = i__ + j * c_dim1;
@@ -438,7 +401,6 @@
 			z__1.r = z__2.r + z__3.r, z__1.i = z__2.i + z__3.i;
 			c__[i__3].r = z__1.r, c__[i__3].i = z__1.i;
 		    }
-/* L200: */
 		}
 		rtemp = 0.;
 		i__2 = *k;
@@ -449,7 +411,6 @@
 			     z__3.r * a[i__3].i + z__3.i * a[i__3].r;
 		    z__1.r = rtemp + z__2.r, z__1.i = z__2.i;
 		    rtemp = z__1.r;
-/* L210: */
 		}
 		if (*beta == 0.) {
 		    i__2 = j + j * c_dim1;
@@ -461,7 +422,6 @@
 		    d__1 = *alpha * rtemp + *beta * c__[i__3].r;
 		    c__[i__2].r = d__1, c__[i__2].i = 0.;
 		}
-/* L220: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -475,7 +435,6 @@
 			     z__3.r * a[i__3].i + z__3.i * a[i__3].r;
 		    z__1.r = rtemp + z__2.r, z__1.i = z__2.i;
 		    rtemp = z__1.r;
-/* L230: */
 		}
 		if (*beta == 0.) {
 		    i__2 = j + j * c_dim1;
@@ -499,7 +458,6 @@
 				.r;
 			z__1.r = temp.r + z__2.r, z__1.i = temp.i + z__2.i;
 			temp.r = z__1.r, temp.i = z__1.i;
-/* L240: */
 		    }
 		    if (*beta == 0.) {
 			i__3 = i__ + j * c_dim1;
@@ -514,9 +472,7 @@
 			z__1.r = z__2.r + z__3.r, z__1.i = z__2.i + z__3.i;
 			c__[i__3].r = z__1.r, c__[i__3].i = z__1.i;
 		    }
-/* L250: */
 		}
-/* L260: */
 	    }
 	}
     }

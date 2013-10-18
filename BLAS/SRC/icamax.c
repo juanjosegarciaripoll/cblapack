@@ -22,11 +22,6 @@ integer icamax_(integer *n, complex *cx, integer *incx)
     integer i__, ix;
     real smax;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -35,11 +30,6 @@ integer icamax_(integer *n, complex *cx, integer *incx)
 /*     modified 3/93 to return if incx .le. 0. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --cx;
 
@@ -70,7 +60,6 @@ integer icamax_(integer *n, complex *cx, integer *incx)
 	smax = scabs1_(&cx[ix]);
 L5:
 	ix += *incx;
-/* L10: */
     }
     return ret_val;
 

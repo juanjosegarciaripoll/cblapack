@@ -25,11 +25,6 @@
     doublereal temp1, temp2;
     integer kplus1;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -140,7 +135,6 @@
 /*           Y. INCY must not be zero. */
 /*           Unchanged on exit. */
 
-
 /*  Level 2 Blas routine. */
 
 /*  -- Written on 22-October-1986. */
@@ -148,18 +142,6 @@
 /*     Jeremy Du Croz, Nag Central Office. */
 /*     Sven Hammarling, Nag Central Office. */
 /*     Richard Hanson, Sandia National Labs. */
-
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
 
 /*     Test the input parameters. */
 
@@ -220,13 +202,11 @@
 		i__1 = *n;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    y[i__] = 0.;
-/* L10: */
 		}
 	    } else {
 		i__1 = *n;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    y[i__] = *beta * y[i__];
-/* L20: */
 		}
 	    }
 	} else {
@@ -236,14 +216,12 @@
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    y[iy] = 0.;
 		    iy += *incy;
-/* L30: */
 		}
 	    } else {
 		i__1 = *n;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    y[iy] = *beta * y[iy];
 		    iy += *incy;
-/* L40: */
 		}
 	    }
 	}
@@ -268,10 +246,8 @@
 		for (i__ = max(i__2,i__3); i__ <= i__4; ++i__) {
 		    y[i__] += temp1 * a[l + i__ + j * a_dim1];
 		    temp2 += a[l + i__ + j * a_dim1] * x[i__];
-/* L50: */
 		}
 		y[j] = y[j] + temp1 * a[kplus1 + j * a_dim1] + *alpha * temp2;
-/* L60: */
 	    }
 	} else {
 	    jx = kx;
@@ -291,7 +267,6 @@
 		    temp2 += a[l + i__ + j * a_dim1] * x[ix];
 		    ix += *incx;
 		    iy += *incy;
-/* L70: */
 		}
 		y[jy] = y[jy] + temp1 * a[kplus1 + j * a_dim1] + *alpha * 
 			temp2;
@@ -301,7 +276,6 @@
 		    kx += *incx;
 		    ky += *incy;
 		}
-/* L80: */
 	    }
 	}
     } else {
@@ -321,10 +295,8 @@
 		for (i__ = j + 1; i__ <= i__3; ++i__) {
 		    y[i__] += temp1 * a[l + i__ + j * a_dim1];
 		    temp2 += a[l + i__ + j * a_dim1] * x[i__];
-/* L90: */
 		}
 		y[j] += *alpha * temp2;
-/* L100: */
 	    }
 	} else {
 	    jx = kx;
@@ -345,12 +317,10 @@
 		    iy += *incy;
 		    y[iy] += temp1 * a[l + i__ + j * a_dim1];
 		    temp2 += a[l + i__ + j * a_dim1] * x[ix];
-/* L110: */
 		}
 		y[jy] += *alpha * temp2;
 		jx += *incx;
 		jy += *incy;
-/* L120: */
 	    }
 	}
     }

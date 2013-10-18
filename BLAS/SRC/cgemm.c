@@ -30,11 +30,6 @@
     integer ncola;
     integer nrowa, nrowb;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -145,7 +140,6 @@
 /*           max( 1, m ). */
 /*           Unchanged on exit. */
 
-
 /*  Level 3 Blas routine. */
 
 /*  -- Written on 8-February-1989. */
@@ -153,18 +147,6 @@
 /*     Iain Duff, AERE Harwell. */
 /*     Jeremy Du Croz, Numerical Algorithms Group Ltd. */
 /*     Sven Hammarling, Numerical Algorithms Group Ltd. */
-
-
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Parameters .. */
-/*     .. */
 
 /*     Set  NOTA  and  NOTB  as  true if  A  and  B  respectively are not */
 /*     conjugated or transposed, set  CONJA and CONJB  as true if  A  and */
@@ -243,9 +225,7 @@
 		for (i__ = 1; i__ <= i__2; ++i__) {
 		    i__3 = i__ + j * c_dim1;
 		    c__[i__3].r = 0.f, c__[i__3].i = 0.f;
-/* L10: */
 		}
-/* L20: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -258,9 +238,7 @@
 			    q__1.i = beta->r * c__[i__4].i + beta->i * c__[
 			    i__4].r;
 		    c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
-/* L30: */
 		}
-/* L40: */
 	    }
 	}
 	return 0;
@@ -280,7 +258,6 @@
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			i__3 = i__ + j * c_dim1;
 			c__[i__3].r = 0.f, c__[i__3].i = 0.f;
-/* L50: */
 		    }
 		} else if (beta->r != 1.f || beta->i != 0.f) {
 		    i__2 = *m;
@@ -291,7 +268,6 @@
 				.i, q__1.i = beta->r * c__[i__4].i + beta->i *
 				 c__[i__4].r;
 			c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
-/* L60: */
 		    }
 		}
 		i__2 = *k;
@@ -314,12 +290,9 @@
 			    q__1.r = c__[i__5].r + q__2.r, q__1.i = c__[i__5]
 				    .i + q__2.i;
 			    c__[i__4].r = q__1.r, c__[i__4].i = q__1.i;
-/* L70: */
 			}
 		    }
-/* L80: */
 		}
-/* L90: */
 	    }
 	} else if (conja) {
 
@@ -339,7 +312,6 @@
 				.r;
 			q__1.r = temp.r + q__2.r, q__1.i = temp.i + q__2.i;
 			temp.r = q__1.r, temp.i = q__1.i;
-/* L100: */
 		    }
 		    if (beta->r == 0.f && beta->i == 0.f) {
 			i__3 = i__ + j * c_dim1;
@@ -359,9 +331,7 @@
 			q__1.r = q__2.r + q__3.r, q__1.i = q__2.i + q__3.i;
 			c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
 		    }
-/* L110: */
 		}
-/* L120: */
 	    }
 	} else {
 
@@ -381,7 +351,6 @@
 				.i * b[i__5].r;
 			q__1.r = temp.r + q__2.r, q__1.i = temp.i + q__2.i;
 			temp.r = q__1.r, temp.i = q__1.i;
-/* L130: */
 		    }
 		    if (beta->r == 0.f && beta->i == 0.f) {
 			i__3 = i__ + j * c_dim1;
@@ -401,9 +370,7 @@
 			q__1.r = q__2.r + q__3.r, q__1.i = q__2.i + q__3.i;
 			c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
 		    }
-/* L140: */
 		}
-/* L150: */
 	    }
 	}
     } else if (nota) {
@@ -418,7 +385,6 @@
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			i__3 = i__ + j * c_dim1;
 			c__[i__3].r = 0.f, c__[i__3].i = 0.f;
-/* L160: */
 		    }
 		} else if (beta->r != 1.f || beta->i != 0.f) {
 		    i__2 = *m;
@@ -429,7 +395,6 @@
 				.i, q__1.i = beta->r * c__[i__4].i + beta->i *
 				 c__[i__4].r;
 			c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
-/* L170: */
 		    }
 		}
 		i__2 = *k;
@@ -452,12 +417,9 @@
 			    q__1.r = c__[i__5].r + q__2.r, q__1.i = c__[i__5]
 				    .i + q__2.i;
 			    c__[i__4].r = q__1.r, c__[i__4].i = q__1.i;
-/* L180: */
 			}
 		    }
-/* L190: */
 		}
-/* L200: */
 	    }
 	} else {
 
@@ -470,7 +432,6 @@
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			i__3 = i__ + j * c_dim1;
 			c__[i__3].r = 0.f, c__[i__3].i = 0.f;
-/* L210: */
 		    }
 		} else if (beta->r != 1.f || beta->i != 0.f) {
 		    i__2 = *m;
@@ -481,7 +442,6 @@
 				.i, q__1.i = beta->r * c__[i__4].i + beta->i *
 				 c__[i__4].r;
 			c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
-/* L220: */
 		    }
 		}
 		i__2 = *k;
@@ -504,12 +464,9 @@
 			    q__1.r = c__[i__5].r + q__2.r, q__1.i = c__[i__5]
 				    .i + q__2.i;
 			    c__[i__4].r = q__1.r, c__[i__4].i = q__1.i;
-/* L230: */
 			}
 		    }
-/* L240: */
 		}
-/* L250: */
 	    }
 	}
     } else if (conja) {
@@ -530,7 +487,6 @@
 				q__3.r * q__4.i + q__3.i * q__4.r;
 			q__1.r = temp.r + q__2.r, q__1.i = temp.i + q__2.i;
 			temp.r = q__1.r, temp.i = q__1.i;
-/* L260: */
 		    }
 		    if (beta->r == 0.f && beta->i == 0.f) {
 			i__3 = i__ + j * c_dim1;
@@ -550,9 +506,7 @@
 			q__1.r = q__2.r + q__3.r, q__1.i = q__2.i + q__3.i;
 			c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
 		    }
-/* L270: */
 		}
-/* L280: */
 	    }
 	} else {
 
@@ -572,7 +526,6 @@
 				.r;
 			q__1.r = temp.r + q__2.r, q__1.i = temp.i + q__2.i;
 			temp.r = q__1.r, temp.i = q__1.i;
-/* L290: */
 		    }
 		    if (beta->r == 0.f && beta->i == 0.f) {
 			i__3 = i__ + j * c_dim1;
@@ -592,9 +545,7 @@
 			q__1.r = q__2.r + q__3.r, q__1.i = q__2.i + q__3.i;
 			c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
 		    }
-/* L300: */
 		}
-/* L310: */
 	    }
 	}
     } else {
@@ -616,7 +567,6 @@
 				q__3.r;
 			q__1.r = temp.r + q__2.r, q__1.i = temp.i + q__2.i;
 			temp.r = q__1.r, temp.i = q__1.i;
-/* L320: */
 		    }
 		    if (beta->r == 0.f && beta->i == 0.f) {
 			i__3 = i__ + j * c_dim1;
@@ -636,9 +586,7 @@
 			q__1.r = q__2.r + q__3.r, q__1.i = q__2.i + q__3.i;
 			c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
 		    }
-/* L330: */
 		}
-/* L340: */
 	    }
 	} else {
 
@@ -658,7 +606,6 @@
 				.i * b[i__5].r;
 			q__1.r = temp.r + q__2.r, q__1.i = temp.i + q__2.i;
 			temp.r = q__1.r, temp.i = q__1.i;
-/* L350: */
 		    }
 		    if (beta->r == 0.f && beta->i == 0.f) {
 			i__3 = i__ + j * c_dim1;
@@ -678,9 +625,7 @@
 			q__1.r = q__2.r + q__3.r, q__1.i = q__2.i + q__3.i;
 			c__[i__3].r = q__1.r, c__[i__3].i = q__1.i;
 		    }
-/* L360: */
 		}
-/* L370: */
 	    }
 	}
     }

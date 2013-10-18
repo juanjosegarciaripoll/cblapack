@@ -23,11 +23,6 @@ doublereal scasum_(integer *n, complex *cx, integer *incx)
     integer i__, nincx;
     real stemp;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -37,11 +32,6 @@ doublereal scasum_(integer *n, complex *cx, integer *incx)
 /*     modified 3/93 to return if incx .le. 0. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --cx;
 
@@ -64,7 +54,6 @@ doublereal scasum_(integer *n, complex *cx, integer *incx)
 	i__3 = i__;
 	stemp = stemp + (r__1 = cx[i__3].r, dabs(r__1)) + (r__2 = r_imag(&cx[
 		i__]), dabs(r__2));
-/* L10: */
     }
     ret_val = stemp;
     return ret_val;
@@ -77,7 +66,6 @@ L20:
 	i__1 = i__;
 	stemp = stemp + (r__1 = cx[i__1].r, dabs(r__1)) + (r__2 = r_imag(&cx[
 		i__]), dabs(r__2));
-/* L30: */
     }
     ret_val = stemp;
     return ret_val;

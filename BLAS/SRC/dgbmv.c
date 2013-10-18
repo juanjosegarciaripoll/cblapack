@@ -26,11 +26,6 @@
     doublereal temp;
     integer lenx, leny;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -138,7 +133,6 @@
 /*           Y. INCY must not be zero. */
 /*           Unchanged on exit. */
 
-
 /*  Level 2 Blas routine. */
 
 /*  -- Written on 22-October-1986. */
@@ -146,17 +140,6 @@
 /*     Jeremy Du Croz, Nag Central Office. */
 /*     Sven Hammarling, Nag Central Office. */
 /*     Richard Hanson, Sandia National Labs. */
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
 
 /*     Test the input parameters. */
 
@@ -230,13 +213,11 @@
 		i__1 = leny;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    y[i__] = 0.;
-/* L10: */
 		}
 	    } else {
 		i__1 = leny;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    y[i__] = *beta * y[i__];
-/* L20: */
 		}
 	    }
 	} else {
@@ -246,14 +227,12 @@
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    y[iy] = 0.;
 		    iy += *incy;
-/* L30: */
 		}
 	    } else {
 		i__1 = leny;
 		for (i__ = 1; i__ <= i__1; ++i__) {
 		    y[iy] = *beta * y[iy];
 		    iy += *incy;
-/* L40: */
 		}
 	    }
 	}
@@ -280,11 +259,9 @@
 		    i__4 = min(i__5,i__6);
 		    for (i__ = max(i__2,i__3); i__ <= i__4; ++i__) {
 			y[i__] += temp * a[k + i__ + j * a_dim1];
-/* L50: */
 		    }
 		}
 		jx += *incx;
-/* L60: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -301,14 +278,12 @@
 		    for (i__ = max(i__4,i__2); i__ <= i__3; ++i__) {
 			y[iy] += temp * a[k + i__ + j * a_dim1];
 			iy += *incy;
-/* L70: */
 		    }
 		}
 		jx += *incx;
 		if (j > *ku) {
 		    ky += *incy;
 		}
-/* L80: */
 	    }
 	}
     } else {
@@ -328,11 +303,9 @@
 		i__2 = min(i__5,i__6);
 		for (i__ = max(i__3,i__4); i__ <= i__2; ++i__) {
 		    temp += a[k + i__ + j * a_dim1] * x[i__];
-/* L90: */
 		}
 		y[jy] += *alpha * temp;
 		jy += *incy;
-/* L100: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -348,14 +321,12 @@
 		for (i__ = max(i__2,i__3); i__ <= i__4; ++i__) {
 		    temp += a[k + i__ + j * a_dim1] * x[ix];
 		    ix += *incx;
-/* L110: */
 		}
 		y[jy] += *alpha * temp;
 		jy += *incy;
 		if (j > *ku) {
 		    kx += *incx;
 		}
-/* L120: */
 	    }
 	}
     }

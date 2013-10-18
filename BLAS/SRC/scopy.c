@@ -22,11 +22,6 @@
     /* Local variables */
     integer i__, m, ix, iy, mp1;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -35,11 +30,6 @@
 /*     jack dongarra, linpack, 3/11/78. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --sy;
     --sx;
@@ -68,12 +58,10 @@
 	sy[iy] = sx[ix];
 	ix += *incx;
 	iy += *incy;
-/* L10: */
     }
     return 0;
 
 /*        code for both increments equal to 1 */
-
 
 /*        clean-up loop */
 
@@ -85,7 +73,6 @@ L20:
     i__1 = m;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	sy[i__] = sx[i__];
-/* L30: */
     }
     if (*n < 7) {
 	return 0;
@@ -101,7 +88,6 @@ L40:
 	sy[i__ + 4] = sx[i__ + 4];
 	sy[i__ + 5] = sx[i__ + 5];
 	sy[i__ + 6] = sx[i__ + 6];
-/* L50: */
     }
     return 0;
 } /* scopy_ */

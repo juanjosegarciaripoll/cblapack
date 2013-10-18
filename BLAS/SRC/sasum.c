@@ -23,11 +23,6 @@ doublereal sasum_(integer *n, real *sx, integer *incx)
     integer i__, m, mp1, nincx;
     real stemp;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -37,11 +32,6 @@ doublereal sasum_(integer *n, real *sx, integer *incx)
 /*     modified 3/93 to return if incx .le. 0. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --sx;
 
@@ -62,13 +52,11 @@ doublereal sasum_(integer *n, real *sx, integer *incx)
     i__2 = *incx;
     for (i__ = 1; i__2 < 0 ? i__ >= i__1 : i__ <= i__1; i__ += i__2) {
 	stemp += (r__1 = sx[i__], dabs(r__1));
-/* L10: */
     }
     ret_val = stemp;
     return ret_val;
 
 /*        code for increment equal to 1 */
-
 
 /*        clean-up loop */
 
@@ -80,7 +68,6 @@ L20:
     i__2 = m;
     for (i__ = 1; i__ <= i__2; ++i__) {
 	stemp += (r__1 = sx[i__], dabs(r__1));
-/* L30: */
     }
     if (*n < 6) {
 	goto L60;
@@ -93,7 +80,6 @@ L40:
 		dabs(r__2)) + (r__3 = sx[i__ + 2], dabs(r__3)) + (r__4 = sx[
 		i__ + 3], dabs(r__4)) + (r__5 = sx[i__ + 4], dabs(r__5)) + (
 		r__6 = sx[i__ + 5], dabs(r__6));
-/* L50: */
     }
 L60:
     ret_val = stemp;

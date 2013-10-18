@@ -23,11 +23,6 @@ doublereal dnrm2_(integer *n, doublereal *x, integer *incx)
     integer ix;
     doublereal ssq, norm, scale, absxi;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -36,18 +31,10 @@ doublereal dnrm2_(integer *n, doublereal *x, integer *incx)
 
 /*     DNRM2 := sqrt( x'*x ) */
 
-
 /*  -- This version written on 25-October-1982. */
 /*     Modified on 14-October-1993 to inline the call to DLASSQ. */
 /*     Sven Hammarling, Nag Ltd. */
 
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --x;
 
@@ -79,7 +66,6 @@ doublereal dnrm2_(integer *n, doublereal *x, integer *incx)
 		    ssq += d__1 * d__1;
 		}
 	    }
-/* L10: */
 	}
 	norm = scale * sqrt(ssq);
     }

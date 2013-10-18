@@ -23,11 +23,6 @@
     integer i__, m, ix, iy, mp1;
     doublereal dtemp;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -36,11 +31,6 @@
 /*     jack dongarra, linpack, 3/11/78. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --dy;
     --dx;
@@ -71,12 +61,10 @@
 	dy[iy] = dtemp;
 	ix += *incx;
 	iy += *incy;
-/* L10: */
     }
     return 0;
 
 /*       code for both increments equal to 1 */
-
 
 /*       clean-up loop */
 
@@ -90,7 +78,6 @@ L20:
 	dtemp = dx[i__];
 	dx[i__] = dy[i__];
 	dy[i__] = dtemp;
-/* L30: */
     }
     if (*n < 3) {
 	return 0;
@@ -108,7 +95,6 @@ L40:
 	dtemp = dx[i__ + 2];
 	dx[i__ + 2] = dy[i__ + 2];
 	dy[i__ + 2] = dtemp;
-/* L50: */
     }
     return 0;
 } /* dswap_ */

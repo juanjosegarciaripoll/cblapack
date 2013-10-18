@@ -23,11 +23,6 @@
     /* Local variables */
     integer i__, ix, iy;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -35,10 +30,6 @@
 /*     jack dongarra, 3/11/78. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --zy;
     --zx;
@@ -76,7 +67,6 @@
 	zy[i__2].r = z__1.r, zy[i__2].i = z__1.i;
 	ix += *incx;
 	iy += *incy;
-/* L10: */
     }
     return 0;
 
@@ -92,7 +82,6 @@ L20:
 		i__4].i + za->i * zx[i__4].r;
 	z__1.r = zy[i__3].r + z__2.r, z__1.i = zy[i__3].i + z__2.i;
 	zy[i__2].r = z__1.r, zy[i__2].i = z__1.i;
-/* L30: */
     }
     return 0;
 } /* zaxpy_ */

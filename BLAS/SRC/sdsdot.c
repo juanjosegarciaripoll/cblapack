@@ -24,11 +24,6 @@ doublereal sdsdot_(integer *n, real *sb, real *sx, integer *incx, real *sy,
     integer i__, ns, kx, ky;
     doublereal dsdot;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  PURPOSE */
 /*  ======= */
 
@@ -91,10 +86,6 @@ doublereal sdsdot_(integer *n, real *sb, real *sx, integer *incx, real *sy,
 
 /*  ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --sy;
     --sx;
@@ -123,7 +114,6 @@ doublereal sdsdot_(integer *n, real *sb, real *sx, integer *incx, real *sy,
 	dsdot += (doublereal) sx[kx] * (doublereal) sy[ky];
 	kx += *incx;
 	ky += *incy;
-/* L10: */
     }
 L30:
     ret_val = dsdot;
@@ -137,7 +127,6 @@ L40:
     i__2 = *incx;
     for (i__ = 1; i__2 < 0 ? i__ >= i__1 : i__ <= i__1; i__ += i__2) {
 	dsdot += (doublereal) sx[i__] * (doublereal) sy[i__];
-/* L50: */
     }
     ret_val = dsdot;
     return ret_val;

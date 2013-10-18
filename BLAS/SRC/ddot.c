@@ -24,11 +24,6 @@ doublereal ddot_(integer *n, doublereal *dx, integer *incx, doublereal *dy,
     integer i__, m, ix, iy, mp1;
     doublereal dtemp;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -37,11 +32,6 @@ doublereal ddot_(integer *n, doublereal *dx, integer *incx, doublereal *dy,
 /*     jack dongarra, linpack, 3/11/78. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --dy;
     --dx;
@@ -72,13 +62,11 @@ doublereal ddot_(integer *n, doublereal *dx, integer *incx, doublereal *dy,
 	dtemp += dx[ix] * dy[iy];
 	ix += *incx;
 	iy += *incy;
-/* L10: */
     }
     ret_val = dtemp;
     return ret_val;
 
 /*        code for both increments equal to 1 */
-
 
 /*        clean-up loop */
 
@@ -90,7 +78,6 @@ L20:
     i__1 = m;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	dtemp += dx[i__] * dy[i__];
-/* L30: */
     }
     if (*n < 5) {
 	goto L60;
@@ -102,7 +89,6 @@ L40:
 	dtemp = dtemp + dx[i__] * dy[i__] + dx[i__ + 1] * dy[i__ + 1] + dx[
 		i__ + 2] * dy[i__ + 2] + dx[i__ + 3] * dy[i__ + 3] + dx[i__ + 
 		4] * dy[i__ + 4];
-/* L50: */
     }
 L60:
     ret_val = dtemp;

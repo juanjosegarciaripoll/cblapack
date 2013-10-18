@@ -23,11 +23,6 @@
     integer i__, j, k, kk, ix, iy, jx, jy, kx, ky, info;
     real temp1, temp2;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -102,7 +97,6 @@
 /*           AP is overwritten by the lower triangular part of the */
 /*           updated matrix. */
 
-
 /*  Level 2 Blas routine. */
 
 /*  -- Written on 22-October-1986. */
@@ -110,16 +104,6 @@
 /*     Jeremy Du Croz, Nag Central Office. */
 /*     Sven Hammarling, Nag Central Office. */
 /*     Richard Hanson, Sandia National Labs. */
-
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
 
 /*     Test the input parameters. */
 
@@ -187,11 +171,9 @@
 		    for (i__ = 1; i__ <= i__2; ++i__) {
 			ap[k] = ap[k] + x[i__] * temp1 + y[i__] * temp2;
 			++k;
-/* L10: */
 		    }
 		}
 		kk += j;
-/* L20: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -206,13 +188,11 @@
 			ap[k] = ap[k] + x[ix] * temp1 + y[iy] * temp2;
 			ix += *incx;
 			iy += *incy;
-/* L30: */
 		    }
 		}
 		jx += *incx;
 		jy += *incy;
 		kk += j;
-/* L40: */
 	    }
 	}
     } else {
@@ -230,11 +210,9 @@
 		    for (i__ = j; i__ <= i__2; ++i__) {
 			ap[k] = ap[k] + x[i__] * temp1 + y[i__] * temp2;
 			++k;
-/* L50: */
 		    }
 		}
 		kk = kk + *n - j + 1;
-/* L60: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -249,13 +227,11 @@
 			ap[k] = ap[k] + x[ix] * temp1 + y[iy] * temp2;
 			ix += *incx;
 			iy += *incy;
-/* L70: */
 		    }
 		}
 		jx += *incx;
 		jy += *incy;
 		kk = kk + *n - j + 1;
-/* L80: */
 	    }
 	}
     }

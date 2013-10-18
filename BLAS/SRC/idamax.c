@@ -23,11 +23,6 @@ integer idamax_(integer *n, doublereal *dx, integer *incx)
     integer i__, ix;
     doublereal dmax__;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -36,11 +31,6 @@ integer idamax_(integer *n, doublereal *dx, integer *incx)
 /*     modified 3/93 to return if incx .le. 0. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --dx;
 
@@ -71,7 +61,6 @@ integer idamax_(integer *n, doublereal *dx, integer *incx)
 	dmax__ = (d__1 = dx[ix], abs(d__1));
 L5:
 	ix += *incx;
-/* L10: */
     }
     return ret_val;
 

@@ -24,18 +24,11 @@
     complex alpha;
     real scale;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
 /*  CROTG determines a complex Givens rotation. */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     if (c_abs(ca) != 0.f) {
 	goto L10;
     }

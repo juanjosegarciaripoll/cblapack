@@ -26,11 +26,6 @@
     integer i__, j, k, kk, ix, iy, jx, jy, kx, ky, info;
     doublecomplex temp1, temp2;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -108,7 +103,6 @@
 /*           not be set, they are assumed to be zero, and on exit they */
 /*           are set to zero. */
 
-
 /*  Level 2 Blas routine. */
 
 /*  -- Written on 22-October-1986. */
@@ -116,18 +110,6 @@
 /*     Jeremy Du Croz, Nag Central Office. */
 /*     Sven Hammarling, Nag Central Office. */
 /*     Richard Hanson, Sandia National Labs. */
-
-
-/*     .. Parameters .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
 
 /*     Test the input parameters. */
 
@@ -219,7 +201,6 @@
 			z__1.r = z__2.r + z__4.r, z__1.i = z__2.i + z__4.i;
 			ap[i__3].r = z__1.r, ap[i__3].i = z__1.i;
 			++k;
-/* L10: */
 		    }
 		    i__2 = kk + j - 1;
 		    i__3 = kk + j - 1;
@@ -241,7 +222,6 @@
 		    ap[i__2].r = d__1, ap[i__2].i = 0.;
 		}
 		kk += j;
-/* L20: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -280,7 +260,6 @@
 			ap[i__3].r = z__1.r, ap[i__3].i = z__1.i;
 			ix += *incx;
 			iy += *incy;
-/* L30: */
 		    }
 		    i__2 = kk + j - 1;
 		    i__3 = kk + j - 1;
@@ -304,7 +283,6 @@
 		jx += *incx;
 		jy += *incy;
 		kk += j;
-/* L40: */
 	    }
 	}
     } else {
@@ -359,7 +337,6 @@
 			z__1.r = z__2.r + z__4.r, z__1.i = z__2.i + z__4.i;
 			ap[i__3].r = z__1.r, ap[i__3].i = z__1.i;
 			++k;
-/* L50: */
 		    }
 		} else {
 		    i__2 = kk;
@@ -368,7 +345,6 @@
 		    ap[i__2].r = d__1, ap[i__2].i = 0.;
 		}
 		kk = kk + *n - j + 1;
-/* L60: */
 	    }
 	} else {
 	    i__1 = *n;
@@ -420,7 +396,6 @@
 				temp2.r;
 			z__1.r = z__2.r + z__4.r, z__1.i = z__2.i + z__4.i;
 			ap[i__3].r = z__1.r, ap[i__3].i = z__1.i;
-/* L70: */
 		    }
 		} else {
 		    i__2 = kk;
@@ -431,7 +406,6 @@
 		jx += *incx;
 		jy += *incy;
 		kk = kk + *n - j + 1;
-/* L80: */
 	    }
 	}
     }

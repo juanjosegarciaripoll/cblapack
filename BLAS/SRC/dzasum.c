@@ -23,11 +23,6 @@ doublereal dzasum_(integer *n, doublecomplex *zx, integer *incx)
     integer i__, ix;
     doublereal stemp;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -36,11 +31,6 @@ doublereal dzasum_(integer *n, doublecomplex *zx, integer *incx)
 /*     modified 3/93 to return if incx .le. 0. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --zx;
 
@@ -61,7 +51,6 @@ doublereal dzasum_(integer *n, doublecomplex *zx, integer *incx)
     for (i__ = 1; i__ <= i__1; ++i__) {
 	stemp += dcabs1_(&zx[ix]);
 	ix += *incx;
-/* L10: */
     }
     ret_val = stemp;
     return ret_val;
@@ -72,7 +61,6 @@ L20:
     i__1 = *n;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	stemp += dcabs1_(&zx[i__]);
-/* L30: */
     }
     ret_val = stemp;
     return ret_val;

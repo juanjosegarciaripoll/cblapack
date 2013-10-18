@@ -23,11 +23,6 @@
     /* Local variables */
     integer i__, ix, iy;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -39,10 +34,6 @@
 /*     jack dongarra, linpack, 3/11/78. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. External Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --cy;
     --cx;
@@ -80,7 +71,6 @@
 	cy[i__2].r = q__1.r, cy[i__2].i = q__1.i;
 	ix += *incx;
 	iy += *incy;
-/* L10: */
     }
     return 0;
 
@@ -96,7 +86,6 @@ L20:
 		i__4].i + ca->i * cx[i__4].r;
 	q__1.r = cy[i__3].r + q__2.r, q__1.i = cy[i__3].i + q__2.i;
 	cy[i__2].r = q__1.r, cy[i__2].i = q__1.i;
-/* L30: */
     }
     return 0;
 } /* caxpy_ */

@@ -24,12 +24,6 @@
     integer i__, ix, iy;
     doublecomplex ctemp;
 
-
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -77,10 +71,6 @@
 
 /* ===================================================================== */
 
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
     /* Parameter adjustments */
     --cy;
     --cx;
@@ -123,7 +113,6 @@
 	cx[i__2].r = ctemp.r, cx[i__2].i = ctemp.i;
 	ix += *incx;
 	iy += *incy;
-/* L10: */
     }
     return 0;
 
@@ -147,7 +136,6 @@ L20:
 	cy[i__2].r = z__1.r, cy[i__2].i = z__1.i;
 	i__2 = i__;
 	cx[i__2].r = ctemp.r, cx[i__2].i = ctemp.i;
-/* L30: */
     }
     return 0;
 } /* zdrot_ */

@@ -34,11 +34,6 @@ static doublecomplex c_b1 = {1.,0.};
     logical upper;
     logical noconj, nounit;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -147,7 +142,6 @@ static doublecomplex c_b1 = {1.,0.};
 /*           max( 1, m ). */
 /*           Unchanged on exit. */
 
-
 /*  Level 3 Blas routine. */
 
 /*  -- Written on 8-February-1989. */
@@ -155,18 +149,6 @@ static doublecomplex c_b1 = {1.,0.};
 /*     Iain Duff, AERE Harwell. */
 /*     Jeremy Du Croz, Numerical Algorithms Group Ltd. */
 /*     Sven Hammarling, Numerical Algorithms Group Ltd. */
-
-
-/*     .. External Functions .. */
-/*     .. */
-/*     .. External Subroutines .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Parameters .. */
-/*     .. */
 
 /*     Test the input parameters. */
 
@@ -229,9 +211,7 @@ static doublecomplex c_b1 = {1.,0.};
 	    for (i__ = 1; i__ <= i__2; ++i__) {
 		i__3 = i__ + j * b_dim1;
 		b[i__3].r = 0., b[i__3].i = 0.;
-/* L10: */
 	    }
-/* L20: */
 	}
 	return 0;
     }
@@ -255,7 +235,6 @@ static doublecomplex c_b1 = {1.,0.};
 				    .i, z__1.i = alpha->r * b[i__4].i + 
 				    alpha->i * b[i__4].r;
 			    b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L30: */
 			}
 		    }
 		    for (k = *m; k >= 1; --k) {
@@ -279,12 +258,9 @@ static doublecomplex c_b1 = {1.,0.};
 				z__1.r = b[i__4].r - z__2.r, z__1.i = b[i__4]
 					.i - z__2.i;
 				b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L40: */
 			    }
 			}
-/* L50: */
 		    }
-/* L60: */
 		}
 	    } else {
 		i__1 = *n;
@@ -298,7 +274,6 @@ static doublecomplex c_b1 = {1.,0.};
 				    .i, z__1.i = alpha->r * b[i__4].i + 
 				    alpha->i * b[i__4].r;
 			    b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L70: */
 			}
 		    }
 		    i__2 = *m;
@@ -323,12 +298,9 @@ static doublecomplex c_b1 = {1.,0.};
 				z__1.r = b[i__5].r - z__2.r, z__1.i = b[i__5]
 					.i - z__2.i;
 				b[i__4].r = z__1.r, b[i__4].i = z__1.i;
-/* L80: */
 			    }
 			}
-/* L90: */
 		    }
-/* L100: */
 		}
 	    }
 	} else {
@@ -357,7 +329,6 @@ static doublecomplex c_b1 = {1.,0.};
 				z__1.r = temp.r - z__2.r, z__1.i = temp.i - 
 					z__2.i;
 				temp.r = z__1.r, temp.i = z__1.i;
-/* L110: */
 			    }
 			    if (nounit) {
 				z_div(&z__1, &temp, &a[i__ + i__ * a_dim1]);
@@ -374,7 +345,6 @@ static doublecomplex c_b1 = {1.,0.};
 				z__1.r = temp.r - z__2.r, z__1.i = temp.i - 
 					z__2.i;
 				temp.r = z__1.r, temp.i = z__1.i;
-/* L120: */
 			    }
 			    if (nounit) {
 				d_cnjg(&z__2, &a[i__ + i__ * a_dim1]);
@@ -384,9 +354,7 @@ static doublecomplex c_b1 = {1.,0.};
 			}
 			i__3 = i__ + j * b_dim1;
 			b[i__3].r = temp.r, b[i__3].i = temp.i;
-/* L130: */
 		    }
-/* L140: */
 		}
 	    } else {
 		i__1 = *n;
@@ -408,7 +376,6 @@ static doublecomplex c_b1 = {1.,0.};
 				z__1.r = temp.r - z__2.r, z__1.i = temp.i - 
 					z__2.i;
 				temp.r = z__1.r, temp.i = z__1.i;
-/* L150: */
 			    }
 			    if (nounit) {
 				z_div(&z__1, &temp, &a[i__ + i__ * a_dim1]);
@@ -425,7 +392,6 @@ static doublecomplex c_b1 = {1.,0.};
 				z__1.r = temp.r - z__2.r, z__1.i = temp.i - 
 					z__2.i;
 				temp.r = z__1.r, temp.i = z__1.i;
-/* L160: */
 			    }
 			    if (nounit) {
 				d_cnjg(&z__2, &a[i__ + i__ * a_dim1]);
@@ -435,9 +401,7 @@ static doublecomplex c_b1 = {1.,0.};
 			}
 			i__2 = i__ + j * b_dim1;
 			b[i__2].r = temp.r, b[i__2].i = temp.i;
-/* L170: */
 		    }
-/* L180: */
 		}
 	    }
 	}
@@ -458,7 +422,6 @@ static doublecomplex c_b1 = {1.,0.};
 				    .i, z__1.i = alpha->r * b[i__4].i + 
 				    alpha->i * b[i__4].r;
 			    b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L190: */
 			}
 		    }
 		    i__2 = j - 1;
@@ -477,10 +440,8 @@ static doublecomplex c_b1 = {1.,0.};
 				z__1.r = b[i__5].r - z__2.r, z__1.i = b[i__5]
 					.i - z__2.i;
 				b[i__4].r = z__1.r, b[i__4].i = z__1.i;
-/* L200: */
 			    }
 			}
-/* L210: */
 		    }
 		    if (nounit) {
 			z_div(&z__1, &c_b1, &a[j + j * a_dim1]);
@@ -493,10 +454,8 @@ static doublecomplex c_b1 = {1.,0.};
 				    z__1.i = temp.r * b[i__4].i + temp.i * b[
 				    i__4].r;
 			    b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L220: */
 			}
 		    }
-/* L230: */
 		}
 	    } else {
 		for (j = *n; j >= 1; --j) {
@@ -509,7 +468,6 @@ static doublecomplex c_b1 = {1.,0.};
 				    .i, z__1.i = alpha->r * b[i__3].i + 
 				    alpha->i * b[i__3].r;
 			    b[i__2].r = z__1.r, b[i__2].i = z__1.i;
-/* L240: */
 			}
 		    }
 		    i__1 = *n;
@@ -528,10 +486,8 @@ static doublecomplex c_b1 = {1.,0.};
 				z__1.r = b[i__4].r - z__2.r, z__1.i = b[i__4]
 					.i - z__2.i;
 				b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L250: */
 			    }
 			}
-/* L260: */
 		    }
 		    if (nounit) {
 			z_div(&z__1, &c_b1, &a[j + j * a_dim1]);
@@ -544,10 +500,8 @@ static doublecomplex c_b1 = {1.,0.};
 				    z__1.i = temp.r * b[i__3].i + temp.i * b[
 				    i__3].r;
 			    b[i__2].r = z__1.r, b[i__2].i = z__1.i;
-/* L270: */
 			}
 		    }
-/* L280: */
 		}
 	    }
 	} else {
@@ -574,7 +528,6 @@ static doublecomplex c_b1 = {1.,0.};
 				    z__1.i = temp.r * b[i__3].i + temp.i * b[
 				    i__3].r;
 			    b[i__2].r = z__1.r, b[i__2].i = z__1.i;
-/* L290: */
 			}
 		    }
 		    i__1 = k - 1;
@@ -599,10 +552,8 @@ static doublecomplex c_b1 = {1.,0.};
 				z__1.r = b[i__4].r - z__2.r, z__1.i = b[i__4]
 					.i - z__2.i;
 				b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L300: */
 			    }
 			}
-/* L310: */
 		    }
 		    if (alpha->r != 1. || alpha->i != 0.) {
 			i__1 = *m;
@@ -613,10 +564,8 @@ static doublecomplex c_b1 = {1.,0.};
 				    .i, z__1.i = alpha->r * b[i__3].i + 
 				    alpha->i * b[i__3].r;
 			    b[i__2].r = z__1.r, b[i__2].i = z__1.i;
-/* L320: */
 			}
 		    }
-/* L330: */
 		}
 	    } else {
 		i__1 = *n;
@@ -638,7 +587,6 @@ static doublecomplex c_b1 = {1.,0.};
 				    z__1.i = temp.r * b[i__4].i + temp.i * b[
 				    i__4].r;
 			    b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L340: */
 			}
 		    }
 		    i__2 = *n;
@@ -663,10 +611,8 @@ static doublecomplex c_b1 = {1.,0.};
 				z__1.r = b[i__5].r - z__2.r, z__1.i = b[i__5]
 					.i - z__2.i;
 				b[i__4].r = z__1.r, b[i__4].i = z__1.i;
-/* L350: */
 			    }
 			}
-/* L360: */
 		    }
 		    if (alpha->r != 1. || alpha->i != 0.) {
 			i__2 = *m;
@@ -677,10 +623,8 @@ static doublecomplex c_b1 = {1.,0.};
 				    .i, z__1.i = alpha->r * b[i__4].i + 
 				    alpha->i * b[i__4].r;
 			    b[i__3].r = z__1.r, b[i__3].i = z__1.i;
-/* L370: */
 			}
 		    }
-/* L380: */
 		}
 	    }
 	}

@@ -26,14 +26,8 @@ static integer c__1 = 1;
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 6, 0, fmt_9999, 0 };
 
-
-
 /*  -- LAPACK auxiliary routine (preliminary version) -- */
-/*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */
 /*     November 2006 */
-
-/*     .. Scalar Arguments .. */
-/*     .. */
 
 /*  Purpose */
 /*  ======= */
@@ -57,13 +51,8 @@ static integer c__1 = 1;
 
 /* ===================================================================== */
 
-/*     .. Intrinsic Functions .. */
-/*     .. */
-/*     .. Executable Statements .. */
-
 	printf("** On entry to %6s, parameter number %2i had an illegal value\n",
 		srname, *info);
-
 
 /*     End of XERBLA */
 

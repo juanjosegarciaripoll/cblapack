@@ -23,11 +23,6 @@ doublereal sdot_(integer *n, real *sx, integer *incx, real *sy, integer *incy)
     integer i__, m, ix, iy, mp1;
     real stemp;
 
-/*     .. Scalar Arguments .. */
-/*     .. */
-/*     .. Array Arguments .. */
-/*     .. */
-
 /*  Purpose */
 /*  ======= */
 
@@ -36,11 +31,6 @@ doublereal sdot_(integer *n, real *sx, integer *incx, real *sy, integer *incy)
 /*     jack dongarra, linpack, 3/11/78. */
 /*     modified 12/3/93, array(1) declarations changed to array(*) */
 
-
-/*     .. Local Scalars .. */
-/*     .. */
-/*     .. Intrinsic Functions .. */
-/*     .. */
     /* Parameter adjustments */
     --sy;
     --sx;
@@ -71,13 +61,11 @@ doublereal sdot_(integer *n, real *sx, integer *incx, real *sy, integer *incy)
 	stemp += sx[ix] * sy[iy];
 	ix += *incx;
 	iy += *incy;
-/* L10: */
     }
     ret_val = stemp;
     return ret_val;
 
 /*        code for both increments equal to 1 */
-
 
 /*        clean-up loop */
 
@@ -89,7 +77,6 @@ L20:
     i__1 = m;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	stemp += sx[i__] * sy[i__];
-/* L30: */
     }
     if (*n < 5) {
 	goto L60;
@@ -101,7 +88,6 @@ L40:
 	stemp = stemp + sx[i__] * sy[i__] + sx[i__ + 1] * sy[i__ + 1] + sx[
 		i__ + 2] * sy[i__ + 2] + sx[i__ + 3] * sy[i__ + 3] + sx[i__ + 
 		4] * sy[i__ + 4];
-/* L50: */
     }
 L60:
     ret_val = stemp;
