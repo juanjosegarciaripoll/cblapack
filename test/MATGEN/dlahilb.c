@@ -27,9 +27,9 @@ static doublereal c_b4 = 0.;
 
     /* Local variables */
     integer i__, j, m, r__, ti, tm;
-    doublecomplex tmp;
+    doublereal tmp;
     extern /* Subroutine */ int dlaset_(char *, integer *, integer *, 
-	    doublereal *, doublecomplex *, doublereal *, integer *), 
+	    doublereal *, doublereal *, doublereal *, integer *), 
 	    xerbla_(char *, integer *);
 
 
@@ -179,8 +179,7 @@ static doublereal c_b4 = 0.;
     }
 /*     Generate matrix B as simply the first NRHS columns of M * the */
 /*     identity. */
-    d__1 = (doublereal) m;
-    tmp.r = d__1, tmp.i = 0.;
+    tmp = (doublereal) m;
     dlaset_("Full", n, nrhs, &c_b4, &tmp, &b[b_offset], ldb);
 /*     Generate the true solutions in X.  Because B = the first NRHS */
 /*     columns of M*I, the true solutions are just the first NRHS columns */
