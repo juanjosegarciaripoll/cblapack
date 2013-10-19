@@ -7,7 +7,7 @@ include ../blas.inc
 include ../lapack.inc
 
 BLAS_O=$(subst .c,.o,$(subst $(BLASDIR),blas,$(BLAS)))
-LAPACK_O=$(subst .c,.o,$(subst $(LAPACKDIR),lapack,$(LAPACK)))
+LAPACK_O=$(subst .c,.o,$(subst $(BLASDIR),blas,$(subst $(LAPACKDIR),lapack,$(LAPACK))))
 
 all: libcblapack.a
 

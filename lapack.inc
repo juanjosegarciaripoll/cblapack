@@ -1,14 +1,12 @@
 #
 # LAPACK component
 #
-LAPACKDIR=$(SRC)/lapack
-
 ALLAUX = $(LAPACKDIR)/maxloc.c $(LAPACKDIR)/ilaenv.c			\
     $(LAPACKDIR)/ieeeck.c $(LAPACKDIR)/lsamen.c $(LAPACKDIR)/iparmq.c	\
     $(LAPACKDIR)/ilaprec.c $(LAPACKDIR)/ilatrans.c			\
     $(LAPACKDIR)/ilauplo.c $(LAPACKDIR)/iladiag.c			\
     $(LAPACKDIR)/chla_transtype.c $(LAPACKDIR)/ilaver.c			\
-    $(SRC)/blas/lsame.c
+    $(BLASDIR)/lsame.c
 
 SCLAUX = $(LAPACKDIR)/sbdsdc.c $(LAPACKDIR)/sbdsqr.c			\
    $(LAPACKDIR)/sdisna.c $(LAPACKDIR)/slabad.c $(LAPACKDIR)/slacpy.c	\
