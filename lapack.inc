@@ -1,7 +1,7 @@
 #
 # LAPACK component
 #
-ALLAUX = SRC/maxloc.c src/lapack/ilaenv.c src/lapack/ieeeck.c		\
+ALLAUX = src/lapack/maxloc.c src/lapack/ilaenv.c src/lapack/ieeeck.c	\
     src/lapack/lsamen.c src/lapack/xerbla.c src/lapack/xerbla_array.c	\
     src/lapack/iparmq.c src/lapack/ilaprec.c src/lapack/ilatrans.c	\
     src/lapack/ilauplo.c src/lapack/iladiag.c				\
