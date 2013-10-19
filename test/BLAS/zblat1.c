@@ -11,6 +11,7 @@
 */
 
 #include "f2c.h"
+#include "zblat1.h"
 #include "blaswrap.h"
 
 /* Common Block Declarations */
@@ -43,8 +44,6 @@ static doublereal c_b43 = 1.;
 
     /* Local variables */
     integer ic;
-    extern /* Subroutine */ int check1_(doublereal *), check2_(doublereal *), 
-	    header_(void);
 
     /* Fortran I/O blocks */
     static cilist io___2 = { 0, 6, 0, fmt_99999, 0 };
@@ -176,17 +175,7 @@ static doublereal c_b43 = 1.;
     integer i__;
     doublecomplex cx[8];
     integer np1, len;
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *), ctest_(integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, doublereal *);
     doublecomplex mwpcs[5], mwpct[5];
-    extern /* Subroutine */ int itest1_(integer *, integer *);
-    extern doublereal dznrm2_(integer *, doublecomplex *, integer *);
-    extern /* Subroutine */ int stest1_(doublereal *, doublereal *, 
-	    doublereal *, doublereal *), zdscal_(integer *, doublereal *, 
-	    doublecomplex *, integer *);
-    extern integer izamax_(integer *, doublecomplex *, integer *);
-    extern doublereal dzasum_(integer *, doublecomplex *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___19 = { 0, 6, 0, 0, 0 };
@@ -398,18 +387,7 @@ static doublereal c_b43 = 1.;
     integer mx, my;
     doublecomplex cdot[1];
     integer lenx, leny;
-    extern /* Subroutine */ int ctest_(integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, doublereal *);
-    extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     integer ksize;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
-    extern /* Double Complex */ void zdotu_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern /* Subroutine */ int zswap_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___48 = { 0, 6, 0, 0, 0 };
@@ -512,7 +490,6 @@ static doublereal c_b43 = 1.;
     /* Local variables */
     integer i__;
     doublereal sd;
-    extern doublereal sdiff_(doublereal *, doublereal *);
 
     /* Fortran I/O blocks */
     static cilist io___51 = { 0, 6, 0, fmt_99999, 0 };
@@ -589,8 +566,6 @@ L40:
 	doublereal *ssize, doublereal *sfac)
 {
     doublereal scomp[1], strue[1];
-    extern /* Subroutine */ int stest_(integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *);
 
 /*     ************************* STEST1 ***************************** */
 
@@ -640,8 +615,6 @@ doublereal sdiff_(doublereal *sa, doublereal *sb)
     /* Local variables */
     integer i__;
     doublereal scomp[20], ssize[20], strue[20];
-    extern /* Subroutine */ int stest_(integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *);
 
 /*     **************************** CTEST ***************************** */
 

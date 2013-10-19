@@ -11,6 +11,7 @@
 */
 
 #include "f2c.h"
+#include "dblat2.h"
 #include "blaswrap.h"
 
 /* Common Block Declarations */
@@ -109,7 +110,6 @@ static logical c_false = FALSE_;
     doublereal x[65], y[65], z__[130], aa[4225];
     integer kb[7];
     doublereal as[4225], xs[130], ys[130], yt[65], xx[130], yy[130], alf[7];
-    extern logical lde_(doublereal *, doublereal *, integer *);
     integer inc[7], nkb;
     doublereal bet[7], eps, err;
     integer nalf, idim[9];
@@ -117,52 +117,8 @@ static logical c_false = FALSE_;
     integer ninc, nbet, ntra;
     logical rewi;
     integer nout;
-    extern /* Subroutine */ int dchk1_(char *, doublereal *, doublereal *, 
-	    integer *, integer *, logical *, logical *, logical *, integer *, 
-	    integer *, integer *, integer *, integer *, doublereal *, integer 
-	    *, doublereal *, integer *, integer *, integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, ftnlen), dchk2_(char *, 
-	    doublereal *, doublereal *, integer *, integer *, logical *, 
-	    logical *, logical *, integer *, integer *, integer *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *, integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, ftnlen), dchk3_(char *, doublereal *, doublereal *, 
-	    integer *, integer *, logical *, logical *, logical *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, doublereal *, doublereal *,
-	     doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, ftnlen), dchk4_(char *, doublereal *, doublereal *, 
-	    integer *, integer *, logical *, logical *, logical *, integer *, 
-	    integer *, integer *, doublereal *, integer *, integer *, integer 
-	    *, integer *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, ftnlen), dchk5_(char *, doublereal *, doublereal *, 
-	    integer *, integer *, logical *, logical *, logical *, integer *, 
-	    integer *, integer *, doublereal *, integer *, integer *, integer 
-	    *, integer *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, ftnlen), dchk6_(char *, doublereal *, doublereal *, 
-	    integer *, integer *, logical *, logical *, logical *, integer *, 
-	    integer *, integer *, doublereal *, integer *, integer *, integer 
-	    *, integer *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, ftnlen);
-    extern doublereal ddiff_(doublereal *, doublereal *);
-    extern /* Subroutine */ int dchke_(integer *, char *, integer *, ftnlen);
     logical fatal, trace;
     integer nidim;
-    extern /* Subroutine */ int dmvch_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *,
-	     doublereal *, doublereal *, doublereal *, logical *, integer *, 
-	    logical *, ftnlen);
     char snaps[32], trans[1];
     integer isnum;
     logical ltest[16], sfatal;
@@ -828,7 +784,6 @@ L240:
     /* Local variables */
     integer i__, m, n, ia, ib, ic, nc, nd, im, in, kl, ml, nk, nl, ku, ix, iy,
 	     ms, lx, ly, ns, laa, lda;
-    extern logical lde_(doublereal *, doublereal *, integer *);
     doublereal als, bls, err;
     integer iku, kls, kus;
     doublereal beta;
@@ -836,28 +791,13 @@ L240:
     logical same;
     integer incx, incy;
     logical full, tran, null;
-    extern /* Subroutine */ int dmake_(char *, char *, char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *, integer *, logical *, doublereal *, ftnlen, ftnlen, 
-	    ftnlen);
     doublereal alpha;
     logical isame[13];
-    extern /* Subroutine */ int dgbmv_(char *, integer *, integer *, integer *
-, integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *), dgemv_(
-	    char *, integer *, integer *, doublereal *, doublereal *, integer 
-	    *, doublereal *, integer *, doublereal *, doublereal *, integer *), dmvch_(char *, integer *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, doublereal *, doublereal *,
-	     doublereal *, doublereal *, logical *, integer *, logical *, 
-	    ftnlen);
     integer nargs;
     logical reset;
     integer incxs, incys;
     char trans[1];
     logical banded;
-    extern logical lderes_(char *, char *, integer *, integer *, doublereal *,
-	     doublereal *, integer *, ftnlen, ftnlen);
     doublereal errmax, transl;
     char transs[1];
 
@@ -1376,40 +1316,19 @@ L140:
     /* Local variables */
     integer i__, k, n, ia, ib, ic, nc, ik, in, nk, ks, ix, iy, ns, lx, ly, 
 	    laa, lda;
-    extern logical lde_(doublereal *, doublereal *, integer *);
     doublereal als, bls, err, beta;
     integer ldas;
     logical same;
     integer incx, incy;
     logical full, null;
     char uplo[1];
-    extern /* Subroutine */ int dmake_(char *, char *, char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *, integer *, logical *, doublereal *, ftnlen, ftnlen, 
-	    ftnlen);
     doublereal alpha;
     logical isame[13];
-    extern /* Subroutine */ int dmvch_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *,
-	     doublereal *, doublereal *, doublereal *, logical *, integer *, 
-	    logical *, ftnlen);
     integer nargs;
-    extern /* Subroutine */ int dsbmv_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *);
     logical reset;
     integer incxs, incys;
-    extern /* Subroutine */ int dspmv_(char *, integer *, doublereal *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *, 
-	     integer *);
     char uplos[1];
-    extern /* Subroutine */ int dsymv_(char *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *);
     logical banded, packed;
-    extern logical lderes_(char *, char *, integer *, integer *, doublereal *,
-	     doublereal *, integer *, ftnlen, ftnlen);
     doublereal errmax, transl;
 
     /* Fortran I/O blocks */
@@ -1937,7 +1856,6 @@ L130:
 
     /* Local variables */
     integer i__, k, n, nc, ik, in, nk, ks, ix, ns, lx, laa, icd, lda;
-    extern logical lde_(doublereal *, doublereal *, integer *);
     integer ict, icu;
     doublereal err;
     char diag[1];
@@ -1946,36 +1864,14 @@ L130:
     integer incx;
     logical full, null;
     char uplo[1];
-    extern /* Subroutine */ int dmake_(char *, char *, char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *, integer *, logical *, doublereal *, ftnlen, ftnlen, 
-	    ftnlen);
     char diags[1];
     logical isame[13];
-    extern /* Subroutine */ int dmvch_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *,
-	     doublereal *, doublereal *, doublereal *, logical *, integer *, 
-	    logical *, ftnlen);
     integer nargs;
-    extern /* Subroutine */ int dtbmv_(char *, char *, char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *);
     logical reset;
-    extern /* Subroutine */ int dtbsv_(char *, char *, char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *);
     integer incxs;
     char trans[1];
-    extern /* Subroutine */ int dtpmv_(char *, char *, char *, integer *, 
-	    doublereal *, doublereal *, integer *), 
-	    dtrmv_(char *, char *, char *, integer *, doublereal *, integer *, 
-	     doublereal *, integer *), dtpsv_(char *, 
-	    char *, char *, integer *, doublereal *, doublereal *, integer *);
     char uplos[1];
-    extern /* Subroutine */ int dtrsv_(char *, char *, char *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *);
     logical banded, packed;
-    extern logical lderes_(char *, char *, integer *, integer *, doublereal *,
-	     doublereal *, integer *, ftnlen, ftnlen);
     doublereal errmax, transl;
     char transs[1];
 
@@ -2553,31 +2449,16 @@ L130:
     integer i__, j, m, n;
     doublereal w[1];
     integer ia, nc, nd, im, in, ms, ix, iy, ns, lx, ly, laa, lda;
-    extern logical lde_(doublereal *, doublereal *, integer *);
     doublereal als, err;
-    extern /* Subroutine */ int dger_(integer *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *);
     integer ldas;
     logical same;
     integer incx, incy;
     logical null;
-    extern /* Subroutine */ int dmake_(char *, char *, char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *, integer *, logical *, doublereal *, ftnlen, ftnlen, 
-	    ftnlen);
     doublereal alpha;
     logical isame[13];
-    extern /* Subroutine */ int dmvch_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *,
-	     doublereal *, doublereal *, doublereal *, logical *, integer *, 
-	    logical *, ftnlen);
     integer nargs;
     logical reset;
     integer incxs, incys;
-    extern logical lderes_(char *, char *, integer *, integer *, doublereal *,
-	     doublereal *, integer *, ftnlen, ftnlen);
     doublereal errmax, transl;
 
     /* Fortran I/O blocks */
@@ -2967,36 +2848,21 @@ L150:
     integer i__, j, n;
     doublereal w[1];
     integer ia, ja, ic, nc, jj, lj, in, ix, ns, lx, laa, lda;
-    extern logical lde_(doublereal *, doublereal *, integer *);
     doublereal als, err;
     integer ldas;
     logical same;
     integer incx;
     logical full;
-    extern /* Subroutine */ int dspr_(char *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *);
     logical null;
     char uplo[1];
-    extern /* Subroutine */ int dsyr_(char *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *), dmake_(
-	    char *, char *, char *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, integer *, integer *, logical 
-	    *, doublereal *, ftnlen, ftnlen, ftnlen);
     doublereal alpha;
     logical isame[13];
-    extern /* Subroutine */ int dmvch_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *,
-	     doublereal *, doublereal *, doublereal *, logical *, integer *, 
-	    logical *, ftnlen);
     integer nargs;
     logical reset;
     integer incxs;
     logical upper;
     char uplos[1];
     logical packed;
-    extern logical lderes_(char *, char *, integer *, integer *, doublereal *,
-	     doublereal *, integer *, ftnlen, ftnlen);
     doublereal errmax, transl;
 
     /* Fortran I/O blocks */
@@ -3409,33 +3275,20 @@ L130:
     integer i__, j, n;
     doublereal w[2];
     integer ia, ja, ic, nc, jj, lj, in, ix, iy, ns, lx, ly, laa, lda;
-    extern logical lde_(doublereal *, doublereal *, integer *);
     doublereal als, err;
     integer ldas;
     logical same;
     integer incx, incy;
     logical full, null;
     char uplo[1];
-    extern /* Subroutine */ int dspr2_(char *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *), dsyr2_(char *, integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *), dmake_(char *, char *, char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, integer *, 
-	    integer *, logical *, doublereal *, ftnlen, ftnlen, ftnlen);
     doublereal alpha;
     logical isame[13];
-    extern /* Subroutine */ int dmvch_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *,
-	     doublereal *, doublereal *, doublereal *, logical *, integer *, 
-	    logical *, ftnlen);
     integer nargs;
     logical reset;
     integer incxs, incys;
     logical upper;
     char uplos[1];
     logical packed;
-    extern logical lderes_(char *, char *, integer *, integer *, doublereal *,
-	     doublereal *, integer *, ftnlen, ftnlen);
     doublereal errmax, transl;
 
     /* Fortran I/O blocks */
@@ -3870,37 +3723,7 @@ L170:
 
     /* Local variables */
     doublereal a[1]	/* was [1][1] */, x[1], y[1], beta;
-    extern /* Subroutine */ int dger_(integer *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *), dspr_(char *, integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *), dsyr_(char *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *), dspr2_(char *, integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *), dsyr2_(
-	    char *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *);
     doublereal alpha;
-    extern /* Subroutine */ int dgbmv_(char *, integer *, integer *, integer *
-, integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *), dgemv_(
-	    char *, integer *, integer *, doublereal *, doublereal *, integer 
-	    *, doublereal *, integer *, doublereal *, doublereal *, integer *), dsbmv_(char *, integer *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *), dtbmv_(char *, char *, char *, 
-	    integer *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *), dtbsv_(char *, char *, char *, 
-	     integer *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *), dspmv_(char *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *, doublereal *, 
-	     doublereal *, integer *), dtpmv_(char *, char *, char *, 
-	    integer *, doublereal *, doublereal *, integer *), dtrmv_(char *, char *, char *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *), 
-	    dtpsv_(char *, char *, char *, integer *, doublereal *, 
-	    doublereal *, integer *), dsymv_(char *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *), dtrsv_(
-	    char *, char *, char *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *), chkxer_(char *, 
-	    integer *, integer *, logical *, logical *);
 
     /* Fortran I/O blocks */
     static cilist io___396 = { 0, 0, 0, fmt_9999, 0 };
@@ -4292,7 +4115,6 @@ L170:
     /* Local variables */
     integer i__, j, i1, i2, i3, kk;
     logical gen, tri, sym;
-    extern doublereal dbeg_(logical *);
     integer ibeg, iend, ioff;
     logical unit, lower, upper;
 
@@ -4919,7 +4741,7 @@ doublereal ddiff_(doublereal *x, doublereal *y)
 
 } /* chkxer_ */
 
-/* Subroutine */ int xerbla_(char *srname, integer *info)
+/* Subroutine */ int this_xerbla_(char *srname, integer *info)
 {
     /* Format strings */
     static char fmt_9999[] = "(\002 ******* XERBLA WAS CALLED WITH INFO ="
@@ -4984,6 +4806,6 @@ doublereal ddiff_(doublereal *x, doublereal *y)
 
 /*     End of XERBLA */
 
-} /* xerbla_ */
+} /* this_xerbla_ */
 
 /* Main program alias */ int dblat2_ () { MAIN__ (); return 0; }

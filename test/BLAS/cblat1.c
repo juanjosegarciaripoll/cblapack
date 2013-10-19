@@ -11,6 +11,7 @@
 */
 
 #include "f2c.h"
+#include "cblat1.h"
 #include "blaswrap.h"
 
 /* Common Block Declarations */
@@ -43,8 +44,6 @@ static real c_b43 = 1.f;
 
     /* Local variables */
     integer ic;
-    extern /* Subroutine */ int check1_(real *), check2_(real *), header_(
-	    void);
 
     /* Fortran I/O blocks */
     static cilist io___2 = { 0, 6, 0, fmt_99999, 0 };
@@ -184,17 +183,7 @@ static real c_b43 = 1.f;
     integer i__;
     complex cx[8];
     integer np1, len;
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *), ctest_(integer *, complex *, complex *, complex *, 
-	    real *);
     complex mwpcs[5], mwpct[5];
-    extern doublereal scnrm2_(integer *, complex *, integer *);
-    extern /* Subroutine */ int itest1_(integer *, integer *), stest1_(real *,
-	     real *, real *, real *);
-    extern integer icamax_(integer *, complex *, integer *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *);
-    extern doublereal scasum_(integer *, complex *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___19 = { 0, 6, 0, 0, 0 };
@@ -416,18 +405,7 @@ static real c_b43 = 1.f;
     integer mx, my;
     complex cdot[1];
     integer lenx, leny;
-    extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *);
-    extern /* Complex */ void cdotu_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern /* Subroutine */ int cswap_(integer *, complex *, integer *, 
-	    complex *, integer *), ctest_(integer *, complex *, complex *, 
-	    complex *, real *);
     integer ksize;
-    extern /* Subroutine */ int caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___48 = { 0, 6, 0, 0, 0 };
@@ -530,7 +508,6 @@ static real c_b43 = 1.f;
     /* Local variables */
     integer i__;
     real sd;
-    extern doublereal sdiff_(real *, real *);
 
     /* Fortran I/O blocks */
     static cilist io___51 = { 0, 6, 0, fmt_99999, 0 };
@@ -607,8 +584,6 @@ L40:
 	sfac)
 {
     real scomp[1], strue[1];
-    extern /* Subroutine */ int stest_(integer *, real *, real *, real *, 
-	    real *);
 
 /*     ************************* STEST1 ***************************** */
 
@@ -658,8 +633,6 @@ doublereal sdiff_(real *sa, real *sb)
     /* Local variables */
     integer i__;
     real scomp[20], ssize[20], strue[20];
-    extern /* Subroutine */ int stest_(integer *, real *, real *, real *, 
-	    real *);
 
 /*     **************************** CTEST ***************************** */
 

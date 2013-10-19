@@ -11,6 +11,7 @@
 */
 
 #include "f2c.h"
+#include "zblat2.h"
 #include "blaswrap.h"
 
 /* Common Block Declarations */
@@ -117,61 +118,14 @@ static logical c_false = FALSE_;
     integer inc[7], nkb;
     doublecomplex bet[7];
     doublereal eps, err;
-    extern logical lze_(doublecomplex *, doublecomplex *, integer *);
     integer nalf, idim[9];
     logical same;
     integer ninc, nbet, ntra;
     logical rewi;
     integer nout;
-    extern /* Subroutine */ int zchk1_(char *, doublereal *, doublereal *, 
-	    integer *, integer *, logical *, logical *, logical *, integer *, 
-	    integer *, integer *, integer *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, doublecomplex *
-	    , doublecomplex *, doublecomplex *, doublecomplex *, doublereal *,
-	     ftnlen), zchk2_(char *, doublereal *, doublereal *, integer *, 
-	    integer *, logical *, logical *, logical *, integer *, integer *, 
-	    integer *, integer *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, integer *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, doublecomplex *
-	    , doublecomplex *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, doublereal *, 
-	    ftnlen), zchk3_(char *, doublereal *, doublereal *, integer *, 
-	    integer *, logical *, logical *, logical *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, doublecomplex *
-	    , doublecomplex *, doublecomplex *, doublecomplex *, doublereal *,
-	     doublecomplex *, ftnlen), zchk4_(char *, doublereal *, 
-	    doublereal *, integer *, integer *, logical *, logical *, logical 
-	    *, integer *, integer *, integer *, doublecomplex *, integer *, 
-	    integer *, integer *, integer *, doublecomplex *, doublecomplex *,
-	     doublecomplex *, doublecomplex *, doublecomplex *, doublecomplex 
-	    *, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, doublereal *, doublecomplex *, ftnlen), zchk5_(
-	    char *, doublereal *, doublereal *, integer *, integer *, logical 
-	    *, logical *, logical *, integer *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, doublecomplex *
-	    , doublecomplex *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, doublereal *, 
-	    doublecomplex *, ftnlen), zchk6_(char *, doublereal *, doublereal 
-	    *, integer *, integer *, logical *, logical *, logical *, integer 
-	    *, integer *, integer *, doublecomplex *, integer *, integer *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, doublecomplex *
-	    , doublecomplex *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, doublereal *, doublecomplex *, ftnlen);
-    extern doublereal ddiff_(doublereal *, doublereal *);
     logical fatal, trace;
     integer nidim;
-    extern /* Subroutine */ int zchke_(integer *, char *, integer *, ftnlen);
     char snaps[32], trans[1];
-    extern /* Subroutine */ int zmvch_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, doublereal *, doublecomplex *, doublereal *, 
-	    doublereal *, logical *, integer *, logical *, ftnlen);
     integer isnum;
     logical ltest[17], sfatal;
     char snamet[6];
@@ -850,7 +804,6 @@ L240:
     doublecomplex als, bls;
     doublereal err;
     integer iku, kls;
-    extern logical lze_(doublecomplex *, doublecomplex *, integer *);
     integer kus;
     doublecomplex beta;
     integer ldas;
@@ -859,31 +812,13 @@ L240:
     logical full, tran, null;
     doublecomplex alpha;
     logical isame[13];
-    extern /* Subroutine */ int zmake_(char *, char *, char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *,
-	     integer *, integer *, logical *, doublecomplex *, ftnlen, ftnlen,
-	     ftnlen);
     integer nargs;
     logical reset;
     integer incxs, incys;
-    extern /* Subroutine */ int zgbmv_(char *, integer *, integer *, integer *
-, integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
     char trans[1];
-    extern /* Subroutine */ int zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), 
-	    zmvch_(char *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    doublereal *, doublecomplex *, doublereal *, doublereal *, 
-	    logical *, integer *, logical *, ftnlen);
     logical banded;
     doublereal errmax;
     doublecomplex transl;
-    extern logical lzeres_(char *, char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, ftnlen, ftnlen);
     char transs[1];
 
     /* Fortran I/O blocks */
@@ -1426,7 +1361,6 @@ L140:
 	    laa, lda;
     doublecomplex als, bls;
     doublereal err;
-    extern logical lze_(doublecomplex *, doublecomplex *, integer *);
     doublecomplex beta;
     integer ldas;
     logical same;
@@ -1435,32 +1369,13 @@ L140:
     char uplo[1];
     doublecomplex alpha;
     logical isame[13];
-    extern /* Subroutine */ int zmake_(char *, char *, char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *,
-	     integer *, integer *, logical *, doublecomplex *, ftnlen, ftnlen,
-	     ftnlen);
     integer nargs;
     logical reset;
     integer incxs, incys;
-    extern /* Subroutine */ int zhbmv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), 
-	    zmvch_(char *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    doublereal *, doublecomplex *, doublereal *, doublereal *, 
-	    logical *, integer *, logical *, ftnlen), zhemv_(char *, integer *
-, doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *);
     char uplos[1];
-    extern /* Subroutine */ int zhpmv_(char *, integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *);
     logical banded, packed;
     doublereal errmax;
     doublecomplex transl;
-    extern logical lzeres_(char *, char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, ftnlen, ftnlen);
 
     /* Fortran I/O blocks */
     static cilist io___189 = { 0, 0, 0, fmt_9993, 0 };
@@ -2008,7 +1923,6 @@ L130:
     integer i__, k, n, nc, ik, in, nk, ks, ix, ns, lx, laa, icd, lda, ict, 
 	    icu;
     doublereal err;
-    extern logical lze_(doublecomplex *, doublecomplex *, integer *);
     char diag[1];
     integer ldas;
     logical same;
@@ -2016,33 +1930,14 @@ L130:
     logical full, null;
     char uplo[1], diags[1];
     logical isame[13];
-    extern /* Subroutine */ int zmake_(char *, char *, char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *,
-	     integer *, integer *, logical *, doublecomplex *, ftnlen, ftnlen,
-	     ftnlen);
     integer nargs;
     logical reset;
     integer incxs;
     char trans[1];
-    extern /* Subroutine */ int zmvch_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, doublereal *, doublecomplex *, doublereal *, 
-	    doublereal *, logical *, integer *, logical *, ftnlen);
     char uplos[1];
-    extern /* Subroutine */ int ztbmv_(char *, char *, char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *), ztbsv_(char *, char *, char *, integer *
-, integer *, doublecomplex *, integer *, doublecomplex *, integer 
-	    *), ztpmv_(char *, char *, char *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), ztrmv_(char *, char *, char *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), ztpsv_(char *, char *, char *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *), ztrsv_(char *, char *, char *, integer *, doublecomplex *
-, integer *, doublecomplex *, integer *);
     logical banded, packed;
     doublereal errmax;
     doublecomplex transl;
-    extern logical lzeres_(char *, char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, ftnlen, ftnlen);
     char transs[1];
 
     /* Fortran I/O blocks */
@@ -2636,34 +2531,17 @@ L130:
     integer ia, nc, nd, im, in, ms, ix, iy, ns, lx, ly, laa, lda;
     doublecomplex als;
     doublereal err;
-    extern logical lze_(doublecomplex *, doublecomplex *, integer *);
     integer ldas;
     logical same, conj;
     integer incx, incy;
     logical null;
     doublecomplex alpha;
     logical isame[13];
-    extern /* Subroutine */ int zmake_(char *, char *, char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *,
-	     integer *, integer *, logical *, doublecomplex *, ftnlen, ftnlen,
-	     ftnlen);
     integer nargs;
-    extern /* Subroutine */ int zgerc_(integer *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
     logical reset;
     integer incxs, incys;
-    extern /* Subroutine */ int zmvch_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, doublereal *, doublecomplex *, doublereal *, 
-	    doublereal *, logical *, integer *, logical *, ftnlen), zgeru_(
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *);
     doublereal errmax;
     doublecomplex transl;
-    extern logical lzeres_(char *, char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, ftnlen, ftnlen);
 
     /* Fortran I/O blocks */
     static cilist io___285 = { 0, 0, 0, fmt_9994, 0 };
@@ -3088,39 +2966,23 @@ L150:
     doublecomplex w[1];
     integer ia, ja, ic, nc, jj, lj, in, ix, ns, lx, laa, lda;
     doublereal err;
-    extern logical lze_(doublecomplex *, doublecomplex *, integer *);
     integer ldas;
     logical same;
     doublereal rals;
     integer incx;
     logical full;
-    extern /* Subroutine */ int zher_(char *, integer *, doublereal *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     logical null;
     char uplo[1];
-    extern /* Subroutine */ int zhpr_(char *, integer *, doublereal *, 
-	    doublecomplex *, integer *, doublecomplex *);
     doublecomplex alpha;
     logical isame[13];
-    extern /* Subroutine */ int zmake_(char *, char *, char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *,
-	     integer *, integer *, logical *, doublecomplex *, ftnlen, ftnlen,
-	     ftnlen);
     integer nargs;
     logical reset;
     integer incxs;
-    extern /* Subroutine */ int zmvch_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, doublereal *, doublecomplex *, doublereal *, 
-	    doublereal *, logical *, integer *, logical *, ftnlen);
     logical upper;
     char uplos[1];
     logical packed;
     doublereal ralpha, errmax;
     doublecomplex transl;
-    extern logical lzeres_(char *, char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, ftnlen, ftnlen);
 
     /* Fortran I/O blocks */
     static cilist io___326 = { 0, 0, 0, fmt_9993, 0 };
@@ -3551,38 +3413,21 @@ L130:
     integer ia, ja, ic, nc, jj, lj, in, ix, iy, ns, lx, ly, laa, lda;
     doublecomplex als;
     doublereal err;
-    extern logical lze_(doublecomplex *, doublecomplex *, integer *);
     integer ldas;
     logical same;
     integer incx, incy;
     logical full, null;
     char uplo[1];
-    extern /* Subroutine */ int zher2_(char *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zhpr2_(char *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *);
     doublecomplex alpha;
     logical isame[13];
-    extern /* Subroutine */ int zmake_(char *, char *, char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *,
-	     integer *, integer *, logical *, doublecomplex *, ftnlen, ftnlen,
-	     ftnlen);
     integer nargs;
     logical reset;
     integer incxs, incys;
-    extern /* Subroutine */ int zmvch_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, doublereal *, doublecomplex *, doublereal *, 
-	    doublereal *, logical *, integer *, logical *, ftnlen);
     logical upper;
     char uplos[1];
     logical packed;
     doublereal errmax;
     doublecomplex transl;
-    extern logical lzeres_(char *, char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, ftnlen, ftnlen);
 
     /* Fortran I/O blocks */
     static cilist io___375 = { 0, 0, 0, fmt_9993, 0 };
@@ -4048,46 +3893,8 @@ L170:
 
     /* Local variables */
     doublecomplex a[1]	/* was [1][1] */, x[1], y[1], beta;
-    extern /* Subroutine */ int zher_(char *, integer *, doublereal *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), 
-	    zhpr_(char *, integer *, doublereal *, doublecomplex *, integer *, 
-	     doublecomplex *), zher2_(char *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *), zhpr2_(char *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *);
     doublecomplex alpha;
-    extern /* Subroutine */ int zgerc_(integer *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zgbmv_(char *, integer *, integer *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), zhbmv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), 
-	    zgemv_(char *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *), zhemv_(char 
-	    *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), zgeru_(integer *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), ztbmv_(char *, char *, char *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     integer *), zhpmv_(char *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *), ztbsv_(char 
-	    *, char *, char *, integer *, integer *, doublecomplex *, integer 
-	    *, doublecomplex *, integer *), ztpmv_(
-	    char *, char *, char *, integer *, doublecomplex *, doublecomplex 
-	    *, integer *), ztrmv_(char *, char *, 
-	    char *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *), ztpsv_(char *, char *, char *, 
-	     integer *, doublecomplex *, doublecomplex *, integer *), ztrsv_(char *, char *, char *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     doublereal ralpha;
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *);
 
     /* Fortran I/O blocks */
     static cilist io___399 = { 0, 0, 0, fmt_9999, 0 };
@@ -4500,7 +4307,6 @@ L180:
     integer i__, j, i1, i2, i3, jj, kk;
     logical gen, tri, sym;
     integer ibeg, iend, ioff;
-    extern /* Double Complex */ void zbeg_(doublecomplex *, logical *);
     logical unit, lower, upper;
 
 
@@ -5269,7 +5075,7 @@ doublereal ddiff_(doublereal *x, doublereal *y)
 
 } /* chkxer_ */
 
-/* Subroutine */ int xerbla_(char *srname, integer *info)
+/* Subroutine */ int this_xerbla_(char *srname, integer *info)
 {
     /* Format strings */
     static char fmt_9999[] = "(\002 ******* XERBLA WAS CALLED WITH INFO ="
@@ -5334,6 +5140,6 @@ doublereal ddiff_(doublereal *x, doublereal *y)
 
 /*     End of XERBLA */
 
-} /* xerbla_ */
+} /* this_xerbla_ */
 
 /* Main program alias */ int zblat2_ () { MAIN__ (); return 0; }

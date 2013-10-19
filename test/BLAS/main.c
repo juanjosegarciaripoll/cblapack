@@ -1,6 +1,6 @@
 #include <f2c.h>
+#include "main.h"
 
-extern int MAIN__(void);
 
 int main(int argc, char **argv)
 {

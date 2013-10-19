@@ -11,6 +11,7 @@
 */
 
 #include "f2c.h"
+#include "dblat1.h"
 #include "blaswrap.h"
 
 /* Common Block Declarations */
@@ -42,8 +43,6 @@ static integer c__5 = 5;
 
     /* Local variables */
     integer ic;
-    extern /* Subroutine */ int check0_(doublereal *), check1_(doublereal *), 
-	    check2_(doublereal *), check3_(doublereal *), header_(void);
 
     /* Fortran I/O blocks */
     static cilist io___2 = { 0, 6, 0, fmt_99999, 0 };
@@ -141,9 +140,6 @@ static integer c__5 = 5;
     /* Local variables */
     integer k;
     doublereal sa, sb, sc, ss;
-    extern /* Subroutine */ int drotg_(doublereal *, doublereal *, doublereal 
-	    *, doublereal *), stest1_(doublereal *, doublereal *, doublereal *
-	    , doublereal *);
 
     /* Fortran I/O blocks */
     static cilist io___18 = { 0, 6, 0, 0, 0 };
@@ -220,15 +216,7 @@ L40:
     integer i__;
     doublereal sx[8];
     integer np1, len;
-    extern doublereal dnrm2_(integer *, doublereal *, integer *);
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *);
-    extern doublereal dasum_(integer *, doublereal *, integer *);
     doublereal stemp[1], strue[8];
-    extern /* Subroutine */ int stest_(integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *), itest1_(integer *, integer *), 
-	    stest1_(doublereal *, doublereal *, doublereal *, doublereal *);
-    extern integer idamax_(integer *, doublereal *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___31 = { 0, 6, 0, 0, 0 };
@@ -341,17 +329,8 @@ L40:
     /* Local variables */
     integer i__, j, ki, kn, mx, my;
     doublereal sx[7], sy[7], stx[7], sty[7];
-    extern doublereal ddot_(integer *, doublereal *, integer *, doublereal *, 
-	    integer *);
     integer lenx, leny;
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *), dswap_(integer *, doublereal *, integer 
-	    *, doublereal *, integer *);
     integer ksize;
-    extern /* Subroutine */ int daxpy_(integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *), stest_(integer *, doublereal 
-	    *, doublereal *, doublereal *, doublereal *), stest1_(doublereal *
-	    , doublereal *, doublereal *, doublereal *);
 
     /* Fortran I/O blocks */
     static cilist io___58 = { 0, 6, 0, 0, 0 };
@@ -470,14 +449,10 @@ L40:
     doublereal sx[7], sy[7], stx[7], sty[7];
     integer lenx, leny;
     doublereal mwpc[11];
-    extern /* Subroutine */ int drot_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *);
     integer mwpn[11];
     doublereal mwps[11], mwpx[5], mwpy[5];
     integer ksize;
     doublereal copyx[5], copyy[5];
-    extern /* Subroutine */ int stest_(integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *);
     doublereal mwptx[55]	/* was [11][5] */, mwpty[55]	/* was [11][5]
 	     */;
     integer mwpinx[11], mwpiny[11];
@@ -657,7 +632,6 @@ L40:
     /* Local variables */
     integer i__;
     doublereal sd;
-    extern doublereal sdiff_(doublereal *, doublereal *);
 
     /* Fortran I/O blocks */
     static cilist io___99 = { 0, 6, 0, fmt_99999, 0 };
@@ -734,8 +708,6 @@ L40:
 	doublereal *ssize, doublereal *sfac)
 {
     doublereal scomp[1], strue[1];
-    extern /* Subroutine */ int stest_(integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *);
 
 /*     ************************* STEST1 ***************************** */
 

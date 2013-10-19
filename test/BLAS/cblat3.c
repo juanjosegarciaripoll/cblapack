@@ -11,6 +11,7 @@
 */
 
 #include "f2c.h"
+#include "cblat3.h"
 #include "blaswrap.h"
 
 /* Common Block Declarations */
@@ -108,7 +109,6 @@ static integer c_n1 = -1;
     integer i__, j, n;
     complex w[130], aa[4225], ab[8450]	/* was [65][130] */, bb[4225], cc[
 	    4225], as[4225], bs[4225], cs[4225], ct[65], alf[7];
-    extern logical lce_(complex *, complex *, integer *);
     complex bet[7];
     real eps, err;
     integer nalf, idim[9];
@@ -116,36 +116,7 @@ static integer c_n1 = -1;
     integer nbet, ntra;
     logical rewi;
     integer nout;
-    extern /* Subroutine */ int cchk1_(char *, real *, real *, integer *, 
-	    integer *, logical *, logical *, logical *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, complex *, 
-	    complex *, complex *, complex *, complex *, complex *, complex *, 
-	    complex *, complex *, complex *, real *, ftnlen), cchk2_(char *, 
-	    real *, real *, integer *, integer *, logical *, logical *, 
-	    logical *, integer *, integer *, integer *, complex *, integer *, 
-	    complex *, integer *, complex *, complex *, complex *, complex *, 
-	    complex *, complex *, complex *, complex *, complex *, complex *, 
-	    real *, ftnlen), cchk3_(char *, real *, real *, integer *, 
-	    integer *, logical *, logical *, logical *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, complex *, complex *, 
-	    complex *, complex *, complex *, complex *, real *, complex *, 
-	    ftnlen), cchk4_(char *, real *, real *, integer *, integer *, 
-	    logical *, logical *, logical *, integer *, integer *, integer *, 
-	    complex *, integer *, complex *, integer *, complex *, complex *, 
-	    complex *, complex *, complex *, complex *, complex *, complex *, 
-	    complex *, complex *, real *, ftnlen), cchk5_(char *, real *, 
-	    real *, integer *, integer *, logical *, logical *, logical *, 
-	    integer *, integer *, integer *, complex *, integer *, complex *, 
-	    integer *, complex *, complex *, complex *, complex *, complex *, 
-	    complex *, complex *, complex *, complex *, real *, complex *, 
-	    ftnlen), cchke_(integer *, char *, integer *, ftnlen);
     logical fatal;
-    extern /* Subroutine */ int cmmch_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *, complex *, real *, complex *, 
-	    integer *, real *, real *, logical *, integer *, logical *, 
-	    ftnlen, ftnlen);
-    extern doublereal sdiff_(real *, real *);
     logical trace;
     integer nidim;
     char snaps[32];
@@ -757,28 +728,15 @@ L230:
     /* Local variables */
     integer i__, k, m, n, ia, ib, ma, mb, na, nb, nc, ik, im, in, ks, ms, ns, 
 	    ica, icb, laa, lbb, lda, lcc, ldb, ldc;
-    extern logical lce_(complex *, complex *, integer *);
     complex als, bls;
     real err;
     complex beta;
     integer ldas, ldbs, ldcs;
     logical same, null;
-    extern /* Subroutine */ int cmake_(char *, char *, char *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, logical *, 
-	    complex *, ftnlen, ftnlen, ftnlen);
     complex alpha;
-    extern /* Subroutine */ int cgemm_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *), cmmch_(char *, 
-	    char *, integer *, integer *, integer *, complex *, complex *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *, 
-	    complex *, real *, complex *, integer *, real *, real *, logical *
-	    , integer *, logical *, ftnlen, ftnlen);
     logical isame[13], trana, tranb;
     integer nargs;
     logical reset;
-    extern logical lceres_(char *, char *, integer *, integer *, complex *, 
-	    complex *, integer *, ftnlen, ftnlen);
     char tranas[1], tranbs[1], transa[1], transb[1];
     real errmax;
 
@@ -1205,7 +1163,6 @@ L130:
     /* Local variables */
     integer i__, m, n, ia, ib, na, nc, im, in, ms, ns, laa, lbb, lda, lcc, 
 	    ldb, ldc;
-    extern logical lce_(complex *, complex *, integer *);
     integer ics;
     complex als, bls;
     integer icu;
@@ -1216,27 +1173,12 @@ L130:
     char side[1];
     logical conj, left, null;
     char uplo[1];
-    extern /* Subroutine */ int cmake_(char *, char *, char *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, logical *, 
-	    complex *, ftnlen, ftnlen, ftnlen);
     complex alpha;
-    extern /* Subroutine */ int cmmch_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *, complex *, real *, complex *, 
-	    integer *, real *, real *, logical *, integer *, logical *, 
-	    ftnlen, ftnlen), chemm_(char *, char *, integer *, integer *, 
-	    complex *, complex *, integer *, complex *, integer *, complex *, 
-	    complex *, integer *);
     logical isame[13];
     char sides[1];
     integer nargs;
     logical reset;
-    extern /* Subroutine */ int csymm_(char *, char *, integer *, integer *, 
-	    complex *, complex *, integer *, complex *, integer *, complex *, 
-	    complex *, integer *);
     char uplos[1];
-    extern logical lceres_(char *, char *, integer *, integer *, complex *, 
-	    complex *, integer *, ftnlen, ftnlen);
     real errmax;
 
     /* Fortran I/O blocks */
@@ -1644,7 +1586,6 @@ L120:
 
     /* Local variables */
     integer i__, j, m, n, ia, na, nc, im, in, ms, ns, laa, icd, lbb, lda, ldb;
-    extern logical lce_(complex *, complex *, integer *);
     integer ics;
     complex als;
     integer ict, icu;
@@ -1655,28 +1596,13 @@ L120:
     char side[1];
     logical left, null;
     char uplo[1];
-    extern /* Subroutine */ int cmake_(char *, char *, char *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, logical *, 
-	    complex *, ftnlen, ftnlen, ftnlen);
     complex alpha;
     char diags[1];
-    extern /* Subroutine */ int cmmch_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *, complex *, real *, complex *, 
-	    integer *, real *, real *, logical *, integer *, logical *, 
-	    ftnlen, ftnlen);
     logical isame[13];
     char sides[1];
     integer nargs;
     logical reset;
-    extern /* Subroutine */ int ctrmm_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *), ctrsm_(char *, char *, 
-	     char *, char *, integer *, integer *, complex *, complex *, 
-	    integer *, complex *, integer *);
     char uplos[1];
-    extern logical lceres_(char *, char *, integer *, integer *, complex *, 
-	    complex *, integer *, ftnlen, ftnlen);
     char tranas[1], transa[1];
     real errmax;
 
@@ -2164,7 +2090,6 @@ L160:
     /* Local variables */
     integer i__, j, k, n, ia, ib, jc, ma, na, nc, ik, in, jj, lj, ks, ns, laa,
 	     lda, lcc, ldc;
-    extern logical lce_(complex *, complex *, integer *);
     complex als;
     integer ict, icu;
     real err;
@@ -2175,16 +2100,7 @@ L160:
     real rals;
     logical tran, null;
     char uplo[1];
-    extern /* Subroutine */ int cmake_(char *, char *, char *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, logical *, 
-	    complex *, ftnlen, ftnlen, ftnlen);
     complex alpha;
-    extern /* Subroutine */ int cmmch_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *, complex *, real *, complex *, 
-	    integer *, real *, real *, logical *, integer *, logical *, 
-	    ftnlen, ftnlen), cherk_(char *, char *, integer *, integer *, 
-	    real *, complex *, integer *, real *, complex *, integer *);
     real rbeta;
     logical isame[13];
     integer nargs;
@@ -2192,12 +2108,8 @@ L160:
     logical reset;
     char trans[1];
     logical upper;
-    extern /* Subroutine */ int csyrk_(char *, char *, integer *, integer *, 
-	    complex *, complex *, integer *, complex *, complex *, integer *);
     char uplos[1];
     real ralpha;
-    extern logical lceres_(char *, char *, integer *, integer *, complex *, 
-	    complex *, integer *, ftnlen, ftnlen);
     real errmax;
     char transs[1], transt[1];
 
@@ -2697,7 +2609,6 @@ L130:
     /* Local variables */
     integer i__, j, k, n, ia, ib, jc, ma, na, nc, ik, in, jj, lj, ks, ns, laa,
 	     lbb, lda, lcc, ldb, ldc;
-    extern logical lce_(complex *, complex *, integer *);
     complex als;
     integer ict, icu;
     real err;
@@ -2708,15 +2619,7 @@ L130:
     complex bets;
     logical tran, null;
     char uplo[1];
-    extern /* Subroutine */ int cmake_(char *, char *, char *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, logical *, 
-	    complex *, ftnlen, ftnlen, ftnlen);
     complex alpha;
-    extern /* Subroutine */ int cmmch_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *, complex *, real *, complex *, 
-	    integer *, real *, real *, logical *, integer *, logical *, 
-	    ftnlen, ftnlen);
     real rbeta;
     logical isame[13];
     integer nargs;
@@ -2725,13 +2628,6 @@ L130:
     char trans[1];
     logical upper;
     char uplos[1];
-    extern /* Subroutine */ int cher2k_(char *, char *, integer *, integer *, 
-	    complex *, complex *, integer *, complex *, integer *, real *, 
-	    complex *, integer *), csyr2k_(char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *);
-    extern logical lceres_(char *, char *, integer *, integer *, complex *, 
-	    complex *, integer *, ftnlen, ftnlen);
     real errmax;
     char transs[1], transt[1];
 
@@ -3293,29 +3189,8 @@ L160:
     /* Local variables */
     complex a[2]	/* was [2][1] */, b[2]	/* was [2][1] */, c__[2]	
 	    /* was [2][1] */, beta, alpha;
-    extern /* Subroutine */ int cgemm_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *), chemm_(char *, 
-	    char *, integer *, integer *, complex *, complex *, integer *, 
-	    complex *, integer *, complex *, complex *, integer *), cherk_(char *, char *, integer *, integer *, real *, 
-	    complex *, integer *, real *, complex *, integer *);
     real rbeta;
-    extern /* Subroutine */ int ctrmm_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *), csymm_(char *, char *, 
-	     integer *, integer *, complex *, complex *, integer *, complex *, 
-	     integer *, complex *, complex *, integer *), 
-	    ctrsm_(char *, char *, char *, char *, integer *, integer *, 
-	    complex *, complex *, integer *, complex *, integer *), csyrk_(char *, char *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, complex *, 
-	    integer *), cher2k_(char *, char *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    real *, complex *, integer *), csyr2k_(char *, 
-	    char *, integer *, integer *, complex *, complex *, integer *, 
-	    complex *, integer *, complex *, complex *, integer *);
     real ralpha;
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *);
 
     /* Fortran I/O blocks */
     static cilist io___360 = { 0, 0, 0, fmt_9999, 0 };
@@ -4434,7 +4309,6 @@ L100:
     /* Local variables */
     integer i__, j, jj;
     logical gen, her, tri, sym;
-    extern /* Complex */ void cbeg_(complex *, logical *);
     integer ibeg, iend;
     logical unit, lower, upper;
 
@@ -5299,7 +5173,7 @@ doublereal sdiff_(real *x, real *y)
 
 } /* chkxer_ */
 
-/* Subroutine */ int xerbla_(char *srname, integer *info)
+/* Subroutine */ int this_xerbla_(char *srname, integer *info)
 {
     /* Format strings */
     static char fmt_9999[] = "(\002 ******* XERBLA WAS CALLED WITH INFO ="
@@ -5366,6 +5240,6 @@ doublereal sdiff_(real *x, real *y)
 
 /*     End of XERBLA */
 
-} /* xerbla_ */
+} /* this_xerbla_ */
 
 /* Main program alias */ int cblat3_ () { MAIN__ (); return 0; }

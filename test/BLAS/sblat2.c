@@ -11,6 +11,7 @@
 */
 
 #include "f2c.h"
+#include "sblat2.h"
 #include "blaswrap.h"
 
 /* Common Block Declarations */
@@ -111,49 +112,15 @@ static logical c_false = FALSE_;
     real as[4225], xs[130], ys[130], yt[65], xx[130], yy[130], alf[7];
     integer inc[7], nkb;
     real bet[7];
-    extern logical lse_(real *, real *, integer *);
     real eps, err;
     integer nalf, idim[9];
     logical same;
     integer ninc, nbet, ntra;
     logical rewi;
     integer nout;
-    extern /* Subroutine */ int schk1_(char *, real *, real *, integer *, 
-	    integer *, logical *, logical *, logical *, integer *, integer *, 
-	    integer *, integer *, integer *, real *, integer *, real *, 
-	    integer *, integer *, integer *, integer *, real *, real *, real *
-	    , real *, real *, real *, real *, real *, real *, real *, real *, 
-	    ftnlen), schk2_(char *, real *, real *, integer *, integer *, 
-	    logical *, logical *, logical *, integer *, integer *, integer *, 
-	    integer *, integer *, real *, integer *, real *, integer *, 
-	    integer *, integer *, integer *, real *, real *, real *, real *, 
-	    real *, real *, real *, real *, real *, real *, real *, ftnlen), 
-	    schk3_(char *, real *, real *, integer *, integer *, logical *, 
-	    logical *, logical *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, real *, real *, real *
-	    , real *, real *, real *, real *, real *, real *, ftnlen), schk4_(
-	    char *, real *, real *, integer *, integer *, logical *, logical *
-	    , logical *, integer *, integer *, integer *, real *, integer *, 
-	    integer *, integer *, integer *, real *, real *, real *, real *, 
-	    real *, real *, real *, real *, real *, real *, real *, real *, 
-	    ftnlen), schk5_(char *, real *, real *, integer *, integer *, 
-	    logical *, logical *, logical *, integer *, integer *, integer *, 
-	    real *, integer *, integer *, integer *, integer *, real *, real *
-	    , real *, real *, real *, real *, real *, real *, real *, real *, 
-	    real *, real *, ftnlen), schk6_(char *, real *, real *, integer *,
-	     integer *, logical *, logical *, logical *, integer *, integer *,
-	     integer *, real *, integer *, integer *, integer *, integer *, 
-	    real *, real *, real *, real *, real *, real *, real *, real *, 
-	    real *, real *, real *, real *, ftnlen);
     logical fatal;
-    extern doublereal sdiff_(real *, real *);
-    extern /* Subroutine */ int schke_(integer *, char *, integer *, ftnlen);
     logical trace;
     integer nidim;
-    extern /* Subroutine */ int smvch_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *, 
-	    real *, real *, real *, real *, real *, logical *, integer *, 
-	    logical *, ftnlen);
     char snaps[32], trans[1];
     integer isnum;
     logical ltest[16], sfatal;
@@ -817,7 +784,6 @@ L240:
     integer i__, m, n, ia, ib, ic, nc, nd, im, in, kl, ml, nk, nl, ku, ix, iy,
 	     ms, lx, ly, ns, laa, lda;
     real als, bls;
-    extern logical lse_(real *, real *, integer *);
     real err;
     integer iku, kls, kus;
     real beta;
@@ -827,25 +793,12 @@ L240:
     logical full, tran, null;
     real alpha;
     logical isame[13];
-    extern /* Subroutine */ int smake_(char *, char *, char *, integer *, 
-	    integer *, real *, integer *, real *, integer *, integer *, 
-	    integer *, logical *, real *, ftnlen, ftnlen, ftnlen);
     integer nargs;
-    extern /* Subroutine */ int sgbmv_(char *, integer *, integer *, integer *
-, integer *, real *, real *, integer *, real *, integer *, real *, 
-	     real *, integer *), smvch_(char *, integer *, integer *, 
-	    real *, real *, integer *, real *, integer *, real *, real *, 
-	    integer *, real *, real *, real *, real *, real *, logical *, 
-	    integer *, logical *, ftnlen), sgemv_(char *, integer *, integer *
-, real *, real *, integer *, real *, integer *, real *, real *, 
-	    integer *);
     logical reset;
     integer incxs, incys;
     char trans[1];
     logical banded;
     real errmax;
-    extern logical lseres_(char *, char *, integer *, integer *, real *, real 
-	    *, integer *, ftnlen, ftnlen);
     real transl;
     char transs[1];
 
@@ -1360,7 +1313,6 @@ L140:
     integer i__, k, n, ia, ib, ic, nc, ik, in, nk, ks, ix, iy, ns, lx, ly, 
 	    laa, lda;
     real als, bls;
-    extern logical lse_(real *, real *, integer *);
     real err, beta;
     integer ldas;
     logical same;
@@ -1369,27 +1321,12 @@ L140:
     char uplo[1];
     real alpha;
     logical isame[13];
-    extern /* Subroutine */ int smake_(char *, char *, char *, integer *, 
-	    integer *, real *, integer *, real *, integer *, integer *, 
-	    integer *, logical *, real *, ftnlen, ftnlen, ftnlen);
     integer nargs;
-    extern /* Subroutine */ int smvch_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *, 
-	    real *, real *, real *, real *, real *, logical *, integer *, 
-	    logical *, ftnlen);
     logical reset;
     integer incxs, incys;
-    extern /* Subroutine */ int ssbmv_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *);
     char uplos[1];
-    extern /* Subroutine */ int sspmv_(char *, integer *, real *, real *, 
-	    real *, integer *, real *, real *, integer *), ssymv_(
-	    char *, integer *, real *, real *, integer *, real *, integer *, 
-	    real *, real *, integer *);
     logical banded, packed;
     real errmax;
-    extern logical lseres_(char *, char *, integer *, integer *, real *, real 
-	    *, integer *, ftnlen, ftnlen);
     real transl;
 
     /* Fortran I/O blocks */
@@ -1917,7 +1854,6 @@ L130:
     /* Local variables */
     integer i__, k, n, nc, ik, in, nk, ks, ix, ns, lx, laa, icd, lda, ict, 
 	    icu;
-    extern logical lse_(real *, real *, integer *);
     real err;
     char diag[1];
     integer ldas;
@@ -1926,30 +1862,13 @@ L130:
     logical full, null;
     char uplo[1], diags[1];
     logical isame[13];
-    extern /* Subroutine */ int smake_(char *, char *, char *, integer *, 
-	    integer *, real *, integer *, real *, integer *, integer *, 
-	    integer *, logical *, real *, ftnlen, ftnlen, ftnlen);
     integer nargs;
-    extern /* Subroutine */ int smvch_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *, 
-	    real *, real *, real *, real *, real *, logical *, integer *, 
-	    logical *, ftnlen);
     logical reset;
     integer incxs;
     char trans[1];
-    extern /* Subroutine */ int stbmv_(char *, char *, char *, integer *, 
-	    integer *, real *, integer *, real *, integer *), stbsv_(char *, char *, char *, integer *, integer *, 
-	    real *, integer *, real *, integer *);
     char uplos[1];
-    extern /* Subroutine */ int stpmv_(char *, char *, char *, integer *, 
-	    real *, real *, integer *), strmv_(char *, 
-	     char *, char *, integer *, real *, integer *, real *, integer *), stpsv_(char *, char *, char *, integer *, 
-	     real *, real *, integer *), strsv_(char *
-, char *, char *, integer *, real *, integer *, real *, integer *);
     logical banded, packed;
     real errmax;
-    extern logical lseres_(char *, char *, integer *, integer *, real *, real 
-	    *, integer *, ftnlen, ftnlen);
     real transl;
     char transs[1];
 
@@ -2526,29 +2445,17 @@ L130:
     real w[1];
     integer ia, nc, nd, im, in, ms, ix, iy, ns, lx, ly, laa, lda;
     real als;
-    extern logical lse_(real *, real *, integer *);
     real err;
     integer ldas;
     logical same;
-    extern /* Subroutine */ int sger_(integer *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, integer *);
     integer incx, incy;
     logical null;
     real alpha;
     logical isame[13];
-    extern /* Subroutine */ int smake_(char *, char *, char *, integer *, 
-	    integer *, real *, integer *, real *, integer *, integer *, 
-	    integer *, logical *, real *, ftnlen, ftnlen, ftnlen);
     integer nargs;
-    extern /* Subroutine */ int smvch_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *, 
-	    real *, real *, real *, real *, real *, logical *, integer *, 
-	    logical *, ftnlen);
     logical reset;
     integer incxs, incys;
     real errmax;
-    extern logical lseres_(char *, char *, integer *, integer *, real *, real 
-	    *, integer *, ftnlen, ftnlen);
     real transl;
 
     /* Fortran I/O blocks */
@@ -2937,34 +2844,21 @@ L150:
     real w[1];
     integer ia, ja, ic, nc, jj, lj, in, ix, ns, lx, laa, lda;
     real als;
-    extern logical lse_(real *, real *, integer *);
     real err;
     integer ldas;
     logical same;
     integer incx;
     logical full, null;
     char uplo[1];
-    extern /* Subroutine */ int sspr_(char *, integer *, real *, real *, 
-	    integer *, real *), ssyr_(char *, integer *, real *, real 
-	    *, integer *, real *, integer *);
     real alpha;
     logical isame[13];
-    extern /* Subroutine */ int smake_(char *, char *, char *, integer *, 
-	    integer *, real *, integer *, real *, integer *, integer *, 
-	    integer *, logical *, real *, ftnlen, ftnlen, ftnlen);
     integer nargs;
-    extern /* Subroutine */ int smvch_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *, 
-	    real *, real *, real *, real *, real *, logical *, integer *, 
-	    logical *, ftnlen);
     logical reset;
     integer incxs;
     logical upper;
     char uplos[1];
     logical packed;
     real errmax;
-    extern logical lseres_(char *, char *, integer *, integer *, real *, real 
-	    *, integer *, ftnlen, ftnlen);
     real transl;
 
     /* Fortran I/O blocks */
@@ -3376,35 +3270,21 @@ L130:
     real w[2];
     integer ia, ja, ic, nc, jj, lj, in, ix, iy, ns, lx, ly, laa, lda;
     real als;
-    extern logical lse_(real *, real *, integer *);
     real err;
     integer ldas;
     logical same;
     integer incx, incy;
     logical full, null;
     char uplo[1];
-    extern /* Subroutine */ int sspr2_(char *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *), ssyr2_(char *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    integer *);
     real alpha;
     logical isame[13];
-    extern /* Subroutine */ int smake_(char *, char *, char *, integer *, 
-	    integer *, real *, integer *, real *, integer *, integer *, 
-	    integer *, logical *, real *, ftnlen, ftnlen, ftnlen);
     integer nargs;
-    extern /* Subroutine */ int smvch_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *, 
-	    real *, real *, real *, real *, real *, logical *, integer *, 
-	    logical *, ftnlen);
     logical reset;
     integer incxs, incys;
     logical upper;
     char uplos[1];
     logical packed;
     real errmax;
-    extern logical lseres_(char *, char *, integer *, integer *, real *, real 
-	    *, integer *, ftnlen, ftnlen);
     real transl;
 
     /* Fortran I/O blocks */
@@ -3839,32 +3719,7 @@ L170:
 
     /* Local variables */
     real a[1]	/* was [1][1] */, x[1], y[1], beta;
-    extern /* Subroutine */ int sger_(integer *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, integer *), sspr_(char *, 
-	    integer *, real *, real *, integer *, real *), ssyr_(char 
-	    *, integer *, real *, real *, integer *, real *, integer *), sspr2_(char *, integer *, real *, real *, integer *, 
-	    real *, integer *, real *), ssyr2_(char *, integer *, 
-	    real *, real *, integer *, real *, integer *, real *, integer *);
     real alpha;
-    extern /* Subroutine */ int sgbmv_(char *, integer *, integer *, integer *
-, integer *, real *, real *, integer *, real *, integer *, real *, 
-	     real *, integer *), sgemv_(char *, integer *, integer *, 
-	    real *, real *, integer *, real *, integer *, real *, real *, 
-	    integer *), ssbmv_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *), stbmv_(char *, char *, char *, integer *, integer *, 
-	    real *, integer *, real *, integer *), 
-	    stbsv_(char *, char *, char *, integer *, integer *, real *, 
-	    integer *, real *, integer *), sspmv_(
-	    char *, integer *, real *, real *, real *, integer *, real *, 
-	    real *, integer *), stpmv_(char *, char *, char *, 
-	    integer *, real *, real *, integer *), 
-	    strmv_(char *, char *, char *, integer *, real *, integer *, real 
-	    *, integer *), stpsv_(char *, char *, 
-	    char *, integer *, real *, real *, integer *), ssymv_(char *, integer *, real *, real *, integer *, 
-	    real *, integer *, real *, real *, integer *), strsv_(
-	    char *, char *, char *, integer *, real *, integer *, real *, 
-	    integer *), chkxer_(char *, integer *, 
-	    integer *, logical *, logical *);
 
     /* Fortran I/O blocks */
     static cilist io___396 = { 0, 0, 0, fmt_9999, 0 };
@@ -4257,7 +4112,6 @@ L170:
     integer i__, j, i1, i2, i3, kk;
     logical gen, tri, sym;
     integer ibeg, iend;
-    extern doublereal sbeg_(logical *);
     integer ioff;
     logical unit, lower, upper;
 
@@ -4883,7 +4737,7 @@ doublereal sdiff_(real *x, real *y)
 
 } /* chkxer_ */
 
-/* Subroutine */ int xerbla_(char *srname, integer *info)
+/* Subroutine */ int this_xerbla_(char *srname, integer *info)
 {
     /* Format strings */
     static char fmt_9999[] = "(\002 ******* XERBLA WAS CALLED WITH INFO ="
@@ -4948,6 +4802,6 @@ doublereal sdiff_(real *x, real *y)
 
 /*     End of XERBLA */
 
-} /* xerbla_ */
+} /* this_xerbla_ */
 
 /* Main program alias */ int sblat2_ () { MAIN__ (); return 0; }

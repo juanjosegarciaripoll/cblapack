@@ -11,6 +11,7 @@
 */
 
 #include "f2c.h"
+#include "sblat1.h"
 #include "blaswrap.h"
 
 /* Common Block Declarations */
@@ -42,8 +43,6 @@ static integer c__5 = 5;
 
     /* Local variables */
     integer ic;
-    extern /* Subroutine */ int check0_(real *), check1_(real *), check2_(
-	    real *), check3_(real *), header_(void);
 
     /* Fortran I/O blocks */
     static cilist io___2 = { 0, 6, 0, fmt_99999, 0 };
@@ -141,8 +140,6 @@ static integer c__5 = 5;
     /* Local variables */
     integer k;
     real sa, sb, sc, ss;
-    extern /* Subroutine */ int srotg_(real *, real *, real *, real *), 
-	    stest1_(real *, real *, real *, real *);
 
     /* Fortran I/O blocks */
     static cilist io___18 = { 0, 6, 0, 0, 0 };
@@ -222,15 +219,8 @@ L40:
     integer i__;
     real sx[8];
     integer np1, len;
-    extern doublereal snrm2_(integer *, real *, integer *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     real stemp[1];
-    extern doublereal sasum_(integer *, real *, integer *);
     real strue[8];
-    extern /* Subroutine */ int stest_(integer *, real *, real *, real *, 
-	    real *), itest1_(integer *, integer *), stest1_(real *, real *, 
-	    real *, real *);
-    extern integer isamax_(integer *, real *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___31 = { 0, 6, 0, 0, 0 };
@@ -348,13 +338,7 @@ L40:
     integer i__, j, ki, kn, mx, my;
     real sx[7], sy[7], stx[7], sty[7];
     integer lenx, leny;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
     integer ksize;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), sswap_(integer *, real *, integer *, real *, integer *
-), stest_(integer *, real *, real *, real *, real *), saxpy_(
-	    integer *, real *, real *, integer *, real *, integer *), stest1_(
-	    real *, real *, real *, real *);
 
     /* Fortran I/O blocks */
     static cilist io___58 = { 0, 6, 0, 0, 0 };
@@ -479,13 +463,9 @@ L40:
     real mwpc[11];
     integer mwpn[11];
     real mwps[11];
-    extern /* Subroutine */ int srot_(integer *, real *, integer *, real *, 
-	    integer *, real *, real *);
     real mwpx[5], mwpy[5];
     integer ksize;
     real copyx[5], copyy[5];
-    extern /* Subroutine */ int stest_(integer *, real *, real *, real *, 
-	    real *);
     real mwptx[55]	/* was [11][5] */, mwpty[55]	/* was [11][5] */;
     integer mwpinx[11], mwpiny[11];
     real mwpstx[5], mwpsty[5];
@@ -664,7 +644,6 @@ L40:
     /* Local variables */
     integer i__;
     real sd;
-    extern doublereal sdiff_(real *, real *);
 
     /* Fortran I/O blocks */
     static cilist io___99 = { 0, 6, 0, fmt_99999, 0 };
@@ -741,8 +720,6 @@ L40:
 	sfac)
 {
     real scomp[1], strue[1];
-    extern /* Subroutine */ int stest_(integer *, real *, real *, real *, 
-	    real *);
 
 /*     ************************* STEST1 ***************************** */
 
