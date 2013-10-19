@@ -8,8 +8,8 @@
  */
 #include "cblas.h"
 #include "blaswrap.h"
-void cblas_srotm( const int N, float *X, const int incX, float *Y, 
-                       const int incY, const float *P)
+void cblas_srotm( const integer N, float *X, const integer incX, float *Y, 
+                       const integer incY, const float *P)
 {
    #define F77_N N
    #define F77_incX incX

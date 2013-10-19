@@ -9,11 +9,11 @@
  */
 #include "cblas.h"
 #include "blaswrap.h"
-CBLAS_INDEX cblas_idamax( const int N, const double *X, const int incX)
+CBLAS_INDEX cblas_idamax( const integer N, const double *X, const integer incX)
 {
-   int iamax;
+   integer iamax;
    #define F77_N N
    #define F77_incX incX
-   idamax = idamax_( &F77_N, X, &F77_incX );
+   iamax = idamax_( &F77_N, X, &F77_incX );
    return iamax ? iamax-1 : 0;
 }

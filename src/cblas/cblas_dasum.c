@@ -9,7 +9,7 @@
  */
 #include "cblas.h"
 #include "blaswrap.h"
-double cblas_dasum( const int N, const double *X, const int incX) 
+double cblas_dasum( const integer N, const double *X, const integer incX) 
 {
    #define F77_N N
    #define F77_incX incX

@@ -8,8 +8,8 @@
  */
 #include "cblas.h"
 #include "blaswrap.h"
-void cblas_zaxpy( const int N, const void *alpha, const void *X,
-                       const int incX, void *Y, const int incY)
+void cblas_zaxpy( const integer N, const void *alpha, const void *X,
+                       const integer incX, void *Y, const integer incY)
 {
    #define F77_N N
    #define F77_incX incX

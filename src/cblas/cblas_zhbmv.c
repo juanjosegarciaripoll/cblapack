@@ -5,34 +5,30 @@
  * Keita Teranishi  5/18/98
  *
  */
-#include "cblas.h"
-#include "blaswrap.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "cblas.h"
+#include "blaswrap.h"
 void cblas_zhbmv(const enum CBLAS_ORDER order,
-                 const enum CBLAS_UPLO Uplo,const int N,const int K,
-                 const void *alpha, const void  *A, const int lda,
-                 const void  *X, const int incX, const void *beta,
-                 void  *Y, const int incY)
+                 const enum CBLAS_UPLO Uplo,const integer N,const integer K,
+                 const void *alpha, const void  *A, const integer lda,
+                 const void  *X, const integer incX, const void *beta,
+                 void  *Y, const integer incY)
 {
    char UL;
-#ifdef F77_CHAR
-   F77_CHAR F77_UL;
-#else
-   #define F77_UL &UL   
-#endif
+   #define F77_UL &UL
    #define F77_N N
    #define F77_K K
    #define F77_lda lda
    #define F77_incX incx
    #define F77_incY incY
-   int n, i=0, incx=incX;
+   integer n, i=0, incx=incX;
    const double *xx= (double *)X, *alp= (double *)alpha, *bet = (double *)beta;
    double ALPHA[2],BETA[2];
-   int tincY, tincx;
+   integer tincY, tincx;
    double *x=(double *)X, *y=(double *)Y, *st=0, *tx;
-   extern int CBLAS_CallFromC;
-   extern int RowMajorStrg;
+   extern integer CBLAS_CallFromC;
+   extern integer RowMajorStrg;
    RowMajorStrg = 0;
 
    CBLAS_CallFromC = 1;
@@ -47,11 +43,8 @@ void cblas_zhbmv(const enum CBLAS_ORDER order,
          RowMajorStrg = 0;
          return;
       }
-      #ifdef F77_CHAR
-         F77_UL = C2F_CHAR(&UL);
-      #endif
       zhbmv_(F77_UL, &F77_N, &F77_K, alpha, A, &F77_lda, X,  
-                     &F77_incX, beta, Y, &F77_incY);
+	     &F77_incX, beta, Y, &F77_incY);
    }
    else if (order == CblasRowMajor)
    {
@@ -89,7 +82,7 @@ void cblas_zhbmv(const enum CBLAS_ORDER order,
          x=tx;
 
 
-            incx = 1;
+	 incx = 1;
  
          if(incY > 0)
            tincY = incY;
@@ -117,11 +110,8 @@ void cblas_zhbmv(const enum CBLAS_ORDER order,
          RowMajorStrg = 0;
          return;
       }
-      #ifdef F77_CHAR
-         F77_UL = C2F_CHAR(&UL);
-      #endif
-      zhbmv_(F77_UL, &F77_N, &F77_K, ALPHA, 
-                     A ,&F77_lda, x,&F77_incX, BETA, Y, &F77_incY);
+      zhbmv_(F77_UL, &F77_N, &F77_K, (void*)ALPHA, 
+	     A ,&F77_lda, (void*)x, &F77_incX, (void*)BETA, Y, &F77_incY);
    }
    else 
    {
@@ -133,7 +123,7 @@ void cblas_zhbmv(const enum CBLAS_ORDER order,
    if ( order == CblasRowMajor )
    {
       RowMajorStrg = 1;
-      if(X!=x)
+      if (X!=x)
          free(x);
       if (N > 0)
       {

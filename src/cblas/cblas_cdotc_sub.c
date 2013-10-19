@@ -9,8 +9,8 @@
  */
 #include "cblas.h"
 #include "blaswrap.h"
-void cblas_cdotc_sub( const int N, const void *X, const int incX,
-                    const void *Y, const int incY,void *dotc)
+void cblas_cdotc_sub( const integer N, const void *X, const integer incX,
+                    const void *Y, const integer incY,void *dotc)
 {
    #define F77_N N
    #define F77_incX incX

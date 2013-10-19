@@ -9,8 +9,8 @@
  */
 #include "cblas.h"
 #include "blaswrap.h"
-float cblas_sdsdot( const int N, const float alpha, const float *X,
-                      const int incX, const float *Y, const int incY)
+float cblas_sdsdot( const integer N, const float alpha, const float *X,
+                      const integer incX, const float *Y, const integer incY)
 {
    #define F77_N N
    #define F77_incX incX

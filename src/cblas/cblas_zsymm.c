@@ -10,10 +10,10 @@
 #include "cblas.h"
 #include "blaswrap.h"
 void cblas_zsymm(const enum CBLAS_ORDER Order, const enum CBLAS_SIDE Side,
-                 const enum CBLAS_UPLO Uplo, const int M, const int N,
-                 const void *alpha, const void  *A, const int lda,
-                 const void  *B, const int ldb, const void *beta,
-                 void  *C, const int ldc)
+                 const enum CBLAS_UPLO Uplo, const integer M, const integer N,
+                 const void *alpha, const void  *A, const integer lda,
+                 const void  *B, const integer ldb, const void *beta,
+                 void  *C, const integer ldc)
 {
    char SD, UL;   
 #ifdef F77_CHAR
@@ -29,8 +29,8 @@ void cblas_zsymm(const enum CBLAS_ORDER Order, const enum CBLAS_SIDE Side,
    #define F77_ldb ldb
    #define F77_ldc ldc
 
-   extern int CBLAS_CallFromC;
-   extern int RowMajorStrg;
+   extern integer CBLAS_CallFromC;
+   extern integer RowMajorStrg;
    RowMajorStrg = 0;
    CBLAS_CallFromC = 1;
 

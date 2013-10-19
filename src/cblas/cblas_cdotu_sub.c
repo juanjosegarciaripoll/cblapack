@@ -9,8 +9,8 @@
  */
 #include "cblas.h"
 #include "blaswrap.h"
-void cblas_cdotu_sub( const int N, const void *X,
-                     const int incX, const void *Y, const int incY,void *dotu)
+void cblas_cdotu_sub( const integer N, const void *X,
+                     const integer incX, const void *Y, const integer incY,void *dotu)
 {
    #define F77_N N
    #define F77_incX incX

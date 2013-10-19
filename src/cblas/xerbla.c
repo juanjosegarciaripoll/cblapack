@@ -6,27 +6,14 @@
 #define XerblaStrLen 6
 #define XerblaStrLen1 7
 
-#ifdef F77_CHAR
-void xerbla_(F77_CHAR F77_srname, void *vinfo)
-#else
 void xerbla_(char *srname, void *vinfo)
-#endif
-
 {
-#ifdef F77_CHAR
-   char *srname;
-#endif
-
    char rout[] = {'c','b','l','a','s','_','\0','\0','\0','\0','\0','\0','\0'};
 
-   int *info=vinfo;
-   int i;
+   integer *info=vinfo;
+   integer i;
 
-   extern int CBLAS_CallFromC;
-
-#ifdef F77_CHAR
-   srname = F2C_STR(F77_srname, XerblaStrLen);
-#endif
+   extern integer CBLAS_CallFromC;
 
    if (CBLAS_CallFromC)
    {

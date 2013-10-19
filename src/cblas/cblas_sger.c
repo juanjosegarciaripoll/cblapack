@@ -9,9 +9,9 @@
 
 #include "cblas.h"
 #include "blaswrap.h"
-void cblas_sger(const enum CBLAS_ORDER order, const int M, const int N,
-                const float  alpha, const float  *X, const int incX,
-                const float  *Y, const int incY, float  *A, const int lda)
+void cblas_sger(const enum CBLAS_ORDER order, const integer M, const integer N,
+                const float  alpha, const float  *X, const integer incX,
+                const float  *Y, const integer incY, float  *A, const integer lda)
 {
    #define F77_M M
    #define F77_N N
@@ -19,8 +19,8 @@ void cblas_sger(const enum CBLAS_ORDER order, const int M, const int N,
    #define F77_incY incY
    #define F77_lda lda
 
-   extern int CBLAS_CallFromC;
-   extern int RowMajorStrg;
+   extern integer CBLAS_CallFromC;
+   extern integer RowMajorStrg;
    RowMajorStrg = 0;
 
    CBLAS_CallFromC = 1;

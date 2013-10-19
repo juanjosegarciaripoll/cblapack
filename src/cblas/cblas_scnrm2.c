@@ -9,7 +9,7 @@
  */
 #include "cblas.h"
 #include "blaswrap.h"
-float cblas_scnrm2( const int N, const void *X, const int incX) 
+float cblas_scnrm2( const integer N, const void *X, const integer incX) 
 {
    #define F77_N N
    #define F77_incX incX

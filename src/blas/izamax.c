@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-integer izamax_(integer *n, doublecomplex *zx, integer *incx)
+integer izamax_(const integer *n, const doublecomplex *zx, const integer *incx)
 {
     /* System generated locals */
     integer ret_val, i__1;

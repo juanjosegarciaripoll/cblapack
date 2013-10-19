@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-integer idamax_(integer *n, doublereal *dx, integer *incx)
+integer idamax_(const integer *n, const doublereal *dx, const integer *incx)
 {
     /* System generated locals */
     integer ret_val, i__1;

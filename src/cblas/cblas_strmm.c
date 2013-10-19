@@ -11,9 +11,9 @@
 #include "blaswrap.h"
 void cblas_strmm(const enum CBLAS_ORDER Order, const enum CBLAS_SIDE Side,
                  const enum CBLAS_UPLO Uplo, const  enum CBLAS_TRANSPOSE TransA,
-                 const enum CBLAS_DIAG Diag, const int M, const int N,
-                 const float alpha, const float *A, const int lda,
-                 float *B, const int ldb)
+                 const enum CBLAS_DIAG Diag, const integer M, const integer N,
+                 const float alpha, const float *A, const integer lda,
+                 float *B, const integer ldb)
 {
    char UL, TA, SD, DI;   
 #ifdef F77_CHAR
@@ -30,8 +30,8 @@ void cblas_strmm(const enum CBLAS_ORDER Order, const enum CBLAS_SIDE Side,
    #define F77_lda lda
    #define F77_ldb ldb
 
-   extern int CBLAS_CallFromC;
-   extern int RowMajorStrg;
+   extern integer CBLAS_CallFromC;
+   extern integer RowMajorStrg;
    RowMajorStrg = 0;
    CBLAS_CallFromC = 1;
 

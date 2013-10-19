@@ -11,10 +11,10 @@
 #include "cblas.h"
 #include "blaswrap.h"
 void cblas_dspmv(const enum CBLAS_ORDER order,
-                 const enum CBLAS_UPLO Uplo, const int N,
+                 const enum CBLAS_UPLO Uplo, const integer N,
                  const double alpha, const double  *AP,
-                 const double  *X, const int incX, const double beta,
-                 double  *Y, const int incY)
+                 const double  *X, const integer incX, const double beta,
+                 double  *Y, const integer incY)
 {
    char UL;
 #ifdef F77_CHAR
@@ -25,8 +25,8 @@ void cblas_dspmv(const enum CBLAS_ORDER order,
    #define F77_N N
    #define F77_incX incX
    #define F77_incY incY
-   extern int CBLAS_CallFromC;
-   extern int RowMajorStrg;
+   extern integer CBLAS_CallFromC;
+   extern integer RowMajorStrg;
    RowMajorStrg = 0;
 
    CBLAS_CallFromC = 1;

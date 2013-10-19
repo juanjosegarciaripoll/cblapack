@@ -8,8 +8,8 @@
  */
 #include "cblas.h"
 #include "blaswrap.h"
-void cblas_sswap( const int N, float *X, const int incX, float *Y,
-                       const int incY)
+void cblas_sswap( const integer N, float *X, const integer incX, float *Y,
+                       const integer incY)
 {
    #define F77_N N
    #define F77_incX incX

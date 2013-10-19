@@ -9,9 +9,9 @@
 #include <stdlib.h>
 #include "cblas.h"
 #include "blaswrap.h"
-void cblas_zgerc(const enum CBLAS_ORDER order, const int M, const int N,
-                 const void *alpha, const void *X, const int incX,
-                 const void *Y, const int incY, void *A, const int lda)
+void cblas_zgerc(const enum CBLAS_ORDER order, const integer M, const integer N,
+                 const void *alpha, const void *X, const integer incX,
+                 const void *Y, const integer incY, void *A, const integer lda)
 {
    #define F77_M M
    #define F77_N N
@@ -19,11 +19,11 @@ void cblas_zgerc(const enum CBLAS_ORDER order, const int M, const int N,
    #define F77_incY incy
    #define F77_lda lda   
 
-   int n, i, tincy, incy=incY;
+   integer n, i, tincy, incy=incY;
    double *y=(double *)Y, *yy=(double *)Y, *ty, *st;
 
-   extern int CBLAS_CallFromC;
-   extern int RowMajorStrg;
+   extern integer CBLAS_CallFromC;
+   extern integer RowMajorStrg;
    RowMajorStrg = 0;
 
    CBLAS_CallFromC = 1;

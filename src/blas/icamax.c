@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-integer icamax_(integer *n, complex *cx, integer *incx)
+integer icamax_(const integer *n, const complex *cx, const integer *incx)
 {
     /* System generated locals */
     integer ret_val, i__1;

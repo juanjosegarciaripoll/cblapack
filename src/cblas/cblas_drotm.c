@@ -1,7 +1,7 @@
 #include "cblas.h"
 #include "blaswrap.h"
-void cblas_drotm( const int N, double *X, const int incX, double *Y, 
-                       const int incY, const double *P)
+void cblas_drotm( const integer N, double *X, const integer incX, double *Y, 
+                       const integer incY, const double *P)
 {
    #define F77_N N
    #define F77_incX incX

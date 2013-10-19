@@ -10,10 +10,10 @@
 #include "cblas.h"
 #include "blaswrap.h"
 void cblas_zhemv(const enum CBLAS_ORDER order,
-                 const enum CBLAS_UPLO Uplo, const int N,
-                 const void *alpha, const void *A, const int lda,
-                 const void *X, const int incX, const void *beta,
-                 void  *Y, const int incY)
+                 const enum CBLAS_UPLO Uplo, const integer N,
+                 const void *alpha, const void *A, const integer lda,
+                 const void *X, const integer incX, const void *beta,
+                 void  *Y, const integer incY)
 {
    char UL;
 #ifdef F77_CHAR
@@ -25,13 +25,13 @@ void cblas_zhemv(const enum CBLAS_ORDER order,
    #define F77_lda lda
    #define F77_incX incx
    #define F77_incY incY
-   int n, i=0, incx=incX;
+   integer n, i=0, incx=incX;
    const double *xx= (double *)X, *alp= (double *)alpha, *bet = (double *)beta;
    double ALPHA[2],BETA[2];
-   int tincY, tincx;
+   integer tincY, tincx;
    double *x=(double *)X, *y=(double *)Y, *st=0, *tx;
-   extern int CBLAS_CallFromC;
-   extern int RowMajorStrg;
+   extern integer CBLAS_CallFromC;
+   extern integer RowMajorStrg;
    RowMajorStrg = 0;
 
 

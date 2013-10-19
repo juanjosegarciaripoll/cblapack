@@ -10,10 +10,10 @@
 #include "cblas.h"
 #include "blaswrap.h"
 void cblas_ssyr2k(const enum CBLAS_ORDER Order, const enum CBLAS_UPLO Uplo,
-                  const enum CBLAS_TRANSPOSE Trans, const int N, const int K,
-                  const float alpha, const float  *A, const int lda,
-                  const float  *B, const int ldb, const float beta,
-                  float  *C, const int ldc)
+                  const enum CBLAS_TRANSPOSE Trans, const integer N, const integer K,
+                  const float alpha, const float  *A, const integer lda,
+                  const float  *B, const integer ldb, const float beta,
+                  float  *C, const integer ldc)
 {
    char UL, TR;   
 #ifdef F77_CHAR
@@ -29,8 +29,8 @@ void cblas_ssyr2k(const enum CBLAS_ORDER Order, const enum CBLAS_UPLO Uplo,
    #define F77_ldb ldb
    #define F77_ldc ldc
 
-   extern int CBLAS_CallFromC;
-   extern int RowMajorStrg;
+   extern integer CBLAS_CallFromC;
+   extern integer RowMajorStrg;
    RowMajorStrg = 0;
    CBLAS_CallFromC = 1;
 

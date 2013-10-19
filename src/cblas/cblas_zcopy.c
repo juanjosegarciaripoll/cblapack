@@ -8,8 +8,8 @@
  */
 #include "cblas.h"
 #include "blaswrap.h"
-void cblas_zcopy( const int N, const void *X,
-                      const int incX, void *Y, const int incY)
+void cblas_zcopy( const integer N, const void *X,
+                      const integer incX, void *Y, const integer incY)
 {
    #define F77_N N
    #define F77_incX incX

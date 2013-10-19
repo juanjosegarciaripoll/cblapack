@@ -9,11 +9,11 @@
  */
 #include "cblas.h"
 #include "blaswrap.h"
-void cblas_zdotu_sub( const int N, const void *X, const int incX,
-                      const void *Y, const int incY, void *dotu)
+void cblas_zdotu_sub( const integer N, const void *X, const integer incX,
+                      const void *Y, const integer incY, void *dotu)
 {
    #define F77_N N
    #define F77_incX incX
    #define F77_incY incY
-   return zdotu_sub_( dotu, &F77_N, X, &F77_incX, Y, &F77_incY);
+   zdotu_sub_( dotu, &F77_N, X, &F77_incX, Y, &F77_incY);
 }

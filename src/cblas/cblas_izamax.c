@@ -9,9 +9,9 @@
  */
 #include "cblas.h"
 #include "blaswrap.h"
-CBLAS_INDEX cblas_izamax( const int N, const void *X, const int incX)
+CBLAS_INDEX cblas_izamax( const integer N, const void *X, const integer incX)
 {
-   int iamax;
+   integer iamax;
    #define F77_N N
    #define F77_incX incX
    iamax = izamax_sub_( &F77_N, X, &F77_incX );

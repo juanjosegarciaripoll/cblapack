@@ -313,16 +313,16 @@ extern doublereal dzasum_(integer *n, doublecomplex *zx, integer *incx);
 extern doublereal dznrm2_(integer *n, doublecomplex *x, integer *incx);
 
 /* icamax.c */
-extern integer icamax_(integer *n, complex *cx, integer *incx);
+extern integer icamax_(const integer *n, const complex *cx, const integer *incx);
 
 /* idamax.c */
-extern integer idamax_(integer *n, doublereal *dx, integer *incx);
+extern integer idamax_(const integer *n, const doublereal *dx, const integer *incx);
 
 /* isamax.c */
-extern integer isamax_(integer *n, real *sx, integer *incx);
+extern integer isamax_(const integer *n, const real *sx, const integer *incx);
 
 /* izamax.c */
-extern integer izamax_(integer *n, doublecomplex *zx, integer *incx);
+extern integer izamax_(const integer *n, const doublecomplex *zx, const integer *incx);
 
 /* lsame.c */
 extern logical lsame_(char *ca, char *cb);
@@ -478,7 +478,7 @@ extern int strsv_(char *uplo, char *trans, char *diag, integer *n,
 	real *a, integer *lda, real *x, integer *incx);
 
 /* xerbla.c */
-extern int xerbla_(char *srname, integer *info);
+extern int xerbla_(const char *srname, const integer *info);
 
 /* xerbla_array.c */
 extern int xerbla_array__(char *srname_array__, integer *
@@ -537,9 +537,11 @@ extern int zgeru_(integer *m, integer *n, doublecomplex *alpha,
 	doublecomplex *a, integer *lda);
 
 /* zhbmv.c */
-extern int zhbmv_(char *uplo, integer *n, integer *k, doublecomplex 
-	*alpha, doublecomplex *a, integer *lda, doublecomplex *x, integer *
-	incx, doublecomplex *beta, doublecomplex *y, integer *incy);
+extern int zhbmv_(const char *uplo, const integer *n, const integer *k,
+		  const doublecomplex *alpha, const doublecomplex *a,
+		  const integer *lda, const doublecomplex *x,
+		  const integer *incx, const doublecomplex *beta,
+		  doublecomplex *y, const integer *incy);
 
 /* zhemm.c */
 extern int zhemm_(char *side, char *uplo, integer *m, integer *n, 

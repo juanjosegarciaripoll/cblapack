@@ -10,9 +10,9 @@
 #include "cblas.h"
 #include "blaswrap.h"
 void cblas_zherk(const enum CBLAS_ORDER Order, const enum CBLAS_UPLO Uplo,
-                 const enum CBLAS_TRANSPOSE Trans, const int N, const int K,
-                 const double alpha, const void *A, const int lda,
-                 const double beta, void *C, const int ldc)
+                 const enum CBLAS_TRANSPOSE Trans, const integer N, const integer K,
+                 const double alpha, const void *A, const integer lda,
+                 const double beta, void *C, const integer ldc)
 {
    char UL, TR;   
 #ifdef F77_CHAR
@@ -27,8 +27,8 @@ void cblas_zherk(const enum CBLAS_ORDER Order, const enum CBLAS_UPLO Uplo,
    #define F77_lda lda
    #define F77_ldc ldc
 
-   extern int CBLAS_CallFromC;
-   extern int RowMajorStrg;
+   extern integer CBLAS_CallFromC;
+   extern integer RowMajorStrg;
    RowMajorStrg = 0;
    CBLAS_CallFromC = 1;
 

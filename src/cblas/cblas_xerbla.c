@@ -5,9 +5,9 @@
 #include "cblas.h"
 #include "blaswrap.h"
 
-void cblas_xerbla(int info, const char *rout, const char *form, ...)
+void cblas_xerbla(integer info, const char *rout, const char *form, ...)
 {
-   extern int RowMajorStrg;
+   extern integer RowMajorStrg;
    char empty[1] = "";
    va_list argptr;
 

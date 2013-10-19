@@ -9,8 +9,8 @@
  */
 #include "cblas.h"
 #include "blaswrap.h"
-void cblas_saxpy( const int N, const float alpha, const float *X,
-                       const int incX, float *Y, const int incY)
+void cblas_saxpy( const integer N, const float alpha, const float *X,
+                       const integer incX, float *Y, const integer incY)
 {
    #define F77_N N
    #define F77_incX incX

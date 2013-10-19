@@ -9,7 +9,7 @@
  */
 #include "cblas.h"
 #include "blaswrap.h"
-double cblas_dzasum( const int N, const void *X, const int incX) 
+double cblas_dzasum( const integer N, const void *X, const integer incX) 
 {
    #define F77_N N
    #define F77_incX incX

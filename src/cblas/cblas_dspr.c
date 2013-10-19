@@ -10,8 +10,8 @@
 #include "cblas.h"
 #include "blaswrap.h"
 void cblas_dspr(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
-                const int N, const double alpha, const double *X,
-                const int incX, double *Ap)
+                const integer N, const double alpha, const double *X,
+                const integer incX, double *Ap)
 {
    char UL;
 #ifdef F77_CHAR
@@ -22,8 +22,8 @@ void cblas_dspr(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
 
    #define F77_N N
    #define F77_incX incX
-   extern int CBLAS_CallFromC;
-   extern int RowMajorStrg;
+   extern integer CBLAS_CallFromC;
+   extern integer RowMajorStrg;
    RowMajorStrg = 0;
    CBLAS_CallFromC = 1;
    if (order == CblasColMajor)

@@ -10,10 +10,10 @@
 #include "cblas.h"
 #include "blaswrap.h"
 void cblas_dgemm(const enum CBLAS_ORDER Order, const enum CBLAS_TRANSPOSE TransA,
-                 const enum CBLAS_TRANSPOSE TransB, const int M, const int N,
-                 const int K, const double alpha, const double  *A,
-                 const int lda, const double  *B, const int ldb,
-                 const double beta, double  *C, const int ldc)
+                 const enum CBLAS_TRANSPOSE TransB, const integer M, const integer N,
+                 const integer K, const double alpha, const double  *A,
+                 const integer lda, const double  *B, const integer ldb,
+                 const double beta, double  *C, const integer ldc)
 {
    char TA, TB;   
 #ifdef F77_CHAR
@@ -30,8 +30,8 @@ void cblas_dgemm(const enum CBLAS_ORDER Order, const enum CBLAS_TRANSPOSE TransA
    #define F77_ldb ldb
    #define F77_ldc ldc
 
-   extern int CBLAS_CallFromC;
-   extern int RowMajorStrg;
+   extern integer CBLAS_CallFromC;
+   extern integer RowMajorStrg;
    RowMajorStrg = 0;
    CBLAS_CallFromC = 1;
 

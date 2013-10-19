@@ -9,10 +9,10 @@
 #include "cblas.h"
 #include "blaswrap.h"
 void cblas_sspmv(const enum CBLAS_ORDER order,
-                 const enum CBLAS_UPLO Uplo, const int N,
+                 const enum CBLAS_UPLO Uplo, const integer N,
                  const float alpha, const float  *AP,
-                 const float  *X, const int incX, const float beta,
-                 float  *Y, const int incY)
+                 const float  *X, const integer incX, const float beta,
+                 float  *Y, const integer incY)
 {
    char UL;
 #ifdef F77_CHAR
@@ -23,8 +23,8 @@ void cblas_sspmv(const enum CBLAS_ORDER order,
    #define F77_N N
    #define F77_incX incX
    #define F77_incY incY
-   extern int CBLAS_CallFromC;
-   extern int RowMajorStrg;
+   extern integer CBLAS_CallFromC;
+   extern integer RowMajorStrg;
    RowMajorStrg = 0;
 
    CBLAS_CallFromC = 1;

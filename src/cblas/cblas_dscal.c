@@ -8,8 +8,8 @@
  */
 #include "cblas.h"
 #include "blaswrap.h"
-void cblas_dscal( const int N, const double alpha, double *X, 
-                       const int incX)
+void cblas_dscal( const integer N, const double alpha, double *X, 
+                       const integer incX)
 {
    #define F77_N N
    #define F77_incX incX

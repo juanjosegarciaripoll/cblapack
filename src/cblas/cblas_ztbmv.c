@@ -9,8 +9,8 @@
 #include "blaswrap.h"
 void cblas_ztbmv(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
                  const enum CBLAS_TRANSPOSE TransA, const enum CBLAS_DIAG Diag,
-                 const int N, const int K, const void  *A, const int lda,
-                 void  *X, const int incX)
+                 const integer N, const integer K, const void  *A, const integer lda,
+                 void  *X, const integer incX)
 {
    char TA;
    char UL;
@@ -26,10 +26,10 @@ void cblas_ztbmv(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
    #define F77_K K
    #define F77_lda lda
    #define F77_incX incX
-   int n, i=0, tincX; 
+   integer n, i=0, tincX; 
    double *st=0, *x=(double *)X;
-   extern int CBLAS_CallFromC;
-   extern int RowMajorStrg;
+   extern integer CBLAS_CallFromC;
+   extern integer RowMajorStrg;
    RowMajorStrg = 0;
 
    CBLAS_CallFromC = 1;

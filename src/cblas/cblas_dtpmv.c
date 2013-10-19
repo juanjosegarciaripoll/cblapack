@@ -9,7 +9,7 @@
 #include "blaswrap.h"
 void cblas_dtpmv(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
                  const enum CBLAS_TRANSPOSE TransA, const enum CBLAS_DIAG Diag,
-                 const int N, const double  *Ap, double  *X, const int incX)
+                 const integer N, const double  *Ap, double  *X, const integer incX)
 {
    char TA;
    char UL;
@@ -23,8 +23,8 @@ void cblas_dtpmv(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
 #endif
    #define F77_N N
    #define F77_incX incX
-   extern int CBLAS_CallFromC;
-   extern int RowMajorStrg;
+   extern integer CBLAS_CallFromC;
+   extern integer RowMajorStrg;
    RowMajorStrg = 0;
 
    CBLAS_CallFromC = 1;

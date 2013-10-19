@@ -9,10 +9,10 @@
 #include "cblas.h"
 #include "blaswrap.h"
 void cblas_sgemv(const enum CBLAS_ORDER order,
-                 const enum CBLAS_TRANSPOSE TransA, const int M, const int N,
-                 const float alpha, const float  *A, const int lda,
-                 const float  *X, const int incX, const float beta,
-                 float  *Y, const int incY)
+                 const enum CBLAS_TRANSPOSE TransA, const integer M, const integer N,
+                 const float alpha, const float  *A, const integer lda,
+                 const float  *X, const integer incX, const float beta,
+                 float  *Y, const integer incY)
 {
    char TA;
 #ifdef F77_CHAR
@@ -26,8 +26,8 @@ void cblas_sgemv(const enum CBLAS_ORDER order,
    #define F77_incX incX
    #define F77_incY incY
 
-   extern int CBLAS_CallFromC;
-   extern int RowMajorStrg;
+   extern integer CBLAS_CallFromC;
+   extern integer RowMajorStrg;
    RowMajorStrg = 0;
 
    CBLAS_CallFromC = 1;

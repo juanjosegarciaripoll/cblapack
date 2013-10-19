@@ -8,8 +8,8 @@
  */
 #include "cblas.h"
 #include "blaswrap.h"
-void cblas_drot(const int N, double *X, const int incX,
-   double *Y, const int incY, const double c, const double s)
+void cblas_drot(const integer N, double *X, const integer incX,
+   double *Y, const integer incY, const double c, const double s)
 {
    #define F77_N N 
    #define F77_incX incX 

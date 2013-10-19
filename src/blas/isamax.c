@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-integer isamax_(integer *n, real *sx, integer *incx)
+integer isamax_(const integer *n, const real *sx, const integer *incx)
 {
     /* System generated locals */
     integer ret_val, i__1;

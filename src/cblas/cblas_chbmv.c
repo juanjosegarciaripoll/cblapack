@@ -11,10 +11,10 @@
 #include "blaswrap.h"
 
 void cblas_chbmv(const enum CBLAS_ORDER order,
-                 const enum CBLAS_UPLO Uplo,const int N,const int K,
-                 const void *alpha, const void  *A, const int lda,
-                 const void  *X, const int incX, const void *beta,
-                 void  *Y, const int incY)
+                 const enum CBLAS_UPLO Uplo,const integer N,const integer K,
+                 const void *alpha, const void  *A, const integer lda,
+                 const void  *X, const integer incX, const void *beta,
+                 void  *Y, const integer incY)
 {
    char UL;
    #define F77_UL &UL   
@@ -23,13 +23,13 @@ void cblas_chbmv(const enum CBLAS_ORDER order,
    #define F77_lda lda
    #define F77_incX incx
    #define F77_incY incY
-   int n, i=0, incx=incX;
+   integer n, i=0, incx=incX;
    const float *xx= (float *)X, *alp= (float *)alpha, *bet = (float *)beta;
    float ALPHA[2],BETA[2];
-   int tincY, tincx;
+   integer tincY, tincx;
    float *x=(float *)X, *y=(float *)Y, *st=0, *tx;
-   extern int CBLAS_CallFromC;
-   extern int RowMajorStrg;
+   extern integer CBLAS_CallFromC;
+   extern integer RowMajorStrg;
    RowMajorStrg = 0;
 
    CBLAS_CallFromC = 1;
