@@ -42,7 +42,6 @@ static integer c__1 = 1;
     extern /* Subroutine */ int zher2_(char *, integer *, doublecomplex *, 
 	    doublecomplex *, integer *, doublecomplex *, integer *, 
 	    doublecomplex *, integer *);
-    extern logical lsame_(char *, char *);
     integer iinfo;
     doublereal anorm;
     extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 

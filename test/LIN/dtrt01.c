@@ -27,7 +27,6 @@ static integer c__1 = 1;
     /* Local variables */
     integer j;
     doublereal eps;
-    extern logical lsame_(char *, char *);
     doublereal anorm;
     extern /* Subroutine */ int dtrmv_(char *, char *, char *, integer *, 
 	    doublereal *, integer *, doublereal *, integer *);

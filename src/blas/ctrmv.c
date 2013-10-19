@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int ctrmv_(char *uplo, char *trans, char *diag, integer *n, 
+/* Subroutine */ int ctrmv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	complex *a, integer *lda, complex *x, integer *incx)
 {
     /* System generated locals */

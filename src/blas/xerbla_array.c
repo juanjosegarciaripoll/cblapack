@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int xerbla_array__(char *srname_array__, integer *
+/* Subroutine */ int xerbla_array__(const char *srname_array__, integer *
 	srname_len__, integer *info, ftnlen srname_array_len)
 {
     /* System generated locals */
@@ -73,7 +73,7 @@
     i__2 = *srname_len__, i__3 = i_len(srname, (ftnlen)32);
     i__1 = min(i__2,i__3);
     for (i__ = 1; i__ <= i__1; ++i__) {
-	*(unsigned char *)&srname[i__ - 1] = *(unsigned char *)&
+	*(unsigned char *)&srname[i__ - 1] = *(unsigned const char *)&
 		srname_array__[i__];
     }
     xerbla_(srname, info);

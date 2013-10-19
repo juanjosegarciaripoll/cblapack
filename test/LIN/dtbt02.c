@@ -30,7 +30,6 @@ static doublereal c_b10 = -1.;
     /* Local variables */
     integer j;
     doublereal eps;
-    extern logical lsame_(char *, char *);
     extern doublereal dasum_(integer *, doublereal *, integer *);
     doublereal anorm, bnorm;
     extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 

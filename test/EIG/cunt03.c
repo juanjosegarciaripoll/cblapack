@@ -32,7 +32,6 @@ static integer c__1 = 1;
     complex s, su, sv;
     integer irc, lmx;
     real ulp, res1, res2;
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int cunt01_(char *, integer *, integer *, complex 
 	    *, integer *, complex *, integer *, real *, real *);
     extern integer icamax_(integer *, complex *, integer *);

@@ -36,7 +36,6 @@ static integer c__1 = 1;
 	    doublecomplex *, integer *, doublecomplex *), zhpr2_(char 
 	    *, integer *, doublecomplex *, doublecomplex *, integer *, 
 	    doublecomplex *, integer *, doublecomplex *);
-    extern logical lsame_(char *, char *);
     doublereal anorm;
     extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
 	    integer *, doublecomplex *, doublecomplex *, integer *, 

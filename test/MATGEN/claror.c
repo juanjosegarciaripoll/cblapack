@@ -31,17 +31,9 @@ static integer c__1 = 1;
     integer j, kbeg, jcol;
     real xabs;
     integer irow;
-    extern /* Subroutine */ int cgerc_(integer *, integer *, complex *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *),
-	     cscal_(integer *, complex *, complex *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int cgemv_(char *, integer *, integer *, complex *
-, complex *, integer *, complex *, integer *, complex *, complex *
-, integer *);
     complex csign;
     integer ixfrm, itype, nxfrm;
     real xnorm;
-    extern doublereal scnrm2_(integer *, complex *, integer *);
     extern /* Subroutine */ int clacgv_(integer *, complex *, integer *);
     extern /* Complex */ void clarnd_(complex *, integer *, integer *);
     real factor;

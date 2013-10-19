@@ -50,7 +50,6 @@ static logical c_false = FALSE_;
     integer ioffg;
     extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
 	    integer *);
-    extern logical lsame_(char *, char *);
     integer iinfo;
     doublecomplex ctemp;
     integer idist, mnmin, iskew;

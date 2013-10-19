@@ -33,7 +33,6 @@ static integer c__1 = 1;
 	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
 	    integer *), dscal_(integer *, doublereal *, doublereal *, integer 
 	    *);
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int dgemv_(char *, integer *, integer *, 
 	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
 	    doublereal *, doublereal *, integer *), dswap_(integer *, 

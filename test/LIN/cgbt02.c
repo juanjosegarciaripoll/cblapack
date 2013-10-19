@@ -34,7 +34,6 @@ static integer c__1 = 1;
     extern /* Subroutine */ int cgbmv_(char *, integer *, integer *, integer *
 , integer *, complex *, complex *, integer *, complex *, integer *
 , complex *, complex *, integer *);
-    extern logical lsame_(char *, char *);
     real anorm, bnorm, xnorm;
     extern doublereal slamch_(char *), scasum_(integer *, complex *, 
 	    integer *);

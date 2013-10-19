@@ -85,7 +85,6 @@ static integer c__9 = 9;
 	    integer *, complex *, integer *, real *, real *);
     real scale;
     integer nfail, iseed[4];
-    extern logical lsame_(char *, char *);
     real rcond;
     extern /* Subroutine */ int ctpt01_(char *, char *, integer *, complex *, 
 	    complex *, real *, real *, real *);

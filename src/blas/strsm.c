@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int strsm_(char *side, char *uplo, char *transa, char *diag, 
+/* Subroutine */ int strsm_(const char *side, const char *uplo, const char *transa, const char *diag, 
 	integer *m, integer *n, real *alpha, real *a, integer *lda, real *b, 
 	integer *ldb)
 {

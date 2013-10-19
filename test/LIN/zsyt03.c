@@ -30,7 +30,6 @@ static doublecomplex c_b1 = {0.,0.};
     /* Local variables */
     integer i__, j;
     doublereal eps;
-    extern logical lsame_(char *, char *);
     doublereal anorm;
     extern /* Subroutine */ int zsymm_(char *, char *, integer *, integer *, 
 	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 

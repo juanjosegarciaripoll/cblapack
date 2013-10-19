@@ -42,7 +42,6 @@ static doublereal c_b42 = 1.;
 	    char *, char *, integer *, integer *, integer *, doublereal *, 
 	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
 	    doublereal *, integer *);
-    extern logical lsame_(char *, char *);
     integer iinfo;
     doublereal anorm;
     char cuplo[1];

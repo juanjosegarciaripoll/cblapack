@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int sspr2_(char *uplo, integer *n, real *alpha, real *x, 
+/* Subroutine */ int sspr2_(const char *uplo, integer *n, real *alpha, real *x, 
 	integer *incx, real *y, integer *incy, real *ap)
 {
     /* System generated locals */

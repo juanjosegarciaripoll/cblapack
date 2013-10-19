@@ -36,11 +36,7 @@ static integer c__1 = 1;
     doublecomplex tau;
     extern /* Subroutine */ int zgerc_(integer *, integer *, doublecomplex *, 
 	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *), zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *);
-    extern doublereal dznrm2_(integer *, doublecomplex *, integer *);
+	    doublecomplex *, integer *);
 
 /*  -- LAPACK auxiliary test routine (version 3.1) -- */
 /*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */

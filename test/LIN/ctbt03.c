@@ -30,7 +30,6 @@ static integer c__1 = 1;
     /* Local variables */
     integer j, ix;
     real eps, err;
-    extern logical lsame_(char *, char *);
     real xscal;
     extern /* Subroutine */ int ctbmv_(char *, char *, char *, integer *, 
 	    integer *, complex *, integer *, complex *, integer *), ccopy_(integer *, complex *, integer *, complex *

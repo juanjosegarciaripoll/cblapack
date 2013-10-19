@@ -59,7 +59,6 @@ static integer c__4 = 4;
 	    real *, real *);
     logical balok, nobal;
     real abnrm;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     char sense[1];
     integer isens;

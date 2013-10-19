@@ -33,9 +33,6 @@ static doublereal c_b33 = -1.;
 
     /* Local variables */
     integer i__, j, k;
-    extern /* Subroutine */ int dgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *);
     doublereal imeps, reeps;
 
 

@@ -100,7 +100,6 @@ static integer c__7 = 7;
     extern /* Subroutine */ int cget04_(integer *, integer *, complex *, 
 	    integer *, complex *, integer *, real *, real *);
     integer nfail, iseed[4], nfact;
-    extern logical lsame_(char *, char *);
     char equed[1];
     integer nbmin;
     real rcond, roldc;

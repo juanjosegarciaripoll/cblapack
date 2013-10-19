@@ -32,7 +32,6 @@ static integer c__1 = 1;
     /* Local variables */
     integer j, i1, i2, n1, kd;
     doublereal eps;
-    extern logical lsame_(char *, char *);
     doublereal anorm, bnorm;
     extern /* Subroutine */ int zgbmv_(char *, integer *, integer *, integer *
 , integer *, doublecomplex *, doublecomplex *, integer *, 

@@ -40,7 +40,7 @@
     real sflag, stemp;
 
     /* Assigned format variables */
-    static char *igo_fmt;
+    static const char *igo_fmt;
 
 /*  Purpose */
 /*  ======= */

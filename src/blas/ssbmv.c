@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int ssbmv_(char *uplo, integer *n, integer *k, real *alpha, 
+/* Subroutine */ int ssbmv_(const char *uplo, integer *n, integer *k, real *alpha, 
 	real *a, integer *lda, real *x, integer *incx, real *beta, real *y, 
 	integer *incy)
 {

@@ -64,7 +64,6 @@ static integer c__3 = 3;
     char uplo[1];
     logical badnn;
     integer imode;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     doublereal aninv, anorm;
     integer itemp;

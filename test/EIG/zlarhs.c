@@ -35,7 +35,6 @@ static integer c__1 = 1;
     logical gen, tri, qrs, sym, band;
     char diag[1];
     logical tran;
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
 	    integer *, doublecomplex *, doublecomplex *, integer *, 
 	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 

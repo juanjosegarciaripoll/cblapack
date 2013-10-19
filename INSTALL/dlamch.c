@@ -28,9 +28,6 @@ doublereal dlamch_(char *cmach)
     integer i__1;
     doublereal ret_val;
 
-    /* Builtin functions */
-    double pow_di(doublereal *, integer *);
-
     /* Local variables */
     static doublereal t;
     integer it;
@@ -41,7 +38,6 @@ doublereal dlamch_(char *cmach)
     logical lrnd;
     static doublereal rmin, rmax;
     doublereal rmach;
-    extern logical lsame_(char *, char *);
     doublereal small;
     static doublereal sfmin;
     extern /* Subroutine */ int dlamc2_(integer *, integer *, logical *, 

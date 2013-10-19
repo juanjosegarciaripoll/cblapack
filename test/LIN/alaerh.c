@@ -187,7 +187,6 @@ static integer c__5 = 5;
     /* Local variables */
     char c3[3], p2[2], uplo[1];
     extern /* Subroutine */ int alahd_(integer *, char *);
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int aladhd_(integer *, char *);
     extern logical lsamen_(integer *, char *, char *);
 

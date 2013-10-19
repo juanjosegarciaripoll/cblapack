@@ -34,7 +34,6 @@ doublereal sqrt17_(char *trans, integer *iresid, integer *m, integer *n,
     /* Local variables */
     real err;
     integer iscl, info;
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
 	    integer *, real *, real *, integer *, real *, integer *, real *, 
 	    real *, integer *);

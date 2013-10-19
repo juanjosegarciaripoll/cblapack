@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int zhemm_(char *side, char *uplo, integer *m, integer *n, 
+/* Subroutine */ int zhemm_(const char *side, const char *uplo, integer *m, integer *n, 
 	doublecomplex *alpha, doublecomplex *a, integer *lda, doublecomplex *
 	b, integer *ldb, doublecomplex *beta, doublecomplex *c__, integer *
 	ldc)

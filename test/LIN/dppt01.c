@@ -35,7 +35,6 @@ static doublereal c_b14 = 1.;
     extern /* Subroutine */ int dspr_(char *, integer *, doublereal *, 
 	    doublereal *, integer *, doublereal *), dscal_(integer *, 
 	    doublereal *, doublereal *, integer *);
-    extern logical lsame_(char *, char *);
     doublereal anorm;
     extern /* Subroutine */ int dtpmv_(char *, char *, char *, integer *, 
 	    doublereal *, doublereal *, integer *);

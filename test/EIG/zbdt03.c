@@ -33,7 +33,6 @@ static doublecomplex c_b9 = {0.,0.};
     /* Local variables */
     integer i__, j;
     doublereal eps;
-    extern logical lsame_(char *, char *);
     doublereal bnorm;
     extern /* Subroutine */ int zgemv_(char *, integer *, integer *, 
 	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 

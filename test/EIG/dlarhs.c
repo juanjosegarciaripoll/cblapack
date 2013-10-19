@@ -41,7 +41,6 @@ static integer c__1 = 1;
 	     dgbmv_(char *, integer *, integer *, integer *, integer *, 
 	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
 	    doublereal *, doublereal *, integer *);
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int dsbmv_(char *, integer *, integer *, 
 	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
 	    doublereal *, doublereal *, integer *), dtbmv_(char *, 

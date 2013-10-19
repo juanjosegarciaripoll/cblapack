@@ -67,7 +67,6 @@ static integer c__8 = 8;
     extern /* Subroutine */ int alahd_(integer *, char *);
     integer nfail, iseed[4];
     extern doublereal dget06_(doublereal *, doublereal *);
-    extern logical lsame_(char *, char *);
     doublereal rcond;
     integer nimat;
     doublereal anorm;

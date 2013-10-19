@@ -88,7 +88,6 @@ static doublereal c_b46 = 1.;
 	    integer *, doublereal *, integer *, doublereal *, integer *, 
 	    doublereal *, integer *, doublereal *, doublereal *, doublereal *);
     integer kdval[4];
-    extern logical lsame_(char *, char *);
     char equed[1];
     integer nbmin;
     doublereal rcond, roldc, scond;

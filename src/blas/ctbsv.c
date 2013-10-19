@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int ctbsv_(char *uplo, char *trans, char *diag, integer *n, 
+/* Subroutine */ int ctbsv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	integer *k, complex *a, integer *lda, complex *x, integer *incx)
 {
     /* System generated locals */

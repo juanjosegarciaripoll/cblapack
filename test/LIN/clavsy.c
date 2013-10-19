@@ -32,7 +32,6 @@ static integer c__1 = 1;
     integer kp;
     extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
 	    integer *);
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int cgemv_(char *, integer *, integer *, complex *
 , complex *, integer *, complex *, integer *, complex *, complex *
 , integer *), cgeru_(integer *, integer *, complex *, 

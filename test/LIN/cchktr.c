@@ -87,7 +87,6 @@ static integer c__9 = 9;
 	    integer *, complex *, integer *, real *, real *);
     real scale;
     integer nfail, iseed[4];
-    extern logical lsame_(char *, char *);
     real rcond, anorm;
     integer itran;
     extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 

@@ -45,7 +45,6 @@ static integer c_n1 = -1;
     doublereal texp, star1, plus1, plus2, bscal;
     extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
 	    integer *);
-    extern logical lsame_(char *, char *);
     doublereal tscal, anorm, bnorm, tleft;
     extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
 	    doublereal *, integer *), drotg_(doublereal *, doublereal *, 

@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int dsymm_(char *side, char *uplo, integer *m, integer *n, 
+/* Subroutine */ int dsymm_(const char *side, const char *uplo, integer *m, integer *n, 
 	doublereal *alpha, doublereal *a, integer *lda, doublereal *b, 
 	integer *ldb, doublereal *beta, doublereal *c__, integer *ldc)
 {

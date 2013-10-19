@@ -36,7 +36,6 @@ doublereal zqrt17_(char *trans, integer *iresid, integer *m, integer *n,
     /* Local variables */
     doublereal err;
     integer iscl, info;
-    extern logical lsame_(char *, char *);
     doublereal norma, normb;
     integer ncols;
     extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 

@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int dspr2_(char *uplo, integer *n, doublereal *alpha, 
+/* Subroutine */ int dspr2_(const char *uplo, integer *n, doublereal *alpha, 
 	doublereal *x, integer *incx, doublereal *y, integer *incy, 
 	doublereal *ap)
 {

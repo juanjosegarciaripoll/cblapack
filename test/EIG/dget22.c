@@ -38,7 +38,6 @@ static doublereal c_b30 = -1.;
 	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
 	    integer *, doublereal *, doublereal *, integer *);
     integer iecol;
-    extern logical lsame_(char *, char *);
     integer ipair;
     char norma[1];
     doublereal anorm;

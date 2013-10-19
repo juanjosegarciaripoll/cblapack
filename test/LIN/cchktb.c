@@ -89,7 +89,6 @@ static integer c__8 = 8;
 	    complex *, integer *, complex *, real *, real *), ctbt03_(char *, char *, char *, integer *, integer *, 
 	    integer *, complex *, integer *, real *, real *, real *, complex *
 , integer *, complex *, integer *, complex *, real *);
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int ctbt05_(char *, char *, char *, integer *, 
 	    integer *, integer *, complex *, integer *, complex *, integer *, 
 	    complex *, integer *, complex *, integer *, real *, real *, real *

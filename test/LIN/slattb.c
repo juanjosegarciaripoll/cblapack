@@ -38,7 +38,6 @@ static integer c_n1 = -1;
     real unfl, rexp;
     char type__[1];
     real texp, star1, plus1, plus2, bscal;
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     real tscal, anorm, bnorm, tleft;
     logical upper;

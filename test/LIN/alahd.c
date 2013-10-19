@@ -271,7 +271,6 @@ static integer c__8 = 8;
     /* Local variables */
     char c1[1], c3[1], p2[2], sym[9];
     logical sord, corz;
-    extern logical lsame_(char *, char *);
     char eigcnm[4];
     extern logical lsamen_(integer *, char *, char *);
     char subnam[32];

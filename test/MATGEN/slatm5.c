@@ -32,9 +32,6 @@ static real c_b33 = -1.f;
 
     /* Local variables */
     integer i__, j, k;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     real imeps, reeps;
 
 

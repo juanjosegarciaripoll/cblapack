@@ -29,7 +29,6 @@ static complex c_b12 = {-1.f,0.f};
     /* Local variables */
     integer j;
     real eps;
-    extern logical lsame_(char *, char *);
     real anorm, bnorm;
     extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
 	    complex *, integer *), caxpy_(integer *, complex *, complex *, 

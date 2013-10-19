@@ -34,7 +34,6 @@ static doublereal c_b10 = 1.;
     extern /* Subroutine */ int dgbmv_(char *, integer *, integer *, integer *
 , integer *, doublereal *, doublereal *, integer *, doublereal *, 
 	    integer *, doublereal *, doublereal *, integer *);
-    extern logical lsame_(char *, char *);
     extern doublereal dasum_(integer *, doublereal *, integer *);
     doublereal anorm, bnorm, xnorm;
     extern doublereal dlamch_(char *);

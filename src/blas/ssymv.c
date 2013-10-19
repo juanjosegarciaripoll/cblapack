@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int ssymv_(char *uplo, integer *n, real *alpha, real *a, 
+/* Subroutine */ int ssymv_(const char *uplo, integer *n, real *alpha, real *a, 
 	integer *lda, real *x, integer *incx, real *beta, real *y, integer *
 	incy)
 {

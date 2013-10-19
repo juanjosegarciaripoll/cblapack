@@ -48,7 +48,6 @@ static logical c_false = FALSE_;
     integer ipack;
     real realc;
     integer ioffg;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     complex ctemp;

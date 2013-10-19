@@ -85,7 +85,6 @@ static complex c_b48 = {1.f,0.f};
 	    complex *, integer *, complex *, integer *, complex *, integer *, 
 	    complex *, integer *, real *, real *, real *);
     integer kdval[4];
-    extern logical lsame_(char *, char *);
     char equed[1];
     integer nbmin;
     real rcond, roldc, scond;

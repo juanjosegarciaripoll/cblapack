@@ -30,7 +30,6 @@ static integer c__1 = 1;
     complex t;
     real eps;
     integer icol, jcol, kcol, nall;
-    extern logical lsame_(char *, char *);
     real anorm;
     extern /* Complex */ void cdotu_(complex *, integer *, complex *, integer 
 	    *, complex *, integer *);

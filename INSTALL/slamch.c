@@ -28,9 +28,6 @@ doublereal slamch_(char *cmach)
     integer i__1;
     real ret_val;
 
-    /* Builtin functions */
-    double pow_ri(real *, integer *);
-
     /* Local variables */
     static real t;
     integer it;
@@ -41,7 +38,6 @@ doublereal slamch_(char *cmach)
     logical lrnd;
     static real rmin, rmax;
     real rmach;
-    extern logical lsame_(char *, char *);
     real small;
     static real sfmin;
     extern /* Subroutine */ int slamc2_(integer *, integer *, logical *, real 

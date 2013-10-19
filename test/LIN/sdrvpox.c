@@ -81,7 +81,6 @@ static real c_b50 = 0.f;
     real rpvgrw_svxx__;
     char uplo[1], type__[1];
     integer nrun, ifact, nfail, iseed[4], nfact;
-    extern logical lsame_(char *, char *);
     char equed[1];
     integer nbmin;
     real rcond, roldc, scond;

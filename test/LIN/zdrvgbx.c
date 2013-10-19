@@ -99,7 +99,6 @@ static doublereal c_b197 = 0.;
 	    *, doublecomplex *, integer *, doublecomplex *, integer *);
     integer ldafb, ifact, nfail, iseed[4], nfact;
     extern doublereal dget06_(doublereal *, doublereal *);
-    extern logical lsame_(char *, char *);
     char equed[1];
     integer nbmin;
     doublereal rcond, roldc;

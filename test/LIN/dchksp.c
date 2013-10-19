@@ -68,7 +68,6 @@ static integer c__8 = 8;
 	    integer *, doublereal *, doublereal *);
     integer nfail, iseed[4];
     extern doublereal dget06_(doublereal *, doublereal *);
-    extern logical lsame_(char *, char *);
     doublereal rcond;
     integer nimat;
     extern /* Subroutine */ int dppt02_(char *, integer *, integer *, 

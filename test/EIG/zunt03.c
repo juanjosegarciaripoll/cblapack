@@ -32,7 +32,6 @@ static integer c__1 = 1;
     doublecomplex s, su, sv;
     integer irc, lmx;
     doublereal ulp, res1, res2;
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int zunt01_(char *, integer *, integer *, 
 	    doublecomplex *, integer *, doublecomplex *, integer *, 
 	    doublereal *, doublereal *);

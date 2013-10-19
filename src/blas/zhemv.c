@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int zhemv_(char *uplo, integer *n, doublecomplex *alpha, 
+/* Subroutine */ int zhemv_(const char *uplo, integer *n, doublecomplex *alpha, 
 	doublecomplex *a, integer *lda, doublecomplex *x, integer *incx, 
 	doublecomplex *beta, doublecomplex *y, integer *incy)
 {

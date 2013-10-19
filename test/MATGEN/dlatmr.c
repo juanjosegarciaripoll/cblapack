@@ -38,7 +38,6 @@ static integer c__1 = 1;
     extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
 	    integer *);
     integer ipack;
-    extern logical lsame_(char *, char *);
     doublereal tempa[1];
     integer iisub, idist, jjsub, mnmin;
     logical dzero;

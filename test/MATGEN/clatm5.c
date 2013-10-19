@@ -34,9 +34,6 @@ static complex c_b5 = {20.f,0.f};
 
     /* Local variables */
     integer i__, j, k;
-    extern /* Subroutine */ int cgemm_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *);
     complex imeps, reeps;
 
 

@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int cherk_(char *uplo, char *trans, integer *n, integer *k, 
+/* Subroutine */ int cherk_(const char *uplo, const char *trans, integer *n, integer *k, 
 	real *alpha, complex *a, integer *lda, real *beta, complex *c__, 
 	integer *ldc)
 {

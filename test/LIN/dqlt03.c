@@ -50,7 +50,6 @@ static doublereal c_b23 = 1.;
 	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
 	    integer *, doublereal *, doublereal *, integer *);
     integer iside;
-    extern logical lsame_(char *, char *);
     doublereal resid;
     integer minmn;
     doublereal cnorm;

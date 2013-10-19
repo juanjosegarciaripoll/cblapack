@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int sspmv_(char *uplo, integer *n, real *alpha, real *ap, 
+/* Subroutine */ int sspmv_(const char *uplo, integer *n, real *alpha, real *ap, 
 	real *x, integer *incx, real *beta, real *y, integer *incy)
 {
     /* System generated locals */

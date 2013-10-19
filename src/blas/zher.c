@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int zher_(char *uplo, integer *n, doublereal *alpha, 
+/* Subroutine */ int zher_(const char *uplo, integer *n, doublereal *alpha, 
 	doublecomplex *x, integer *incx, doublecomplex *a, integer *lda)
 {
     /* System generated locals */

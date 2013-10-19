@@ -37,7 +37,6 @@ static real c_b42 = 1.f;
     extern /* Subroutine */ int ssyr_(char *, integer *, real *, real *, 
 	    integer *, real *, integer *), ssyr2_(char *, integer *, 
 	    real *, real *, integer *, real *, integer *, real *, integer *);
-    extern logical lsame_(char *, char *);
     integer iinfo;
     extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
 	    integer *, real *, real *, integer *, real *, integer *, real *, 

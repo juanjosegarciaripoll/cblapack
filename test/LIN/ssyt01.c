@@ -30,7 +30,6 @@ static real c_b6 = 1.f;
     integer i__, j;
     real eps;
     integer info;
-    extern logical lsame_(char *, char *);
     real anorm;
     extern doublereal slamch_(char *);
     extern /* Subroutine */ int slaset_(char *, integer *, integer *, real *, 

@@ -29,7 +29,6 @@ static real c_b10 = -1.f;
     /* Local variables */
     integer j;
     real eps;
-    extern logical lsame_(char *, char *);
     real anorm, bnorm;
     extern doublereal sasum_(integer *, real *, integer *);
     extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 

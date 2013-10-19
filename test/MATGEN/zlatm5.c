@@ -36,11 +36,6 @@ static doublecomplex c_b5 = {20.,0.};
     /* Local variables */
     integer i__, j, k;
     doublecomplex imeps, reeps;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
-
 
 /*  -- LAPACK test routine (version 3.1) -- */
 /*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */

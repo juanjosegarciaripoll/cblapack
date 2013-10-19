@@ -46,7 +46,6 @@ static doublecomplex c_b22 = {1.,0.};
     doublereal eps;
     char side[1];
     integer info, iside;
-    extern logical lsame_(char *, char *);
     doublereal resid;
     integer minmn;
     doublereal cnorm;

@@ -33,7 +33,6 @@ static real c_b23 = 0.f;
     extern /* Subroutine */ int sspr_(char *, integer *, real *, real *, 
 	    integer *, real *), sspr2_(char *, integer *, real *, 
 	    real *, integer *, real *, integer *, real *);
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
 	    integer *, real *, real *, integer *, real *, integer *, real *, 
 	    real *, integer *);

@@ -49,7 +49,6 @@ static complex c_b22 = {1.f,0.f};
 	    integer *, complex *, complex *, integer *, complex *, integer *, 
 	    complex *, complex *, integer *);
     integer iside;
-    extern logical lsame_(char *, char *);
     real resid;
     integer minmn;
     real cnorm;

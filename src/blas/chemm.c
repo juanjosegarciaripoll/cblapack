@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int chemm_(char *side, char *uplo, integer *m, integer *n, 
+/* Subroutine */ int chemm_(const char *side, const char *uplo, integer *m, integer *n, 
 	complex *alpha, complex *a, integer *lda, complex *b, integer *ldb, 
 	complex *beta, complex *c__, integer *ldc)
 {

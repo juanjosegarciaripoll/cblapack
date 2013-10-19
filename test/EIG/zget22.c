@@ -35,7 +35,6 @@ static doublecomplex c_b2 = {1.,0.};
     doublereal unfl;
     integer jrow;
     doublereal temp1;
-    extern logical lsame_(char *, char *);
     char norma[1];
     doublereal anorm;
     extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 

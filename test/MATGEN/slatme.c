@@ -40,15 +40,12 @@ static real c_b39 = 1.f;
     real temp;
     logical badei;
     real alpha;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     real tempa[1];
     integer icols;
     logical useei;
     integer idist;
-    extern /* Subroutine */ int sgemv_(char *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *), scopy_(integer *, real *, integer *, real *, integer *);
     integer irows;
     extern /* Subroutine */ int slatm1_(integer *, real *, integer *, integer 
 	    *, integer *, real *, integer *, integer *);

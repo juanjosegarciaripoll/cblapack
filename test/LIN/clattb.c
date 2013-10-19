@@ -42,7 +42,6 @@ static integer c_n1 = -1;
     real texp;
     complex star1, plus1, plus2;
     real bscal;
-    extern logical lsame_(char *, char *);
     real tscal, anorm, bnorm, tleft;
     extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
 	    complex *, integer *), cswap_(integer *, complex *, integer *, 

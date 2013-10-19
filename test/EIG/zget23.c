@@ -57,7 +57,6 @@ static integer c__4 = 4;
     doublereal vmax, tnrm, vrmx, vtst;
     logical balok, nobal;
     doublereal abnrm;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     char sense[1];
     extern /* Subroutine */ int zget22_(char *, char *, char *, integer *, 

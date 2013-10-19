@@ -31,7 +31,6 @@ static real c_b10 = 1.f;
     /* Local variables */
     integer j, i1, i2, n1, kd;
     real eps;
-    extern logical lsame_(char *, char *);
     real anorm, bnorm;
     extern /* Subroutine */ int sgbmv_(char *, integer *, integer *, integer *
 , integer *, real *, real *, integer *, real *, integer *, real *, 

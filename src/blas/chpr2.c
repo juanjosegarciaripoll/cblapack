@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int chpr2_(char *uplo, integer *n, complex *alpha, complex *
+/* Subroutine */ int chpr2_(const char *uplo, integer *n, complex *alpha, complex *
 	x, integer *incx, complex *y, integer *incy, complex *ap)
 {
     /* System generated locals */

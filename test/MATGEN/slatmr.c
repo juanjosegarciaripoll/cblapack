@@ -35,7 +35,6 @@ static integer c__1 = 1;
     integer isym;
     real alpha;
     integer ipack;
-    extern logical lsame_(char *, char *);
     real tempa[1];
     extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     integer iisub, idist, jjsub, mnmin;

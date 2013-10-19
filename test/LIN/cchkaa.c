@@ -107,7 +107,6 @@ static integer c__6 = 6;
     integer lafac;
     logical fatal;
     char aline[72];
-    extern logical lsame_(char *, char *);
     integer nbval[12], nrank, nmats, nsval[12], nxval[12], iwork[3300];
     real rwork[19832];
     extern /* Subroutine */ int cchkq3_(logical *, integer *, integer *, 

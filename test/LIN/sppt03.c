@@ -28,7 +28,6 @@ static real c_b15 = 0.f;
     /* Local variables */
     integer i__, j, jj;
     real eps;
-    extern logical lsame_(char *, char *);
     real anorm;
     extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
 	    integer *), sspmv_(char *, integer *, real *, real *, real *, 

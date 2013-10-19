@@ -38,7 +38,6 @@ doublereal cqrt17_(char *trans, integer *iresid, integer *m, integer *n,
     extern /* Subroutine */ int cgemm_(char *, char *, integer *, integer *, 
 	    integer *, complex *, complex *, integer *, complex *, integer *, 
 	    complex *, complex *, integer *);
-    extern logical lsame_(char *, char *);
     real norma, normb;
     integer ncols;
     real normx, rwork[1];

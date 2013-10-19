@@ -30,7 +30,6 @@ static integer c__1 = 1;
     /* Local variables */
     integer j;
     real eps;
-    extern logical lsame_(char *, char *);
     real anorm, bnorm;
     extern doublereal sasum_(integer *, real *, integer *);
     real xnorm;

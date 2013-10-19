@@ -42,7 +42,6 @@ static integer c_n1 = -1;
     doublereal texp;
     doublecomplex star1, plus1, plus2;
     doublereal bscal;
-    extern logical lsame_(char *, char *);
     doublereal tscal, anorm, bnorm, tleft;
     logical upper;
     doublereal tnorm;

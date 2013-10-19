@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int csyr2k_(char *uplo, char *trans, integer *n, integer *k, 
+/* Subroutine */ int csyr2k_(const char *uplo, const char *trans, integer *n, integer *k, 
 	complex *alpha, complex *a, integer *lda, complex *b, integer *ldb, 
 	complex *beta, complex *c__, integer *ldc)
 {

@@ -37,7 +37,6 @@ static complex c_b2 = {1.f,0.f};
     extern /* Subroutine */ int cgemm_(char *, char *, integer *, integer *, 
 	    integer *, complex *, complex *, integer *, complex *, integer *, 
 	    complex *, complex *, integer *);
-    extern logical lsame_(char *, char *);
     char norma[1];
     real anorm;
     char norme[1];

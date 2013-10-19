@@ -35,7 +35,6 @@ static doublereal c_b20 = 1.;
     doublereal tr, eps;
     extern /* Subroutine */ int zher_(char *, integer *, doublereal *, 
 	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern logical lsame_(char *, char *);
     doublereal anorm;
     extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
 	    doublecomplex *, integer *);

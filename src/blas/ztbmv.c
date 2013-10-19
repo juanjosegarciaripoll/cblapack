@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int ztbmv_(char *uplo, char *trans, char *diag, integer *n, 
+/* Subroutine */ int ztbmv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	integer *k, doublecomplex *a, integer *lda, doublecomplex *x, integer 
 	*incx)
 {

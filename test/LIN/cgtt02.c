@@ -30,7 +30,6 @@ static integer c__1 = 1;
     /* Local variables */
     integer j;
     real eps;
-    extern logical lsame_(char *, char *);
     real anorm, bnorm, xnorm;
     extern doublereal slamch_(char *), clangt_(char *, integer *, 
 	    complex *, complex *, complex *);

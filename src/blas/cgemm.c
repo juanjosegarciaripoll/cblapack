@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int cgemm_(char *transa, char *transb, integer *m, integer *
+/* Subroutine */ int cgemm_(const char *transa, const char *transb, integer *m, integer *
 	n, integer *k, complex *alpha, complex *a, integer *lda, complex *b, 
 	integer *ldb, complex *beta, complex *c__, integer *ldc)
 {

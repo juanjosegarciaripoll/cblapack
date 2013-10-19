@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int ssyr2_(char *uplo, integer *n, real *alpha, real *x, 
+/* Subroutine */ int ssyr2_(const char *uplo, integer *n, real *alpha, real *x, 
 	integer *incx, real *y, integer *incy, real *a, integer *lda)
 {
     /* System generated locals */

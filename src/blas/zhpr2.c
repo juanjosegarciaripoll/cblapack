@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int zhpr2_(char *uplo, integer *n, doublecomplex *alpha, 
+/* Subroutine */ int zhpr2_(const char *uplo, integer *n, doublecomplex *alpha, 
 	doublecomplex *x, integer *incx, doublecomplex *y, integer *incy, 
 	doublecomplex *ap)
 {

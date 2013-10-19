@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-logical lsame_(char *ca, char *cb)
+logical lsame_(const char *ca, const char *cb)
 {
     /* System generated locals */
     logical ret_val;
@@ -42,7 +42,7 @@ logical lsame_(char *ca, char *cb)
 
 /*     Test if the characters are equal */
 
-    ret_val = *(unsigned char *)ca == *(unsigned char *)cb;
+    ret_val = *(unsigned const char *)ca == *(unsigned const char *)cb;
     if (ret_val) {
 	return ret_val;
     }
@@ -56,8 +56,8 @@ logical lsame_(char *ca, char *cb)
 /*     ICHAR('A') on Prime machines returns 193 which is the same as */
 /*     ICHAR('A') on an EBCDIC machine. */
 
-    inta = *(unsigned char *)ca;
-    intb = *(unsigned char *)cb;
+    inta = *(unsigned const char *)ca;
+    intb = *(unsigned const char *)cb;
 
     if (zcode == 90 || zcode == 122) {
 

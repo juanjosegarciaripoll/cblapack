@@ -28,7 +28,6 @@ static integer c__1 = 1;
     /* Local variables */
     integer j, jj, ix;
     real eps, err;
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     real xscal;
     extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 

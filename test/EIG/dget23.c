@@ -58,7 +58,6 @@ static integer c__4 = 4;
 	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
 	    doublereal *, doublereal *, doublereal *);
     doublereal abnrm;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     char sense[1];
     integer isens;

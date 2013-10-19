@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int cher2_(char *uplo, integer *n, complex *alpha, complex *
+/* Subroutine */ int cher2_(const char *uplo, integer *n, complex *alpha, complex *
 	x, integer *incx, complex *y, integer *incy, complex *a, integer *lda)
 {
     /* System generated locals */

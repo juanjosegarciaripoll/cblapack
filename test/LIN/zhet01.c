@@ -33,7 +33,6 @@ static doublecomplex c_b2 = {1.,0.};
     integer i__, j;
     doublereal eps;
     integer info;
-    extern logical lsame_(char *, char *);
     doublereal anorm;
     extern doublereal dlamch_(char *), zlanhe_(char *, char *, 
 	    integer *, doublecomplex *, integer *, doublereal *);

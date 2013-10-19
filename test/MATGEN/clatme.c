@@ -41,17 +41,9 @@ static integer c__5 = 5;
     extern /* Subroutine */ int cgerc_(integer *, integer *, complex *, 
 	    complex *, integer *, complex *, integer *, complex *, integer *);
     complex alpha;
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int cgemv_(char *, integer *, integer *, complex *
-, complex *, integer *, complex *, integer *, complex *, complex *
-, integer *);
     integer iinfo;
     real tempa[1];
     integer icols, idist;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *);
     integer irows;
     extern /* Subroutine */ int clatm1_(integer *, real *, integer *, integer 
 	    *, integer *, complex *, integer *, integer *), slatm1_(integer *, 

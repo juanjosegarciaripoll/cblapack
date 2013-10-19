@@ -44,7 +44,6 @@ static integer c__1 = 1;
 , complex *, integer *), chbmv_(char *, integer *, 
 	    integer *, complex *, complex *, integer *, complex *, integer *, 
 	    complex *, complex *, integer *);
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int csbmv_(char *, integer *, integer *, complex *
 , complex *, integer *, complex *, integer *, complex *, complex *
 , integer *), ctbmv_(char *, char *, char *, integer *, 

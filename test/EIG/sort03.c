@@ -31,7 +31,6 @@ static integer c__1 = 1;
     real s;
     integer irc, lmx;
     real ulp, res1, res2;
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int sort01_(char *, integer *, integer *, real *, 
 	    integer *, real *, integer *, real *);
     extern doublereal slamch_(char *);

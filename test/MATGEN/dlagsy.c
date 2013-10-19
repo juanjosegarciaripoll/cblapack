@@ -32,14 +32,6 @@ static doublereal c_b26 = 1.;
     /* Local variables */
     integer i__, j;
     doublereal wa, wb, wn, tau;
-    extern /* Subroutine */ int dger_(integer *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *);
-    extern doublereal ddot_(integer *, doublereal *, integer *, doublereal *, 
-	    integer *), dnrm2_(integer *, doublereal *, integer *);
-    extern /* Subroutine */ int dsyr2_(char *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *);
     doublereal alpha;
 
 /*  -- LAPACK auxiliary test routine (version 3.1) */

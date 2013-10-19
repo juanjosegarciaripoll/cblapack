@@ -78,7 +78,6 @@ static doublecomplex c_b48 = {1.,0.};
     integer nrun, ifact, nfail, iseed[4], nfact;
     extern doublereal dget06_(doublereal *, doublereal *);
     integer kdval[4];
-    extern logical lsame_(char *, char *);
     char equed[1];
     integer nbmin;
     doublereal rcond, roldc, scond;

@@ -36,7 +36,6 @@ doublereal cqrt14_(char *trans, integer *m, integer *n, integer *nrhs,
     real anrm;
     logical tpsd;
     real xnrm;
-    extern logical lsame_(char *, char *);
     real rwork[1];
     extern /* Subroutine */ int cgelq2_(integer *, integer *, complex *, 
 	    integer *, complex *, complex *, integer *), cgeqr2_(integer *, 

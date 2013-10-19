@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int stbmv_(char *uplo, char *trans, char *diag, integer *n, 
+/* Subroutine */ int stbmv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	integer *k, real *a, integer *lda, real *x, integer *incx)
 {
     /* System generated locals */

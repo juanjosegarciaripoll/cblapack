@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-int zhbmv_(const char *uplo, const integer *n, const integer *k, const doublecomplex *alpha, const doublecomplex *a, const integer *lda, const doublecomplex *x, const integer *incx, const doublecomplex *beta, doublecomplex *y, const integer *incy)
+int zhbmv_(const const char *uplo, const integer *n, const integer *k, const doublecomplex *alpha, const doublecomplex *a, const integer *lda, const doublecomplex *x, const integer *incx, const doublecomplex *beta, doublecomplex *y, const integer *incy)
 {
     /* System generated locals */
     integer a_dim1, a_offset, i__1, i__2, i__3, i__4, i__5;

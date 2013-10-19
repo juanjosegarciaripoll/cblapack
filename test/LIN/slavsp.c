@@ -31,7 +31,6 @@ static integer c__1 = 1;
     integer kc, kp;
     extern /* Subroutine */ int sger_(integer *, integer *, real *, real *, 
 	    integer *, real *, integer *, real *, integer *);
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
 	    sgemv_(char *, integer *, integer *, real *, real *, integer *, 
 	    real *, integer *, real *, real *, integer *), sswap_(

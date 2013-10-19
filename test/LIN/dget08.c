@@ -33,7 +33,6 @@ static integer c__1 = 1;
     extern /* Subroutine */ int dgemm_(char *, char *, integer *, integer *, 
 	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
 	    integer *, doublereal *, doublereal *, integer *);
-    extern logical lsame_(char *, char *);
     doublereal anorm, bnorm, xnorm;
     extern doublereal dlamch_(char *), dlange_(char *, integer *, 
 	    integer *, doublereal *, integer *, doublereal *);

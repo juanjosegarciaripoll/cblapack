@@ -67,7 +67,6 @@ static integer c__8 = 8;
 	    integer *, integer *, complex *, integer *, complex *, integer *, 
 	    real *, real *);
     integer nfail, iseed[4];
-    extern logical lsame_(char *, char *);
     real rcond;
     integer nimat;
     extern doublereal sget06_(real *, real *);

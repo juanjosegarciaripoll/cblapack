@@ -50,7 +50,6 @@ static doublereal c_b22 = 1.;
 	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
 	    integer *, doublereal *, doublereal *, integer *);
     integer iside;
-    extern logical lsame_(char *, char *);
     doublereal resid, cnorm;
     char trans[1];
     extern doublereal dlamch_(char *), dlange_(char *, integer *, 

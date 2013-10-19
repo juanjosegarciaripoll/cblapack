@@ -78,7 +78,6 @@ static integer c__2 = 2;
 	    integer *, doublereal *, integer *, doublereal *, doublereal *);
     integer nfail, iseed[4], nfact;
     extern doublereal dget06_(doublereal *, doublereal *);
-    extern logical lsame_(char *, char *);
     char equed[1];
     doublereal roldc, rcond, scond;
     integer nimat;

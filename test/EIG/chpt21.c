@@ -42,7 +42,6 @@ static integer c__1 = 1;
 	    integer *);
     extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
 	    *, complex *, integer *);
-    extern logical lsame_(char *, char *);
     integer iinfo;
     real anorm;
     extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 

@@ -35,26 +35,15 @@ static doublereal c_b39 = 1.;
     integer i__, j, ic, jc, ir, jr, jcr;
     doublereal tau;
     logical bads;
-    extern /* Subroutine */ int dger_(integer *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *);
     integer isim;
     doublereal temp;
     logical badei;
     doublereal alpha;
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int dgemv_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *);
     integer iinfo;
     doublereal tempa[1];
     integer icols;
     logical useei;
     integer idist;
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
     integer irows;
     extern /* Subroutine */ int dlatm1_(integer *, doublereal *, integer *, 
 	    integer *, integer *, doublereal *, integer *, integer *);

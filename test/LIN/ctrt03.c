@@ -30,7 +30,6 @@ static integer c__1 = 1;
     /* Local variables */
     integer j, ix;
     real eps, err;
-    extern logical lsame_(char *, char *);
     real xscal;
     extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
 	    complex *, integer *), caxpy_(integer *, complex *, complex *, 

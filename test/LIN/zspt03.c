@@ -30,7 +30,6 @@ static integer c__1 = 1;
     doublecomplex t;
     doublereal eps;
     integer icol, jcol, kcol, nall;
-    extern logical lsame_(char *, char *);
     doublereal anorm;
     extern /* Double Complex */ void zdotu_(doublecomplex *, integer *, 
 	    doublecomplex *, integer *, doublecomplex *, integer *);

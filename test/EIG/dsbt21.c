@@ -36,7 +36,6 @@ static doublereal c_b23 = 0.;
 	    integer *, doublereal *), dgemm_(char *, char *, integer *
 , integer *, integer *, doublereal *, doublereal *, integer *, 
 	    doublereal *, integer *, doublereal *, doublereal *, integer *);
-    extern logical lsame_(char *, char *);
     doublereal anorm;
     char cuplo[1];
     logical lower;

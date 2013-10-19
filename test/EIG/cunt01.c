@@ -38,7 +38,6 @@ static integer c__1 = 1;
 	    *, complex *, integer *);
     extern /* Subroutine */ int cherk_(char *, char *, integer *, integer *, 
 	    real *, complex *, integer *, real *, complex *, integer *);
-    extern logical lsame_(char *, char *);
     integer mnmin;
     extern doublereal slamch_(char *);
     extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 

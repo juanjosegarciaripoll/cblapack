@@ -29,7 +29,6 @@ static real c_b12 = 0.f;
     /* Local variables */
     integer i__, j;
     real eps;
-    extern logical lsame_(char *, char *);
     real anorm;
     extern /* Subroutine */ int ssymm_(char *, char *, integer *, integer *, 
 	    real *, real *, integer *, real *, integer *, real *, real *, 

@@ -81,7 +81,6 @@ static integer c__8 = 8;
     integer idiag;
     real scale;
     integer nfail, iseed[4];
-    extern logical lsame_(char *, char *);
     real rcond;
     extern /* Subroutine */ int sget04_(integer *, integer *, real *, integer 
 	    *, real *, integer *, real *, real *);

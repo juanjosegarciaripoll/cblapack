@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-logical lsame_(char *ca, char *cb)
+logical lsame_(const char *ca, const char *cb)
 {
     /* System generated locals */
     logical ret_val;

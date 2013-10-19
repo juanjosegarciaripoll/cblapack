@@ -36,7 +36,6 @@ doublereal zqrt14_(char *trans, integer *m, integer *n, integer *nrhs,
     doublereal anrm;
     logical tpsd;
     doublereal xnrm;
-    extern logical lsame_(char *, char *);
     doublereal rwork[1];
     extern /* Subroutine */ int zgelq2_(integer *, integer *, doublecomplex *, 
 	     integer *, doublecomplex *, doublecomplex *, integer *), zgeqr2_(

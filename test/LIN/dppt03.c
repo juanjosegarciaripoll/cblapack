@@ -29,7 +29,6 @@ static doublereal c_b15 = 0.;
     /* Local variables */
     integer i__, j, jj;
     doublereal eps;
-    extern logical lsame_(char *, char *);
     doublereal anorm;
     extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
 	    doublereal *, integer *), dspmv_(char *, integer *, doublereal *, 

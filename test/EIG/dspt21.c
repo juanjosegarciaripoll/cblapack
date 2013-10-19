@@ -40,7 +40,6 @@ static doublereal c_b26 = 1.;
 	    integer *, doublereal *), dgemm_(char *, char *, integer *
 , integer *, integer *, doublereal *, doublereal *, integer *, 
 	    doublereal *, integer *, doublereal *, doublereal *, integer *);
-    extern logical lsame_(char *, char *);
     integer iinfo;
     doublereal anorm;
     extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 

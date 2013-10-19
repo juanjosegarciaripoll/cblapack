@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int dsbmv_(char *uplo, integer *n, integer *k, doublereal *
+/* Subroutine */ int dsbmv_(const char *uplo, integer *n, integer *k, doublereal *
 	alpha, doublereal *a, integer *lda, doublereal *x, integer *incx, 
 	doublereal *beta, doublereal *y, integer *incy)
 {

@@ -83,7 +83,6 @@ static integer c__8 = 8;
     integer idiag;
     doublereal scale;
     integer nfail, iseed[4];
-    extern logical lsame_(char *, char *);
     doublereal rcond;
     integer nimat;
     doublereal anorm;

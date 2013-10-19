@@ -18,17 +18,17 @@ extern void cdotu_(complex * ret_val, integer *n, complex *cx, integer
 	*incx, complex *cy, integer *incy);
 
 /* cgbmv.c */
-extern int cgbmv_(char *trans, integer *m, integer *n, integer *kl, 
+extern int cgbmv_(const char *trans, integer *m, integer *n, integer *kl, 
 	integer *ku, complex *alpha, complex *a, integer *lda, complex *x, 
 	integer *incx, complex *beta, complex *y, integer *incy);
 
 /* cgemm.c */
-extern int cgemm_(char *transa, char *transb, integer *m, integer *
+extern int cgemm_(const char *transa, const char *transb, integer *m, integer *
 	n, integer *k, complex *alpha, complex *a, integer *lda, complex *b, 
 	integer *ldb, complex *beta, complex *c__, integer *ldc);
 
 /* cgemv.c */
-extern int cgemv_(char *trans, integer *m, integer *n, complex *
+extern int cgemv_(const char *trans, integer *m, integer *n, complex *
 	alpha, complex *a, integer *lda, complex *x, integer *incx, complex *
 	beta, complex *y, integer *incy);
 
@@ -41,49 +41,49 @@ extern int cgeru_(integer *m, integer *n, complex *alpha, complex *
 	x, integer *incx, complex *y, integer *incy, complex *a, integer *lda);
 
 /* chbmv.c */
-extern int chbmv_(char *uplo, integer *n, integer *k, complex *
+extern int chbmv_(const char *uplo, integer *n, integer *k, complex *
 	alpha, complex *a, integer *lda, complex *x, integer *incx, complex *
 	beta, complex *y, integer *incy);
 
 /* chemm.c */
-extern int chemm_(char *side, char *uplo, integer *m, integer *n, 
+extern int chemm_(const char *side, const char *uplo, integer *m, integer *n, 
 	complex *alpha, complex *a, integer *lda, complex *b, integer *ldb, 
 	complex *beta, complex *c__, integer *ldc);
 
 /* chemv.c */
-extern int chemv_(char *uplo, integer *n, complex *alpha, complex *
+extern int chemv_(const char *uplo, integer *n, complex *alpha, complex *
 	a, integer *lda, complex *x, integer *incx, complex *beta, complex *y, 
 	 integer *incy);
 
 /* cher.c */
-extern int cher_(char *uplo, integer *n, real *alpha, complex *x, 
+extern int cher_(const char *uplo, integer *n, real *alpha, complex *x, 
 	integer *incx, complex *a, integer *lda);
 
 /* cher2.c */
-extern int cher2_(char *uplo, integer *n, complex *alpha, complex *
+extern int cher2_(const char *uplo, integer *n, complex *alpha, complex *
 	x, integer *incx, complex *y, integer *incy, complex *a, integer *lda);
 
 /* cher2k.c */
-extern int cher2k_(char *uplo, char *trans, integer *n, integer *k, 
+extern int cher2k_(const char *uplo, const char *trans, integer *n, integer *k, 
 	complex *alpha, complex *a, integer *lda, complex *b, integer *ldb, 
 	real *beta, complex *c__, integer *ldc);
 
 /* cherk.c */
-extern int cherk_(char *uplo, char *trans, integer *n, integer *k, 
+extern int cherk_(const char *uplo, const char *trans, integer *n, integer *k, 
 	real *alpha, complex *a, integer *lda, real *beta, complex *c__, 
 	integer *ldc);
 
 /* chpmv.c */
-extern int chpmv_(char *uplo, integer *n, complex *alpha, complex *
+extern int chpmv_(const char *uplo, integer *n, complex *alpha, complex *
 	ap, complex *x, integer *incx, complex *beta, complex *y, integer *
 	incy);
 
 /* chpr.c */
-extern int chpr_(char *uplo, integer *n, real *alpha, complex *x, 
+extern int chpr_(const char *uplo, integer *n, real *alpha, complex *x, 
 	integer *incx, complex *ap);
 
 /* chpr2.c */
-extern int chpr2_(char *uplo, integer *n, complex *alpha, complex *
+extern int chpr2_(const char *uplo, integer *n, complex *alpha, complex *
 	x, integer *incx, complex *y, integer *incy, complex *ap);
 
 /* crotg.c */
@@ -105,52 +105,52 @@ extern int cswap_(integer *n, complex *cx, integer *incx, complex *
 	cy, integer *incy);
 
 /* csymm.c */
-extern int csymm_(char *side, char *uplo, integer *m, integer *n, 
+extern int csymm_(const char *side, const char *uplo, integer *m, integer *n, 
 	complex *alpha, complex *a, integer *lda, complex *b, integer *ldb, 
 	complex *beta, complex *c__, integer *ldc);
 
 /* csyr2k.c */
-extern int csyr2k_(char *uplo, char *trans, integer *n, integer *k, 
+extern int csyr2k_(const char *uplo, const char *trans, integer *n, integer *k, 
 	complex *alpha, complex *a, integer *lda, complex *b, integer *ldb, 
 	complex *beta, complex *c__, integer *ldc);
 
 /* csyrk.c */
-extern int csyrk_(char *uplo, char *trans, integer *n, integer *k, 
+extern int csyrk_(const char *uplo, const char *trans, integer *n, integer *k, 
 	complex *alpha, complex *a, integer *lda, complex *beta, complex *c__, 
 	 integer *ldc);
 
 /* ctbmv.c */
-extern int ctbmv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int ctbmv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	integer *k, complex *a, integer *lda, complex *x, integer *incx);
 
 /* ctbsv.c */
-extern int ctbsv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int ctbsv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	integer *k, complex *a, integer *lda, complex *x, integer *incx);
 
 /* ctpmv.c */
-extern int ctpmv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int ctpmv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	complex *ap, complex *x, integer *incx);
 
 /* ctpsv.c */
-extern int ctpsv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int ctpsv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	complex *ap, complex *x, integer *incx);
 
 /* ctrmm.c */
-extern int ctrmm_(char *side, char *uplo, char *transa, char *diag, 
+extern int ctrmm_(const char *side, const char *uplo, const char *transa, const char *diag, 
 	integer *m, integer *n, complex *alpha, complex *a, integer *lda, 
 	complex *b, integer *ldb);
 
 /* ctrmv.c */
-extern int ctrmv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int ctrmv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	complex *a, integer *lda, complex *x, integer *incx);
 
 /* ctrsm.c */
-extern int ctrsm_(char *side, char *uplo, char *transa, char *diag, 
+extern int ctrsm_(const char *side, const char *uplo, const char *transa, const char *diag, 
 	integer *m, integer *n, complex *alpha, complex *a, integer *lda, 
 	complex *b, integer *ldb);
 
 /* ctrsv.c */
-extern int ctrsv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int ctrsv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	complex *a, integer *lda, complex *x, integer *incx);
 
 /* dasum.c */
@@ -172,19 +172,19 @@ extern doublereal ddot_(integer *n, doublereal *dx, integer *incx, doublereal *d
 	integer *incy);
 
 /* dgbmv.c */
-extern int dgbmv_(char *trans, integer *m, integer *n, integer *kl, 
+extern int dgbmv_(const char *trans, integer *m, integer *n, integer *kl, 
 	integer *ku, doublereal *alpha, doublereal *a, integer *lda, 
 	doublereal *x, integer *incx, doublereal *beta, doublereal *y, 
 	integer *incy);
 
 /* dgemm.c */
-extern int dgemm_(char *transa, char *transb, integer *m, integer *
+extern int dgemm_(const char *transa, const char *transb, integer *m, integer *
 	n, integer *k, doublereal *alpha, doublereal *a, integer *lda, 
 	doublereal *b, integer *ldb, doublereal *beta, doublereal *c__, 
 	integer *ldc);
 
 /* dgemv.c */
-extern int dgemv_(char *trans, integer *m, integer *n, doublereal *
+extern int dgemv_(const char *trans, integer *m, integer *n, doublereal *
 	alpha, doublereal *a, integer *lda, doublereal *x, integer *incx, 
 	doublereal *beta, doublereal *y, integer *incy);
 
@@ -213,7 +213,7 @@ extern int drotmg_(doublereal *dd1, doublereal *dd2, doublereal *
 	dx1, doublereal *dy1, doublereal *dparam);
 
 /* dsbmv.c */
-extern int dsbmv_(char *uplo, integer *n, integer *k, doublereal *
+extern int dsbmv_(const char *uplo, integer *n, integer *k, doublereal *
 	alpha, doublereal *a, integer *lda, doublereal *x, integer *incx, 
 	doublereal *beta, doublereal *y, integer *incy);
 
@@ -226,16 +226,16 @@ extern doublereal dsdot_(integer *n, real *sx, integer *incx, real *sy, integer 
 	incy);
 
 /* dspmv.c */
-extern int dspmv_(char *uplo, integer *n, doublereal *alpha, 
+extern int dspmv_(const char *uplo, integer *n, doublereal *alpha, 
 	doublereal *ap, doublereal *x, integer *incx, doublereal *beta, 
 	doublereal *y, integer *incy);
 
 /* dspr.c */
-extern int dspr_(char *uplo, integer *n, doublereal *alpha, 
+extern int dspr_(const char *uplo, integer *n, doublereal *alpha, 
 	doublereal *x, integer *incx, doublereal *ap);
 
 /* dspr2.c */
-extern int dspr2_(char *uplo, integer *n, doublereal *alpha, 
+extern int dspr2_(const char *uplo, integer *n, doublereal *alpha, 
 	doublereal *x, integer *incx, doublereal *y, integer *incy, 
 	doublereal *ap);
 
@@ -244,66 +244,66 @@ extern int dswap_(integer *n, doublereal *dx, integer *incx,
 	doublereal *dy, integer *incy);
 
 /* dsymm.c */
-extern int dsymm_(char *side, char *uplo, integer *m, integer *n, 
+extern int dsymm_(const char *side, const char *uplo, integer *m, integer *n, 
 	doublereal *alpha, doublereal *a, integer *lda, doublereal *b, 
 	integer *ldb, doublereal *beta, doublereal *c__, integer *ldc);
 
 /* dsymv.c */
-extern int dsymv_(char *uplo, integer *n, doublereal *alpha, 
+extern int dsymv_(const char *uplo, integer *n, doublereal *alpha, 
 	doublereal *a, integer *lda, doublereal *x, integer *incx, doublereal 
 	*beta, doublereal *y, integer *incy);
 
 /* dsyr.c */
-extern int dsyr_(char *uplo, integer *n, doublereal *alpha, 
+extern int dsyr_(const char *uplo, integer *n, doublereal *alpha, 
 	doublereal *x, integer *incx, doublereal *a, integer *lda);
 
 /* dsyr2.c */
-extern int dsyr2_(char *uplo, integer *n, doublereal *alpha, 
+extern int dsyr2_(const char *uplo, integer *n, doublereal *alpha, 
 	doublereal *x, integer *incx, doublereal *y, integer *incy, 
 	doublereal *a, integer *lda);
 
 /* dsyr2k.c */
-extern int dsyr2k_(char *uplo, char *trans, integer *n, integer *k, 
+extern int dsyr2k_(const char *uplo, const char *trans, integer *n, integer *k, 
 	doublereal *alpha, doublereal *a, integer *lda, doublereal *b, 
 	integer *ldb, doublereal *beta, doublereal *c__, integer *ldc);
 
 /* dsyrk.c */
-extern int dsyrk_(char *uplo, char *trans, integer *n, integer *k, 
+extern int dsyrk_(const char *uplo, const char *trans, integer *n, integer *k, 
 	doublereal *alpha, doublereal *a, integer *lda, doublereal *beta, 
 	doublereal *c__, integer *ldc);
 
 /* dtbmv.c */
-extern int dtbmv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int dtbmv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	integer *k, doublereal *a, integer *lda, doublereal *x, integer *incx);
 
 /* dtbsv.c */
-extern int dtbsv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int dtbsv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	integer *k, doublereal *a, integer *lda, doublereal *x, integer *incx);
 
 /* dtpmv.c */
-extern int dtpmv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int dtpmv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	doublereal *ap, doublereal *x, integer *incx);
 
 /* dtpsv.c */
-extern int dtpsv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int dtpsv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	doublereal *ap, doublereal *x, integer *incx);
 
 /* dtrmm.c */
-extern int dtrmm_(char *side, char *uplo, char *transa, char *diag, 
+extern int dtrmm_(const char *side, const char *uplo, const char *transa, const char *diag, 
 	integer *m, integer *n, doublereal *alpha, doublereal *a, integer *
 	lda, doublereal *b, integer *ldb);
 
 /* dtrmv.c */
-extern int dtrmv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int dtrmv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	doublereal *a, integer *lda, doublereal *x, integer *incx);
 
 /* dtrsm.c */
-extern int dtrsm_(char *side, char *uplo, char *transa, char *diag, 
+extern int dtrsm_(const char *side, const char *uplo, const char *transa, const char *diag, 
 	integer *m, integer *n, doublereal *alpha, doublereal *a, integer *
 	lda, doublereal *b, integer *ldb);
 
 /* dtrsv.c */
-extern int dtrsv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int dtrsv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	doublereal *a, integer *lda, doublereal *x, integer *incx);
 
 /* dzasum.c */
@@ -325,7 +325,7 @@ extern integer isamax_(const integer *n, const real *sx, const integer *incx);
 extern integer izamax_(const integer *n, const doublecomplex *zx, const integer *incx);
 
 /* lsame.c */
-extern logical lsame_(char *ca, char *cb);
+extern logical lsame_(const char *ca, const char *cb);
 
 /* sasum.c */
 extern doublereal sasum_(integer *n, real *sx, integer *incx);
@@ -355,17 +355,17 @@ extern doublereal sdsdot_(integer *n, real *sb, real *sx, integer *incx, real *s
 	integer *incy);
 
 /* sgbmv.c */
-extern int sgbmv_(char *trans, integer *m, integer *n, integer *kl, 
+extern int sgbmv_(const char *trans, integer *m, integer *n, integer *kl, 
 	integer *ku, real *alpha, real *a, integer *lda, real *x, integer *
 	incx, real *beta, real *y, integer *incy);
 
 /* sgemm.c */
-extern int sgemm_(char *transa, char *transb, integer *m, integer *
+extern int sgemm_(const char *transa, const char *transb, integer *m, integer *
 	n, integer *k, real *alpha, real *a, integer *lda, real *b, integer *
 	ldb, real *beta, real *c__, integer *ldc);
 
 /* sgemv.c */
-extern int sgemv_(char *trans, integer *m, integer *n, real *alpha, 
+extern int sgemv_(const char *trans, integer *m, integer *n, real *alpha, 
 	real *a, integer *lda, real *x, integer *incx, real *beta, real *y, 
 	integer *incy);
 
@@ -392,7 +392,7 @@ extern int srotmg_(real *sd1, real *sd2, real *sx1, real *sy1, real
 	*sparam);
 
 /* ssbmv.c */
-extern int ssbmv_(char *uplo, integer *n, integer *k, real *alpha, 
+extern int ssbmv_(const char *uplo, integer *n, integer *k, real *alpha, 
 	real *a, integer *lda, real *x, integer *incx, real *beta, real *y, 
 	integer *incy);
 
@@ -400,15 +400,15 @@ extern int ssbmv_(char *uplo, integer *n, integer *k, real *alpha,
 extern int sscal_(integer *n, real *sa, real *sx, integer *incx);
 
 /* sspmv.c */
-extern int sspmv_(char *uplo, integer *n, real *alpha, real *ap, 
+extern int sspmv_(const char *uplo, integer *n, real *alpha, real *ap, 
 	real *x, integer *incx, real *beta, real *y, integer *incy);
 
 /* sspr.c */
-extern int sspr_(char *uplo, integer *n, real *alpha, real *x, 
+extern int sspr_(const char *uplo, integer *n, real *alpha, real *x, 
 	integer *incx, real *ap);
 
 /* sspr2.c */
-extern int sspr2_(char *uplo, integer *n, real *alpha, real *x, 
+extern int sspr2_(const char *uplo, integer *n, real *alpha, real *x, 
 	integer *incx, real *y, integer *incy, real *ap);
 
 /* sswap.c */
@@ -416,72 +416,72 @@ extern int sswap_(integer *n, real *sx, integer *incx, real *sy,
 	integer *incy);
 
 /* ssymm.c */
-extern int ssymm_(char *side, char *uplo, integer *m, integer *n, 
+extern int ssymm_(const char *side, const char *uplo, integer *m, integer *n, 
 	real *alpha, real *a, integer *lda, real *b, integer *ldb, real *beta, 
 	 real *c__, integer *ldc);
 
 /* ssymv.c */
-extern int ssymv_(char *uplo, integer *n, real *alpha, real *a, 
+extern int ssymv_(const char *uplo, integer *n, real *alpha, real *a, 
 	integer *lda, real *x, integer *incx, real *beta, real *y, integer *
 	incy);
 
 /* ssyr.c */
-extern int ssyr_(char *uplo, integer *n, real *alpha, real *x, 
+extern int ssyr_(const char *uplo, integer *n, real *alpha, real *x, 
 	integer *incx, real *a, integer *lda);
 
 /* ssyr2.c */
-extern int ssyr2_(char *uplo, integer *n, real *alpha, real *x, 
+extern int ssyr2_(const char *uplo, integer *n, real *alpha, real *x, 
 	integer *incx, real *y, integer *incy, real *a, integer *lda);
 
 /* ssyr2k.c */
-extern int ssyr2k_(char *uplo, char *trans, integer *n, integer *k, 
+extern int ssyr2k_(const char *uplo, const char *trans, integer *n, integer *k, 
 	real *alpha, real *a, integer *lda, real *b, integer *ldb, real *beta, 
 	 real *c__, integer *ldc);
 
 /* ssyrk.c */
-extern int ssyrk_(char *uplo, char *trans, integer *n, integer *k, 
+extern int ssyrk_(const char *uplo, const char *trans, integer *n, integer *k, 
 	real *alpha, real *a, integer *lda, real *beta, real *c__, integer *
 	ldc);
 
 /* stbmv.c */
-extern int stbmv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int stbmv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	integer *k, real *a, integer *lda, real *x, integer *incx);
 
 /* stbsv.c */
-extern int stbsv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int stbsv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	integer *k, real *a, integer *lda, real *x, integer *incx);
 
 /* stpmv.c */
-extern int stpmv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int stpmv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	real *ap, real *x, integer *incx);
 
 /* stpsv.c */
-extern int stpsv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int stpsv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	real *ap, real *x, integer *incx);
 
 /* strmm.c */
-extern int strmm_(char *side, char *uplo, char *transa, char *diag, 
+extern int strmm_(const char *side, const char *uplo, const char *transa, const char *diag, 
 	integer *m, integer *n, real *alpha, real *a, integer *lda, real *b, 
 	integer *ldb);
 
 /* strmv.c */
-extern int strmv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int strmv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	real *a, integer *lda, real *x, integer *incx);
 
 /* strsm.c */
-extern int strsm_(char *side, char *uplo, char *transa, char *diag, 
+extern int strsm_(const char *side, const char *uplo, const char *transa, const char *diag, 
 	integer *m, integer *n, real *alpha, real *a, integer *lda, real *b, 
 	integer *ldb);
 
 /* strsv.c */
-extern int strsv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int strsv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	real *a, integer *lda, real *x, integer *incx);
 
 /* xerbla.c */
 extern void xerbla_(const char *srname, const integer *info);
 
 /* xerbla_array.c */
-extern int xerbla_array__(char *srname_array__, integer *
+extern int xerbla_array__(const char *srname_array__, integer *
 	srname_len__, integer *info, ftnlen srname_array_len);
 
 /* zaxpy.c */
@@ -509,19 +509,19 @@ extern int zdscal_(integer *n, doublereal *da, doublecomplex *zx,
 	integer *incx);
 
 /* zgbmv.c */
-extern int zgbmv_(char *trans, integer *m, integer *n, integer *kl, 
+extern int zgbmv_(const char *trans, integer *m, integer *n, integer *kl, 
 	integer *ku, doublecomplex *alpha, doublecomplex *a, integer *lda, 
 	doublecomplex *x, integer *incx, doublecomplex *beta, doublecomplex *
 	y, integer *incy);
 
 /* zgemm.c */
-extern int zgemm_(char *transa, char *transb, integer *m, integer *
+extern int zgemm_(const char *transa, const char *transb, integer *m, integer *
 	n, integer *k, doublecomplex *alpha, doublecomplex *a, integer *lda, 
 	doublecomplex *b, integer *ldb, doublecomplex *beta, doublecomplex *
 	c__, integer *ldc);
 
 /* zgemv.c */
-extern int zgemv_(char *trans, integer *m, integer *n, 
+extern int zgemv_(const char *trans, integer *m, integer *n, 
 	doublecomplex *alpha, doublecomplex *a, integer *lda, doublecomplex *
 	x, integer *incx, doublecomplex *beta, doublecomplex *y, integer *
 	incy);
@@ -544,46 +544,46 @@ extern int zhbmv_(const char *uplo, const integer *n, const integer *k,
 		  doublecomplex *y, const integer *incy);
 
 /* zhemm.c */
-extern int zhemm_(char *side, char *uplo, integer *m, integer *n, 
+extern int zhemm_(const char *side, const char *uplo, integer *m, integer *n, 
 	doublecomplex *alpha, doublecomplex *a, integer *lda, doublecomplex *
 	b, integer *ldb, doublecomplex *beta, doublecomplex *c__, integer *
 	ldc);
 
 /* zhemv.c */
-extern int zhemv_(char *uplo, integer *n, doublecomplex *alpha, 
+extern int zhemv_(const char *uplo, integer *n, doublecomplex *alpha, 
 	doublecomplex *a, integer *lda, doublecomplex *x, integer *incx, 
 	doublecomplex *beta, doublecomplex *y, integer *incy);
 
 /* zher.c */
-extern int zher_(char *uplo, integer *n, doublereal *alpha, 
+extern int zher_(const char *uplo, integer *n, doublereal *alpha, 
 	doublecomplex *x, integer *incx, doublecomplex *a, integer *lda);
 
 /* zher2.c */
-extern int zher2_(char *uplo, integer *n, doublecomplex *alpha, 
+extern int zher2_(const char *uplo, integer *n, doublecomplex *alpha, 
 	doublecomplex *x, integer *incx, doublecomplex *y, integer *incy, 
 	doublecomplex *a, integer *lda);
 
 /* zher2k.c */
-extern int zher2k_(char *uplo, char *trans, integer *n, integer *k, 
+extern int zher2k_(const char *uplo, const char *trans, integer *n, integer *k, 
 	doublecomplex *alpha, doublecomplex *a, integer *lda, doublecomplex *
 	b, integer *ldb, doublereal *beta, doublecomplex *c__, integer *ldc);
 
 /* zherk.c */
-extern int zherk_(char *uplo, char *trans, integer *n, integer *k, 
+extern int zherk_(const char *uplo, const char *trans, integer *n, integer *k, 
 	doublereal *alpha, doublecomplex *a, integer *lda, doublereal *beta, 
 	doublecomplex *c__, integer *ldc);
 
 /* zhpmv.c */
-extern int zhpmv_(char *uplo, integer *n, doublecomplex *alpha, 
+extern int zhpmv_(const char *uplo, integer *n, doublecomplex *alpha, 
 	doublecomplex *ap, doublecomplex *x, integer *incx, doublecomplex *
 	beta, doublecomplex *y, integer *incy);
 
 /* zhpr.c */
-extern int zhpr_(char *uplo, integer *n, doublereal *alpha, 
+extern int zhpr_(const char *uplo, integer *n, doublereal *alpha, 
 	doublecomplex *x, integer *incx, doublecomplex *ap);
 
 /* zhpr2.c */
-extern int zhpr2_(char *uplo, integer *n, doublecomplex *alpha, 
+extern int zhpr2_(const char *uplo, integer *n, doublecomplex *alpha, 
 	doublecomplex *x, integer *incx, doublecomplex *y, integer *incy, 
 	doublecomplex *ap);
 
@@ -600,56 +600,56 @@ extern int zswap_(integer *n, doublecomplex *zx, integer *incx,
 	doublecomplex *zy, integer *incy);
 
 /* zsymm.c */
-extern int zsymm_(char *side, char *uplo, integer *m, integer *n, 
+extern int zsymm_(const char *side, const char *uplo, integer *m, integer *n, 
 	doublecomplex *alpha, doublecomplex *a, integer *lda, doublecomplex *
 	b, integer *ldb, doublecomplex *beta, doublecomplex *c__, integer *
 	ldc);
 
 /* zsyr2k.c */
-extern int zsyr2k_(char *uplo, char *trans, integer *n, integer *k, 
+extern int zsyr2k_(const char *uplo, const char *trans, integer *n, integer *k, 
 	doublecomplex *alpha, doublecomplex *a, integer *lda, doublecomplex *
 	b, integer *ldb, doublecomplex *beta, doublecomplex *c__, integer *
 	ldc);
 
 /* zsyrk.c */
-extern int zsyrk_(char *uplo, char *trans, integer *n, integer *k, 
+extern int zsyrk_(const char *uplo, const char *trans, integer *n, integer *k, 
 	doublecomplex *alpha, doublecomplex *a, integer *lda, doublecomplex *
 	beta, doublecomplex *c__, integer *ldc);
 
 /* ztbmv.c */
-extern int ztbmv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int ztbmv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	integer *k, doublecomplex *a, integer *lda, doublecomplex *x, integer 
 	*incx);
 
 /* ztbsv.c */
-extern int ztbsv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int ztbsv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	integer *k, doublecomplex *a, integer *lda, doublecomplex *x, integer 
 	*incx);
 
 /* ztpmv.c */
-extern int ztpmv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int ztpmv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	doublecomplex *ap, doublecomplex *x, integer *incx);
 
 /* ztpsv.c */
-extern int ztpsv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int ztpsv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	doublecomplex *ap, doublecomplex *x, integer *incx);
 
 /* ztrmm.c */
-extern int ztrmm_(char *side, char *uplo, char *transa, char *diag, 
+extern int ztrmm_(const char *side, const char *uplo, const char *transa, const char *diag, 
 	integer *m, integer *n, doublecomplex *alpha, doublecomplex *a, 
 	integer *lda, doublecomplex *b, integer *ldb);
 
 /* ztrmv.c */
-extern int ztrmv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int ztrmv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	doublecomplex *a, integer *lda, doublecomplex *x, integer *incx);
 
 /* ztrsm.c */
-extern int ztrsm_(char *side, char *uplo, char *transa, char *diag, 
+extern int ztrsm_(const char *side, const char *uplo, const char *transa, const char *diag, 
 	integer *m, integer *n, doublecomplex *alpha, doublecomplex *a, 
 	integer *lda, doublecomplex *b, integer *ldb);
 
 /* ztrsv.c */
-extern int ztrsv_(char *uplo, char *trans, char *diag, integer *n, 
+extern int ztrsv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	doublecomplex *a, integer *lda, doublecomplex *x, integer *incx);
 
 #endif

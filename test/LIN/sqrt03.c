@@ -45,7 +45,6 @@ static real c_b22 = 1.f;
     real eps;
     char side[1];
     integer info, iside;
-    extern logical lsame_(char *, char *);
     real resid;
     extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
 	    integer *, real *, real *, integer *, real *, integer *, real *, 

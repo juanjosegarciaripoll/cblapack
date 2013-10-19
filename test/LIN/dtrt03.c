@@ -31,7 +31,6 @@ static integer c__1 = 1;
     doublereal eps, err;
     extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
 	    integer *);
-    extern logical lsame_(char *, char *);
     doublereal xscal;
     extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
 	    doublereal *, integer *), daxpy_(integer *, doublereal *, 

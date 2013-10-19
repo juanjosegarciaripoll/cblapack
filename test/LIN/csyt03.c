@@ -29,7 +29,6 @@ static complex c_b1 = {0.f,0.f};
     /* Local variables */
     integer i__, j;
     real eps;
-    extern logical lsame_(char *, char *);
     real anorm;
     extern /* Subroutine */ int csymm_(char *, char *, integer *, integer *, 
 	    complex *, complex *, integer *, complex *, integer *, complex *, 

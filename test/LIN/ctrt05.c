@@ -34,7 +34,6 @@ static integer c__1 = 1;
     integer imax;
     real unfl, ovfl;
     logical unit;
-    extern logical lsame_(char *, char *);
     logical upper;
     real xnorm;
     extern integer icamax_(integer *, complex *, integer *);

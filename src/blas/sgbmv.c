@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int sgbmv_(char *trans, integer *m, integer *n, integer *kl, 
+/* Subroutine */ int sgbmv_(const char *trans, integer *m, integer *n, integer *kl, 
 	integer *ku, real *alpha, real *a, integer *lda, real *x, integer *
 	incx, real *beta, real *y, integer *incy)
 {

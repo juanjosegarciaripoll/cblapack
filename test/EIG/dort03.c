@@ -31,7 +31,6 @@ static integer c__1 = 1;
     doublereal s;
     integer irc, lmx;
     doublereal ulp, res1, res2;
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int dort01_(char *, integer *, integer *, 
 	    doublereal *, integer *, doublereal *, integer *, doublereal *);
     extern doublereal dlamch_(char *);

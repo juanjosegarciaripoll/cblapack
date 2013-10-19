@@ -30,7 +30,6 @@ static complex c_b2 = {1.f,0.f};
     integer i__, j, jc;
     real eps;
     integer info;
-    extern logical lsame_(char *, char *);
     real anorm;
     extern doublereal slamch_(char *);
     extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 

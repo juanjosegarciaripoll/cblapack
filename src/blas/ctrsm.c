@@ -17,7 +17,7 @@
 
 static complex c_b1 = {1.f,0.f};
 
-/* Subroutine */ int ctrsm_(char *side, char *uplo, char *transa, char *diag, 
+/* Subroutine */ int ctrsm_(const char *side, const char *uplo, const char *transa, const char *diag, 
 	integer *m, integer *n, complex *alpha, complex *a, integer *lda, 
 	complex *b, integer *ldb)
 {

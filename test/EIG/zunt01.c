@@ -34,7 +34,6 @@ static integer c__1 = 1;
     integer i__, j, k;
     doublereal eps;
     doublecomplex tmp;
-    extern logical lsame_(char *, char *);
     integer mnmin;
     extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
 	    doublecomplex *, integer *, doublecomplex *, integer *);

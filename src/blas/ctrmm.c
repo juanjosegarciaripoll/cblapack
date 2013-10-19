@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int ctrmm_(char *side, char *uplo, char *transa, char *diag, 
+/* Subroutine */ int ctrmm_(const char *side, const char *uplo, const char *transa, const char *diag, 
 	integer *m, integer *n, complex *alpha, complex *a, integer *lda, 
 	complex *b, integer *ldb)
 {

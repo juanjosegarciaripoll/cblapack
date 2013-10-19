@@ -35,7 +35,6 @@ doublereal dqrt14_(char *trans, integer *m, integer *n, integer *nrhs,
     doublereal anrm;
     logical tpsd;
     doublereal xnrm;
-    extern logical lsame_(char *, char *);
     doublereal rwork[1];
     extern /* Subroutine */ int dgelq2_(integer *, integer *, doublereal *, 
 	    integer *, doublereal *, doublereal *, integer *), dgeqr2_(

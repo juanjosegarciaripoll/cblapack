@@ -32,7 +32,6 @@ static integer c__1 = 1;
     doublereal eps, tmp;
     extern doublereal ddot_(integer *, doublereal *, integer *, doublereal *, 
 	    integer *);
-    extern logical lsame_(char *, char *);
     integer mnmin;
     extern /* Subroutine */ int dsyrk_(char *, char *, integer *, integer *, 
 	    doublereal *, doublereal *, integer *, doublereal *, doublereal *, 

@@ -39,7 +39,6 @@ static integer c__1 = 1;
 	    char *, char *, integer *, integer *, integer *, complex *, 
 	    complex *, integer *, complex *, integer *, complex *, complex *, 
 	    integer *);
-    extern logical lsame_(char *, char *);
     real anorm;
     char cuplo[1];
     logical lower;

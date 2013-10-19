@@ -32,7 +32,6 @@ static complex c_b9 = {0.f,0.f};
     /* Local variables */
     integer i__, j;
     real eps;
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int cgemv_(char *, integer *, integer *, complex *
 , complex *, integer *, complex *, integer *, complex *, complex *
 , integer *);

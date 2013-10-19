@@ -50,7 +50,6 @@ static doublereal c_b93 = 2.;
 	    doublecomplex *, integer *, doublereal *, doublecomplex *);
     doublecomplex star1, plus1, plus2;
     doublereal bscal;
-    extern logical lsame_(char *, char *);
     doublereal tscal;
     doublecomplex ctemp;
     doublereal anorm, bnorm, tleft;

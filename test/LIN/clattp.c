@@ -52,7 +52,6 @@ static real c_b93 = 2.f;
     real texp;
     complex star1, plus1, plus2;
     real bscal;
-    extern logical lsame_(char *, char *);
     real tscal;
     complex ctemp;
     real anorm, bnorm, tleft;

@@ -99,7 +99,6 @@ static real c_b166 = 0.f;
     extern /* Subroutine */ int cget07_(char *, integer *, integer *, complex 
 	    *, integer *, complex *, integer *, complex *, integer *, complex 
 	    *, integer *, real *, logical *, real *, real *);
-    extern logical lsame_(char *, char *);
     char equed[1];
     integer nbmin;
     real rcond, roldc;

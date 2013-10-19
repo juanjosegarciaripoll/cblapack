@@ -35,8 +35,6 @@ static real c_b26 = 1.f;
 	    integer *, real *, integer *, real *, integer *);
     extern doublereal sdot_(integer *, real *, integer *, real *, integer *), 
 	    snrm2_(integer *, real *, integer *);
-    extern /* Subroutine */ int ssyr2_(char *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, integer *);
     real alpha;
 
 /*  -- LAPACK auxiliary test routine (version 3.1) */

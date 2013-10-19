@@ -30,7 +30,6 @@ static real c_b8 = 0.f;
     /* Local variables */
     integer i__, j;
     real eps;
-    extern logical lsame_(char *, char *);
     real bnorm;
     extern /* Subroutine */ int sgemv_(char *, integer *, integer *, real *, 
 	    real *, integer *, real *, integer *, real *, real *, integer *);

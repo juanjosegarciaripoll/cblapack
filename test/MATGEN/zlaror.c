@@ -32,26 +32,15 @@ static integer c__1 = 1;
     integer j, kbeg, jcol;
     doublereal xabs;
     integer irow;
-    extern logical lsame_(char *, char *);
     doublecomplex csign;
-    extern /* Subroutine */ int zgerc_(integer *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *);
     integer ixfrm;
-    extern /* Subroutine */ int zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *);
     integer itype, nxfrm;
     doublereal xnorm;
-    extern doublereal dznrm2_(integer *, doublecomplex *, integer *);
     doublereal factor;
     extern /* Subroutine */ int zlacgv_(integer *, doublecomplex *, integer *)
 	    ;
     extern /* Double Complex */ void zlarnd_(doublecomplex *, integer *, 
 	    integer *);
-    extern /* Subroutine */ int zlaset_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *);
     doublecomplex xnorms;
 
 

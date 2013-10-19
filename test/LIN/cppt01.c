@@ -35,7 +35,6 @@ static real c_b19 = 1.f;
 	    complex *, integer *);
     extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
 	    *, complex *, integer *);
-    extern logical lsame_(char *, char *);
     real anorm;
     extern /* Subroutine */ int ctpmv_(char *, char *, char *, integer *, 
 	    complex *, complex *, integer *);

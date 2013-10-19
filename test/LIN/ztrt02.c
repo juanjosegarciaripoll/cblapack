@@ -30,7 +30,6 @@ static doublecomplex c_b12 = {-1.,0.};
     /* Local variables */
     integer j;
     doublereal eps;
-    extern logical lsame_(char *, char *);
     doublereal anorm, bnorm, xnorm;
     extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
 	    doublecomplex *, integer *), zaxpy_(integer *, doublecomplex *, 

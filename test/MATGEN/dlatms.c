@@ -43,7 +43,6 @@ static logical c_false = FALSE_;
     extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
 	    integer *);
     integer ioffg;
-    extern logical lsame_(char *, char *);
     integer iinfo, idist, mnmin;
     extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
 	    doublereal *, integer *);

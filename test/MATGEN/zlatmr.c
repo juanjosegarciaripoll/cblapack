@@ -35,7 +35,6 @@ static integer c__1 = 1;
     integer i__, j, k, kll, kuu, isub, jsub;
     doublereal temp;
     integer isym, ipack;
-    extern logical lsame_(char *, char *);
     doublereal tempa[1];
     doublecomplex ctemp;
     integer iisub, idist, jjsub, mnmin;

@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int ztrmm_(char *side, char *uplo, char *transa, char *diag, 
+/* Subroutine */ int ztrmm_(const char *side, const char *uplo, const char *transa, const char *diag, 
 	integer *m, integer *n, doublecomplex *alpha, doublecomplex *a, 
 	integer *lda, doublecomplex *b, integer *ldb)
 {

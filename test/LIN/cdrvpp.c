@@ -76,7 +76,6 @@ static complex c_b63 = {0.f,0.f};
     extern /* Subroutine */ int cget04_(integer *, integer *, complex *, 
 	    integer *, complex *, integer *, real *, real *);
     integer nfail, iseed[4], nfact;
-    extern logical lsame_(char *, char *);
     char equed[1];
     real roldc, rcond, scond;
     extern /* Subroutine */ int cppt01_(char *, integer *, complex *, complex 

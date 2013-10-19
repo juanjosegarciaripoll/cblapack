@@ -40,7 +40,6 @@ static integer c__5 = 5;
     integer isim;
     doublereal temp;
     doublecomplex alpha;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     doublereal tempa[1];
     integer icols;
@@ -48,29 +47,21 @@ static integer c__5 = 5;
 	    doublecomplex *, integer *, doublecomplex *, integer *, 
 	    doublecomplex *, integer *);
     integer idist;
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *), zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *);
     integer irows;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), dlatm1_(integer *, doublereal *, 
+    extern /* Subroutine */ int dlatm1_(integer *, doublereal *, 
 	    integer *, integer *, integer *, doublereal *, integer *, integer 
 	    *), zlatm1_(integer *, doublereal *, integer *, integer *, 
 	    integer *, doublecomplex *, integer *, integer *);
     doublereal ralpha;
     extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
 	    integer *, doublereal *);
-    extern /* Subroutine */ int zdscal_(integer *, doublereal *, 
-	    doublecomplex *, integer *), zlarge_(integer *, doublecomplex *, 
+    extern /* Subroutine */ int zlarge_(integer *, doublecomplex *, 
 	    integer *, integer *, doublecomplex *, integer *), zlarfg_(
 	    integer *, doublecomplex *, doublecomplex *, integer *, 
 	    doublecomplex *), zlacgv_(integer *, doublecomplex *, integer *);
     extern /* Double Complex */ void zlarnd_(doublecomplex *, integer *, 
 	    integer *);
     integer irsign;
-    extern /* Subroutine */ int zlaset_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *);
     integer iupper;
     extern /* Subroutine */ int zlarnv_(integer *, integer *, integer *, 
 	    doublecomplex *);

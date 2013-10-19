@@ -29,20 +29,11 @@ static integer c__1 = 1;
 
     /* Local variables */
     integer j, kbeg, jcol;
-    extern /* Subroutine */ int sger_(integer *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, integer *);
     integer irow;
-    extern doublereal snrm2_(integer *, real *, integer *);
-    extern logical lsame_(char *, char *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    sgemv_(char *, integer *, integer *, real *, real *, integer *, 
-	    real *, integer *, real *, real *, integer *);
     integer ixfrm, itype, nxfrm;
     real xnorm;
     real factor;
     extern doublereal slarnd_(integer *, integer *);
-    extern /* Subroutine */ int slaset_(char *, integer *, integer *, real *, 
-	    real *, real *, integer *);
     real xnorms;
 
 

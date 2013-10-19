@@ -33,7 +33,6 @@ static doublereal c_b17 = 1.;
     integer klen;
     extern /* Subroutine */ int zher_(char *, integer *, doublereal *, 
 	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern logical lsame_(char *, char *);
     doublereal anorm;
     extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
 	    doublecomplex *, integer *, doublecomplex *, integer *);

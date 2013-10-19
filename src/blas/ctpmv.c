@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int ctpmv_(char *uplo, char *trans, char *diag, integer *n, 
+/* Subroutine */ int ctpmv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	complex *ap, complex *x, integer *incx)
 {
     /* System generated locals */

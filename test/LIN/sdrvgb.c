@@ -86,7 +86,6 @@ static integer c__7 = 7;
     integer imat, info;
     char dist[1], type__[1];
     integer nrun, ldafb, ifact, nfail, iseed[4], nfact;
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int sgbt01_(integer *, integer *, integer *, 
 	    integer *, real *, integer *, real *, integer *, integer *, real *
 , real *);

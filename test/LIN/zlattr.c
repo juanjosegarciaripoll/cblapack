@@ -49,7 +49,6 @@ static integer c_n1 = -1;
 	    doublecomplex *, integer *, doublereal *, doublecomplex *);
     doublecomplex star1, plus1, plus2;
     doublereal bscal;
-    extern logical lsame_(char *, char *);
     doublereal tscal, anorm, bnorm, tleft;
     logical upper;
     extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 

@@ -90,7 +90,6 @@ static integer c__7 = 7;
     char type__[1];
     integer nrun, ldafb, ifact, nfail, iseed[4], nfact;
     extern doublereal dget06_(doublereal *, doublereal *);
-    extern logical lsame_(char *, char *);
     char equed[1];
     integer nbmin;
     doublereal rcond, roldc;

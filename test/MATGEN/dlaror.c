@@ -35,7 +35,6 @@ static integer c__1 = 1;
 	    integer *);
     integer jcol, irow;
     extern doublereal dnrm2_(integer *, doublereal *, integer *);
-    extern logical lsame_(char *, char *);
     integer ixfrm, itype, nxfrm;
     doublereal xnorm;
     doublereal factor, xnorms;

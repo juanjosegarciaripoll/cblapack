@@ -29,7 +29,6 @@ static doublereal c_b6 = 1.;
     integer i__, j, jc;
     doublereal eps;
     integer info;
-    extern logical lsame_(char *, char *);
     doublereal anorm;
     extern doublereal dlamch_(char *);
     extern /* Subroutine */ int dlaset_(char *, integer *, integer *, 

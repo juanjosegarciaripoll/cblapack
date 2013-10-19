@@ -31,7 +31,6 @@ static integer c__1 = 1;
     /* Local variables */
     integer j, ix;
     doublereal eps, err;
-    extern logical lsame_(char *, char *);
     doublereal xscal, tnorm, xnorm;
     extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
 	    doublecomplex *, integer *), zaxpy_(integer *, doublecomplex *, 

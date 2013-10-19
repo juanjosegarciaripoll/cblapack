@@ -64,7 +64,6 @@ static integer c__8 = 8;
     integer nrun;
     extern /* Subroutine */ int alahd_(integer *, char *);
     integer nfail, iseed[4];
-    extern logical lsame_(char *, char *);
     real rcond;
     extern /* Subroutine */ int sget04_(integer *, integer *, real *, integer 
 	    *, real *, integer *, real *, real *);

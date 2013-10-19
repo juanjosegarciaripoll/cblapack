@@ -86,7 +86,6 @@ static integer c__9 = 9;
     integer idiag;
     doublereal scale;
     integer nfail, iseed[4];
-    extern logical lsame_(char *, char *);
     doublereal rcond, anorm;
     integer itran;
     extern /* Subroutine */ int zget04_(integer *, integer *, doublecomplex *, 

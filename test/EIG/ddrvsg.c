@@ -60,7 +60,6 @@ static integer c__3 = 3;
     char uplo[1];
     logical badnn;
     integer imode;
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int dsgt01_(integer *, char *, integer *, integer 
 	    *, doublereal *, integer *, doublereal *, integer *, doublereal *, 
 	     integer *, doublereal *, doublereal *, doublereal *);

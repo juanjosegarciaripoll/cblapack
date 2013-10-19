@@ -22,7 +22,6 @@
     /* Local variables */
     integer i__, ix, inc;
     doublereal temp;
-    extern logical lsame_(char *, char *);
     integer ixnext;
 
 

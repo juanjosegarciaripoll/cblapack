@@ -47,7 +47,6 @@ static real c_b48 = 1.f;
     extern /* Subroutine */ int srot_(integer *, real *, integer *, real *, 
 	    integer *, real *, real *);
     real star1, plus1, plus2, bscal;
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     real tscal, anorm, bnorm, tleft, stemp;
     logical upper;

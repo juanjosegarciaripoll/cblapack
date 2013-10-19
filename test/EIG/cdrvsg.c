@@ -67,7 +67,6 @@ static integer c__3 = 3;
 	    integer *, complex *, integer *, real *, complex *, integer *, 
 	    real *, integer *);
     integer imode;
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int csgt01_(integer *, char *, integer *, integer 
 	    *, complex *, integer *, complex *, integer *, complex *, integer 
 	    *, real *, complex *, real *, real *);

@@ -70,7 +70,6 @@ static integer c__8 = 8;
     integer nfail, iseed[4];
     extern /* Subroutine */ int chpt01_(char *, integer *, complex *, complex 
 	    *, integer *, complex *, integer *, real *, real *);
-    extern logical lsame_(char *, char *);
     real rcond;
     integer nimat;
     extern doublereal sget06_(real *, real *);

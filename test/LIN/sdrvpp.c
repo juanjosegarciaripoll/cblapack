@@ -73,7 +73,6 @@ static integer c__2 = 2;
     integer imat, info;
     char dist[1], uplo[1], type__[1];
     integer nrun, ifact, nfail, iseed[4], nfact;
-    extern logical lsame_(char *, char *);
     char equed[1];
     real roldc, rcond, scond;
     extern /* Subroutine */ int sget04_(integer *, integer *, real *, integer 

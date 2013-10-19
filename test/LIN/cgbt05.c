@@ -33,7 +33,6 @@ static integer c__1 = 1;
     real eps, tmp, diff, axbi;
     integer imax;
     real unfl, ovfl;
-    extern logical lsame_(char *, char *);
     real xnorm;
     extern integer icamax_(integer *, complex *, integer *);
     extern doublereal slamch_(char *);

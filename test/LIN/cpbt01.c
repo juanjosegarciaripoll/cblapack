@@ -35,7 +35,6 @@ static real c_b17 = 1.f;
     integer klen;
     extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
 	    *, complex *, integer *);
-    extern logical lsame_(char *, char *);
     real anorm;
     extern /* Subroutine */ int ctrmv_(char *, char *, char *, integer *, 
 	    complex *, integer *, complex *, integer *);

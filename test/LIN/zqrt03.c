@@ -46,7 +46,6 @@ static doublecomplex c_b21 = {1.,0.};
     doublereal eps;
     char side[1];
     integer info, iside;
-    extern logical lsame_(char *, char *);
     doublereal resid, cnorm;
     extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
 	    integer *, doublecomplex *, doublecomplex *, integer *, 

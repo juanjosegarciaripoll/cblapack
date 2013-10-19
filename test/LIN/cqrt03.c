@@ -49,7 +49,6 @@ static complex c_b21 = {1.f,0.f};
 	    integer *, complex *, complex *, integer *, complex *, integer *, 
 	    complex *, complex *, integer *);
     integer iside;
-    extern logical lsame_(char *, char *);
     real resid, cnorm;
     char trans[1];
     extern doublereal clange_(char *, integer *, integer *, complex *, 

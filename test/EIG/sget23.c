@@ -53,7 +53,6 @@ static integer c__4 = 4;
     extern doublereal snrm2_(integer *, real *, integer *);
     logical balok, nobal;
     real abnrm;
-    extern logical lsame_(char *, char *);
     integer iinfo;
     extern /* Subroutine */ int sget22_(char *, char *, char *, integer *, 
 	    real *, integer *, real *, integer *, real *, real *, real *, 

@@ -31,7 +31,6 @@ static integer c__1 = 1;
     /* Local variables */
     integer j;
     doublereal eps;
-    extern logical lsame_(char *, char *);
     extern doublereal dasum_(integer *, doublereal *, integer *);
     doublereal anorm, bnorm, xnorm;
     extern doublereal dlamch_(char *);

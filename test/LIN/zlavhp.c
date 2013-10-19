@@ -30,7 +30,6 @@ static integer c__1 = 1;
     integer j, k;
     doublecomplex t1, t2, d11, d12, d21, d22;
     integer kc, kp;
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
 	    doublecomplex *, integer *), zgemv_(char *, integer *, integer *, 
 	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 

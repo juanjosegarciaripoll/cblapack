@@ -96,7 +96,6 @@ static integer c__7 = 7;
     extern doublereal sla_gbrpvgrw__(integer *, integer *, integer *, integer 
 	    *, real *, integer *, real *, integer *);
     integer ldafb, ifact, nfail, iseed[4], nfact;
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int sgbt01_(integer *, integer *, integer *, 
 	    integer *, real *, integer *, real *, integer *, integer *, real *
 , real *);

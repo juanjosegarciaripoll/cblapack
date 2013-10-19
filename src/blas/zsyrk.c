@@ -13,7 +13,7 @@
 #include "f2c.h"
 #include "blaswrap.h"
 
-/* Subroutine */ int zsyrk_(char *uplo, char *trans, integer *n, integer *k, 
+/* Subroutine */ int zsyrk_(const char *uplo, const char *trans, integer *n, integer *k, 
 	doublecomplex *alpha, doublecomplex *a, integer *lda, doublecomplex *
 	beta, doublecomplex *c__, integer *ldc)
 {

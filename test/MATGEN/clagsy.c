@@ -34,20 +34,7 @@ static integer c__1 = 1;
     complex wa, wb;
     real wn;
     complex tau;
-    extern /* Subroutine */ int cgerc_(integer *, integer *, complex *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *);
     complex alpha;
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *);
-    extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern /* Subroutine */ int cgemv_(char *, integer *, integer *, complex *
-, complex *, integer *, complex *, integer *, complex *, complex *
-, integer *), caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *), csymv_(char *, integer *, 
-	    complex *, complex *, integer *, complex *, integer *, complex *, 
-	    complex *, integer *);
-    extern doublereal scnrm2_(integer *, complex *, integer *);
 
 /*  -- LAPACK auxiliary test routine (version 3.1) -- */
 /*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */

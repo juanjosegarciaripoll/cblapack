@@ -86,7 +86,6 @@ static integer c__9 = 9;
     extern /* Subroutine */ int dget04_(integer *, integer *, doublereal *, 
 	    integer *, doublereal *, integer *, doublereal *, doublereal *);
     integer nfail, iseed[4];
-    extern logical lsame_(char *, char *);
     doublereal rcond, anorm;
     integer itran;
     extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 

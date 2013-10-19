@@ -90,7 +90,6 @@ static integer c__8 = 8;
 , integer *, integer *, doublereal *, integer *, doublereal *, 
 	    doublereal *, doublereal *, doublereal *, integer *, doublereal *, 
 	     integer *, doublereal *, doublereal *);
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int dtbt05_(char *, char *, char *, integer *, 
 	    integer *, integer *, doublereal *, integer *, doublereal *, 
 	    integer *, doublereal *, integer *, doublereal *, integer *, 

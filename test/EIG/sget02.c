@@ -30,7 +30,6 @@ static integer c__1 = 1;
     /* Local variables */
     integer j, n1, n2;
     real eps;
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
 	    integer *, real *, real *, integer *, real *, integer *, real *, 
 	    real *, integer *);

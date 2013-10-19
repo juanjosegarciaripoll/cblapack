@@ -100,7 +100,6 @@ static integer c__7 = 7;
 	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
 	    integer *, doublereal *, integer *, doublereal *, logical *, 
 	    doublereal *, doublereal *);
-    extern logical lsame_(char *, char *);
     char equed[1];
     integer nbmin;
     doublereal rcond, roldc;

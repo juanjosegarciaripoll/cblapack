@@ -35,7 +35,6 @@ static real c_b30 = -1.f;
     integer ince, jcol, jvec;
     real unfl, wmat[4]	/* was [2][2] */, temp1;
     integer iecol;
-    extern logical lsame_(char *, char *);
     integer ipair;
     extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
 	    integer *, real *, real *, integer *, real *, integer *, real *, 

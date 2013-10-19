@@ -34,7 +34,6 @@ static real c_b26 = 1.f;
     extern /* Subroutine */ int sspr_(char *, integer *, real *, real *, 
 	    integer *, real *), sspr2_(char *, integer *, real *, 
 	    real *, integer *, real *, integer *, real *);
-    extern logical lsame_(char *, char *);
     integer iinfo;
     extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
 	    integer *, real *, real *, integer *, real *, integer *, real *, 

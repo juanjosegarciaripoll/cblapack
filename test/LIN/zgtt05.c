@@ -35,7 +35,6 @@ static integer c__1 = 1;
     doublereal eps, tmp, diff, axbi;
     integer imax;
     doublereal unfl, ovfl;
-    extern logical lsame_(char *, char *);
     doublereal xnorm;
     extern doublereal dlamch_(char *);
     doublereal errbnd;

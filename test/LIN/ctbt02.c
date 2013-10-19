@@ -30,7 +30,6 @@ static complex c_b12 = {-1.f,0.f};
     /* Local variables */
     integer j;
     real eps;
-    extern logical lsame_(char *, char *);
     extern /* Subroutine */ int ctbmv_(char *, char *, char *, integer *, 
 	    integer *, complex *, integer *, complex *, integer *);
     real anorm, bnorm;

@@ -43,7 +43,6 @@ static integer c__1 = 1;
 	    cgemm_(char *, char *, integer *, integer *, integer *, complex *, 
 	     complex *, integer *, complex *, integer *, complex *, complex *, 
 	     integer *);
-    extern logical lsame_(char *, char *);
     integer iinfo;
     real anorm;
     char cuplo[1];

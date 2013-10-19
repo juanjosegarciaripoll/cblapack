@@ -90,7 +90,6 @@ static integer c__6 = 6;
     doublereal work[4224];
     logical fatal;
     char aline[72];
-    extern logical lsame_(char *, char *);
     integer nmats, nsval[12], iwork[132];
     doublereal rwork[132];
     real swork[19536];
