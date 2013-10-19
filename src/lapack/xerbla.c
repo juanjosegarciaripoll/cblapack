@@ -10,19 +10,12 @@
 		http://www.netlib.org/f2c/libf2c.zip
 */
 
+#include <stdio.h>
+#include <ctype.h>
 #include "f2c.h"
 #include "blaswrap.h"
-#include "stdio.h"
 
-/* Table of constant values */
-
-static integer c__1 = 1;
-
-/* Subroutine */ int xerbla_(char *srname, integer *info)
-{
-    
-
-/*  -- LAPACK auxiliary routine (version 3.2) -- */
+/*  -- LAPACK auxiliary routine (preliminary version) -- */
 /*     November 2006 */
 
 /*  Purpose */
@@ -46,11 +39,25 @@ static integer c__1 = 1;
 /*          of the calling routine. */
 
 /* ===================================================================== */
+#define XerblaStrLen 6
+#define XerblaStrLen1 7
 
-    printf("** On entry to %6s, parameter number %2i had an illegal value\n",
-		srname, *info);
+void xerbla_(const const char *srname, const integer *info)
+{
+   char rout[] = {'c','b','l','a','s','_','\0','\0','\0','\0','\0','\0','\0'};
 
-/*     End of XERBLA */
+   extern integer CBLAS_CallFromC;
 
-    return 0;
-} /* xerbla_ */
+   if (CBLAS_CallFromC)
+   {
+      integer i;
+      for(i=0; i != XerblaStrLen; i++) rout[i+6] = tolower(srname[i]);
+      rout[XerblaStrLen+6] = '\0';
+      cblas_xerbla(*info+1,rout,"");
+   }
+   else
+   {
+      fprintf(stderr, "Parameter %d to routine %s was incorrect\n",
+              *info, srname);
+   }
+}
