@@ -26,7 +26,6 @@
     doublecomplex temp1, temp2;
     extern logical lsame_(char *, char *);
     integer kplus1;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.1) -- */

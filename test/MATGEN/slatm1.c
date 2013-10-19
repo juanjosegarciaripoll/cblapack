@@ -23,7 +23,6 @@
     /* Local variables */
     integer i__;
     real temp, alpha;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     extern doublereal slaran_(integer *);
     extern /* Subroutine */ int slarnv_(integer *, integer *, integer *, real 
 	    *);

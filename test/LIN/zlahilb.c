@@ -44,7 +44,6 @@ static doublecomplex c_b6 = {0.,0.};
     char c2[2];
     integer ti, tm;
     doublecomplex tmp;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     extern logical lsamen_(integer *, char *, char *);
     extern /* Subroutine */ int zlaset_(char *, integer *, integer *, 
 	    doublecomplex *, doublecomplex *, doublecomplex *, integer *);

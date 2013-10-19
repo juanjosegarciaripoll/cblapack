@@ -6170,9 +6170,6 @@ extern int stzrqf_(integer *m, integer *n, real *a, integer *lda,
 extern int stzrzf_(integer *m, integer *n, real *a, integer *lda, 
 	real *tau, real *work, integer *lwork, integer *info);
 
-/* xerbla.c */
-extern int xerbla_(char *srname, integer *info);
-
 /* xerbla_array.c */
 extern int xerbla_array__(char *srname_array__, integer *
 	srname_len__, integer *info, ftnlen srname_array_len);

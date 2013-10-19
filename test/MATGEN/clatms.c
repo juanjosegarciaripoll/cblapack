@@ -62,11 +62,6 @@ static logical c_false = FALSE_;
     integer iendch, ipackg;
     extern /* Complex */ void clarnd_(complex *, integer *, integer *);
     integer minlda;
-    extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *), clartg_(complex *, 
-	    complex *, real *, complex *, complex *), xerbla_(char *, integer 
-	    *), clagsy_(integer *, integer *, real *, complex *, 
-	    integer *, integer *, complex *, integer *);
     extern doublereal slarnd_(integer *, integer *);
     extern /* Subroutine */ int clarot_(logical *, logical *, logical *, 
 	    integer *, complex *, complex *, complex *, integer *, complex *, 

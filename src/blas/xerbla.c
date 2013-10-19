@@ -42,17 +42,15 @@
 #define XerblaStrLen 6
 #define XerblaStrLen1 7
 
-int xerbla_(const char *srname, const void *vinfo)
+void xerbla_(const char *srname, const integer *info)
 {
    char rout[] = {'c','b','l','a','s','_','\0','\0','\0','\0','\0','\0','\0'};
-
-   integer *info=vinfo;
-   integer i;
 
    extern integer CBLAS_CallFromC;
 
    if (CBLAS_CallFromC)
    {
+      integer i;
       for(i=0; i != XerblaStrLen; i++) rout[i+6] = tolower(srname[i]);
       rout[XerblaStrLen+6] = '\0';
       cblas_xerbla(*info+1,rout,"");
@@ -62,5 +60,4 @@ int xerbla_(const char *srname, const void *vinfo)
       fprintf(stderr, "Parameter %d to routine %s was incorrect\n",
               *info, srname);
    }
-   return 0;
 }

@@ -55,14 +55,6 @@ static logical c_false = FALSE_;
 	    doublereal *, integer *, integer *, doublereal *, integer *);
     integer iendch, ipackg, minlda;
     extern doublereal dlarnd_(integer *, integer *);
-    extern /* Subroutine */ int dlaset_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *), 
-	    dlartg_(doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *), xerbla_(char *, integer *), dlagsy_(
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    integer *, doublereal *, integer *), dlarot_(logical *, logical *, 
-	     logical *, integer *, doublereal *, doublereal *, doublereal *, 
-	    integer *, doublereal *, doublereal *);
     logical iltemp, givens;
     integer ioffst, irsign;
     logical ilextr, topdwn;

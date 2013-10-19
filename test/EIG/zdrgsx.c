@@ -121,7 +121,6 @@ static integer c__5 = 5;
 	    doublereal *, integer *, integer *);
     extern doublereal dlamch_(char *);
     integer bdspac;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal difest[2];
     extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
 	    integer *, integer *);

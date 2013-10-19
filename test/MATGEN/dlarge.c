@@ -34,11 +34,6 @@ static doublereal c_b10 = 0.;
 	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
 	    integer *);
     extern doublereal dnrm2_(integer *, doublereal *, integer *);
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *), dgemv_(char *, integer *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *), xerbla_(char *, integer *), dlarnv_(integer *, integer *, integer *, doublereal *);
-
 
 /*  -- LAPACK auxiliary test routine (version 3.1) */
 /*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */

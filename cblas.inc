@@ -113,6 +113,7 @@ CBLAS =\
   src/cblas/cblas_strmv.c \
   src/cblas/cblas_strsm.c \
   src/cblas/cblas_strsv.c \
+  src/cblas/cblas_xerbla.x \
   src/cblas/cblas_zaxpy.c \
   src/cblas/cblas_zcopy.c \
   src/cblas/cblas_zdotc_sub.c \
@@ -145,5 +146,4 @@ CBLAS =\
   src/cblas/cblas_ztrmm.c \
   src/cblas/cblas_ztrmv.c \
   src/cblas/cblas_ztrsm.c \
-  src/cblas/cblas_ztrsv.c \
-  src/cblas/xerbla.c
+  src/cblas/cblas_ztrsv.c

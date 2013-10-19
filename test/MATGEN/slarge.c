@@ -33,12 +33,6 @@ static real c_b10 = 0.f;
     extern /* Subroutine */ int sger_(integer *, integer *, real *, real *, 
 	    integer *, real *, integer *, real *, integer *);
     extern doublereal snrm2_(integer *, real *, integer *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    sgemv_(char *, integer *, integer *, real *, real *, integer *, 
-	    real *, integer *, real *, real *, integer *), xerbla_(
-	    char *, integer *), slarnv_(integer *, integer *, integer 
-	    *, real *);
-
 
 /*  -- LAPACK auxiliary test routine (version 3.1) */
 /*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */

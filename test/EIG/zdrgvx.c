@@ -101,7 +101,6 @@ static integer c__7 = 7;
 	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
 	    doublecomplex *, doublecomplex *, doublereal *, doublereal *);
     extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal abnorm;
     extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
 	    integer *, integer *);

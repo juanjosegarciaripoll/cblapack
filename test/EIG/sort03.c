@@ -35,7 +35,6 @@ static integer c__1 = 1;
     extern /* Subroutine */ int sort01_(char *, integer *, integer *, real *, 
 	    integer *, real *, integer *, real *);
     extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     extern integer isamax_(integer *, real *, integer *);
 
 

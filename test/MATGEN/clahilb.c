@@ -44,9 +44,6 @@ static complex c_b6 = {0.f,0.f};
     char c2[2];
     integer ti, tm;
     complex tmp;
-    extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *), xerbla_(char *, 
-	    integer *);
     extern logical lsamen_(integer *, char *, char *);
 
 

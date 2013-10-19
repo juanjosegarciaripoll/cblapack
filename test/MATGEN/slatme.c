@@ -56,7 +56,7 @@ static real c_b39 = 1.f;
 	     real *);
     extern /* Subroutine */ int slarge_(integer *, real *, integer *, integer 
 	    *, real *, integer *), slarfg_(integer *, real *, real *, integer 
-	    *, real *), xerbla_(char *, integer *);
+					   *, real *);
     extern doublereal slaran_(integer *);
     integer irsign;
     extern /* Subroutine */ int slaset_(char *, integer *, integer *, real *, 

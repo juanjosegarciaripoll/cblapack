@@ -136,7 +136,6 @@ static integer c__22 = 22;
     char adumma[1*1];
     extern doublereal slamch_(char *);
     integer idumma[1], ioldsd[4];
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real rcdvin;
     extern /* Subroutine */ int slatme_(integer *, char *, integer *, real *, 
 	    integer *, real *, real *, char *, char *, char *, char *, real *, 

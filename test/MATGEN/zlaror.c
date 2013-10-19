@@ -45,7 +45,6 @@ static integer c__1 = 1;
     integer itype, nxfrm;
     doublereal xnorm;
     extern doublereal dznrm2_(integer *, doublecomplex *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal factor;
     extern /* Subroutine */ int zlacgv_(integer *, doublecomplex *, integer *)
 	    ;

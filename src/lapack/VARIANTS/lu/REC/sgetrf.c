@@ -40,7 +40,6 @@ static real c_b15 = -1.f;
 );
     integer kahead;
     extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     extern integer isamax_(integer *, real *, integer *);
     integer npived;
     extern logical sisnan_(real *);

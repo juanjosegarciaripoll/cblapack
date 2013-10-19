@@ -142,7 +142,6 @@ static integer c__22 = 22;
     extern doublereal dlamch_(char *);
     doublereal rcdein;
     integer idumma[1], ioldsd[4];
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal rcdvin;
     extern /* Subroutine */ int dlasum_(char *, integer *, integer *, integer 
 	    *), zlatme_(integer *, char *, integer *, doublecomplex *, 

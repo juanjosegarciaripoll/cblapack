@@ -43,7 +43,6 @@ doublereal zqrt14_(char *trans, integer *m, integer *n, integer *nrhs,
 	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
 	     doublecomplex *, integer *);
     extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
 	    integer *, doublereal *);
     extern /* Subroutine */ int zlascl_(char *, integer *, integer *, 

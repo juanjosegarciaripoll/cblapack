@@ -108,7 +108,6 @@ static integer c__2 = 2;
     char adumma[1*1];
     extern doublereal slamch_(char *);
     integer idumma[1];
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer ioldsd[4];
     extern /* Subroutine */ int slatme_(integer *, char *, integer *, real *, 
 	    integer *, real *, real *, char *, char *, char *, char *, real *, 

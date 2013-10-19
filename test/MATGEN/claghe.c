@@ -49,9 +49,6 @@ static integer c__1 = 1;
 	    integer *), caxpy_(integer *, complex *, complex *, 
 	    integer *, complex *, integer *);
     extern doublereal scnrm2_(integer *, complex *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), clarnv_(
-	    integer *, integer *, integer *, complex *);
-
 
 /*  -- LAPACK auxiliary test routine (version 3.1) -- */
 /*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */

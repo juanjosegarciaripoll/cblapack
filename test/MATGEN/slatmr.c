@@ -56,7 +56,6 @@ static integer c__1 = 1;
 	     integer *, real *), slange_(char *, integer *, integer *, 
 	     real *, integer *, real *);
     logical fulbnd;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     logical badpvt;
     extern doublereal slansb_(char *, char *, integer *, integer *, real *, 
 	    integer *, real *);

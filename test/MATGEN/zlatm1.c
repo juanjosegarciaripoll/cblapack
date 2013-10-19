@@ -31,7 +31,6 @@ static integer c__3 = 3;
     doublereal temp, alpha;
     doublecomplex ctemp;
     extern doublereal dlaran_(integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     extern /* Double Complex */ void zlarnd_(doublecomplex *, integer *, 
 	    integer *);
     extern /* Subroutine */ int zlarnv_(integer *, integer *, integer *, 

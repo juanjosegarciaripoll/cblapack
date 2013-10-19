@@ -101,7 +101,6 @@ static integer c__0 = 0;
 	    doublecomplex *, integer *, doublecomplex *, integer *, 
 	    doublereal *, doublereal *, integer *);
     extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer ioldsd[4];
     extern /* Subroutine */ int zgesdd_(char *, integer *, integer *, 
 	    doublecomplex *, integer *, doublereal *, doublecomplex *, 

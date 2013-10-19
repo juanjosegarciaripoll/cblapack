@@ -74,7 +74,6 @@ static integer c_n1 = -1;
 	    integer *);
     extern doublereal slamch_(char *);
     integer idumma[1];
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer ioldsd[4];
     real amninv;
     integer jwidth;

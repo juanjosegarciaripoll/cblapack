@@ -77,7 +77,6 @@ static integer c__4 = 4;
     doublereal rcnde1, rcndv1;
     extern doublereal dlamch_(char *);
     doublereal rconde;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
 	    integer *, doublereal *);
     integer knteig;

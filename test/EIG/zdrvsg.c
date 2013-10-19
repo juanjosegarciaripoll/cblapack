@@ -91,7 +91,6 @@ static integer c__3 = 3;
 	    *, integer *, doublereal *, integer *, doublereal *, integer *, 
 	    integer *);
     integer ioldsd[4];
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     doublereal abstol;
     extern /* Subroutine */ int dlasum_(char *, integer *, integer *, integer 
 	    *), zhbgvd_(char *, char *, integer *, integer *, integer 

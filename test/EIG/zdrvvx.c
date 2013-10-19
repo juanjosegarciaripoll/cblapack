@@ -131,7 +131,6 @@ static integer c__22 = 22;
     char balanc[1];
     extern doublereal dlamch_(char *);
     integer idumma[1];
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer ioldsd[4];
     extern /* Subroutine */ int dlasum_(char *, integer *, integer *, integer 
 	    *), zlatme_(integer *, char *, integer *, doublecomplex *, 

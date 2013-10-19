@@ -39,7 +39,6 @@ static integer c__1 = 1;
 	    real *, integer *, real *, real *, integer *);
     integer ixfrm, itype, nxfrm;
     real xnorm;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real factor;
     extern doublereal slarnd_(integer *, integer *);
     extern /* Subroutine */ int slaset_(char *, integer *, integer *, real *, 

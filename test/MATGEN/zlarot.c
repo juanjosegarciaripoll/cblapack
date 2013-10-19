@@ -31,7 +31,6 @@ static integer c__8 = 8;
     doublecomplex xt[2], yt[2];
     integer iyt, iinc, inext;
     doublecomplex tempx;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
 
 
 /*  -- LAPACK auxiliary test routine (version 3.1) -- */

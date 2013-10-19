@@ -44,9 +44,6 @@ static integer c__1 = 1;
     extern doublereal scnrm2_(integer *, complex *, integer *);
     extern /* Subroutine */ int clacgv_(integer *, complex *, integer *);
     extern /* Complex */ void clarnd_(complex *, integer *, integer *);
-    extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *), xerbla_(char *, 
-	    integer *);
     real factor;
     complex xnorms;
 

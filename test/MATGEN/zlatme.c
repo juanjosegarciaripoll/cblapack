@@ -59,7 +59,6 @@ static integer c__5 = 5;
 	    *), zlatm1_(integer *, doublereal *, integer *, integer *, 
 	    integer *, doublecomplex *, integer *, integer *);
     doublereal ralpha;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
 	    integer *, doublereal *);
     extern /* Subroutine */ int zdscal_(integer *, doublereal *, 

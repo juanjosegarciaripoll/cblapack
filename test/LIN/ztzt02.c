@@ -31,7 +31,6 @@ doublereal ztzt02_(integer *m, integer *n, doublecomplex *af, integer *lda,
     integer i__;
     doublereal rwork[1];
     extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
 	    integer *, doublereal *);
     extern /* Subroutine */ int zlaset_(char *, integer *, integer *, 

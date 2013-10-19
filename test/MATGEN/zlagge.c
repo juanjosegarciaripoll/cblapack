@@ -41,10 +41,6 @@ static integer c__1 = 1;
 	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
 	    integer *, doublecomplex *, doublecomplex *, integer *);
     extern doublereal dznrm2_(integer *, doublecomplex *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), zlacgv_(
-	    integer *, doublecomplex *, integer *), zlarnv_(integer *, 
-	    integer *, integer *, doublecomplex *);
-
 
 /*  -- LAPACK auxiliary test routine (version 3.1) -- */
 /*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */

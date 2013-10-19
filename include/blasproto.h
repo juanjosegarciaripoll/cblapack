@@ -478,7 +478,7 @@ extern int strsv_(char *uplo, char *trans, char *diag, integer *n,
 	real *a, integer *lda, real *x, integer *incx);
 
 /* xerbla.c */
-extern int xerbla_(const char *srname, const integer *info);
+extern void xerbla_(const char *srname, const integer *info);
 
 /* xerbla_array.c */
 extern int xerbla_array__(char *srname_array__, integer *

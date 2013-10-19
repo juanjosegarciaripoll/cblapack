@@ -113,7 +113,6 @@ static integer c__2 = 2;
     extern doublereal dznrm2_(integer *, doublecomplex *, integer *), dlamch_(
 	    char *);
     integer idumma[1];
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer ioldsd[4];
     extern /* Subroutine */ int dlasum_(char *, integer *, integer *, integer 
 	    *), zlatme_(integer *, char *, integer *, doublecomplex *, 

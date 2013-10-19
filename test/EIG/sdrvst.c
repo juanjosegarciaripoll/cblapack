@@ -96,7 +96,6 @@ static integer c__3 = 3;
     integer liwedc;
     extern doublereal slamch_(char *);
     integer idumma[1];
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer ioldsd[4];
     extern doublereal slarnd_(integer *, integer *);
     real abstol;

@@ -108,7 +108,6 @@ static integer c__11 = 11;
     integer liwedc, nblock;
     extern doublereal slamch_(char *);
     integer idumma[1];
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer ioldsd[4];
     extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
 	    integer *, integer *);

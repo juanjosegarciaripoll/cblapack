@@ -34,7 +34,6 @@ doublereal zqpt01_(integer *m, integer *n, integer *k, doublecomplex *a,
 	    doublecomplex *, integer *), zaxpy_(integer *, doublecomplex *, 
 	    doublecomplex *, integer *, doublecomplex *, integer *);
     extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
 	    integer *, doublereal *);
     extern /* Subroutine */ int zunmqr_(char *, char *, integer *, integer *, 

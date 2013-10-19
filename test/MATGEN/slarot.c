@@ -33,7 +33,6 @@ static integer c__1 = 1;
     extern /* Subroutine */ int srot_(integer *, real *, integer *, real *, 
 	    integer *, real *, real *);
     integer inext;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
 
 
 /*  -- LAPACK auxiliary test routine (version 3.1) -- */

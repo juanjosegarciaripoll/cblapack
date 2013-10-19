@@ -32,7 +32,6 @@ static integer c__3 = 3;
     real temp, alpha;
     complex ctemp;
     extern /* Complex */ void clarnd_(complex *, integer *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     extern doublereal slaran_(integer *);
     extern /* Subroutine */ int clarnv_(integer *, integer *, integer *, 
 	    complex *);

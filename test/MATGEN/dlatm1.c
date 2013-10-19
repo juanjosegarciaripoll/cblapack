@@ -25,9 +25,6 @@
     integer i__;
     doublereal temp, alpha;
     extern doublereal dlaran_(integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), dlarnv_(
-	    integer *, integer *, integer *, doublereal *);
-
 
 /*  -- LAPACK auxiliary test routine (version 3.1) -- */
 /*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */

@@ -131,7 +131,6 @@ static integer c__22 = 22;
     extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 
 	    *, complex *, complex *, integer *);
     integer idumma[1];
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer ioldsd[4];
     extern /* Subroutine */ int clatmr_(integer *, integer *, char *, integer 
 	    *, char *, complex *, integer *, real *, complex *, char *, char *

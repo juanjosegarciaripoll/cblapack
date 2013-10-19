@@ -102,7 +102,6 @@ static integer c__4 = 4;
 	    , sgebrd_(integer *, integer *, real *, integer *, real *, real *, 
 	     real *, real *, real *, integer *, integer *);
     extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer ioldsd[4];
     extern /* Subroutine */ int alasum_(char *, integer *, integer *, integer 
 	    *, integer *);

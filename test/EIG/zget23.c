@@ -67,7 +67,6 @@ static integer c__4 = 4;
     doublereal tolin, abnrm1;
     extern doublereal dznrm2_(integer *, doublecomplex *, integer *), dlamch_(
 	    char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer isensm;
     doublereal vricmp;
     extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 

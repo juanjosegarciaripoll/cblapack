@@ -41,7 +41,6 @@ static integer c__1 = 1;
     integer nstep, kahead;
     extern integer icamax_(integer *, complex *, integer *);
     extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     real pivmag;
     integer npived;
     extern /* Subroutine */ int claswp_(integer *, complex *, integer *, 

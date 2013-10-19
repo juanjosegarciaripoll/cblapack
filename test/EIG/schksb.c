@@ -85,7 +85,6 @@ static integer c__4 = 4;
     logical badnnb;
     extern doublereal slamch_(char *);
     integer idumma[1], ioldsd[4];
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer jwidth;
     extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
 	    integer *, real *, integer *), slaset_(char *, integer *, 

@@ -28,10 +28,6 @@ static doublereal c_b4 = 0.;
     /* Local variables */
     integer i__, j, m, r__, ti, tm;
     doublereal tmp;
-    extern /* Subroutine */ int dlaset_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *), 
-	    xerbla_(char *, integer *);
-
 
 /*  -- LAPACK auxiliary test routine (version 3.0) -- */
 /*     Univ. of Tennessee, Univ. of California Berkeley, NAG Ltd., */

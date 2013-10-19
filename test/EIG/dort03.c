@@ -36,7 +36,6 @@ static integer c__1 = 1;
 	    doublereal *, integer *, doublereal *, integer *, doublereal *);
     extern doublereal dlamch_(char *);
     extern integer idamax_(integer *, doublereal *, integer *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

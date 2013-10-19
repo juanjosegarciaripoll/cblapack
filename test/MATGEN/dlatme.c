@@ -64,10 +64,6 @@ static doublereal c_b39 = 1.;
 	    integer *, doublereal *, integer *), dlarfg_(integer *, 
 	    doublereal *, doublereal *, integer *, doublereal *);
     extern doublereal dlaran_(integer *);
-    extern /* Subroutine */ int dlaset_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *), 
-	    xerbla_(char *, integer *), dlarnv_(integer *, integer *, 
-	    integer *, doublereal *);
     integer irsign, iupper;
     doublereal xnorms;
 

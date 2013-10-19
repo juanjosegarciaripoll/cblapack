@@ -37,7 +37,6 @@ static integer c__1 = 1;
 	    *, integer *, complex *, integer *, real *, real *);
     extern integer icamax_(integer *, complex *, integer *);
     extern doublereal slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

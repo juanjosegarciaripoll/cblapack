@@ -133,7 +133,6 @@ static integer c__11 = 11;
     extern /* Subroutine */ int dstech_(integer *, doublereal *, doublereal *, 
 	     doublereal *, doublereal *, doublereal *, integer *);
     integer idumma[1];
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer ioldsd[4];
     extern integer ilaenv_(integer *, char *, char *, integer *, integer *, 
 	    integer *, integer *);

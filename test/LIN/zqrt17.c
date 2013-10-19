@@ -46,7 +46,6 @@ doublereal zqrt17_(char *trans, integer *iresid, integer *m, integer *n,
     doublereal normx, rwork[1];
     integer nrows;
     extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
 	    integer *, doublereal *);
     doublereal bignum;

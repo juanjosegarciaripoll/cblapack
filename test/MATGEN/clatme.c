@@ -65,10 +65,6 @@ static integer c__5 = 5;
 	    integer *);
     extern /* Complex */ void clarnd_(complex *, integer *, integer *);
     real ralpha;
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *), claset_(char *, integer *, integer *, complex *, complex *, 
-	    complex *, integer *), xerbla_(char *, integer *),
-	     clarnv_(integer *, integer *, integer *, complex *);
     integer irsign, iupper;
     complex xnorms;
 

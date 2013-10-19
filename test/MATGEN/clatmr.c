@@ -62,7 +62,6 @@ static integer c__1 = 1;
     extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
 	    *);
     logical fulbnd;
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     logical badpvt;
     extern doublereal clansp_(char *, char *, integer *, complex *, real *), clansy_(char *, char *, integer *, complex *, 
 	    integer *, real *);

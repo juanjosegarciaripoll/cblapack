@@ -38,13 +38,6 @@ static real c_b26 = 1.f;
     extern /* Subroutine */ int ssyr2_(char *, integer *, real *, real *, 
 	    integer *, real *, integer *, real *, integer *);
     real alpha;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    sgemv_(char *, integer *, integer *, real *, real *, integer *, 
-	    real *, integer *, real *, real *, integer *), saxpy_(
-	    integer *, real *, real *, integer *, real *, integer *), ssymv_(
-	    char *, integer *, real *, real *, integer *, real *, integer *, 
-	    real *, real *, integer *), xerbla_(char *, integer *), slarnv_(integer *, integer *, integer *, real *);
-
 
 /*  -- LAPACK auxiliary test routine (version 3.1) */
 /*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */

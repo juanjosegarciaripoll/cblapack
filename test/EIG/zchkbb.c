@@ -80,7 +80,6 @@ static integer c_n1 = -1;
 	    integer *, doublecomplex *, integer *, doublecomplex *, 
 	    doublereal *, integer *);
     integer idumma[1];
-    extern /* Subroutine */ int xerbla_(char *, integer *);
     integer ioldsd[4];
     extern /* Subroutine */ int dlasum_(char *, integer *, integer *, integer 
 	    *);

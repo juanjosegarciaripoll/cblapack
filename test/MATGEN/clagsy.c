@@ -48,10 +48,6 @@ static integer c__1 = 1;
 	    complex *, complex *, integer *, complex *, integer *, complex *, 
 	    complex *, integer *);
     extern doublereal scnrm2_(integer *, complex *, integer *);
-    extern /* Subroutine */ int clacgv_(integer *, complex *, integer *), 
-	    xerbla_(char *, integer *), clarnv_(integer *, integer *, 
-	    integer *, complex *);
-
 
 /*  -- LAPACK auxiliary test routine (version 3.1) -- */
 /*     Univ. of Tennessee, Univ. of California Berkeley and NAG Ltd.. */

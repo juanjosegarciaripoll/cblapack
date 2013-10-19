@@ -59,11 +59,6 @@ static logical c_false = FALSE_;
 	    integer *, integer *, doublereal *, integer *, integer *);
     integer iendch, ipackg, minlda;
     extern doublereal dlarnd_(integer *, integer *);
-    extern /* Subroutine */ int zlagge_(integer *, integer *, integer *, 
-	    integer *, doublereal *, doublecomplex *, integer *, integer *, 
-	    doublecomplex *, integer *), zlaghe_(integer *, integer *, 
-	    doublereal *, doublecomplex *, integer *, integer *, 
-	    doublecomplex *, integer *), xerbla_(char *, integer *);
     logical iltemp, givens;
     integer ioffst, irsign;
     extern /* Double Complex */ void zlarnd_(doublecomplex *, integer *, 
