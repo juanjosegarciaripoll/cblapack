@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 void cblas_zhemv(const enum CBLAS_ORDER order,
                  const enum CBLAS_UPLO Uplo, const int N,
                  const void *alpha, const void *A, const int lda,
@@ -21,14 +21,10 @@ void cblas_zhemv(const enum CBLAS_ORDER order,
 #else
    #define F77_UL &UL   
 #endif
-#ifdef F77_INT
-   F77_INT F77_N=N, F77_lda=lda, F77_incX=incX, F77_incY=incY;
-#else
    #define F77_N N
    #define F77_lda lda
    #define F77_incX incx
    #define F77_incY incY
-#endif
    int n, i=0, incx=incX;
    const double *xx= (double *)X, *alp= (double *)alpha, *bet = (double *)beta;
    double ALPHA[2],BETA[2];
@@ -54,7 +50,7 @@ void cblas_zhemv(const enum CBLAS_ORDER order,
       #ifdef F77_CHAR
          F77_UL = C2F_CHAR(&UL);
       #endif
-      F77_zhemv(F77_UL, &F77_N, alpha, A, &F77_lda, X, &F77_incX, 
+      zhemv_(F77_UL, &F77_N, alpha, A, &F77_lda, X, &F77_incX, 
                 beta, Y, &F77_incY);
    }
    else if (order == CblasRowMajor)
@@ -93,11 +89,7 @@ void cblas_zhemv(const enum CBLAS_ORDER order,
          x=tx;
 
 
-         #ifdef F77_INT
-            F77_incX = 1;
-         #else
             incx = 1;
-         #endif
  
          if(incY > 0)
            tincY = incY;
@@ -129,7 +121,7 @@ void cblas_zhemv(const enum CBLAS_ORDER order,
       #ifdef F77_CHAR
          F77_UL = C2F_CHAR(&UL);
       #endif
-      F77_zhemv(F77_UL, &F77_N, ALPHA, A, &F77_lda, x, &F77_incX, 
+      zhemv_(F77_UL, &F77_N, ALPHA, A, &F77_lda, x, &F77_incX, 
                 BETA, Y, &F77_incY);
    }
    else 

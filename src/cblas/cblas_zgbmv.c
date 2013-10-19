@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 void cblas_zgbmv(const enum CBLAS_ORDER order,
                  const enum CBLAS_TRANSPOSE TransA, const int M, const int N,
                  const int KL, const int KU,
@@ -22,10 +22,6 @@ void cblas_zgbmv(const enum CBLAS_ORDER order,
 #else
    #define F77_TA &TA   
 #endif
-#ifdef F77_INT
-   F77_INT F77_M=M, F77_N=N, F77_lda=lda, F77_incX=incX, F77_incY=incY;
-   F77_INT F77_KL=KL,F77_KU=KU;
-#else
    #define F77_M M
    #define F77_N N
    #define F77_lda lda
@@ -33,7 +29,6 @@ void cblas_zgbmv(const enum CBLAS_ORDER order,
    #define F77_KU KU
    #define F77_incX incx
    #define F77_incY incY
-#endif
    int n, i=0, incx=incX;
    const double *xx= (double *)X, *alp= (double *)alpha, *bet = (double *)beta;
    double ALPHA[2],BETA[2];
@@ -59,7 +54,7 @@ void cblas_zgbmv(const enum CBLAS_ORDER order,
       #ifdef F77_CHAR
          F77_TA = C2F_CHAR(&TA);
       #endif
-      F77_zgbmv(F77_TA, &F77_M, &F77_N, &F77_KL, &F77_KU, alpha,  
+      zgbmv_(F77_TA, &F77_M, &F77_N, &F77_KL, &F77_KU, alpha,  
                      A, &F77_lda, X, &F77_incX, beta, Y, &F77_incY);
    }
    else if (order == CblasRowMajor)
@@ -100,11 +95,7 @@ void cblas_zgbmv(const enum CBLAS_ORDER order,
             while (x != st);
             x=tx;
 
-            #ifdef F77_INT
-               F77_incX = 1;
-            #else
                incx = 1;
-            #endif
 
             if( incY > 0 )
               tincY = incY;
@@ -140,10 +131,10 @@ void cblas_zgbmv(const enum CBLAS_ORDER order,
          F77_TA = C2F_CHAR(&TA);
       #endif
       if (TransA == CblasConjTrans)
-         F77_zgbmv(F77_TA, &F77_N, &F77_M, &F77_KU, &F77_KL, ALPHA, 
+         zgbmv_(F77_TA, &F77_N, &F77_M, &F77_KU, &F77_KL, ALPHA, 
                         A ,&F77_lda, x,&F77_incX, BETA, Y, &F77_incY);
       else
-         F77_zgbmv(F77_TA, &F77_N, &F77_M, &F77_KU, &F77_KL, alpha, 
+         zgbmv_(F77_TA, &F77_N, &F77_M, &F77_KU, &F77_KL, alpha, 
                         A ,&F77_lda, x,&F77_incX, beta, Y, &F77_incY);
       if (TransA == CblasConjTrans)
       {

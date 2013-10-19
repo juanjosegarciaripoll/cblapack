@@ -8,20 +8,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 void cblas_zgerc(const enum CBLAS_ORDER order, const int M, const int N,
                  const void *alpha, const void *X, const int incX,
                  const void *Y, const int incY, void *A, const int lda)
 {
-#ifdef F77_INT
-   F77_INT F77_M=M, F77_N=N, F77_lda=lda, F77_incX=incX, F77_incY=incY;
-#else
    #define F77_M M
    #define F77_N N
    #define F77_incX incX
    #define F77_incY incy
    #define F77_lda lda   
-#endif
 
    int n, i, tincy, incy=incY;
    double *y=(double *)Y, *yy=(double *)Y, *ty, *st;
@@ -33,7 +29,7 @@ void cblas_zgerc(const enum CBLAS_ORDER order, const int M, const int N,
    CBLAS_CallFromC = 1;
    if (order == CblasColMajor)
    {
-      F77_zgerc( &F77_M, &F77_N, alpha, X, &F77_incX, Y, &F77_incY, A, 
+      zgerc_( &F77_M, &F77_N, alpha, X, &F77_incX, Y, &F77_incY, A, 
                       &F77_lda);
    }  else if (order == CblasRowMajor)   
    {
@@ -64,15 +60,11 @@ void cblas_zgerc(const enum CBLAS_ORDER order, const int M, const int N,
          while (y != st);
          y = ty;
 
-         #ifdef F77_INT
-            F77_incY = 1;
-         #else
             incy = 1;
-         #endif
       }
       else y = (double *) Y;
 
-      F77_zgeru( &F77_N, &F77_M, alpha, y, &F77_incY, X, &F77_incX, A, 
+      zgeru_( &F77_N, &F77_M, alpha, y, &F77_incY, X, &F77_incX, A, 
                       &F77_lda);
       if(Y!=y)
          free(y);

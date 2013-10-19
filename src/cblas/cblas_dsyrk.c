@@ -8,7 +8,7 @@
  */
 
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 void cblas_dsyrk(const enum CBLAS_ORDER Order, const enum CBLAS_UPLO Uplo,
                  const enum CBLAS_TRANSPOSE Trans, const int N, const int K,
                  const double alpha, const double  *A, const int lda,
@@ -22,15 +22,10 @@ void cblas_dsyrk(const enum CBLAS_ORDER Order, const enum CBLAS_UPLO Uplo,
    #define F77_UL &UL  
 #endif
 
-#ifdef F77_INT
-   F77_INT F77_N=N, F77_K=K, F77_lda=lda;
-   F77_INT F77_ldc=ldc;
-#else
    #define F77_N N
    #define F77_K K
    #define F77_lda lda
    #define F77_ldc ldc
-#endif
 
    extern int CBLAS_CallFromC;
    extern int RowMajorStrg;
@@ -67,7 +62,7 @@ void cblas_dsyrk(const enum CBLAS_ORDER Order, const enum CBLAS_UPLO Uplo,
          F77_TR = C2F_CHAR(&TR);
       #endif
 
-      F77_dsyrk(F77_UL, F77_TR, &F77_N, &F77_K, &alpha, A, &F77_lda,
+      dsyrk_(F77_UL, F77_TR, &F77_N, &F77_K, &alpha, A, &F77_lda,
                 &beta, C, &F77_ldc);
    } else if (Order == CblasRowMajor)
    {
@@ -97,7 +92,7 @@ void cblas_dsyrk(const enum CBLAS_ORDER Order, const enum CBLAS_UPLO Uplo,
          F77_TR = C2F_CHAR(&TR);
       #endif
 
-      F77_dsyrk(F77_UL, F77_TR, &F77_N, &F77_K, &alpha, A, &F77_lda,
+      dsyrk_(F77_UL, F77_TR, &F77_N, &F77_K, &alpha, A, &F77_lda,
                      &beta, C, &F77_ldc);
    } 
    else cblas_xerbla(1, "cblas_dsyrk","Illegal Order setting, %d\n", Order);

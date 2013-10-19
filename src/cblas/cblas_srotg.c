@@ -7,8 +7,8 @@
  *
  */
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 void cblas_srotg(  float *a, float *b, float *c, float *s)
 {
-   F77_srotg(a,b,c,s);    
+   srotg_(a,b,c,s);    
 }

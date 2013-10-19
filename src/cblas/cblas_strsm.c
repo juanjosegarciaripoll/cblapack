@@ -8,7 +8,7 @@
  */
 
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 void cblas_strsm(const enum CBLAS_ORDER Order, const enum CBLAS_SIDE Side,
                  const enum CBLAS_UPLO Uplo, const enum CBLAS_TRANSPOSE TransA,
                  const enum CBLAS_DIAG Diag, const int M, const int N,
@@ -26,14 +26,10 @@ void cblas_strsm(const enum CBLAS_ORDER Order, const enum CBLAS_SIDE Side,
    #define F77_DI &DI
 #endif
 
-#ifdef F77_INT
-   F77_INT F77_N=M, F77_N=N, F77_lda=lda, F77_ldb=ldb;
-#else
    #define F77_M M
    #define F77_N N
    #define F77_lda lda
    #define F77_ldb ldb
-#endif
 
    extern int CBLAS_CallFromC;
    extern int RowMajorStrg;
@@ -86,7 +82,7 @@ void cblas_strsm(const enum CBLAS_ORDER Order, const enum CBLAS_SIDE Side,
          F77_DI = C2F_CHAR(&DI);
       #endif
 
-      F77_strsm(F77_SD, F77_UL, F77_TA, F77_DI, &F77_M, &F77_N, &alpha, A, &F77_lda, B, &F77_ldb);
+      strsm_(F77_SD, F77_UL, F77_TA, F77_DI, &F77_M, &F77_N, &alpha, A, &F77_lda, B, &F77_ldb);
    } else if (Order == CblasRowMajor)
    {
       RowMajorStrg = 1;
@@ -134,7 +130,7 @@ void cblas_strsm(const enum CBLAS_ORDER Order, const enum CBLAS_SIDE Side,
          F77_DI = C2F_CHAR(&DI);
       #endif
 
-      F77_strsm(F77_SD, F77_UL, F77_TA, F77_DI, &F77_N, &F77_M, &alpha, A, &F77_lda, B, &F77_ldb);
+      strsm_(F77_SD, F77_UL, F77_TA, F77_DI, &F77_N, &F77_M, &alpha, A, &F77_lda, B, &F77_ldb);
    } 
    else  cblas_xerbla(1, "cblas_strsm", "Illegal Order setting, %d\n", Order);
    CBLAS_CallFromC = 0;

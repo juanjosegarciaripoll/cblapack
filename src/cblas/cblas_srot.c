@@ -7,16 +7,12 @@
  *
  */
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 void cblas_srot( const int N, float *X, const int incX, float *Y, 
                       const int incY, const float  c, const float  s)
 {
-#ifdef F77_INT
-   F77_INT F77_N=N, F77_incX=incX, F77_incY=incY;
-#else
    #define F77_N N
    #define F77_incX incX
    #define F77_incY incY
-#endif
-   F77_srot(&F77_N, X, &F77_incX, Y, &F77_incY, &c, &s);
+   srot_(&F77_N, X, &F77_incX, Y, &F77_incY, &c, &s);
 }  

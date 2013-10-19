@@ -8,7 +8,7 @@
  */
 
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 void cblas_ssymm(const enum CBLAS_ORDER Order, const enum CBLAS_SIDE Side,
                  const enum CBLAS_UPLO Uplo, const int M, const int N,
                  const float alpha, const float  *A, const int lda,
@@ -23,16 +23,11 @@ void cblas_ssymm(const enum CBLAS_ORDER Order, const enum CBLAS_SIDE Side,
    #define F77_UL &UL  
 #endif
 
-#ifdef F77_INT
-   F77_INT F77_M=M, F77_N=N, F77_lda=lda, F77_ldb=ldb;
-   F77_INT F77_ldc=ldc;
-#else
    #define F77_M M
    #define F77_N N
    #define F77_lda lda
    #define F77_ldb ldb
    #define F77_ldc ldc
-#endif
 
    extern int CBLAS_CallFromC;
    extern int RowMajorStrg;
@@ -68,7 +63,7 @@ void cblas_ssymm(const enum CBLAS_ORDER Order, const enum CBLAS_SIDE Side,
          F77_SD = C2F_CHAR(&SD);
       #endif
 
-      F77_ssymm(F77_SD, F77_UL, &F77_M, &F77_N, &alpha, A, &F77_lda, B, &F77_ldb, &beta, C, &F77_ldc);
+      ssymm_(F77_SD, F77_UL, &F77_M, &F77_N, &alpha, A, &F77_lda, B, &F77_ldb, &beta, C, &F77_ldc);
    } else if (Order == CblasRowMajor)
    {
       RowMajorStrg = 1;
@@ -99,7 +94,7 @@ void cblas_ssymm(const enum CBLAS_ORDER Order, const enum CBLAS_SIDE Side,
          F77_SD = C2F_CHAR(&SD);
       #endif
 
-      F77_ssymm(F77_SD, F77_UL, &F77_N, &F77_M, &alpha, A, &F77_lda, B, &F77_ldb, &beta, C, &F77_ldc);
+      ssymm_(F77_SD, F77_UL, &F77_N, &F77_M, &alpha, A, &F77_lda, B, &F77_ldb, &beta, C, &F77_ldc);
    } else  cblas_xerbla(1, "cblas_ssymm",
                      "Illegal Order setting, %d\n", Order);
    CBLAS_CallFromC = 0;

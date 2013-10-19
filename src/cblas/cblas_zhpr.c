@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 void cblas_zhpr(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
                 const int N, const double alpha, const void *X,
                 const int incX, void *A)
@@ -20,12 +20,8 @@ void cblas_zhpr(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
    #define F77_UL &UL
 #endif
 
-#ifdef F77_INT
-   F77_INT F77_N=N, F77_incX=incX;
-#else
    #define F77_N N
    #define F77_incX incx
-#endif
    int n, i, tincx, incx=incX;
    double *x=(double *)X, *xx=(double *)X, *tx, *st;
 
@@ -49,7 +45,7 @@ void cblas_zhpr(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
          F77_UL = C2F_CHAR(&UL);
       #endif
 
-      F77_zhpr(F77_UL, &F77_N, &alpha, X, &F77_incX, A);
+      zhpr_(F77_UL, &F77_N, &alpha, X, &F77_incX, A);
 
    }  else if (order == CblasRowMajor)
    {
@@ -90,15 +86,11 @@ void cblas_zhpr(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
          }
          while (x != st);
          x=tx;
-         #ifdef F77_INT
-            F77_incX = 1;
-         #else
             incx = 1;
-         #endif
       }
       else x = (double *) X;
 
-      F77_zhpr(F77_UL, &F77_N, &alpha, x, &F77_incX, A);
+      zhpr_(F77_UL, &F77_N, &alpha, x, &F77_incX, A);
 
    } else 
    {

@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 void cblas_zhpr2(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
                       const int N,const void *alpha, const void *X, 
                       const int incX,const void *Y, const int incY, void *Ap)
@@ -21,13 +21,9 @@ void cblas_zhpr2(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
    #define F77_UL &UL
 #endif
 
-#ifdef F77_INT
-   F77_INT F77_N=N,  F77_incX=incX, F77_incY=incY;
-#else
    #define F77_N N
    #define F77_incX incx
    #define F77_incY incy
-#endif
    int n, i, j, incx=incX, incy=incY;
    double *x=(double *)X, *xx=(double *)X, *y=(double *)Y,
          *yy=(double *)Y, *stx, *sty;
@@ -52,7 +48,7 @@ void cblas_zhpr2(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
          F77_UL = C2F_CHAR(&UL);
       #endif
 
-      F77_zhpr2(F77_UL, &F77_N, alpha, X, &F77_incX, Y, &F77_incY, Ap);
+      zhpr2_(F77_UL, &F77_N, alpha, X, &F77_incX, Y, &F77_incY, Ap);
 
    }  else if (order == CblasRowMajor)
    {
@@ -103,18 +99,6 @@ void cblas_zhpr2(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
          x -= n;
          y -= n;
 
-         #ifdef F77_INT
-            if(incX > 0 )
-               F77_incX = 1;
-            else
-               F77_incX = -1;
- 
-            if(incY > 0 )
-               F77_incY = 1;
-            else
-               F77_incY = -1;
- 
-         #else
             if(incX > 0 )
                incx = 1;
             else
@@ -124,14 +108,13 @@ void cblas_zhpr2(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
                incy = 1;
             else
                incy = -1;
-         #endif
 
       }  else 
       {
          x = (double *) X;
          y = (void  *) Y;
       }
-      F77_zhpr2(F77_UL, &F77_N, alpha, y, &F77_incY, x, &F77_incX, Ap);
+      zhpr2_(F77_UL, &F77_N, alpha, y, &F77_incY, x, &F77_incX, Ap);
    } 
    else 
    {

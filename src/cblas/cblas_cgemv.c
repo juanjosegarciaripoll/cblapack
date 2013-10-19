@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 void cblas_cgemv(const enum CBLAS_ORDER order,
                  const enum CBLAS_TRANSPOSE TransA, const int M, const int N,
                  const void *alpha, const void  *A, const int lda,
@@ -21,15 +21,11 @@ void cblas_cgemv(const enum CBLAS_ORDER order,
 #else
    #define F77_TA &TA   
 #endif
-#ifdef F77_INT
-   F77_INT F77_M=M, F77_N=N, F77_lda=lda, F77_incX=incX, F77_incY=incY;
-#else
    #define F77_M M
    #define F77_N N
    #define F77_lda lda
    #define F77_incX incx
    #define F77_incY incY
-#endif
 
    int n=0, i=0, incx=incX;
    const float *xx= (const float *)X;
@@ -58,7 +54,7 @@ void cblas_cgemv(const enum CBLAS_ORDER order,
       #ifdef F77_CHAR
          F77_TA = C2F_CHAR(&TA);
       #endif
-      F77_cgemv(F77_TA, &F77_M, &F77_N, alpha, A, &F77_lda, X, &F77_incX, 
+      cgemv_(F77_TA, &F77_M, &F77_N, alpha, A, &F77_lda, X, &F77_incX, 
                 beta, Y, &F77_incY);
    }
    else if (order == CblasRowMajor)
@@ -135,10 +131,10 @@ void cblas_cgemv(const enum CBLAS_ORDER order,
          F77_TA = C2F_CHAR(&TA);
       #endif
       if (TransA == CblasConjTrans)
-         F77_cgemv(F77_TA, &F77_N, &F77_M, ALPHA, A, &F77_lda, stx,
+         cgemv_(F77_TA, &F77_N, &F77_M, ALPHA, A, &F77_lda, stx,
                 &F77_incX, BETA, Y, &F77_incY);
       else
-         F77_cgemv(F77_TA, &F77_N, &F77_M, alpha, A, &F77_lda, x,
+         cgemv_(F77_TA, &F77_N, &F77_M, alpha, A, &F77_lda, x,
                 &F77_incX, beta, Y, &F77_incY);
 
       if (TransA == CblasConjTrans)

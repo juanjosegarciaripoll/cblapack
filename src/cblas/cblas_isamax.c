@@ -8,16 +8,12 @@
  *
  */
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 CBLAS_INDEX cblas_isamax( const int N, const float *X, const int incX)
 {
    int iamax;
-#ifdef F77_INT
-   F77_INT F77_N=N, F77_incX=incX;
-#else 
    #define F77_N N
    #define F77_incX incX
-#endif
-   F77_isamax_sub( &F77_N, X, &F77_incX, &iamax);
+   isamax_sub_( &F77_N, X, &F77_incX, &iamax);
    return iamax ? iamax-1 : 0;
 }

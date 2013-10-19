@@ -7,9 +7,9 @@
  *
  */
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 void cblas_srotmg( float *d1, float *d2, float *b1, 
                         const float b2, float *p)
 {
-   F77_srotmg(d1,d2,b1,&b2,p);
+   srotmg_(d1,d2,b1,&b2,p);
 }

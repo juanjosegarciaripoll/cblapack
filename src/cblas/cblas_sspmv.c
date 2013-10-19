@@ -7,7 +7,7 @@
  *
  */
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 void cblas_sspmv(const enum CBLAS_ORDER order,
                  const enum CBLAS_UPLO Uplo, const int N,
                  const float alpha, const float  *AP,
@@ -20,13 +20,9 @@ void cblas_sspmv(const enum CBLAS_ORDER order,
 #else
    #define F77_UL &UL   
 #endif
-#ifdef F77_INT
-   F77_INT F77_N=N, F77_incX=incX, F77_incY=incY;
-#else
    #define F77_N N
    #define F77_incX incX
    #define F77_incY incY
-#endif
    extern int CBLAS_CallFromC;
    extern int RowMajorStrg;
    RowMajorStrg = 0;
@@ -46,7 +42,7 @@ void cblas_sspmv(const enum CBLAS_ORDER order,
       #ifdef F77_CHAR
          F77_UL = C2F_CHAR(&UL);
       #endif
-      F77_sspmv(F77_UL, &F77_N, &alpha, AP, X,  
+      sspmv_(F77_UL, &F77_N, &alpha, AP, X,  
                      &F77_incX, &beta, Y, &F77_incY);
    }
    else if (order == CblasRowMajor)
@@ -64,7 +60,7 @@ void cblas_sspmv(const enum CBLAS_ORDER order,
       #ifdef F77_CHAR
          F77_UL = C2F_CHAR(&UL);
       #endif
-      F77_sspmv(F77_UL, &F77_N, &alpha, 
+      sspmv_(F77_UL, &F77_N, &alpha, 
                      AP, X,&F77_incX, &beta, Y, &F77_incY);
    }
    else cblas_xerbla(1, "cblas_sspmv", "Illegal Order setting, %d\n", order);

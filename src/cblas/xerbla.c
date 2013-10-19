@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <ctype.h>
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 
 #define XerblaStrLen 6
 #define XerblaStrLen1 7
 
 #ifdef F77_CHAR
-void F77_xerbla(F77_CHAR F77_srname, void *vinfo)
+void xerbla_(F77_CHAR F77_srname, void *vinfo)
 #else
-void F77_xerbla(char *srname, void *vinfo)
+void xerbla_(char *srname, void *vinfo)
 #endif
 
 {
@@ -19,13 +19,8 @@ void F77_xerbla(char *srname, void *vinfo)
 
    char rout[] = {'c','b','l','a','s','_','\0','\0','\0','\0','\0','\0','\0'};
 
-#ifdef F77_INT
-   F77_INT *info=vinfo;
-   F77_INT i;
-#else
    int *info=vinfo;
    int i;
-#endif
 
    extern int CBLAS_CallFromC;
 

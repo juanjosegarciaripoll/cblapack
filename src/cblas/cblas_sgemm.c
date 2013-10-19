@@ -8,7 +8,7 @@
  */
 
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 void cblas_sgemm(const enum CBLAS_ORDER Order, const enum CBLAS_TRANSPOSE TransA,
                  const enum CBLAS_TRANSPOSE TransB, const int M, const int N,
                  const int K, const float alpha, const float  *A,
@@ -23,17 +23,12 @@ void cblas_sgemm(const enum CBLAS_ORDER Order, const enum CBLAS_TRANSPOSE TransA
    #define F77_TB &TB  
 #endif
 
-#ifdef F77_INT
-   F77_INT F77_M=M, F77_N=N, F77_K=K, F77_lda=lda, F77_ldb=ldb;
-   F77_INT F77_ldc=ldc;
-#else
    #define F77_M M
    #define F77_N N
    #define F77_K K
    #define F77_lda lda
    #define F77_ldb ldb
    #define F77_ldc ldc
-#endif
    
    extern int CBLAS_CallFromC;
    extern int RowMajorStrg;
@@ -70,7 +65,7 @@ void cblas_sgemm(const enum CBLAS_ORDER Order, const enum CBLAS_TRANSPOSE TransA
          F77_TB = C2F_CHAR(&TB);
       #endif
 
-      F77_sgemm(F77_TA, F77_TB, &F77_M, &F77_N, &F77_K, &alpha, A, &F77_lda, B, &F77_ldb, &beta, C, &F77_ldc);
+      sgemm_(F77_TA, F77_TB, &F77_M, &F77_N, &F77_K, &alpha, A, &F77_lda, B, &F77_ldb, &beta, C, &F77_ldc);
    } else if (Order == CblasRowMajor)
    {
       RowMajorStrg = 1;
@@ -101,7 +96,7 @@ void cblas_sgemm(const enum CBLAS_ORDER Order, const enum CBLAS_TRANSPOSE TransA
          F77_TB = C2F_CHAR(&TB);
       #endif
 
-      F77_sgemm(F77_TA, F77_TB, &F77_N, &F77_M, &F77_K, &alpha, B, &F77_ldb, A, &F77_lda, &beta, C, &F77_ldc);
+      sgemm_(F77_TA, F77_TB, &F77_N, &F77_M, &F77_K, &alpha, B, &F77_ldb, A, &F77_lda, &beta, C, &F77_ldc);
    } else  
      cblas_xerbla(1, "cblas_sgemm",
                      "Illegal Order setting, %d\n", Order);

@@ -8,16 +8,12 @@
  *
  */
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 float cblas_snrm2( const int N, const float *X, const int incX) 
 {
    float nrm2;
-#ifdef F77_INT
-   F77_INT F77_N=N, F77_incX=incX;
-#else 
    #define F77_N N
    #define F77_incX incX
-#endif
-   F77_snrm2_sub( &F77_N, X, &F77_incX, &nrm2);
+   snrm2_sub_( &F77_N, X, &F77_incX, &nrm2);
    return nrm2;
 }

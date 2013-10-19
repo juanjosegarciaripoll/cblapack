@@ -8,17 +8,13 @@
  *
  */
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 void cblas_zdotc_sub( const int N, const void *X, const int incX,
                     const void *Y, const int incY, void *dotc)
 {
-#ifdef F77_INT
-   F77_INT F77_N=N, F77_incX=incX, F77_incY=incY;
-#else 
    #define F77_N N
    #define F77_incX incX
    #define F77_incY incY
-#endif
-   F77_zdotc_sub( &F77_N, X, &F77_incX, Y, &F77_incY, dotc);
+   zdotc_sub_( &F77_N, X, &F77_incX, Y, &F77_incY, dotc);
    return;
 }

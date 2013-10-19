@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdarg.h>
 #include "cblas.h"
-#include "cblas_f77.h"
+#include "blaswrap.h"
 
 void cblas_xerbla(int info, const char *rout, const char *form, ...)
 {
@@ -63,6 +63,6 @@ void cblas_xerbla(int info, const char *rout, const char *form, ...)
    vfprintf(stderr, form, argptr);
    va_end(argptr);
    if (info && !info) 
-      F77_xerbla(empty, &info); /* Force link of our F77 error handler */
+      xerbla_(empty, &info); /* Force link of our F77 error handler */
    exit(-1);
 }
