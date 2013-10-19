@@ -9,6 +9,7 @@ SUBDIRS = test
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
 include blas.inc
+include cblas.inc
 include lapack.inc
 
 #
@@ -16,7 +17,7 @@ include lapack.inc
 #
 lib_LTLIBRARIES = libcblapack.la
 
-libcblapack_la_SOURCES = $(BLAS) $(LAPACK)
+libcblapack_la_SOURCES = $(BLAS) $(CBLAS) $(LAPACK)
 
 #
 # Doxygen documentation
