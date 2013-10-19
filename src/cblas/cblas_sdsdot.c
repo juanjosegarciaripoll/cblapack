@@ -12,10 +12,8 @@
 float cblas_sdsdot( const int N, const float alpha, const float *X,
                       const int incX, const float *Y, const int incY)
 {
-   float dot;
    #define F77_N N
    #define F77_incX incX
    #define F77_incY incY
-   sdsdot_sub_( &F77_N, &alpha, X, &F77_incX, Y, &F77_incY, &dot);
-   return dot;
+   return sdsdot_( &F77_N, &alpha, X, &F77_incX, Y, &F77_incY );
 }   

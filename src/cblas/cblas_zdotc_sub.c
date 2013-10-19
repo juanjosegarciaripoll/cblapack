@@ -10,11 +10,10 @@
 #include "cblas.h"
 #include "blaswrap.h"
 void cblas_zdotc_sub( const int N, const void *X, const int incX,
-                    const void *Y, const int incY, void *dotc)
+		      const void *Y, const int incY, void *dotc)
 {
    #define F77_N N
    #define F77_incX incX
    #define F77_incY incY
-   zdotc_sub_( &F77_N, X, &F77_incX, Y, &F77_incY, dotc);
-   return;
+   return zdotc_sub_( dotc, &F77_N, X, &F77_incX, Y, &F77_incY );
 }

@@ -11,9 +11,7 @@
 #include "blaswrap.h"
 double cblas_dzasum( const int N, const void *X, const int incX) 
 {
-   double asum;
    #define F77_N N
    #define F77_incX incX
-   dzasum_sub_( &F77_N, X, &F77_incX, &asum);
-   return asum;
+   return dzasum_( &F77_N, X, &F77_incX );
 }

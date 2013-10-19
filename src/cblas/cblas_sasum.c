@@ -11,9 +11,7 @@
 #include "blaswrap.h"
 float cblas_sasum( const int N, const float *X, const int incX) 
 {
-   float asum;
    #define F77_N N
    #define F77_incX incX
-   sasum_sub_( &F77_N, X, &F77_incX, &asum);
-   return asum;
+   return sasum_( &F77_N, X, &F77_incX );
 }

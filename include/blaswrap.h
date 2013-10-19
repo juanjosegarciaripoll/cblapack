@@ -5,6 +5,7 @@
 #ifndef __BLASWRAP_H
 #define __BLASWRAP_H
 
+#include "f2c.h"
 #include "blasproto.h"
 #include "lapackproto.h"
 

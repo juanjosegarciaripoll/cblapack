@@ -11,9 +11,7 @@
 #include "blaswrap.h"
 double cblas_dasum( const int N, const double *X, const int incX) 
 {
-   double asum;
    #define F77_N N
    #define F77_incX incX
-   dasum_sub_( &F77_N, X, &F77_incX, &asum);
-   return asum;
+   return dasum_( &F77_N, X, &F77_incX );
 }

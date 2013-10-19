@@ -5,10 +5,11 @@
  * Keita Teranishi  5/18/98
  *
  */
-#include "cblas.h"
-#include "blaswrap.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "cblas.h"
+#include "blaswrap.h"
+
 void cblas_chbmv(const enum CBLAS_ORDER order,
                  const enum CBLAS_UPLO Uplo,const int N,const int K,
                  const void *alpha, const void  *A, const int lda,
@@ -16,11 +17,7 @@ void cblas_chbmv(const enum CBLAS_ORDER order,
                  void  *Y, const int incY)
 {
    char UL;
-#ifdef F77_CHAR
-   F77_CHAR F77_UL;
-#else
    #define F77_UL &UL   
-#endif
    #define F77_N N
    #define F77_K K
    #define F77_lda lda

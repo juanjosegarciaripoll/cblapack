@@ -11,9 +11,7 @@
 #include "blaswrap.h"
 double cblas_dnrm2( const int N, const double *X, const int incX) 
 {
-   double nrm2;
    #define F77_N N
    #define F77_incX incX
-   dnrm2_sub_( &F77_N, X, &F77_incX, &nrm2);
-   return nrm2;
+   return dnrm2( &F77_N, X, &F77_incX );
 }

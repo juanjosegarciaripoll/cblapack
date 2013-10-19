@@ -11,9 +11,7 @@
 #include "blaswrap.h"
 float cblas_snrm2( const int N, const float *X, const int incX) 
 {
-   float nrm2;
    #define F77_N N
    #define F77_incX incX
-   snrm2_sub_( &F77_N, X, &F77_incX, &nrm2);
-   return nrm2;
+   return snrm2_( &F77_N, X, &F77_incX );
 }
