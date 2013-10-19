@@ -8,6 +8,9 @@
 #include "f2c.h"
 #include "blasproto.h"
 #include "lapackproto.h"
+#include "matgen.h"
+#include "lin.h"
+#include "eig.h"
 
 #define NO_BLAS_WRAP
 #ifndef NO_BLAS_WRAP
