@@ -3,11 +3,8 @@ CC=gcc -O3 -W
 BLASDIR=../src/blas
 LAPACKDIR=../src/lapack
 
-include ../blas.inc
-include ../lapack.inc
-
-BLAS_O=$(subst .c,.o,$(subst $(BLASDIR),blas,$(BLAS)))
-LAPACK_O=$(subst .c,.o,$(subst $(BLASDIR),blas,$(subst $(LAPACKDIR),lapack,$(LAPACK))))
+include blas.inc
+include lapack.inc
 
 all: libcblapack.a
 
@@ -16,9 +13,14 @@ blas/%.o: ../src/blas/%.c
 lapack/%.o: ../src/lapack/%.c
 	$(CC) $(CPPFLAGS) -I../include -o $@ -c $<
 
-libcblapack.a: $(BLAS_O) $(LAPACK_O)
-	ar cr $@ $(BLAS_O) $(LAPACK_O)
+libcblapack.a: $(BLAS) $(LAPACK)
+	ar cr $@ $(BLAS) $(LAPACK)
 	ranlib $@
 
+lapack.inc: ../lapack.inc Makefile
+	sed -e 's,src/,,g' -e 's,\.c,.o,g' $< > $@
+blas.inc: ../blas.inc Makefile
+	sed -e 's,src/,,g' -e 's,\.c,.o,g' $< > $@
+
 clean:
-	rm -f $(BLAS_O) $(LAPACK_O) libcblapack.a
+	rm -f $(BLAS) $(LAPACK) libcblapack.a

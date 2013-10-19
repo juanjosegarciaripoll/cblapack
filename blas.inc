@@ -2,61 +2,61 @@
 # BLAS components
 #
 
-BLAS1 = $(BLASDIR)/isamax.c $(BLASDIR)/sasum.c $(BLASDIR)/saxpy.c	\
-	$(BLASDIR)/scopy.c $(BLASDIR)/sdot.c $(BLASDIR)/snrm2.c		\
-	$(BLASDIR)/srot.c $(BLASDIR)/srotg.c $(BLASDIR)/sscal.c		\
-	$(BLASDIR)/sswap.c $(BLASDIR)/sdsdot.c $(BLASDIR)/srotmg.c	\
-	$(BLASDIR)/srotm.c $(BLASDIR)/scabs1.c $(BLASDIR)/scasum.c	\
-	$(BLASDIR)/scnrm2.c $(BLASDIR)/icamax.c $(BLASDIR)/caxpy.c	\
-	$(BLASDIR)/ccopy.c $(BLASDIR)/cdotc.c $(BLASDIR)/cdotu.c	\
-	$(BLASDIR)/csscal.c $(BLASDIR)/crotg.c $(BLASDIR)/cscal.c	\
-	$(BLASDIR)/cswap.c $(BLASDIR)/csrot.c $(BLASDIR)/idamax.c	\
-	$(BLASDIR)/dasum.c $(BLASDIR)/daxpy.c $(BLASDIR)/dcopy.c	\
-	$(BLASDIR)/ddot.c $(BLASDIR)/dnrm2.c $(BLASDIR)/drot.c		\
-	$(BLASDIR)/drotg.c $(BLASDIR)/dscal.c $(BLASDIR)/dsdot.c	\
-	$(BLASDIR)/dswap.c $(BLASDIR)/drotmg.c $(BLASDIR)/drotm.c	\
-	$(BLASDIR)/dcabs1.c $(BLASDIR)/dzasum.c $(BLASDIR)/dznrm2.c	\
-	$(BLASDIR)/izamax.c $(BLASDIR)/zaxpy.c $(BLASDIR)/zcopy.c	\
-	$(BLASDIR)/zdotc.c $(BLASDIR)/zdotu.c $(BLASDIR)/zdscal.c	\
-	$(BLASDIR)/zrotg.c $(BLASDIR)/zscal.c $(BLASDIR)/zswap.c	\
-	$(BLASDIR)/zdrot.c $(BLASDIR)/isamax.c $(BLASDIR)/sasum.c	\
-	$(BLASDIR)/saxpy.c $(BLASDIR)/scopy.c $(BLASDIR)/snrm2.c	\
-	$(BLASDIR)/sscal.c $(BLASDIR)/idamax.c $(BLASDIR)/dasum.c	\
-	$(BLASDIR)/daxpy.c $(BLASDIR)/dcopy.c $(BLASDIR)/dnrm2.c	\
-	$(BLASDIR)/dscal.c
+BLAS1 = src/blas/isamax.c src/blas/sasum.c src/blas/saxpy.c	\
+	src/blas/scopy.c src/blas/sdot.c src/blas/snrm2.c	\
+	src/blas/srot.c src/blas/srotg.c src/blas/sscal.c	\
+	src/blas/sswap.c src/blas/sdsdot.c src/blas/srotmg.c	\
+	src/blas/srotm.c src/blas/scabs1.c src/blas/scasum.c	\
+	src/blas/scnrm2.c src/blas/icamax.c src/blas/caxpy.c	\
+	src/blas/ccopy.c src/blas/cdotc.c src/blas/cdotu.c	\
+	src/blas/csscal.c src/blas/crotg.c src/blas/cscal.c	\
+	src/blas/cswap.c src/blas/csrot.c src/blas/idamax.c	\
+	src/blas/dasum.c src/blas/daxpy.c src/blas/dcopy.c	\
+	src/blas/ddot.c src/blas/dnrm2.c src/blas/drot.c	\
+	src/blas/drotg.c src/blas/dscal.c src/blas/dsdot.c	\
+	src/blas/dswap.c src/blas/drotmg.c src/blas/drotm.c	\
+	src/blas/dcabs1.c src/blas/dzasum.c src/blas/dznrm2.c	\
+	src/blas/izamax.c src/blas/zaxpy.c src/blas/zcopy.c	\
+	src/blas/zdotc.c src/blas/zdotu.c src/blas/zdscal.c	\
+	src/blas/zrotg.c src/blas/zscal.c src/blas/zswap.c	\
+	src/blas/zdrot.c src/blas/isamax.c src/blas/sasum.c	\
+	src/blas/saxpy.c src/blas/scopy.c src/blas/snrm2.c	\
+	src/blas/sscal.c src/blas/idamax.c src/blas/dasum.c	\
+	src/blas/daxpy.c src/blas/dcopy.c src/blas/dnrm2.c	\
+	src/blas/dscal.c
 
-BLAS2 = $(BLASDIR)/sgemv.c $(BLASDIR)/sgbmv.c $(BLASDIR)/ssymv.c	\
-	$(BLASDIR)/ssbmv.c $(BLASDIR)/sspmv.c $(BLASDIR)/strmv.c	\
-	$(BLASDIR)/stbmv.c $(BLASDIR)/stpmv.c $(BLASDIR)/strsv.c	\
-	$(BLASDIR)/stbsv.c $(BLASDIR)/stpsv.c $(BLASDIR)/sger.c		\
-	$(BLASDIR)/ssyr.c $(BLASDIR)/sspr.c $(BLASDIR)/ssyr2.c		\
-	$(BLASDIR)/sspr2.c $(BLASDIR)/cgemv.c $(BLASDIR)/cgbmv.c	\
-	$(BLASDIR)/chemv.c $(BLASDIR)/chbmv.c $(BLASDIR)/chpmv.c	\
-	$(BLASDIR)/ctrmv.c $(BLASDIR)/ctbmv.c $(BLASDIR)/ctpmv.c	\
-	$(BLASDIR)/ctrsv.c $(BLASDIR)/ctbsv.c $(BLASDIR)/ctpsv.c	\
-	$(BLASDIR)/cgerc.c $(BLASDIR)/cgeru.c $(BLASDIR)/cher.c		\
-	$(BLASDIR)/chpr.c $(BLASDIR)/cher2.c $(BLASDIR)/chpr2.c		\
-	$(BLASDIR)/dgemv.c $(BLASDIR)/dgbmv.c $(BLASDIR)/dsymv.c	\
-	$(BLASDIR)/dsbmv.c $(BLASDIR)/dspmv.c $(BLASDIR)/dtrmv.c	\
-	$(BLASDIR)/dtbmv.c $(BLASDIR)/dtpmv.c $(BLASDIR)/dtrsv.c	\
-	$(BLASDIR)/dtbsv.c $(BLASDIR)/dtpsv.c $(BLASDIR)/dger.c		\
-	$(BLASDIR)/dsyr.c $(BLASDIR)/dspr.c $(BLASDIR)/dsyr2.c		\
-	$(BLASDIR)/dspr2.c $(BLASDIR)/zgemv.c $(BLASDIR)/zgbmv.c	\
-	$(BLASDIR)/zhemv.c $(BLASDIR)/zhbmv.c $(BLASDIR)/zhpmv.c	\
-	$(BLASDIR)/ztrmv.c $(BLASDIR)/ztbmv.c $(BLASDIR)/ztpmv.c	\
-	$(BLASDIR)/ztrsv.c $(BLASDIR)/ztbsv.c $(BLASDIR)/ztpsv.c	\
-	$(BLASDIR)/zgerc.c $(BLASDIR)/zgeru.c $(BLASDIR)/zher.c		\
-	$(BLASDIR)/zhpr.c $(BLASDIR)/zher2.c $(BLASDIR)/zhpr2.c
+BLAS2 = src/blas/sgemv.c src/blas/sgbmv.c src/blas/ssymv.c	\
+	src/blas/ssbmv.c src/blas/sspmv.c src/blas/strmv.c	\
+	src/blas/stbmv.c src/blas/stpmv.c src/blas/strsv.c	\
+	src/blas/stbsv.c src/blas/stpsv.c src/blas/sger.c	\
+	src/blas/ssyr.c src/blas/sspr.c src/blas/ssyr2.c	\
+	src/blas/sspr2.c src/blas/cgemv.c src/blas/cgbmv.c	\
+	src/blas/chemv.c src/blas/chbmv.c src/blas/chpmv.c	\
+	src/blas/ctrmv.c src/blas/ctbmv.c src/blas/ctpmv.c	\
+	src/blas/ctrsv.c src/blas/ctbsv.c src/blas/ctpsv.c	\
+	src/blas/cgerc.c src/blas/cgeru.c src/blas/cher.c	\
+	src/blas/chpr.c src/blas/cher2.c src/blas/chpr2.c	\
+	src/blas/dgemv.c src/blas/dgbmv.c src/blas/dsymv.c	\
+	src/blas/dsbmv.c src/blas/dspmv.c src/blas/dtrmv.c	\
+	src/blas/dtbmv.c src/blas/dtpmv.c src/blas/dtrsv.c	\
+	src/blas/dtbsv.c src/blas/dtpsv.c src/blas/dger.c	\
+	src/blas/dsyr.c src/blas/dspr.c src/blas/dsyr2.c	\
+	src/blas/dspr2.c src/blas/zgemv.c src/blas/zgbmv.c	\
+	src/blas/zhemv.c src/blas/zhbmv.c src/blas/zhpmv.c	\
+	src/blas/ztrmv.c src/blas/ztbmv.c src/blas/ztpmv.c	\
+	src/blas/ztrsv.c src/blas/ztbsv.c src/blas/ztpsv.c	\
+	src/blas/zgerc.c src/blas/zgeru.c src/blas/zher.c	\
+	src/blas/zhpr.c src/blas/zher2.c src/blas/zhpr2.c
 
-BLAS3 = $(BLASDIR)/sgemm.c $(BLASDIR)/ssymm.c $(BLASDIR)/ssyrk.c	\
-	$(BLASDIR)/ssyr2k.c $(BLASDIR)/strmm.c $(BLASDIR)/strsm.c	\
-	$(BLASDIR)/cgemm.c $(BLASDIR)/csymm.c $(BLASDIR)/csyrk.c	\
-	$(BLASDIR)/csyr2k.c $(BLASDIR)/ctrmm.c $(BLASDIR)/ctrsm.c	\
-	$(BLASDIR)/chemm.c $(BLASDIR)/cherk.c $(BLASDIR)/cher2k.c	\
-	$(BLASDIR)/dgemm.c $(BLASDIR)/dsymm.c $(BLASDIR)/dsyrk.c	\
-	$(BLASDIR)/dsyr2k.c $(BLASDIR)/dtrmm.c $(BLASDIR)/dtrsm.c	\
-	$(BLASDIR)/zgemm.c $(BLASDIR)/zsymm.c $(BLASDIR)/zsyrk.c	\
-	$(BLASDIR)/zsyr2k.c $(BLASDIR)/ztrmm.c $(BLASDIR)/ztrsm.c	\
-	$(BLASDIR)/zhemm.c $(BLASDIR)/zherk.c $(BLASDIR)/zher2k.c
+BLAS3 = src/blas/sgemm.c src/blas/ssymm.c src/blas/ssyrk.c	\
+	src/blas/ssyr2k.c src/blas/strmm.c src/blas/strsm.c	\
+	src/blas/cgemm.c src/blas/csymm.c src/blas/csyrk.c	\
+	src/blas/csyr2k.c src/blas/ctrmm.c src/blas/ctrsm.c	\
+	src/blas/chemm.c src/blas/cherk.c src/blas/cher2k.c	\
+	src/blas/dgemm.c src/blas/dsymm.c src/blas/dsyrk.c	\
+	src/blas/dsyr2k.c src/blas/dtrmm.c src/blas/dtrsm.c	\
+	src/blas/zgemm.c src/blas/zsymm.c src/blas/zsyrk.c	\
+	src/blas/zsyr2k.c src/blas/ztrmm.c src/blas/ztrsm.c	\
+	src/blas/zhemm.c src/blas/zherk.c src/blas/zher2k.c
 
 BLAS = $(BLAS1) $(BLAS2) $(BLAS3)

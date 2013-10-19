@@ -8,9 +8,6 @@ SUBDIRS = test
 # directories.
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-LAPACKDIR=src/blas
-BLASDIR=src/lapack
-
 include blas.inc
 include cblas.inc
 include lapack.inc

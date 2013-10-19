@@ -3,8 +3,6 @@
 #ifndef __CLAPACK_H
 #define __CLAPACK_H
 
-#include <f2c.h>
-
 #ifdef __cplusplus 	
 extern "C" {	
 #endif		
@@ -15,10 +13,10 @@ extern "C" {
 /* Subroutine */ int ccopy_(integer *n, complex *cx, integer *incx, complex *
 	cy, integer *incy);
 
-/* Complex */ void cdotc_(complex * ret_val, integer *n, complex *cx, integer 
+/* Complex */ VOID cdotc_(complex * ret_val, integer *n, complex *cx, integer 
 	*incx, complex *cy, integer *incy);
 
-/* Complex */ void cdotu_(complex * ret_val, integer *n, complex *cx, integer 
+/* Complex */ VOID cdotu_(complex * ret_val, integer *n, complex *cx, integer 
 	*incx, complex *cy, integer *incy);
 
 /* Subroutine */ int cgbmv_(char *trans, integer *m, integer *n, integer *kl, 
@@ -382,10 +380,10 @@ doublereal snrm2_(integer *n, real *x, integer *incx);
 /* Subroutine */ int zcopy_(integer *n, doublecomplex *zx, integer *incx, 
 	doublecomplex *zy, integer *incy);
 
-/* Double Complex */ void zdotc_(doublecomplex * ret_val, integer *n, 
+/* Double Complex */ VOID zdotc_(doublecomplex * ret_val, integer *n, 
 	doublecomplex *zx, integer *incx, doublecomplex *zy, integer *incy);
 
-/* Double Complex */ void zdotu_(doublecomplex * ret_val, integer *n, 
+/* Double Complex */ VOID zdotu_(doublecomplex * ret_val, integer *n, 
 	doublecomplex *zx, integer *incx, doublecomplex *zy, integer *incy);
 
 /* Subroutine */ int zdrot_(integer *n, doublecomplex *cx, integer *incx, 
@@ -993,7 +991,7 @@ doublereal snrm2_(integer *n, real *x, integer *incx);
 	 complex *z__, integer *ldz, complex *work, integer *lwork, real *
 	rwork, integer *info);
 
-/* Character */ void chla_transtype__(char *ret_val, ftnlen ret_val_len, 
+/* Character */ VOID chla_transtype__(char *ret_val, ftnlen ret_val_len, 
 	integer *trans);
 
 /* Subroutine */ int chpcon_(char *uplo, integer *n, complex *ap, integer *
@@ -1215,7 +1213,7 @@ doublereal cla_syrpvgrw__(char *uplo, integer *n, integer *info, complex *a,
 /* Subroutine */ int clacrt_(integer *n, complex *cx, integer *incx, complex *
 	cy, integer *incy, complex *c__, complex *s);
 
-/* Complex */ void cladiv_(complex * ret_val, complex *x, complex *y);
+/* Complex */ VOID cladiv_(complex * ret_val, complex *x, complex *y);
 
 /* Subroutine */ int claed0_(integer *qsiz, integer *n, real *d__, real *e, 
 	complex *q, integer *ldq, complex *qstore, integer *ldqs, real *rwork, 
@@ -6284,7 +6282,7 @@ doublereal zla_syrpvgrw__(char *uplo, integer *n, integer *info,
 	doublecomplex *cy, integer *incy, doublecomplex *c__, doublecomplex *
 	s);
 
-/* Double Complex */ void zladiv_(doublecomplex * ret_val, doublecomplex *x, 
+/* Double Complex */ VOID zladiv_(doublecomplex * ret_val, doublecomplex *x, 
 	doublecomplex *y);
 
 /* Subroutine */ int zlaed0_(integer *qsiz, integer *n, doublereal *d__, 
