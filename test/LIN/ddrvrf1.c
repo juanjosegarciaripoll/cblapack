@@ -69,12 +69,6 @@ static integer c__1 = 1;
     integer iform;
     doublereal norma;
     integer inorm, iuplo, nerrs;
-    extern doublereal dlamch_(char *), dlarnd_(integer *, integer *), 
-	    dlansf_(char *, char *, char *, integer *, doublereal *, 
-	    doublereal *), dlansy_(char *, char *, 
-	    integer *, doublereal *, integer *, doublereal *);
-    extern /* Subroutine */ int dtrttf_(char *, char *, integer *, doublereal 
-	    *, integer *, doublereal *, integer *);
     doublereal result[1], normarf;
 
     /* Fortran I/O blocks */

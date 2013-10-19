@@ -37,19 +37,7 @@ doublereal zqrt14_(char *trans, integer *m, integer *n, integer *nrhs,
     logical tpsd;
     doublereal xnrm;
     doublereal rwork[1];
-    extern /* Subroutine */ int zgelq2_(integer *, integer *, doublecomplex *, 
-	     integer *, doublecomplex *, doublecomplex *, integer *), zgeqr2_(
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
-    extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int zlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublecomplex *, 
-	     integer *, integer *);
     integer ldwork;
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */
@@ -139,7 +127,7 @@ doublereal zqrt14_(char *trans, integer *m, integer *n, integer *nrhs,
 	ldwork = *m + *nrhs;
 	tpsd = FALSE_;
 	if (*lwork < (*m + *nrhs) * (*n + 2)) {
-	    xerbla_("ZQRT14", &c__10);
+	    this_xerbla_("ZQRT14", &c__10);
 	    return ret_val;
 	} else if (*n <= 0 || *nrhs <= 0) {
 	    return ret_val;
@@ -148,13 +136,13 @@ doublereal zqrt14_(char *trans, integer *m, integer *n, integer *nrhs,
 	ldwork = *m;
 	tpsd = TRUE_;
 	if (*lwork < (*n + *nrhs) * (*m + 2)) {
-	    xerbla_("ZQRT14", &c__10);
+	    this_xerbla_("ZQRT14", &c__10);
 	    return ret_val;
 	} else if (*m <= 0 || *nrhs <= 0) {
 	    return ret_val;
 	}
     } else {
-	xerbla_("ZQRT14", &c__1);
+	this_xerbla_("ZQRT14", &c__1);
 	return ret_val;
     }
 

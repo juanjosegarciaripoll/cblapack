@@ -46,37 +46,16 @@ static doublereal c_b93 = 2.;
     doublereal unfl, rexp;
     char type__[1];
     doublereal texp;
-    extern /* Subroutine */ int zrot_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublecomplex *);
     doublecomplex star1, plus1, plus2;
     doublereal bscal;
     doublereal tscal;
     doublecomplex ctemp;
     doublereal anorm, bnorm, tleft;
     logical upper;
-    extern /* Subroutine */ int zrotg_(doublecomplex *, doublecomplex *, 
-	    doublereal *, doublecomplex *), zlatb4_(char *, integer *, 
-	    integer *, integer *, char *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *, char *), dlabad_(
-	    doublereal *, doublereal *);
-    extern doublereal dlamch_(char *);
     char packit[1];
-    extern /* Subroutine */ int zdscal_(integer *, doublereal *, 
-	    doublecomplex *, integer *);
     doublereal bignum, cndnum;
-    extern /* Subroutine */ int dlarnv_(integer *, integer *, integer *, 
-	    doublereal *);
-    extern integer izamax_(integer *, doublecomplex *, integer *);
-    extern /* Double Complex */ void zlarnd_(doublecomplex *, integer *, 
-	    integer *);
     integer jcnext, jcount;
-    extern /* Subroutine */ int zlatms_(integer *, integer *, char *, integer 
-	    *, char *, doublereal *, integer *, doublereal *, doublereal *, 
-	    integer *, integer *, char *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
     doublereal smlnum;
-    extern /* Subroutine */ int zlarnv_(integer *, integer *, integer *, 
-	    doublecomplex *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

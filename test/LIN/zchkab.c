@@ -94,20 +94,6 @@ static integer c__6 = 6;
     integer nmats, nsval[12], iwork[132];
     doublereal rwork[132];
     complex swork[19536];
-    extern doublereal dlamch_(char *), dsecnd_(void);
-    extern /* Subroutine */ int alareq_(char *, integer *, logical *, integer 
-	    *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int ilaver_(integer *, integer *, integer *), 
-	    zerrab_(integer *), zerrac_(integer *), zdrvab_(logical *, 
-	    integer *, integer *, integer *, integer *, doublereal *, integer 
-	    *, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, doublereal *, complex *, 
-	    integer *, integer *), zdrvac_(logical *, integer *, integer *, 
-	    integer *, integer *, doublereal *, integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, doublecomplex *
-, doublereal *, complex *, integer *);
     doublereal thresh;
     logical dotype[30];
     integer ntypes;

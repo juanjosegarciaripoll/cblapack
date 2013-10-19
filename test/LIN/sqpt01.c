@@ -29,16 +29,7 @@ doublereal sqpt01_(integer *m, integer *n, integer *k, real *a, real *af,
     /* Local variables */
     integer i__, j, info;
     real norma;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     real rwork[1];
-    extern /* Subroutine */ int saxpy_(integer *, real *, real *, integer *, 
-	    real *, integer *);
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), sormqr_(
-	    char *, char *, integer *, integer *, integer *, real *, integer *
-, real *, real *, integer *, real *, integer *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */
@@ -133,7 +124,7 @@ doublereal sqpt01_(integer *m, integer *n, integer *k, real *a, real *af,
 /*     Test if there is enough workspace */
 
     if (*lwork < *m * *n + *n) {
-	xerbla_("SQPT01", &c__10);
+	this_xerbla_("SQPT01", &c__10);
 	return ret_val;
     }
 

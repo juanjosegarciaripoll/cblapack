@@ -45,8 +45,6 @@ static real c_b93 = 2.f;
     integer mode;
     char path[3], dist[1];
     real unfl;
-    extern /* Subroutine */ int crot_(integer *, complex *, integer *, 
-	    complex *, integer *, real *, complex *);
     real rexp;
     char type__[1];
     real texp;
@@ -55,28 +53,11 @@ static real c_b93 = 2.f;
     real tscal;
     complex ctemp;
     real anorm, bnorm, tleft;
-    extern /* Subroutine */ int crotg_(complex *, complex *, real *, complex *
-);
     logical upper;
-    extern /* Subroutine */ int clatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, real *, integer *, real *, char *
-), slabad_(real *, real *);
-    extern integer icamax_(integer *, complex *, integer *);
-    extern /* Complex */ void clarnd_(complex *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *);
     char packit[1];
     real bignum;
-    extern /* Subroutine */ int clatms_(integer *, integer *, char *, integer 
-	    *, char *, real *, integer *, real *, real *, integer *, integer *
-, char *, complex *, integer *, complex *, integer *);
     real cndnum;
-    extern /* Subroutine */ int clarnv_(integer *, integer *, integer *, 
-	    complex *);
     integer jcnext, jcount;
-    extern /* Subroutine */ int slarnv_(integer *, integer *, integer *, real 
-	    *);
     real smlnum;
 
 

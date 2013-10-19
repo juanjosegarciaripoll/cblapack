@@ -69,23 +69,9 @@ static integer c__6 = 6;
     real worka[2500]	/* was [50][50] */, workb[800]	/* was [50][16] */, 
 	    workx[800]	/* was [50][16] */, s_work_slatms__[150], 
 	    s_work_slansy__[50];
-    extern doublereal slamch_(char *), second_(void);
-    extern /* Subroutine */ int ilaver_(integer *, integer *, integer *);
     real thresh, workap[1275];
     logical tsterr;
-    extern /* Subroutine */ int sdrvrf1_(integer *, integer *, integer *, 
-	    real *, real *, integer *, real *, real *), sdrvrf2_(integer *, 
-	    integer *, integer *, real *, integer *, real *, real *, real *), 
-	    sdrvrf3_(integer *, integer *, integer *, real *, real *, integer 
-	    *, real *, real *, real *, real *, real *, real *), sdrvrf4_(
-	    integer *, integer *, integer *, real *, real *, real *, integer *
-, real *, real *, integer *, real *);
     real workarf[1275];
-    extern /* Subroutine */ int serrrfp_(integer *), sdrvrfp_(integer *, 
-	    integer *, integer *, integer *, integer *, integer *, integer *, 
-	    real *, real *, real *, real *, real *, real *, real *, real *, 
-	    real *, real *, real *, real *, real *, real *, real *, real *, 
-	    real *, real *);
 
     /* Fortran I/O blocks */
     static cilist io___3 = { 0, 5, 0, 0, 0 };

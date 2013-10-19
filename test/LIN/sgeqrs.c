@@ -25,11 +25,6 @@ static real c_b9 = 1.f;
     integer a_dim1, a_offset, b_dim1, b_offset, i__1;
 
     /* Local variables */
-    extern /* Subroutine */ int strsm_(char *, char *, char *, char *, 
-	    integer *, integer *, real *, real *, integer *, real *, integer *
-), xerbla_(char *, integer *), sormqr_(char *, char *, integer *, integer *, integer *, 
-	    real *, integer *, real *, real *, integer *, real *, integer *, 
-	    integer *);
 
 
 /*  -- LAPACK routine (version 3.1) -- */
@@ -129,7 +124,7 @@ static real c_b9 = 1.f;
     }
     if (*info != 0) {
 	i__1 = -(*info);
-	xerbla_("SGEQRS", &i__1);
+	this_xerbla_("SGEQRS", &i__1);
 	return 0;
     }
 

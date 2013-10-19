@@ -38,36 +38,9 @@ static integer c__0 = 0;
     doublereal eps;
     integer info;
     doublereal temp;
-    extern doublereal dasum_(integer *, doublereal *, integer *);
-    extern /* Subroutine */ int zlarf_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *), zgemm_(char *, char *, 
-	    integer *, integer *, integer *, doublecomplex *, doublecomplex *, 
-	     integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *);
     doublereal dummy[1];
-    extern /* Subroutine */ int dlabad_(doublereal *, doublereal *);
-    extern doublereal dznrm2_(integer *, doublecomplex *, integer *), dlamch_(
-	    char *);
-    extern /* Subroutine */ int dlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, integer *);
-    extern doublereal dlarnd_(integer *, integer *);
-    extern /* Subroutine */ int dlaord_(char *, integer *, doublereal *, 
-	    integer *), xerbla_(char *, integer *);
-    extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
     doublereal bignum;
-    extern /* Subroutine */ int zdscal_(integer *, doublereal *, 
-	    doublecomplex *, integer *), zlascl_(char *, integer *, integer *, 
-	     doublereal *, doublereal *, integer *, integer *, doublecomplex *
-, integer *, integer *), zlaset_(char *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    integer *), zlaror_(char *, char *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *, doublecomplex *, integer *);
     doublereal smlnum;
-    extern /* Subroutine */ int zlarnv_(integer *, integer *, integer *, 
-	    doublecomplex *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */
@@ -172,7 +145,7 @@ static integer c__0 = 0;
     i__1 = *m + mn, i__2 = mn * *nrhs, i__1 = max(i__1,i__2), i__2 = (*n << 1)
 	     + *m;
     if (*lwork < max(i__1,i__2)) {
-	xerbla_("ZQRT15", &c__16);
+	this_xerbla_("ZQRT15", &c__16);
 	return 0;
     }
 
@@ -195,7 +168,7 @@ static integer c__0 = 0;
 /* L10: */
 	}
     } else {
-	xerbla_("ZQRT15", &c__2);
+	this_xerbla_("ZQRT15", &c__2);
     }
 
     if (*rank > 0) {
@@ -293,7 +266,7 @@ L20:
 		zlascl_("General", &c__0, &c__0, norma, &smlnum, m, nrhs, &b[
 			b_offset], ldb, &info);
 	    } else {
-		xerbla_("ZQRT15", &c__1);
+		this_xerbla_("ZQRT15", &c__1);
 		return 0;
 	    }
 	}

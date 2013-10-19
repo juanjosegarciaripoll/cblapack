@@ -29,13 +29,7 @@ static complex c_b1 = {0.f,0.f};
     /* Local variables */
     integer i__, j;
     real eps;
-    extern /* Subroutine */ int chemm_(char *, char *, integer *, integer *, 
-	    complex *, complex *, integer *, complex *, integer *, complex *, 
-	    complex *, integer *);
     real anorm;
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *), clanhe_(char *, char *, integer *, 
-	    complex *, integer *, real *), slamch_(char *);
     real ainvnm;
 
 

@@ -38,26 +38,13 @@ static integer c_n1 = -1;
     real unfl, rexp;
     char type__[1];
     real texp, star1, plus1, plus2, bscal;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     real tscal, anorm, bnorm, tleft;
     logical upper;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), sswap_(integer *, real *, integer *, real *, integer *
-);
     real tnorm;
-    extern /* Subroutine */ int slatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, real *, integer *, real *, char *
-), slabad_(real *, real *);
-    extern doublereal slamch_(char *);
     char packit[1];
     real bignum;
-    extern integer isamax_(integer *, real *, integer *);
-    extern doublereal slarnd_(integer *, integer *);
     real cndnum;
     integer jcount;
-    extern /* Subroutine */ int slatms_(integer *, integer *, char *, integer 
-	    *, char *, real *, integer *, real *, real *, integer *, integer *
-, char *, real *, integer *, real *, integer *), slarnv_(integer *, integer *, integer *, real *);
     real smlnum;
 
 

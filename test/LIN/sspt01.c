@@ -29,14 +29,6 @@ static real c_b6 = 1.f;
     real eps;
     integer info;
     real anorm;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int slaset_(char *, integer *, integer *, real *, 
-	    real *, real *, integer *);
-    extern doublereal slansp_(char *, char *, integer *, real *, real *);
-    extern /* Subroutine */ int slavsp_(char *, char *, char *, integer *, 
-	    integer *, real *, integer *, real *, integer *, integer *);
-    extern doublereal slansy_(char *, char *, integer *, real *, integer *, 
-	    real *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

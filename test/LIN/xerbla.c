@@ -33,7 +33,7 @@ struct {
 
 static integer c__1 = 1;
 
-/* Subroutine */ int xerbla_(char *srname, integer *info)
+/* Subroutine */ int this_xerbla_(char *srname, integer *info)
 {
     /* Format strings */
     static char fmt_9999[] = "(\002 *** XERBLA was called from \002,a,\002 w"
@@ -134,4 +134,4 @@ static integer c__1 = 1;
 
 /*     End of XERBLA */
 
-} /* xerbla_ */
+} /* this_xerbla_ */

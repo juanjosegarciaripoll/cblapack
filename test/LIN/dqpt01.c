@@ -30,16 +30,7 @@ doublereal dqpt01_(integer *m, integer *n, integer *k, doublereal *a,
     /* Local variables */
     integer i__, j, info;
     doublereal norma;
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *), daxpy_(integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *);
     doublereal rwork[1];
-    extern doublereal dlamch_(char *), dlange_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), dormqr_(
-	    char *, char *, integer *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */
@@ -134,7 +125,7 @@ doublereal dqpt01_(integer *m, integer *n, integer *k, doublereal *a,
 /*     Test if there is enough workspace */
 
     if (*lwork < *m * *n + *n) {
-	xerbla_("DQPT01", &c__10);
+	this_xerbla_("DQPT01", &c__10);
 	return ret_val;
     }
 

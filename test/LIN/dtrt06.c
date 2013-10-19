@@ -23,11 +23,7 @@
 
     /* Local variables */
     doublereal eps, rmin, rmax, anorm;
-    extern /* Subroutine */ int dlabad_(doublereal *, doublereal *);
-    extern doublereal dlamch_(char *);
     doublereal bignum;
-    extern doublereal dlantr_(char *, char *, char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *);
     doublereal smlnum;
 
 

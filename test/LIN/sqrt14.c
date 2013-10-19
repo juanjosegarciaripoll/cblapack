@@ -35,15 +35,6 @@ doublereal sqrt14_(char *trans, integer *m, integer *n, integer *nrhs, real *
     logical tpsd;
     real xnrm;
     real rwork[1];
-    extern /* Subroutine */ int sgelq2_(integer *, integer *, real *, integer 
-	    *, real *, real *, integer *), sgeqr2_(integer *, integer *, real 
-	    *, integer *, real *, real *, integer *);
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), slascl_(
-	    char *, integer *, integer *, real *, real *, integer *, integer *
-, real *, integer *, integer *), slacpy_(char *, integer *
-, integer *, real *, integer *, real *, integer *);
     integer ldwork;
 
 
@@ -134,7 +125,7 @@ doublereal sqrt14_(char *trans, integer *m, integer *n, integer *nrhs, real *
 	ldwork = *m + *nrhs;
 	tpsd = FALSE_;
 	if (*lwork < (*m + *nrhs) * (*n + 2)) {
-	    xerbla_("SQRT14", &c__10);
+	    this_xerbla_("SQRT14", &c__10);
 	    return ret_val;
 	} else if (*n <= 0 || *nrhs <= 0) {
 	    return ret_val;
@@ -143,13 +134,13 @@ doublereal sqrt14_(char *trans, integer *m, integer *n, integer *nrhs, real *
 	ldwork = *m;
 	tpsd = TRUE_;
 	if (*lwork < (*n + *nrhs) * (*m + 2)) {
-	    xerbla_("SQRT14", &c__10);
+	    this_xerbla_("SQRT14", &c__10);
 	    return ret_val;
 	} else if (*m <= 0 || *nrhs <= 0) {
 	    return ret_val;
 	}
     } else {
-	xerbla_("SQRT14", &c__1);
+	this_xerbla_("SQRT14", &c__1);
 	return ret_val;
     }
 

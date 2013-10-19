@@ -30,14 +30,8 @@ static doublereal c_b7 = 1.;
     /* Local variables */
     integer j;
     doublereal eps;
-    extern doublereal dasum_(integer *, doublereal *, integer *);
     doublereal anorm, bnorm;
-    extern /* Subroutine */ int dspmv_(char *, integer *, doublereal *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *, 
-	     integer *);
     doublereal xnorm;
-    extern doublereal dlamch_(char *), dlansp_(char *, char *, 
-	    integer *, doublereal *, doublereal *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

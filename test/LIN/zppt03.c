@@ -30,15 +30,7 @@ static integer c__1 = 1;
     integer i__, j, jj;
     doublereal eps;
     doublereal anorm;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zhpmv_(char *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *);
-    extern doublereal dlamch_(char *), zlange_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublereal *);
     doublereal ainvnm;
-    extern doublereal zlanhp_(char *, char *, integer *, doublecomplex *, 
-	    doublereal *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

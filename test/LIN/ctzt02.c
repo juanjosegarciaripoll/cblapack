@@ -30,13 +30,6 @@ doublereal ctzt02_(integer *m, integer *n, complex *af, integer *lda, complex
     /* Local variables */
     integer i__;
     real rwork[1];
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *), slamch_(char *);
-    extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *), xerbla_(char *, 
-	    integer *), clatzm_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, complex *, complex *, integer *, complex 
-	    *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */
@@ -107,7 +100,7 @@ doublereal ctzt02_(integer *m, integer *n, complex *af, integer *lda, complex
     ret_val = 0.f;
 
     if (*lwork < *n * *n + *n) {
-	xerbla_("CTZT02", &c__7);
+	this_xerbla_("CTZT02", &c__7);
 	return ret_val;
     }
 

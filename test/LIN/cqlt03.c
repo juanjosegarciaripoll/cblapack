@@ -45,23 +45,11 @@ static complex c_b22 = {1.f,0.f};
     real eps;
     char side[1];
     integer info;
-    extern /* Subroutine */ int cgemm_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *);
     integer iside;
     real resid;
     integer minmn;
     real cnorm;
     char trans[1];
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *), slamch_(char *);
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), claset_(char *, 
-	    integer *, integer *, complex *, complex *, complex *, integer *), clarnv_(integer *, integer *, integer *, complex *), 
-	    cungql_(integer *, integer *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *, integer *), cunmql_(char *, char 
-	    *, integer *, integer *, integer *, complex *, integer *, complex 
-	    *, complex *, integer *, complex *, integer *, integer *);
     integer itrans;
 
 

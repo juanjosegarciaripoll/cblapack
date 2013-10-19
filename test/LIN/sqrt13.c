@@ -28,14 +28,8 @@ static integer c__0 = 0;
 
     /* Local variables */
     integer j, info;
-    extern doublereal sasum_(integer *, real *, integer *);
     real dummy[1];
-    extern /* Subroutine */ int slabad_(real *, real *);
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
     real bignum;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *), slarnv_(integer *, integer *, integer *, real *);
     real smlnum;
 
 

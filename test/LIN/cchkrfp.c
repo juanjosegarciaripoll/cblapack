@@ -73,24 +73,9 @@ static integer c__6 = 6;
     real s_work_clanhe__[50];
     complex c_work_clatms__[150];
     real s_work_clatms__[50];
-    extern doublereal slamch_(char *), second_(void);
-    extern /* Subroutine */ int ilaver_(integer *, integer *, integer *);
     real thresh;
     complex workap[1275];
     logical tsterr;
-    extern /* Subroutine */ int cdrvrf1_(integer *, integer *, integer *, 
-	    real *, complex *, integer *, complex *, real *), cdrvrf2_(
-	    integer *, integer *, integer *, complex *, integer *, complex *, 
-	    complex *, complex *), cdrvrf3_(integer *, integer *, integer *, 
-	    real *, complex *, integer *, complex *, complex *, complex *, 
-	    real *, complex *, complex *), cdrvrf4_(integer *, integer *, 
-	    integer *, real *, complex *, complex *, integer *, complex *, 
-	    complex *, integer *, real *), cerrrfp_(integer *), cdrvrfp_(
-	    integer *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, real *, complex *, complex *, complex *, complex *, 
-	    complex *, complex *, complex *, complex *, complex *, complex *, 
-	    complex *, complex *, complex *, complex *, real *, real *, real *
-, real *);
     complex workarf[1275];
 
     /* Fortran I/O blocks */

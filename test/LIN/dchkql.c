@@ -63,43 +63,10 @@ static integer c__3 = 3;
     integer kval[4];
     char dist[1], type__[1];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *), dget02_(
-	    char *, integer *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *);
     integer nfail, iseed[4];
-    extern /* Subroutine */ int dqlt01_(integer *, integer *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, integer *, doublereal *, 
-	     doublereal *, integer *, doublereal *, doublereal *), dqlt02_(
-	    integer *, integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *, 
-	     integer *, doublereal *, doublereal *), dqlt03_(integer *, 
-	    integer *, integer *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, doublereal *);
     doublereal anorm;
     integer minmn, nerrs, lwork;
-    extern /* Subroutine */ int dlatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, char *), alaerh_(char *, 
-	    char *, integer *, integer *, char *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *);
-    extern logical dgennd_(integer *, integer *, doublereal *, integer *);
-    extern /* Subroutine */ int dlacpy_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *), 
-	    dlarhs_(char *, char *, char *, char *, integer *, integer *, 
-	    integer *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, integer *, 
-	    integer *), dgeqls_(integer *, 
-	    integer *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, integer *), 
-	    alasum_(char *, integer *, integer *, integer *, integer *);
     doublereal cndnum;
-    extern /* Subroutine */ int dlatms_(integer *, integer *, char *, integer 
-	    *, char *, doublereal *, integer *, doublereal *, doublereal *, 
-	    integer *, integer *, char *, doublereal *, integer *, doublereal 
-	    *, integer *), derrql_(char *, integer *), xlaenv_(integer *, integer *);
     doublereal result[8];
 
     /* Fortran I/O blocks */

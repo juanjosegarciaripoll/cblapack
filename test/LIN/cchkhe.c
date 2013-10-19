@@ -67,57 +67,16 @@ static integer c__8 = 8;
     integer irhs, nrhs;
     char uplo[1], type__[1];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *), chet01_(
-	    char *, integer *, complex *, integer *, complex *, integer *, 
-	    integer *, complex *, integer *, real *, real *), cget04_(
-	    integer *, integer *, complex *, integer *, complex *, integer *, 
-	    real *, real *);
     integer nfail, iseed[4];
     real rcond;
-    extern /* Subroutine */ int cpot02_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *, complex *, integer *, real *, 
-	    real *);
     integer nimat;
-    extern doublereal sget06_(real *, real *);
-    extern /* Subroutine */ int cpot03_(char *, integer *, complex *, integer 
-	    *, complex *, integer *, complex *, integer *, real *, real *, 
-	    real *), cpot05_(char *, integer *, integer *, complex *, 
-	    integer *, complex *, integer *, complex *, integer *, complex *, 
-	    integer *, real *, real *, real *);
     real anorm;
     integer iuplo, izero, nerrs, lwork;
     logical zerot;
     char xtype[1];
-    extern /* Subroutine */ int clatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, real *, integer *, real *, char *
-);
-    extern doublereal clanhe_(char *, char *, integer *, complex *, integer *, 
-	     real *);
-    extern /* Subroutine */ int alaerh_(char *, char *, integer *, integer *, 
-	    char *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *), claipd_(integer *, complex *, integer *, integer *), 
-	    checon_(char *, integer *, complex *, integer *, integer *, real *
-, real *, complex *, integer *);
     real rcondc;
-    extern /* Subroutine */ int cerrhe_(char *, integer *), cherfs_(
-	    char *, integer *, integer *, complex *, integer *, complex *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *, 
-	    real *, real *, complex *, real *, integer *), chetrf_(
-	    char *, integer *, complex *, integer *, integer *, complex *, 
-	    integer *, integer *), clacpy_(char *, integer *, integer 
-	    *, complex *, integer *, complex *, integer *), clarhs_(
-	    char *, char *, char *, char *, integer *, integer *, integer *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *, 
-	    complex *, integer *, integer *, integer *), chetri_(char *, integer *, complex *, integer *, 
-	    integer *, complex *, integer *), alasum_(char *, integer 
-	    *, integer *, integer *, integer *);
     real cndnum;
-    extern /* Subroutine */ int clatms_(integer *, integer *, char *, integer 
-	    *, char *, real *, integer *, real *, real *, integer *, integer *
-, char *, complex *, integer *, complex *, integer *), chetrs_(char *, integer *, integer *, complex *, 
-	    integer *, integer *, complex *, integer *, integer *);
     logical trfcon;
-    extern /* Subroutine */ int xlaenv_(integer *, integer *);
     real result[8];
 
     /* Fortran I/O blocks */

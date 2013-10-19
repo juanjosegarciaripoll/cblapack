@@ -60,12 +60,6 @@ static integer c__8 = 8;
     doublereal d__1, d__2, d__3;
 
     /* Local variables */
-    extern /* Subroutine */ int dsysvxx_(char *, char *, integer *, integer *, 
-	     doublereal *, integer *, doublereal *, integer *, integer *, 
-	    char *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *, 
-	     integer *, integer *);
     doublereal errbnd_c__[30], errbnd_n__[30], a[100]	/* was [10][10] */, b[
 	    100]	/* was [10][10] */, c__[10];
     integer i__, j, k;
@@ -98,32 +92,9 @@ static integer c__8 = 8;
     integer iwork[30];
     doublereal rnorm, normt, sumri;
     logical printed_guide__;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dlacpy_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *);
     doublereal abcopy[190]	/* was [19][10] */;
-    extern logical lsamen_(integer *, char *, char *);
     doublereal params[2], orcond, rinorm, tstrat[6], rpvgrw;
-    extern /* Subroutine */ int dlahilb_(integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
     doublereal invhilb[100]	/* was [10][10] */, normdif;
-    extern /* Subroutine */ int dgbsvxx_(char *, char *, integer *, integer *, 
-	     integer *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, integer *, char *, doublereal *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *, 
-	     integer *, doublereal *, doublereal *, integer *, integer *), dgesvxx_(char *, char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *, char *, doublereal *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *), dposvxx_(char *, char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, char *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *, doublereal *, 
-	     doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    integer *);
 
     /* Fortran I/O blocks */
     static cilist io___42 = { 0, 6, 0, fmt_8000, 0 };

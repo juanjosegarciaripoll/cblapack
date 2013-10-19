@@ -62,41 +62,11 @@ static integer c__3 = 3;
     integer kval[4];
     char dist[1], type__[1];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer nfail, iseed[4];
-    extern /* Subroutine */ int sget02_(char *, integer *, integer *, integer 
-	    *, real *, integer *, real *, integer *, real *, integer *, real *
-, real *);
     real anorm;
     integer minmn;
-    extern /* Subroutine */ int slqt01_(integer *, integer *, real *, real *, 
-	    real *, real *, integer *, real *, real *, integer *, real *, 
-	    real *), slqt02_(integer *, integer *, integer *, real *, real *, 
-	    real *, real *, integer *, real *, real *, integer *, real *, 
-	    real *), slqt03_(integer *, integer *, integer *, real *, real *, 
-	    real *, real *, integer *, real *, real *, integer *, real *, 
-	    real *);
     integer nerrs, lwork;
-    extern /* Subroutine */ int slatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, real *, integer *, real *, char *
-), alaerh_(char *, char *, integer *, 
-	    integer *, char *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *);
-    extern logical sgennd_(integer *, integer *, real *, integer *);
-    extern /* Subroutine */ int alasum_(char *, integer *, integer *, integer 
-	    *, integer *);
     real cndnum;
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *), slarhs_(char *, char *, 
-	    char *, char *, integer *, integer *, integer *, integer *, 
-	    integer *, real *, integer *, real *, integer *, real *, integer *
-, integer *, integer *), sgelqs_(
-	    integer *, integer *, integer *, real *, integer *, real *, real *
-, integer *, real *, integer *, integer *), xlaenv_(integer *, 
-	    integer *), slatms_(integer *, integer *, char *, integer *, char 
-	    *, real *, integer *, real *, real *, integer *, integer *, char *
-, real *, integer *, real *, integer *), 
-	    serrlq_(char *, integer *);
     real result[8];
 
     /* Fortran I/O blocks */

@@ -42,19 +42,6 @@ static integer c__2 = 2;
     integer i__, j;
     real w[2], x[2], af[4]	/* was [2][2] */;
     integer info;
-    extern /* Subroutine */ int sgeql2_(integer *, integer *, real *, integer 
-	    *, real *, real *, integer *), sorg2l_(integer *, integer *, 
-	    integer *, real *, integer *, real *, real *, integer *), sorm2l_(
-	    char *, char *, integer *, integer *, integer *, real *, integer *
-, real *, real *, integer *, real *, integer *), 
-	    alaesm_(char *, logical *, integer *), sgeqlf_(integer *, 
-	    integer *, real *, integer *, real *, real *, integer *, integer *
-), chkxer_(char *, integer *, integer *, logical *, logical *), sgeqls_(integer *, integer *, integer *, real *, integer 
-	    *, real *, real *, integer *, real *, integer *, integer *), 
-	    sorgql_(integer *, integer *, integer *, real *, integer *, real *
-, real *, integer *, integer *), sormql_(char *, char *, integer *
-, integer *, integer *, real *, integer *, real *, real *, 
-	    integer *, real *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

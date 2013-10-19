@@ -31,12 +31,7 @@ static integer c__1 = 1;
     /* Local variables */
     integer j, i1, i2, n1, kd;
     real eps;
-    extern /* Subroutine */ int cgbmv_(char *, integer *, integer *, integer *
-, integer *, complex *, complex *, integer *, complex *, integer *
-, complex *, complex *, integer *);
     real anorm, bnorm, xnorm;
-    extern doublereal slamch_(char *), scasum_(integer *, complex *, 
-	    integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

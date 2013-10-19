@@ -82,37 +82,14 @@ static integer c__1 = 1;
     integer irhs, iter, nrhs;
     char type__[1];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer nfail, iseed[4];
-    extern /* Subroutine */ int dget08_(char *, integer *, integer *, integer 
-	    *, doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	     integer *, doublereal *, doublereal *);
     integer nimat;
     doublereal anorm;
     char trans[1];
     integer izero, nerrs;
     logical zerot;
     char xtype[1];
-    extern /* Subroutine */ int dlatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, char *), alaerh_(char *, 
-	    char *, integer *, integer *, char *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *), dlacpy_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *), dlarhs_(char *, char *, char *, char *, integer *, 
-	    integer *, integer *, integer *, integer *, doublereal *, integer 
-	    *, doublereal *, integer *, doublereal *, integer *, integer *, 
-	    integer *), dlaset_(char *, 
-	    integer *, integer *, doublereal *, doublereal *, doublereal *, 
-	    integer *);
     doublereal cndnum;
-    extern /* Subroutine */ int dlatms_(integer *, integer *, char *, integer 
-	    *, char *, doublereal *, integer *, doublereal *, doublereal *, 
-	    integer *, integer *, char *, doublereal *, integer *, doublereal 
-	    *, integer *), dsgesv_(integer *, integer 
-	    *, doublereal *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, real *, integer *, integer 
-	    *);
     doublereal result[1];
 
     /* Fortran I/O blocks */

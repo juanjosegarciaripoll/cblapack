@@ -31,14 +31,7 @@ static integer c__1 = 1;
     integer j, n1, n2;
     doublereal eps;
     doublereal anorm, bnorm;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
     doublereal xnorm;
-    extern doublereal dlamch_(char *), zlange_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublereal *);
-    extern integer izamax_(integer *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

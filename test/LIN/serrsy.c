@@ -47,26 +47,6 @@ static real c_b152 = -1.f;
     real r1[4], r2[4], af[16]	/* was [4][4] */;
     integer ip[4], iw[4], info;
     real anrm, rcond;
-    extern /* Subroutine */ int ssytf2_(char *, integer *, real *, integer *, 
-	    integer *, integer *), alaesm_(char *, logical *, integer 
-	    *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), sspcon_(char *, integer *, real *, integer 
-	    *, real *, real *, real *, integer *, integer *), ssycon_(
-	    char *, integer *, real *, integer *, integer *, real *, real *, 
-	    real *, integer *, integer *), ssprfs_(char *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    integer *, real *, real *, real *, integer *, integer *), 
-	    ssptrf_(char *, integer *, real *, integer *, integer *), 
-	    ssptri_(char *, integer *, real *, integer *, real *, integer *), ssyrfs_(char *, integer *, integer *, real *, integer *, 
-	    real *, integer *, integer *, real *, integer *, real *, integer *
-, real *, real *, real *, integer *, integer *), ssytrf_(
-	    char *, integer *, real *, integer *, integer *, real *, integer *
-, integer *), ssytri_(char *, integer *, real *, integer *
-, integer *, real *, integer *), ssptrs_(char *, integer *
-, integer *, real *, integer *, real *, integer *, integer *), ssytrs_(char *, integer *, integer *, real *, integer *, 
-	    integer *, real *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

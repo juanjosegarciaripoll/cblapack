@@ -35,40 +35,7 @@ static integer c__1 = 1;
     logical gen, tri, qrs, sym, band;
     char diag[1];
     logical tran;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), zhemm_(char *, char *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), zgbmv_(char *, integer *, integer *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), zhbmv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), 
-	    zsbmv_(char *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *), ztbmv_(char 
-	    *, char *, char *, integer *, integer *, doublecomplex *, integer 
-	    *, doublecomplex *, integer *), zhpmv_(
-	    char *, integer *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), ztrmm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *), 
-	    zspmv_(char *, integer *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), zsymm_(char *, char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), ztpmv_(char *, char *, char *, integer *, doublecomplex *
-, doublecomplex *, integer *), xerbla_(
-	    char *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
     logical notran;
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), 
-	    zlarnv_(integer *, integer *, integer *, doublecomplex *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */
@@ -268,7 +235,7 @@ static integer c__1 = 1;
     }
     if (*info != 0) {
 	i__1 = -(*info);
-	xerbla_("ZLARHS", &i__1);
+	this_xerbla_("ZLARHS", &i__1);
 	return 0;
     }
 
@@ -428,7 +395,7 @@ static integer c__1 = 1;
 
 	*info = -1;
 	i__1 = -(*info);
-	xerbla_("ZLARHS", &i__1);
+	this_xerbla_("ZLARHS", &i__1);
     }
 
     return 0;

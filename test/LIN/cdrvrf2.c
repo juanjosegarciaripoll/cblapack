@@ -60,16 +60,6 @@ static integer c__1 = 1;
     integer iform;
     logical lower;
     integer iuplo, nerrs;
-    extern /* Complex */ void clarnd_(complex *, integer *, integer *);
-    extern /* Subroutine */ int ctfttp_(char *, char *, integer *, complex *, 
-	    complex *, integer *), ctpttf_(char *, char *, 
-	    integer *, complex *, complex *, integer *), 
-	    ctfttr_(char *, char *, integer *, complex *, complex *, integer *
-, integer *), ctrttf_(char *, char *, integer *, 
-	    complex *, integer *, complex *, integer *), 
-	    ctrttp_(char *, integer *, complex *, integer *, complex *, 
-	    integer *), ctpttr_(char *, integer *, complex *, complex 
-	    *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___19 = { 0, 0, 0, 0, 0 };

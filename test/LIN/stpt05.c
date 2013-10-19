@@ -34,9 +34,7 @@ static integer c__1 = 1;
     logical unit;
     logical upper;
     real xnorm;
-    extern doublereal slamch_(char *);
     real errbnd;
-    extern integer isamax_(integer *, real *, integer *);
     logical notran;
 
 

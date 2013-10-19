@@ -43,21 +43,6 @@ static integer c__10 = 10;
     char c2[2];
     integer ip[2], info, irnk;
     real rcond;
-    extern /* Subroutine */ int sgels_(char *, integer *, integer *, integer *
-, real *, integer *, real *, integer *, real *, integer *, 
-	    integer *), alaesm_(char *, logical *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int sgelsd_(integer *, integer *, integer *, real 
-	    *, integer *, real *, integer *, real *, real *, integer *, real *
-, integer *, integer *, integer *), chkxer_(char *, integer *, 
-	    integer *, logical *, logical *), sgelss_(integer *, 
-	    integer *, integer *, real *, integer *, real *, integer *, real *
-, real *, integer *, real *, integer *, integer *), sgelsx_(
-	    integer *, integer *, integer *, real *, integer *, real *, 
-	    integer *, integer *, real *, integer *, real *, integer *), 
-	    sgelsy_(integer *, integer *, integer *, real *, integer *, real *
-, integer *, integer *, real *, integer *, real *, integer *, 
-	    integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

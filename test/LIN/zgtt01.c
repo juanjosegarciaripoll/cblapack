@@ -28,13 +28,6 @@
     integer ip;
     doublereal eps, anorm;
     integer lastj;
-    extern /* Subroutine */ int zswap_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern doublereal dlamch_(char *), zlangt_(char *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *), 
-	    zlanhs_(char *, integer *, doublecomplex *, integer *, doublereal 
-	    *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

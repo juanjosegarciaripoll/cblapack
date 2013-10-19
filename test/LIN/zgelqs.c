@@ -26,14 +26,6 @@ static doublecomplex c_b2 = {1.,0.};
     integer a_dim1, a_offset, b_dim1, b_offset, i__1;
 
     /* Local variables */
-    extern /* Subroutine */ int ztrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *), 
-	    xerbla_(char *, integer *), zlaset_(char *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    integer *), zunmlq_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.1) -- */
@@ -133,7 +125,7 @@ static doublecomplex c_b2 = {1.,0.};
     }
     if (*info != 0) {
 	i__1 = -(*info);
-	xerbla_("ZGELQS", &i__1);
+	this_xerbla_("ZGELQS", &i__1);
 	return 0;
     }
 

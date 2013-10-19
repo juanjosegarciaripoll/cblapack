@@ -63,60 +63,8 @@ static integer c__5 = 5;
     doublereal berr;
     integer info;
     doublereal anrm, ccond, rcond;
-    extern /* Subroutine */ int zgbtf2_(integer *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, integer *, integer *), 
-	    zgetf2_(integer *, integer *, doublecomplex *, integer *, integer 
-	    *, integer *), alaesm_(char *, logical *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int zgbcon_(char *, integer *, integer *, integer 
-	    *, doublecomplex *, integer *, integer *, doublereal *, 
-	    doublereal *, doublecomplex *, doublereal *, integer *);
     doublecomplex params;
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), zgecon_(char *, integer *, doublecomplex *, 
-	     integer *, doublereal *, doublereal *, doublecomplex *, 
-	    doublereal *, integer *), zgbequ_(integer *, integer *, 
-	    integer *, integer *, doublecomplex *, integer *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, integer *)
-	    , zgbrfs_(char *, integer *, integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *, doublecomplex *, doublereal *, 
-	    integer *), zgbtrf_(integer *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, integer *, integer *), 
-	    zgeequ_(integer *, integer *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, integer *), zgerfs_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *, doublecomplex *, doublereal *, 
-	    integer *), zgetrf_(integer *, integer *, doublecomplex *, 
-	     integer *, integer *, integer *), zgetri_(integer *, 
-	    doublecomplex *, integer *, integer *, doublecomplex *, integer *, 
-	     integer *), zgbtrs_(char *, integer *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, integer *, doublecomplex *, 
-	     integer *, integer *), zgetrs_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, integer *, doublecomplex *, 
-	     integer *, integer *), zgbequb_(integer *, integer *, 
-	    integer *, integer *, doublecomplex *, integer *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, integer *)
-	    ;
     integer nparams;
-    extern /* Subroutine */ int zgeequb_(integer *, integer *, doublecomplex *
-, integer *, doublereal *, doublereal *, doublereal *, doublereal 
-	    *, doublereal *, integer *), zgbrfsx_(char *, char *, integer *, 
-	    integer *, integer *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, integer *, doublereal *, doublereal *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    doublereal *, integer *), zgerfsx_(char *, char *, 
-	     integer *, integer *, doublecomplex *, integer *, doublecomplex *
-, integer *, integer *, doublereal *, doublereal *, doublecomplex 
-	    *, integer *, doublecomplex *, integer *, doublereal *, 
-	    doublereal *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, doublereal *, 
-	    integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

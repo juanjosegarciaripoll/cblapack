@@ -68,12 +68,9 @@ static integer c__7 = 7;
     char ch__1[2];
 
     /* Local variables */
-    extern /* Subroutine */ int sebchvxx_(real *, char *);
     integer i__, k, n;
     real *errbnds_c__, *errbnds_n__;
     integer k1, nb, in, kl, ku, nt, n_err_bnds__;
-    extern doublereal sla_rpvgrw__(integer *, integer *, real *, integer *, 
-	    real *, integer *);
     integer lda;
     char fact[1];
     integer ioff, mode;
@@ -88,79 +85,28 @@ static integer c__7 = 7;
     char equed[1];
     integer nbmin;
     real rcond, roldc;
-    extern /* Subroutine */ int sget01_(integer *, integer *, real *, integer 
-	    *, real *, integer *, integer *, real *, real *);
     integer nimat;
     real roldi;
-    extern doublereal sget06_(real *, real *);
-    extern /* Subroutine */ int sget02_(char *, integer *, integer *, integer 
-	    *, real *, integer *, real *, integer *, real *, integer *, real *
-, real *);
     real anorm;
     integer itran;
-    extern /* Subroutine */ int sget04_(integer *, integer *, real *, integer 
-	    *, real *, integer *, real *, real *);
     logical equil;
     real roldo;
-    extern /* Subroutine */ int sget07_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *, real *, integer *, real *, integer *
-, real *, logical *, real *, real *);
     char trans[1];
     integer izero, nerrs;
-    extern /* Subroutine */ int sgesv_(integer *, integer *, real *, integer *
-, integer *, real *, integer *, integer *);
     integer lwork;
     logical zerot;
     char xtype[1];
-    extern /* Subroutine */ int slatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, real *, integer *, real *, char *
-), aladhd_(integer *, char *), 
-	    alaerh_(char *, char *, integer *, integer *, char *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *);
     logical prefac;
     real colcnd;
-    extern doublereal slamch_(char *);
     real rcondc;
-    extern doublereal slange_(char *, integer *, integer *, real *, integer *, 
-	     real *);
     logical nofact;
     integer iequed;
-    extern /* Subroutine */ int slaqge_(integer *, integer *, real *, integer 
-	    *, real *, real *, real *, real *, real *, char *);
     real rcondi;
-    extern /* Subroutine */ int alasvm_(char *, integer *, integer *, integer 
-	    *, integer *);
     real cndnum, anormi, rcondo, ainvnm;
-    extern /* Subroutine */ int sgeequ_(integer *, integer *, real *, integer 
-	    *, real *, real *, real *, real *, real *, integer *);
     logical trfcon;
     real anormo, rowcnd;
-    extern /* Subroutine */ int sgetrf_(integer *, integer *, real *, integer 
-	    *, integer *, integer *), sgetri_(integer *, real *, integer *, 
-	    integer *, real *, integer *, integer *), slacpy_(char *, integer 
-	    *, integer *, real *, integer *, real *, integer *), 
-	    slarhs_(char *, char *, char *, char *, integer *, integer *, 
-	    integer *, integer *, integer *, real *, integer *, real *, 
-	    integer *, real *, integer *, integer *, integer *);
-    extern doublereal slantr_(char *, char *, char *, integer *, integer *, 
-	    real *, integer *, real *);
-    extern /* Subroutine */ int slaset_(char *, integer *, integer *, real *, 
-	    real *, real *, integer *), slatms_(integer *, integer *, 
-	    char *, integer *, char *, real *, integer *, real *, real *, 
-	    integer *, integer *, char *, real *, integer *, real *, integer *
-), xlaenv_(integer *, integer *);
     real result[7];
-    extern /* Subroutine */ int sgesvx_(char *, char *, integer *, integer *, 
-	    real *, integer *, real *, integer *, integer *, char *, real *, 
-	    real *, real *, integer *, real *, integer *, real *, real *, 
-	    real *, real *, integer *, integer *);
     real rpvgrw;
-    extern /* Subroutine */ int serrvx_(char *, integer *), sgesvxx_(
-	    char *, char *, integer *, integer *, real *, integer *, real *, 
-	    integer *, integer *, char *, real *, real *, real *, integer *, 
-	    real *, integer *, real *, real *, real *, integer *, real *, 
-	    real *, integer *, real *, real *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___55 = { 0, 0, 0, fmt_9999, 0 };

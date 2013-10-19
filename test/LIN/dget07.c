@@ -33,8 +33,6 @@ static integer c__1 = 1;
     integer imax;
     doublereal unfl, ovfl;
     doublereal xnorm;
-    extern doublereal dlamch_(char *);
-    extern integer idamax_(integer *, doublereal *, integer *);
     doublereal errbnd;
     logical notran;
 

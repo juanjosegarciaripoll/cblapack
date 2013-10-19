@@ -50,41 +50,8 @@ static integer c_n1 = -1;
     real err_bnds_n__[12]	/* was [4][3] */, berr;
     integer info;
     real anrm, rcond;
-    extern /* Subroutine */ int spbtf2_(char *, integer *, integer *, real *, 
-	    integer *, integer *), spotf2_(char *, integer *, real *, 
-	    integer *, integer *), alaesm_(char *, logical *, integer 
-	    *);
-    extern logical lsamen_(integer *, char *, char *);
     real params;
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), spbcon_(char *, integer *, integer *, real 
-	    *, integer *, real *, real *, real *, integer *, integer *), spbequ_(char *, integer *, integer *, real *, integer *, 
-	    real *, real *, real *, integer *), spbrfs_(char *, 
-	    integer *, integer *, integer *, real *, integer *, real *, 
-	    integer *, real *, integer *, real *, integer *, real *, real *, 
-	    real *, integer *, integer *), spbtrf_(char *, integer *, 
-	    integer *, real *, integer *, integer *), spocon_(char *, 
-	    integer *, real *, integer *, real *, real *, real *, integer *, 
-	    integer *), sppcon_(char *, integer *, real *, real *, 
-	    real *, real *, integer *, integer *), spoequ_(integer *, 
-	    real *, integer *, real *, real *, real *, integer *), spbtrs_(
-	    char *, integer *, integer *, integer *, real *, integer *, real *
-, integer *, integer *), sporfs_(char *, integer *, 
-	    integer *, real *, integer *, real *, integer *, real *, integer *
-, real *, integer *, real *, real *, real *, integer *, integer *), spotrf_(char *, integer *, real *, integer *, integer *), spotri_(char *, integer *, real *, integer *, integer *), sppequ_(char *, integer *, real *, real *, real *, real 
-	    *, integer *), spprfs_(char *, integer *, integer *, real 
-	    *, real *, real *, integer *, real *, integer *, real *, real *, 
-	    real *, integer *, integer *), spptrf_(char *, integer *, 
-	    real *, integer *), spptri_(char *, integer *, real *, 
-	    integer *), spotrs_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *, integer *), spptrs_(char *, 
-	    integer *, integer *, real *, real *, integer *, integer *);
     integer nparams;
-    extern /* Subroutine */ int spoequb_(integer *, real *, integer *, real *, 
-	     real *, real *, integer *), sporfsx_(char *, char *, integer *, 
-	    integer *, real *, integer *, real *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, real *, integer *, real *, 
-	    real *, integer *, real *, real *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

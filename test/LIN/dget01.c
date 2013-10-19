@@ -29,19 +29,7 @@ static integer c_n1 = -1;
     /* Local variables */
     integer i__, j, k;
     doublereal t, eps;
-    extern doublereal ddot_(integer *, doublereal *, integer *, doublereal *, 
-	    integer *);
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *), dgemv_(char *, integer *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *);
     doublereal anorm;
-    extern /* Subroutine */ int dtrmv_(char *, char *, char *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *);
-    extern doublereal dlamch_(char *), dlange_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *);
-    extern /* Subroutine */ int dlaswp_(integer *, doublereal *, integer *, 
-	    integer *, integer *, integer *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

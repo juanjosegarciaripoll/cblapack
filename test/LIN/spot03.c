@@ -30,14 +30,7 @@ static real c_b12 = 0.f;
     integer i__, j;
     real eps;
     real anorm;
-    extern /* Subroutine */ int ssymm_(char *, char *, integer *, integer *, 
-	    real *, real *, integer *, real *, integer *, real *, real *, 
-	    integer *);
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
     real ainvnm;
-    extern doublereal slansy_(char *, char *, integer *, real *, integer *, 
-	    real *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

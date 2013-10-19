@@ -32,19 +32,7 @@ static integer c_n1 = -1;
     integer i__, j, k;
     complex t;
     real eps;
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *), cgemv_(char *, integer *, integer *, complex *, 
-	    complex *, integer *, complex *, integer *, complex *, complex *, 
-	    integer *);
     real anorm;
-    extern /* Complex */ void cdotu_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern /* Subroutine */ int ctrmv_(char *, char *, char *, integer *, 
-	    complex *, integer *, complex *, integer *);
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *), slamch_(char *);
-    extern /* Subroutine */ int claswp_(integer *, complex *, integer *, 
-	    integer *, integer *, integer *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

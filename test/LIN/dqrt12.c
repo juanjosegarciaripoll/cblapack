@@ -31,24 +31,7 @@ doublereal dqrt12_(integer *m, integer *n, doublereal *a, integer *lda,
     /* Local variables */
     integer i__, j, mn, iscl, info;
     doublereal anrm;
-    extern doublereal dnrm2_(integer *, doublereal *, integer *), dasum_(
-	    integer *, doublereal *, integer *);
-    extern /* Subroutine */ int daxpy_(integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *), dgebd2_(integer *, integer *, 
-	     doublereal *, integer *, doublereal *, doublereal *, doublereal *
-, doublereal *, doublereal *, integer *);
     doublereal dummy[1];
-    extern /* Subroutine */ int dlabad_(doublereal *, doublereal *);
-    extern doublereal dlamch_(char *), dlange_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *);
-    extern /* Subroutine */ int dlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, integer *), dlaset_(char *, integer *, integer 
-	    *, doublereal *, doublereal *, doublereal *, integer *), 
-	    xerbla_(char *, integer *), dbdsqr_(char *, integer *, 
-	    integer *, integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *);
     doublereal bignum, smlnum, nrmsvl;
 
 
@@ -125,7 +108,7 @@ doublereal dqrt12_(integer *m, integer *n, doublereal *a, integer *lda,
     i__1 = *m * *n + (min(*m,*n) << 2) + max(*m,*n), i__2 = *m * *n + (min(*m,
 	    *n) << 1) + (*n << 2);
     if (*lwork < max(i__1,i__2)) {
-	xerbla_("DQRT12", &c__7);
+	this_xerbla_("DQRT12", &c__7);
 	return ret_val;
     }
 

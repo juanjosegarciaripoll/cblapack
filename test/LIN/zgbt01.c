@@ -33,11 +33,6 @@ static doublecomplex c_b12 = {-1.,-0.};
     doublereal eps;
     integer lenj;
     doublereal anorm;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern doublereal dlamch_(char *), dzasum_(integer *, 
-	    doublecomplex *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

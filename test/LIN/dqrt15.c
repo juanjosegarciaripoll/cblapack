@@ -37,28 +37,8 @@ static integer c__0 = 0;
     doublereal eps;
     integer info;
     doublereal temp;
-    extern doublereal dnrm2_(integer *, doublereal *, integer *);
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *), dlarf_(char *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *), dgemm_(char *, char *, integer *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *);
-    extern doublereal dasum_(integer *, doublereal *, integer *);
     doublereal dummy[1];
-    extern doublereal dlamch_(char *), dlange_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *);
-    extern /* Subroutine */ int dlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, integer *);
-    extern doublereal dlarnd_(integer *, integer *);
-    extern /* Subroutine */ int dlaord_(char *, integer *, doublereal *, 
-	    integer *), dlaset_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *), 
-	    xerbla_(char *, integer *);
     doublereal bignum;
-    extern /* Subroutine */ int dlaror_(char *, char *, integer *, integer *, 
-	    doublereal *, integer *, integer *, doublereal *, integer *), dlarnv_(integer *, integer *, integer *, 
-	    doublereal *);
     doublereal smlnum;
 
 
@@ -164,7 +144,7 @@ static integer c__0 = 0;
     i__1 = *m + mn, i__2 = mn * *nrhs, i__1 = max(i__1,i__2), i__2 = (*n << 1)
 	     + *m;
     if (*lwork < max(i__1,i__2)) {
-	xerbla_("DQRT15", &c__16);
+	this_xerbla_("DQRT15", &c__16);
 	return 0;
     }
 
@@ -186,7 +166,7 @@ static integer c__0 = 0;
 /* L10: */
 	}
     } else {
-	xerbla_("DQRT15", &c__2);
+	this_xerbla_("DQRT15", &c__2);
     }
 
     if (*rank > 0) {
@@ -286,7 +266,7 @@ L20:
 		dlascl_("General", &c__0, &c__0, norma, &smlnum, m, nrhs, &b[
 			b_offset], ldb, &info);
 	    } else {
-		xerbla_("DQRT15", &c__1);
+		this_xerbla_("DQRT15", &c__1);
 		return 0;
 	    }
 	}

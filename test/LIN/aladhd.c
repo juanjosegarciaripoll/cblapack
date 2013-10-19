@@ -131,8 +131,6 @@ static integer c__7 = 7;
     /* Local variables */
     char c1[1], c3[1], p2[2], sym[9];
     logical sord, corz;
-    extern logical lsame_(char *, char *), lsamen_(integer *, 
-	    char *, char *);
 
     /* Fortran I/O blocks */
     static cilist io___6 = { 0, 0, 0, fmt_9999, 0 };

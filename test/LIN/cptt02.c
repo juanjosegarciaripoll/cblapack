@@ -30,12 +30,6 @@ static integer c__1 = 1;
     /* Local variables */
     integer j;
     real eps, anorm, bnorm, xnorm;
-    extern doublereal slamch_(char *), clanht_(char *, integer *, 
-	    real *, complex *);
-    extern /* Subroutine */ int claptm_(char *, integer *, integer *, real *, 
-	    real *, complex *, complex *, integer *, real *, complex *, 
-	    integer *);
-    extern doublereal scasum_(integer *, complex *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

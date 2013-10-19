@@ -57,54 +57,16 @@ static integer c__1 = 1;
     integer nrhs;
     char uplo[1];
     integer nrun;
-    extern /* Subroutine */ int dget04_(integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *);
     integer nfail, iseed[4];
     char cform[1];
-    extern /* Subroutine */ int dpot01_(char *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *), dpot02_(char *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *), dpot03_(char *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, doublereal *);
     integer iform;
     doublereal anorm;
     char ctype[1];
     integer iuplo, nerrs, izero;
     logical zerot;
-    extern /* Subroutine */ int dlatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, char *), aladhd_(integer *, 
-	    char *), alaerh_(char *, char *, integer *, integer *, 
-	    char *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *);
     doublereal rcondc;
-    extern /* Subroutine */ int dlacpy_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *), 
-	    dlarhs_(char *, char *, char *, char *, integer *, integer *, 
-	    integer *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, integer *, 
-	    integer *), alasvm_(char *, 
-	    integer *, integer *, integer *, integer *);
     doublereal cndnum;
-    extern /* Subroutine */ int dlatms_(integer *, integer *, char *, integer 
-	    *, char *, doublereal *, integer *, doublereal *, doublereal *, 
-	    integer *, integer *, char *, doublereal *, integer *, doublereal 
-	    *, integer *), dpftrf_(char *, char *, 
-	    integer *, doublereal *, integer *);
     doublereal ainvnm;
-    extern /* Subroutine */ int dpftri_(char *, char *, integer *, doublereal 
-	    *, integer *);
-    extern doublereal dlansy_(char *, char *, integer *, doublereal *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int dpotrf_(char *, integer *, doublereal *, 
-	    integer *, integer *), dpotri_(char *, integer *, 
-	    doublereal *, integer *, integer *), dpftrs_(char *, char 
-	    *, integer *, integer *, doublereal *, doublereal *, integer *, 
-	    integer *), dtfttr_(char *, char *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *),
-	     dtrttf_(char *, char *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
     doublereal result[4];
 
     /* Fortran I/O blocks */

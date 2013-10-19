@@ -41,24 +41,8 @@ static real c_b25 = 1.f;
     /* Local variables */
     real eps;
     integer info;
-    extern /* Subroutine */ int cgemm_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *), cherk_(char *, 
-	    char *, integer *, integer *, real *, complex *, integer *, real *
-, complex *, integer *);
     real resid, anorm;
     integer minmn;
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *), slamch_(char *);
-    extern /* Subroutine */ int cgeqrf_(integer *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *, integer *), clacpy_(
-	    char *, integer *, integer *, complex *, integer *, complex *, 
-	    integer *), claset_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *);
-    extern doublereal clansy_(char *, char *, integer *, complex *, integer *, 
-	     real *);
-    extern /* Subroutine */ int cungqr_(integer *, integer *, integer *, 
-	    complex *, integer *, complex *, complex *, integer *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

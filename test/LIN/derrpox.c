@@ -50,53 +50,8 @@ static integer c_n1 = -1;
     doublereal err_bnds_n__[12]	/* was [4][3] */, berr;
     integer info;
     doublereal anrm, rcond;
-    extern /* Subroutine */ int dpbtf2_(char *, integer *, integer *, 
-	    doublereal *, integer *, integer *), dpotf2_(char *, 
-	    integer *, doublereal *, integer *, integer *), alaesm_(
-	    char *, logical *, integer *), dpbcon_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int dpbequ_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, doublereal *, 
-	     integer *), dpbrfs_(char *, integer *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, doublereal *, integer *, integer *), 
-	    dpbtrf_(char *, integer *, integer *, doublereal *, integer *, 
-	    integer *);
     doublereal params;
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), dpocon_(char *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, doublereal *, integer *, 
-	    integer *), dppcon_(char *, integer *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, integer *, integer *), dpoequ_(integer *, doublereal *, integer *, doublereal *, 
-	     doublereal *, doublereal *, integer *), dpbtrs_(char *, integer *
-, integer *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, integer *), dporfs_(char *, integer *, integer 
-	    *, doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	     integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *, integer *), dpotrf_(char *, 
-	    integer *, doublereal *, integer *, integer *), dpotri_(
-	    char *, integer *, doublereal *, integer *, integer *), 
-	    dppequ_(char *, integer *, doublereal *, doublereal *, doublereal 
-	    *, doublereal *, integer *), dpprfs_(char *, integer *, 
-	    integer *, doublereal *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, doublereal *, 
-	     integer *, integer *), dpptrf_(char *, integer *, 
-	    doublereal *, integer *), dpptri_(char *, integer *, 
-	    doublereal *, integer *), dpotrs_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *), dpptrs_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *), 
-	    dpoequb_(integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, doublereal *, integer *);
     integer nparams;
-    extern /* Subroutine */ int dporfsx_(char *, char *, integer *, integer *, 
-	     doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

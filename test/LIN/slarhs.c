@@ -35,26 +35,7 @@ static integer c__1 = 1;
     logical gen, tri, qrs, sym, band;
     char diag[1];
     logical tran;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *), sgbmv_(char *, integer *, 
-	    integer *, integer *, integer *, real *, real *, integer *, real *
-, integer *, real *, real *, integer *), ssbmv_(char *, 
-	    integer *, integer *, real *, real *, integer *, real *, integer *
-, real *, real *, integer *), stbmv_(char *, char *, char 
-	    *, integer *, integer *, real *, integer *, real *, integer *), strmm_(char *, char *, char *, char *, 
-	    integer *, integer *, real *, real *, integer *, real *, integer *
-), sspmv_(char *, integer *, real 
-	    *, real *, real *, integer *, real *, real *, integer *), 
-	    ssymm_(char *, char *, integer *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, real *, integer *), stpmv_(char *, char *, char *, integer *, real *, real *, 
-	     integer *), xerbla_(char *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *);
     logical notran;
-    extern /* Subroutine */ int slarnv_(integer *, integer *, integer *, real 
-	    *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */
@@ -249,7 +230,7 @@ static integer c__1 = 1;
     }
     if (*info != 0) {
 	i__1 = -(*info);
-	xerbla_("SLARHS", &i__1);
+	this_xerbla_("SLARHS", &i__1);
 	return 0;
     }
 
@@ -380,7 +361,7 @@ static integer c__1 = 1;
 
 	*info = -1;
 	i__1 = -(*info);
-	xerbla_("SLARHS", &i__1);
+	this_xerbla_("SLARHS", &i__1);
     }
 
     return 0;

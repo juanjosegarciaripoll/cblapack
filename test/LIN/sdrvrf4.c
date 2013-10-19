@@ -68,18 +68,9 @@ static integer c__1 = 1;
     real norma, normc;
     char trans[1];
     integer iuplo;
-    extern /* Subroutine */ int ssfrk_(char *, char *, char *, integer *, 
-	    integer *, real *, real *, integer *, real *, real *), ssyrk_(char *, char *, integer *, integer *, 
-	    real *, real *, integer *, real *, real *, integer *);
     integer ialpha;
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *), slarnd_(integer *, 
-	    integer *);
     integer itrans;
     real result[1];
-    extern /* Subroutine */ int stfttr_(char *, char *, integer *, real *, 
-	    real *, integer *, integer *), strttf_(char *, 
-	    char *, integer *, real *, integer *, real *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___28 = { 0, 0, 0, 0, 0 };

@@ -71,67 +71,17 @@ static doublereal c_b91 = -1.;
     integer ins, info;
     char path[3];
     integer rank, nrhs, nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer nfail, iseed[4], crank, irank;
     doublereal rcond;
-    extern doublereal dasum_(integer *, doublereal *, integer *);
     integer itran, mnmin, ncols;
     doublereal norma, normb;
-    extern /* Subroutine */ int zgels_(char *, integer *, integer *, integer *
-, doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, integer *), daxpy_(integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *), 
-	    zgemm_(char *, char *, integer *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *);
     char trans[1];
     integer nerrs, itype, lwork;
-    extern doublereal zqrt12_(integer *, integer *, doublecomplex *, integer *
-, doublereal *, doublecomplex *, integer *, doublereal *), 
-	    zqrt14_(char *, integer *, integer *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *);
-    extern /* Subroutine */ int zqrt13_(integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *, integer *), zqrt15_(
-	    integer *, integer *, integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    doublecomplex *, integer *);
     integer nrows;
-    extern doublereal zqrt17_(char *, integer *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
     integer lwlsy;
-    extern /* Subroutine */ int zqrt16_(char *, integer *, integer *, integer 
-	    *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int alaerh_(char *, char *, integer *, integer *, 
-	    char *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *);
     integer iscale;
-    extern /* Subroutine */ int zdscal_(integer *, doublereal *, 
-	    doublecomplex *, integer *), alasvm_(char *, integer *, integer *, 
-	     integer *, integer *), zgelsd_(integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	     doublereal *, doublereal *, integer *, doublecomplex *, integer *
-, doublereal *, integer *, integer *), xlaenv_(integer *, integer 
-	    *);
     integer ldwork;
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), 
-	    zgelss_(integer *, integer *, integer *, doublecomplex *, integer 
-	    *, doublecomplex *, integer *, doublereal *, doublereal *, 
-	    integer *, doublecomplex *, integer *, doublereal *, integer *), 
-	    zgelsx_(integer *, integer *, integer *, doublecomplex *, integer 
-	    *, doublecomplex *, integer *, integer *, doublereal *, integer *, 
-	     doublecomplex *, doublereal *, integer *), zgelsy_(integer *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     integer *, integer *, doublereal *, integer *, doublecomplex *, 
-	    integer *, doublereal *, integer *);
     doublereal result[18];
-    extern /* Subroutine */ int zlarnv_(integer *, integer *, integer *, 
-	    doublecomplex *), zerrls_(char *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___34 = { 0, 0, 0, fmt_9999, 0 };

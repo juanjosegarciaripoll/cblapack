@@ -71,25 +71,8 @@ static integer c__6 = 6;
     doublereal worka[2500]	/* was [50][50] */, workb[800]	/* was [50][
 	    16] */, workx[800]	/* was [50][16] */, d_work_dlatms__[150], 
 	    d_work_dlansy__[50];
-    extern doublereal dlamch_(char *), dsecnd_(void);
-    extern /* Subroutine */ int ilaver_(integer *, integer *, integer *);
     doublereal thresh, workap[1275];
     logical tsterr;
-    extern /* Subroutine */ int ddrvrf1_(integer *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *)
-	    , ddrvrf2_(integer *, integer *, integer *, doublereal *, integer 
-	    *, doublereal *, doublereal *, doublereal *), ddrvrf3_(integer *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *), ddrvrf4_(integer *, integer *, 
-	    integer *, doublereal *, doublereal *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *), derrrfp_(
-	    integer *), ddrvrfp_(integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *);
     doublereal workarf[1275];
 
     /* Fortran I/O blocks */

@@ -34,8 +34,6 @@ static integer c__1 = 1;
     doublereal unfl, ovfl;
     logical upper;
     doublereal xnorm;
-    extern doublereal dlamch_(char *);
-    extern integer idamax_(integer *, doublereal *, integer *);
     doublereal errbnd;
 
 

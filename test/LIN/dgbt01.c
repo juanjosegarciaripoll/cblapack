@@ -32,12 +32,7 @@ static doublereal c_b12 = -1.;
     integer i1, i2, kd, il, jl, ip, ju, iw, jua;
     doublereal eps;
     integer lenj;
-    extern doublereal dasum_(integer *, doublereal *, integer *);
     doublereal anorm;
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *), daxpy_(integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *);
-    extern doublereal dlamch_(char *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

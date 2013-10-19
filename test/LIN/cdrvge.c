@@ -79,26 +79,13 @@ static integer c__7 = 7;
     real rdum[1];
     char type__[1];
     integer nrun;
-    extern /* Subroutine */ int cget01_(integer *, integer *, complex *, 
-	    integer *, complex *, integer *, integer *, real *, real *), 
-	    cget02_(char *, integer *, integer *, integer *, complex *, 
-	    integer *, complex *, integer *, complex *, integer *, real *, 
-	    real *);
     integer ifact;
-    extern /* Subroutine */ int cget04_(integer *, integer *, complex *, 
-	    integer *, complex *, integer *, real *, real *);
     integer nfail, iseed[4], nfact;
-    extern /* Subroutine */ int cget07_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *, complex *, integer *, complex 
-	    *, integer *, real *, logical *, real *, real *);
     char equed[1];
     integer nbmin;
     real rcond, roldc;
-    extern /* Subroutine */ int cgesv_(integer *, integer *, complex *, 
-	    integer *, integer *, complex *, integer *, integer *);
     integer nimat;
     real roldi;
-    extern doublereal sget06_(real *, real *);
     real anorm;
     integer itran;
     logical equil;
@@ -107,45 +94,15 @@ static integer c__7 = 7;
     integer izero, nerrs, lwork;
     logical zerot;
     char xtype[1];
-    extern /* Subroutine */ int clatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, real *, integer *, real *, char *
-), aladhd_(integer *, char *);
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *);
-    extern /* Subroutine */ int alaerh_(char *, char *, integer *, integer *, 
-	    char *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *), claqge_(integer *, integer *, complex *, integer *, real 
-	    *, real *, real *, real *, real *, char *);
     logical prefac;
     real colcnd;
-    extern doublereal slamch_(char *);
     real rcondc;
-    extern /* Subroutine */ int cgeequ_(integer *, integer *, complex *, 
-	    integer *, real *, real *, real *, real *, real *, integer *);
     logical nofact;
     integer iequed;
-    extern /* Subroutine */ int cgetrf_(integer *, integer *, complex *, 
-	    integer *, integer *, integer *);
     real rcondi;
-    extern /* Subroutine */ int cgetri_(integer *, complex *, integer *, 
-	    integer *, complex *, integer *, integer *), clacpy_(char *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *), clarhs_(char *, char *, char *, char *, integer *, 
-	    integer *, integer *, integer *, integer *, complex *, integer *, 
-	    complex *, integer *, complex *, integer *, integer *, integer *);
-    extern doublereal clantr_(char *, char *, char *, integer *, integer *, 
-	    complex *, integer *, real *);
     real cndnum, anormi, rcondo, ainvnm;
-    extern /* Subroutine */ int alasvm_(char *, integer *, integer *, integer 
-	    *, integer *), claset_(char *, integer *, integer *, 
-	    complex *, complex *, complex *, integer *);
     logical trfcon;
     real anormo, rowcnd;
-    extern /* Subroutine */ int cgesvx_(char *, char *, integer *, integer *, 
-	    complex *, integer *, complex *, integer *, integer *, char *, 
-	    real *, real *, complex *, integer *, complex *, integer *, real *
-, real *, real *, complex *, real *, integer *), clatms_(integer *, integer *, char *, integer *, char *, 
-	    real *, integer *, real *, real *, integer *, integer *, char *, 
-	    complex *, integer *, complex *, integer *), xlaenv_(integer *, integer *), cerrvx_(char *, integer *);
     real result[7], rpvgrw;
 
     /* Fortran I/O blocks */

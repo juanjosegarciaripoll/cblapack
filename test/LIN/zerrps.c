@@ -46,11 +46,6 @@ static integer c__2 = 2;
     doublecomplex a[16]	/* was [4][4] */;
     integer i__, j, piv[4], info;
     doublereal rwork[8];
-    extern /* Subroutine */ int zpstf2_(char *, integer *, doublecomplex *, 
-	    integer *, integer *, integer *, doublereal *, doublereal *, 
-	    integer *), alaesm_(char *, logical *, integer *),
-	     chkxer_(char *, integer *, integer *, logical *, logical *), zpstrf_(char *, integer *, doublecomplex *, integer *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

@@ -23,7 +23,6 @@
     /* Local variables */
     integer i__;
     real de, eps, anorm;
-    extern doublereal slamch_(char *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

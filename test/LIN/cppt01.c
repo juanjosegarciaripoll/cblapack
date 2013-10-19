@@ -30,15 +30,7 @@ static real c_b19 = 1.f;
     integer i__, k, kc;
     complex tc;
     real tr, eps;
-    extern /* Subroutine */ int chpr_(char *, integer *, real *, complex *, 
-	    integer *, complex *), cscal_(integer *, complex *, 
-	    complex *, integer *);
-    extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
     real anorm;
-    extern /* Subroutine */ int ctpmv_(char *, char *, char *, integer *, 
-	    complex *, complex *, integer *);
-    extern doublereal clanhp_(char *, char *, integer *, complex *, real *), slamch_(char *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

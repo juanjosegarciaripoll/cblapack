@@ -46,22 +46,6 @@ static integer c__1 = 1;
     complex a[1]	/* was [1][1] */, b[1]	/* was [1][1] */, beta;
     integer info;
     complex alpha;
-    extern /* Subroutine */ int ctfsm_(char *, char *, char *, char *, 
-	    char *, integer *, integer *, complex *, complex *, complex *, 
-	    integer *), chkxer_(char *
-, integer *, integer *, logical *, logical *), cpftrf_(
-	    char *, char *, integer *, complex *, integer *), 
-	    cpftri_(char *, char *, integer *, complex *, integer *), ctftri_(char *, char *, char *, integer *, complex *, 
-	    integer *), cpftrs_(char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, integer *), ctfttp_(char *, char *, integer *, complex *, 
-	    complex *, integer *), ctpttf_(char *, char *, 
-	    integer *, complex *, complex *, integer *), 
-	    ctfttr_(char *, char *, integer *, complex *, complex *, integer *
-, integer *), ctrttf_(char *, char *, integer *, 
-	    complex *, integer *, complex *, integer *), 
-	    ctpttr_(char *, integer *, complex *, complex *, integer *, 
-	    integer *), ctrttp_(char *, integer *, complex *, integer 
-	    *, complex *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___6 = { 0, 0, 0, fmt_9999, 0 };

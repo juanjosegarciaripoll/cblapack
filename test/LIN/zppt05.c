@@ -35,9 +35,7 @@ static integer c__1 = 1;
     doublereal unfl, ovfl;
     logical upper;
     doublereal xnorm;
-    extern doublereal dlamch_(char *);
     doublereal errbnd;
-    extern integer izamax_(integer *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

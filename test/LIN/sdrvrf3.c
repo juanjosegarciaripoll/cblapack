@@ -70,22 +70,9 @@ static integer c__1 = 1;
     integer iform;
     char trans[1];
     integer iuplo;
-    extern /* Subroutine */ int stfsm_(char *, char *, char *, char *, char *, 
-	     integer *, integer *, real *, real *, real *, integer *), strsm_(char *, char *, char *, 
-	    char *, integer *, integer *, real *, real *, integer *, real *, 
-	    integer *);
     integer ialpha;
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *), slarnd_(integer *, 
-	    integer *);
-    extern /* Subroutine */ int sgelqf_(integer *, integer *, real *, integer 
-	    *, real *, real *, integer *, integer *), sgeqrf_(integer *, 
-	    integer *, real *, integer *, real *, real *, integer *, integer *
-);
     integer itrans;
     real result[1];
-    extern /* Subroutine */ int strttf_(char *, char *, integer *, real *, 
-	    integer *, real *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___32 = { 0, 0, 0, 0, 0 };

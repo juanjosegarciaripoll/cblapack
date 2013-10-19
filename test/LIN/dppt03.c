@@ -30,13 +30,6 @@ static doublereal c_b15 = 0.;
     integer i__, j, jj;
     doublereal eps;
     doublereal anorm;
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *), dspmv_(char *, integer *, doublereal *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *, 
-	     integer *);
-    extern doublereal dlamch_(char *), dlange_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *), 
-	    dlansp_(char *, char *, integer *, doublereal *, doublereal *);
     doublereal ainvnm;
 
 

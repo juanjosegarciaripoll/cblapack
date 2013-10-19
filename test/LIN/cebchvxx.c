@@ -60,11 +60,6 @@ static integer c__8 = 8;
     complex q__1, q__2, q__3;
 
     /* Local variables */
-    extern /* Subroutine */ int csysvxx_(char *, char *, integer *, integer *, 
-	     complex *, integer *, complex *, integer *, integer *, char *, 
-	    real *, complex *, integer *, complex *, integer *, real *, real *
-, real *, integer *, real *, real *, integer *, real *, complex *, 
-	     real *, integer *);
     real errbnd_c__[18], errbnd_n__[18];
     complex a[36]	/* was [6][6] */, b[36]	/* was [6][6] */;
     real c__[6];
@@ -102,34 +97,10 @@ static integer c__8 = 8;
     char nguar[3], trans[1];
     real rnorm, normt, sumri, rwork[18];
     logical printed_guide__;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), dlacpy_(char *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *);
     complex abcopy[66]	/* was [11][6] */;
-    extern logical lsamen_(integer *, char *, char *);
     real params[2], orcond, rinorm, tstrat[6], rpvgrw;
-    extern /* Subroutine */ int clahilb_(integer *, integer *, complex *, 
-	    integer *, complex *, integer *, complex *, integer *, complex *, 
-	    integer *, char *);
     complex invhilb[36]	/* was [6][6] */;
     real normdif;
-    extern /* Subroutine */ int cgbsvxx_(char *, char *, integer *, integer *, 
-	     integer *, integer *, complex *, integer *, complex *, integer *, 
-	     integer *, char *, real *, real *, complex *, integer *, complex 
-	    *, integer *, real *, real *, real *, integer *, real *, real *, 
-	    integer *, real *, complex *, real *, integer *), cgesvxx_(char *, char *, integer *, integer *, complex *, 
-	     integer *, complex *, integer *, integer *, char *, real *, real 
-	    *, complex *, integer *, complex *, integer *, real *, real *, 
-	    real *, integer *, real *, real *, integer *, real *, complex *, 
-	    real *, integer *), chesvxx_(char *, char 
-	    *, integer *, integer *, complex *, integer *, complex *, integer 
-	    *, integer *, char *, real *, complex *, integer *, complex *, 
-	    integer *, real *, real *, real *, integer *, real *, real *, 
-	    integer *, real *, complex *, real *, integer *), cposvxx_(char *, char *, integer *, integer *, complex *, 
-	     integer *, complex *, integer *, char *, real *, complex *, 
-	    integer *, complex *, integer *, real *, real *, real *, integer *
-, real *, real *, integer *, real *, complex *, real *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___42 = { 0, 6, 0, fmt_8000, 0 };

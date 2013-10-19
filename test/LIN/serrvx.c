@@ -54,49 +54,6 @@ static integer c__4 = 4;
     char eq[1];
     integer ip[4], iw[4], info;
     real rcond;
-    extern /* Subroutine */ int sgbsv_(integer *, integer *, integer *, 
-	    integer *, real *, integer *, integer *, real *, integer *, 
-	    integer *), sgesv_(integer *, integer *, real *, integer *, 
-	    integer *, real *, integer *, integer *), spbsv_(char *, integer *
-, integer *, integer *, real *, integer *, real *, integer *, 
-	    integer *), sgtsv_(integer *, integer *, real *, real *, 
-	    real *, real *, integer *, integer *), sposv_(char *, integer *, 
-	    integer *, real *, integer *, real *, integer *, integer *), sppsv_(char *, integer *, integer *, real *, real *, 
-	    integer *, integer *), sspsv_(char *, integer *, integer *
-, real *, integer *, real *, integer *, integer *), 
-	    sptsv_(integer *, integer *, real *, real *, real *, integer *, 
-	    integer *), ssysv_(char *, integer *, integer *, real *, integer *
-, integer *, real *, integer *, real *, integer *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), sgbsvx_(char *, char *, integer *, integer 
-	    *, integer *, integer *, real *, integer *, real *, integer *, 
-	    integer *, char *, real *, real *, real *, integer *, real *, 
-	    integer *, real *, real *, real *, real *, integer *, integer *), sgesvx_(char *, char *, integer *, 
-	    integer *, real *, integer *, real *, integer *, integer *, char *
-, real *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, real *, real *, integer *, integer *), spbsvx_(char *, char *, integer *, integer *, integer *, 
-	    real *, integer *, real *, integer *, char *, real *, real *, 
-	    integer *, real *, integer *, real *, real *, real *, real *, 
-	    integer *, integer *), sgtsvx_(char *, 
-	    char *, integer *, integer *, real *, real *, real *, real *, 
-	    real *, real *, real *, integer *, real *, integer *, real *, 
-	    integer *, real *, real *, real *, real *, integer *, integer *), sposvx_(char *, char *, integer *, integer *, 
-	    real *, integer *, real *, integer *, char *, real *, real *, 
-	    integer *, real *, integer *, real *, real *, real *, real *, 
-	    integer *, integer *), sppsvx_(char *, 
-	    char *, integer *, integer *, real *, real *, char *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, real *, 
-	    real *, integer *, integer *), sspsvx_(
-	    char *, char *, integer *, integer *, real *, real *, integer *, 
-	    real *, integer *, real *, integer *, real *, real *, real *, 
-	    real *, integer *, integer *), sptsvx_(char *, 
-	    integer *, integer *, real *, real *, real *, real *, real *, 
-	    integer *, real *, integer *, real *, real *, real *, real *, 
-	    integer *), ssysvx_(char *, char *, integer *, integer *, 
-	    real *, integer *, real *, integer *, integer *, real *, integer *
-, real *, integer *, real *, real *, real *, real *, integer *, 
-	    integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

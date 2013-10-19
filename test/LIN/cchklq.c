@@ -62,38 +62,10 @@ static integer c__3 = 3;
     integer kval[4];
     char dist[1], type__[1];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *), cget02_(
-	    char *, integer *, integer *, integer *, complex *, integer *, 
-	    complex *, integer *, complex *, integer *, real *, real *);
     integer nfail, iseed[4];
-    extern /* Subroutine */ int clqt01_(integer *, integer *, complex *, 
-	    complex *, complex *, complex *, integer *, complex *, complex *, 
-	    integer *, real *, real *), clqt02_(integer *, integer *, integer 
-	    *, complex *, complex *, complex *, complex *, integer *, complex 
-	    *, complex *, integer *, real *, real *), clqt03_(integer *, 
-	    integer *, integer *, complex *, complex *, complex *, complex *, 
-	    integer *, complex *, complex *, integer *, real *, real *);
     real anorm;
     integer minmn, nerrs, lwork;
-    extern /* Subroutine */ int clatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, real *, integer *, real *, char *
-), alaerh_(char *, char *, integer *, 
-	    integer *, char *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *);
-    extern logical cgennd_(integer *, integer *, complex *, integer *);
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), clarhs_(char *, char 
-	    *, char *, char *, integer *, integer *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, complex *, 
-	    integer *, integer *, integer *), 
-	    cgelqs_(integer *, integer *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *, complex *, integer *, integer *),
-	     alasum_(char *, integer *, integer *, integer *, integer *);
     real cndnum;
-    extern /* Subroutine */ int clatms_(integer *, integer *, char *, integer 
-	    *, char *, real *, integer *, real *, real *, integer *, integer *
-, char *, complex *, integer *, complex *, integer *), cerrlq_(char *, integer *), xlaenv_(
-	    integer *, integer *);
     real result[8];
 
     /* Fortran I/O blocks */

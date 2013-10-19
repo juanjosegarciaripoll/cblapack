@@ -40,24 +40,7 @@ static doublereal c_b15 = 1.;
     /* Local variables */
     doublereal eps;
     integer info;
-    extern /* Subroutine */ int dgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *);
     doublereal resid, anorm;
-    extern /* Subroutine */ int dsyrk_(char *, char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *, 
-	     integer *);
-    extern doublereal dlamch_(char *), dlange_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *);
-    extern /* Subroutine */ int dlacpy_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *), 
-	    dlaset_(char *, integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *);
-    extern doublereal dlansy_(char *, char *, integer *, doublereal *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int dorgqr_(integer *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

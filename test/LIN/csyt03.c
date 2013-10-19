@@ -30,14 +30,7 @@ static complex c_b1 = {0.f,0.f};
     integer i__, j;
     real eps;
     real anorm;
-    extern /* Subroutine */ int csymm_(char *, char *, integer *, integer *, 
-	    complex *, complex *, integer *, complex *, integer *, complex *, 
-	    complex *, integer *);
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *), slamch_(char *);
     real ainvnm;
-    extern doublereal clansy_(char *, char *, integer *, complex *, integer *, 
-	     real *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

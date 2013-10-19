@@ -35,29 +35,6 @@ static integer c__1 = 1;
     logical gen, tri, qrs, sym, band;
     char diag[1];
     logical tran;
-    extern /* Subroutine */ int dgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *),
-	     dgbmv_(char *, integer *, integer *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *);
-    extern /* Subroutine */ int dsbmv_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *), dtbmv_(char *, 
-	    char *, char *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *), dtrmm_(char *, 
-	    char *, char *, char *, integer *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *), dspmv_(char *, integer *, doublereal *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *, 
-	     integer *), dsymm_(char *, char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *), dtpmv_(
-	    char *, char *, char *, integer *, doublereal *, doublereal *, 
-	    integer *), dlacpy_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *), xerbla_(char *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int dlarnv_(integer *, integer *, integer *, 
-	    doublereal *);
     logical notran;
 
 
@@ -253,7 +230,7 @@ static integer c__1 = 1;
     }
     if (*info != 0) {
 	i__1 = -(*info);
-	xerbla_("DLARHS", &i__1);
+	this_xerbla_("DLARHS", &i__1);
 	return 0;
     }
 
@@ -384,7 +361,7 @@ static integer c__1 = 1;
 
 	*info = -1;
 	i__1 = -(*info);
-	xerbla_("DLARHS", &i__1);
+	this_xerbla_("DLARHS", &i__1);
     }
 
     return 0;

@@ -56,49 +56,16 @@ static integer c__1 = 1;
     integer nrhs;
     char uplo[1];
     integer nrun;
-    extern /* Subroutine */ int cget04_(integer *, integer *, complex *, 
-	    integer *, complex *, integer *, real *, real *);
     integer nfail, iseed[4];
     char cform[1];
-    extern /* Subroutine */ int cpot01_(char *, integer *, complex *, integer 
-	    *, complex *, integer *, complex *, real *), cpot02_(char 
-	    *, integer *, integer *, complex *, integer *, complex *, integer 
-	    *, complex *, integer *, real *, real *), cpot03_(char *, 
-	    integer *, complex *, integer *, complex *, integer *, complex *, 
-	    integer *, real *, real *, real *);
     integer iform;
     real anorm;
     char ctype[1];
     integer iuplo, nerrs, izero;
     logical zerot;
-    extern /* Subroutine */ int clatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, real *, integer *, real *, char *
-), aladhd_(integer *, char *);
-    extern doublereal clanhe_(char *, char *, integer *, complex *, integer *, 
-	     real *);
-    extern /* Subroutine */ int alaerh_(char *, char *, integer *, integer *, 
-	    char *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *), claipd_(integer *, complex *, integer *, integer *);
     real rcondc;
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), clarhs_(char *, char 
-	    *, char *, char *, integer *, integer *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, complex *, 
-	    integer *, integer *, integer *), 
-	    alasvm_(char *, integer *, integer *, integer *, integer *);
     real cndnum;
-    extern /* Subroutine */ int clatms_(integer *, integer *, char *, integer 
-	    *, char *, real *, integer *, real *, real *, integer *, integer *
-, char *, complex *, integer *, complex *, integer *), cpftri_(char *, char *, integer *, complex *, 
-	    integer *);
     real ainvnm;
-    extern /* Subroutine */ int cpftrf_(char *, char *, integer *, complex *, 
-	    integer *), cpotrf_(char *, integer *, complex *, 
-	    integer *, integer *), cpotri_(char *, integer *, complex 
-	    *, integer *, integer *), cpftrs_(char *, char *, integer 
-	    *, integer *, complex *, complex *, integer *, integer *), ctfttr_(char *, char *, integer *, complex *, complex *, 
-	    integer *, integer *), ctrttf_(char *, char *, 
-	    integer *, complex *, integer *, complex *, integer *);
     real result[4];
 
     /* Fortran I/O blocks */

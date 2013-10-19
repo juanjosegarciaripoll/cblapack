@@ -64,10 +64,6 @@ static real c_b50 = 0.f;
     char ch__1[2];
 
     /* Local variables */
-    extern /* Subroutine */ int sposvxx_(char *, char *, integer *, integer *, 
-	     real *, integer *, real *, integer *, char *, real *, real *, 
-	    integer *, real *, integer *, real *, real *, real *, integer *, 
-	    real *, real *, integer *, real *, real *, integer *, integer *), sebchvxx_(real *, char *);
     integer i__, k, n;
     real *errbnds_c__, *errbnds_n__;
     integer k1, nb, in, kl, ku, nt, n_err_bnds__, lda;
@@ -85,56 +81,17 @@ static real c_b50 = 0.f;
     integer nbmin;
     real rcond, roldc, scond;
     integer nimat;
-    extern doublereal sget06_(real *, real *);
-    extern /* Subroutine */ int sget04_(integer *, integer *, real *, integer 
-	    *, real *, integer *, real *, real *);
     real anorm;
     logical equil;
-    extern /* Subroutine */ int spot01_(char *, integer *, real *, integer *, 
-	    real *, integer *, real *, real *), spot02_(char *, 
-	    integer *, integer *, real *, integer *, real *, integer *, real *
-, integer *, real *, real *);
     integer iuplo, izero, nerrs;
-    extern /* Subroutine */ int spot05_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *, real *, integer *, real *, integer *
-, real *, real *, real *);
     logical zerot;
     char xtype[1];
-    extern /* Subroutine */ int sposv_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *, integer *), slatb4_(char *, 
-	    integer *, integer *, integer *, char *, integer *, integer *, 
-	    real *, integer *, real *, char *), 
-	    aladhd_(integer *, char *), alaerh_(char *, char *, 
-	    integer *, integer *, char *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, integer *);
     logical prefac;
     real rcondc;
     logical nofact;
     integer iequed;
-    extern /* Subroutine */ int alasvm_(char *, integer *, integer *, integer 
-	    *, integer *);
     real cndnum, ainvnm;
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *), slarhs_(char *, char *, 
-	    char *, char *, integer *, integer *, integer *, integer *, 
-	    integer *, real *, integer *, real *, integer *, real *, integer *
-, integer *, integer *), slaset_(
-	    char *, integer *, integer *, real *, real *, real *, integer *), xlaenv_(integer *, integer *), slatms_(integer *, 
-	    integer *, char *, integer *, char *, real *, integer *, real *, 
-	    real *, integer *, integer *, char *, real *, integer *, real *, 
-	    integer *);
-    extern doublereal slansy_(char *, char *, integer *, real *, integer *, 
-	    real *);
-    extern /* Subroutine */ int slaqsy_(char *, integer *, real *, integer *, 
-	    real *, real *, real *, char *);
     real result[6];
-    extern /* Subroutine */ int spoequ_(integer *, real *, integer *, real *, 
-	    real *, real *, integer *), spotrf_(char *, integer *, real *, 
-	    integer *, integer *), spotri_(char *, integer *, real *, 
-	    integer *, integer *), serrvx_(char *, integer *),
-	     sposvx_(char *, char *, integer *, integer *, real *, integer *, 
-	    real *, integer *, char *, real *, real *, integer *, real *, 
-	    integer *, real *, real *, real *, real *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___48 = { 0, 0, 0, fmt_9999, 0 };

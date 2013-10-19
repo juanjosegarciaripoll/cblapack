@@ -56,46 +56,8 @@ static integer c_n1 = -1;
     real err_bnds_n__[12]	/* was [4][3] */, berr;
     integer info;
     real anrm, rcond;
-    extern /* Subroutine */ int cpbtf2_(char *, integer *, integer *, complex 
-	    *, integer *, integer *), cpotf2_(char *, integer *, 
-	    complex *, integer *, integer *), alaesm_(char *, logical 
-	    *, integer *), cpbcon_(char *, integer *, integer *, 
-	    complex *, integer *, real *, real *, complex *, real *, integer *
-);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int cpbequ_(char *, integer *, integer *, complex 
-	    *, integer *, real *, real *, real *, integer *), cpbrfs_(
-	    char *, integer *, integer *, integer *, complex *, integer *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *, 
-	    real *, real *, complex *, real *, integer *), cpbtrf_(
-	    char *, integer *, integer *, complex *, integer *, integer *);
     real params;
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), cpocon_(char *, integer *, complex *, 
-	    integer *, real *, real *, complex *, real *, integer *), 
-	    cppcon_(char *, integer *, complex *, real *, real *, complex *, 
-	    real *, integer *), cpoequ_(integer *, complex *, integer 
-	    *, real *, real *, real *, integer *), cpbtrs_(char *, integer *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *, 
-	    integer *), cporfs_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *, complex *, integer *, complex 
-	    *, integer *, real *, real *, complex *, real *, integer *), cpotrf_(char *, integer *, complex *, integer *, integer 
-	    *), cpotri_(char *, integer *, complex *, integer *, 
-	    integer *), cppequ_(char *, integer *, complex *, real *, 
-	    real *, real *, integer *), cpprfs_(char *, integer *, 
-	    integer *, complex *, complex *, complex *, integer *, complex *, 
-	    integer *, real *, real *, complex *, real *, integer *), 
-	    cpptrf_(char *, integer *, complex *, integer *), cpptri_(
-	    char *, integer *, complex *, integer *), cpotrs_(char *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *, 
-	    integer *), cpptrs_(char *, integer *, integer *, complex 
-	    *, complex *, integer *, integer *), cpoequb_(integer *, 
-	    complex *, integer *, real *, real *, real *, integer *);
     integer nparams;
-    extern /* Subroutine */ int cporfsx_(char *, char *, integer *, integer *, 
-	     complex *, integer *, complex *, integer *, real *, complex *, 
-	    integer *, complex *, integer *, real *, real *, integer *, real *
-, real *, integer *, real *, complex *, real *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

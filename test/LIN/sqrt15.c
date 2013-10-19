@@ -37,23 +37,8 @@ static integer c__0 = 0;
     real eps;
     integer info;
     real temp;
-    extern doublereal snrm2_(integer *, real *, integer *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    slarf_(char *, integer *, integer *, real *, integer *, real *, 
-	    real *, integer *, real *), sgemm_(char *, char *, 
-	    integer *, integer *, integer *, real *, real *, integer *, real *
-, integer *, real *, real *, integer *);
-    extern doublereal sasum_(integer *, real *, integer *);
     real dummy[1];
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
     real bignum;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *);
-    extern doublereal slarnd_(integer *, integer *);
-    extern /* Subroutine */ int slaord_(char *, integer *, real *, integer *), slaset_(char *, integer *, integer *, real *, real *, 
-	    real *, integer *), slaror_(char *, char *, integer *, 
-	    integer *, real *, integer *, integer *, real *, integer *), slarnv_(integer *, integer *, integer *, real *);
     real smlnum;
 
 
@@ -159,7 +144,7 @@ static integer c__0 = 0;
     i__1 = *m + mn, i__2 = mn * *nrhs, i__1 = max(i__1,i__2), i__2 = (*n << 1)
 	     + *m;
     if (*lwork < max(i__1,i__2)) {
-	xerbla_("SQRT15", &c__16);
+	this_xerbla_("SQRT15", &c__16);
 	return 0;
     }
 
@@ -181,7 +166,7 @@ static integer c__0 = 0;
 /* L10: */
 	}
     } else {
-	xerbla_("SQRT15", &c__2);
+	this_xerbla_("SQRT15", &c__2);
     }
 
     if (*rank > 0) {
@@ -281,7 +266,7 @@ L20:
 		slascl_("General", &c__0, &c__0, norma, &smlnum, m, nrhs, &b[
 			b_offset], ldb, &info);
 	    } else {
-		xerbla_("SQRT15", &c__1);
+		this_xerbla_("SQRT15", &c__1);
 		return 0;
 	    }
 	}

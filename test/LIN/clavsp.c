@@ -30,14 +30,6 @@ static integer c__1 = 1;
     integer j, k;
     complex t1, t2, d11, d12, d21, d22;
     integer kc, kp;
-    extern /* Subroutine */ int cscal_(integer *, complex *, complex *, 
-	    integer *);
-    extern /* Subroutine */ int cgemv_(char *, integer *, integer *, complex *
-, complex *, integer *, complex *, integer *, complex *, complex *
-, integer *), cgeru_(integer *, integer *, complex *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *),
-	     cswap_(integer *, complex *, integer *, complex *, integer *), 
-	    xerbla_(char *, integer *);
     integer kcnext;
     logical nounit;
 
@@ -180,7 +172,7 @@ static integer c__1 = 1;
     }
     if (*info != 0) {
 	i__1 = -(*info);
-	xerbla_("CLAVSP ", &i__1);
+	this_xerbla_("CLAVSP ", &i__1);
 	return 0;
     }
 

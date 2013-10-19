@@ -29,17 +29,8 @@ static integer c__1 = 1;
     /* Local variables */
     integer j, jj, ix;
     doublereal eps, err;
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *);
     doublereal xscal;
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *), daxpy_(integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *), dtpmv_(char *, 
-	    char *, char *, integer *, doublereal *, doublereal *, integer *);
     doublereal tnorm, xnorm;
-    extern /* Subroutine */ int dlabad_(doublereal *, doublereal *);
-    extern doublereal dlamch_(char *);
-    extern integer idamax_(integer *, doublereal *, integer *);
     doublereal bignum, smlnum;
 
 

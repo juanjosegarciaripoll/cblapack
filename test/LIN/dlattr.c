@@ -38,32 +38,12 @@ static integer c_n1 = -1;
     integer mode;
     char path[3], dist[1];
     doublereal unfl;
-    extern /* Subroutine */ int drot_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *);
     doublereal rexp;
     char type__[1];
     doublereal texp, star1, plus1, plus2, bscal;
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *);
     doublereal tscal, anorm, bnorm, tleft;
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *), drotg_(doublereal *, doublereal *, 
-	    doublereal *, doublereal *), dswap_(integer *, doublereal *, 
-	    integer *, doublereal *, integer *);
     logical upper;
-    extern /* Subroutine */ int dlatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, char *), dlabad_(doublereal 
-	    *, doublereal *);
-    extern doublereal dlamch_(char *);
-    extern integer idamax_(integer *, doublereal *, integer *);
-    extern doublereal dlarnd_(integer *, integer *);
     doublereal bignum, cndnum;
-    extern /* Subroutine */ int dlatms_(integer *, integer *, char *, integer 
-	    *, char *, doublereal *, integer *, doublereal *, doublereal *, 
-	    integer *, integer *, char *, doublereal *, integer *, doublereal 
-	    *, integer *), dlarnv_(integer *, integer 
-	    *, integer *, doublereal *);
     integer jcount;
     doublereal smlnum;
 

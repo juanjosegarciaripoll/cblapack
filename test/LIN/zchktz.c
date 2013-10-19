@@ -58,36 +58,8 @@ static integer c__1 = 1;
     integer mode, info;
     char path[3];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer nfail, iseed[4], imode, mnmin, nerrs, lwork;
-    extern doublereal zqrt12_(integer *, integer *, doublecomplex *, integer *
-, doublereal *, doublecomplex *, integer *, doublereal *), 
-	    zrzt01_(integer *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), zrzt02_(
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     doublecomplex *, integer *), ztzt01_(integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *), ztzt02_(integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
-    extern /* Subroutine */ int zgeqr2_(integer *, integer *, doublecomplex *, 
-	     integer *, doublecomplex *, doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dlaord_(char *, integer *, doublereal *, 
-	    integer *), alasum_(char *, integer *, integer *, integer 
-	    *, integer *), zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), 
-	    zlaset_(char *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, integer *), zlatms_(
-	    integer *, integer *, char *, integer *, char *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *, integer *, char 
-	    *, doublecomplex *, integer *, doublecomplex *, integer *);
     doublereal result[6];
-    extern /* Subroutine */ int zerrtz_(char *, integer *), ztzrqf_(
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     integer *), ztzrzf_(integer *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, integer *)
-	    ;
 
     /* Fortran I/O blocks */
     static cilist io___21 = { 0, 0, 0, fmt_9999, 0 };

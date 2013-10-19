@@ -23,7 +23,6 @@
 
     /* Local variables */
     integer i__, ia, ixa;
-    extern doublereal slamch_(char *);
     real bignum;
 
 

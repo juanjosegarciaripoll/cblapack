@@ -27,12 +27,6 @@
     integer ip;
     real eps, anorm;
     integer lastj;
-    extern /* Subroutine */ int cswap_(integer *, complex *, integer *, 
-	    complex *, integer *), caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *);
-    extern doublereal slamch_(char *), clangt_(char *, integer *, 
-	    complex *, complex *, complex *), clanhs_(char *, integer 
-	    *, complex *, integer *, real *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

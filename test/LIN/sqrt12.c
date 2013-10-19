@@ -31,21 +31,8 @@ doublereal sqrt12_(integer *m, integer *n, real *a, integer *lda, real *s,
     /* Local variables */
     integer i__, j, mn, iscl, info;
     real anrm;
-    extern doublereal snrm2_(integer *, real *, integer *), sasum_(integer *, 
-	    real *, integer *);
     real dummy[1];
-    extern /* Subroutine */ int saxpy_(integer *, real *, real *, integer *, 
-	    real *, integer *), sgebd2_(integer *, integer *, real *, integer 
-	    *, real *, real *, real *, real *, real *, integer *), slabad_(
-	    real *, real *);
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
     real bignum;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *), slaset_(char *, integer *, integer *, real *, real *, 
-	    real *, integer *), sbdsqr_(char *, integer *, integer *, 
-	    integer *, integer *, real *, real *, real *, integer *, real *, 
-	    integer *, real *, integer *, real *, integer *);
     real smlnum, nrmsvl;
 
 
@@ -122,7 +109,7 @@ doublereal sqrt12_(integer *m, integer *n, real *a, integer *lda, real *s,
     i__1 = *m * *n + (min(*m,*n) << 2) + max(*m,*n), i__2 = *m * *n + (min(*m,
 	    *n) << 1) + (*n << 2);
     if (*lwork < max(i__1,i__2)) {
-	xerbla_("SQRT12", &c__7);
+	this_xerbla_("SQRT12", &c__7);
 	return ret_val;
     }
 

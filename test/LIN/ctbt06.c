@@ -23,9 +23,6 @@
 
     /* Local variables */
     real eps, rmin, rmax, anorm;
-    extern doublereal clantb_(char *, char *, char *, integer *, integer *, 
-	    complex *, integer *, real *), slamch_(
-	    char *);
     real bignum;
 
 

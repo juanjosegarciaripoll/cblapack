@@ -31,27 +31,8 @@ doublereal cqrt12_(integer *m, integer *n, complex *a, integer *lda, real *s,
     /* Local variables */
     integer i__, j, mn, iscl, info;
     real anrm;
-    extern doublereal snrm2_(integer *, real *, integer *);
-    extern /* Subroutine */ int cgebd2_(integer *, integer *, complex *, 
-	    integer *, real *, real *, complex *, complex *, complex *, 
-	    integer *);
-    extern doublereal sasum_(integer *, real *, integer *);
     real dummy[1];
-    extern /* Subroutine */ int saxpy_(integer *, real *, real *, integer *, 
-	    real *, integer *), slabad_(real *, real *);
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *);
-    extern /* Subroutine */ int clascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, complex *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *), xerbla_(char *, 
-	    integer *);
     real bignum;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *), sbdsqr_(char *, integer *, integer *, integer *, integer 
-	    *, real *, real *, real *, integer *, real *, integer *, real *, 
-	    integer *, real *, integer *);
     real smlnum, nrmsvl;
 
 
@@ -128,7 +109,7 @@ doublereal cqrt12_(integer *m, integer *n, complex *a, integer *lda, real *s,
 /*     Test that enough workspace is supplied */
 
     if (*lwork < *m * *n + (min(*m,*n) << 1) + max(*m,*n)) {
-	xerbla_("CQRT12", &c__7);
+	this_xerbla_("CQRT12", &c__7);
 	return ret_val;
     }
 

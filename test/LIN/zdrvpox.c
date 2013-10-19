@@ -68,13 +68,6 @@ static doublereal c_b94 = 0.;
     char ch__1[2];
 
     /* Local variables */
-    extern /* Subroutine */ int zposvxx_(char *, char *, integer *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *, char *, 
-	    doublereal *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublereal *, doublereal *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, 
-	    doublecomplex *, doublereal *, integer *),
-	     zebchvxx_(doublereal *, char *);
     integer i__, k, n;
     doublereal *errbnds_c__, *errbnds_n__;
     integer k1, nb, in, kl, ku, nt, n_err_bnds__, lda;
@@ -88,63 +81,22 @@ static doublereal c_b94 = 0.;
     doublereal rpvgrw_svxx__;
     char uplo[1], type__[1];
     integer nrun, ifact, nfail, iseed[4], nfact;
-    extern doublereal dget06_(doublereal *, doublereal *);
     char equed[1];
     integer nbmin;
     doublereal rcond, roldc, scond;
     integer nimat;
     doublereal anorm;
-    extern /* Subroutine */ int zget04_(integer *, integer *, doublecomplex *, 
-	     integer *, doublecomplex *, integer *, doublereal *, doublereal *
-);
     logical equil;
     integer iuplo, izero, nerrs;
-    extern /* Subroutine */ int zpot01_(char *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, doublereal *, doublereal *), zpot02_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	     doublereal *, doublereal *), zpot05_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *, doublereal *);
     logical zerot;
     char xtype[1];
-    extern /* Subroutine */ int zposv_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *), zlatb4_(char *, integer *, integer *, integer *, char *, 
-	     integer *, integer *, doublereal *, integer *, doublereal *, 
-	    char *), aladhd_(integer *, char *), alaerh_(char *, char *, integer *, integer *, char *, 
-	    integer *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *);
     logical prefac;
     doublereal rcondc;
     logical nofact;
     integer iequed;
-    extern doublereal zlanhe_(char *, char *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int alasvm_(char *, integer *, integer *, integer 
-	    *, integer *);
     doublereal cndnum;
-    extern /* Subroutine */ int zlaipd_(integer *, doublecomplex *, integer *, 
-	     integer *), zlaqhe_(char *, integer *, doublecomplex *, integer *
-, doublereal *, doublereal *, doublereal *, char *);
     doublereal ainvnm;
-    extern /* Subroutine */ int xlaenv_(integer *, integer *), zlacpy_(char *, 
-	     integer *, integer *, doublecomplex *, integer *, doublecomplex *
-, integer *), zlarhs_(char *, char *, char *, char *, 
-	    integer *, integer *, integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, integer *, integer *), zlaset_(), zlatms_(integer *, integer *, char *, 
-	    integer *, char *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *, integer *, char *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *);
     doublereal result[6];
-    extern /* Subroutine */ int zpoequ_(integer *, doublecomplex *, integer *, 
-	     doublereal *, doublereal *, doublereal *, integer *), zpotrf_(
-	    char *, integer *, doublecomplex *, integer *, integer *),
-	     zpotri_(char *, integer *, doublecomplex *, integer *, integer *), zerrvx_(char *, integer *), zposvx_(char *, 
-	    char *, integer *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, char *, doublereal *, doublecomplex *, 
-	     integer *, doublecomplex *, integer *, doublereal *, doublereal *
-, doublereal *, doublecomplex *, doublereal *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___48 = { 0, 0, 0, fmt_9999, 0 };

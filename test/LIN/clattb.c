@@ -43,30 +43,12 @@ static integer c_n1 = -1;
     complex star1, plus1, plus2;
     real bscal;
     real tscal, anorm, bnorm, tleft;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *), cswap_(integer *, complex *, integer *, 
-	    complex *, integer *);
     logical upper;
     real tnorm;
-    extern /* Subroutine */ int clatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, real *, integer *, real *, char *
-), slabad_(real *, real *);
-    extern integer icamax_(integer *, complex *, integer *);
-    extern /* Complex */ void clarnd_(complex *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *);
     char packit[1];
     real bignum;
-    extern doublereal slarnd_(integer *, integer *);
     real cndnum;
-    extern /* Subroutine */ int clarnv_(integer *, integer *, integer *, 
-	    complex *), clatms_(integer *, integer *, char *, integer *, char 
-	    *, real *, integer *, real *, real *, integer *, integer *, char *
-, complex *, integer *, complex *, integer *);
     integer jcount;
-    extern /* Subroutine */ int slarnv_(integer *, integer *, integer *, real 
-	    *);
     real smlnum;
 
 

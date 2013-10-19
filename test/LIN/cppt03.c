@@ -30,12 +30,6 @@ static integer c__1 = 1;
     integer i__, j, jj;
     real eps;
     real anorm;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *), chpmv_(char *, integer *, complex *, 
-	    complex *, complex *, integer *, complex *, complex *, integer *);
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *), clanhp_(char *, char *, integer *, 
-	    complex *, real *), slamch_(char *);
     real ainvnm;
 
 

@@ -46,22 +46,6 @@ static integer c__1 = 1;
     doublecomplex a[1]	/* was [1][1] */, b[1]	/* was [1][1] */, beta;
     integer info;
     doublecomplex alpha;
-    extern ztfsm_(char *, char *, char *, char *, char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *), chkxer_(char *, integer *
-, integer *, logical *, logical *), zpftrf_(char *, char *
-, integer *, doublecomplex *, integer *), zpftri_(
-	    char *, char *, integer *, doublecomplex *, integer *), ztftri_(char *, char *, char *, integer *, doublecomplex 
-	    *, integer *), zpftrs_(char *, char *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	     integer *), ztfttp_(char *, char *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *), 
-	    ztpttf_(char *, char *, integer *, doublecomplex *, doublecomplex 
-	    *, integer *), ztfttr_(char *, char *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, integer *), ztrttf_(char *, char *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *), ztpttr_(
-	    char *, integer *, doublecomplex *, doublecomplex *, integer *, 
-	    integer *), ztrttp_(char *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___6 = { 0, 0, 0, fmt_9999, 0 };

@@ -31,15 +31,7 @@ static integer c__1 = 1;
     integer j, ix;
     real eps, err;
     real xscal;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *), caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *), ctrmv_(char *, char *, char *, 
-	    integer *, complex *, integer *, complex *, integer *);
     real tnorm, xnorm;
-    extern integer icamax_(integer *, complex *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *);
     real smlnum;
 
 

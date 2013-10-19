@@ -32,14 +32,7 @@ static integer c__1 = 1;
     doublereal eps;
     integer ifail;
     doublereal anorm, bnorm;
-    extern /* Subroutine */ int zhemm_(char *, char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *);
     doublereal xnorm;
-    extern doublereal dlamch_(char *);
-    extern integer izamax_(integer *, doublecomplex *, integer *);
-    extern doublereal zlansy_(char *, char *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
 
 
 /*  -- LAPACK test routine (version 3.1.2) -- */

@@ -29,10 +29,6 @@ static integer c__1 = 1;
     doublereal eps;
     doublereal anorm;
     logical unitd;
-    extern /* Subroutine */ int dtpmv_(char *, char *, char *, integer *, 
-	    doublereal *, doublereal *, integer *);
-    extern doublereal dlamch_(char *), dlantp_(char *, char *, char *, 
-	     integer *, doublereal *, doublereal *);
     doublereal ainvnm;
 
 

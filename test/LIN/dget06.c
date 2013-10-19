@@ -20,7 +20,6 @@ doublereal dget06_(doublereal *rcond, doublereal *rcondc)
 
     /* Local variables */
     doublereal rat, eps;
-    extern doublereal dlamch_(char *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

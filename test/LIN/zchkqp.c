@@ -58,28 +58,8 @@ static integer c__1 = 1;
     integer mode, info;
     char path[3];
     integer ilow, nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer ihigh, nfail, iseed[4], imode, mnmin, istep, nerrs, lwork;
-    extern doublereal zqpt01_(integer *, integer *, integer *, doublecomplex *
-, doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zqrt11_(integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), zqrt12_(integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *, doublecomplex *, integer *, doublereal *)
-	    , dlamch_(char *);
-    extern /* Subroutine */ int dlaord_(char *, integer *, doublereal *, 
-	    integer *), alasum_(char *, integer *, integer *, integer 
-	    *, integer *), zgeqpf_(integer *, integer *, 
-	    doublecomplex *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, doublereal *, integer *), zlacpy_(char *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     integer *), zlaset_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *), zlatms_(integer *, integer *, char *, integer *, char *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    integer *, char *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *);
     doublereal result[3];
-    extern /* Subroutine */ int zerrqp_(char *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___24 = { 0, 0, 0, fmt_9999, 0 };

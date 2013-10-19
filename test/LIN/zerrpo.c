@@ -52,45 +52,6 @@ static integer c_n1 = -1;
     doublecomplex af[16]	/* was [4][4] */;
     integer info;
     doublereal anrm, rcond;
-    extern /* Subroutine */ int zpbtf2_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *), zpotf2_(char *, 
-	    integer *, doublecomplex *, integer *, integer *), 
-	    alaesm_(char *, logical *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), zpbcon_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *, 
-	    doublecomplex *, doublereal *, integer *), zpbequ_(char *, 
-	     integer *, integer *, doublecomplex *, integer *, doublereal *, 
-	    doublereal *, doublereal *, integer *), zpbrfs_(char *, 
-	    integer *, integer *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *, 
-	    doublecomplex *, doublereal *, integer *), zpbtrf_(char *, 
-	     integer *, integer *, doublecomplex *, integer *, integer *), zpocon_(char *, integer *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *, doublecomplex *, doublereal *, 
-	    integer *), zppcon_(char *, integer *, doublecomplex *, 
-	    doublereal *, doublereal *, doublecomplex *, doublereal *, 
-	    integer *), zpoequ_(integer *, doublecomplex *, integer *, 
-	     doublereal *, doublereal *, doublereal *, integer *), zpbtrs_(
-	    char *, integer *, integer *, integer *, doublecomplex *, integer 
-	    *, doublecomplex *, integer *, integer *), zporfs_(char *, 
-	     integer *, integer *, doublecomplex *, integer *, doublecomplex *
-, integer *, doublecomplex *, integer *, doublecomplex *, integer 
-	    *, doublereal *, doublereal *, doublecomplex *, doublereal *, 
-	    integer *), zpotrf_(char *, integer *, doublecomplex *, 
-	    integer *, integer *), zpotri_(char *, integer *, 
-	    doublecomplex *, integer *, integer *), zppequ_(char *, 
-	    integer *, doublecomplex *, doublereal *, doublereal *, 
-	    doublereal *, integer *), zpprfs_(char *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, doublereal *, doublereal *, 
-	     doublecomplex *, doublereal *, integer *), zpptrf_(char *
-, integer *, doublecomplex *, integer *), zpptri_(char *, 
-	    integer *, doublecomplex *, integer *), zpotrs_(char *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     integer *, integer *), zpptrs_(char *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

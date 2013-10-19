@@ -38,20 +38,9 @@ doublereal zqrt17_(char *trans, integer *iresid, integer *m, integer *n,
     integer iscl, info;
     doublereal norma, normb;
     integer ncols;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
     doublereal normx, rwork[1];
     integer nrows;
-    extern doublereal dlamch_(char *);
-    extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
     doublereal bignum;
-    extern /* Subroutine */ int zlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublecomplex *, 
-	     integer *, integer *), zlacpy_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *);
     doublereal smlnum, normrs;
 
 
@@ -173,12 +162,12 @@ doublereal zqrt17_(char *trans, integer *iresid, integer *m, integer *n,
 	nrows = *n;
 	ncols = *m;
     } else {
-	xerbla_("ZQRT17", &c__1);
+	this_xerbla_("ZQRT17", &c__1);
 	return ret_val;
     }
 
     if (*lwork < ncols * *nrhs) {
-	xerbla_("ZQRT17", &c__13);
+	this_xerbla_("ZQRT17", &c__13);
 	return ret_val;
     }
 

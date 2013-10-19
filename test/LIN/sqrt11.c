@@ -28,13 +28,6 @@ doublereal sqrt11_(integer *m, integer *k, real *a, integer *lda, real *tau,
 
     /* Local variables */
     integer j, info;
-    extern /* Subroutine */ int sorm2r_(char *, char *, integer *, integer *, 
-	    integer *, real *, integer *, real *, real *, integer *, real *, 
-	    integer *);
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), slaset_(
-	    char *, integer *, integer *, real *, real *, real *, integer *);
     real rdummy[1];
 
 
@@ -117,7 +110,7 @@ doublereal sqrt11_(integer *m, integer *k, real *a, integer *lda, real *tau,
 /*     Test for sufficient workspace */
 
     if (*lwork < *m * *m + *m) {
-	xerbla_("SQRT11", &c__7);
+	this_xerbla_("SQRT11", &c__7);
 	return ret_val;
     }
 

@@ -35,30 +35,6 @@ static integer c__1 = 1;
     logical gen, tri, qrs, sym, band;
     char diag[1];
     logical tran;
-    extern /* Subroutine */ int cgemm_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *), chemm_(char *, 
-	    char *, integer *, integer *, complex *, complex *, integer *, 
-	    complex *, integer *, complex *, complex *, integer *), cgbmv_(char *, integer *, integer *, integer *, integer *
-, complex *, complex *, integer *, complex *, integer *, complex *
-, complex *, integer *), chbmv_(char *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *);
-    extern /* Subroutine */ int csbmv_(char *, integer *, integer *, complex *
-, complex *, integer *, complex *, integer *, complex *, complex *
-, integer *), ctbmv_(char *, char *, char *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *), chpmv_(char *, integer *, complex *, complex *, 
-	    complex *, integer *, complex *, complex *, integer *), 
-	    ctrmm_(char *, char *, char *, char *, integer *, integer *, 
-	    complex *, complex *, integer *, complex *, integer *), cspmv_(char *, integer *, complex *, 
-	    complex *, complex *, integer *, complex *, complex *, integer *), csymm_(char *, char *, integer *, integer *, complex *, 
-	    complex *, integer *, complex *, integer *, complex *, complex *, 
-	    integer *), ctpmv_(char *, char *, char *, 
-	    integer *, complex *, complex *, integer *), clacpy_(char *, integer *, integer *, complex *, integer 
-	    *, complex *, integer *), xerbla_(char *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int clarnv_(integer *, integer *, integer *, 
-	    complex *);
     logical notran;
 
 
@@ -259,7 +235,7 @@ static integer c__1 = 1;
     }
     if (*info != 0) {
 	i__1 = -(*info);
-	xerbla_("CLARHS", &i__1);
+	this_xerbla_("CLARHS", &i__1);
 	return 0;
     }
 
@@ -419,7 +395,7 @@ static integer c__1 = 1;
 
 	*info = -1;
 	i__1 = -(*info);
-	xerbla_("CLARHS", &i__1);
+	this_xerbla_("CLARHS", &i__1);
     }
 
     return 0;

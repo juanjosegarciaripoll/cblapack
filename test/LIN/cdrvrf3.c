@@ -70,25 +70,10 @@ static integer c__1 = 1;
     integer nfail, iseed[4], iside;
     char cform[1];
     integer iform;
-    extern /* Subroutine */ int ctfsm_(char *, char *, char *, char *, char *, 
-	     integer *, integer *, complex *, complex *, complex *, integer *);
     char trans[1];
     integer iuplo;
-    extern /* Subroutine */ int ctrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *);
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *);
     integer ialpha;
-    extern /* Subroutine */ int cgelqf_(integer *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *, integer *);
-    extern /* Complex */ void clarnd_(complex *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int cgeqrf_(integer *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *, integer *);
     integer itrans;
-    extern /* Subroutine */ int ctrttf_(char *, char *, integer *, complex *, 
-	    integer *, complex *, integer *);
     real result[1];
 
     /* Fortran I/O blocks */

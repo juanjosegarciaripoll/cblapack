@@ -65,25 +65,12 @@ static integer c__1 = 1;
     doublereal alpha;
     integer nfail, iseed[4];
     char cform[1];
-    extern /* Subroutine */ int dsfrk_(char *, char *, char *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    doublereal *);
     integer iform;
     doublereal norma, normc;
     char trans[1];
     integer iuplo;
-    extern /* Subroutine */ int dsyrk_(char *, char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *, 
-	     integer *);
-    extern doublereal dlamch_(char *), dlange_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *);
     integer ialpha;
-    extern doublereal dlarnd_(integer *, integer *);
     integer itrans;
-    extern /* Subroutine */ int dtfttr_(char *, char *, integer *, doublereal 
-	    *, doublereal *, integer *, integer *), dtrttf_(
-	    char *, char *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *);
     doublereal result[1];
 
     /* Fortran I/O blocks */

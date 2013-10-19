@@ -57,33 +57,9 @@ static integer c__1 = 1;
     integer mode, info;
     char path[3];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer nfail, iseed[4], imode, mnmin, nerrs;
-    extern doublereal sqrt12_(integer *, integer *, real *, integer *, real *, 
-	     real *, integer *);
     integer lwork;
-    extern doublereal srzt01_(integer *, integer *, real *, real *, integer *, 
-	     real *, real *, integer *), srzt02_(integer *, integer *, real *, 
-	     integer *, real *, real *, integer *), stzt01_(integer *, 
-	    integer *, real *, real *, integer *, real *, real *, integer *), 
-	    stzt02_(integer *, integer *, real *, integer *, real *, real *, 
-	    integer *);
-    extern /* Subroutine */ int sgeqr2_(integer *, integer *, real *, integer 
-	    *, real *, real *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int alasum_(char *, integer *, integer *, integer 
-	    *, integer *), slaord_(char *, integer *, real *, integer 
-	    *), slacpy_(char *, integer *, integer *, real *, integer 
-	    *, real *, integer *), slaset_(char *, integer *, integer 
-	    *, real *, real *, real *, integer *), slatms_(integer *, 
-	    integer *, char *, integer *, char *, real *, integer *, real *, 
-	    real *, integer *, integer *, char *, real *, integer *, real *, 
-	    integer *);
     real result[6];
-    extern /* Subroutine */ int serrtz_(char *, integer *), stzrqf_(
-	    integer *, integer *, real *, integer *, real *, integer *), 
-	    stzrzf_(integer *, integer *, real *, integer *, real *, real *, 
-	    integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___21 = { 0, 0, 0, fmt_9999, 0 };

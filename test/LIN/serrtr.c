@@ -43,38 +43,6 @@ static integer c_n1 = -1;
     real r1[2], r2[2];
     integer iw[2], info;
     real scale, rcond;
-    extern /* Subroutine */ int strti2_(char *, char *, integer *, real *, 
-	    integer *, integer *), alaesm_(char *, logical *, 
-	    integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), slatbs_(char *, char *, char *, char *, 
-	    integer *, integer *, real *, integer *, real *, real *, real *, 
-	    integer *), stbcon_(char *, char *
-, char *, integer *, integer *, real *, integer *, real *, real *, 
-	     integer *, integer *), stbrfs_(char *, 
-	    char *, char *, integer *, integer *, integer *, real *, integer *
-, real *, integer *, real *, integer *, real *, real *, real *, 
-	    integer *, integer *), slatps_(char *, 
-	    char *, char *, char *, integer *, real *, real *, real *, real *, 
-	     integer *), stpcon_(char *, char 
-	    *, char *, integer *, real *, real *, real *, integer *, integer *
-), slatrs_(char *, char *, char *, char *, 
-	     integer *, real *, integer *, real *, real *, real *, integer *), strcon_(char *, char *, char *, 
-	    integer *, real *, integer *, real *, real *, integer *, integer *
-), stbtrs_(char *, char *, char *, 
-	    integer *, integer *, integer *, real *, integer *, real *, 
-	    integer *, integer *), stprfs_(char *, 
-	    char *, char *, integer *, integer *, real *, real *, integer *, 
-	    real *, integer *, real *, real *, real *, integer *, integer *), strrfs_(char *, char *, char *, integer *
-, integer *, real *, integer *, real *, integer *, real *, 
-	    integer *, real *, real *, real *, integer *, integer *), stptri_(char *, char *, integer *, real *, 
-	    integer *), strtri_(char *, char *, integer *, 
-	    real *, integer *, integer *), stptrs_(char *, 
-	    char *, char *, integer *, integer *, real *, real *, integer *, 
-	    integer *), strtrs_(char *, char *, char *
-, integer *, integer *, real *, integer *, real *, integer *, 
-	    integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

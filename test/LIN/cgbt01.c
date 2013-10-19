@@ -33,11 +33,6 @@ static complex c_b12 = {-1.f,-0.f};
     real eps;
     integer lenj;
     real anorm;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *), caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *);
-    extern doublereal slamch_(char *), scasum_(integer *, complex *, 
-	    integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

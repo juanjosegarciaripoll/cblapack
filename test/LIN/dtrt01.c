@@ -28,10 +28,6 @@ static integer c__1 = 1;
     integer j;
     doublereal eps;
     doublereal anorm;
-    extern /* Subroutine */ int dtrmv_(char *, char *, char *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *);
-    extern doublereal dlamch_(char *), dlantr_(char *, char *, char *, 
-	     integer *, integer *, doublereal *, integer *, doublereal *);
     doublereal ainvnm;
 
 

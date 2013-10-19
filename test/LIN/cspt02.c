@@ -30,12 +30,7 @@ static integer c__1 = 1;
     /* Local variables */
     integer j;
     real eps, anorm, bnorm;
-    extern /* Subroutine */ int cspmv_(char *, integer *, complex *, complex *
-, complex *, integer *, complex *, complex *, integer *);
     real xnorm;
-    extern doublereal slamch_(char *), clansp_(char *, char *, 
-	    integer *, complex *, real *), scasum_(integer *, 
-	    complex *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

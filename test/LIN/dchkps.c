@@ -61,28 +61,10 @@ static integer c__1 = 1;
     integer mode, imat, info, rank;
     char path[3], dist[1], uplo[1], type__[1];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer nfail, iseed[4], irank, nimat;
-    extern /* Subroutine */ int dpst01_(char *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *);
     doublereal anorm;
     integer iuplo, izero, nerrs;
-    extern /* Subroutine */ int dlatb5_(char *, integer *, integer *, char *, 
-	    integer *, integer *, doublereal *, integer *, doublereal *, char 
-	    *), alaerh_(char *, char *, integer *, 
-	    integer *, char *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *), dlacpy_(char *, integer *, integer *, doublereal 
-	    *, integer *, doublereal *, integer *), alasum_(char *, 
-	    integer *, integer *, integer *, integer *);
     doublereal cndnum;
-    extern /* Subroutine */ int dlatmt_(integer *, integer *, char *, integer 
-	    *, char *, doublereal *, integer *, doublereal *, doublereal *, 
-	    integer *, integer *, integer *, char *, doublereal *, integer *, 
-	    doublereal *, integer *), xlaenv_(integer 
-	    *, integer *), derrps_(char *, integer *), dpstrf_(char *, 
-	     integer *, doublereal *, integer *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *);
     doublereal result;
 
     /* Fortran I/O blocks */

@@ -53,31 +53,6 @@ static integer c__4 = 4;
     doublecomplex af[16]	/* was [4][4] */;
     integer ip[4], info;
     doublereal anrm, rcond;
-    extern /* Subroutine */ int zsytf2_(char *, integer *, doublecomplex *, 
-	    integer *, integer *, integer *), alaesm_(char *, logical 
-	    *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), zspcon_(char *, integer *, doublecomplex *, 
-	     integer *, doublereal *, doublereal *, doublecomplex *, integer *
-), zsycon_(char *, integer *, doublecomplex *, integer *, 
-	    integer *, doublereal *, doublereal *, doublecomplex *, integer *), zsprfs_(char *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *, 
-	    doublecomplex *, doublereal *, integer *), zsptrf_(char *, 
-	     integer *, doublecomplex *, integer *, integer *), 
-	    zsptri_(char *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zsyrfs_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	     integer *, doublecomplex *, integer *, doublecomplex *, integer *
-, doublereal *, doublereal *, doublecomplex *, doublereal *, 
-	    integer *), zsytrf_(char *, integer *, doublecomplex *, 
-	    integer *, integer *, doublecomplex *, integer *, integer *), zsytri_(char *, integer *, doublecomplex *, integer *, 
-	    integer *, doublecomplex *, integer *), zsptrs_(char *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     integer *, integer *), zsytrs_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, integer *, doublecomplex *, 
-	     integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

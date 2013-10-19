@@ -33,13 +33,7 @@ static integer c__1 = 1;
     integer j, i1, i2, n1, kd;
     doublereal eps;
     doublereal anorm, bnorm;
-    extern /* Subroutine */ int zgbmv_(char *, integer *, integer *, integer *
-, integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
     doublereal xnorm;
-    extern doublereal dlamch_(char *), dzasum_(integer *, 
-	    doublecomplex *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

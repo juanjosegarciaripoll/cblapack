@@ -77,67 +77,22 @@ static integer c__7 = 7;
     integer irhs, nrhs;
     char norm[1], type__[1];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer nfail, iseed[4];
-    extern /* Subroutine */ int sgbt01_(integer *, integer *, integer *, 
-	    integer *, real *, integer *, real *, integer *, integer *, real *
-, real *), sgbt02_(char *, integer *, integer *, integer *, 
-	    integer *, integer *, real *, integer *, real *, integer *, real *
-, integer *, real *), sgbt05_(char *, integer *, integer *
-, integer *, integer *, real *, integer *, real *, integer *, 
-	    real *, integer *, real *, integer *, real *, real *, real *);
     real rcond;
-    extern /* Subroutine */ int sget04_(integer *, integer *, real *, integer 
-	    *, real *, integer *, real *, real *);
     integer nimat, klval[4];
-    extern doublereal sget06_(real *, real *);
     real anorm;
     integer itran, kuval[4];
     char trans[1];
     integer izero, nerrs;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     logical zerot;
     char xtype[1];
-    extern /* Subroutine */ int slatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, real *, integer *, real *, char *
-);
     integer ldafac;
-    extern /* Subroutine */ int alaerh_(char *, char *, integer *, integer *, 
-	    char *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *);
-    extern doublereal slangb_(char *, integer *, integer *, integer *, real *, 
-	     integer *, real *);
     real rcondc;
-    extern doublereal slange_(char *, integer *, integer *, real *, integer *, 
-	     real *);
-    extern /* Subroutine */ int sgbcon_(char *, integer *, integer *, integer 
-	    *, real *, integer *, integer *, real *, real *, real *, integer *
-, integer *);
     real rcondi;
-    extern /* Subroutine */ int alasum_(char *, integer *, integer *, integer 
-	    *, integer *);
     real cndnum, anormi, rcondo;
-    extern /* Subroutine */ int serrge_(char *, integer *);
     real ainvnm;
-    extern /* Subroutine */ int sgbrfs_(char *, integer *, integer *, integer 
-	    *, integer *, real *, integer *, real *, integer *, integer *, 
-	    real *, integer *, real *, integer *, real *, real *, real *, 
-	    integer *, integer *), sgbtrf_(integer *, integer *, 
-	    integer *, integer *, real *, integer *, integer *, integer *);
     logical trfcon;
     real anormo;
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *), slarhs_(char *, char *, 
-	    char *, char *, integer *, integer *, integer *, integer *, 
-	    integer *, real *, integer *, real *, integer *, real *, integer *
-, integer *, integer *), slaset_(
-	    char *, integer *, integer *, real *, real *, real *, integer *), xlaenv_(integer *, integer *), slatms_(integer *, 
-	    integer *, char *, integer *, char *, real *, integer *, real *, 
-	    real *, integer *, integer *, char *, real *, integer *, real *, 
-	    integer *), sgbtrs_(char *, integer *, 
-	    integer *, integer *, integer *, real *, integer *, integer *, 
-	    real *, integer *, integer *);
     real result[7];
 
     /* Fortran I/O blocks */

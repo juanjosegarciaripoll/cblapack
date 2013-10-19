@@ -52,17 +52,7 @@ static integer c__1 = 1;
     integer info;
     char path[3];
     real norm, rpow[11], ccond, rcond, rcmin, rcmax, ratio;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int sgbequ_(integer *, integer *, integer *, 
-	    integer *, real *, integer *, real *, real *, real *, real *, 
-	    real *, integer *), sgeequ_(integer *, integer *, real *, integer 
-	    *, real *, real *, real *, real *, real *, integer *), spbequ_(
-	    char *, integer *, integer *, real *, integer *, real *, real *, 
-	    real *, integer *);
     real reslts[5];
-    extern /* Subroutine */ int spoequ_(integer *, real *, integer *, real *, 
-	    real *, real *, integer *), sppequ_(char *, integer *, real *, 
-	    real *, real *, real *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___25 = { 0, 0, 0, 0, 0 };

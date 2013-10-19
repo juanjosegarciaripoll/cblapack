@@ -32,15 +32,6 @@ static integer c__1 = 1;
     integer j, jj, ix;
     doublereal eps, err;
     doublereal xscal, tnorm, xnorm;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), ztpmv_(
-	    char *, char *, char *, integer *, doublecomplex *, doublecomplex 
-	    *, integer *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int zdscal_(integer *, doublereal *, 
-	    doublecomplex *, integer *);
-    extern integer izamax_(integer *, doublecomplex *, integer *);
     doublereal smlnum;
 
 

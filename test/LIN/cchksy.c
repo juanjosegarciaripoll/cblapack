@@ -67,58 +67,17 @@ static integer c__8 = 8;
     integer irhs, nrhs;
     char uplo[1], type__[1];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *), cget04_(
-	    integer *, integer *, complex *, integer *, complex *, integer *, 
-	    real *, real *);
     integer nfail, iseed[4];
     real rcond;
     integer nimat;
-    extern doublereal sget06_(real *, real *);
-    extern /* Subroutine */ int cpot05_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *, complex *, integer *, complex 
-	    *, integer *, real *, real *, real *);
     real anorm;
-    extern /* Subroutine */ int csyt01_(char *, integer *, complex *, integer 
-	    *, complex *, integer *, integer *, complex *, integer *, real *, 
-	    real *), csyt02_(char *, integer *, integer *, complex *, 
-	    integer *, complex *, integer *, complex *, integer *, real *, 
-	    real *), csyt03_(char *, integer *, complex *, integer *, 
-	    complex *, integer *, complex *, integer *, real *, real *, real *
-);
     integer iuplo, izero, nerrs, lwork;
     logical zerot;
     char xtype[1];
-    extern /* Subroutine */ int clatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, real *, integer *, real *, char *
-), alaerh_(char *, char *, integer *, 
-	    integer *, char *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *);
     real rcondc;
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), clarhs_(char *, char 
-	    *, char *, char *, integer *, integer *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, complex *, 
-	    integer *, integer *, integer *), 
-	    alasum_(char *, integer *, integer *, integer *, integer *);
     real cndnum;
-    extern /* Subroutine */ int clatms_(integer *, integer *, char *, integer 
-	    *, char *, real *, integer *, real *, real *, integer *, integer *
-, char *, complex *, integer *, complex *, integer *);
-    extern doublereal clansy_(char *, char *, integer *, complex *, integer *, 
-	     real *);
     logical trfcon;
-    extern /* Subroutine */ int csycon_(char *, integer *, complex *, integer 
-	    *, integer *, real *, real *, complex *, integer *), 
-	    clatsy_(char *, integer *, complex *, integer *, integer *), xlaenv_(integer *, integer *), cerrsy_(char *, integer *), csyrfs_(char *, integer *, integer *, complex *, 
-	    integer *, complex *, integer *, integer *, complex *, integer *, 
-	    complex *, integer *, real *, real *, complex *, real *, integer *
-), csytrf_(char *, integer *, complex *, integer *, 
-	    integer *, complex *, integer *, integer *), csytri_(char 
-	    *, integer *, complex *, integer *, integer *, complex *, integer 
-	    *);
     real result[8];
-    extern /* Subroutine */ int csytrs_(char *, integer *, integer *, complex 
-	    *, integer *, integer *, complex *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___39 = { 0, 0, 0, fmt_9999, 0 };

@@ -50,10 +50,6 @@ static integer c__2 = 2;
     integer info, iter;
     doublereal work[16];
     real swork[16];
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), dsposv_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, real *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

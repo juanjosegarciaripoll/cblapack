@@ -70,14 +70,7 @@ static integer c__1 = 1;
     integer iform;
     doublereal norma;
     integer inorm, iuplo, nerrs;
-    extern doublereal dlamch_(char *), zlanhe_(char *, char *, 
-	    integer *, doublecomplex *, integer *, doublereal *), zlanhf_(char *, char *, char *, integer *, doublecomplex 
-	    *, doublereal *);
-    extern /* Double Complex */ void zlarnd_(doublecomplex *, integer *, 
-	    integer *);
     doublereal result[1];
-    extern /* Subroutine */ int ztrttf_(char *, char *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     doublereal normarf;
 
     /* Fortran I/O blocks */

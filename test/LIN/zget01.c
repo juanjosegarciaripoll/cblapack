@@ -32,18 +32,6 @@ static integer c_n1 = -1;
     integer i__, j, k;
     doublecomplex t;
     doublereal eps, anorm;
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *), zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *);
-    extern /* Double Complex */ void zdotu_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern /* Subroutine */ int ztrmv_(char *, char *, char *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern doublereal dlamch_(char *), zlange_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublereal *);
-    extern /* Subroutine */ int zlaswp_(integer *, doublecomplex *, integer *, 
-	     integer *, integer *, integer *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

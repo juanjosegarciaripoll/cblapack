@@ -58,14 +58,6 @@ static integer c__1 = 1;
     integer iform;
     logical lower;
     integer iuplo, nerrs;
-    extern doublereal slarnd_(integer *, integer *);
-    extern /* Subroutine */ int stfttp_(char *, char *, integer *, real *, 
-	    real *, integer *), stpttf_(char *, char *, 
-	    integer *, real *, real *, integer *), stfttr_(
-	    char *, char *, integer *, real *, real *, integer *, integer *), strttf_(char *, char *, integer *, real *, 
-	    integer *, real *, integer *), strttp_(char *, 
-	    integer *, real *, integer *, real *, integer *), stpttr_(
-	    char *, integer *, real *, real *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___19 = { 0, 0, 0, 0, 0 };

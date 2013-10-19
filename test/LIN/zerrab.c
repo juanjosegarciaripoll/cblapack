@@ -56,11 +56,6 @@ static integer c__2 = 2;
     doublecomplex work[1];
     doublereal rwork[1];
     complex swork[1];
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), zcgesv_(integer *, integer *, 
-	    doublecomplex *, integer *, integer *, doublecomplex *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, complex *, 
-	    doublereal *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

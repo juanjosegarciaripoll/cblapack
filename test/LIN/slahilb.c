@@ -27,8 +27,6 @@ static real c_b4 = 0.f;
 
     /* Local variables */
     integer i__, j, m, r__, ti, tm;
-    extern /* Subroutine */ int xerbla_(char *, integer *), slaset_(
-	    char *, integer *, integer *, real *, real *, real *, integer *);
 
 
 /*  -- LAPACK auxiliary test routine (version 3.0) -- */
@@ -146,7 +144,7 @@ static real c_b4 = 0.f;
     }
     if (*info < 0) {
 	i__1 = -(*info);
-	xerbla_("SLAHILB", &i__1);
+	this_xerbla_("SLAHILB", &i__1);
 	return 0;
     }
     if (*n > 6) {

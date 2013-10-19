@@ -57,26 +57,8 @@ static integer c__1 = 1;
     integer mode, info;
     char path[3];
     integer ilow, nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer ihigh, nfail, iseed[4], imode;
-    extern doublereal dqpt01_(integer *, integer *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *), dqrt11_(integer *, integer *, doublereal *, integer *, 
-	     doublereal *, doublereal *, integer *), dqrt12_(integer *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    integer *);
     integer mnmin, istep, nerrs, lwork;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dlaord_(char *, integer *, doublereal *, 
-	    integer *), dgeqpf_(integer *, integer *, doublereal *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *), 
-	    dlacpy_(char *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *), dlaset_(char *, integer *, 
-	    integer *, doublereal *, doublereal *, doublereal *, integer *), alasum_(char *, integer *, integer *, integer *, integer 
-	    *), dlatms_(integer *, integer *, char *, integer *, char 
-	    *, doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	     integer *, char *, doublereal *, integer *, doublereal *, 
-	    integer *), derrqp_(char *, integer *);
     doublereal result[3];
 
     /* Fortran I/O blocks */

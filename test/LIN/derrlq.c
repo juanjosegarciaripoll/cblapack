@@ -42,21 +42,6 @@ static integer c__2 = 2;
     integer i__, j;
     doublereal w[2], x[2], af[4]	/* was [2][2] */;
     integer info;
-    extern /* Subroutine */ int dgelq2_(integer *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *), dorgl2_(
-	    integer *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *), dorml2_(char *, char *, 
-	    integer *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *), alaesm_(char *, logical *, integer *), 
-	    dgelqf_(integer *, integer *, doublereal *, integer *, doublereal 
-	    *, doublereal *, integer *, integer *), dgelqs_(integer *, 
-	    integer *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, integer *), 
-	    chkxer_(char *, integer *, integer *, logical *, logical *), dorglq_(integer *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *, integer *), 
-	    dormlq_(char *, char *, integer *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

@@ -70,57 +70,16 @@ static real c_b91 = -1.f;
     integer ins, info;
     char path[3];
     integer rank, nrhs, nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *), cgemm_(
-	    char *, char *, integer *, integer *, integer *, complex *, 
-	    complex *, integer *, complex *, integer *, complex *, complex *, 
-	    integer *);
     integer nfail, iseed[4];
-    extern /* Subroutine */ int cgels_(char *, integer *, integer *, integer *
-, complex *, integer *, complex *, integer *, complex *, integer *
-, integer *);
     integer crank, irank;
     real rcond;
     integer itran, mnmin, ncols;
     real norma, normb;
-    extern doublereal cqrt12_(integer *, integer *, complex *, integer *, 
-	    real *, complex *, integer *, real *), cqrt14_(char *, integer *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *, 
-	    complex *, integer *), cqrt17_(char *, integer *, integer 
-	    *, integer *, integer *, complex *, integer *, complex *, integer 
-	    *, complex *, integer *, complex *, complex *, integer *);
     char trans[1];
     integer nerrs, itype;
-    extern doublereal sasum_(integer *, real *, integer *);
     integer lwork;
-    extern /* Subroutine */ int cqrt13_(integer *, integer *, integer *, 
-	    complex *, integer *, real *, integer *), cqrt15_(integer *, 
-	    integer *, integer *, integer *, integer *, complex *, integer *, 
-	    complex *, integer *, real *, integer *, real *, real *, integer *
-, complex *, integer *), cqrt16_(char *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, complex *, 
-	    integer *, real *, real *), saxpy_(integer *, real *, 
-	    real *, integer *, real *, integer *);
     integer nrows, lwlsy;
-    extern /* Subroutine */ int alaerh_(char *, char *, integer *, integer *, 
-	    char *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *);
     integer iscale;
-    extern /* Subroutine */ int cgelsd_(integer *, integer *, integer *, 
-	    complex *, integer *, complex *, integer *, real *, real *, 
-	    integer *, complex *, integer *, real *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *), clacpy_(char *, integer *, integer *, complex *, integer *, 
-	    complex *, integer *), cgelss_(integer *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, real *, 
-	    real *, integer *, complex *, integer *, real *, integer *), 
-	    alasvm_(char *, integer *, integer *, integer *, integer *), cgelsx_(integer *, integer *, integer *, complex *, 
-	    integer *, complex *, integer *, integer *, real *, integer *, 
-	    complex *, real *, integer *), cgelsy_(integer *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, integer *, 
-	    real *, integer *, complex *, integer *, real *, integer *), 
-	    clarnv_(integer *, integer *, integer *, complex *), cerrls_(char 
-	    *, integer *), xlaenv_(integer *, integer *);
     integer ldwork;
     real result[18];
 

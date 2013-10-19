@@ -44,10 +44,6 @@ static complex c_b6 = {0.f,0.f};
     char c2[2];
     integer ti, tm;
     complex tmp;
-    extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *), xerbla_(char *, 
-	    integer *);
-    extern logical lsamen_(integer *, char *, char *);
 
 
 /*  -- LAPACK auxiliary test routine (version 3.0) -- */
@@ -168,7 +164,7 @@ static complex c_b6 = {0.f,0.f};
     }
     if (*info < 0) {
 	i__1 = -(*info);
-	xerbla_("CLAHILB", &i__1);
+	this_xerbla_("CLAHILB", &i__1);
 	return 0;
     }
     if (*n > 6) {

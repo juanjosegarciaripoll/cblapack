@@ -69,56 +69,16 @@ static real c_b92 = -1.f;
     integer ins, info;
     char path[3];
     integer rank, nrhs, nlvl, nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer nfail, iseed[4], crank, irank;
     real rcond;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    sgemm_(char *, char *, integer *, integer *, integer *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, integer *);
     integer itran, mnmin, ncols;
     real norma, normb;
-    extern /* Subroutine */ int sgels_(char *, integer *, integer *, integer *
-, real *, integer *, real *, integer *, real *, integer *, 
-	    integer *);
     char trans[1];
     integer nerrs, itype;
-    extern doublereal sasum_(integer *, real *, integer *);
     integer lwork;
-    extern doublereal sqrt12_(integer *, integer *, real *, integer *, real *, 
-	     real *, integer *), sqrt14_(char *, integer *, integer *, 
-	    integer *, real *, integer *, real *, integer *, real *, integer *
-), sqrt17_(char *, integer *, integer *, integer *, 
-	    integer *, real *, integer *, real *, integer *, real *, integer *
-, real *, real *, integer *);
-    extern /* Subroutine */ int sqrt13_(integer *, integer *, integer *, real 
-	    *, integer *, real *, integer *), sqrt15_(integer *, integer *, 
-	    integer *, integer *, integer *, real *, integer *, real *, 
-	    integer *, real *, integer *, real *, real *, integer *, real *, 
-	    integer *), saxpy_(integer *, real *, real *, integer *, real *, 
-	    integer *), sqrt16_(char *, integer *, integer *, integer *, real 
-	    *, integer *, real *, integer *, real *, integer *, real *, real *
-);
     integer nrows, lwlsy;
-    extern /* Subroutine */ int alaerh_(char *, char *, integer *, integer *, 
-	    char *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *);
     integer iscale;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int sgelsd_(integer *, integer *, integer *, real 
-	    *, integer *, real *, integer *, real *, real *, integer *, real *
-, integer *, integer *, integer *), alasvm_(char *, integer *, 
-	    integer *, integer *, integer *), slacpy_(char *, integer 
-	    *, integer *, real *, integer *, real *, integer *), 
-	    xlaenv_(integer *, integer *), sgelss_(integer *, integer *, 
-	    integer *, real *, integer *, real *, integer *, real *, real *, 
-	    integer *, real *, integer *, integer *);
     integer ldwork;
-    extern /* Subroutine */ int sgelsx_(integer *, integer *, integer *, real 
-	    *, integer *, real *, integer *, integer *, real *, integer *, 
-	    real *, integer *), sgelsy_(integer *, integer *, integer *, real 
-	    *, integer *, real *, integer *, integer *, real *, integer *, 
-	    real *, integer *, integer *), slarnv_(integer *, integer *, 
-	    integer *, real *), serrls_(char *, integer *);
     real result[18];
 
     /* Fortran I/O blocks */

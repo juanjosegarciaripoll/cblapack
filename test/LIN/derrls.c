@@ -42,24 +42,7 @@ static integer c__10 = 10;
     doublereal a[4]	/* was [2][2] */, b[4]	/* was [2][2] */, s[2], w[2];
     char c2[2];
     integer ip[2], info, irnk;
-    extern /* Subroutine */ int dgels_(char *, integer *, integer *, integer *
-, doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, integer *);
     doublereal rcond;
-    extern /* Subroutine */ int alaesm_(char *, logical *, integer *),
-	     dgelsd_(integer *, integer *, integer *, doublereal *, integer *, 
-	     doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *, integer *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int dgelss_(integer *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, integer *), 
-	    chkxer_(char *, integer *, integer *, logical *, logical *), dgelsx_(integer *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *), dgelsy_(integer *, integer *, 
-	     integer *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

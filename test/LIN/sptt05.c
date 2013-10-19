@@ -31,9 +31,7 @@ static integer c__1 = 1;
     real eps, tmp, diff, axbi;
     integer imax;
     real unfl, ovfl, xnorm;
-    extern doublereal slamch_(char *);
     real errbnd;
-    extern integer isamax_(integer *, real *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

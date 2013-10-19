@@ -23,7 +23,6 @@
 
     /* Local variables */
     integer i__, ia, ixa;
-    extern doublereal dlamch_(char *);
     doublereal bignum;
 
 

@@ -73,27 +73,9 @@ static integer c__1 = 1;
     integer iform;
     char trans[1];
     integer iuplo;
-    extern /* Subroutine */ int ztfsm_(char *, char *, char *, char *, char *, 
-	     integer *, integer *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, integer *), ztrsm_(char *, char *, char *, char *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
     integer ialpha;
-    extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int zgelqf_(integer *, integer *, doublecomplex *, 
-	     integer *, doublecomplex *, doublecomplex *, integer *, integer *
-);
-    extern /* Double Complex */ void zlarnd_(doublecomplex *, integer *, 
-	    integer *);
-    extern /* Subroutine */ int zgeqrf_(integer *, integer *, doublecomplex *, 
-	     integer *, doublecomplex *, doublecomplex *, integer *, integer *
-);
     integer itrans;
     doublereal result[1];
-    extern /* Subroutine */ int ztrttf_(char *, char *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___32 = { 0, 0, 0, 0, 0 };

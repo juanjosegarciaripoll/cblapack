@@ -37,30 +37,8 @@ static integer c__0 = 0;
     real eps;
     integer info;
     real temp;
-    extern /* Subroutine */ int cgemm_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *), clarf_(char *, 
-	    integer *, integer *, complex *, integer *, complex *, complex *, 
-	    integer *, complex *);
-    extern doublereal sasum_(integer *, real *, integer *);
     real dummy[1];
-    extern doublereal scnrm2_(integer *, complex *, integer *);
-    extern /* Subroutine */ int slabad_(real *, real *);
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *);
-    extern /* Subroutine */ int clascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, complex *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *), claset_(char *, integer *, integer *, complex *, complex *, 
-	    complex *, integer *), xerbla_(char *, integer *);
     real bignum;
-    extern /* Subroutine */ int claror_(char *, char *, integer *, integer *, 
-	    complex *, integer *, integer *, complex *, integer *);
-    extern doublereal slarnd_(integer *, integer *);
-    extern /* Subroutine */ int slaord_(char *, integer *, real *, integer *), clarnv_(integer *, integer *, integer *, complex *), 
-	    slascl_(char *, integer *, integer *, real *, real *, integer *, 
-	    integer *, real *, integer *, integer *);
     real smlnum;
 
 
@@ -166,7 +144,7 @@ static integer c__0 = 0;
     i__1 = *m + mn, i__2 = mn * *nrhs, i__1 = max(i__1,i__2), i__2 = (*n << 1)
 	     + *m;
     if (*lwork < max(i__1,i__2)) {
-	xerbla_("CQRT15", &c__16);
+	this_xerbla_("CQRT15", &c__16);
 	return 0;
     }
 
@@ -189,7 +167,7 @@ static integer c__0 = 0;
 /* L10: */
 	}
     } else {
-	xerbla_("CQRT15", &c__2);
+	this_xerbla_("CQRT15", &c__2);
     }
 
     if (*rank > 0) {
@@ -287,7 +265,7 @@ L20:
 		clascl_("General", &c__0, &c__0, norma, &smlnum, m, nrhs, &b[
 			b_offset], ldb, &info);
 	    } else {
-		xerbla_("CQRT15", &c__1);
+		this_xerbla_("CQRT15", &c__1);
 		return 0;
 	    }
 	}

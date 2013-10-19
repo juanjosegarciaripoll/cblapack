@@ -59,29 +59,9 @@ static integer c__3 = 3;
     integer mode, info;
     char path[3];
     integer ilow, nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer ihigh, nfail, iseed[4], imode, mnmin;
-    extern /* Subroutine */ int icopy_(integer *, integer *, integer *, 
-	    integer *, integer *);
     integer istep, nerrs;
-    extern doublereal sqpt01_(integer *, integer *, integer *, real *, real *, 
-	     integer *, real *, integer *, real *, integer *), sqrt11_(
-	    integer *, integer *, real *, integer *, real *, real *, integer *
-);
     integer lwork;
-    extern doublereal sqrt12_(integer *, integer *, real *, integer *, real *, 
-	     real *, integer *);
-    extern /* Subroutine */ int sgeqp3_(integer *, integer *, real *, integer 
-	    *, integer *, real *, real *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int alasum_(char *, integer *, integer *, integer 
-	    *, integer *), slaord_(char *, integer *, real *, integer 
-	    *), slacpy_(char *, integer *, integer *, real *, integer 
-	    *, real *, integer *), slaset_(char *, integer *, integer 
-	    *, real *, real *, real *, integer *), xlaenv_(integer *, 
-	    integer *), slatms_(integer *, integer *, char *, integer *, char 
-	    *, real *, integer *, real *, real *, integer *, integer *, char *
-, real *, integer *, real *, integer *);
     real result[3];
 
     /* Fortran I/O blocks */

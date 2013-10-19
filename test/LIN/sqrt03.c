@@ -46,22 +46,9 @@ static real c_b22 = 1.f;
     char side[1];
     integer info, iside;
     real resid;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     real cnorm;
     char trans[1];
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *), slaset_(char *, integer *, 
-	    integer *, real *, real *, real *, integer *);
     integer itrans;
-    extern /* Subroutine */ int slarnv_(integer *, integer *, integer *, real 
-	    *), sorgqr_(integer *, integer *, integer *, real *, integer *, 
-	    real *, real *, integer *, integer *), sormqr_(char *, char *, 
-	    integer *, integer *, integer *, real *, integer *, real *, real *
-, integer *, real *, integer *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

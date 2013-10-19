@@ -46,27 +46,12 @@ static doublereal c_b23 = 1.;
     doublereal eps;
     char side[1];
     integer info;
-    extern /* Subroutine */ int dgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *);
     integer iside;
     doublereal resid;
     integer minmn;
     doublereal cnorm;
     char trans[1];
-    extern doublereal dlamch_(char *), dlange_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *);
-    extern /* Subroutine */ int dlacpy_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *), 
-	    dlaset_(char *, integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *), dlarnv_(integer *, integer *, 
-	    integer *, doublereal *), dorgrq_(integer *, integer *, integer *, 
-	     doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    integer *);
     integer itrans;
-    extern /* Subroutine */ int dormrq_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

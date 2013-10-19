@@ -30,16 +30,8 @@ static complex c_b12 = {-1.f,0.f};
     /* Local variables */
     integer j;
     real eps;
-    extern /* Subroutine */ int ctbmv_(char *, char *, char *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *);
     real anorm, bnorm;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *), caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *);
     real xnorm;
-    extern doublereal clantb_(char *, char *, char *, integer *, integer *, 
-	    complex *, integer *, real *), slamch_(
-	    char *), scasum_(integer *, complex *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

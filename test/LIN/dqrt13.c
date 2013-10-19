@@ -28,17 +28,8 @@ static integer c__0 = 0;
 
     /* Local variables */
     integer j, info;
-    extern doublereal dasum_(integer *, doublereal *, integer *);
     doublereal dummy[1];
-    extern /* Subroutine */ int dlabad_(doublereal *, doublereal *);
-    extern doublereal dlamch_(char *), dlange_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *);
-    extern /* Subroutine */ int dlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, integer *);
     doublereal bignum;
-    extern /* Subroutine */ int dlarnv_(integer *, integer *, integer *, 
-	    doublereal *);
     doublereal smlnum;
 
 

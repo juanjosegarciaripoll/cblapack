@@ -31,16 +31,7 @@ static real c_b15 = 1.f;
     integer i__, j, k;
     complex tc;
     real tr, eps;
-    extern /* Subroutine */ int cher_(char *, integer *, real *, complex *, 
-	    integer *, complex *, integer *), cscal_(integer *, 
-	    complex *, complex *, integer *);
-    extern /* Complex */ void cdotc_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
     real anorm;
-    extern /* Subroutine */ int ctrmv_(char *, char *, char *, integer *, 
-	    complex *, integer *, complex *, integer *);
-    extern doublereal clanhe_(char *, char *, integer *, complex *, integer *, 
-	     real *), slamch_(char *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

@@ -32,17 +32,7 @@ static doublereal c_b15 = 1.;
     integer i__, j, k;
     doublecomplex tc;
     doublereal tr, eps;
-    extern /* Subroutine */ int zher_(char *, integer *, doublereal *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     doublereal anorm;
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *);
-    extern /* Double Complex */ void zdotc_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern /* Subroutine */ int ztrmv_(char *, char *, char *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern doublereal dlamch_(char *), zlanhe_(char *, char *, 
-	    integer *, doublecomplex *, integer *, doublereal *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

@@ -29,16 +29,9 @@ static integer c__1 = 1;
     /* Local variables */
     integer j, ix;
     real eps, err;
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     real xscal;
-    extern /* Subroutine */ int stbmv_(char *, char *, char *, integer *, 
-	    integer *, real *, integer *, real *, integer *), scopy_(integer *, real *, integer *, real *, integer *);
     real tnorm, xnorm;
-    extern /* Subroutine */ int saxpy_(integer *, real *, real *, integer *, 
-	    real *, integer *), slabad_(real *, real *);
-    extern doublereal slamch_(char *);
     real bignum;
-    extern integer isamax_(integer *, real *, integer *);
     real smlnum;
 
 

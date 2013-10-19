@@ -82,35 +82,13 @@ static integer c__1 = 1;
     integer irhs, iter, nrhs;
     char type__[1];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer nfail, iseed[4], nimat;
     doublereal anorm;
-    extern /* Subroutine */ int zget08_(char *, integer *, integer *, integer 
-	    *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *);
     char trans[1];
     integer izero, nerrs;
     logical zerot;
     char xtype[1];
-    extern /* Subroutine */ int zlatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, char *), alaerh_(char *, 
-	    char *, integer *, integer *, char *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *);
     doublereal cndnum;
-    extern /* Subroutine */ int zcgesv_(integer *, integer *, doublecomplex *, 
-	     integer *, integer *, doublecomplex *, integer *, doublecomplex *
-, integer *, doublecomplex *, complex *, doublereal *, integer *, 
-	    integer *), zlacpy_(char *, integer *, integer *, doublecomplex *, 
-	     integer *, doublecomplex *, integer *), zlarhs_(char *, 
-	    char *, char *, char *, integer *, integer *, integer *, integer *
-, integer *, doublecomplex *, integer *, doublecomplex *, integer 
-	    *, doublecomplex *, integer *, integer *, integer *), zlaset_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *), zlatms_(integer *, integer *, char *, integer *, char *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    integer *, char *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *);
     doublereal result[1];
 
     /* Fortran I/O blocks */

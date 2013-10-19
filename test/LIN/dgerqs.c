@@ -26,13 +26,6 @@ static doublereal c_b9 = 0.;
     integer a_dim1, a_offset, b_dim1, b_offset, i__1;
 
     /* Local variables */
-    extern /* Subroutine */ int dtrsm_(char *, char *, char *, char *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *), dlaset_(
-	    char *, integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *), xerbla_(char *, integer *), dormrq_(char *, char *, integer *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *, integer *);
 
 
 /*  -- LAPACK routine (version 3.1) -- */
@@ -133,7 +126,7 @@ static doublereal c_b9 = 0.;
     }
     if (*info != 0) {
 	i__1 = -(*info);
-	xerbla_("DGERQS", &i__1);
+	this_xerbla_("DGERQS", &i__1);
 	return 0;
     }
 

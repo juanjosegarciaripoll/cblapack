@@ -47,14 +47,6 @@ static integer c__3 = 3;
     integer ip[3], lw;
     doublereal tau[3];
     integer info;
-    extern /* Subroutine */ int dgeqp3_(integer *, integer *, doublereal *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    integer *), alaesm_(char *, logical *, integer *), 
-	    dgeqpf_(integer *, integer *, doublereal *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

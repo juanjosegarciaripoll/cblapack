@@ -30,14 +30,7 @@ static doublereal c_b12 = 0.;
     integer i__, j;
     doublereal eps;
     doublereal anorm;
-    extern /* Subroutine */ int dsymm_(char *, char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *);
-    extern doublereal dlamch_(char *), dlange_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *);
     doublereal ainvnm;
-    extern doublereal dlansy_(char *, char *, integer *, doublereal *, 
-	    integer *, doublereal *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

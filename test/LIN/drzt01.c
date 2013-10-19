@@ -30,17 +30,7 @@ doublereal drzt01_(integer *m, integer *n, doublereal *a, doublereal *af,
     /* Local variables */
     integer i__, j, info;
     doublereal norma;
-    extern /* Subroutine */ int daxpy_(integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *);
     doublereal rwork[1];
-    extern doublereal dlamch_(char *), dlange_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *);
-    extern /* Subroutine */ int dlaset_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *), 
-	    xerbla_(char *, integer *), dormrz_(char *, char *, 
-	    integer *, integer *, integer *, integer *, doublereal *, integer 
-	    *, doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	     integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */
@@ -117,7 +107,7 @@ doublereal drzt01_(integer *m, integer *n, doublereal *a, doublereal *af,
     ret_val = 0.;
 
     if (*lwork < *m * *n + *m) {
-	xerbla_("DRZT01", &c__8);
+	this_xerbla_("DRZT01", &c__8);
 	return ret_val;
     }
 

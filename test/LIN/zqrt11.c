@@ -29,14 +29,6 @@ doublereal zqrt11_(integer *m, integer *k, doublecomplex *a, integer *lda,
 
     /* Local variables */
     integer j, info;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int zunm2r_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), xerbla_(char *, integer *);
-    extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int zlaset_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *);
     doublereal rdummy[1];
 
 
@@ -119,7 +111,7 @@ doublereal zqrt11_(integer *m, integer *k, doublecomplex *a, integer *lda,
 /*     Test for sufficient workspace */
 
     if (*lwork < *m * *m + *m) {
-	xerbla_("ZQRT11", &c__7);
+	this_xerbla_("ZQRT11", &c__7);
 	return ret_val;
     }
 

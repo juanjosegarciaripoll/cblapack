@@ -56,30 +56,6 @@ static integer c__1 = 1;
     doublecomplex du2[2], dlf[2], duf[2];
     integer info;
     doublereal rcond, anorm;
-    extern /* Subroutine */ int alaesm_(char *, logical *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), zgtcon_(char *, integer *, doublecomplex *, 
-	     doublecomplex *, doublecomplex *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *, doublecomplex *, integer *), 
-	    zptcon_(integer *, doublereal *, doublecomplex *, doublereal *, 
-	    doublereal *, doublereal *, integer *), zgtrfs_(char *, integer *, 
-	     integer *, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, doublecomplex *
-, integer *, doublecomplex *, integer *, doublecomplex *, integer 
-	    *, doublereal *, doublereal *, doublecomplex *, doublereal *, 
-	    integer *), zgttrf_(integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *, 
-	    integer *), zptrfs_(char *, integer *, integer *, doublereal *, 
-	    doublecomplex *, doublereal *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, doublereal *, doublereal *, 
-	     doublecomplex *, doublereal *, integer *), zpttrf_(
-	    integer *, doublereal *, doublecomplex *, integer *), zgttrs_(
-	    char *, integer *, integer *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, integer *), zpttrs_(char *, integer *, integer 
-	    *, doublereal *, doublecomplex *, doublecomplex *, integer *, 
-	    integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

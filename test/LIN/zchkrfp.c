@@ -72,30 +72,11 @@ static integer c__6 = 6;
     doublecomplex worka[2500]	/* was [50][50] */, workb[800]	/* was [50][
 	    16] */, workx[800]	/* was [50][16] */;
     doublereal d_work_zlanhe__[50], d_work_zlatms__[50];
-    extern doublereal dlamch_(char *), dsecnd_(void);
     doublecomplex z_work_zlatms__[150];
-    extern /* Subroutine */ int ilaver_(integer *, integer *, integer *);
     doublereal thresh;
     doublecomplex workap[1275];
     logical tsterr;
-    extern /* Subroutine */ int zdrvrf1_(integer *, integer *, integer *, 
-	    doublereal *, doublecomplex *, integer *, doublecomplex *, 
-	    doublereal *), zdrvrf2_(integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *), zdrvrf3_(integer *, integer *, integer *, 
-	    doublereal *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, doublereal *, doublecomplex *, 
-	    doublecomplex *), zdrvrf4_(integer *, integer *, integer *, 
-	    doublereal *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublereal *);
     doublecomplex workarf[1275];
-    extern /* Subroutine */ int zerrrfp_(integer *), zdrvrfp_(integer *, 
-	    integer *, integer *, integer *, integer *, integer *, integer *, 
-	    doublereal *, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, doublecomplex *
-, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, doublecomplex *
-, doublereal *, doublereal *, doublereal *, doublereal *);
 
     /* Fortran I/O blocks */
     static cilist io___3 = { 0, 5, 0, 0, 0 };

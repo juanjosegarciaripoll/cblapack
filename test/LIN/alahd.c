@@ -272,7 +272,6 @@ static integer c__8 = 8;
     char c1[1], c3[1], p2[2], sym[9];
     logical sord, corz;
     char eigcnm[4];
-    extern logical lsamen_(integer *, char *, char *);
     char subnam[32];
 
     /* Fortran I/O blocks */

@@ -70,63 +70,17 @@ static doublereal c_b96 = -1.;
     integer ins, info;
     char path[3];
     integer rank, nrhs, nlvl, nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *), dscal_(
-	    integer *, doublereal *, doublereal *, integer *);
     integer nfail, iseed[4];
-    extern /* Subroutine */ int dgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *);
     integer crank;
-    extern /* Subroutine */ int dgels_(char *, integer *, integer *, integer *
-, doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, integer *);
     integer irank;
     doublereal rcond;
-    extern doublereal dasum_(integer *, doublereal *, integer *);
     integer itran, mnmin, ncols;
     doublereal norma, normb;
-    extern doublereal dqrt12_(integer *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *), dqrt14_(char *, integer *, 
-	     integer *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *), dqrt17_(char *, 
-	    integer *, integer *, integer *, integer *, doublereal *, integer 
-	    *, doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	     doublereal *, integer *);
-    extern /* Subroutine */ int daxpy_(integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *);
     char trans[1];
     integer nerrs, itype;
-    extern /* Subroutine */ int dqrt13_(integer *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *);
     integer lwork;
-    extern /* Subroutine */ int dqrt15_(integer *, integer *, integer *, 
-	    integer *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *), dqrt16_(char *, integer *, 
-	    integer *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *);
     integer nrows, lwlsy;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int alaerh_(char *, char *, integer *, integer *, 
-	    char *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *);
     integer iscale;
-    extern /* Subroutine */ int dgelsd_(integer *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, integer *, 
-	    integer *), dlacpy_(char *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *), dgelss_(integer *, 
-	    integer *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, integer *), alasvm_(char *, integer *, integer *, 
-	    integer *, integer *), dgelsx_(integer *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *), 
-	    dgelsy_(integer *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *, integer *), dlarnv_(integer *, integer *, 
-	     integer *, doublereal *), derrls_(char *, integer *), 
-	    xlaenv_(integer *, integer *);
     integer ldwork;
     doublereal result[18];
 

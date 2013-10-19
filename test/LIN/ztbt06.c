@@ -23,10 +23,7 @@
 
     /* Local variables */
     doublereal eps, rmin, rmax, anorm;
-    extern doublereal dlamch_(char *);
     doublereal bignum;
-    extern doublereal zlantb_(char *, char *, char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

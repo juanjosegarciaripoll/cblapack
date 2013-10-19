@@ -27,12 +27,6 @@
     integer ip;
     doublereal eps, anorm;
     integer lastj;
-    extern /* Subroutine */ int dswap_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *), daxpy_(integer *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *);
-    extern doublereal dlamch_(char *), dlangt_(char *, integer *, 
-	    doublereal *, doublereal *, doublereal *), dlanhs_(char *, 
-	     integer *, doublereal *, integer *, doublereal *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

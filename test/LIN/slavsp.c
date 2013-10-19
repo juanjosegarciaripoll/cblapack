@@ -29,13 +29,6 @@ static integer c__1 = 1;
     integer j, k;
     real t1, t2, d11, d12, d21, d22;
     integer kc, kp;
-    extern /* Subroutine */ int sger_(integer *, integer *, real *, real *, 
-	    integer *, real *, integer *, real *, integer *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *), 
-	    sgemv_(char *, integer *, integer *, real *, real *, integer *, 
-	    real *, integer *, real *, real *, integer *), sswap_(
-	    integer *, real *, integer *, real *, integer *), xerbla_(char *, 
-	    integer *);
     integer kcnext;
     logical nounit;
 
@@ -149,7 +142,7 @@ static integer c__1 = 1;
     }
     if (*info != 0) {
 	i__1 = -(*info);
-	xerbla_("SLAVSP ", &i__1);
+	this_xerbla_("SLAVSP ", &i__1);
 	return 0;
     }
 

@@ -53,26 +53,6 @@ static integer c__4 = 4;
     complex af[16]	/* was [4][4] */;
     integer ip[4], info;
     real anrm, rcond;
-    extern /* Subroutine */ int chetf2_(char *, integer *, complex *, integer 
-	    *, integer *, integer *), checon_(char *, integer *, 
-	    complex *, integer *, integer *, real *, real *, complex *, 
-	    integer *), alaesm_(char *, logical *, integer *),
-	     cherfs_(char *, integer *, integer *, complex *, integer *, 
-	    complex *, integer *, integer *, complex *, integer *, complex *, 
-	    integer *, real *, real *, complex *, real *, integer *), 
-	    chetrf_(char *, integer *, complex *, integer *, integer *, 
-	    complex *, integer *, integer *), chpcon_(char *, integer 
-	    *, complex *, integer *, real *, real *, complex *, integer *), chetri_(char *, integer *, complex *, integer *, integer 
-	    *, complex *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), chprfs_(char *, integer *, integer *, 
-	    complex *, complex *, integer *, complex *, integer *, complex *, 
-	    integer *, real *, real *, complex *, real *, integer *), 
-	    chptrf_(char *, integer *, complex *, integer *, integer *), chetrs_(char *, integer *, integer *, complex *, integer 
-	    *, integer *, complex *, integer *, integer *), chptri_(
-	    char *, integer *, complex *, integer *, complex *, integer *), chptrs_(char *, integer *, integer *, complex *, integer 
-	    *, complex *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

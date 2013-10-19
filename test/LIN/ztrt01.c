@@ -29,12 +29,7 @@ static integer c__1 = 1;
     integer j;
     doublereal eps;
     doublereal anorm;
-    extern /* Subroutine */ int ztrmv_(char *, char *, char *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
     doublereal ainvnm;
-    extern doublereal zlantr_(char *, char *, char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

@@ -47,13 +47,6 @@ static integer c__3 = 3;
     integer ip[3], lw;
     real tau[3];
     integer info;
-    extern /* Subroutine */ int sgeqp3_(integer *, integer *, real *, integer 
-	    *, integer *, real *, real *, integer *, integer *), alaesm_(char 
-	    *, logical *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), sgeqpf_(integer *, integer *, real *, 
-	    integer *, integer *, real *, real *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

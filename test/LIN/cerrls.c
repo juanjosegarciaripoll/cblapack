@@ -47,24 +47,7 @@ static integer c__3 = 3;
     integer ip[2];
     real rw[2];
     integer info, irnk;
-    extern /* Subroutine */ int cgels_(char *, integer *, integer *, integer *
-, complex *, integer *, complex *, integer *, complex *, integer *
-, integer *);
     real rcond;
-    extern /* Subroutine */ int cgelsd_(integer *, integer *, integer *, 
-	    complex *, integer *, complex *, integer *, real *, real *, 
-	    integer *, complex *, integer *, real *, integer *, integer *), 
-	    alaesm_(char *, logical *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int cgelss_(integer *, integer *, integer *, 
-	    complex *, integer *, complex *, integer *, real *, real *, 
-	    integer *, complex *, integer *, real *, integer *), chkxer_(char 
-	    *, integer *, integer *, logical *, logical *), cgelsx_(
-	    integer *, integer *, integer *, complex *, integer *, complex *, 
-	    integer *, integer *, real *, integer *, complex *, real *, 
-	    integer *), cgelsy_(integer *, integer *, integer *, complex *, 
-	    integer *, complex *, integer *, integer *, real *, integer *, 
-	    complex *, integer *, real *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___3 = { 0, 0, 0, 0, 0 };

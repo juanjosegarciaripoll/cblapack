@@ -40,21 +40,7 @@ static real c_b15 = 1.f;
     real eps;
     integer info;
     real resid;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     real anorm;
-    extern /* Subroutine */ int ssyrk_(char *, char *, integer *, integer *, 
-	    real *, real *, integer *, real *, real *, integer *);
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *), slaset_(char *, integer *, 
-	    integer *, real *, real *, real *, integer *);
-    extern doublereal slansy_(char *, char *, integer *, real *, integer *, 
-	    real *);
-    extern /* Subroutine */ int sorgqr_(integer *, integer *, integer *, real 
-	    *, integer *, real *, real *, integer *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

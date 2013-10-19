@@ -43,38 +43,6 @@ static integer c_n1 = -1;
     real r1[2], r2[2], rw[2];
     integer info;
     real scale, rcond;
-    extern /* Subroutine */ int ctrti2_(char *, char *, integer *, complex *, 
-	    integer *, integer *), alaesm_(char *, logical *, 
-	    integer *), clatbs_(char *, char *, char *, char *, 
-	    integer *, integer *, complex *, integer *, complex *, real *, 
-	    real *, integer *), ctbcon_(char *
-, char *, char *, integer *, integer *, complex *, integer *, 
-	    real *, complex *, real *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int ctbrfs_(char *, char *, char *, integer *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *, 
-	    complex *, integer *, real *, real *, complex *, real *, integer *
-), chkxer_(char *, integer *, integer *, 
-	    logical *, logical *), clatps_(char *, char *, char *, 
-	    char *, integer *, complex *, complex *, real *, real *, integer *
-), ctpcon_(char *, char *, char *, 
-	     integer *, complex *, real *, complex *, real *, integer *), clatrs_(char *, char *, char *, char *, 
-	    integer *, complex *, integer *, complex *, real *, real *, 
-	    integer *), ctrcon_(char *, char *
-, char *, integer *, complex *, integer *, real *, complex *, 
-	    real *, integer *), ctbtrs_(char *, char *
-, char *, integer *, integer *, integer *, complex *, integer *, 
-	    complex *, integer *, integer *), ctprfs_(
-	    char *, char *, char *, integer *, integer *, complex *, complex *
-, integer *, complex *, integer *, real *, real *, complex *, 
-	    real *, integer *), ctrrfs_(char *, char *
-, char *, integer *, integer *, complex *, integer *, complex *, 
-	    integer *, complex *, integer *, real *, real *, complex *, real *
-, integer *), ctptri_(char *, char *, 
-	    integer *, complex *, integer *), ctrtri_(char *, 
-	    char *, integer *, complex *, integer *, integer *), ctptrs_(char *, char *, char *, integer *, integer *, 
-	    complex *, complex *, integer *, integer *), ctrtrs_(char *, char *, char *, integer *, integer *, 
-	    complex *, integer *, complex *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

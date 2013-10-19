@@ -28,12 +28,7 @@ static integer c__1 = 1;
     integer j;
     real eps;
     real anorm;
-    extern /* Subroutine */ int strmv_(char *, char *, char *, integer *, 
-	    real *, integer *, real *, integer *);
-    extern doublereal slamch_(char *);
     real ainvnm;
-    extern doublereal slantr_(char *, char *, char *, integer *, integer *, 
-	    real *, integer *, real *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

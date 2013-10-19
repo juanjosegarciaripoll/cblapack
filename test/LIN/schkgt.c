@@ -73,58 +73,18 @@ static real c_b64 = 0.f;
     integer irhs, nrhs;
     char norm[1], type__[1];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer nfail, iseed[4];
     real rcond;
-    extern /* Subroutine */ int sget04_(integer *, integer *, real *, integer 
-	    *, real *, integer *, real *, real *), sscal_(integer *, real *, 
-	    real *, integer *);
     integer nimat;
-    extern doublereal sget06_(real *, real *);
     real anorm;
     integer itran;
-    extern /* Subroutine */ int sgtt01_(integer *, real *, real *, real *, 
-	    real *, real *, real *, real *, integer *, real *, integer *, 
-	    real *, real *), sgtt02_(char *, integer *, integer *, real *, 
-	    real *, real *, real *, integer *, real *, integer *, real *, 
-	    real *), sgtt05_(char *, integer *, integer *, real *, 
-	    real *, real *, real *, integer *, real *, integer *, real *, 
-	    integer *, real *, real *, real *);
     char trans[1];
     integer izero, nerrs;
-    extern doublereal sasum_(integer *, real *, integer *);
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     logical zerot;
-    extern /* Subroutine */ int slatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, real *, integer *, real *, char *
-), alaerh_(char *, char *, integer *, 
-	    integer *, char *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *);
     real rcondc, rcondi, rcondo;
-    extern /* Subroutine */ int alasum_(char *, integer *, integer *, integer 
-	    *, integer *), serrge_(char *, integer *);
     real ainvnm;
-    extern doublereal slangt_(char *, integer *, real *, real *, real *);
-    extern /* Subroutine */ int slagtm_(char *, integer *, integer *, real *, 
-	    real *, real *, real *, real *, integer *, real *, real *, 
-	    integer *);
     logical trfcon;
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *), sgtcon_(char *, integer *, 
-	    real *, real *, real *, real *, integer *, real *, real *, real *, 
-	     integer *, integer *), slatms_(integer *, integer *, 
-	    char *, integer *, char *, real *, integer *, real *, real *, 
-	    integer *, integer *, char *, real *, integer *, real *, integer *
-), slarnv_(integer *, integer *, integer *
-, real *), sgtrfs_(char *, integer *, integer *, real *, real *, 
-	    real *, real *, real *, real *, real *, integer *, real *, 
-	    integer *, real *, integer *, real *, real *, real *, integer *, 
-	    integer *), sgttrf_(integer *, real *, real *, real *, 
-	    real *, integer *, integer *);
     real result[7];
-    extern /* Subroutine */ int sgttrs_(char *, integer *, integer *, real *, 
-	    real *, real *, real *, integer *, real *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___29 = { 0, 0, 0, fmt_9999, 0 };

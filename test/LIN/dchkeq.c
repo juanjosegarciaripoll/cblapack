@@ -52,18 +52,6 @@ static integer c__1 = 1;
     integer info;
     char path[3];
     doublereal norm, rpow[11], ccond, rcond, rcmin, rcmax, ratio;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dgbequ_(integer *, integer *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, integer *), dgeequ_(
-	    integer *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, integer *)
-	    , dpbequ_(char *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *), 
-	    dpoequ_(integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, doublereal *, integer *), dppequ_(char *, integer *, 
-	     doublereal *, doublereal *, doublereal *, doublereal *, integer *
-);
     doublereal reslts[5];
 
     /* Fortran I/O blocks */

@@ -69,70 +69,19 @@ static integer c__7 = 7;
     integer irhs, nrhs;
     char uplo[1], type__[1];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer nfail, iseed[4];
-    extern doublereal dget06_(doublereal *, doublereal *);
     integer kdval[4];
     doublereal rcond;
     integer nimat;
     doublereal anorm;
-    extern /* Subroutine */ int zget04_(integer *, integer *, doublecomplex *, 
-	     integer *, doublecomplex *, integer *, doublereal *, doublereal *
-), zpbt01_(char *, integer *, integer *, doublecomplex *, integer 
-	    *, doublecomplex *, integer *, doublereal *, doublereal *)
-	    , zpbt02_(char *, integer *, integer *, integer *, doublecomplex *
-, integer *, doublecomplex *, integer *, doublecomplex *, integer 
-	    *, doublereal *, doublereal *), zpbt05_(char *, integer *, 
-	     integer *, integer *, doublecomplex *, integer *, doublecomplex *
-, integer *, doublecomplex *, integer *, doublecomplex *, integer 
-	    *, doublereal *, doublereal *, doublereal *);
     integer iuplo, izero, nerrs;
     logical zerot;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zswap_(integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *);
     char xtype[1];
-    extern /* Subroutine */ int zlatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, char *), alaerh_(char *, 
-	    char *, integer *, integer *, char *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *);
     doublereal rcondc;
     char packit[1];
-    extern doublereal zlanhb_(char *, char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *), 
-	    zlange_(char *, integer *, integer *, doublecomplex *, integer *, 
-	    doublereal *);
-    extern /* Subroutine */ int alasum_(char *, integer *, integer *, integer 
-	    *, integer *);
     doublereal cndnum;
-    extern /* Subroutine */ int zlaipd_(integer *, doublecomplex *, integer *, 
-	     integer *);
     doublereal ainvnm;
-    extern /* Subroutine */ int zpbcon_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *, 
-	    doublecomplex *, doublereal *, integer *), xlaenv_(
-	    integer *, integer *), zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), 
-	    zlarhs_(char *, char *, char *, char *, integer *, integer *, 
-	    integer *, integer *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *, 
-	     integer *), zlaset_(char *, 
-	    integer *, integer *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, integer *), zpbrfs_(char *, integer *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     integer *, doublecomplex *, integer *, doublecomplex *, integer *
-, doublereal *, doublereal *, doublecomplex *, doublereal *, 
-	    integer *), zpbtrf_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, integer *), zlatms_(integer *, 
-	     integer *, char *, integer *, char *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, char *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     doublereal result[7];
-    extern /* Subroutine */ int zerrpo_(char *, integer *), zpbtrs_(
-	    char *, integer *, integer *, integer *, doublecomplex *, integer 
-	    *, doublecomplex *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___40 = { 0, 0, 0, fmt_9999, 0 };

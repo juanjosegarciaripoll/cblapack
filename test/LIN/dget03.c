@@ -29,12 +29,7 @@ static doublereal c_b8 = 0.;
     /* Local variables */
     integer i__;
     doublereal eps;
-    extern /* Subroutine */ int dgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *);
     doublereal anorm;
-    extern doublereal dlamch_(char *), dlange_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *);
     doublereal ainvnm;
 
 

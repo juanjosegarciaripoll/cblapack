@@ -34,8 +34,6 @@ static integer c__1 = 1;
     integer imax;
     real unfl, ovfl;
     real xnorm;
-    extern integer icamax_(integer *, complex *, integer *);
-    extern doublereal slamch_(char *);
     real errbnd;
     logical notran;
 

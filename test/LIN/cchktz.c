@@ -57,32 +57,10 @@ static integer c__1 = 1;
     integer mode, info;
     char path[3];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer nfail, iseed[4], imode;
-    extern doublereal cqrt12_(integer *, integer *, complex *, integer *, 
-	    real *, complex *, integer *, real *);
     integer mnmin;
-    extern doublereal crzt01_(integer *, integer *, complex *, complex *, 
-	    integer *, complex *, complex *, integer *), crzt02_(integer *, 
-	    integer *, complex *, integer *, complex *, complex *, integer *),
-	     ctzt01_(integer *, integer *, complex *, complex *, integer *, 
-	    complex *, complex *, integer *), ctzt02_(integer *, integer *, 
-	    complex *, integer *, complex *, complex *, integer *);
     integer nerrs, lwork;
-    extern /* Subroutine */ int cgeqr2_(integer *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), claset_(char *, 
-	    integer *, integer *, complex *, complex *, complex *, integer *), alasum_(char *, integer *, integer *, integer *, integer 
-	    *), clatms_(integer *, integer *, char *, integer *, char 
-	    *, real *, integer *, real *, real *, integer *, integer *, char *
-, complex *, integer *, complex *, integer *), slaord_(char *, integer *, real *, integer *), 
-	    cerrtz_(char *, integer *), ctzrqf_(integer *, integer *, 
-	    complex *, integer *, complex *, integer *);
     real result[6];
-    extern /* Subroutine */ int ctzrzf_(integer *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___21 = { 0, 0, 0, fmt_9999, 0 };

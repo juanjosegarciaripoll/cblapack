@@ -29,15 +29,7 @@ static real c_b18 = 1.f;
     /* Local variables */
     integer i__, j, k;
     real t, eps;
-    extern doublereal sdot_(integer *, real *, integer *, real *, integer *);
-    extern /* Subroutine */ int ssyr_(char *, integer *, real *, real *, 
-	    integer *, real *, integer *);
-    extern /* Subroutine */ int sscal_(integer *, real *, real *, integer *);
     real anorm;
-    extern /* Subroutine */ int strmv_(char *, char *, char *, integer *, 
-	    real *, integer *, real *, integer *);
-    extern doublereal slamch_(char *), slansy_(char *, char *, 
-	    integer *, real *, integer *, real *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

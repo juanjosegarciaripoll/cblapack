@@ -63,46 +63,12 @@ static integer c__3 = 3;
     integer kval[4];
     char dist[1], type__[1];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer nfail, iseed[4];
-    extern /* Subroutine */ int zget02_(char *, integer *, integer *, integer 
-	    *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublereal *, doublereal *);
     doublereal anorm;
     integer minmn, nerrs;
-    extern /* Subroutine */ int zlqt01_(integer *, integer *, doublecomplex *, 
-	     doublecomplex *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublereal *, 
-	    doublereal *), zlqt02_(integer *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, doublecomplex *
-, integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *);
     integer lwork;
-    extern /* Subroutine */ int zlqt03_(integer *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, doublecomplex *
-, integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *), zlatb4_(char *, integer *, integer *, 
-	     integer *, char *, integer *, integer *, doublereal *, integer *, 
-	     doublereal *, char *), alaerh_(char *, 
-	    char *, integer *, integer *, char *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *), alasum_(char *, integer *, 
-	    integer *, integer *, integer *);
     doublereal cndnum;
-    extern logical zgennd_(integer *, integer *, doublecomplex *, integer *);
-    extern /* Subroutine */ int xlaenv_(integer *, integer *), zlacpy_(char *, 
-	     integer *, integer *, doublecomplex *, integer *, doublecomplex *
-, integer *), zlarhs_(char *, char *, char *, char *, 
-	    integer *, integer *, integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, integer *, integer *), zgelqs_(integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, integer *), zlatms_(
-	    integer *, integer *, char *, integer *, char *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *, integer *, char 
-	    *, doublecomplex *, integer *, doublecomplex *, integer *);
     doublereal result[8];
-    extern /* Subroutine */ int zerrlq_(char *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___33 = { 0, 0, 0, fmt_9999, 0 };

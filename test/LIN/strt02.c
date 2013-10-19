@@ -30,15 +30,7 @@ static real c_b10 = -1.f;
     integer j;
     real eps;
     real anorm, bnorm;
-    extern doublereal sasum_(integer *, real *, integer *);
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *);
     real xnorm;
-    extern /* Subroutine */ int saxpy_(integer *, real *, real *, integer *, 
-	    real *, integer *), strmv_(char *, char *, char *, integer *, 
-	    real *, integer *, real *, integer *);
-    extern doublereal slamch_(char *), slantr_(char *, char *, char *, 
-	     integer *, integer *, real *, integer *, real *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

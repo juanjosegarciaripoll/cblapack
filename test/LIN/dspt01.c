@@ -30,16 +30,6 @@ static doublereal c_b6 = 1.;
     doublereal eps;
     integer info;
     doublereal anorm;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dlaset_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *);
-    extern doublereal dlansp_(char *, char *, integer *, doublereal *, 
-	    doublereal *);
-    extern /* Subroutine */ int dlavsp_(char *, char *, char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *);
-    extern doublereal dlansy_(char *, char *, integer *, doublereal *, 
-	    integer *, doublereal *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

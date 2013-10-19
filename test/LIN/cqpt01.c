@@ -30,16 +30,7 @@ doublereal cqpt01_(integer *m, integer *n, integer *k, complex *a, complex *
     /* Local variables */
     integer i__, j, info;
     real norma;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *), caxpy_(integer *, complex *, complex *, 
-	    integer *, complex *, integer *);
     real rwork[1];
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *), slamch_(char *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), cunmqr_(
-	    char *, char *, integer *, integer *, integer *, complex *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */
@@ -134,7 +125,7 @@ doublereal cqpt01_(integer *m, integer *n, integer *k, complex *a, complex *
 /*     Test if there is enough workspace */
 
     if (*lwork < *m * *n + *n) {
-	xerbla_("CQPT01", &c__10);
+	this_xerbla_("CQPT01", &c__10);
 	return ret_val;
     }
 

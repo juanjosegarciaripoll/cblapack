@@ -44,9 +44,6 @@ static doublecomplex c_b6 = {0.,0.};
     char c2[2];
     integer ti, tm;
     doublecomplex tmp;
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int zlaset_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK auxiliary test routine (version 3.0) -- */
@@ -167,7 +164,7 @@ static doublecomplex c_b6 = {0.,0.};
     }
     if (*info < 0) {
 	i__1 = -(*info);
-	xerbla_("ZLAHILB", &i__1);
+	this_xerbla_("ZLAHILB", &i__1);
 	return 0;
     }
     if (*n > 6) {

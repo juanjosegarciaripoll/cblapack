@@ -29,12 +29,6 @@ static doublecomplex c_b1 = {0.,0.};
     /* Local variables */
     integer i__;
     doublereal eps, anorm;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
-    extern doublereal dlamch_(char *), zlange_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublereal *);
     doublereal ainvnm;
 
 

@@ -79,59 +79,20 @@ static integer c__9 = 9;
     integer irhs, nrhs;
     char norm[1], uplo[1];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer idiag;
-    extern /* Subroutine */ int cget04_(integer *, integer *, complex *, 
-	    integer *, complex *, integer *, real *, real *);
     real scale;
     integer nfail, iseed[4];
     real rcond;
-    extern /* Subroutine */ int ctpt01_(char *, char *, integer *, complex *, 
-	    complex *, real *, real *, real *);
     real anorm;
     integer itran;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *), ctpt02_(char *, char *, char *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, real *, real *), ctpt03_(char *
-, char *, char *, integer *, integer *, complex *, real *, real *, 
-	     real *, complex *, integer *, complex *, integer *, complex *, 
-	    real *), ctpt05_(char *, char *, char *, 
-	    integer *, integer *, complex *, complex *, integer *, complex *, 
-	    integer *, complex *, integer *, real *, real *, real *), ctpt06_(real *, real *, char *, char *, integer *
-, complex *, real *, real *);
     char trans[1];
     integer iuplo, nerrs;
     char xtype[1];
-    extern /* Subroutine */ int alaerh_(char *, char *, integer *, integer *, 
-	    char *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *);
     real rcondc;
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), clarhs_(char *, char 
-	    *, char *, char *, integer *, integer *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, complex *, 
-	    integer *, integer *, integer *);
     real rcondi;
-    extern doublereal clantp_(char *, char *, char *, integer *, complex *, 
-	    real *);
-    extern /* Subroutine */ int alasum_(char *, integer *, integer *, integer 
-	    *, integer *);
     real rcondo;
-    extern /* Subroutine */ int clatps_(char *, char *, char *, char *, 
-	    integer *, complex *, complex *, real *, real *, integer *), clattp_(integer *, char *, char *
-, char *, integer *, integer *, complex *, complex *, complex *, 
-	    real *, integer *);
     real ainvnm;
-    extern /* Subroutine */ int ctpcon_(char *, char *, char *, integer *, 
-	    complex *, real *, complex *, real *, integer *), cerrtr_(char *, integer *), ctprfs_(char *, char 
-	    *, char *, integer *, integer *, complex *, complex *, integer *, 
-	    complex *, integer *, real *, real *, complex *, real *, integer *
-), ctptri_(char *, char *, integer *, 
-	    complex *, integer *);
     real result[9];
-    extern /* Subroutine */ int ctptrs_(char *, char *, char *, integer *, 
-	    integer *, complex *, complex *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___26 = { 0, 0, 0, fmt_9999, 0 };

@@ -42,12 +42,6 @@ static integer c__2 = 2;
     real a[16]	/* was [4][4] */;
     integer i__, j, piv[4], info;
     real work[8];
-    extern /* Subroutine */ int spstf2_(char *, integer *, real *, integer *, 
-	    integer *, integer *, real *, real *, integer *), alaesm_(
-	    char *, logical *, integer *), chkxer_(char *, integer *, 
-	    integer *, logical *, logical *), spstrf_(char *, integer 
-	    *, real *, integer *, integer *, integer *, real *, real *, 
-	    integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

@@ -30,17 +30,8 @@ static integer c__0 = 0;
     /* Local variables */
     integer j, info;
     doublereal dummy[1];
-    extern /* Subroutine */ int dlabad_(doublereal *, doublereal *);
-    extern doublereal dlamch_(char *), zlange_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublereal *);
     doublereal bignum;
-    extern /* Subroutine */ int zlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublecomplex *, 
-	     integer *, integer *);
-    extern doublereal dzasum_(integer *, doublecomplex *, integer *);
     doublereal smlnum;
-    extern /* Subroutine */ int zlarnv_(integer *, integer *, integer *, 
-	    doublecomplex *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

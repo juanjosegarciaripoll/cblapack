@@ -47,30 +47,6 @@ static doublereal c_b152 = -1.;
     doublereal r1[4], r2[4], af[16]	/* was [4][4] */;
     integer ip[4], iw[4], info;
     doublereal anrm, rcond;
-    extern /* Subroutine */ int dsytf2_(char *, integer *, doublereal *, 
-	    integer *, integer *, integer *), alaesm_(char *, logical 
-	    *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), dspcon_(char *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, doublereal *, integer *, 
-	    integer *), dsycon_(char *, integer *, doublereal *, 
-	    integer *, integer *, doublereal *, doublereal *, doublereal *, 
-	    integer *, integer *), dsprfs_(char *, integer *, integer 
-	    *, doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	     doublereal *, integer *, doublereal *, doublereal *, doublereal *
-, integer *, integer *), dsptrf_(char *, integer *, 
-	    doublereal *, integer *, integer *), dsptri_(char *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *), dsyrfs_(char *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *, integer *), dsytrf_(char *, 
-	    integer *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, integer *), dsytri_(char *, integer *, 
-	    doublereal *, integer *, integer *, doublereal *, integer *), dsptrs_(char *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, integer *), dsytrs_(
-	    char *, integer *, integer *, doublereal *, integer *, integer *, 
-	    doublereal *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

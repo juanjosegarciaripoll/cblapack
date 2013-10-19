@@ -47,24 +47,8 @@ static doublecomplex c_b21 = {1.,0.};
     char side[1];
     integer info, iside;
     doublereal resid, cnorm;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *);
     char trans[1];
-    extern doublereal dlamch_(char *), zlange_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublereal *);
     integer itrans;
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), 
-	    zlaset_(char *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, integer *), zlarnv_(
-	    integer *, integer *, integer *, doublecomplex *), zunglq_(
-	    integer *, integer *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, integer *), zunmlq_(
-	    char *, char *, integer *, integer *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

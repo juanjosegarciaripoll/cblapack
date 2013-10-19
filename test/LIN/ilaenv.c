@@ -35,7 +35,6 @@ integer ilaenv_(integer *ispec, char *name__, char *opts, integer *n1,
     integer ret_val;
 
     /* Local variables */
-    extern integer ieeeck_(integer *, real *, real *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.1) -- */

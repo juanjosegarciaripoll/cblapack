@@ -47,23 +47,6 @@ static integer c__2 = 2;
     integer i__, j;
     doublecomplex w[2], x[2], af[4]	/* was [2][2] */;
     integer info;
-    extern /* Subroutine */ int zgeqr2_(integer *, integer *, doublecomplex *, 
-	     integer *, doublecomplex *, doublecomplex *, integer *), zung2r_(
-	    integer *, integer *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *), zunm2r_(char *, 
-	    char *, integer *, integer *, integer *, doublecomplex *, integer 
-	    *, doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *), alaesm_(char *, logical *, integer *), chkxer_(char *, integer *, integer *, logical *, logical 
-	    *), zgeqrf_(integer *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, integer *)
-	    , zgeqrs_(integer *, integer *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, integer *), zungqr_(integer *, 
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     doublecomplex *, integer *, integer *), zunmqr_(char *, char *, 
-	    integer *, integer *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

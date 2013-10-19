@@ -30,12 +30,7 @@ static integer c__1 = 1;
     doublereal eps;
     doublereal anorm;
     logical unitd;
-    extern /* Subroutine */ int ztpmv_(char *, char *, char *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
     doublereal ainvnm;
-    extern doublereal zlantp_(char *, char *, char *, integer *, 
-	    doublecomplex *, doublereal *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

@@ -54,48 +54,8 @@ static integer c__5 = 5;
     real err_bnds_n__[12]	/* was [4][3] */, berr;
     integer info;
     real anrm, ccond, rcond;
-    extern /* Subroutine */ int sgbtf2_(integer *, integer *, integer *, 
-	    integer *, real *, integer *, integer *, integer *), sgetf2_(
-	    integer *, integer *, real *, integer *, integer *, integer *), 
-	    alaesm_(char *, logical *, integer *), sgbcon_(char *, 
-	    integer *, integer *, integer *, real *, integer *, integer *, 
-	    real *, real *, real *, integer *, integer *), sgecon_(
-	    char *, integer *, real *, integer *, real *, real *, real *, 
-	    integer *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
     real params[1];
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), sgbequ_(integer *, integer *, integer *, 
-	    integer *, real *, integer *, real *, real *, real *, real *, 
-	    real *, integer *), sgbrfs_(char *, integer *, integer *, integer 
-	    *, integer *, real *, integer *, real *, integer *, integer *, 
-	    real *, integer *, real *, integer *, real *, real *, real *, 
-	    integer *, integer *), sgbtrf_(integer *, integer *, 
-	    integer *, integer *, real *, integer *, integer *, integer *), 
-	    sgeequ_(integer *, integer *, real *, integer *, real *, real *, 
-	    real *, real *, real *, integer *), sgerfs_(char *, integer *, 
-	    integer *, real *, integer *, real *, integer *, integer *, real *
-, integer *, real *, integer *, real *, real *, real *, integer *, 
-	     integer *), sgetrf_(integer *, integer *, real *, 
-	    integer *, integer *, integer *), sgetri_(integer *, real *, 
-	    integer *, integer *, real *, integer *, integer *), sgbtrs_(char 
-	    *, integer *, integer *, integer *, integer *, real *, integer *, 
-	    integer *, real *, integer *, integer *), sgetrs_(char *, 
-	    integer *, integer *, real *, integer *, integer *, real *, 
-	    integer *, integer *), sgbequb_(integer *, integer *, 
-	    integer *, integer *, real *, integer *, real *, real *, real *, 
-	    real *, real *, integer *), sgeequb_(integer *, integer *, real *, 
-	     integer *, real *, real *, real *, real *, real *, integer *);
     integer nparams;
-    extern /* Subroutine */ int sgbrfsx_(char *, char *, integer *, integer *, 
-	     integer *, integer *, real *, integer *, real *, integer *, 
-	    integer *, real *, real *, real *, integer *, real *, integer *, 
-	    real *, real *, integer *, real *, real *, integer *, real *, 
-	    real *, integer *, integer *), sgerfsx_(char *, 
-	    char *, integer *, integer *, real *, integer *, real *, integer *
-, integer *, real *, real *, real *, integer *, real *, integer *, 
-	     real *, real *, integer *, real *, real *, integer *, real *, 
-	    real *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

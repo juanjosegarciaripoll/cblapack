@@ -60,32 +60,8 @@ static integer c__3 = 3;
     integer mode, info;
     char path[3];
     integer ilow, nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer ihigh, nfail, iseed[4], imode, mnmin;
-    extern /* Subroutine */ int icopy_(integer *, integer *, integer *, 
-	    integer *, integer *);
     integer istep, nerrs, lwork;
-    extern doublereal zqpt01_(integer *, integer *, integer *, doublecomplex *
-, doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zqrt11_(integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), zqrt12_(integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *, doublecomplex *, integer *, doublereal *)
-	    ;
-    extern /* Subroutine */ int zgeqp3_(integer *, integer *, doublecomplex *, 
-	     integer *, integer *, doublecomplex *, doublecomplex *, integer *
-, doublereal *, integer *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dlaord_(char *, integer *, doublereal *, 
-	    integer *), alasum_(char *, integer *, integer *, integer 
-	    *, integer *), xlaenv_(integer *, integer *), zlacpy_(
-	    char *, integer *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zlaset_(char *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    integer *), zlatms_(integer *, integer *, char *, integer 
-	    *, char *, doublereal *, integer *, doublereal *, doublereal *, 
-	    integer *, integer *, char *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
     doublereal result[3];
 
     /* Fortran I/O blocks */

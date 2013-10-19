@@ -54,59 +54,6 @@ static integer c__4 = 4;
     char eq[1];
     integer ip[4], iw[4], info;
     doublereal rcond;
-    extern /* Subroutine */ int dgbsv_(integer *, integer *, integer *, 
-	    integer *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, integer *), dgesv_(integer *, integer *, doublereal *, 
-	    integer *, integer *, doublereal *, integer *, integer *), dpbsv_(
-	    char *, integer *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *, integer *), dgtsv_(integer *, 
-	    integer *, doublereal *, doublereal *, doublereal *, doublereal *, 
-	     integer *, integer *), dposv_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, integer *), dppsv_(char *, integer *, integer *, doublereal *, 
-	    doublereal *, integer *, integer *), dspsv_(char *, 
-	    integer *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, integer *), dptsv_(integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *, integer *), 
-	    dsysv_(char *, integer *, integer *, doublereal *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), dgbsvx_(char *, char *, integer *, integer 
-	    *, integer *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, integer *, char *, doublereal *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, integer *, integer *), dgesvx_(char *, char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *, char *, doublereal *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, integer *, integer *), dpbsvx_(char *, char *, integer *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, char *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, integer *, 
-	     integer *), dgtsvx_(char *, char *, 
-	    integer *, integer *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, integer *, 
-	     doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, integer *, integer *), dposvx_(char *, char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, char *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, integer *, 
-	     integer *), dppsvx_(char *, char *, 
-	    integer *, integer *, doublereal *, doublereal *, char *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, integer *, 
-	     integer *), dspsvx_(char *, char *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, integer *, integer *), dptsvx_(char *, integer *, integer *, doublereal 
-	    *, doublereal *, doublereal *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, integer *), dsysvx_(char *, 
-	    char *, integer *, integer *, doublereal *, integer *, doublereal 
-	    *, integer *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, doublereal *, doublereal *, 
-	     integer *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

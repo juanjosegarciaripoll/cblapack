@@ -57,24 +57,8 @@ static integer c__1 = 1;
     integer mode, info;
     char path[3];
     integer ilow, nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer ihigh, nfail, iseed[4], imode;
-    extern doublereal cqpt01_(integer *, integer *, integer *, complex *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *),
-	     cqrt11_(integer *, integer *, complex *, integer *, complex *, 
-	    complex *, integer *), cqrt12_(integer *, integer *, complex *, 
-	    integer *, real *, complex *, integer *, real *);
     integer mnmin, istep, nerrs, lwork;
-    extern /* Subroutine */ int cgeqpf_(integer *, integer *, complex *, 
-	    integer *, integer *, complex *, complex *, real *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), claset_(char *, 
-	    integer *, integer *, complex *, complex *, complex *, integer *), alasum_(char *, integer *, integer *, integer *, integer 
-	    *), clatms_(integer *, integer *, char *, integer *, char 
-	    *, real *, integer *, real *, real *, integer *, integer *, char *
-, complex *, integer *, complex *, integer *), slaord_(char *, integer *, real *, integer *), 
-	    cerrqp_(char *, integer *);
     real result[3];
 
     /* Fortran I/O blocks */

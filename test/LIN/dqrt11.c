@@ -28,14 +28,6 @@ doublereal dqrt11_(integer *m, integer *k, doublereal *a, integer *lda,
 
     /* Local variables */
     integer j, info;
-    extern /* Subroutine */ int dorm2r_(char *, char *, integer *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *);
-    extern doublereal dlamch_(char *), dlange_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *);
-    extern /* Subroutine */ int dlaset_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *), 
-	    xerbla_(char *, integer *);
     doublereal rdummy[1];
 
 
@@ -118,7 +110,7 @@ doublereal dqrt11_(integer *m, integer *k, doublereal *a, integer *lda,
 /*     Test for sufficient workspace */
 
     if (*lwork < *m * *m + *m) {
-	xerbla_("DQRT11", &c__7);
+	this_xerbla_("DQRT11", &c__7);
 	return ret_val;
     }
 

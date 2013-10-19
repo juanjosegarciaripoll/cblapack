@@ -60,27 +60,11 @@ static integer c__1 = 1;
     integer mode, imat, info, rank;
     char path[3], dist[1], uplo[1], type__[1];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer nfail, iseed[4], irank, nimat;
     real anorm;
     integer iuplo, izero, nerrs;
-    extern /* Subroutine */ int spst01_(char *, integer *, real *, integer *, 
-	    real *, integer *, real *, integer *, integer *, real *, real *, 
-	    integer *), slatb5_(char *, integer *, integer *, char *, 
-	    integer *, integer *, real *, integer *, real *, char *), alaerh_(char *, char *, integer *, integer *, 
-	    char *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *), alasum_(char *, integer *, integer *, integer *, integer 
-	    *);
     real cndnum;
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *), xlaenv_(integer *, integer 
-	    *), slatmt_(integer *, integer *, char *, integer *, char *, real 
-	    *, integer *, real *, real *, integer *, integer *, integer *, 
-	    char *, real *, integer *, real *, integer *);
     real result;
-    extern /* Subroutine */ int serrps_(char *, integer *), spstrf_(
-	    char *, integer *, real *, integer *, integer *, integer *, real *
-, real *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___33 = { 0, 0, 0, fmt_9999, 0 };

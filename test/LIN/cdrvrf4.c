@@ -65,23 +65,13 @@ static integer c__1 = 1;
     integer nrun;
     real alpha;
     integer nfail, iseed[4];
-    extern /* Subroutine */ int cherk_(char *, char *, integer *, integer *, 
-	    real *, complex *, integer *, real *, complex *, integer *), chfrk_(char *, char *, char *, integer *, 
-	    integer *, real *, complex *, integer *, real *, complex *);
     char cform[1];
     integer iform;
     real norma, normc;
     char trans[1];
     integer iuplo;
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *);
     integer ialpha;
-    extern /* Complex */ void clarnd_(complex *, integer *, integer *);
-    extern doublereal slamch_(char *), slarnd_(integer *, integer *);
     integer itrans;
-    extern /* Subroutine */ int ctfttr_(char *, char *, integer *, complex *, 
-	    complex *, integer *, integer *), ctrttf_(char *, 
-	    char *, integer *, complex *, integer *, complex *, integer *);
     real result[1];
 
     /* Fortran I/O blocks */

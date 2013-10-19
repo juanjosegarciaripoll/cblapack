@@ -29,13 +29,7 @@ static real c_b15 = 0.f;
     integer i__, j, jj;
     real eps;
     real anorm;
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), sspmv_(char *, integer *, real *, real *, real *, 
-	    integer *, real *, real *, integer *);
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
     real ainvnm;
-    extern doublereal slansp_(char *, char *, integer *, real *, real *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

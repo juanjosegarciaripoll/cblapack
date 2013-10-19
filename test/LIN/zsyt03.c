@@ -31,14 +31,7 @@ static doublecomplex c_b1 = {0.,0.};
     integer i__, j;
     doublereal eps;
     doublereal anorm;
-    extern /* Subroutine */ int zsymm_(char *, char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *);
-    extern doublereal dlamch_(char *), zlange_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublereal *);
     doublereal ainvnm;
-    extern doublereal zlansy_(char *, char *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

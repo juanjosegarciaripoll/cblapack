@@ -57,35 +57,10 @@ static integer c__1 = 1;
     integer mode, info;
     char path[3];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer nfail, iseed[4], imode;
-    extern doublereal dqrt12_(integer *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *);
     integer mnmin;
-    extern doublereal drzt01_(integer *, integer *, doublereal *, doublereal *
-, integer *, doublereal *, doublereal *, integer *), drzt02_(
-	    integer *, integer *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *), dtzt01_(integer *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *, 
-	     integer *), dtzt02_(integer *, integer *, doublereal *, integer *
-, doublereal *, doublereal *, integer *);
     integer nerrs, lwork;
-    extern /* Subroutine */ int dgeqr2_(integer *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dlaord_(char *, integer *, doublereal *, 
-	    integer *), dlacpy_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *), 
-	    dlaset_(char *, integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *), alasum_(char *, integer *, 
-	    integer *, integer *, integer *), dlatms_(integer *, 
-	    integer *, char *, integer *, char *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, char *, 
-	    doublereal *, integer *, doublereal *, integer *), derrtz_(char *, integer *), dtzrqf_(integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *);
     doublereal result[6];
-    extern /* Subroutine */ int dtzrzf_(integer *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___21 = { 0, 0, 0, fmt_9999, 0 };

@@ -31,30 +31,8 @@ doublereal zqrt12_(integer *m, integer *n, doublecomplex *a, integer *lda,
     /* Local variables */
     integer i__, j, mn, iscl, info;
     doublereal anrm;
-    extern doublereal dnrm2_(integer *, doublereal *, integer *), dasum_(
-	    integer *, doublereal *, integer *);
-    extern /* Subroutine */ int daxpy_(integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *);
     doublereal dummy[1];
-    extern /* Subroutine */ int zgebd2_(integer *, integer *, doublecomplex *, 
-	     integer *, doublereal *, doublereal *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, integer *), dlabad_(doublereal *
-, doublereal *);
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublereal *, 
-	    integer *, integer *), xerbla_(char *, integer *),
-	     dbdsqr_(char *, integer *, integer *, integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *, doublereal *, 
-	     integer *, doublereal *, integer *, doublereal *, integer *);
-    extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
     doublereal bignum;
-    extern /* Subroutine */ int zlascl_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *, integer *, doublecomplex *, 
-	     integer *, integer *), zlaset_(char *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    integer *);
     doublereal smlnum, nrmsvl;
 
 
@@ -131,7 +109,7 @@ doublereal zqrt12_(integer *m, integer *n, doublecomplex *a, integer *lda,
 /*     Test that enough workspace is supplied */
 
     if (*lwork < *m * *n + (min(*m,*n) << 1) + max(*m,*n)) {
-	xerbla_("ZQRT12", &c__7);
+	this_xerbla_("ZQRT12", &c__7);
 	return ret_val;
     }
 

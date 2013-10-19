@@ -32,14 +32,6 @@ static complex c_b2 = {1.f,0.f};
     real eps;
     integer info;
     real anorm;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int claset_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *);
-    extern doublereal clansy_(char *, char *, integer *, complex *, integer *, 
-	     real *);
-    extern /* Subroutine */ int clavsy_(char *, char *, char *, integer *, 
-	    integer *, complex *, integer *, integer *, complex *, integer *, 
-	    integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

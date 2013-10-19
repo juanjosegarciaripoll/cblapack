@@ -46,23 +46,6 @@ static integer c__1 = 1;
     real r1[2], r2[2], cf[2], df[2], ef[2];
     integer ip[2], iw[2], info;
     real rcond, anorm;
-    extern /* Subroutine */ int alaesm_(char *, logical *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), sgtcon_(char *, integer *, real *, real *, 
-	    real *, real *, integer *, real *, real *, real *, integer *, 
-	    integer *), sptcon_(integer *, real *, real *, real *, 
-	    real *, real *, integer *), sgtrfs_(char *, integer *, integer *, 
-	    real *, real *, real *, real *, real *, real *, real *, integer *, 
-	     real *, integer *, real *, integer *, real *, real *, real *, 
-	    integer *, integer *), sgttrf_(integer *, real *, real *, 
-	    real *, real *, integer *, integer *), sptrfs_(integer *, integer 
-	    *, real *, real *, real *, real *, real *, integer *, real *, 
-	    integer *, real *, real *, real *, integer *), spttrf_(integer *, 
-	    real *, real *, integer *), sgttrs_(char *, integer *, integer *, 
-	    real *, real *, real *, real *, integer *, real *, integer *, 
-	    integer *), spttrs_(integer *, integer *, real *, real *, 
-	    real *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

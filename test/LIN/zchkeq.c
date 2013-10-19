@@ -55,19 +55,7 @@ static integer c__1 = 1;
     integer info;
     char path[3];
     doublereal norm, rpow[11], ccond, rcond, rcmin, rcmax, ratio;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int zgbequ_(integer *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublereal *, doublereal *, 
-	     doublereal *, doublereal *, doublereal *, integer *), zgeequ_(
-	    integer *, integer *, doublecomplex *, integer *, doublereal *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, integer *)
-	    , zpbequ_(char *, integer *, integer *, doublecomplex *, integer *
-, doublereal *, doublereal *, doublereal *, integer *);
     doublereal reslts[5];
-    extern /* Subroutine */ int zpoequ_(integer *, doublecomplex *, integer *, 
-	     doublereal *, doublereal *, doublereal *, integer *), zppequ_(
-	    char *, integer *, doublecomplex *, doublereal *, doublereal *, 
-	    doublereal *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___25 = { 0, 0, 0, 0, 0 };

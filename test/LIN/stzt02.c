@@ -29,11 +29,6 @@ doublereal stzt02_(integer *m, integer *n, real *af, integer *lda, real *tau,
     /* Local variables */
     integer i__;
     real rwork[1];
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), slaset_(
-	    char *, integer *, integer *, real *, real *, real *, integer *), slatzm_(char *, integer *, integer *, real *, integer *, 
-	    real *, real *, real *, integer *, real *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */
@@ -104,7 +99,7 @@ doublereal stzt02_(integer *m, integer *n, real *af, integer *lda, real *tau,
     ret_val = 0.f;
 
     if (*lwork < *n * *n + *n) {
-	xerbla_("STZT02", &c__7);
+	this_xerbla_("STZT02", &c__7);
 	return ret_val;
     }
 

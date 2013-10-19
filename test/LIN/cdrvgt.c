@@ -71,65 +71,21 @@ static complex c_b65 = {0.f,0.f};
     integer mode, koff, imat, info;
     char path[3], dist[1], type__[1];
     integer nrun, ifact;
-    extern /* Subroutine */ int cget04_(integer *, integer *, complex *, 
-	    integer *, complex *, integer *, real *, real *);
     integer nfail, iseed[4];
-    extern /* Subroutine */ int cgtt01_(integer *, complex *, complex *, 
-	    complex *, complex *, complex *, complex *, complex *, integer *, 
-	    complex *, integer *, real *, real *), cgtt02_(char *, integer *, 
-	    integer *, complex *, complex *, complex *, complex *, integer *, 
-	    complex *, integer *, real *, real *);
     real rcond;
-    extern /* Subroutine */ int cgtt05_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, complex *, integer *, complex *, integer 
-	    *, complex *, integer *, real *, real *, real *);
     integer nimat;
-    extern doublereal sget06_(real *, real *);
     real anorm;
     integer itran;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *), cgtsv_(integer *, integer *, complex *, 
-	    complex *, complex *, complex *, integer *, integer *);
     char trans[1];
     integer izero, nerrs;
     logical zerot;
-    extern /* Subroutine */ int clatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, real *, integer *, real *, char *
-), aladhd_(integer *, char *), 
-	    alaerh_(char *, char *, integer *, integer *, char *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *), clagtm_(char *, 
-	    integer *, integer *, real *, complex *, complex *, complex *, 
-	    complex *, integer *, real *, complex *, integer *);
     real rcondc;
-    extern doublereal clangt_(char *, integer *, complex *, complex *, 
-	    complex *);
-    extern /* Subroutine */ int csscal_(integer *, real *, complex *, integer 
-	    *), clacpy_(char *, integer *, integer *, complex *, integer *, 
-	    complex *, integer *), claset_(char *, integer *, integer 
-	    *, complex *, complex *, complex *, integer *);
     real rcondi;
-    extern /* Subroutine */ int alasvm_(char *, integer *, integer *, integer 
-	    *, integer *);
     real rcondo, anormi;
-    extern /* Subroutine */ int clarnv_(integer *, integer *, integer *, 
-	    complex *), clatms_(integer *, integer *, char *, integer *, char 
-	    *, real *, integer *, real *, real *, integer *, integer *, char *
-, complex *, integer *, complex *, integer *);
     real ainvnm;
-    extern /* Subroutine */ int cgttrf_(integer *, complex *, complex *, 
-	    complex *, complex *, integer *, integer *);
     logical trfcon;
     real anormo;
-    extern doublereal scasum_(integer *, complex *, integer *);
-    extern /* Subroutine */ int cgttrs_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, complex *, integer *, complex *, integer 
-	    *, integer *), cerrvx_(char *, integer *);
     real result[6];
-    extern /* Subroutine */ int cgtsvx_(char *, char *, integer *, integer *, 
-	    complex *, complex *, complex *, complex *, complex *, complex *, 
-	    complex *, integer *, complex *, integer *, complex *, integer *, 
-	    real *, real *, real *, complex *, real *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___42 = { 0, 0, 0, fmt_9999, 0 };

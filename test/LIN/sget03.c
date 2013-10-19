@@ -29,12 +29,7 @@ static real c_b8 = 0.f;
     /* Local variables */
     integer i__;
     real eps;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     real anorm;
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
     real ainvnm;
 
 

@@ -34,19 +34,11 @@ doublereal sqrt17_(char *trans, integer *iresid, integer *m, integer *n,
     /* Local variables */
     real err;
     integer iscl, info;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     real norma, normb;
     integer ncols;
     real normx, rwork[1];
     integer nrows;
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
     real bignum;
-    extern /* Subroutine */ int slascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, real *, integer *, integer *), slacpy_(char *, integer *, integer *, real *, integer *, 
-	    real *, integer *);
     real smlnum, normrs;
 
 
@@ -168,12 +160,12 @@ doublereal sqrt17_(char *trans, integer *iresid, integer *m, integer *n,
 	nrows = *n;
 	ncols = *m;
     } else {
-	xerbla_("SQRT17", &c__1);
+	this_xerbla_("SQRT17", &c__1);
 	return ret_val;
     }
 
     if (*lwork < ncols * *nrhs) {
-	xerbla_("SQRT17", &c__13);
+	this_xerbla_("SQRT17", &c__13);
 	return ret_val;
     }
 

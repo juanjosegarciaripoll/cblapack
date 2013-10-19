@@ -59,14 +59,6 @@ static integer c__8 = 8;
     real r__1, r__2, r__3;
 
     /* Local variables */
-    extern /* Subroutine */ int sposvxx_(char *, char *, integer *, integer *, 
-	     real *, integer *, real *, integer *, char *, real *, real *, 
-	    integer *, real *, integer *, real *, real *, real *, integer *, 
-	    real *, real *, integer *, real *, real *, integer *, integer *), ssysvxx_(char *, char *, integer *, 
-	    integer *, real *, integer *, real *, integer *, integer *, char *
-, real *, real *, integer *, real *, integer *, real *, real *, 
-	    real *, integer *, real *, real *, integer *, real *, real *, 
-	    integer *, integer *);
     real errbnd_c__[18], errbnd_n__[18], a[36]	/* was [6][6] */, b[36]	/* 
 	    was [6][6] */, c__[6];
     integer i__, j, k;
@@ -99,26 +91,10 @@ static integer c__8 = 8;
     integer iwork[6];
     real rnorm, normt, sumri;
     logical printed_guide__;
-    extern doublereal slamch_(char *);
     real abcopy[66]	/* was [11][6] */;
-    extern logical lsamen_(integer *, char *, char *);
     real params[2], orcond;
-    extern /* Subroutine */ int slacpy_(char *, integer *, integer *, real *, 
-	    integer *, real *, integer *);
     real rinorm, tstrat[6], rpvgrw;
-    extern /* Subroutine */ int slahilb_(integer *, integer *, real *, 
-	    integer *, real *, integer *, real *, integer *, real *, integer *
-);
     real invhilb[36]	/* was [6][6] */, normdif;
-    extern /* Subroutine */ int sgbsvxx_(char *, char *, integer *, integer *, 
-	     integer *, integer *, real *, integer *, real *, integer *, 
-	    integer *, char *, real *, real *, real *, integer *, real *, 
-	    integer *, real *, real *, real *, integer *, real *, real *, 
-	    integer *, real *, real *, integer *, integer *), sgesvxx_(char *, char *, integer *, integer *, real *, 
-	    integer *, real *, integer *, integer *, char *, real *, real *, 
-	    real *, integer *, real *, integer *, real *, real *, real *, 
-	    integer *, real *, real *, integer *, real *, real *, integer *, 
-	    integer *);
 
     /* Fortran I/O blocks */
     static cilist io___42 = { 0, 6, 0, fmt_8000, 0 };

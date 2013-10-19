@@ -48,25 +48,6 @@ static integer c__3 = 3;
     doublereal rw[2];
     integer info, irnk;
     doublereal rcond;
-    extern /* Subroutine */ int zgels_(char *, integer *, integer *, integer *
-, doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, integer *), alaesm_(char *, 
-	    logical *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), zgelsd_(integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *, integer *, doublecomplex *, integer *, 
-	     doublereal *, integer *, integer *), zgelss_(integer *, integer *
-, integer *, doublecomplex *, integer *, doublecomplex *, integer 
-	    *, doublereal *, doublereal *, integer *, doublecomplex *, 
-	    integer *, doublereal *, integer *), zgelsx_(integer *, integer *, 
-	     integer *, doublecomplex *, integer *, doublecomplex *, integer *
-, integer *, doublereal *, integer *, doublecomplex *, doublereal 
-	    *, integer *), zgelsy_(integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *, 
-	     doublereal *, integer *, doublecomplex *, integer *, doublereal *
-, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___3 = { 0, 0, 0, 0, 0 };

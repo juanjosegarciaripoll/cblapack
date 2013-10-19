@@ -32,9 +32,6 @@ static integer c__2 = 2;
     char c2[2];
     integer mat;
     static real eps, badc1, badc2, large, small;
-    extern /* Subroutine */ int slabad_(real *, real *);
-    extern doublereal slamch_(char *);
-    extern logical lsamen_(integer *, char *, char *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

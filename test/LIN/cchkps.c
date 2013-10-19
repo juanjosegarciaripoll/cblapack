@@ -60,25 +60,10 @@ static integer c__1 = 1;
     integer mode, imat, info, rank;
     char path[3], dist[1], uplo[1], type__[1];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *);
     integer nfail, iseed[4], irank, nimat;
-    extern /* Subroutine */ int cpst01_(char *, integer *, complex *, integer 
-	    *, complex *, integer *, complex *, integer *, integer *, real *, 
-	    real *, integer *);
     real anorm;
     integer iuplo, izero, nerrs;
-    extern /* Subroutine */ int clatb5_(char *, integer *, integer *, char *, 
-	    integer *, integer *, real *, integer *, real *, char *), alaerh_(char *, char *, integer *, integer *, 
-	    char *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *), clacpy_(char *, integer *, integer *, complex *, integer 
-	    *, complex *, integer *), alasum_(char *, integer *, 
-	    integer *, integer *, integer *);
     real cndnum;
-    extern /* Subroutine */ int clatmt_(integer *, integer *, char *, integer 
-	    *, char *, real *, integer *, real *, real *, integer *, integer *
-, integer *, char *, complex *, integer *, complex *, integer *), cerrps_(char *, integer *), 
-	    xlaenv_(integer *, integer *), cpstrf_(char *, integer *, complex 
-	    *, integer *, integer *, integer *, real *, real *, integer *);
     real result;
 
     /* Fortran I/O blocks */

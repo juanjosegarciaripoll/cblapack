@@ -69,24 +69,11 @@ static integer c__1 = 1;
     char cform[1];
     integer iform;
     doublereal norma, normc;
-    extern /* Subroutine */ int zherk_(char *, char *, integer *, integer *, 
-	    doublereal *, doublecomplex *, integer *, doublereal *, 
-	    doublecomplex *, integer *), zhfrk_(char *, char *
-, char *, integer *, integer *, doublereal *, doublecomplex *, 
-	    integer *, doublereal *, doublecomplex *);
     char trans[1];
     integer iuplo;
-    extern doublereal dlamch_(char *);
     integer ialpha;
-    extern doublereal dlarnd_(integer *, integer *), zlange_(char *, integer *
-, integer *, doublecomplex *, integer *, doublereal *);
-    extern /* Double Complex */ void zlarnd_(doublecomplex *, integer *, 
-	    integer *);
     integer itrans;
     doublereal result[1];
-    extern /* Subroutine */ int ztfttr_(char *, char *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, integer *), ztrttf_(char *, char *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___28 = { 0, 0, 0, 0, 0 };

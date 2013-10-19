@@ -31,8 +31,6 @@ static integer c__2 = 2;
     doublecomplex r__;
     integer n5, jj;
     doublereal beta, alpha, alpha3;
-    extern /* Double Complex */ void zlarnd_(doublecomplex *, integer *, 
-	    integer *);
 
 
 /*  -- LAPACK auxiliary test routine (version 3.1) -- */

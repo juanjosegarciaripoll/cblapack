@@ -31,11 +31,6 @@ static integer c__1 = 1;
     real eps;
     integer icol, jcol, kcol, nall;
     real anorm;
-    extern /* Complex */ void cdotu_(complex *, integer *, complex *, integer 
-	    *, complex *, integer *);
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *), slamch_(char *), clansp_(char 
-	    *, char *, integer *, complex *, real *);
     real ainvnm;
 
 

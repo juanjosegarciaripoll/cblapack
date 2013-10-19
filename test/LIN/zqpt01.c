@@ -30,15 +30,6 @@ doublereal zqpt01_(integer *m, integer *n, integer *k, doublecomplex *a,
     /* Local variables */
     integer i__, j, info;
     doublereal norma, rwork[1];
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
-    extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int zunmqr_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */
@@ -133,7 +124,7 @@ doublereal zqpt01_(integer *m, integer *n, integer *k, doublecomplex *a,
 /*     Test if there is enough workspace */
 
     if (*lwork < *m * *n + *n) {
-	xerbla_("ZQPT01", &c__10);
+	this_xerbla_("ZQPT01", &c__10);
 	return ret_val;
     }
 

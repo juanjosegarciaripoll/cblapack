@@ -56,25 +56,6 @@ static integer c__1 = 1;
     complex du2[2], dlf[2], duf[2];
     integer info;
     real rcond, anorm;
-    extern /* Subroutine */ int alaesm_(char *, logical *, integer *),
-	     cgtcon_(char *, integer *, complex *, complex *, complex *, 
-	    complex *, integer *, real *, real *, complex *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), cptcon_(integer *, real *, complex *, real 
-	    *, real *, real *, integer *), cgtrfs_(char *, integer *, integer 
-	    *, complex *, complex *, complex *, complex *, complex *, complex 
-	    *, complex *, integer *, complex *, integer *, complex *, integer 
-	    *, real *, real *, complex *, real *, integer *), cgttrf_(
-	    integer *, complex *, complex *, complex *, complex *, integer *, 
-	    integer *), cptrfs_(char *, integer *, integer *, real *, complex 
-	    *, real *, complex *, complex *, integer *, complex *, integer *, 
-	    real *, real *, complex *, real *, integer *), cpttrf_(
-	    integer *, real *, complex *, integer *), cgttrs_(char *, integer 
-	    *, integer *, complex *, complex *, complex *, complex *, integer 
-	    *, complex *, integer *, integer *), cpttrs_(char *, 
-	    integer *, integer *, real *, complex *, complex *, integer *, 
-	    integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

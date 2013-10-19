@@ -44,25 +44,6 @@ static doublereal c_b25 = 1.;
     integer info;
     doublereal resid, anorm;
     integer minmn;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), zherk_(char *, char *, integer *, 
-	    integer *, doublereal *, doublecomplex *, integer *, doublereal *, 
-	     doublecomplex *, integer *);
-    extern doublereal dlamch_(char *), zlange_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublereal *);
-    extern /* Subroutine */ int zgeqrf_(integer *, integer *, doublecomplex *, 
-	     integer *, doublecomplex *, doublecomplex *, integer *, integer *
-), zlacpy_(char *, integer *, integer *, doublecomplex *, integer 
-	    *, doublecomplex *, integer *), zlaset_(char *, integer *, 
-	     integer *, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    integer *);
-    extern doublereal zlansy_(char *, char *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int zungqr_(integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

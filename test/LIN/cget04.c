@@ -28,9 +28,7 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__, j, ix;
     real eps, xnorm;
-    extern integer icamax_(integer *, complex *, integer *);
     real diffnm;
-    extern doublereal slamch_(char *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

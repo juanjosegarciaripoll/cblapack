@@ -69,13 +69,6 @@ static integer c__1 = 1;
     integer iform;
     real norma;
     integer inorm, iuplo, nerrs;
-    extern doublereal clanhe_(char *, char *, integer *, complex *, integer *, 
-	     real *), clanhf_(char *, char *, char *, integer 
-	    *, complex *, real *);
-    extern /* Complex */ void clarnd_(complex *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int ctrttf_(char *, char *, integer *, complex *, 
-	    integer *, complex *, integer *);
     real result[1], normarf;
 
     /* Fortran I/O blocks */

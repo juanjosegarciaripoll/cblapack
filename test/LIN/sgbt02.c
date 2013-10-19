@@ -32,12 +32,7 @@ static real c_b10 = 1.f;
     integer j, i1, i2, n1, kd;
     real eps;
     real anorm, bnorm;
-    extern /* Subroutine */ int sgbmv_(char *, integer *, integer *, integer *
-, integer *, real *, real *, integer *, real *, integer *, real *, 
-	     real *, integer *);
-    extern doublereal sasum_(integer *, real *, integer *);
     real xnorm;
-    extern doublereal slamch_(char *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

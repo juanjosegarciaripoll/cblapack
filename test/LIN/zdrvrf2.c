@@ -61,17 +61,6 @@ static integer c__1 = 1;
     integer iform;
     logical lower;
     integer iuplo, nerrs;
-    extern /* Double Complex */ void zlarnd_(doublecomplex *, integer *, 
-	    integer *);
-    extern /* Subroutine */ int ztfttp_(char *, char *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *), 
-	    ztpttf_(char *, char *, integer *, doublecomplex *, doublecomplex 
-	    *, integer *), ztfttr_(char *, char *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, integer *), ztrttf_(char *, char *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *), ztrttp_(
-	    char *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *), ztpttr_(char *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___19 = { 0, 0, 0, 0, 0 };

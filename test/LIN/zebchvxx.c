@@ -61,19 +61,7 @@ static integer c__8 = 8;
     doublecomplex z__1, z__2, z__3;
 
     /* Local variables */
-    extern /* Subroutine */ int zposvxx_(char *, char *, integer *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *, char *, 
-	    doublereal *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublereal *, doublereal *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, 
-	    doublecomplex *, doublereal *, integer *);
     doublereal errbnd_c__[30];
-    extern /* Subroutine */ int zsysvxx_(char *, char *, integer *, integer *, 
-	     doublecomplex *, integer *, doublecomplex *, integer *, integer *
-, char *, doublereal *, doublecomplex *, integer *, doublecomplex 
-	    *, integer *, doublereal *, doublereal *, doublereal *, integer *, 
-	     doublereal *, doublereal *, integer *, doublereal *, 
-	    doublecomplex *, doublereal *, integer *);
     doublereal errbnd_n__[30];
     doublecomplex a[100]	/* was [10][10] */, b[100]	/* was [10][
 	    10] */;
@@ -113,37 +101,11 @@ static integer c__8 = 8;
     char nguar[3], trans[1];
     doublereal rnorm, normt, sumri, rwork[30];
     logical printed_guide__;
-    extern doublereal dlamch_(char *);
     doublecomplex abcopy[190]	/* was [19][10] */;
-    extern logical lsamen_(integer *, char *, char *);
     doublereal params[2], orcond;
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
     doublereal rinorm, tstrat[6], rpvgrw;
-    extern /* Subroutine */ int zlahilb_(integer *, integer *, doublecomplex *
-, integer *, doublecomplex *, integer *, doublecomplex *, integer 
-	    *, doublecomplex *, integer *, char *);
     doublecomplex invhilb[100]	/* was [10][10] */;
     doublereal normdif;
-    extern /* Subroutine */ int zgbsvxx_(char *, char *, integer *, integer *, 
-	     integer *, integer *, doublecomplex *, integer *, doublecomplex *
-, integer *, integer *, char *, doublereal *, doublereal *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *, doublereal *, 
-	     doublereal *, integer *, doublereal *, doublecomplex *, 
-	    doublereal *, integer *), zgesvxx_(char *, 
-	     char *, integer *, integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, integer *, char *, doublereal *, 
-	    doublereal *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublereal *, doublereal *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, 
-	    doublecomplex *, doublereal *, integer *),
-	     zhesvxx_(char *, char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, integer *, char *, 
-	    doublereal *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublereal *, doublereal *, doublereal *, integer *, 
-	    doublereal *, doublereal *, integer *, doublereal *, 
-	    doublecomplex *, doublereal *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___42 = { 0, 6, 0, fmt_8000, 0 };

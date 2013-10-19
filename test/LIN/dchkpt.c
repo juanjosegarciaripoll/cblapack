@@ -70,56 +70,15 @@ static integer c__7 = 7;
     integer irhs, nrhs;
     char type__[1];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *), dscal_(
-	    integer *, doublereal *, doublereal *, integer *), dget04_(
-	    integer *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *);
     integer nfail, iseed[4];
-    extern doublereal dget06_(doublereal *, doublereal *);
     doublereal rcond;
     integer nimat;
-    extern doublereal dasum_(integer *, doublereal *, integer *);
     doublereal anorm;
-    extern /* Subroutine */ int dptt01_(integer *, doublereal *, doublereal *, 
-	     doublereal *, doublereal *, doublereal *, doublereal *), dcopy_(
-	    integer *, doublereal *, integer *, doublereal *, integer *), 
-	    dptt02_(integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *), 
-	    dptt05_(integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, doublereal *);
     integer izero, nerrs;
     logical zerot;
-    extern /* Subroutine */ int dlatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, char *), alaerh_(char *, 
-	    char *, integer *, integer *, char *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *);
-    extern integer idamax_(integer *, doublereal *, integer *);
     doublereal rcondc;
-    extern /* Subroutine */ int dlacpy_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *), 
-	    dlaptm_(integer *, integer *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, integer *, doublereal *, doublereal *, 
-	     integer *), alasum_(char *, integer *, integer *, integer *, 
-	    integer *), dlatms_(integer *, integer *, char *, integer 
-	    *, char *, doublereal *, integer *, doublereal *, doublereal *, 
-	    integer *, integer *, char *, doublereal *, integer *, doublereal 
-	    *, integer *);
-    extern doublereal dlanst_(char *, integer *, doublereal *, doublereal *);
-    extern /* Subroutine */ int dlarnv_(integer *, integer *, integer *, 
-	    doublereal *), derrgt_(char *, integer *);
     doublereal ainvnm;
-    extern /* Subroutine */ int dptcon_(integer *, doublereal *, doublereal *, 
-	     doublereal *, doublereal *, doublereal *, integer *), dptrfs_(
-	    integer *, integer *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *), dpttrf_(
-	    integer *, doublereal *, doublereal *, integer *);
     doublereal result[7];
-    extern /* Subroutine */ int dpttrs_(integer *, integer *, doublereal *, 
-	    doublereal *, doublereal *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___29 = { 0, 0, 0, fmt_9999, 0 };

@@ -28,9 +28,6 @@ static doublereal c_b4 = 0.;
     /* Local variables */
     integer i__, j, m, r__, ti, tm;
     doublecomplex tmp;
-    extern /* Subroutine */ int dlaset_(char *, integer *, integer *, 
-	    doublereal *, doublecomplex *, doublereal *, integer *), 
-	    xerbla_(char *, integer *);
 
 
 /*  -- LAPACK auxiliary test routine (version 3.0) -- */
@@ -148,7 +145,7 @@ static doublereal c_b4 = 0.;
     }
     if (*info < 0) {
 	i__1 = -(*info);
-	xerbla_("DLAHILB", &i__1);
+	this_xerbla_("DLAHILB", &i__1);
 	return 0;
     }
     if (*n > 6) {

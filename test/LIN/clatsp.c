@@ -31,7 +31,6 @@ static integer c__2 = 2;
     complex r__;
     integer n5, jj;
     real beta, alpha, alpha3;
-    extern /* Complex */ void clarnd_(complex *, integer *, integer *);
 
 
 /*  -- LAPACK auxiliary test routine (version 3.1) -- */

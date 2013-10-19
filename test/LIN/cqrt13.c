@@ -30,16 +30,7 @@ static integer c__0 = 0;
     /* Local variables */
     integer j, info;
     real dummy[1];
-    extern /* Subroutine */ int slabad_(real *, real *);
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *);
-    extern /* Subroutine */ int clascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, complex *, integer *, integer *);
-    extern doublereal slamch_(char *);
     real bignum;
-    extern /* Subroutine */ int clarnv_(integer *, integer *, integer *, 
-	    complex *);
-    extern doublereal scasum_(integer *, complex *, integer *);
     real smlnum;
 
 

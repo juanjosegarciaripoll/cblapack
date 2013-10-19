@@ -31,16 +31,6 @@ static doublecomplex c_b2 = {1.,0.};
     doublereal eps;
     integer info;
     doublereal anorm;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int zlaset_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *);
-    extern doublereal zlansp_(char *, char *, integer *, doublecomplex *, 
-	    doublereal *);
-    extern /* Subroutine */ int zlavsp_(char *, char *, char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *, 
-	     integer *);
-    extern doublereal zlansy_(char *, char *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

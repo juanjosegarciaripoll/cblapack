@@ -69,12 +69,9 @@ static integer c__7 = 7;
     char ch__1[2];
 
     /* Local variables */
-    extern /* Subroutine */ int debchvxx_(doublereal *, char *);
     integer i__, k, n;
     doublereal *errbnds_c__, *errbnds_n__;
     integer k1, nb, in, kl, ku, nt, n_err_bnds__;
-    extern doublereal dla_rpvgrw__(integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *);
     integer lda;
     char fact[1];
     integer ioff, mode;
@@ -86,27 +83,13 @@ static integer c__7 = 7;
     doublereal rpvgrw_svxx__;
     char type__[1];
     integer nrun;
-    extern /* Subroutine */ int dget01_(integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, integer *, doublereal *, 
-	    doublereal *), dget02_(char *, integer *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *);
     integer ifact;
-    extern /* Subroutine */ int dget04_(integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, doublereal *);
     integer nfail, iseed[4], nfact;
-    extern doublereal dget06_(doublereal *, doublereal *);
-    extern /* Subroutine */ int dget07_(char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, doublereal *, logical *, 
-	    doublereal *, doublereal *);
     char equed[1];
     integer nbmin;
     doublereal rcond, roldc;
     integer nimat;
     doublereal roldi;
-    extern /* Subroutine */ int dgesv_(integer *, integer *, doublereal *, 
-	    integer *, integer *, doublereal *, integer *, integer *);
     doublereal anorm;
     integer itran;
     logical equil;
@@ -115,58 +98,15 @@ static integer c__7 = 7;
     integer izero, nerrs, lwork;
     logical zerot;
     char xtype[1];
-    extern /* Subroutine */ int dlatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, char *), aladhd_(integer *, 
-	    char *);
-    extern doublereal dlamch_(char *), dlange_(char *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *);
-    extern /* Subroutine */ int alaerh_(char *, char *, integer *, integer *, 
-	    char *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *), dlaqge_(integer *, integer *, doublereal *, integer *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, char *);
     logical prefac;
     doublereal colcnd, rcondc;
     logical nofact;
     integer iequed;
-    extern /* Subroutine */ int dgeequ_(integer *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, doublereal *, doublereal *, 
-	     doublereal *, integer *);
     doublereal rcondi;
-    extern /* Subroutine */ int dgetrf_(integer *, integer *, doublereal *, 
-	    integer *, integer *, integer *), dgetri_(integer *, doublereal *, 
-	     integer *, integer *, doublereal *, integer *, integer *), 
-	    dlacpy_(char *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *), alasvm_(char *, integer *, 
-	    integer *, integer *, integer *);
     doublereal cndnum, anormi, rcondo, ainvnm;
-    extern doublereal dlantr_(char *, char *, char *, integer *, integer *, 
-	    doublereal *, integer *, doublereal *);
-    extern /* Subroutine */ int dlarhs_(char *, char *, char *, char *, 
-	    integer *, integer *, integer *, integer *, integer *, doublereal 
-	    *, integer *, doublereal *, integer *, doublereal *, integer *, 
-	    integer *, integer *);
     logical trfcon;
     doublereal anormo, rowcnd;
-    extern /* Subroutine */ int dlaset_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, integer *), 
-	    dgesvx_(char *, char *, integer *, integer *, doublereal *, 
-	    integer *, doublereal *, integer *, integer *, char *, doublereal 
-	    *, doublereal *, doublereal *, integer *, doublereal *, integer *, 
-	     doublereal *, doublereal *, doublereal *, doublereal *, integer *
-, integer *), dlatms_(integer *, integer *
-, char *, integer *, char *, doublereal *, integer *, doublereal *
-, doublereal *, integer *, integer *, char *, doublereal *, 
-	    integer *, doublereal *, integer *), 
-	    xlaenv_(integer *, integer *), derrvx_(char *, integer *);
     doublereal result[7], rpvgrw;
-    extern /* Subroutine */ int dgesvxx_(char *, char *, integer *, integer *, 
-	     doublereal *, integer *, doublereal *, integer *, integer *, 
-	    char *, doublereal *, doublereal *, doublereal *, integer *, 
-	    doublereal *, integer *, doublereal *, doublereal *, doublereal *, 
-	     integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    doublereal *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___55 = { 0, 0, 0, fmt_9999, 0 };

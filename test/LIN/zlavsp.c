@@ -30,14 +30,6 @@ static integer c__1 = 1;
     integer j, k;
     doublecomplex t1, t2, d11, d12, d21, d22;
     integer kc, kp;
-    extern /* Subroutine */ int zscal_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *), zgemv_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *), 
-	    zgeru_(integer *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, integer *)
-	    , zswap_(integer *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *), xerbla_(char *, integer *);
     integer kcnext;
     logical nounit;
 
@@ -180,7 +172,7 @@ static integer c__1 = 1;
     }
     if (*info != 0) {
 	i__1 = -(*info);
-	xerbla_("ZLAVSP ", &i__1);
+	this_xerbla_("ZLAVSP ", &i__1);
 	return 0;
     }
 

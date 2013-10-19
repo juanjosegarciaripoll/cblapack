@@ -30,12 +30,7 @@ static integer c__1 = 1;
     /* Local variables */
     integer j;
     doublereal eps, anorm, bnorm;
-    extern /* Subroutine */ int zhemm_(char *, char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, integer *, doublecomplex *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *);
     doublereal xnorm;
-    extern doublereal dlamch_(char *), zlanhe_(char *, char *, 
-	    integer *, doublecomplex *, integer *, doublereal *), dzasum_(integer *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

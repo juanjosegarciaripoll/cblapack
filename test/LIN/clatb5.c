@@ -27,8 +27,6 @@
     /* Local variables */
     char c2[2];
     static real eps, badc1, badc2, large, small;
-    extern /* Subroutine */ int slabad_(real *, real *);
-    extern doublereal slamch_(char *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

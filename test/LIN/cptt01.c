@@ -25,7 +25,6 @@
     integer i__;
     complex de;
     real eps, anorm;
-    extern doublereal slamch_(char *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

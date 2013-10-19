@@ -23,11 +23,7 @@
 
     /* Local variables */
     real eps, rmin, rmax, anorm;
-    extern /* Subroutine */ int slabad_(real *, real *);
-    extern doublereal slamch_(char *);
     real bignum;
-    extern doublereal slantb_(char *, char *, char *, integer *, integer *, 
-	    real *, integer *, real *);
     real smlnum;
 
 

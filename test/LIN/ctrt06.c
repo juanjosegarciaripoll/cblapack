@@ -22,10 +22,7 @@
 
     /* Local variables */
     real eps, rmin, rmax, anorm;
-    extern doublereal slamch_(char *);
     real bignum;
-    extern doublereal clantr_(char *, char *, char *, integer *, integer *, 
-	    complex *, integer *, real *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

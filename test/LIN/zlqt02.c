@@ -43,23 +43,6 @@ static doublereal c_b23 = 1.;
     doublereal eps;
     integer info;
     doublereal resid, anorm;
-    extern /* Subroutine */ int zgemm_(char *, char *, integer *, integer *, 
-	    integer *, doublecomplex *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *), zherk_(char *, char *, integer *, 
-	    integer *, doublereal *, doublecomplex *, integer *, doublereal *, 
-	     doublecomplex *, integer *);
-    extern doublereal dlamch_(char *), zlange_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublereal *);
-    extern /* Subroutine */ int zlacpy_(char *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), 
-	    zlaset_(char *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *, integer *);
-    extern doublereal zlansy_(char *, char *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int zunglq_(integer *, integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, doublecomplex *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

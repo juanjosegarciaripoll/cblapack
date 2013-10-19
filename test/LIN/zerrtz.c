@@ -42,13 +42,6 @@ static integer c__1 = 1;
     char c2[2];
     doublecomplex tau[2];
     integer info;
-    extern /* Subroutine */ int alaesm_(char *, logical *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), ztzrqf_(integer *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *), ztzrzf_(
-	    integer *, integer *, doublecomplex *, integer *, doublecomplex *, 
-	     doublecomplex *, integer *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___4 = { 0, 0, 0, 0, 0 };

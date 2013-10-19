@@ -32,14 +32,6 @@ static integer c__1 = 1;
     integer j;
     doublereal eps;
     doublereal anorm, bnorm, xnorm;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int zlagtm_(char *, integer *, integer *, 
-	    doublereal *, doublecomplex *, doublecomplex *, doublecomplex *, 
-	    doublecomplex *, integer *, doublereal *, doublecomplex *, 
-	    integer *);
-    extern doublereal zlangt_(char *, integer *, doublecomplex *, 
-	    doublecomplex *, doublecomplex *), dzasum_(integer *, 
-	    doublecomplex *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

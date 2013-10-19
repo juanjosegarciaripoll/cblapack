@@ -45,30 +45,10 @@ static integer c_n1 = -1;
     doublereal tscal, anorm, bnorm, tleft;
     logical upper;
     doublereal tnorm;
-    extern /* Subroutine */ int zcopy_(integer *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *), zswap_(integer *, doublecomplex *, 
-	    integer *, doublecomplex *, integer *), zlatb4_(char *, integer *, 
-	     integer *, integer *, char *, integer *, integer *, doublereal *, 
-	     integer *, doublereal *, char *), 
-	    dlabad_(doublereal *, doublereal *);
-    extern doublereal dlamch_(char *), dlarnd_(integer *, integer *);
     char packit[1];
-    extern /* Subroutine */ int zdscal_(integer *, doublereal *, 
-	    doublecomplex *, integer *);
     doublereal bignum, cndnum;
-    extern /* Subroutine */ int dlarnv_(integer *, integer *, integer *, 
-	    doublereal *);
-    extern integer izamax_(integer *, doublecomplex *, integer *);
-    extern /* Double Complex */ void zlarnd_(doublecomplex *, integer *, 
-	    integer *);
     integer jcount;
-    extern /* Subroutine */ int zlatms_(integer *, integer *, char *, integer 
-	    *, char *, doublereal *, integer *, doublereal *, doublereal *, 
-	    integer *, integer *, char *, doublecomplex *, integer *, 
-	    doublecomplex *, integer *);
     doublereal smlnum;
-    extern /* Subroutine */ int zlarnv_(integer *, integer *, integer *, 
-	    doublecomplex *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

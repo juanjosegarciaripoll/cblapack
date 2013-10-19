@@ -48,14 +48,6 @@ static integer c__3 = 3;
     doublereal rw[6];
     doublecomplex tau[3];
     integer info;
-    extern /* Subroutine */ int zgeqp3_(integer *, integer *, doublecomplex *, 
-	     integer *, integer *, doublecomplex *, doublecomplex *, integer *
-, doublereal *, integer *), alaesm_(char *, logical *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), zgeqpf_(integer *, integer *, 
-	    doublecomplex *, integer *, integer *, doublecomplex *, 
-	    doublecomplex *, doublereal *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___4 = { 0, 0, 0, 0, 0 };

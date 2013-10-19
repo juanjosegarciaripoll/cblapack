@@ -63,52 +63,16 @@ static integer c__8 = 8;
     integer irhs, nrhs;
     char uplo[1], type__[1];
     integer nrun;
-    extern /* Subroutine */ int alahd_(integer *, char *), cget04_(
-	    integer *, integer *, complex *, integer *, complex *, integer *, 
-	    real *, real *);
     integer nfail, iseed[4];
     real rcond;
-    extern /* Subroutine */ int cppt01_(char *, integer *, complex *, complex 
-	    *, real *, real *);
     integer nimat;
-    extern doublereal sget06_(real *, real *);
-    extern /* Subroutine */ int cppt02_(char *, integer *, integer *, complex 
-	    *, complex *, integer *, complex *, integer *, real *, real *), cppt03_(char *, integer *, complex *, complex *, complex 
-	    *, integer *, real *, real *, real *);
     real anorm;
-    extern /* Subroutine */ int ccopy_(integer *, complex *, integer *, 
-	    complex *, integer *), cppt05_(char *, integer *, integer *, 
-	    complex *, complex *, integer *, complex *, integer *, complex *, 
-	    integer *, real *, real *, real *);
     integer iuplo, izero, nerrs;
     logical zerot;
     char xtype[1];
-    extern /* Subroutine */ int clatb4_(char *, integer *, integer *, integer 
-	    *, char *, integer *, integer *, real *, integer *, real *, char *
-), alaerh_(char *, char *, integer *, 
-	    integer *, char *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *), claipd_(integer *, complex *, integer *, integer 
-	    *);
-    extern doublereal clanhp_(char *, char *, integer *, complex *, real *);
     real rcondc;
     char packit[1];
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), clarhs_(char *, char 
-	    *, char *, char *, integer *, integer *, integer *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, complex *, 
-	    integer *, integer *, integer *), 
-	    alasum_(char *, integer *, integer *, integer *, integer *);
     real cndnum;
-    extern /* Subroutine */ int clatms_(integer *, integer *, char *, integer 
-	    *, char *, real *, integer *, real *, real *, integer *, integer *
-, char *, complex *, integer *, complex *, integer *), cppcon_(char *, integer *, complex *, real *, 
-	    real *, complex *, real *, integer *), cerrpo_(char *, 
-	    integer *), cpprfs_(char *, integer *, integer *, complex 
-	    *, complex *, complex *, integer *, complex *, integer *, real *, 
-	    real *, complex *, real *, integer *), cpptrf_(char *, 
-	    integer *, complex *, integer *), cpptri_(char *, integer 
-	    *, complex *, integer *), cpptrs_(char *, integer *, 
-	    integer *, complex *, complex *, integer *, integer *);
     real result[8];
 
     /* Fortran I/O blocks */

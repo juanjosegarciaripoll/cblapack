@@ -31,13 +31,7 @@ static integer c__1 = 1;
     doublereal eps;
     integer icol, jcol, kcol, nall;
     doublereal anorm;
-    extern /* Double Complex */ void zdotu_(doublecomplex *, integer *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern doublereal dlamch_(char *), zlange_(char *, integer *, 
-	    integer *, doublecomplex *, integer *, doublereal *);
     doublereal ainvnm;
-    extern doublereal zlansp_(char *, char *, integer *, doublecomplex *, 
-	    doublereal *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

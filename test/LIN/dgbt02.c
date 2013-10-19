@@ -31,12 +31,7 @@ static doublereal c_b10 = 1.;
     /* Local variables */
     integer j, i1, i2, n1, kd;
     doublereal eps;
-    extern /* Subroutine */ int dgbmv_(char *, integer *, integer *, integer *
-, integer *, doublereal *, doublereal *, integer *, doublereal *, 
-	    integer *, doublereal *, doublereal *, integer *);
-    extern doublereal dasum_(integer *, doublereal *, integer *);
     doublereal anorm, bnorm, xnorm;
-    extern doublereal dlamch_(char *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

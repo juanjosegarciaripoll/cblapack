@@ -110,114 +110,12 @@ static integer c__6 = 6;
     integer nbval[12], nrank, nmats, nsval[12], nxval[12], iwork[3300];
     real rwork[692];
     integer nbval2[12];
-    extern /* Subroutine */ int schkq3_(logical *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, real *, 
-	    real *, real *, real *, real *, real *, real *, integer *, 
-	    integer *), schkgb_(logical *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, real *, 
-	    logical *, real *, integer *, real *, integer *, real *, real *, 
-	    real *, real *, real *, integer *, integer *), schkge_(logical *, 
-	    integer *, integer *, integer *, integer *, integer *, integer *, 
-	    integer *, integer *, real *, logical *, integer *, real *, real *
-, real *, real *, real *, real *, real *, real *, integer *, 
-	    integer *), alareq_(char *, integer *, logical *, integer *, 
-	    integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int schkpb_(logical *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, real *, logical *, 
-	    integer *, real *, real *, real *, real *, real *, real *, real *, 
-	     real *, integer *, integer *);
-    extern doublereal second_(void);
-    extern /* Subroutine */ int schkeq_(real *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int schktb_(logical *, integer *, integer *, 
-	    integer *, integer *, real *, logical *, integer *, real *, real *
-, real *, real *, real *, real *, real *, integer *, integer *), 
-	    ilaver_(integer *, integer *, integer *), schkgt_(logical *, 
-	    integer *, integer *, integer *, integer *, real *, logical *, 
-	    real *, real *, real *, real *, real *, real *, real *, integer *, 
-	     integer *), schklq_(logical *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, real *, 
-	    logical *, integer *, real *, real *, real *, real *, real *, 
-	    real *, real *, real *, real *, real *, real *, integer *, 
-	    integer *), schkql_(logical *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, real *, 
-	    logical *, integer *, real *, real *, real *, real *, real *, 
-	    real *, real *, real *, real *, real *, real *, integer *, 
-	    integer *), schkpo_(logical *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, real *, logical *, integer *, 
-	    real *, real *, real *, real *, real *, real *, real *, real *, 
-	    integer *, integer *), schkpp_(logical *, integer *, integer *, 
-	    integer *, integer *, real *, logical *, integer *, real *, real *
-, real *, real *, real *, real *, real *, real *, integer *, 
-	    integer *), schkqp_(logical *, integer *, integer *, integer *, 
-	    integer *, real *, logical *, real *, real *, real *, real *, 
-	    real *, real *, integer *, integer *), schkps_(logical *, integer 
-	    *, integer *, integer *, integer *, integer *, integer *, real *, 
-	    logical *, integer *, real *, real *, real *, integer *, real *, 
-	    real *, integer *), schkpt_(logical *, integer *, integer *, 
-	    integer *, integer *, real *, logical *, real *, real *, real *, 
-	    real *, real *, real *, real *, real *, integer *);
     real thresh;
-    extern /* Subroutine */ int schkqr_(logical *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, integer *, 
-	    real *, logical *, integer *, real *, real *, real *, real *, 
-	    real *, real *, real *, real *, real *, real *, real *, integer *, 
-	     integer *), schkrq_(logical *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, real *, 
-	    logical *, integer *, real *, real *, real *, real *, real *, 
-	    real *, real *, real *, real *, real *, real *, integer *, 
-	    integer *);
     logical tstchk;
-    extern /* Subroutine */ int schksp_(logical *, integer *, integer *, 
-	    integer *, integer *, real *, logical *, integer *, real *, real *
-, real *, real *, real *, real *, real *, real *, integer *, 
-	    integer *), schktp_(logical *, integer *, integer *, integer *, 
-	    integer *, real *, logical *, integer *, real *, real *, real *, 
-	    real *, real *, real *, real *, integer *, integer *);
     logical dotype[30];
-    extern /* Subroutine */ int schksy_(logical *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, real *, logical *, 
-	    integer *, real *, real *, real *, real *, real *, real *, real *, 
-	     real *, integer *, integer *), schktr_(logical *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, real *, 
-	    logical *, integer *, real *, real *, real *, real *, real *, 
-	    real *, real *, integer *, integer *), schktz_(logical *, integer 
-	    *, integer *, integer *, integer *, real *, logical *, real *, 
-	    real *, real *, real *, real *, real *, integer *), sdrvgb_(
-	    logical *, integer *, integer *, integer *, real *, logical *, 
-	    real *, integer *, real *, integer *, real *, real *, real *, 
-	    real *, real *, real *, real *, real *, integer *, integer *), 
-	    sdrvge_(logical *, integer *, integer *, integer *, real *, 
-	    logical *, integer *, real *, real *, real *, real *, real *, 
-	    real *, real *, real *, real *, real *, integer *, integer *), 
-	    sdrvgt_(logical *, integer *, integer *, integer *, real *, 
-	    logical *, real *, real *, real *, real *, real *, real *, real *, 
-	     integer *, integer *), sdrvpb_(logical *, integer *, integer *, 
-	    integer *, real *, logical *, integer *, real *, real *, real *, 
-	    real *, real *, real *, real *, real *, real *, real *, integer *, 
-	     integer *), sdrvls_(logical *, integer *, integer *, integer *, 
-	    integer *, integer *, integer *, integer *, integer *, integer *, 
-	    real *, logical *, real *, real *, real *, real *, real *, real *, 
-	     real *, real *, integer *, integer *), sdrvpo_(logical *, 
-	    integer *, integer *, integer *, real *, logical *, integer *, 
-	    real *, real *, real *, real *, real *, real *, real *, real *, 
-	    real *, real *, integer *, integer *), sdrvpp_(logical *, integer 
-	    *, integer *, integer *, real *, logical *, integer *, real *, 
-	    real *, real *, real *, real *, real *, real *, real *, real *, 
-	    real *, integer *, integer *), sdrvsp_(logical *, integer *, 
-	    integer *, integer *, real *, logical *, integer *, real *, real *
-, real *, real *, real *, real *, real *, real *, integer *, 
-	    integer *);
     integer ntypes;
     logical tsterr;
-    extern /* Subroutine */ int sdrvpt_(logical *, integer *, integer *, 
-	    integer *, real *, logical *, real *, real *, real *, real *, 
-	    real *, real *, real *, real *, integer *);
     logical tstdrv;
-    extern /* Subroutine */ int sdrvsy_(logical *, integer *, integer *, 
-	    integer *, real *, logical *, integer *, real *, real *, real *, 
-	    real *, real *, real *, real *, real *, integer *, integer *);
     integer rankval[12];
 
     /* Fortran I/O blocks */

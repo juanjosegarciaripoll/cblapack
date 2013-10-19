@@ -29,9 +29,7 @@ static integer c__1 = 1;
     /* Local variables */
     integer i__, j, ix;
     doublereal eps, xnorm;
-    extern doublereal dlamch_(char *);
     doublereal diffnm;
-    extern integer izamax_(integer *, doublecomplex *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

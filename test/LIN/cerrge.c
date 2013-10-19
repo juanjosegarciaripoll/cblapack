@@ -54,35 +54,6 @@ static integer c__4 = 4;
     complex af[16]	/* was [4][4] */;
     integer ip[4], info;
     real anrm, ccond, rcond;
-    extern /* Subroutine */ int cgbtf2_(integer *, integer *, integer *, 
-	    integer *, complex *, integer *, integer *, integer *), cgetf2_(
-	    integer *, integer *, complex *, integer *, integer *, integer *),
-	     cgbcon_(char *, integer *, integer *, integer *, complex *, 
-	    integer *, integer *, real *, real *, complex *, real *, integer *
-), cgecon_(char *, integer *, complex *, integer *, real *
-, real *, complex *, real *, integer *), alaesm_(char *, 
-	    logical *, integer *), cgbequ_(integer *, integer *, 
-	    integer *, integer *, complex *, integer *, real *, real *, real *
-, real *, real *, integer *), cgbrfs_(char *, integer *, integer *
-, integer *, integer *, complex *, integer *, complex *, integer *
-, integer *, complex *, integer *, complex *, integer *, real *, 
-	    real *, complex *, real *, integer *), cgbtrf_(integer *, 
-	    integer *, integer *, integer *, complex *, integer *, integer *, 
-	    integer *), cgeequ_(integer *, integer *, complex *, integer *, 
-	    real *, real *, real *, real *, real *, integer *), cgerfs_(char *
-, integer *, integer *, complex *, integer *, complex *, integer *
-, integer *, complex *, integer *, complex *, integer *, real *, 
-	    real *, complex *, real *, integer *), cgetrf_(integer *, 
-	    integer *, complex *, integer *, integer *, integer *), cgetri_(
-	    integer *, complex *, integer *, integer *, complex *, integer *, 
-	    integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int cgbtrs_(char *, integer *, integer *, integer 
-	    *, integer *, complex *, integer *, integer *, complex *, integer 
-	    *, integer *), chkxer_(char *, integer *, integer *, 
-	    logical *, logical *), cgetrs_(char *, integer *, integer 
-	    *, complex *, integer *, integer *, complex *, integer *, integer 
-	    *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };

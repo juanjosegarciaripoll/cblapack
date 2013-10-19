@@ -30,14 +30,8 @@ static integer c__1 = 1;
     /* Local variables */
     integer j, n1, n2;
     real eps;
-    extern /* Subroutine */ int sgemm_(char *, char *, integer *, integer *, 
-	    integer *, real *, real *, integer *, real *, integer *, real *, 
-	    real *, integer *);
     real anorm, bnorm;
-    extern doublereal sasum_(integer *, real *, integer *);
     real xnorm;
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

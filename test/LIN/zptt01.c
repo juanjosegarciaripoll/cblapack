@@ -26,7 +26,6 @@
     integer i__;
     doublecomplex de;
     doublereal eps, anorm;
-    extern doublereal dlamch_(char *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

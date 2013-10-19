@@ -31,15 +31,6 @@ doublereal zrzt01_(integer *m, integer *n, doublecomplex *a, doublecomplex *
     /* Local variables */
     integer i__, j, info;
     doublereal norma, rwork[1];
-    extern /* Subroutine */ int zaxpy_(integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *);
-    extern doublereal dlamch_(char *);
-    extern doublereal zlange_(char *, integer *, integer *, doublecomplex *, 
-	    integer *, doublereal *);
-    extern /* Subroutine */ int zlaset_(char *, integer *, integer *, 
-	    doublecomplex *, doublecomplex *, doublecomplex *, integer *), zunmrz_(char *, char *, integer *, integer *, integer *, 
-	    integer *, doublecomplex *, integer *, doublecomplex *, 
-	    doublecomplex *, integer *, doublecomplex *, integer *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */
@@ -116,7 +107,7 @@ doublereal zrzt01_(integer *m, integer *n, doublecomplex *a, doublecomplex *
     ret_val = 0.;
 
     if (*lwork < *m * *n + *m) {
-	xerbla_("ZRZT01", &c__8);
+	this_xerbla_("ZRZT01", &c__8);
 	return ret_val;
     }
 

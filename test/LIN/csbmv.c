@@ -185,7 +185,7 @@
 	info = 11;
     }
     if (info != 0) {
-	xerbla_("CSBMV ", &info);
+	this_xerbla_("CSBMV ", &info);
 	return 0;
     }
 

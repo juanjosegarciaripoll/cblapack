@@ -30,14 +30,6 @@ doublereal srzt01_(integer *m, integer *n, real *a, real *af, integer *lda,
     /* Local variables */
     integer i__, j, info;
     real norma, rwork[1];
-    extern /* Subroutine */ int saxpy_(integer *, real *, real *, integer *, 
-	    real *, integer *);
-    extern doublereal slamch_(char *), slange_(char *, integer *, 
-	    integer *, real *, integer *, real *);
-    extern /* Subroutine */ int xerbla_(char *, integer *), slaset_(
-	    char *, integer *, integer *, real *, real *, real *, integer *), sormrz_(char *, char *, integer *, integer *, integer *, 
-	    integer *, real *, integer *, real *, real *, integer *, real *, 
-	    integer *, integer *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */
@@ -114,7 +106,7 @@ doublereal srzt01_(integer *m, integer *n, real *a, real *af, integer *lda,
     ret_val = 0.f;
 
     if (*lwork < *m * *n + *m) {
-	xerbla_("SRZT01", &c__8);
+	this_xerbla_("SRZT01", &c__8);
 	return ret_val;
     }
 

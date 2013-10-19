@@ -31,14 +31,7 @@ static integer c__1 = 1;
     /* Local variables */
     integer j;
     doublereal eps;
-    extern doublereal dasum_(integer *, doublereal *, integer *);
     doublereal anorm, bnorm, xnorm;
-    extern doublereal dlamch_(char *);
-    extern /* Subroutine */ int dlagtm_(char *, integer *, integer *, 
-	    doublereal *, doublereal *, doublereal *, doublereal *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *);
-    extern doublereal dlangt_(char *, integer *, doublereal *, doublereal *, 
-	    doublereal *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

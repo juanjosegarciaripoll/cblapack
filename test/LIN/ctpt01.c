@@ -29,10 +29,6 @@ static integer c__1 = 1;
     real eps;
     real anorm;
     logical unitd;
-    extern /* Subroutine */ int ctpmv_(char *, char *, char *, integer *, 
-	    complex *, complex *, integer *);
-    extern doublereal slamch_(char *), clantp_(char *, char *, char *, 
-	     integer *, complex *, real *);
     real ainvnm;
 
 

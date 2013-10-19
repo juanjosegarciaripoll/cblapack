@@ -35,21 +35,10 @@ doublereal cqrt17_(char *trans, integer *iresid, integer *m, integer *n,
     /* Local variables */
     real err;
     integer iscl, info;
-    extern /* Subroutine */ int cgemm_(char *, char *, integer *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, complex *, integer *);
     real norma, normb;
     integer ncols;
     real normx, rwork[1];
     integer nrows;
-    extern doublereal clange_(char *, integer *, integer *, complex *, 
-	    integer *, real *);
-    extern /* Subroutine */ int clascl_(char *, integer *, integer *, real *, 
-	    real *, integer *, integer *, complex *, integer *, integer *);
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int clacpy_(char *, integer *, integer *, complex 
-	    *, integer *, complex *, integer *), xerbla_(char *, 
-	    integer *);
     real bignum, smlnum, normrs;
 
 
@@ -171,12 +160,12 @@ doublereal cqrt17_(char *trans, integer *iresid, integer *m, integer *n,
 	nrows = *n;
 	ncols = *m;
     } else {
-	xerbla_("CQRT17", &c__1);
+	this_xerbla_("CQRT17", &c__1);
 	return ret_val;
     }
 
     if (*lwork < ncols * *nrhs) {
-	xerbla_("CQRT17", &c__13);
+	this_xerbla_("CQRT17", &c__13);
 	return ret_val;
     }
 

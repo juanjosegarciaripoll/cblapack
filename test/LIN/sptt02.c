@@ -29,12 +29,7 @@ static integer c__1 = 1;
     /* Local variables */
     integer j;
     real eps, anorm, bnorm;
-    extern doublereal sasum_(integer *, real *, integer *);
     real xnorm;
-    extern doublereal slamch_(char *);
-    extern /* Subroutine */ int slaptm_(integer *, integer *, real *, real *, 
-	    real *, real *, integer *, real *, real *, integer *);
-    extern doublereal slanst_(char *, integer *, real *, real *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

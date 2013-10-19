@@ -33,11 +33,6 @@ static real c_b12 = -1.f;
     real eps;
     integer lenj;
     real anorm;
-    extern doublereal sasum_(integer *, real *, integer *);
-    extern /* Subroutine */ int scopy_(integer *, real *, integer *, real *, 
-	    integer *), saxpy_(integer *, real *, real *, integer *, real *, 
-	    integer *);
-    extern doublereal slamch_(char *);
 
 
 /*  -- LAPACK test routine (version 3.1) -- */

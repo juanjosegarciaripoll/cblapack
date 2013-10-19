@@ -64,65 +64,7 @@ static integer c__4 = 4;
     integer ip[4];
     real rw[4];
     integer info;
-    extern /* Subroutine */ int cgbsv_(integer *, integer *, integer *, 
-	    integer *, complex *, integer *, integer *, complex *, integer *, 
-	    integer *);
     real rcond;
-    extern /* Subroutine */ int cgesv_(integer *, integer *, complex *, 
-	    integer *, integer *, complex *, integer *, integer *), chesv_(
-	    char *, integer *, integer *, complex *, integer *, integer *, 
-	    complex *, integer *, complex *, integer *, integer *), 
-	    cpbsv_(char *, integer *, integer *, integer *, complex *, 
-	    integer *, complex *, integer *, integer *), chpsv_(char *
-, integer *, integer *, complex *, integer *, complex *, integer *
-, integer *), cgtsv_(integer *, integer *, complex *, 
-	    complex *, complex *, complex *, integer *, integer *), cposv_(
-	    char *, integer *, integer *, complex *, integer *, complex *, 
-	    integer *, integer *), cppsv_(char *, integer *, integer *
-, complex *, complex *, integer *, integer *), cspsv_(
-	    char *, integer *, integer *, complex *, integer *, complex *, 
-	    integer *, integer *), cptsv_(integer *, integer *, real *
-, complex *, complex *, integer *, integer *), csysv_(char *, 
-	    integer *, integer *, complex *, integer *, integer *, complex *, 
-	    integer *, complex *, integer *, integer *);
-    extern logical lsamen_(integer *, char *, char *);
-    extern /* Subroutine */ int chkxer_(char *, integer *, integer *, logical 
-	    *, logical *), cgbsvx_(char *, char *, integer *, integer 
-	    *, integer *, integer *, complex *, integer *, complex *, integer 
-	    *, integer *, char *, real *, real *, complex *, integer *, 
-	    complex *, integer *, real *, real *, real *, complex *, real *, 
-	    integer *), cgesvx_(char *, char *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *, 
-	    integer *, char *, real *, real *, complex *, integer *, complex *
-, integer *, real *, real *, real *, complex *, real *, integer *), chesvx_(char *, char *, integer *, 
-	    integer *, complex *, integer *, complex *, integer *, integer *, 
-	    complex *, integer *, complex *, integer *, real *, real *, real *
-, complex *, integer *, real *, integer *), 
-	    cpbsvx_(char *, char *, integer *, integer *, integer *, complex *
-, integer *, complex *, integer *, char *, real *, complex *, 
-	    integer *, complex *, integer *, real *, real *, real *, complex *
-, real *, integer *), chpsvx_(char *, 
-	    char *, integer *, integer *, complex *, complex *, integer *, 
-	    complex *, integer *, complex *, integer *, real *, real *, real *
-, complex *, real *, integer *), cgtsvx_(char *, 
-	    char *, integer *, integer *, complex *, complex *, complex *, 
-	    complex *, complex *, complex *, complex *, integer *, complex *, 
-	    integer *, complex *, integer *, real *, real *, real *, complex *
-, real *, integer *), cposvx_(char *, char *, 
-	    integer *, integer *, complex *, integer *, complex *, integer *, 
-	    char *, real *, complex *, integer *, complex *, integer *, real *
-, real *, real *, complex *, real *, integer *), cppsvx_(char *, char *, integer *, integer *, complex *, 
-	    complex *, char *, real *, complex *, integer *, complex *, 
-	    integer *, real *, real *, real *, complex *, real *, integer *), cspsvx_(char *, char *, integer *, 
-	    integer *, complex *, complex *, integer *, complex *, integer *, 
-	    complex *, integer *, real *, real *, real *, complex *, real *, 
-	    integer *), cptsvx_(char *, integer *, integer *, 
-	    real *, complex *, real *, complex *, complex *, integer *, 
-	    complex *, integer *, real *, real *, real *, complex *, real *, 
-	    integer *), csysvx_(char *, char *, integer *, integer *, 
-	    complex *, integer *, complex *, integer *, integer *, complex *, 
-	    integer *, complex *, integer *, real *, real *, real *, complex *
-, integer *, real *, integer *);
 
     /* Fortran I/O blocks */
     static cilist io___1 = { 0, 0, 0, 0, 0 };
