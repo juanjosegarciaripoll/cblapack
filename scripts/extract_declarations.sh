@@ -1,10 +1,13 @@
 #!/bin/sh
 
 for i in $*; do
-  sed -n -e '/^\(\/\*[A-Za-z0-9 	]*\*\/[ 	]*\)*[a-z].*([^}]*$/,/^{$/ {
-		s/^\(\/\*[A-Za-z0-9 	]*\*\/[ 	]*\)*[a-z]/extern &/
+  echo "/* $i */"
+  sed -n -e '/^\(\/\*[A-Za-z0-9 	]*\*\/[ 	]*\)*[a-zA-Z].*([^}]*$/,/^{$/ {
+		s/\/\* Subroutine \*\/ int /F2CSUB /g
+		s/\/\* Complex \*\/ //g
 		/^{/ d
-		s/)/);/
+		s/)/);\
+/
 		p
 		}' $i
 done

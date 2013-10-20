@@ -11,7 +11,7 @@ AC_INIT([CBLAPACK - BLAS and LAPACK in C],
 AC_PREREQ(2.59)
 AC_CONFIG_SRCDIR([./README.md])		dnl Unique file where sources are
 AC_CONFIG_MACRO_DIR([m4])		dnl Additional macro directories
-AC_CONFIG_FILES([Makefile test/Makefile])
+AC_CONFIG_FILES([Makefile test/Makefile include/Makefile])
 AC_CONFIG_AUX_DIR([config_aux])
 
 #

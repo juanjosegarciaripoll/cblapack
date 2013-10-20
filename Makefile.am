@@ -2,7 +2,7 @@
 
 ACLOCAL_AMFLAGS = -I m4
 
-SUBDIRS = test
+SUBDIRS = include test
 
 # We define the global AM_CPPFLAGS as everything we compile includes from these
 # directories.
