@@ -40,8 +40,6 @@ doublereal slamch_(char *cmach)
     real rmach;
     real small;
     static real sfmin;
-    extern /* Subroutine */ int slamc2_(integer *, integer *, logical *, real 
-	    *, integer *, real *, integer *, real *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
@@ -179,7 +177,6 @@ doublereal slamch_(char *cmach)
     static integer lbeta;
     real savec;
     static logical lieee1;
-    extern doublereal slamc3_(real *, real *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
@@ -411,12 +408,6 @@ L30:
     static real lrmin, lrmax;
     real sixth;
     logical lieee1;
-    extern /* Subroutine */ int slamc1_(integer *, integer *, logical *, 
-	    logical *);
-    extern doublereal slamc3_(real *, real *);
-    extern /* Subroutine */ int slamc4_(integer *, real *, integer *), 
-	    slamc5_(integer *, integer *, integer *, logical *, integer *, 
-	    real *);
     integer ngnmin, ngpmin;
 
     /* Fortran I/O blocks */
@@ -736,7 +727,6 @@ doublereal slamc3_(real *a, real *b)
     real a;
     integer i__;
     real b1, b2, c1, c2, d1, d2, one, zero, rbase;
-    extern doublereal slamc3_(real *, real *);
 
 
 /*  -- LAPACK auxiliary routine (version 3.2) -- */
@@ -836,7 +826,6 @@ L10:
     integer try__, lexp;
     real oldy;
     integer uexp, nbits;
-    extern doublereal slamc3_(real *, real *);
     real recbas;
     integer exbits, expsum;
 
