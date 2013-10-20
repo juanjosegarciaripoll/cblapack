@@ -539,7 +539,7 @@ F2CSUB zgeru_(integer *m, integer *n, doublecomplex *alpha,
 	doublecomplex *a, integer *lda);
 
 /* zhbmv.c */
-int zhbmv_(const const char *uplo, const integer *n, const integer *k, const doublecomplex *alpha, const doublecomplex *a, const integer *lda, const doublecomplex *x, const integer *incx, const doublecomplex *beta, doublecomplex *y, const integer *incy);
+int zhbmv_(const char *uplo, const integer *n, const integer *k, const doublecomplex *alpha, const doublecomplex *a, const integer *lda, const doublecomplex *x, const integer *incx, const doublecomplex *beta, doublecomplex *y, const integer *incy);
 
 /* zhemm.c */
 F2CSUB zhemm_(const char *side, const char *uplo, integer *m, integer *n, 
