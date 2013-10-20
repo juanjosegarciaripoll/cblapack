@@ -482,9 +482,10 @@ static logical c_false = FALSE_;
 	*info = -10;
     } else if (*ku < 0 || isym != 1 && *kl != *ku) {
 	*info = -11;
-    } else if (ipack == -1 || isympk == 1 && isym == 1 || isympk == 2 && isym 
-	    == 1 && *kl > 0 || isympk == 3 && isym == 1 && *ku > 0 || isympk 
-	    != 0 && *m != *n) {
+    } else if (ipack == -1 || (isympk == 1 && isym == 1) ||
+	       (isympk == 2 && isym == 1 && *kl > 0) ||
+	       (isympk == 3 && isym == 1 && *ku > 0) ||
+	       (isympk != 0 && *m != *n)) {
 	*info = -12;
     } else if (*lda < max(1,minlda)) {
 	*info = -14;

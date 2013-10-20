@@ -12,5 +12,5 @@ double cblas_dnrm2( const integer N, const double *X, const integer incX)
 {
    #define F77_N N
    #define F77_incX incX
-   return dnrm2( &F77_N, X, &F77_incX );
+   return dnrm2_( &F77_N, X, &F77_incX );
 }

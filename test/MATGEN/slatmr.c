@@ -606,8 +606,8 @@ static integer c__1 = 1;
 	*info = -8;
     } else if (*mode != -6 && *mode != 0 && *mode != 6 && irsign == -1) {
 	*info = -10;
-    } else if (igrade == -1 || igrade == 4 && *m != *n || igrade >= 1 && 
-	    igrade <= 4 && isym == 0) {
+    } else if (igrade == -1 || (igrade == 4 && *m != *n) ||
+	       (igrade >= 1 && igrade <= 4 && isym == 0)) {
 	*info = -11;
     } else if (igrade == 4 && dzero) {
 	*info = -12;
@@ -622,7 +622,7 @@ static integer c__1 = 1;
     } else if ((igrade == 2 || igrade == 3) && (*moder != -6 && *moder != 0 &&
 	     *moder != 6) && *condr < 1.f) {
 	*info = -17;
-    } else if (ipvtng == -1 || ipvtng == 3 && *m != *n || (ipvtng == 1 || 
+    } else if (ipvtng == -1 || (ipvtng == 3 && *m != *n) || (ipvtng == 1 || 
 	    ipvtng == 2) && isym == 0) {
 	*info = -18;
     } else if (ipvtng != 0 && badpvt) {
@@ -633,14 +633,16 @@ static integer c__1 = 1;
 	*info = -21;
     } else if (*sparse < 0.f || *sparse > 1.f) {
 	*info = -22;
-    } else if (ipack == -1 || (ipack == 1 || ipack == 2 || ipack == 5 || 
-	    ipack == 6) && isym == 1 || ipack == 3 && isym == 1 && (*kl != 0 
-	    || *m != *n) || ipack == 4 && isym == 1 && (*ku != 0 || *m != *n))
-	     {
+    } else if (ipack == -1 ||
+	       ((ipack == 1 || ipack == 2 || ipack == 5 || 
+		 ipack == 6) && isym == 1) ||
+	       (ipack == 3 && isym == 1 && (*kl != 0 || *m != *n)) ||
+	       (ipack == 4 && isym == 1 && (*ku != 0 || *m != *n))) {
 	*info = -24;
-    } else if ((ipack == 0 || ipack == 1 || ipack == 2) && *lda < max(1,*m) ||
-	     (ipack == 3 || ipack == 4) && *lda < 1 || (ipack == 5 || ipack ==
-	     6) && *lda < kuu + 1 || ipack == 7 && *lda < kll + kuu + 1) {
+    } else if (((ipack == 0 || ipack == 1 || ipack == 2) && *lda < max(1,*m)) ||
+	       ((ipack == 3 || ipack == 4) && *lda < 1) ||
+	       ((ipack == 5 || ipack == 6) && *lda < kuu + 1) ||
+	       (ipack == 7 && *lda < kll + kuu + 1)) {
 	*info = -26;
     }
 

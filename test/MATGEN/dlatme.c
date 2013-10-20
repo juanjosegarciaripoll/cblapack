@@ -431,7 +431,7 @@ static doublereal c_b39 = 1.;
 	*info = -14;
     } else if (*kl < 1) {
 	*info = -15;
-    } else if (*ku < 1 || *ku < *n - 1 && *kl < *n - 1) {
+    } else if (*ku < 1 || (*ku < *n - 1 && *kl < *n - 1)) {
 	*info = -16;
     } else if (*lda < max(1,*n)) {
 	*info = -19;

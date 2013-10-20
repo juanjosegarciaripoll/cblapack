@@ -13,6 +13,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include "f2c.h"
+#include "cblapack/cblas.h"
 #include "blaswrap.h"
 
 /*  -- LAPACK auxiliary routine (preliminary version) -- */
@@ -60,4 +61,5 @@ F2CSUB xerbla_(const char *srname, const integer *info)
       fprintf(stderr, "Parameter %d to routine %s was incorrect\n",
               *info, srname);
    }
+   return 0;
 }

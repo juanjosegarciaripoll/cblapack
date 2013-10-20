@@ -277,7 +277,7 @@ static integer c__1 = 1;
 	xerbla_("SLAROT", &c__4);
 	return 0;
     }
-    if (*lda <= 0 || ! (*lrows) && *lda < *nl - nt) {
+    if (*lda <= 0 || (!(*lrows) && *lda < *nl - nt)) {
 	xerbla_("SLAROT", &c__8);
 	return 0;
     }

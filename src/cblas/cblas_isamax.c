@@ -13,6 +13,6 @@ CBLAS_INDEX cblas_isamax( const integer N, const float *X, const integer incX)
    integer iamax;
    #define F77_N N
    #define F77_incX incX
-   iamax = isamax( &F77_N, X, &F77_incX );
+   iamax = isamax_( &F77_N, X, &F77_incX );
    return iamax ? iamax-1 : 0;
 }

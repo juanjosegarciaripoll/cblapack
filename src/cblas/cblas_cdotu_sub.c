@@ -14,5 +14,5 @@ void cblas_cdotu_sub( const integer N, const void *X,
    #define F77_N N
    #define F77_incX incX
    #define F77_incY incY
-   cdotu_sub_( dotu, &F77_N, X, &F77_incX, Y, &F77_incY );
+   cdotu_( dotu, &F77_N, X, &F77_incX, Y, &F77_incY );
 }

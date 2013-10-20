@@ -633,44 +633,49 @@ static integer c__1 = 1;
 	*info = -8;
     } else if (*mode != -6 && *mode != 0 && *mode != 6 && irsign == -1) {
 	*info = -10;
-    } else if (igrade == -1 || igrade == 4 && *m != *n || (igrade == 1 || 
-	    igrade == 2 || igrade == 3 || igrade == 4 || igrade == 6) && isym 
-	    == 0 || (igrade == 1 || igrade == 2 || igrade == 3 || igrade == 4 
-	    || igrade == 5) && isym == 2) {
+    } else if (igrade == -1 ||
+	       (igrade == 4 && *m != *n) ||
+	       ((igrade == 1 || igrade == 2 || igrade == 3 ||
+		 igrade == 4 || igrade == 6) && isym == 0) ||
+	       ((igrade == 1 || igrade == 2 || igrade == 3 || igrade == 4 
+		 || igrade == 5) && isym == 2)) {
 	*info = -11;
     } else if (igrade == 4 && dzero) {
 	*info = -12;
     } else if ((igrade == 1 || igrade == 3 || igrade == 4 || igrade == 5 || 
-	    igrade == 6) && (*model < -6 || *model > 6)) {
+		igrade == 6) && (*model < -6 || *model > 6)) {
 	*info = -13;
     } else if ((igrade == 1 || igrade == 3 || igrade == 4 || igrade == 5 || 
-	    igrade == 6) && (*model != -6 && *model != 0 && *model != 6) && *
-	    condl < 1.) {
+		igrade == 6) && (*model != -6 && *model != 0 && *model != 6) && *
+	       condl < 1.) {
 	*info = -14;
     } else if ((igrade == 2 || igrade == 3) && (*moder < -6 || *moder > 6)) {
 	*info = -16;
     } else if ((igrade == 2 || igrade == 3) && (*moder != -6 && *moder != 0 &&
 	     *moder != 6) && *condr < 1.) {
 	*info = -17;
-    } else if (ipvtng == -1 || ipvtng == 3 && *m != *n || (ipvtng == 1 || 
-	    ipvtng == 2) && (isym == 0 || isym == 2)) {
+    } else if (ipvtng == -1 ||
+	       (ipvtng == 3 && *m != *n) ||
+	       ((ipvtng == 1 || ipvtng == 2) && (isym == 0 || isym == 2))) {
 	*info = -18;
     } else if (ipvtng != 0 && badpvt) {
 	*info = -19;
     } else if (*kl < 0) {
 	*info = -20;
-    } else if (*ku < 0 || (isym == 0 || isym == 2) && *kl != *ku) {
+    } else if (*ku < 0 || ((isym == 0 || isym == 2) && *kl != *ku)) {
 	*info = -21;
     } else if (*sparse < 0. || *sparse > 1.) {
 	*info = -22;
-    } else if (ipack == -1 || (ipack == 1 || ipack == 2 || ipack == 5 || 
-	    ipack == 6) && isym == 1 || ipack == 3 && isym == 1 && (*kl != 0 
-	    || *m != *n) || ipack == 4 && isym == 1 && (*ku != 0 || *m != *n))
-	     {
+    } else if (ipack == -1 ||
+	       ((ipack == 1 || ipack == 2 || ipack == 5 || 
+		 ipack == 6) && isym == 1) ||
+	       (ipack == 3 && isym == 1 && (*kl != 0 || *m != *n)) ||
+	       (ipack == 4 && isym == 1 && (*ku != 0 || *m != *n))) {
 	*info = -24;
-    } else if ((ipack == 0 || ipack == 1 || ipack == 2) && *lda < max(1,*m) ||
-	     (ipack == 3 || ipack == 4) && *lda < 1 || (ipack == 5 || ipack ==
-	     6) && *lda < kuu + 1 || ipack == 7 && *lda < kll + kuu + 1) {
+    } else if (((ipack == 0 || ipack == 1 || ipack == 2) && *lda < max(1,*m)) ||
+	       ((ipack == 3 || ipack == 4) && *lda < 1) ||
+	       ((ipack == 5 || ipack == 6) && *lda < kuu + 1) ||
+	       (ipack == 7 && *lda < kll + kuu + 1)) {
 	*info = -26;
     }
 
@@ -1426,7 +1431,7 @@ static integer c__1 = 1;
 	    *info = 5;
 	    return 0;
 
-	} else if (*anorm > 1. && onorm < 1. || *anorm < 1. && onorm > 1.) {
+	} else if ((*anorm > 1. && onorm < 1.) || (*anorm < 1. && onorm > 1.)) {
 
 /*           Scale carefully to avoid over / underflow */
 

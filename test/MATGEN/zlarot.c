@@ -283,7 +283,7 @@ static integer c__8 = 8;
 	xerbla_("ZLAROT", &c__4);
 	return 0;
     }
-    if (*lda <= 0 || ! (*lrows) && *lda < *nl - nt) {
+    if (*lda <= 0 || (! (*lrows) && *lda < *nl - nt)) {
 	xerbla_("ZLAROT", &c__8);
 	return 0;
     }

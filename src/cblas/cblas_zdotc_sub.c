@@ -14,5 +14,5 @@ void cblas_zdotc_sub( const integer N, const void *X, const integer incX,
    #define F77_N N
    #define F77_incX incX
    #define F77_incY incY
-   zdotc_sub_( dotc, &F77_N, X, &F77_incX, Y, &F77_incY );
+   zdotc_( dotc, &F77_N, X, &F77_incX, Y, &F77_incY );
 }
