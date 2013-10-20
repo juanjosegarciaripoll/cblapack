@@ -2,6 +2,8 @@
 # BLAS components
 #
 
+ALLBLAS = src/blas/xerbla.c src/blas/xerbla_array.c src/blas/lsame.c
+
 BLAS1 = src/blas/isamax.c src/blas/sasum.c src/blas/saxpy.c	\
 	src/blas/scopy.c src/blas/sdot.c src/blas/snrm2.c	\
 	src/blas/srot.c src/blas/srotg.c src/blas/sscal.c	\
@@ -59,4 +61,4 @@ BLAS3 = src/blas/sgemm.c src/blas/ssymm.c src/blas/ssyrk.c	\
 	src/blas/zsyr2k.c src/blas/ztrmm.c src/blas/ztrsm.c	\
 	src/blas/zhemm.c src/blas/zherk.c src/blas/zher2k.c
 
-BLAS = $(BLAS1) $(BLAS2) $(BLAS3)
+BLAS = $(ALLBLAS) $(BLAS1) $(BLAS2) $(BLAS3)

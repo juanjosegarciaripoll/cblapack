@@ -6220,13 +6220,6 @@ F2CSUB stzrqf_(integer *m, integer *n, real *a, integer *lda,
 F2CSUB stzrzf_(integer *m, integer *n, real *a, integer *lda, 
 	real *tau, real *work, integer *lwork, integer *info);
 
-/* xerbla.c */
-void xerbla_(const const char *srname, const integer *info);
-
-/* xerbla_array.c */
-F2CSUB xerbla_array__(const char *srname_array__, integer *
-	srname_len__, integer *info, ftnlen srname_array_len);
-
 /* zbdsqr.c */
 F2CSUB zbdsqr_(char *uplo, integer *n, integer *ncvt, integer *
 	nru, integer *ncc, doublereal *d__, doublereal *e, doublecomplex *vt, 

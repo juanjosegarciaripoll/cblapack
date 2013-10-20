@@ -650,6 +650,13 @@ F2CSUB ztrsm_(const char *side, const char *uplo, const char *transa, const char
 F2CSUB ztrsv_(const char *uplo, const char *trans, const char *diag, integer *n, 
 	doublecomplex *a, integer *lda, doublecomplex *x, integer *incx);
 
+/* xerbla.c */
+F2CSUB xerbla_(const char *srname, const integer *info);
+
+/* xerbla_array.c */
+F2CSUB xerbla_array__(const char *srname_array__, integer *
+	srname_len__, integer *info, ftnlen srname_array_len);
+
 #ifdef __cplusplus
 }
 #endif

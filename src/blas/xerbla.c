@@ -42,7 +42,7 @@
 #define XerblaStrLen 6
 #define XerblaStrLen1 7
 
-void xerbla_(const const char *srname, const integer *info)
+F2CSUB xerbla_(const char *srname, const integer *info)
 {
    char rout[] = {'c','b','l','a','s','_','\0','\0','\0','\0','\0','\0','\0'};
 
