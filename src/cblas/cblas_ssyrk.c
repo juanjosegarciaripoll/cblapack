@@ -7,8 +7,7 @@
  *
  */
 
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_ssyrk(const enum CBLAS_ORDER Order, const enum CBLAS_UPLO Uplo,
                  const enum CBLAS_TRANSPOSE Trans, const integer N, const integer K,
                  const float alpha, const float  *A, const integer lda,

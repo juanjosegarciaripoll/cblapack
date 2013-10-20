@@ -7,8 +7,7 @@
  * Written by Keita Teranishi.  2/11/1998
  *
  */
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 CBLAS_INDEX cblas_isamax( const integer N, const float *X, const integer incX)
 {
    integer iamax;

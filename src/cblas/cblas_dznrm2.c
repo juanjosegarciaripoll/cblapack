@@ -7,8 +7,7 @@
  * Written by Keita Teranishi.  2/11/1998
  *
  */
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 double cblas_dznrm2( const integer N, const void *X, const integer incX) 
 {
    #define F77_N N

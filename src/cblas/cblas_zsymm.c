@@ -7,8 +7,7 @@
  *
  */
 
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_zsymm(const enum CBLAS_ORDER Order, const enum CBLAS_SIDE Side,
                  const enum CBLAS_UPLO Uplo, const integer M, const integer N,
                  const void *alpha, const void  *A, const integer lda,

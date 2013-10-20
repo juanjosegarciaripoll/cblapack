@@ -7,8 +7,7 @@
  *
  */
 
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_cgemm(const enum CBLAS_ORDER Order, const enum CBLAS_TRANSPOSE TransA,
                  const enum CBLAS_TRANSPOSE TransB, const integer M, const integer N,
                  const integer K, const void *alpha, const void  *A,

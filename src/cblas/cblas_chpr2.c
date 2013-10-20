@@ -7,8 +7,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_chpr2(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
                       const integer N,const void *alpha, const void *X, 
                       const integer incX,const void *Y, const integer incY, void *Ap)

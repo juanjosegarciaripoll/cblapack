@@ -6,8 +6,7 @@
  * 4/6/1998
  *
  */
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_ssbmv(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
            const integer N, const integer K, const float alpha, const float *A,
            const integer lda, const float *X, const integer incX,

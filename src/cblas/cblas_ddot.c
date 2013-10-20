@@ -7,8 +7,7 @@
  * Written by Keita Teranishi.  2/11/1998
  *
  */
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 double cblas_ddot( const integer N, const double *X,
                       const integer incX, const double *Y, const integer incY)
 {

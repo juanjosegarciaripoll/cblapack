@@ -7,8 +7,7 @@
  * Written by Keita Teranishi.  2/11/1998
  *
  */
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 double cblas_dasum( const integer N, const double *X, const integer incX) 
 {
    #define F77_N N

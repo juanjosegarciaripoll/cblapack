@@ -5,8 +5,7 @@
  * Keita Teranishi  5/20/98
  *
  */
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_dspr2(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
                 const integer N, const double  alpha, const double  *X,
                 const integer incX, const double  *Y, const integer incY, double  *A)

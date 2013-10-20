@@ -6,8 +6,7 @@
  * Written by Keita Teranishi.  2/11/1998
  *
  */
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_cscal( const integer N, const void *alpha, void *X, 
                        const integer incX)
 {

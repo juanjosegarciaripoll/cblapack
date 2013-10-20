@@ -1,5 +1,4 @@
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_drotm( const integer N, double *X, const integer incX, double *Y, 
                        const integer incY, const double *P)
 {

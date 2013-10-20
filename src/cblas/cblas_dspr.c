@@ -7,8 +7,7 @@
  *
  */
 
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_dspr(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
                 const integer N, const double alpha, const double *X,
                 const integer incX, double *Ap)

@@ -4,8 +4,7 @@
  * Written by Keita Teranishi
  * 3/3/1998
  */
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 
 void cblas_stbmv(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
                  const enum CBLAS_TRANSPOSE TransA, const enum CBLAS_DIAG Diag,

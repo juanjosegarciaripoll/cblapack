@@ -7,8 +7,7 @@
  *
  */
 
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_dger(const enum CBLAS_ORDER order, const integer M, const integer N,
                 const double alpha, const double  *X, const integer incX,
                 const double  *Y, const integer incY, double  *A, const integer lda)

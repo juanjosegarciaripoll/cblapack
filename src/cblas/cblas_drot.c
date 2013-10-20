@@ -6,8 +6,7 @@
  * Written by Keita Teranishi.  2/11/1998
  *
  */
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_drot(const integer N, double *X, const integer incX,
    double *Y, const integer incY, const double c, const double s)
 {

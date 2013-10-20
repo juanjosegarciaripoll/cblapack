@@ -6,8 +6,7 @@
  * Written by Keita Teranishi.  2/11/1998
  *
  */
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_srotm( const integer N, float *X, const integer incX, float *Y, 
                        const integer incY, const float *P)
 {

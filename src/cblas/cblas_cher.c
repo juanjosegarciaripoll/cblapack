@@ -7,8 +7,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_cher(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
                 const integer N, const float alpha, const void *X, const integer incX
                 ,void *A, const integer lda)

@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 
 #define XerblaStrLen 6
 #define XerblaStrLen1 7

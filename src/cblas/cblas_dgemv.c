@@ -6,8 +6,7 @@
  * 4/6/1998
  *
  */
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_dgemv(const enum CBLAS_ORDER order,
                  const enum CBLAS_TRANSPOSE TransA, const integer M, const integer N,
                  const double alpha, const double  *A, const integer lda,

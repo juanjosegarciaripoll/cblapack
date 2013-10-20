@@ -6,8 +6,7 @@
  * Written by Keita Teranishi.  2/11/1998
  *
  */
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_zswap( const integer N, void  *X, const integer incX, void  *Y,
                        const integer incY)
 {

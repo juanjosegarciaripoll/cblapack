@@ -5,8 +5,7 @@
  * Keita Teranishi  5/20/98
  *
  */
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_ctpmv(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
                  const enum CBLAS_TRANSPOSE TransA, const enum CBLAS_DIAG Diag,
                  const integer N, const void  *Ap, void  *X, const integer incX)

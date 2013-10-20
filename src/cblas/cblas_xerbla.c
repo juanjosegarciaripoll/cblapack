@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 
 void cblas_xerbla(integer info, const char *rout, const char *form, ...)
 {

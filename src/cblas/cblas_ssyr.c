@@ -6,8 +6,7 @@
  * 4/6/1998
  *
  */
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_ssyr(const enum CBLAS_ORDER order, const enum CBLAS_UPLO Uplo,
                 const integer N, const float  alpha, const float  *X,
                 const integer incX, float  *A, const integer lda)

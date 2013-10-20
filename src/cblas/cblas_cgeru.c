@@ -5,8 +5,7 @@
  * Keita Teranishi  5/20/98
  *
  */
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_cgeru(const enum CBLAS_ORDER order, const integer M, const integer N,
                  const void *alpha, const void *X, const integer incX,
                  const void *Y, const integer incY, void *A, const integer lda)

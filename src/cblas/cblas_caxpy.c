@@ -6,8 +6,7 @@
  * Written by Keita Teranishi.  2/11/1998
  *
  */
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_caxpy( const integer N, const void *alpha, const void *X,
                        const integer incX, void *Y, const integer incY)
 {

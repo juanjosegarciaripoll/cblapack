@@ -6,8 +6,7 @@
  * Written by Keita Teranishi.  2/11/1998
  *
  */
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_drotg(  double *a, double *b, double *c, double *s)
 {
    drotg_(a,b,c,s);    

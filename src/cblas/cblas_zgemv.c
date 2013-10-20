@@ -7,8 +7,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_zgemv(const enum CBLAS_ORDER order,
                  const enum CBLAS_TRANSPOSE TransA, const integer M, const integer N,
                  const void *alpha, const void  *A, const integer lda,

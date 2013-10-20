@@ -7,8 +7,7 @@
  *
  */
 
-#include "cblas.h"
-#include "blaswrap.h"
+#include "cblapack.h"
 void cblas_dsbmv(const enum CBLAS_ORDER order,
                  const enum CBLAS_UPLO Uplo, const integer N, const integer K,
                  const double alpha, const double  *A, const integer lda,
