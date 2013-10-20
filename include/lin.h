@@ -1,197 +1,290 @@
-#ifndef CBLAPACK_LIN_H
-#define CBLAPACK_LIN_H
+/* aladhd.c */
+F2CSUB aladhd_(integer *iounit, char *path);
 
-extern /* Subroutine */ int aladhd_(integer *iounit, char *path);
-extern /* Subroutine */ int alaerh_(char *path, char *subnam, integer *info, integer 
+/* alaerh.c */
+F2CSUB alaerh_(char *path, char *subnam, integer *info, integer 
 	*infoe, char *opts, integer *m, integer *n, integer *kl, integer *ku, 
 	integer *n5, integer *imat, integer *nfail, integer *nerrs, integer *
 	nout);
-extern /* Subroutine */ int alaesm_(char *path, logical *ok, integer *nout);
-extern /* Subroutine */ int alahd_(integer *iounit, char *path);
-extern /* Subroutine */ int alareq_(char *path, integer *nmats, logical *dotype, 
+
+/* alaesm.c */
+F2CSUB alaesm_(char *path, logical *ok, integer *nout);
+
+/* alahd.c */
+F2CSUB alahd_(integer *iounit, char *path);
+
+/* alareq.c */
+F2CSUB alareq_(char *path, integer *nmats, logical *dotype, 
 	integer *ntypes, integer *nin, integer *nout);
-extern /* Subroutine */ int alasum_(char *type__, integer *nout, integer *nfail, 
+
+/* alasum.c */
+F2CSUB alasum_(char *type__, integer *nout, integer *nfail, 
 	integer *nrun, integer *nerrs);
-extern /* Subroutine */ int alasvm_(char *type__, integer *nout, integer *nfail, 
+
+/* alasvm.c */
+F2CSUB alasvm_(char *type__, integer *nout, integer *nfail, 
 	integer *nrun, integer *nerrs);
-extern /* Subroutine */ int cchkgb_(logical *dotype, integer *nm, integer *mval, 
+
+/* cchkeq.c */
+F2CSUB cchkeq_(real *thresh, integer *nout);
+
+/* cchkgb.c */
+F2CSUB cchkgb_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nns, integer *nsval, real *thresh, logical *tsterr, complex *a, 
 	integer *la, complex *afac, integer *lafac, complex *b, complex *x, 
 	complex *xact, complex *work, real *rwork, integer *iwork, integer *
 	nout);
-extern /* Subroutine */ int cchkge_(logical *dotype, integer *nm, integer *mval, 
+
+/* cchkge.c */
+F2CSUB cchkge_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nns, integer *nsval, real *thresh, logical *tsterr, integer *nmax, 
 	complex *a, complex *afac, complex *ainv, complex *b, complex *x, 
 	complex *xact, complex *work, real *rwork, integer *iwork, integer *
 	nout);
-extern /* Subroutine */ int cchkgt_(logical *dotype, integer *nn, integer *nval, 
+
+/* cchkgt.c */
+F2CSUB cchkgt_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, real *thresh, logical *tsterr, complex *
 	a, complex *af, complex *b, complex *x, complex *xact, complex *work, 
 	real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int cchkhe_(logical *dotype, integer *nn, integer *nval, 
+
+/* cchkhe.c */
+F2CSUB cchkhe_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nns, integer *nsval, real *
 	thresh, logical *tsterr, integer *nmax, complex *a, complex *afac, 
 	complex *ainv, complex *b, complex *x, complex *xact, complex *work, 
 	real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int cchkhp_(logical *dotype, integer *nn, integer *nval, 
+
+/* cchkhp.c */
+F2CSUB cchkhp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, real *thresh, logical *tsterr, integer *
 	nmax, complex *a, complex *afac, complex *ainv, complex *b, complex *
 	x, complex *xact, complex *work, real *rwork, integer *iwork, integer 
 	*nout);
-extern /* Subroutine */ int cchklq_(logical *dotype, integer *nm, integer *mval, 
+
+/* cchklq.c */
+F2CSUB cchklq_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, integer *nrhs, real *thresh, logical *tsterr, integer *nmax, 
 	complex *a, complex *af, complex *aq, complex *al, complex *ac, 
 	complex *b, complex *x, complex *xact, complex *tau, complex *work, 
 	real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int cchkpb_(logical *dotype, integer *nn, integer *nval, 
+
+/* cchkpb.c */
+F2CSUB cchkpb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nns, integer *nsval, real *
 	thresh, logical *tsterr, integer *nmax, complex *a, complex *afac, 
 	complex *ainv, complex *b, complex *x, complex *xact, complex *work, 
 	real *rwork, integer *nout);
-extern /* Subroutine */ int cchkpo_(logical *dotype, integer *nn, integer *nval, 
+
+/* cchkpo.c */
+F2CSUB cchkpo_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nns, integer *nsval, real *
 	thresh, logical *tsterr, integer *nmax, complex *a, complex *afac, 
 	complex *ainv, complex *b, complex *x, complex *xact, complex *work, 
 	real *rwork, integer *nout);
-extern /* Subroutine */ int cchkpp_(logical *dotype, integer *nn, integer *nval, 
+
+/* cchkpp.c */
+F2CSUB cchkpp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, real *thresh, logical *tsterr, integer *
 	nmax, complex *a, complex *afac, complex *ainv, complex *b, complex *
 	x, complex *xact, complex *work, real *rwork, integer *nout);
-extern /* Subroutine */ int cchkps_(logical *dotype, integer *nn, integer *nval, 
+
+/* cchkps.c */
+F2CSUB cchkps_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nrank, integer *rankval, real *
 	thresh, logical *tsterr, integer *nmax, complex *a, complex *afac, 
 	complex *perm, integer *piv, complex *work, real *rwork, integer *
 	nout);
-extern /* Subroutine */ int cchkpt_(logical *dotype, integer *nn, integer *nval, 
+
+/* cchkpt.c */
+F2CSUB cchkpt_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, real *thresh, logical *tsterr, complex *
 	a, real *d__, complex *e, complex *b, complex *x, complex *xact, 
 	complex *work, real *rwork, integer *nout);
-extern /* Subroutine */ int cchkq3_(logical *dotype, integer *nm, integer *mval, 
+
+/* cchkq3.c */
+F2CSUB cchkq3_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, real *thresh, complex *a, complex *copya, real *s, real *copys, 
 	 complex *tau, complex *work, real *rwork, integer *iwork, integer *
 	nout);
-extern /* Subroutine */ int cchkql_(logical *dotype, integer *nm, integer *mval, 
+
+/* cchkql.c */
+F2CSUB cchkql_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, integer *nrhs, real *thresh, logical *tsterr, integer *nmax, 
 	complex *a, complex *af, complex *aq, complex *al, complex *ac, 
 	complex *b, complex *x, complex *xact, complex *tau, complex *work, 
 	real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int cchkqp_(logical *dotype, integer *nm, integer *mval, 
+
+/* cchkqp.c */
+F2CSUB cchkqp_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, real *thresh, logical *tsterr, complex *a, 
 	 complex *copya, real *s, real *copys, complex *tau, complex *work, 
 	real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int cchkqr_(logical *dotype, integer *nm, integer *mval, 
+
+/* cchkqr.c */
+F2CSUB cchkqr_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, integer *nrhs, real *thresh, logical *tsterr, integer *nmax, 
 	complex *a, complex *af, complex *aq, complex *ar, complex *ac, 
 	complex *b, complex *x, complex *xact, complex *tau, complex *work, 
 	real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int cchkrq_(logical *dotype, integer *nm, integer *mval, 
+
+/* cchkrq.c */
+F2CSUB cchkrq_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, integer *nrhs, real *thresh, logical *tsterr, integer *nmax, 
 	complex *a, complex *af, complex *aq, complex *ar, complex *ac, 
 	complex *b, complex *x, complex *xact, complex *tau, complex *work, 
 	real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int cchksp_(logical *dotype, integer *nn, integer *nval, 
+
+/* cchksp.c */
+F2CSUB cchksp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, real *thresh, logical *tsterr, integer *
 	nmax, complex *a, complex *afac, complex *ainv, complex *b, complex *
 	x, complex *xact, complex *work, real *rwork, integer *iwork, integer 
 	*nout);
-extern /* Subroutine */ int cchksy_(logical *dotype, integer *nn, integer *nval, 
+
+/* cchksy.c */
+F2CSUB cchksy_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nns, integer *nsval, real *
 	thresh, logical *tsterr, integer *nmax, complex *a, complex *afac, 
 	complex *ainv, complex *b, complex *x, complex *xact, complex *work, 
 	real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int cchktb_(logical *dotype, integer *nn, integer *nval, 
+
+/* cchktb.c */
+F2CSUB cchktb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, real *thresh, logical *tsterr, integer *
 	nmax, complex *ab, complex *ainv, complex *b, complex *x, complex *
 	xact, complex *work, real *rwork, integer *nout);
-extern /* Subroutine */ int cchktp_(logical *dotype, integer *nn, integer *nval, 
+
+/* cchktp.c */
+F2CSUB cchktp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, real *thresh, logical *tsterr, integer *
 	nmax, complex *ap, complex *ainvp, complex *b, complex *x, complex *
 	xact, complex *work, real *rwork, integer *nout);
-extern /* Subroutine */ int cchktr_(logical *dotype, integer *nn, integer *nval, 
+
+/* cchktr.c */
+F2CSUB cchktr_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nns, integer *nsval, real *
 	thresh, logical *tsterr, integer *nmax, complex *a, complex *ainv, 
 	complex *b, complex *x, complex *xact, complex *work, real *rwork, 
 	integer *nout);
-extern /* Subroutine */ int cchktz_(logical *dotype, integer *nm, integer *mval, 
+
+/* cchktz.c */
+F2CSUB cchktz_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, real *thresh, logical *tsterr, complex *a, 
 	 complex *copya, real *s, real *copys, complex *tau, complex *work, 
 	real *rwork, integer *nout);
-extern /* Subroutine */ int cdrvgb_(logical *dotype, integer *nn, integer *nval, 
+
+/* cdrvgb.c */
+F2CSUB cdrvgb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, complex *a, integer *la, 
 	 complex *afb, integer *lafb, complex *asav, complex *b, complex *
 	bsav, complex *x, complex *xact, real *s, complex *work, real *rwork, 
 	integer *iwork, integer *nout);
-extern /* Subroutine */ int cdrvgb_(logical *dotype, integer *nn, integer *nval, 
+
+/* cdrvgbx.c */
+F2CSUB cdrvgb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, complex *a, integer *la, 
 	 complex *afb, integer *lafb, complex *asav, complex *b, complex *
 	bsav, complex *x, complex *xact, real *s, complex *work, real *rwork, 
 	integer *iwork, integer *nout);
-extern /* Subroutine */ int cdrvge_(logical *dotype, integer *nn, integer *nval, 
+
+/* cdrvge.c */
+F2CSUB cdrvge_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, integer *nmax, complex *
 	a, complex *afac, complex *asav, complex *b, complex *bsav, complex *
 	x, complex *xact, real *s, complex *work, real *rwork, integer *iwork, 
 	 integer *nout);
-extern /* Subroutine */ int cdrvge_(logical *dotype, integer *nn, integer *nval, 
+
+/* cdrvgex.c */
+F2CSUB cdrvge_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, integer *nmax, complex *
 	a, complex *afac, complex *asav, complex *b, complex *bsav, complex *
 	x, complex *xact, real *s, complex *work, real *rwork, integer *iwork, 
 	 integer *nout);
-extern /* Subroutine */ int cdrvgt_(logical *dotype, integer *nn, integer *nval, 
+
+/* cdrvgt.c */
+F2CSUB cdrvgt_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, complex *a, complex *af, 
 	 complex *b, complex *x, complex *xact, complex *work, real *rwork, 
 	integer *iwork, integer *nout);
-extern /* Subroutine */ int cdrvhe_(logical *dotype, integer *nn, integer *nval, 
+
+/* cdrvhe.c */
+F2CSUB cdrvhe_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, integer *nmax, complex *
 	a, complex *afac, complex *ainv, complex *b, complex *x, complex *
 	xact, complex *work, real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int cdrvhp_(logical *dotype, integer *nn, integer *nval, 
+
+/* cdrvhp.c */
+F2CSUB cdrvhp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, integer *nmax, complex *
 	a, complex *afac, complex *ainv, complex *b, complex *x, complex *
 	xact, complex *work, real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int cdrvls_(logical *dotype, integer *nm, integer *mval, 
+
+/* cdrvls.c */
+F2CSUB cdrvls_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nns, integer *nsval, integer *
 	nnb, integer *nbval, integer *nxval, real *thresh, logical *tsterr, 
 	complex *a, complex *copya, complex *b, complex *copyb, complex *c__, 
 	real *s, real *copys, complex *work, real *rwork, integer *iwork, 
 	integer *nout);
-extern /* Subroutine */ int cdrvpb_(logical *dotype, integer *nn, integer *nval, 
+
+/* cdrvpb.c */
+F2CSUB cdrvpb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, integer *nmax, complex *
 	a, complex *afac, complex *asav, complex *b, complex *bsav, complex *
 	x, complex *xact, real *s, complex *work, real *rwork, integer *nout);
-extern /* Subroutine */ int cdrvpo_(logical *dotype, integer *nn, integer *nval, 
+
+/* cdrvpo.c */
+F2CSUB cdrvpo_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, integer *nmax, complex *
 	a, complex *afac, complex *asav, complex *b, complex *bsav, complex *
 	x, complex *xact, real *s, complex *work, real *rwork, integer *nout);
-extern /* Subroutine */ int cdrvpo_(logical *dotype, integer *nn, integer *nval, 
+
+/* cdrvpox.c */
+F2CSUB cdrvpo_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, integer *nmax, complex *
 	a, complex *afac, complex *asav, complex *b, complex *bsav, complex *
 	x, complex *xact, real *s, complex *work, real *rwork, integer *nout);
-extern /* Subroutine */ int cdrvpp_(logical *dotype, integer *nn, integer *nval, 
+
+/* cdrvpp.c */
+F2CSUB cdrvpp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, integer *nmax, complex *
 	a, complex *afac, complex *asav, complex *b, complex *bsav, complex *
 	x, complex *xact, real *s, complex *work, real *rwork, integer *nout);
-extern /* Subroutine */ int cdrvpt_(logical *dotype, integer *nn, integer *nval, 
+
+/* cdrvpt.c */
+F2CSUB cdrvpt_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, complex *a, real *d__, 
 	complex *e, complex *b, complex *x, complex *xact, complex *work, 
 	real *rwork, integer *nout);
-extern /* Subroutine */ int cdrvrf1_(integer *nout, integer *nn, integer *nval, real 
+
+/* cdrvrf1.c */
+F2CSUB cdrvrf1_(integer *nout, integer *nn, integer *nval, real 
 	*thresh, complex *a, integer *lda, complex *arf, real *work);
-extern /* Subroutine */ int cdrvrf2_(integer *nout, integer *nn, integer *nval, 
+
+/* cdrvrf2.c */
+F2CSUB cdrvrf2_(integer *nout, integer *nn, integer *nval, 
 	complex *a, integer *lda, complex *arf, complex *ap, complex *asav);
-extern /* Subroutine */ int cdrvrf3_(integer *nout, integer *nn, integer *nval, real 
+
+/* cdrvrf3.c */
+F2CSUB cdrvrf3_(integer *nout, integer *nn, integer *nval, real 
 	*thresh, complex *a, integer *lda, complex *arf, complex *b1, complex 
 	*b2, real *s_work_clange__, complex *c_work_cgeqrf__, complex *tau);
-extern /* Subroutine */ int cdrvrf4_(integer *nout, integer *nn, integer *nval, real 
+
+/* cdrvrf4.c */
+F2CSUB cdrvrf4_(integer *nout, integer *nn, integer *nval, real 
 	*thresh, complex *c1, complex *c2, integer *ldc, complex *crf, 
 	complex *a, integer *lda, real *s_work_clange__);
-extern /* Subroutine */ int cdrvrfp_(integer *nout, integer *nn, integer *nval, 
+
+/* cdrvrfp.c */
+F2CSUB cdrvrfp_(integer *nout, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, integer *nnt, integer *ntval, real *
 	thresh, complex *a, complex *asav, complex *afac, complex *ainv, 
 	complex *b, complex *bsav, complex *xact, complex *x, complex *arf, 
@@ -199,500 +292,808 @@ extern /* Subroutine */ int cdrvrfp_(integer *nout, integer *nn, integer *nval,
 	complex *c_work_cpot02__, complex *c_work_cpot03__, real *
 	s_work_clatms__, real *s_work_clanhe__, real *s_work_cpot02__, real *
 	s_work_cpot03__);
-extern /* Subroutine */ int cdrvsp_(logical *dotype, integer *nn, integer *nval, 
+
+/* cdrvsp.c */
+F2CSUB cdrvsp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, integer *nmax, complex *
 	a, complex *afac, complex *ainv, complex *b, complex *x, complex *
 	xact, complex *work, real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int cdrvsy_(logical *dotype, integer *nn, integer *nval, 
+
+/* cdrvsy.c */
+F2CSUB cdrvsy_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, integer *nmax, complex *
 	a, complex *afac, complex *ainv, complex *b, complex *x, complex *
 	xact, complex *work, real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int cebchvxx_(real *thresh, char *path);
-extern /* Subroutine */ int cerrge_(char *path, integer *nunit);
-extern /* Subroutine */ int cerrge_(char *path, integer *nunit);
-extern /* Subroutine */ int cerrgt_(char *path, integer *nunit);
-extern /* Subroutine */ int cerrhe_(char *path, integer *nunit);
-extern /* Subroutine */ int cerrlq_(char *path, integer *nunit);
-extern /* Subroutine */ int cerrls_(char *path, integer *nunit);
-extern /* Subroutine */ int cerrpo_(char *path, integer *nunit);
-extern /* Subroutine */ int cerrpo_(char *path, integer *nunit);
-extern /* Subroutine */ int cerrps_(char *path, integer *nunit);
-extern /* Subroutine */ int cerrql_(char *path, integer *nunit);
-extern /* Subroutine */ int cerrqp_(char *path, integer *nunit);
-extern /* Subroutine */ int cerrqr_(char *path, integer *nunit);
-extern /* Subroutine */ int cerrrfp_(integer *nunit);
-extern /* Subroutine */ int cerrrq_(char *path, integer *nunit);
-extern /* Subroutine */ int cerrsy_(char *path, integer *nunit);
-extern /* Subroutine */ int cerrtr_(char *path, integer *nunit);
-extern /* Subroutine */ int cerrtz_(char *path, integer *nunit);
-extern /* Subroutine */ int cerrvx_(char *path, integer *nunit);
-extern /* Subroutine */ int cgbt01_(integer *m, integer *n, integer *kl, integer *ku, 
+
+/* cebchvxx.c */
+F2CSUB cebchvxx_(real *thresh, char *path);
+
+/* cerrge.c */
+F2CSUB cerrge_(char *path, integer *nunit);
+
+/* cerrgex.c */
+F2CSUB cerrge_(char *path, integer *nunit);
+
+/* cerrgt.c */
+F2CSUB cerrgt_(char *path, integer *nunit);
+
+/* cerrhe.c */
+F2CSUB cerrhe_(char *path, integer *nunit);
+
+/* cerrlq.c */
+F2CSUB cerrlq_(char *path, integer *nunit);
+
+/* cerrls.c */
+F2CSUB cerrls_(char *path, integer *nunit);
+
+/* cerrpo.c */
+F2CSUB cerrpo_(char *path, integer *nunit);
+
+/* cerrpox.c */
+F2CSUB cerrpo_(char *path, integer *nunit);
+
+/* cerrps.c */
+F2CSUB cerrps_(char *path, integer *nunit);
+
+/* cerrql.c */
+F2CSUB cerrql_(char *path, integer *nunit);
+
+/* cerrqp.c */
+F2CSUB cerrqp_(char *path, integer *nunit);
+
+/* cerrqr.c */
+F2CSUB cerrqr_(char *path, integer *nunit);
+
+/* cerrrfp.c */
+F2CSUB cerrrfp_(integer *nunit);
+
+/* cerrrq.c */
+F2CSUB cerrrq_(char *path, integer *nunit);
+
+/* cerrsy.c */
+F2CSUB cerrsy_(char *path, integer *nunit);
+
+/* cerrtr.c */
+F2CSUB cerrtr_(char *path, integer *nunit);
+
+/* cerrtz.c */
+F2CSUB cerrtz_(char *path, integer *nunit);
+
+/* cerrvx.c */
+F2CSUB cerrvx_(char *path, integer *nunit);
+
+/* cgbt01.c */
+F2CSUB cgbt01_(integer *m, integer *n, integer *kl, integer *ku, 
 	 complex *a, integer *lda, complex *afac, integer *ldafac, integer *
 	ipiv, complex *work, real *resid);
-extern /* Subroutine */ int cgbt02_(char *trans, integer *m, integer *n, integer *kl, 
+
+/* cgbt02.c */
+F2CSUB cgbt02_(char *trans, integer *m, integer *n, integer *kl, 
 	 integer *ku, integer *nrhs, complex *a, integer *lda, complex *x, 
 	integer *ldx, complex *b, integer *ldb, real *resid);
-extern /* Subroutine */ int cgbt05_(char *trans, integer *n, integer *kl, integer *
+
+/* cgbt05.c */
+F2CSUB cgbt05_(char *trans, integer *n, integer *kl, integer *
 	ku, integer *nrhs, complex *ab, integer *ldab, complex *b, integer *
 	ldb, complex *x, integer *ldx, complex *xact, integer *ldxact, real *
 	ferr, real *berr, real *reslts);
-extern /* Subroutine */ int cgelqs_(integer *m, integer *n, integer *nrhs, complex *
+
+/* cgelqs.c */
+F2CSUB cgelqs_(integer *m, integer *n, integer *nrhs, complex *
 	a, integer *lda, complex *tau, complex *b, integer *ldb, complex *
 	work, integer *lwork, integer *info);
-extern logical cgennd_(integer *m, integer *n, complex *a, integer *lda);
-extern /* Subroutine */ int cgeqls_(integer *m, integer *n, integer *nrhs, complex *
+
+/* cgennd.c */
+logical cgennd_(integer *m, integer *n, complex *a, integer *lda);
+
+/* cgeqls.c */
+F2CSUB cgeqls_(integer *m, integer *n, integer *nrhs, complex *
 	a, integer *lda, complex *tau, complex *b, integer *ldb, complex *
 	work, integer *lwork, integer *info);
-extern /* Subroutine */ int cgeqrs_(integer *m, integer *n, integer *nrhs, complex *
+
+/* cgeqrs.c */
+F2CSUB cgeqrs_(integer *m, integer *n, integer *nrhs, complex *
 	a, integer *lda, complex *tau, complex *b, integer *ldb, complex *
 	work, integer *lwork, integer *info);
-extern /* Subroutine */ int cgerqs_(integer *m, integer *n, integer *nrhs, complex *
+
+/* cgerqs.c */
+F2CSUB cgerqs_(integer *m, integer *n, integer *nrhs, complex *
 	a, integer *lda, complex *tau, complex *b, integer *ldb, complex *
 	work, integer *lwork, integer *info);
-extern /* Subroutine */ int cget01_(integer *m, integer *n, complex *a, integer *lda, 
+
+/* cget01.c */
+F2CSUB cget01_(integer *m, integer *n, complex *a, integer *lda, 
 	 complex *afac, integer *ldafac, integer *ipiv, real *rwork, real *
 	resid);
-extern /* Subroutine */ int cget02_(char *trans, integer *m, integer *n, integer *
+
+/* cget02.c */
+F2CSUB cget02_(char *trans, integer *m, integer *n, integer *
 	nrhs, complex *a, integer *lda, complex *x, integer *ldx, complex *b, 
 	integer *ldb, real *rwork, real *resid);
-extern /* Subroutine */ int cget03_(integer *n, complex *a, integer *lda, complex *
+
+/* cget03.c */
+F2CSUB cget03_(integer *n, complex *a, integer *lda, complex *
 	ainv, integer *ldainv, complex *work, integer *ldwork, real *rwork, 
 	real *rcond, real *resid);
-extern /* Subroutine */ int cget04_(integer *n, integer *nrhs, complex *x, integer *
+
+/* cget04.c */
+F2CSUB cget04_(integer *n, integer *nrhs, complex *x, integer *
 	ldx, complex *xact, integer *ldxact, real *rcond, real *resid);
-extern /* Subroutine */ int cget07_(char *trans, integer *n, integer *nrhs, complex *
+
+/* cget07.c */
+F2CSUB cget07_(char *trans, integer *n, integer *nrhs, complex *
 	a, integer *lda, complex *b, integer *ldb, complex *x, integer *ldx, 
 	complex *xact, integer *ldxact, real *ferr, logical *chkferr, real *
 	berr, real *reslts);
-extern /* Subroutine */ int cgtt01_(integer *n, complex *dl, complex *d__, complex *
+
+/* cgtt01.c */
+F2CSUB cgtt01_(integer *n, complex *dl, complex *d__, complex *
 	du, complex *dlf, complex *df, complex *duf, complex *du2, integer *
 	ipiv, complex *work, integer *ldwork, real *rwork, real *resid);
-extern /* Subroutine */ int cgtt02_(char *trans, integer *n, integer *nrhs, complex *
+
+/* cgtt02.c */
+F2CSUB cgtt02_(char *trans, integer *n, integer *nrhs, complex *
 	dl, complex *d__, complex *du, complex *x, integer *ldx, complex *b, 
 	integer *ldb, real *rwork, real *resid);
-extern /* Subroutine */ int cgtt05_(char *trans, integer *n, integer *nrhs, complex *
+
+/* cgtt05.c */
+F2CSUB cgtt05_(char *trans, integer *n, integer *nrhs, complex *
 	dl, complex *d__, complex *du, complex *b, integer *ldb, complex *x, 
 	integer *ldx, complex *xact, integer *ldxact, real *ferr, real *berr, 
 	real *reslts);
-extern /* Subroutine */ int chet01_(char *uplo, integer *n, complex *a, integer *lda, 
+
+/* chet01.c */
+F2CSUB chet01_(char *uplo, integer *n, complex *a, integer *lda, 
 	 complex *afac, integer *ldafac, integer *ipiv, complex *c__, integer 
 	*ldc, real *rwork, real *resid);
-extern /* Subroutine */ int chkxer_(char *srnamt, integer *infot, integer *nout, 
+
+/* chkxer.c */
+F2CSUB chkxer_(char *srnamt, integer *infot, integer *nout, 
 	logical *lerr, logical *ok);
-extern /* Subroutine */ int chpt01_(char *uplo, integer *n, complex *a, complex *
+
+/* chpt01.c */
+F2CSUB chpt01_(char *uplo, integer *n, complex *a, complex *
 	afac, integer *ipiv, complex *c__, integer *ldc, real *rwork, real *
 	resid);
-extern /* Subroutine */ int clahilb_(integer *n, integer *nrhs, complex *a, integer *
+
+/* clahilb.c */
+F2CSUB clahilb_(integer *n, integer *nrhs, complex *a, integer *
 	lda, complex *x, integer *ldx, complex *b, integer *ldb, real *work, 
 	integer *info, char *path);
-extern /* Subroutine */ int claipd_(integer *n, complex *a, integer *inda, integer *
+
+/* claipd.c */
+F2CSUB claipd_(integer *n, complex *a, integer *inda, integer *
 	vinda);
-extern /* Subroutine */ int claptm_(char *uplo, integer *n, integer *nrhs, real *
+
+/* claptm.c */
+F2CSUB claptm_(char *uplo, integer *n, integer *nrhs, real *
 	alpha, real *d__, complex *e, complex *x, integer *ldx, real *beta, 
 	complex *b, integer *ldb);
-extern /* Subroutine */ int clarhs_(char *path, char *xtype, char *uplo, char *trans, 
+
+/* clarhs.c */
+F2CSUB clarhs_(char *path, char *xtype, char *uplo, char *trans, 
 	 integer *m, integer *n, integer *kl, integer *ku, integer *nrhs, 
 	complex *a, integer *lda, complex *x, integer *ldx, complex *b, 
 	integer *ldb, integer *iseed, integer *info);
-extern /* Subroutine */ int clatb4_(char *path, integer *imat, integer *m, integer *
+
+/* clatb4.c */
+F2CSUB clatb4_(char *path, integer *imat, integer *m, integer *
 	n, char *type__, integer *kl, integer *ku, real *anorm, integer *mode, 
 	 real *cndnum, char *dist);
-extern /* Subroutine */ int clatb5_(char *path, integer *imat, integer *n, char *
+
+/* clatb5.c */
+F2CSUB clatb5_(char *path, integer *imat, integer *n, char *
 	type__, integer *kl, integer *ku, real *anorm, integer *mode, real *
 	cndnum, char *dist);
-extern /* Subroutine */ int clatsp_(char *uplo, integer *n, complex *x, integer *
+
+/* clatsp.c */
+F2CSUB clatsp_(char *uplo, integer *n, complex *x, integer *
 	iseed);
-extern /* Subroutine */ int clatsy_(char *uplo, integer *n, complex *x, integer *ldx, 
+
+/* clatsy.c */
+F2CSUB clatsy_(char *uplo, integer *n, complex *x, integer *ldx, 
 	 integer *iseed);
-extern /* Subroutine */ int clattb_(integer *imat, char *uplo, char *trans, char *
+
+/* clattb.c */
+F2CSUB clattb_(integer *imat, char *uplo, char *trans, char *
 	diag, integer *iseed, integer *n, integer *kd, complex *ab, integer *
 	ldab, complex *b, complex *work, real *rwork, integer *info);
-extern /* Subroutine */ int clattp_(integer *imat, char *uplo, char *trans, char *
+
+/* clattp.c */
+F2CSUB clattp_(integer *imat, char *uplo, char *trans, char *
 	diag, integer *iseed, integer *n, complex *ap, complex *b, complex *
 	work, real *rwork, integer *info);
-extern /* Subroutine */ int clattr_(integer *imat, char *uplo, char *trans, char *
+
+/* clattr.c */
+F2CSUB clattr_(integer *imat, char *uplo, char *trans, char *
 	diag, integer *iseed, integer *n, complex *a, integer *lda, complex *
 	b, complex *work, real *rwork, integer *info);
-extern /* Subroutine */ int clavhe_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* clavhe.c */
+F2CSUB clavhe_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, complex *a, integer *lda, integer *ipiv, complex *b, 
 	integer *ldb, integer *info);
-extern /* Subroutine */ int clavhp_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* clavhp.c */
+F2CSUB clavhp_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, complex *a, integer *ipiv, complex *b, integer *ldb, 
 	integer *info);
-extern /* Subroutine */ int clavsp_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* clavsp.c */
+F2CSUB clavsp_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, complex *a, integer *ipiv, complex *b, integer *ldb, 
 	integer *info);
-extern /* Subroutine */ int clavsy_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* clavsy.c */
+F2CSUB clavsy_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, complex *a, integer *lda, integer *ipiv, complex *b, 
 	integer *ldb, integer *info);
-extern /* Subroutine */ int clqt01_(integer *m, integer *n, complex *a, complex *af, 
+
+/* clqt01.c */
+F2CSUB clqt01_(integer *m, integer *n, complex *a, complex *af, 
 	complex *q, complex *l, integer *lda, complex *tau, complex *work, 
 	integer *lwork, real *rwork, real *result);
-extern /* Subroutine */ int clqt02_(integer *m, integer *n, integer *k, complex *a, 
+
+/* clqt02.c */
+F2CSUB clqt02_(integer *m, integer *n, integer *k, complex *a, 
 	complex *af, complex *q, complex *l, integer *lda, complex *tau, 
 	complex *work, integer *lwork, real *rwork, real *result);
-extern /* Subroutine */ int clqt03_(integer *m, integer *n, integer *k, complex *af, 
+
+/* clqt03.c */
+F2CSUB clqt03_(integer *m, integer *n, integer *k, complex *af, 
 	complex *c__, complex *cc, complex *q, integer *lda, complex *tau, 
 	complex *work, integer *lwork, real *rwork, real *result);
-extern /* Subroutine */ int cpbt01_(char *uplo, integer *n, integer *kd, complex *a, 
+
+/* cpbt01.c */
+F2CSUB cpbt01_(char *uplo, integer *n, integer *kd, complex *a, 
 	integer *lda, complex *afac, integer *ldafac, real *rwork, real *
 	resid);
-extern /* Subroutine */ int cpbt02_(char *uplo, integer *n, integer *kd, integer *
+
+/* cpbt02.c */
+F2CSUB cpbt02_(char *uplo, integer *n, integer *kd, integer *
 	nrhs, complex *a, integer *lda, complex *x, integer *ldx, complex *b, 
 	integer *ldb, real *rwork, real *resid);
-extern /* Subroutine */ int cpbt05_(char *uplo, integer *n, integer *kd, integer *
+
+/* cpbt05.c */
+F2CSUB cpbt05_(char *uplo, integer *n, integer *kd, integer *
 	nrhs, complex *ab, integer *ldab, complex *b, integer *ldb, complex *
 	x, integer *ldx, complex *xact, integer *ldxact, real *ferr, real *
 	berr, real *reslts);
-extern /* Subroutine */ int cpot01_(char *uplo, integer *n, complex *a, integer *lda, 
+
+/* cpot01.c */
+F2CSUB cpot01_(char *uplo, integer *n, complex *a, integer *lda, 
 	 complex *afac, integer *ldafac, real *rwork, real *resid);
-extern /* Subroutine */ int cpot02_(char *uplo, integer *n, integer *nrhs, complex *
+
+/* cpot02.c */
+F2CSUB cpot02_(char *uplo, integer *n, integer *nrhs, complex *
 	a, integer *lda, complex *x, integer *ldx, complex *b, integer *ldb, 
 	real *rwork, real *resid);
-extern /* Subroutine */ int cpot03_(char *uplo, integer *n, complex *a, integer *lda, 
+
+/* cpot03.c */
+F2CSUB cpot03_(char *uplo, integer *n, complex *a, integer *lda, 
 	 complex *ainv, integer *ldainv, complex *work, integer *ldwork, real 
 	*rwork, real *rcond, real *resid);
-extern /* Subroutine */ int cpot05_(char *uplo, integer *n, integer *nrhs, complex *
+
+/* cpot05.c */
+F2CSUB cpot05_(char *uplo, integer *n, integer *nrhs, complex *
 	a, integer *lda, complex *b, integer *ldb, complex *x, integer *ldx, 
 	complex *xact, integer *ldxact, real *ferr, real *berr, real *reslts);
-extern /* Subroutine */ int cppt01_(char *uplo, integer *n, complex *a, complex *
+
+/* cppt01.c */
+F2CSUB cppt01_(char *uplo, integer *n, complex *a, complex *
 	afac, real *rwork, real *resid);
-extern /* Subroutine */ int cppt02_(char *uplo, integer *n, integer *nrhs, complex *
+
+/* cppt02.c */
+F2CSUB cppt02_(char *uplo, integer *n, integer *nrhs, complex *
 	a, complex *x, integer *ldx, complex *b, integer *ldb, real *rwork, 
 	real *resid);
-extern /* Subroutine */ int cppt03_(char *uplo, integer *n, complex *a, complex *
+
+/* cppt03.c */
+F2CSUB cppt03_(char *uplo, integer *n, complex *a, complex *
 	ainv, complex *work, integer *ldwork, real *rwork, real *rcond, real *
 	resid);
-extern /* Subroutine */ int cppt05_(char *uplo, integer *n, integer *nrhs, complex *
+
+/* cppt05.c */
+F2CSUB cppt05_(char *uplo, integer *n, integer *nrhs, complex *
 	ap, complex *b, integer *ldb, complex *x, integer *ldx, complex *xact, 
 	 integer *ldxact, real *ferr, real *berr, real *reslts);
-extern /* Subroutine */ int cpst01_(char *uplo, integer *n, complex *a, integer *lda, 
+
+/* cpst01.c */
+F2CSUB cpst01_(char *uplo, integer *n, complex *a, integer *lda, 
 	 complex *afac, integer *ldafac, complex *perm, integer *ldperm, 
 	integer *piv, real *rwork, real *resid, integer *rank);
-extern /* Subroutine */ int cptt01_(integer *n, real *d__, complex *e, real *df, 
+
+/* cptt01.c */
+F2CSUB cptt01_(integer *n, real *d__, complex *e, real *df, 
 	complex *ef, complex *work, real *resid);
-extern /* Subroutine */ int cptt02_(char *uplo, integer *n, integer *nrhs, real *d__, 
+
+/* cptt02.c */
+F2CSUB cptt02_(char *uplo, integer *n, integer *nrhs, real *d__, 
 	 complex *e, complex *x, integer *ldx, complex *b, integer *ldb, real 
 	*resid);
-extern /* Subroutine */ int cptt05_(integer *n, integer *nrhs, real *d__, complex *e, 
+
+/* cptt05.c */
+F2CSUB cptt05_(integer *n, integer *nrhs, real *d__, complex *e, 
 	 complex *b, integer *ldb, complex *x, integer *ldx, complex *xact, 
 	integer *ldxact, real *ferr, real *berr, real *reslts);
-extern /* Subroutine */ int cqlt01_(integer *m, integer *n, complex *a, complex *af, 
+
+/* cqlt01.c */
+F2CSUB cqlt01_(integer *m, integer *n, complex *a, complex *af, 
 	complex *q, complex *l, integer *lda, complex *tau, complex *work, 
 	integer *lwork, real *rwork, real *result);
-extern /* Subroutine */ int cqlt02_(integer *m, integer *n, integer *k, complex *a, 
+
+/* cqlt02.c */
+F2CSUB cqlt02_(integer *m, integer *n, integer *k, complex *a, 
 	complex *af, complex *q, complex *l, integer *lda, complex *tau, 
 	complex *work, integer *lwork, real *rwork, real *result);
-extern /* Subroutine */ int cqlt03_(integer *m, integer *n, integer *k, complex *af, 
+
+/* cqlt03.c */
+F2CSUB cqlt03_(integer *m, integer *n, integer *k, complex *af, 
 	complex *c__, complex *cc, complex *q, integer *lda, complex *tau, 
 	complex *work, integer *lwork, real *rwork, real *result);
-extern doublereal cqpt01_(integer *m, integer *n, integer *k, complex *a, complex *
+
+/* cqpt01.c */
+doublereal cqpt01_(integer *m, integer *n, integer *k, complex *a, complex *
 	af, integer *lda, complex *tau, integer *jpvt, complex *work, integer 
 	*lwork);
-extern /* Subroutine */ int cqrt01_(integer *m, integer *n, complex *a, complex *af, 
+
+/* cqrt01.c */
+F2CSUB cqrt01_(integer *m, integer *n, complex *a, complex *af, 
 	complex *q, complex *r__, integer *lda, complex *tau, complex *work, 
 	integer *lwork, real *rwork, real *result);
-extern /* Subroutine */ int cqrt02_(integer *m, integer *n, integer *k, complex *a, 
+
+/* cqrt02.c */
+F2CSUB cqrt02_(integer *m, integer *n, integer *k, complex *a, 
 	complex *af, complex *q, complex *r__, integer *lda, complex *tau, 
 	complex *work, integer *lwork, real *rwork, real *result);
-extern /* Subroutine */ int cqrt03_(integer *m, integer *n, integer *k, complex *af, 
+
+/* cqrt03.c */
+F2CSUB cqrt03_(integer *m, integer *n, integer *k, complex *af, 
 	complex *c__, complex *cc, complex *q, integer *lda, complex *tau, 
 	complex *work, integer *lwork, real *rwork, real *result);
-extern doublereal cqrt11_(integer *m, integer *k, complex *a, integer *lda, complex *
+
+/* cqrt11.c */
+doublereal cqrt11_(integer *m, integer *k, complex *a, integer *lda, complex *
 	tau, complex *work, integer *lwork);
-extern doublereal cqrt12_(integer *m, integer *n, complex *a, integer *lda, real *s, 
+
+/* cqrt12.c */
+doublereal cqrt12_(integer *m, integer *n, complex *a, integer *lda, real *s, 
 	complex *work, integer *lwork, real *rwork);
-extern /* Subroutine */ int cqrt13_(integer *scale, integer *m, integer *n, complex *
+
+/* cqrt13.c */
+F2CSUB cqrt13_(integer *scale, integer *m, integer *n, complex *
 	a, integer *lda, real *norma, integer *iseed);
-extern doublereal cqrt14_(char *trans, integer *m, integer *n, integer *nrhs, 
+
+/* cqrt14.c */
+doublereal cqrt14_(char *trans, integer *m, integer *n, integer *nrhs, 
 	complex *a, integer *lda, complex *x, integer *ldx, complex *work, 
 	integer *lwork);
-extern /* Subroutine */ int cqrt15_(integer *scale, integer *rksel, integer *m, 
+
+/* cqrt15.c */
+F2CSUB cqrt15_(integer *scale, integer *rksel, integer *m, 
 	integer *n, integer *nrhs, complex *a, integer *lda, complex *b, 
 	integer *ldb, real *s, integer *rank, real *norma, real *normb, 
 	integer *iseed, complex *work, integer *lwork);
-extern /* Subroutine */ int cqrt16_(char *trans, integer *m, integer *n, integer *
+
+/* cqrt16.c */
+F2CSUB cqrt16_(char *trans, integer *m, integer *n, integer *
 	nrhs, complex *a, integer *lda, complex *x, integer *ldx, complex *b, 
 	integer *ldb, real *rwork, real *resid);
-extern doublereal cqrt17_(char *trans, integer *iresid, integer *m, integer *n, 
+
+/* cqrt17.c */
+doublereal cqrt17_(char *trans, integer *iresid, integer *m, integer *n, 
 	integer *nrhs, complex *a, integer *lda, complex *x, integer *ldx, 
 	complex *b, integer *ldb, complex *c__, complex *work, integer *lwork);
-extern /* Subroutine */ int crqt01_(integer *m, integer *n, complex *a, complex *af, 
+
+/* crqt01.c */
+F2CSUB crqt01_(integer *m, integer *n, complex *a, complex *af, 
 	complex *q, complex *r__, integer *lda, complex *tau, complex *work, 
 	integer *lwork, real *rwork, real *result);
-extern /* Subroutine */ int crqt02_(integer *m, integer *n, integer *k, complex *a, 
+
+/* crqt02.c */
+F2CSUB crqt02_(integer *m, integer *n, integer *k, complex *a, 
 	complex *af, complex *q, complex *r__, integer *lda, complex *tau, 
 	complex *work, integer *lwork, real *rwork, real *result);
-extern /* Subroutine */ int crqt03_(integer *m, integer *n, integer *k, complex *af, 
+
+/* crqt03.c */
+F2CSUB crqt03_(integer *m, integer *n, integer *k, complex *af, 
 	complex *c__, complex *cc, complex *q, integer *lda, complex *tau, 
 	complex *work, integer *lwork, real *rwork, real *result);
-extern doublereal crzt01_(integer *m, integer *n, complex *a, complex *af, integer *
+
+/* crzt01.c */
+doublereal crzt01_(integer *m, integer *n, complex *a, complex *af, integer *
 	lda, complex *tau, complex *work, integer *lwork);
-extern doublereal crzt02_(integer *m, integer *n, complex *af, integer *lda, complex 
+
+/* crzt02.c */
+doublereal crzt02_(integer *m, integer *n, complex *af, integer *lda, complex 
 	*tau, complex *work, integer *lwork);
-extern /* Subroutine */ int csbmv_(char *uplo, integer *n, integer *k, complex *
+
+/* csbmv.c */
+F2CSUB csbmv_(char *uplo, integer *n, integer *k, complex *
 	alpha, complex *a, integer *lda, complex *x, integer *incx, complex *
 	beta, complex *y, integer *incy);
-extern /* Subroutine */ int cspt01_(char *uplo, integer *n, complex *a, complex *
+
+/* cspt01.c */
+F2CSUB cspt01_(char *uplo, integer *n, complex *a, complex *
 	afac, integer *ipiv, complex *c__, integer *ldc, real *rwork, real *
 	resid);
-extern /* Subroutine */ int cspt02_(char *uplo, integer *n, integer *nrhs, complex *
+
+/* cspt02.c */
+F2CSUB cspt02_(char *uplo, integer *n, integer *nrhs, complex *
 	a, complex *x, integer *ldx, complex *b, integer *ldb, real *rwork, 
 	real *resid);
-extern /* Subroutine */ int cspt03_(char *uplo, integer *n, complex *a, complex *
+
+/* cspt03.c */
+F2CSUB cspt03_(char *uplo, integer *n, complex *a, complex *
 	ainv, complex *work, integer *ldw, real *rwork, real *rcond, real *
 	resid);
-extern /* Subroutine */ int csyt01_(char *uplo, integer *n, complex *a, integer *lda, 
+
+/* csyt01.c */
+F2CSUB csyt01_(char *uplo, integer *n, complex *a, integer *lda, 
 	 complex *afac, integer *ldafac, integer *ipiv, complex *c__, integer 
 	*ldc, real *rwork, real *resid);
-extern /* Subroutine */ int csyt02_(char *uplo, integer *n, integer *nrhs, complex *
+
+/* csyt02.c */
+F2CSUB csyt02_(char *uplo, integer *n, integer *nrhs, complex *
 	a, integer *lda, complex *x, integer *ldx, complex *b, integer *ldb, 
 	real *rwork, real *resid);
-extern /* Subroutine */ int csyt03_(char *uplo, integer *n, complex *a, integer *lda, 
+
+/* csyt03.c */
+F2CSUB csyt03_(char *uplo, integer *n, complex *a, integer *lda, 
 	 complex *ainv, integer *ldainv, complex *work, integer *ldwork, real 
 	*rwork, real *rcond, real *resid);
-extern /* Subroutine */ int ctbt02_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* ctbt02.c */
+F2CSUB ctbt02_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *kd, integer *nrhs, complex *ab, integer *ldab, complex *x, 
 	integer *ldx, complex *b, integer *ldb, complex *work, real *rwork, 
 	real *resid);
-extern /* Subroutine */ int ctbt03_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* ctbt03.c */
+F2CSUB ctbt03_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *kd, integer *nrhs, complex *ab, integer *ldab, real *scale, 
 	real *cnorm, real *tscal, complex *x, integer *ldx, complex *b, 
 	integer *ldb, complex *work, real *resid);
-extern /* Subroutine */ int ctbt05_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* ctbt05.c */
+F2CSUB ctbt05_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *kd, integer *nrhs, complex *ab, integer *ldab, complex *b, 
 	integer *ldb, complex *x, integer *ldx, complex *xact, integer *
 	ldxact, real *ferr, real *berr, real *reslts);
-extern /* Subroutine */ int ctbt06_(real *rcond, real *rcondc, char *uplo, char *
+
+/* ctbt06.c */
+F2CSUB ctbt06_(real *rcond, real *rcondc, char *uplo, char *
 	diag, integer *n, integer *kd, complex *ab, integer *ldab, real *
 	rwork, real *rat);
-extern /* Subroutine */ int ctpt01_(char *uplo, char *diag, integer *n, complex *ap, 
+
+/* ctpt01.c */
+F2CSUB ctpt01_(char *uplo, char *diag, integer *n, complex *ap, 
 	complex *ainvp, real *rcond, real *rwork, real *resid);
-extern /* Subroutine */ int ctpt02_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* ctpt02.c */
+F2CSUB ctpt02_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, complex *ap, complex *x, integer *ldx, complex *b, 
 	integer *ldb, complex *work, real *rwork, real *resid);
-extern /* Subroutine */ int ctpt03_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* ctpt03.c */
+F2CSUB ctpt03_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, complex *ap, real *scale, real *cnorm, real *tscal, 
 	complex *x, integer *ldx, complex *b, integer *ldb, complex *work, 
 	real *resid);
-extern /* Subroutine */ int ctpt05_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* ctpt05.c */
+F2CSUB ctpt05_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, complex *ap, complex *b, integer *ldb, complex *x, 
 	integer *ldx, complex *xact, integer *ldxact, real *ferr, real *berr, 
 	real *reslts);
-extern /* Subroutine */ int ctpt06_(real *rcond, real *rcondc, char *uplo, char *
+
+/* ctpt06.c */
+F2CSUB ctpt06_(real *rcond, real *rcondc, char *uplo, char *
 	diag, integer *n, complex *ap, real *rwork, real *rat);
-extern /* Subroutine */ int ctrt01_(char *uplo, char *diag, integer *n, complex *a, 
+
+/* ctrt01.c */
+F2CSUB ctrt01_(char *uplo, char *diag, integer *n, complex *a, 
 	integer *lda, complex *ainv, integer *ldainv, real *rcond, real *
 	rwork, real *resid);
-extern /* Subroutine */ int ctrt02_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* ctrt02.c */
+F2CSUB ctrt02_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, complex *a, integer *lda, complex *x, integer *ldx, 
 	complex *b, integer *ldb, complex *work, real *rwork, real *resid);
-extern /* Subroutine */ int ctrt03_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* ctrt03.c */
+F2CSUB ctrt03_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, complex *a, integer *lda, real *scale, real *cnorm, 
 	real *tscal, complex *x, integer *ldx, complex *b, integer *ldb, 
 	complex *work, real *resid);
-extern /* Subroutine */ int ctrt05_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* ctrt05.c */
+F2CSUB ctrt05_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, complex *a, integer *lda, complex *b, integer *ldb, 
 	complex *x, integer *ldx, complex *xact, integer *ldxact, real *ferr, 
 	real *berr, real *reslts);
-extern /* Subroutine */ int ctrt06_(real *rcond, real *rcondc, char *uplo, char *
+
+/* ctrt06.c */
+F2CSUB ctrt06_(real *rcond, real *rcondc, char *uplo, char *
 	diag, integer *n, complex *a, integer *lda, real *rwork, real *rat);
-extern doublereal ctzt01_(integer *m, integer *n, complex *a, complex *af, integer *
+
+/* ctzt01.c */
+doublereal ctzt01_(integer *m, integer *n, complex *a, complex *af, integer *
 	lda, complex *tau, complex *work, integer *lwork);
-extern doublereal ctzt02_(integer *m, integer *n, complex *af, integer *lda, complex 
+
+/* ctzt02.c */
+doublereal ctzt02_(integer *m, integer *n, complex *af, integer *lda, complex 
 	*tau, complex *work, integer *lwork);
-extern /* Subroutine */ int dchkeq_(doublereal *thresh, integer *nout);
-extern /* Subroutine */ int dchkgb_(logical *dotype, integer *nm, integer *mval, 
+
+/* dchkeq.c */
+F2CSUB dchkeq_(doublereal *thresh, integer *nout);
+
+/* dchkgb.c */
+F2CSUB dchkgb_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nns, integer *nsval, doublereal *thresh, logical *tsterr, doublereal *
 	a, integer *la, doublereal *afac, integer *lafac, doublereal *b, 
 	doublereal *x, doublereal *xact, doublereal *work, doublereal *rwork, 
 	integer *iwork, integer *nout);
-extern /* Subroutine */ int dchkge_(logical *dotype, integer *nm, integer *mval, 
+
+/* dchkge.c */
+F2CSUB dchkge_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nns, integer *nsval, doublereal *thresh, logical *tsterr, integer *
 	nmax, doublereal *a, doublereal *afac, doublereal *ainv, doublereal *
 	b, doublereal *x, doublereal *xact, doublereal *work, doublereal *
 	rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int dchkgt_(logical *dotype, integer *nn, integer *nval, 
+
+/* dchkgt.c */
+F2CSUB dchkgt_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, doublereal *thresh, logical *tsterr, 
 	doublereal *a, doublereal *af, doublereal *b, doublereal *x, 
 	doublereal *xact, doublereal *work, doublereal *rwork, integer *iwork, 
 	 integer *nout);
-extern /* Subroutine */ int dchklq_(logical *dotype, integer *nm, integer *mval, 
+
+/* dchklq.c */
+F2CSUB dchklq_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, integer *nrhs, doublereal *thresh, logical *tsterr, integer *
 	nmax, doublereal *a, doublereal *af, doublereal *aq, doublereal *al, 
 	doublereal *ac, doublereal *b, doublereal *x, doublereal *xact, 
 	doublereal *tau, doublereal *work, doublereal *rwork, integer *iwork, 
 	integer *nout);
-extern /* Subroutine */ int dchkpb_(logical *dotype, integer *nn, integer *nval, 
+
+/* dchkpb.c */
+F2CSUB dchkpb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nns, integer *nsval, 
 	doublereal *thresh, logical *tsterr, integer *nmax, doublereal *a, 
 	doublereal *afac, doublereal *ainv, doublereal *b, doublereal *x, 
 	doublereal *xact, doublereal *work, doublereal *rwork, integer *iwork, 
 	 integer *nout);
-extern /* Subroutine */ int dchkpo_(logical *dotype, integer *nn, integer *nval, 
+
+/* dchkpo.c */
+F2CSUB dchkpo_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nns, integer *nsval, 
 	doublereal *thresh, logical *tsterr, integer *nmax, doublereal *a, 
 	doublereal *afac, doublereal *ainv, doublereal *b, doublereal *x, 
 	doublereal *xact, doublereal *work, doublereal *rwork, integer *iwork, 
 	 integer *nout);
-extern /* Subroutine */ int dchkpp_(logical *dotype, integer *nn, integer *nval, 
+
+/* dchkpp.c */
+F2CSUB dchkpp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, doublereal *thresh, logical *tsterr, 
 	integer *nmax, doublereal *a, doublereal *afac, doublereal *ainv, 
 	doublereal *b, doublereal *x, doublereal *xact, doublereal *work, 
 	doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int dchkps_(logical *dotype, integer *nn, integer *nval, 
+
+/* dchkps.c */
+F2CSUB dchkps_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nrank, integer *rankval, 
 	doublereal *thresh, logical *tsterr, integer *nmax, doublereal *a, 
 	doublereal *afac, doublereal *perm, integer *piv, doublereal *work, 
 	doublereal *rwork, integer *nout);
-extern /* Subroutine */ int dchkpt_(logical *dotype, integer *nn, integer *nval, 
+
+/* dchkpt.c */
+F2CSUB dchkpt_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, doublereal *thresh, logical *tsterr, 
 	doublereal *a, doublereal *d__, doublereal *e, doublereal *b, 
 	doublereal *x, doublereal *xact, doublereal *work, doublereal *rwork, 
 	integer *nout);
-extern /* Subroutine */ int dchkq3_(logical *dotype, integer *nm, integer *mval, 
+
+/* dchkq3.c */
+F2CSUB dchkq3_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, doublereal *thresh, doublereal *a, doublereal *copya, 
 	doublereal *s, doublereal *copys, doublereal *tau, doublereal *work, 
 	integer *iwork, integer *nout);
-extern /* Subroutine */ int dchkql_(logical *dotype, integer *nm, integer *mval, 
+
+/* dchkql.c */
+F2CSUB dchkql_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, integer *nrhs, doublereal *thresh, logical *tsterr, integer *
 	nmax, doublereal *a, doublereal *af, doublereal *aq, doublereal *al, 
 	doublereal *ac, doublereal *b, doublereal *x, doublereal *xact, 
 	doublereal *tau, doublereal *work, doublereal *rwork, integer *iwork, 
 	integer *nout);
-extern /* Subroutine */ int dchkqp_(logical *dotype, integer *nm, integer *mval, 
+
+/* dchkqp.c */
+F2CSUB dchkqp_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, doublereal *thresh, logical *tsterr, 
 	doublereal *a, doublereal *copya, doublereal *s, doublereal *copys, 
 	doublereal *tau, doublereal *work, integer *iwork, integer *nout);
-extern /* Subroutine */ int dchkqr_(logical *dotype, integer *nm, integer *mval, 
+
+/* dchkqr.c */
+F2CSUB dchkqr_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, integer *nrhs, doublereal *thresh, logical *tsterr, integer *
 	nmax, doublereal *a, doublereal *af, doublereal *aq, doublereal *ar, 
 	doublereal *ac, doublereal *b, doublereal *x, doublereal *xact, 
 	doublereal *tau, doublereal *work, doublereal *rwork, integer *iwork, 
 	integer *nout);
-extern /* Subroutine */ int dchkrq_(logical *dotype, integer *nm, integer *mval, 
+
+/* dchkrq.c */
+F2CSUB dchkrq_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, integer *nrhs, doublereal *thresh, logical *tsterr, integer *
 	nmax, doublereal *a, doublereal *af, doublereal *aq, doublereal *ar, 
 	doublereal *ac, doublereal *b, doublereal *x, doublereal *xact, 
 	doublereal *tau, doublereal *work, doublereal *rwork, integer *iwork, 
 	integer *nout);
-extern /* Subroutine */ int dchksp_(logical *dotype, integer *nn, integer *nval, 
+
+/* dchksp.c */
+F2CSUB dchksp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, doublereal *thresh, logical *tsterr, 
 	integer *nmax, doublereal *a, doublereal *afac, doublereal *ainv, 
 	doublereal *b, doublereal *x, doublereal *xact, doublereal *work, 
 	doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int dchksy_(logical *dotype, integer *nn, integer *nval, 
+
+/* dchksy.c */
+F2CSUB dchksy_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nns, integer *nsval, 
 	doublereal *thresh, logical *tsterr, integer *nmax, doublereal *a, 
 	doublereal *afac, doublereal *ainv, doublereal *b, doublereal *x, 
 	doublereal *xact, doublereal *work, doublereal *rwork, integer *iwork, 
 	 integer *nout);
-extern /* Subroutine */ int dchktb_(logical *dotype, integer *nn, integer *nval, 
+
+/* dchktb.c */
+F2CSUB dchktb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, doublereal *thresh, logical *tsterr, 
 	integer *nmax, doublereal *ab, doublereal *ainv, doublereal *b, 
 	doublereal *x, doublereal *xact, doublereal *work, doublereal *rwork, 
 	integer *iwork, integer *nout);
-extern /* Subroutine */ int dchktp_(logical *dotype, integer *nn, integer *nval, 
+
+/* dchktp.c */
+F2CSUB dchktp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, doublereal *thresh, logical *tsterr, 
 	integer *nmax, doublereal *ap, doublereal *ainvp, doublereal *b, 
 	doublereal *x, doublereal *xact, doublereal *work, doublereal *rwork, 
 	integer *iwork, integer *nout);
-extern /* Subroutine */ int dchktr_(logical *dotype, integer *nn, integer *nval, 
+
+/* dchktr.c */
+F2CSUB dchktr_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nns, integer *nsval, 
 	doublereal *thresh, logical *tsterr, integer *nmax, doublereal *a, 
 	doublereal *ainv, doublereal *b, doublereal *x, doublereal *xact, 
 	doublereal *work, doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int dchktz_(logical *dotype, integer *nm, integer *mval, 
+
+/* dchktz.c */
+F2CSUB dchktz_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, doublereal *thresh, logical *tsterr, 
 	doublereal *a, doublereal *copya, doublereal *s, doublereal *copys, 
 	doublereal *tau, doublereal *work, integer *nout);
-extern /* Subroutine */ int ddrvab_(logical *dotype, integer *nm, integer *mval, 
+
+/* ddrvab.c */
+F2CSUB ddrvab_(logical *dotype, integer *nm, integer *mval, 
 	integer *nns, integer *nsval, doublereal *thresh, integer *nmax, 
 	doublereal *a, doublereal *afac, doublereal *b, doublereal *x, 
 	doublereal *work, doublereal *rwork, real *swork, integer *iwork, 
 	integer *nout);
-extern /* Subroutine */ int ddrvac_(logical *dotype, integer *nm, integer *mval, 
+
+/* ddrvac.c */
+F2CSUB ddrvac_(logical *dotype, integer *nm, integer *mval, 
 	integer *nns, integer *nsval, doublereal *thresh, integer *nmax, 
 	doublereal *a, doublereal *afac, doublereal *b, doublereal *x, 
 	doublereal *work, doublereal *rwork, real *swork, integer *nout);
-extern /* Subroutine */ int ddrvgb_(logical *dotype, integer *nn, integer *nval, 
+
+/* ddrvgb.c */
+F2CSUB ddrvgb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, doublereal *a, 
 	integer *la, doublereal *afb, integer *lafb, doublereal *asav, 
 	doublereal *b, doublereal *bsav, doublereal *x, doublereal *xact, 
 	doublereal *s, doublereal *work, doublereal *rwork, integer *iwork, 
 	integer *nout);
-extern /* Subroutine */ int ddrvgb_(logical *dotype, integer *nn, integer *nval, 
+
+/* ddrvgbx.c */
+F2CSUB ddrvgb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, doublereal *a, 
 	integer *la, doublereal *afb, integer *lafb, doublereal *asav, 
 	doublereal *b, doublereal *bsav, doublereal *x, doublereal *xact, 
 	doublereal *s, doublereal *work, doublereal *rwork, integer *iwork, 
 	integer *nout);
-extern /* Subroutine */ int ddrvge_(logical *dotype, integer *nn, integer *nval, 
+
+/* ddrvge.c */
+F2CSUB ddrvge_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, integer *nmax, 
 	doublereal *a, doublereal *afac, doublereal *asav, doublereal *b, 
 	doublereal *bsav, doublereal *x, doublereal *xact, doublereal *s, 
 	doublereal *work, doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int ddrvge_(logical *dotype, integer *nn, integer *nval, 
+
+/* ddrvgex.c */
+F2CSUB ddrvge_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, integer *nmax, 
 	doublereal *a, doublereal *afac, doublereal *asav, doublereal *b, 
 	doublereal *bsav, doublereal *x, doublereal *xact, doublereal *s, 
 	doublereal *work, doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int ddrvgt_(logical *dotype, integer *nn, integer *nval, 
+
+/* ddrvgt.c */
+F2CSUB ddrvgt_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, doublereal *a, 
 	doublereal *af, doublereal *b, doublereal *x, doublereal *xact, 
 	doublereal *work, doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int ddrvls_(logical *dotype, integer *nm, integer *mval, 
+
+/* ddrvls.c */
+F2CSUB ddrvls_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nns, integer *nsval, integer *
 	nnb, integer *nbval, integer *nxval, doublereal *thresh, logical *
 	tsterr, doublereal *a, doublereal *copya, doublereal *b, doublereal *
 	copyb, doublereal *c__, doublereal *s, doublereal *copys, doublereal *
 	work, integer *iwork, integer *nout);
-extern /* Subroutine */ int ddrvpb_(logical *dotype, integer *nn, integer *nval, 
+
+/* ddrvpb.c */
+F2CSUB ddrvpb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, integer *nmax, 
 	doublereal *a, doublereal *afac, doublereal *asav, doublereal *b, 
 	doublereal *bsav, doublereal *x, doublereal *xact, doublereal *s, 
 	doublereal *work, doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int ddrvpo_(logical *dotype, integer *nn, integer *nval, 
+
+/* ddrvpo.c */
+F2CSUB ddrvpo_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, integer *nmax, 
 	doublereal *a, doublereal *afac, doublereal *asav, doublereal *b, 
 	doublereal *bsav, doublereal *x, doublereal *xact, doublereal *s, 
 	doublereal *work, doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int ddrvpo_(logical *dotype, integer *nn, integer *nval, 
+
+/* ddrvpox.c */
+F2CSUB ddrvpo_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, integer *nmax, 
 	doublereal *a, doublereal *afac, doublereal *asav, doublereal *b, 
 	doublereal *bsav, doublereal *x, doublereal *xact, doublereal *s, 
 	doublereal *work, doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int ddrvpp_(logical *dotype, integer *nn, integer *nval, 
+
+/* ddrvpp.c */
+F2CSUB ddrvpp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, integer *nmax, 
 	doublereal *a, doublereal *afac, doublereal *asav, doublereal *b, 
 	doublereal *bsav, doublereal *x, doublereal *xact, doublereal *s, 
 	doublereal *work, doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int ddrvpt_(logical *dotype, integer *nn, integer *nval, 
+
+/* ddrvpt.c */
+F2CSUB ddrvpt_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, doublereal *a, 
 	doublereal *d__, doublereal *e, doublereal *b, doublereal *x, 
 	doublereal *xact, doublereal *work, doublereal *rwork, integer *nout);
-extern /* Subroutine */ int ddrvrf1_(integer *nout, integer *nn, integer *nval, 
+
+/* ddrvrf1.c */
+F2CSUB ddrvrf1_(integer *nout, integer *nn, integer *nval, 
 	doublereal *thresh, doublereal *a, integer *lda, doublereal *arf, 
 	doublereal *work);
-extern /* Subroutine */ int ddrvrf2_(integer *nout, integer *nn, integer *nval, 
+
+/* ddrvrf2.c */
+F2CSUB ddrvrf2_(integer *nout, integer *nn, integer *nval, 
 	doublereal *a, integer *lda, doublereal *arf, doublereal *ap, 
 	doublereal *asav);
-extern /* Subroutine */ int ddrvrf3_(integer *nout, integer *nn, integer *nval, 
+
+/* ddrvrf3.c */
+F2CSUB ddrvrf3_(integer *nout, integer *nn, integer *nval, 
 	doublereal *thresh, doublereal *a, integer *lda, doublereal *arf, 
 	doublereal *b1, doublereal *b2, doublereal *d_work_dlange__, 
 	doublereal *d_work_dgeqrf__, doublereal *tau);
-extern /* Subroutine */ int ddrvrf4_(integer *nout, integer *nn, integer *nval, 
+
+/* ddrvrf4.c */
+F2CSUB ddrvrf4_(integer *nout, integer *nn, integer *nval, 
 	doublereal *thresh, doublereal *c1, doublereal *c2, integer *ldc, 
 	doublereal *crf, doublereal *a, integer *lda, doublereal *
 	d_work_dlange__);
-extern /* Subroutine */ int ddrvrfp_(integer *nout, integer *nn, integer *nval, 
+
+/* ddrvrfp.c */
+F2CSUB ddrvrfp_(integer *nout, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, integer *nnt, integer *ntval, 
 	doublereal *thresh, doublereal *a, doublereal *asav, doublereal *afac, 
 	 doublereal *ainv, doublereal *b, doublereal *bsav, doublereal *xact, 
@@ -701,957 +1102,1548 @@ extern /* Subroutine */ int ddrvrfp_(integer *nout, integer *nn, integer *nval,
 	d_temp_dpot02__, doublereal *d_temp_dpot03__, doublereal *
 	d_work_dlansy__, doublereal *d_work_dpot02__, doublereal *
 	d_work_dpot03__);
-extern /* Subroutine */ int ddrvsp_(logical *dotype, integer *nn, integer *nval, 
+
+/* ddrvsp.c */
+F2CSUB ddrvsp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, integer *nmax, 
 	doublereal *a, doublereal *afac, doublereal *ainv, doublereal *b, 
 	doublereal *x, doublereal *xact, doublereal *work, doublereal *rwork, 
 	integer *iwork, integer *nout);
-extern /* Subroutine */ int ddrvsy_(logical *dotype, integer *nn, integer *nval, 
+
+/* ddrvsy.c */
+F2CSUB ddrvsy_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, integer *nmax, 
 	doublereal *a, doublereal *afac, doublereal *ainv, doublereal *b, 
 	doublereal *x, doublereal *xact, doublereal *work, doublereal *rwork, 
 	integer *iwork, integer *nout);
-extern /* Subroutine */ int debchvxx_(doublereal *thresh, char *path);
-extern /* Subroutine */ int derrab_(integer *nunit);
-extern /* Subroutine */ int derrac_(integer *nunit);
-extern /* Subroutine */ int derrge_(char *path, integer *nunit);
-extern /* Subroutine */ int derrge_(char *path, integer *nunit);
-extern /* Subroutine */ int derrgt_(char *path, integer *nunit);
-extern /* Subroutine */ int derrlq_(char *path, integer *nunit);
-extern /* Subroutine */ int derrls_(char *path, integer *nunit);
-extern /* Subroutine */ int derrpo_(char *path, integer *nunit);
-extern /* Subroutine */ int derrpo_(char *path, integer *nunit);
-extern /* Subroutine */ int derrps_(char *path, integer *nunit);
-extern /* Subroutine */ int derrql_(char *path, integer *nunit);
-extern /* Subroutine */ int derrqp_(char *path, integer *nunit);
-extern /* Subroutine */ int derrqr_(char *path, integer *nunit);
-extern /* Subroutine */ int derrrfp_(integer *nunit);
-extern /* Subroutine */ int derrrq_(char *path, integer *nunit);
-extern /* Subroutine */ int derrsy_(char *path, integer *nunit);
-extern /* Subroutine */ int derrtr_(char *path, integer *nunit);
-extern /* Subroutine */ int derrtz_(char *path, integer *nunit);
-extern /* Subroutine */ int derrvx_(char *path, integer *nunit);
-extern /* Subroutine */ int dgbt01_(integer *m, integer *n, integer *kl, integer *ku, 
+
+/* debchvxx.c */
+F2CSUB debchvxx_(doublereal *thresh, char *path);
+
+/* derrab.c */
+F2CSUB derrab_(integer *nunit);
+
+/* derrac.c */
+F2CSUB derrac_(integer *nunit);
+
+/* derrge.c */
+F2CSUB derrge_(char *path, integer *nunit);
+
+/* derrgex.c */
+F2CSUB derrge_(char *path, integer *nunit);
+
+/* derrgt.c */
+F2CSUB derrgt_(char *path, integer *nunit);
+
+/* derrlq.c */
+F2CSUB derrlq_(char *path, integer *nunit);
+
+/* derrls.c */
+F2CSUB derrls_(char *path, integer *nunit);
+
+/* derrpo.c */
+F2CSUB derrpo_(char *path, integer *nunit);
+
+/* derrpox.c */
+F2CSUB derrpo_(char *path, integer *nunit);
+
+/* derrps.c */
+F2CSUB derrps_(char *path, integer *nunit);
+
+/* derrql.c */
+F2CSUB derrql_(char *path, integer *nunit);
+
+/* derrqp.c */
+F2CSUB derrqp_(char *path, integer *nunit);
+
+/* derrqr.c */
+F2CSUB derrqr_(char *path, integer *nunit);
+
+/* derrrfp.c */
+F2CSUB derrrfp_(integer *nunit);
+
+/* derrrq.c */
+F2CSUB derrrq_(char *path, integer *nunit);
+
+/* derrsy.c */
+F2CSUB derrsy_(char *path, integer *nunit);
+
+/* derrtr.c */
+F2CSUB derrtr_(char *path, integer *nunit);
+
+/* derrtz.c */
+F2CSUB derrtz_(char *path, integer *nunit);
+
+/* derrvx.c */
+F2CSUB derrvx_(char *path, integer *nunit);
+
+/* dgbt01.c */
+F2CSUB dgbt01_(integer *m, integer *n, integer *kl, integer *ku, 
 	 doublereal *a, integer *lda, doublereal *afac, integer *ldafac, 
 	integer *ipiv, doublereal *work, doublereal *resid);
-extern /* Subroutine */ int dgbt02_(char *trans, integer *m, integer *n, integer *kl, 
+
+/* dgbt02.c */
+F2CSUB dgbt02_(char *trans, integer *m, integer *n, integer *kl, 
 	 integer *ku, integer *nrhs, doublereal *a, integer *lda, doublereal *
 	x, integer *ldx, doublereal *b, integer *ldb, doublereal *resid);
-extern /* Subroutine */ int dgbt05_(char *trans, integer *n, integer *kl, integer *
+
+/* dgbt05.c */
+F2CSUB dgbt05_(char *trans, integer *n, integer *kl, integer *
 	ku, integer *nrhs, doublereal *ab, integer *ldab, doublereal *b, 
 	integer *ldb, doublereal *x, integer *ldx, doublereal *xact, integer *
 	ldxact, doublereal *ferr, doublereal *berr, doublereal *reslts);
-extern /* Subroutine */ int dgelqs_(integer *m, integer *n, integer *nrhs, 
+
+/* dgelqs.c */
+F2CSUB dgelqs_(integer *m, integer *n, integer *nrhs, 
 	doublereal *a, integer *lda, doublereal *tau, doublereal *b, integer *
 	ldb, doublereal *work, integer *lwork, integer *info);
-extern logical dgennd_(integer *m, integer *n, doublereal *a, integer *lda);
-extern /* Subroutine */ int dgeqls_(integer *m, integer *n, integer *nrhs, 
+
+/* dgennd.c */
+logical dgennd_(integer *m, integer *n, doublereal *a, integer *lda);
+
+/* dgeqls.c */
+F2CSUB dgeqls_(integer *m, integer *n, integer *nrhs, 
 	doublereal *a, integer *lda, doublereal *tau, doublereal *b, integer *
 	ldb, doublereal *work, integer *lwork, integer *info);
-extern /* Subroutine */ int dgeqrs_(integer *m, integer *n, integer *nrhs, 
+
+/* dgeqrs.c */
+F2CSUB dgeqrs_(integer *m, integer *n, integer *nrhs, 
 	doublereal *a, integer *lda, doublereal *tau, doublereal *b, integer *
 	ldb, doublereal *work, integer *lwork, integer *info);
-extern /* Subroutine */ int dgerqs_(integer *m, integer *n, integer *nrhs, 
+
+/* dgerqs.c */
+F2CSUB dgerqs_(integer *m, integer *n, integer *nrhs, 
 	doublereal *a, integer *lda, doublereal *tau, doublereal *b, integer *
 	ldb, doublereal *work, integer *lwork, integer *info);
-extern /* Subroutine */ int dget01_(integer *m, integer *n, doublereal *a, integer *
+
+/* dget01.c */
+F2CSUB dget01_(integer *m, integer *n, doublereal *a, integer *
 	lda, doublereal *afac, integer *ldafac, integer *ipiv, doublereal *
 	rwork, doublereal *resid);
-extern /* Subroutine */ int dget02_(char *trans, integer *m, integer *n, integer *
+
+/* dget02.c */
+F2CSUB dget02_(char *trans, integer *m, integer *n, integer *
 	nrhs, doublereal *a, integer *lda, doublereal *x, integer *ldx, 
 	doublereal *b, integer *ldb, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int dget03_(integer *n, doublereal *a, integer *lda, 
+
+/* dget03.c */
+F2CSUB dget03_(integer *n, doublereal *a, integer *lda, 
 	doublereal *ainv, integer *ldainv, doublereal *work, integer *ldwork, 
 	doublereal *rwork, doublereal *rcond, doublereal *resid);
-extern /* Subroutine */ int dget04_(integer *n, integer *nrhs, doublereal *x, 
+
+/* dget04.c */
+F2CSUB dget04_(integer *n, integer *nrhs, doublereal *x, 
 	integer *ldx, doublereal *xact, integer *ldxact, doublereal *rcond, 
 	doublereal *resid);
-extern doublereal dget06_(doublereal *rcond, doublereal *rcondc);
-extern /* Subroutine */ int dget07_(char *trans, integer *n, integer *nrhs, 
+
+/* dget06.c */
+doublereal dget06_(doublereal *rcond, doublereal *rcondc);
+
+/* dget07.c */
+F2CSUB dget07_(char *trans, integer *n, integer *nrhs, 
 	doublereal *a, integer *lda, doublereal *b, integer *ldb, doublereal *
 	x, integer *ldx, doublereal *xact, integer *ldxact, doublereal *ferr, 
 	logical *chkferr, doublereal *berr, doublereal *reslts);
-extern /* Subroutine */ int dget08_(char *trans, integer *m, integer *n, integer *
+
+/* dget08.c */
+F2CSUB dget08_(char *trans, integer *m, integer *n, integer *
 	nrhs, doublereal *a, integer *lda, doublereal *x, integer *ldx, 
 	doublereal *b, integer *ldb, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int dgtt01_(integer *n, doublereal *dl, doublereal *d__, 
+
+/* dgtt01.c */
+F2CSUB dgtt01_(integer *n, doublereal *dl, doublereal *d__, 
 	doublereal *du, doublereal *dlf, doublereal *df, doublereal *duf, 
 	doublereal *du2, integer *ipiv, doublereal *work, integer *ldwork, 
 	doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int dgtt02_(char *trans, integer *n, integer *nrhs, 
+
+/* dgtt02.c */
+F2CSUB dgtt02_(char *trans, integer *n, integer *nrhs, 
 	doublereal *dl, doublereal *d__, doublereal *du, doublereal *x, 
 	integer *ldx, doublereal *b, integer *ldb, doublereal *rwork, 
 	doublereal *resid);
-extern /* Subroutine */ int dgtt05_(char *trans, integer *n, integer *nrhs, 
+
+/* dgtt05.c */
+F2CSUB dgtt05_(char *trans, integer *n, integer *nrhs, 
 	doublereal *dl, doublereal *d__, doublereal *du, doublereal *b, 
 	integer *ldb, doublereal *x, integer *ldx, doublereal *xact, integer *
 	ldxact, doublereal *ferr, doublereal *berr, doublereal *reslts);
-extern /* Subroutine */ int dlahilb_(integer *n, integer *nrhs, doublereal *a, 
+
+/* dlahilb.c */
+F2CSUB dlahilb_(integer *n, integer *nrhs, doublereal *a, 
 	integer *lda, doublereal *x, integer *ldx, doublereal *b, integer *
 	ldb, doublereal *work, integer *info);
-extern /* Subroutine */ int dlaord_(char *job, integer *n, doublereal *x, integer *
+
+/* dlaord.c */
+F2CSUB dlaord_(char *job, integer *n, doublereal *x, integer *
 	incx);
-extern /* Subroutine */ int dlaptm_(integer *n, integer *nrhs, doublereal *alpha, 
+
+/* dlaptm.c */
+F2CSUB dlaptm_(integer *n, integer *nrhs, doublereal *alpha, 
 	doublereal *d__, doublereal *e, doublereal *x, integer *ldx, 
 	doublereal *beta, doublereal *b, integer *ldb);
-extern /* Subroutine */ int dlarhs_(char *path, char *xtype, char *uplo, char *trans, 
+
+/* dlarhs.c */
+F2CSUB dlarhs_(char *path, char *xtype, char *uplo, char *trans, 
 	 integer *m, integer *n, integer *kl, integer *ku, integer *nrhs, 
 	doublereal *a, integer *lda, doublereal *x, integer *ldx, doublereal *
 	b, integer *ldb, integer *iseed, integer *info);
-extern /* Subroutine */ int dlatb4_(char *path, integer *imat, integer *m, integer *
+
+/* dlatb4.c */
+F2CSUB dlatb4_(char *path, integer *imat, integer *m, integer *
 	n, char *type__, integer *kl, integer *ku, doublereal *anorm, integer 
 	*mode, doublereal *cndnum, char *dist);
-extern /* Subroutine */ int dlatb5_(char *path, integer *imat, integer *n, char *
+
+/* dlatb5.c */
+F2CSUB dlatb5_(char *path, integer *imat, integer *n, char *
 	type__, integer *kl, integer *ku, doublereal *anorm, integer *mode, 
 	doublereal *cndnum, char *dist);
-extern /* Subroutine */ int dlattb_(integer *imat, char *uplo, char *trans, char *
+
+/* dlattb.c */
+F2CSUB dlattb_(integer *imat, char *uplo, char *trans, char *
 	diag, integer *iseed, integer *n, integer *kd, doublereal *ab, 
 	integer *ldab, doublereal *b, doublereal *work, integer *info);
-extern /* Subroutine */ int dlattp_(integer *imat, char *uplo, char *trans, char *
+
+/* dlattp.c */
+F2CSUB dlattp_(integer *imat, char *uplo, char *trans, char *
 	diag, integer *iseed, integer *n, doublereal *a, doublereal *b, 
 	doublereal *work, integer *info);
-extern /* Subroutine */ int dlattr_(integer *imat, char *uplo, char *trans, char *
+
+/* dlattr.c */
+F2CSUB dlattr_(integer *imat, char *uplo, char *trans, char *
 	diag, integer *iseed, integer *n, doublereal *a, integer *lda, 
 	doublereal *b, doublereal *work, integer *info);
-extern /* Subroutine */ int dlavsp_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* dlavsp.c */
+F2CSUB dlavsp_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, doublereal *a, integer *ipiv, doublereal *b, integer *
 	ldb, integer *info);
-extern /* Subroutine */ int dlavsy_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* dlavsy.c */
+F2CSUB dlavsy_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, doublereal *a, integer *lda, integer *ipiv, doublereal 
 	*b, integer *ldb, integer *info);
-extern /* Subroutine */ int dlqt01_(integer *m, integer *n, doublereal *a, 
+
+/* dlqt01.c */
+F2CSUB dlqt01_(integer *m, integer *n, doublereal *a, 
 	doublereal *af, doublereal *q, doublereal *l, integer *lda, 
 	doublereal *tau, doublereal *work, integer *lwork, doublereal *rwork, 
 	doublereal *result);
-extern /* Subroutine */ int dlqt02_(integer *m, integer *n, integer *k, doublereal *
+
+/* dlqt02.c */
+F2CSUB dlqt02_(integer *m, integer *n, integer *k, doublereal *
 	a, doublereal *af, doublereal *q, doublereal *l, integer *lda, 
 	doublereal *tau, doublereal *work, integer *lwork, doublereal *rwork, 
 	doublereal *result);
-extern /* Subroutine */ int dlqt03_(integer *m, integer *n, integer *k, doublereal *
+
+/* dlqt03.c */
+F2CSUB dlqt03_(integer *m, integer *n, integer *k, doublereal *
 	af, doublereal *c__, doublereal *cc, doublereal *q, integer *lda, 
 	doublereal *tau, doublereal *work, integer *lwork, doublereal *rwork, 
 	doublereal *result);
-extern /* Subroutine */ int dpbt01_(char *uplo, integer *n, integer *kd, doublereal *
+
+/* dpbt01.c */
+F2CSUB dpbt01_(char *uplo, integer *n, integer *kd, doublereal *
 	a, integer *lda, doublereal *afac, integer *ldafac, doublereal *rwork, 
 	 doublereal *resid);
-extern /* Subroutine */ int dpbt02_(char *uplo, integer *n, integer *kd, integer *
+
+/* dpbt02.c */
+F2CSUB dpbt02_(char *uplo, integer *n, integer *kd, integer *
 	nrhs, doublereal *a, integer *lda, doublereal *x, integer *ldx, 
 	doublereal *b, integer *ldb, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int dpbt05_(char *uplo, integer *n, integer *kd, integer *
+
+/* dpbt05.c */
+F2CSUB dpbt05_(char *uplo, integer *n, integer *kd, integer *
 	nrhs, doublereal *ab, integer *ldab, doublereal *b, integer *ldb, 
 	doublereal *x, integer *ldx, doublereal *xact, integer *ldxact, 
 	doublereal *ferr, doublereal *berr, doublereal *reslts);
-extern /* Subroutine */ int dpot01_(char *uplo, integer *n, doublereal *a, integer *
+
+/* dpot01.c */
+F2CSUB dpot01_(char *uplo, integer *n, doublereal *a, integer *
 	lda, doublereal *afac, integer *ldafac, doublereal *rwork, doublereal 
 	*resid);
-extern /* Subroutine */ int dpot02_(char *uplo, integer *n, integer *nrhs, 
+
+/* dpot02.c */
+F2CSUB dpot02_(char *uplo, integer *n, integer *nrhs, 
 	doublereal *a, integer *lda, doublereal *x, integer *ldx, doublereal *
 	b, integer *ldb, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int dpot03_(char *uplo, integer *n, doublereal *a, integer *
+
+/* dpot03.c */
+F2CSUB dpot03_(char *uplo, integer *n, doublereal *a, integer *
 	lda, doublereal *ainv, integer *ldainv, doublereal *work, integer *
 	ldwork, doublereal *rwork, doublereal *rcond, doublereal *resid);
-extern /* Subroutine */ int dpot05_(char *uplo, integer *n, integer *nrhs, 
+
+/* dpot05.c */
+F2CSUB dpot05_(char *uplo, integer *n, integer *nrhs, 
 	doublereal *a, integer *lda, doublereal *b, integer *ldb, doublereal *
 	x, integer *ldx, doublereal *xact, integer *ldxact, doublereal *ferr, 
 	doublereal *berr, doublereal *reslts);
-extern /* Subroutine */ int dpot06_(char *uplo, integer *n, integer *nrhs, 
+
+/* dpot06.c */
+F2CSUB dpot06_(char *uplo, integer *n, integer *nrhs, 
 	doublereal *a, integer *lda, doublereal *x, integer *ldx, doublereal *
 	b, integer *ldb, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int dppt01_(char *uplo, integer *n, doublereal *a, 
+
+/* dppt01.c */
+F2CSUB dppt01_(char *uplo, integer *n, doublereal *a, 
 	doublereal *afac, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int dppt02_(char *uplo, integer *n, integer *nrhs, 
+
+/* dppt02.c */
+F2CSUB dppt02_(char *uplo, integer *n, integer *nrhs, 
 	doublereal *a, doublereal *x, integer *ldx, doublereal *b, integer *
 	ldb, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int dppt03_(char *uplo, integer *n, doublereal *a, 
+
+/* dppt03.c */
+F2CSUB dppt03_(char *uplo, integer *n, doublereal *a, 
 	doublereal *ainv, doublereal *work, integer *ldwork, doublereal *
 	rwork, doublereal *rcond, doublereal *resid);
-extern /* Subroutine */ int dppt05_(char *uplo, integer *n, integer *nrhs, 
+
+/* dppt05.c */
+F2CSUB dppt05_(char *uplo, integer *n, integer *nrhs, 
 	doublereal *ap, doublereal *b, integer *ldb, doublereal *x, integer *
 	ldx, doublereal *xact, integer *ldxact, doublereal *ferr, doublereal *
 	berr, doublereal *reslts);
-extern /* Subroutine */ int dpst01_(char *uplo, integer *n, doublereal *a, integer *
+
+/* dpst01.c */
+F2CSUB dpst01_(char *uplo, integer *n, doublereal *a, integer *
 	lda, doublereal *afac, integer *ldafac, doublereal *perm, integer *
 	ldperm, integer *piv, doublereal *rwork, doublereal *resid, integer *
 	rank);
-extern /* Subroutine */ int dptt01_(integer *n, doublereal *d__, doublereal *e, 
+
+/* dptt01.c */
+F2CSUB dptt01_(integer *n, doublereal *d__, doublereal *e, 
 	doublereal *df, doublereal *ef, doublereal *work, doublereal *resid);
-extern /* Subroutine */ int dptt02_(integer *n, integer *nrhs, doublereal *d__, 
+
+/* dptt02.c */
+F2CSUB dptt02_(integer *n, integer *nrhs, doublereal *d__, 
 	doublereal *e, doublereal *x, integer *ldx, doublereal *b, integer *
 	ldb, doublereal *resid);
-extern /* Subroutine */ int dptt05_(integer *n, integer *nrhs, doublereal *d__, 
+
+/* dptt05.c */
+F2CSUB dptt05_(integer *n, integer *nrhs, doublereal *d__, 
 	doublereal *e, doublereal *b, integer *ldb, doublereal *x, integer *
 	ldx, doublereal *xact, integer *ldxact, doublereal *ferr, doublereal *
 	berr, doublereal *reslts);
-extern /* Subroutine */ int dqlt01_(integer *m, integer *n, doublereal *a, 
+
+/* dqlt01.c */
+F2CSUB dqlt01_(integer *m, integer *n, doublereal *a, 
 	doublereal *af, doublereal *q, doublereal *l, integer *lda, 
 	doublereal *tau, doublereal *work, integer *lwork, doublereal *rwork, 
 	doublereal *result);
-extern /* Subroutine */ int dqlt02_(integer *m, integer *n, integer *k, doublereal *
+
+/* dqlt02.c */
+F2CSUB dqlt02_(integer *m, integer *n, integer *k, doublereal *
 	a, doublereal *af, doublereal *q, doublereal *l, integer *lda, 
 	doublereal *tau, doublereal *work, integer *lwork, doublereal *rwork, 
 	doublereal *result);
-extern /* Subroutine */ int dqlt03_(integer *m, integer *n, integer *k, doublereal *
+
+/* dqlt03.c */
+F2CSUB dqlt03_(integer *m, integer *n, integer *k, doublereal *
 	af, doublereal *c__, doublereal *cc, doublereal *q, integer *lda, 
 	doublereal *tau, doublereal *work, integer *lwork, doublereal *rwork, 
 	doublereal *result);
-extern doublereal dqpt01_(integer *m, integer *n, integer *k, doublereal *a, 
+
+/* dqpt01.c */
+doublereal dqpt01_(integer *m, integer *n, integer *k, doublereal *a, 
 	doublereal *af, integer *lda, doublereal *tau, integer *jpvt, 
 	doublereal *work, integer *lwork);
-extern /* Subroutine */ int dqrt01_(integer *m, integer *n, doublereal *a, 
+
+/* dqrt01.c */
+F2CSUB dqrt01_(integer *m, integer *n, doublereal *a, 
 	doublereal *af, doublereal *q, doublereal *r__, integer *lda, 
 	doublereal *tau, doublereal *work, integer *lwork, doublereal *rwork, 
 	doublereal *result);
-extern /* Subroutine */ int dqrt02_(integer *m, integer *n, integer *k, doublereal *
+
+/* dqrt02.c */
+F2CSUB dqrt02_(integer *m, integer *n, integer *k, doublereal *
 	a, doublereal *af, doublereal *q, doublereal *r__, integer *lda, 
 	doublereal *tau, doublereal *work, integer *lwork, doublereal *rwork, 
 	doublereal *result);
-extern /* Subroutine */ int dqrt03_(integer *m, integer *n, integer *k, doublereal *
+
+/* dqrt03.c */
+F2CSUB dqrt03_(integer *m, integer *n, integer *k, doublereal *
 	af, doublereal *c__, doublereal *cc, doublereal *q, integer *lda, 
 	doublereal *tau, doublereal *work, integer *lwork, doublereal *rwork, 
 	doublereal *result);
-extern doublereal dqrt11_(integer *m, integer *k, doublereal *a, integer *lda, 
+
+/* dqrt11.c */
+doublereal dqrt11_(integer *m, integer *k, doublereal *a, integer *lda, 
 	doublereal *tau, doublereal *work, integer *lwork);
-extern doublereal dqrt12_(integer *m, integer *n, doublereal *a, integer *lda, 
+
+/* dqrt12.c */
+doublereal dqrt12_(integer *m, integer *n, doublereal *a, integer *lda, 
 	doublereal *s, doublereal *work, integer *lwork);
-extern /* Subroutine */ int dqrt13_(integer *scale, integer *m, integer *n, 
+
+/* dqrt13.c */
+F2CSUB dqrt13_(integer *scale, integer *m, integer *n, 
 	doublereal *a, integer *lda, doublereal *norma, integer *iseed);
-extern doublereal dqrt14_(char *trans, integer *m, integer *n, integer *nrhs, 
+
+/* dqrt14.c */
+doublereal dqrt14_(char *trans, integer *m, integer *n, integer *nrhs, 
 	doublereal *a, integer *lda, doublereal *x, integer *ldx, doublereal *
 	work, integer *lwork);
-extern /* Subroutine */ int dqrt15_(integer *scale, integer *rksel, integer *m, 
+
+/* dqrt15.c */
+F2CSUB dqrt15_(integer *scale, integer *rksel, integer *m, 
 	integer *n, integer *nrhs, doublereal *a, integer *lda, doublereal *b, 
 	 integer *ldb, doublereal *s, integer *rank, doublereal *norma, 
 	doublereal *normb, integer *iseed, doublereal *work, integer *lwork);
-extern /* Subroutine */ int dqrt16_(char *trans, integer *m, integer *n, integer *
+
+/* dqrt16.c */
+F2CSUB dqrt16_(char *trans, integer *m, integer *n, integer *
 	nrhs, doublereal *a, integer *lda, doublereal *x, integer *ldx, 
 	doublereal *b, integer *ldb, doublereal *rwork, doublereal *resid);
-extern doublereal dqrt17_(char *trans, integer *iresid, integer *m, integer *n, 
+
+/* dqrt17.c */
+doublereal dqrt17_(char *trans, integer *iresid, integer *m, integer *n, 
 	integer *nrhs, doublereal *a, integer *lda, doublereal *x, integer *
 	ldx, doublereal *b, integer *ldb, doublereal *c__, doublereal *work, 
 	integer *lwork);
-extern /* Subroutine */ int drqt01_(integer *m, integer *n, doublereal *a, 
+
+/* drqt01.c */
+F2CSUB drqt01_(integer *m, integer *n, doublereal *a, 
 	doublereal *af, doublereal *q, doublereal *r__, integer *lda, 
 	doublereal *tau, doublereal *work, integer *lwork, doublereal *rwork, 
 	doublereal *result);
-extern /* Subroutine */ int drqt02_(integer *m, integer *n, integer *k, doublereal *
+
+/* drqt02.c */
+F2CSUB drqt02_(integer *m, integer *n, integer *k, doublereal *
 	a, doublereal *af, doublereal *q, doublereal *r__, integer *lda, 
 	doublereal *tau, doublereal *work, integer *lwork, doublereal *rwork, 
 	doublereal *result);
-extern /* Subroutine */ int drqt03_(integer *m, integer *n, integer *k, doublereal *
+
+/* drqt03.c */
+F2CSUB drqt03_(integer *m, integer *n, integer *k, doublereal *
 	af, doublereal *c__, doublereal *cc, doublereal *q, integer *lda, 
 	doublereal *tau, doublereal *work, integer *lwork, doublereal *rwork, 
 	doublereal *result);
-extern doublereal drzt01_(integer *m, integer *n, doublereal *a, doublereal *af, 
+
+/* drzt01.c */
+doublereal drzt01_(integer *m, integer *n, doublereal *a, doublereal *af, 
 	integer *lda, doublereal *tau, doublereal *work, integer *lwork);
-extern doublereal drzt02_(integer *m, integer *n, doublereal *af, integer *lda, 
+
+/* drzt02.c */
+doublereal drzt02_(integer *m, integer *n, doublereal *af, integer *lda, 
 	doublereal *tau, doublereal *work, integer *lwork);
-extern /* Subroutine */ int dspt01_(char *uplo, integer *n, doublereal *a, 
+
+/* dspt01.c */
+F2CSUB dspt01_(char *uplo, integer *n, doublereal *a, 
 	doublereal *afac, integer *ipiv, doublereal *c__, integer *ldc, 
 	doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int dsyt01_(char *uplo, integer *n, doublereal *a, integer *
+
+/* dsyt01.c */
+F2CSUB dsyt01_(char *uplo, integer *n, doublereal *a, integer *
 	lda, doublereal *afac, integer *ldafac, integer *ipiv, doublereal *
 	c__, integer *ldc, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int dtbt02_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* dtbt02.c */
+F2CSUB dtbt02_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *kd, integer *nrhs, doublereal *ab, integer *ldab, doublereal 
 	*x, integer *ldx, doublereal *b, integer *ldb, doublereal *work, 
 	doublereal *resid);
-extern /* Subroutine */ int dtbt03_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* dtbt03.c */
+F2CSUB dtbt03_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *kd, integer *nrhs, doublereal *ab, integer *ldab, doublereal 
 	*scale, doublereal *cnorm, doublereal *tscal, doublereal *x, integer *
 	ldx, doublereal *b, integer *ldb, doublereal *work, doublereal *resid);
-extern /* Subroutine */ int dtbt05_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* dtbt05.c */
+F2CSUB dtbt05_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *kd, integer *nrhs, doublereal *ab, integer *ldab, doublereal 
 	*b, integer *ldb, doublereal *x, integer *ldx, doublereal *xact, 
 	integer *ldxact, doublereal *ferr, doublereal *berr, doublereal *
 	reslts);
-extern /* Subroutine */ int dtbt06_(doublereal *rcond, doublereal *rcondc, char *
+
+/* dtbt06.c */
+F2CSUB dtbt06_(doublereal *rcond, doublereal *rcondc, char *
 	uplo, char *diag, integer *n, integer *kd, doublereal *ab, integer *
 	ldab, doublereal *work, doublereal *rat);
-extern /* Subroutine */ int dtpt01_(char *uplo, char *diag, integer *n, doublereal *
+
+/* dtpt01.c */
+F2CSUB dtpt01_(char *uplo, char *diag, integer *n, doublereal *
 	ap, doublereal *ainvp, doublereal *rcond, doublereal *work, 
 	doublereal *resid);
-extern /* Subroutine */ int dtpt02_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* dtpt02.c */
+F2CSUB dtpt02_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, doublereal *ap, doublereal *x, integer *ldx, 
 	doublereal *b, integer *ldb, doublereal *work, doublereal *resid);
-extern /* Subroutine */ int dtpt03_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* dtpt03.c */
+F2CSUB dtpt03_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, doublereal *ap, doublereal *scale, doublereal *cnorm, 
 	doublereal *tscal, doublereal *x, integer *ldx, doublereal *b, 
 	integer *ldb, doublereal *work, doublereal *resid);
-extern /* Subroutine */ int dtpt05_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* dtpt05.c */
+F2CSUB dtpt05_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, doublereal *ap, doublereal *b, integer *ldb, 
 	doublereal *x, integer *ldx, doublereal *xact, integer *ldxact, 
 	doublereal *ferr, doublereal *berr, doublereal *reslts);
-extern /* Subroutine */ int dtpt06_(doublereal *rcond, doublereal *rcondc, char *
+
+/* dtpt06.c */
+F2CSUB dtpt06_(doublereal *rcond, doublereal *rcondc, char *
 	uplo, char *diag, integer *n, doublereal *ap, doublereal *work, 
 	doublereal *rat);
-extern /* Subroutine */ int dtrt01_(char *uplo, char *diag, integer *n, doublereal *
+
+/* dtrt01.c */
+F2CSUB dtrt01_(char *uplo, char *diag, integer *n, doublereal *
 	a, integer *lda, doublereal *ainv, integer *ldainv, doublereal *rcond, 
 	 doublereal *work, doublereal *resid);
-extern /* Subroutine */ int dtrt02_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* dtrt02.c */
+F2CSUB dtrt02_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, doublereal *a, integer *lda, doublereal *x, integer *
 	ldx, doublereal *b, integer *ldb, doublereal *work, doublereal *resid);
-extern /* Subroutine */ int dtrt03_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* dtrt03.c */
+F2CSUB dtrt03_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, doublereal *a, integer *lda, doublereal *scale, 
 	doublereal *cnorm, doublereal *tscal, doublereal *x, integer *ldx, 
 	doublereal *b, integer *ldb, doublereal *work, doublereal *resid);
-extern /* Subroutine */ int dtrt05_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* dtrt05.c */
+F2CSUB dtrt05_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, doublereal *a, integer *lda, doublereal *b, integer *
 	ldb, doublereal *x, integer *ldx, doublereal *xact, integer *ldxact, 
 	doublereal *ferr, doublereal *berr, doublereal *reslts);
-extern /* Subroutine */ int dtrt06_(doublereal *rcond, doublereal *rcondc, char *
+
+/* dtrt06.c */
+F2CSUB dtrt06_(doublereal *rcond, doublereal *rcondc, char *
 	uplo, char *diag, integer *n, doublereal *a, integer *lda, doublereal 
 	*work, doublereal *rat);
-extern doublereal dtzt01_(integer *m, integer *n, doublereal *a, doublereal *af, 
+
+/* dtzt01.c */
+doublereal dtzt01_(integer *m, integer *n, doublereal *a, doublereal *af, 
 	integer *lda, doublereal *tau, doublereal *work, integer *lwork);
-extern doublereal dtzt02_(integer *m, integer *n, doublereal *af, integer *lda, 
+
+/* dtzt02.c */
+doublereal dtzt02_(integer *m, integer *n, doublereal *af, integer *lda, 
 	doublereal *tau, doublereal *work, integer *lwork);
-extern /* Subroutine */ int icopy_(integer *n, integer *sx, integer *incx, integer *
+
+/* icopy.c */
+F2CSUB icopy_(integer *n, integer *sx, integer *incx, integer *
 	sy, integer *incy);
-extern integer ilaenv_(integer *ispec, char *name__, char *opts, integer *n1, 
+
+/* ilaenv.c */
+integer ilaenv_(integer *ispec, char *name__, char *opts, integer *n1, 
 	integer *n2, integer *n3, integer *n4);
-extern /* Subroutine */ int schkeq_(real *thresh, integer *nout);
-extern /* Subroutine */ int schkgb_(logical *dotype, integer *nm, integer *mval, 
+
+/* schkeq.c */
+F2CSUB schkeq_(real *thresh, integer *nout);
+
+/* schkgb.c */
+F2CSUB schkgb_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nns, integer *nsval, real *thresh, logical *tsterr, real *a, integer *
 	la, real *afac, integer *lafac, real *b, real *x, real *xact, real *
 	work, real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int schkge_(logical *dotype, integer *nm, integer *mval, 
+
+/* schkge.c */
+F2CSUB schkge_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nns, integer *nsval, real *thresh, logical *tsterr, integer *nmax, 
 	real *a, real *afac, real *ainv, real *b, real *x, real *xact, real *
 	work, real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int schkgt_(logical *dotype, integer *nn, integer *nval, 
+
+/* schkgt.c */
+F2CSUB schkgt_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, real *thresh, logical *tsterr, real *a, 
 	real *af, real *b, real *x, real *xact, real *work, real *rwork, 
 	integer *iwork, integer *nout);
-extern /* Subroutine */ int schklq_(logical *dotype, integer *nm, integer *mval, 
+
+/* schklq.c */
+F2CSUB schklq_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, integer *nrhs, real *thresh, logical *tsterr, integer *nmax, 
 	real *a, real *af, real *aq, real *al, real *ac, real *b, real *x, 
 	real *xact, real *tau, real *work, real *rwork, integer *iwork, 
 	integer *nout);
-extern /* Subroutine */ int schkpb_(logical *dotype, integer *nn, integer *nval, 
+
+/* schkpb.c */
+F2CSUB schkpb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nns, integer *nsval, real *
 	thresh, logical *tsterr, integer *nmax, real *a, real *afac, real *
 	ainv, real *b, real *x, real *xact, real *work, real *rwork, integer *
 	iwork, integer *nout);
-extern /* Subroutine */ int schkpo_(logical *dotype, integer *nn, integer *nval, 
+
+/* schkpo.c */
+F2CSUB schkpo_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nns, integer *nsval, real *
 	thresh, logical *tsterr, integer *nmax, real *a, real *afac, real *
 	ainv, real *b, real *x, real *xact, real *work, real *rwork, integer *
 	iwork, integer *nout);
-extern /* Subroutine */ int schkpp_(logical *dotype, integer *nn, integer *nval, 
+
+/* schkpp.c */
+F2CSUB schkpp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, real *thresh, logical *tsterr, integer *
 	nmax, real *a, real *afac, real *ainv, real *b, real *x, real *xact, 
 	real *work, real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int schkps_(logical *dotype, integer *nn, integer *nval, 
+
+/* schkps.c */
+F2CSUB schkps_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nrank, integer *rankval, real *
 	thresh, logical *tsterr, integer *nmax, real *a, real *afac, real *
 	perm, integer *piv, real *work, real *rwork, integer *nout);
-extern /* Subroutine */ int schkpt_(logical *dotype, integer *nn, integer *nval, 
+
+/* schkpt.c */
+F2CSUB schkpt_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, real *thresh, logical *tsterr, real *a, 
 	real *d__, real *e, real *b, real *x, real *xact, real *work, real *
 	rwork, integer *nout);
-extern /* Subroutine */ int schkq3_(logical *dotype, integer *nm, integer *mval, 
+
+/* schkq3.c */
+F2CSUB schkq3_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, real *thresh, real *a, real *copya, real *s, real *copys, real 
 	*tau, real *work, integer *iwork, integer *nout);
-extern /* Subroutine */ int schkql_(logical *dotype, integer *nm, integer *mval, 
+
+/* schkql.c */
+F2CSUB schkql_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, integer *nrhs, real *thresh, logical *tsterr, integer *nmax, 
 	real *a, real *af, real *aq, real *al, real *ac, real *b, real *x, 
 	real *xact, real *tau, real *work, real *rwork, integer *iwork, 
 	integer *nout);
-extern /* Subroutine */ int schkqp_(logical *dotype, integer *nm, integer *mval, 
+
+/* schkqp.c */
+F2CSUB schkqp_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, real *thresh, logical *tsterr, real *a, 
 	real *copya, real *s, real *copys, real *tau, real *work, integer *
 	iwork, integer *nout);
-extern /* Subroutine */ int schkqr_(logical *dotype, integer *nm, integer *mval, 
+
+/* schkqr.c */
+F2CSUB schkqr_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, integer *nrhs, real *thresh, logical *tsterr, integer *nmax, 
 	real *a, real *af, real *aq, real *ar, real *ac, real *b, real *x, 
 	real *xact, real *tau, real *work, real *rwork, integer *iwork, 
 	integer *nout);
-extern /* Subroutine */ int schkrq_(logical *dotype, integer *nm, integer *mval, 
+
+/* schkrq.c */
+F2CSUB schkrq_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, integer *nrhs, real *thresh, logical *tsterr, integer *nmax, 
 	real *a, real *af, real *aq, real *ar, real *ac, real *b, real *x, 
 	real *xact, real *tau, real *work, real *rwork, integer *iwork, 
 	integer *nout);
-extern /* Subroutine */ int schksp_(logical *dotype, integer *nn, integer *nval, 
+
+/* schksp.c */
+F2CSUB schksp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, real *thresh, logical *tsterr, integer *
 	nmax, real *a, real *afac, real *ainv, real *b, real *x, real *xact, 
 	real *work, real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int schksy_(logical *dotype, integer *nn, integer *nval, 
+
+/* schksy.c */
+F2CSUB schksy_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nns, integer *nsval, real *
 	thresh, logical *tsterr, integer *nmax, real *a, real *afac, real *
 	ainv, real *b, real *x, real *xact, real *work, real *rwork, integer *
 	iwork, integer *nout);
-extern /* Subroutine */ int schktb_(logical *dotype, integer *nn, integer *nval, 
+
+/* schktb.c */
+F2CSUB schktb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, real *thresh, logical *tsterr, integer *
 	nmax, real *ab, real *ainv, real *b, real *x, real *xact, real *work, 
 	real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int schktp_(logical *dotype, integer *nn, integer *nval, 
+
+/* schktp.c */
+F2CSUB schktp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, real *thresh, logical *tsterr, integer *
 	nmax, real *ap, real *ainvp, real *b, real *x, real *xact, real *work, 
 	 real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int schktr_(logical *dotype, integer *nn, integer *nval, 
+
+/* schktr.c */
+F2CSUB schktr_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nns, integer *nsval, real *
 	thresh, logical *tsterr, integer *nmax, real *a, real *ainv, real *b, 
 	real *x, real *xact, real *work, real *rwork, integer *iwork, integer 
 	*nout);
-extern /* Subroutine */ int schktz_(logical *dotype, integer *nm, integer *mval, 
+
+/* schktz.c */
+F2CSUB schktz_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, real *thresh, logical *tsterr, real *a, 
 	real *copya, real *s, real *copys, real *tau, real *work, integer *
 	nout);
-extern /* Subroutine */ int sdrvgb_(logical *dotype, integer *nn, integer *nval, 
+
+/* sdrvgb.c */
+F2CSUB sdrvgb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, real *a, integer *la, 
 	real *afb, integer *lafb, real *asav, real *b, real *bsav, real *x, 
 	real *xact, real *s, real *work, real *rwork, integer *iwork, integer 
 	*nout);
-extern /* Subroutine */ int sdrvgb_(logical *dotype, integer *nn, integer *nval, 
+
+/* sdrvgbx.c */
+F2CSUB sdrvgb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, real *a, integer *la, 
 	real *afb, integer *lafb, real *asav, real *b, real *bsav, real *x, 
 	real *xact, real *s, real *work, real *rwork, integer *iwork, integer 
 	*nout);
-extern /* Subroutine */ int sdrvge_(logical *dotype, integer *nn, integer *nval, 
+
+/* sdrvge.c */
+F2CSUB sdrvge_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, integer *nmax, real *a, 
 	real *afac, real *asav, real *b, real *bsav, real *x, real *xact, 
 	real *s, real *work, real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int sdrvge_(logical *dotype, integer *nn, integer *nval, 
+
+/* sdrvgex.c */
+F2CSUB sdrvge_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, integer *nmax, real *a, 
 	real *afac, real *asav, real *b, real *bsav, real *x, real *xact, 
 	real *s, real *work, real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int sdrvgt_(logical *dotype, integer *nn, integer *nval, 
+
+/* sdrvgt.c */
+F2CSUB sdrvgt_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, real *a, real *af, real 
 	*b, real *x, real *xact, real *work, real *rwork, integer *iwork, 
 	integer *nout);
-extern /* Subroutine */ int sdrvls_(logical *dotype, integer *nm, integer *mval, 
+
+/* sdrvls.c */
+F2CSUB sdrvls_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nns, integer *nsval, integer *
 	nnb, integer *nbval, integer *nxval, real *thresh, logical *tsterr, 
 	real *a, real *copya, real *b, real *copyb, real *c__, real *s, real *
 	copys, real *work, integer *iwork, integer *nout);
-extern /* Subroutine */ int sdrvpb_(logical *dotype, integer *nn, integer *nval, 
+
+/* sdrvpb.c */
+F2CSUB sdrvpb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, integer *nmax, real *a, 
 	real *afac, real *asav, real *b, real *bsav, real *x, real *xact, 
 	real *s, real *work, real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int sdrvpo_(logical *dotype, integer *nn, integer *nval, 
+
+/* sdrvpo.c */
+F2CSUB sdrvpo_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, integer *nmax, real *a, 
 	real *afac, real *asav, real *b, real *bsav, real *x, real *xact, 
 	real *s, real *work, real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int sdrvpo_(logical *dotype, integer *nn, integer *nval, 
+
+/* sdrvpox.c */
+F2CSUB sdrvpo_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, integer *nmax, real *a, 
 	real *afac, real *asav, real *b, real *bsav, real *x, real *xact, 
 	real *s, real *work, real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int sdrvpp_(logical *dotype, integer *nn, integer *nval, 
+
+/* sdrvpp.c */
+F2CSUB sdrvpp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, integer *nmax, real *a, 
 	real *afac, real *asav, real *b, real *bsav, real *x, real *xact, 
 	real *s, real *work, real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int sdrvpt_(logical *dotype, integer *nn, integer *nval, 
+
+/* sdrvpt.c */
+F2CSUB sdrvpt_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, real *a, real *d__, 
 	real *e, real *b, real *x, real *xact, real *work, real *rwork, 
 	integer *nout);
-extern /* Subroutine */ int sdrvrf1_(integer *nout, integer *nn, integer *nval, real 
+
+/* sdrvrf1.c */
+F2CSUB sdrvrf1_(integer *nout, integer *nn, integer *nval, real 
 	*thresh, real *a, integer *lda, real *arf, real *work);
-extern /* Subroutine */ int sdrvrf2_(integer *nout, integer *nn, integer *nval, real 
+
+/* sdrvrf2.c */
+F2CSUB sdrvrf2_(integer *nout, integer *nn, integer *nval, real 
 	*a, integer *lda, real *arf, real *ap, real *asav);
-extern /* Subroutine */ int sdrvrf3_(integer *nout, integer *nn, integer *nval, real 
+
+/* sdrvrf3.c */
+F2CSUB sdrvrf3_(integer *nout, integer *nn, integer *nval, real 
 	*thresh, real *a, integer *lda, real *arf, real *b1, real *b2, real *
 	s_work_slange__, real *s_work_sgeqrf__, real *tau);
-extern /* Subroutine */ int sdrvrf4_(integer *nout, integer *nn, integer *nval, real 
+
+/* sdrvrf4.c */
+F2CSUB sdrvrf4_(integer *nout, integer *nn, integer *nval, real 
 	*thresh, real *c1, real *c2, integer *ldc, real *crf, real *a, 
 	integer *lda, real *s_work_slange__);
-extern /* Subroutine */ int sdrvrfp_(integer *nout, integer *nn, integer *nval, 
+
+/* sdrvrfp.c */
+F2CSUB sdrvrfp_(integer *nout, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, integer *nnt, integer *ntval, real *
 	thresh, real *a, real *asav, real *afac, real *ainv, real *b, real *
 	bsav, real *xact, real *x, real *arf, real *arfinv, real *
 	s_work_slatms__, real *s_work_spot01__, real *s_temp_spot02__, real *
 	s_temp_spot03__, real *s_work_slansy__, real *s_work_spot02__, real *
 	s_work_spot03__);
-extern /* Subroutine */ int sdrvsp_(logical *dotype, integer *nn, integer *nval, 
+
+/* sdrvsp.c */
+F2CSUB sdrvsp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, integer *nmax, real *a, 
 	real *afac, real *ainv, real *b, real *x, real *xact, real *work, 
 	real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int sdrvsy_(logical *dotype, integer *nn, integer *nval, 
+
+/* sdrvsy.c */
+F2CSUB sdrvsy_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, real *thresh, logical *tsterr, integer *nmax, real *a, 
 	real *afac, real *ainv, real *b, real *x, real *xact, real *work, 
 	real *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int sebchvxx_(real *thresh, char *path);
-extern /* Subroutine */ int serrge_(char *path, integer *nunit);
-extern /* Subroutine */ int serrge_(char *path, integer *nunit);
-extern /* Subroutine */ int serrgt_(char *path, integer *nunit);
-extern /* Subroutine */ int serrlq_(char *path, integer *nunit);
-extern /* Subroutine */ int serrls_(char *path, integer *nunit);
-extern /* Subroutine */ int serrpo_(char *path, integer *nunit);
-extern /* Subroutine */ int serrpo_(char *path, integer *nunit);
-extern /* Subroutine */ int serrps_(char *path, integer *nunit);
-extern /* Subroutine */ int serrql_(char *path, integer *nunit);
-extern /* Subroutine */ int serrqp_(char *path, integer *nunit);
-extern /* Subroutine */ int serrqr_(char *path, integer *nunit);
-extern /* Subroutine */ int serrrfp_(integer *nunit);
-extern /* Subroutine */ int serrrq_(char *path, integer *nunit);
-extern /* Subroutine */ int serrsy_(char *path, integer *nunit);
-extern /* Subroutine */ int serrtr_(char *path, integer *nunit);
-extern /* Subroutine */ int serrtz_(char *path, integer *nunit);
-extern /* Subroutine */ int serrvx_(char *path, integer *nunit);
-extern /* Subroutine */ int sgbt01_(integer *m, integer *n, integer *kl, integer *ku, 
+
+/* sebchvxx.c */
+F2CSUB sebchvxx_(real *thresh, char *path);
+
+/* serrge.c */
+F2CSUB serrge_(char *path, integer *nunit);
+
+/* serrgex.c */
+F2CSUB serrge_(char *path, integer *nunit);
+
+/* serrgt.c */
+F2CSUB serrgt_(char *path, integer *nunit);
+
+/* serrlq.c */
+F2CSUB serrlq_(char *path, integer *nunit);
+
+/* serrls.c */
+F2CSUB serrls_(char *path, integer *nunit);
+
+/* serrpo.c */
+F2CSUB serrpo_(char *path, integer *nunit);
+
+/* serrpox.c */
+F2CSUB serrpo_(char *path, integer *nunit);
+
+/* serrps.c */
+F2CSUB serrps_(char *path, integer *nunit);
+
+/* serrql.c */
+F2CSUB serrql_(char *path, integer *nunit);
+
+/* serrqp.c */
+F2CSUB serrqp_(char *path, integer *nunit);
+
+/* serrqr.c */
+F2CSUB serrqr_(char *path, integer *nunit);
+
+/* serrrfp.c */
+F2CSUB serrrfp_(integer *nunit);
+
+/* serrrq.c */
+F2CSUB serrrq_(char *path, integer *nunit);
+
+/* serrsy.c */
+F2CSUB serrsy_(char *path, integer *nunit);
+
+/* serrtr.c */
+F2CSUB serrtr_(char *path, integer *nunit);
+
+/* serrtz.c */
+F2CSUB serrtz_(char *path, integer *nunit);
+
+/* serrvx.c */
+F2CSUB serrvx_(char *path, integer *nunit);
+
+/* sgbt01.c */
+F2CSUB sgbt01_(integer *m, integer *n, integer *kl, integer *ku, 
 	 real *a, integer *lda, real *afac, integer *ldafac, integer *ipiv, 
 	real *work, real *resid);
-extern /* Subroutine */ int sgbt02_(char *trans, integer *m, integer *n, integer *kl, 
+
+/* sgbt02.c */
+F2CSUB sgbt02_(char *trans, integer *m, integer *n, integer *kl, 
 	 integer *ku, integer *nrhs, real *a, integer *lda, real *x, integer *
 	ldx, real *b, integer *ldb, real *resid);
-extern /* Subroutine */ int sgbt05_(char *trans, integer *n, integer *kl, integer *
+
+/* sgbt05.c */
+F2CSUB sgbt05_(char *trans, integer *n, integer *kl, integer *
 	ku, integer *nrhs, real *ab, integer *ldab, real *b, integer *ldb, 
 	real *x, integer *ldx, real *xact, integer *ldxact, real *ferr, real *
 	berr, real *reslts);
-extern /* Subroutine */ int sgelqs_(integer *m, integer *n, integer *nrhs, real *a, 
+
+/* sgelqs.c */
+F2CSUB sgelqs_(integer *m, integer *n, integer *nrhs, real *a, 
 	integer *lda, real *tau, real *b, integer *ldb, real *work, integer *
 	lwork, integer *info);
-extern logical sgennd_(integer *m, integer *n, real *a, integer *lda);
-extern /* Subroutine */ int sgeqls_(integer *m, integer *n, integer *nrhs, real *a, 
+
+/* sgennd.c */
+logical sgennd_(integer *m, integer *n, real *a, integer *lda);
+
+/* sgeqls.c */
+F2CSUB sgeqls_(integer *m, integer *n, integer *nrhs, real *a, 
 	integer *lda, real *tau, real *b, integer *ldb, real *work, integer *
 	lwork, integer *info);
-extern /* Subroutine */ int sgeqrs_(integer *m, integer *n, integer *nrhs, real *a, 
+
+/* sgeqrs.c */
+F2CSUB sgeqrs_(integer *m, integer *n, integer *nrhs, real *a, 
 	integer *lda, real *tau, real *b, integer *ldb, real *work, integer *
 	lwork, integer *info);
-extern /* Subroutine */ int sgerqs_(integer *m, integer *n, integer *nrhs, real *a, 
+
+/* sgerqs.c */
+F2CSUB sgerqs_(integer *m, integer *n, integer *nrhs, real *a, 
 	integer *lda, real *tau, real *b, integer *ldb, real *work, integer *
 	lwork, integer *info);
-extern /* Subroutine */ int sget01_(integer *m, integer *n, real *a, integer *lda, 
+
+/* sget01.c */
+F2CSUB sget01_(integer *m, integer *n, real *a, integer *lda, 
 	real *afac, integer *ldafac, integer *ipiv, real *rwork, real *resid);
-extern /* Subroutine */ int sget02_(char *trans, integer *m, integer *n, integer *
+
+/* sget02.c */
+F2CSUB sget02_(char *trans, integer *m, integer *n, integer *
 	nrhs, real *a, integer *lda, real *x, integer *ldx, real *b, integer *
 	ldb, real *rwork, real *resid);
-extern /* Subroutine */ int sget03_(integer *n, real *a, integer *lda, real *ainv, 
+
+/* sget03.c */
+F2CSUB sget03_(integer *n, real *a, integer *lda, real *ainv, 
 	integer *ldainv, real *work, integer *ldwork, real *rwork, real *
 	rcond, real *resid);
-extern /* Subroutine */ int sget04_(integer *n, integer *nrhs, real *x, integer *ldx, 
+
+/* sget04.c */
+F2CSUB sget04_(integer *n, integer *nrhs, real *x, integer *ldx, 
 	 real *xact, integer *ldxact, real *rcond, real *resid);
-extern doublereal sget06_(real *rcond, real *rcondc);
-extern /* Subroutine */ int sget07_(char *trans, integer *n, integer *nrhs, real *a, 
+
+/* sget06.c */
+doublereal sget06_(real *rcond, real *rcondc);
+
+/* sget07.c */
+F2CSUB sget07_(char *trans, integer *n, integer *nrhs, real *a, 
 	integer *lda, real *b, integer *ldb, real *x, integer *ldx, real *
 	xact, integer *ldxact, real *ferr, logical *chkferr, real *berr, real 
 	*reslts);
-extern /* Subroutine */ int sgtt01_(integer *n, real *dl, real *d__, real *du, real *
+
+/* sgtt01.c */
+F2CSUB sgtt01_(integer *n, real *dl, real *d__, real *du, real *
 	dlf, real *df, real *duf, real *du2, integer *ipiv, real *work, 
 	integer *ldwork, real *rwork, real *resid);
-extern /* Subroutine */ int sgtt02_(char *trans, integer *n, integer *nrhs, real *dl, 
+
+/* sgtt02.c */
+F2CSUB sgtt02_(char *trans, integer *n, integer *nrhs, real *dl, 
 	 real *d__, real *du, real *x, integer *ldx, real *b, integer *ldb, 
 	real *rwork, real *resid);
-extern /* Subroutine */ int sgtt05_(char *trans, integer *n, integer *nrhs, real *dl, 
+
+/* sgtt05.c */
+F2CSUB sgtt05_(char *trans, integer *n, integer *nrhs, real *dl, 
 	 real *d__, real *du, real *b, integer *ldb, real *x, integer *ldx, 
 	real *xact, integer *ldxact, real *ferr, real *berr, real *reslts);
-extern /* Subroutine */ int slahilb_(integer *n, integer *nrhs, real *a, integer *
+
+/* slahilb.c */
+F2CSUB slahilb_(integer *n, integer *nrhs, real *a, integer *
 	lda, real *x, integer *ldx, real *b, integer *ldb, real *work, 
 	integer *info);
-extern /* Subroutine */ int slaord_(char *job, integer *n, real *x, integer *incx);
-extern /* Subroutine */ int slaptm_(integer *n, integer *nrhs, real *alpha, real *
+
+/* slaord.c */
+F2CSUB slaord_(char *job, integer *n, real *x, integer *incx);
+
+/* slaptm.c */
+F2CSUB slaptm_(integer *n, integer *nrhs, real *alpha, real *
 	d__, real *e, real *x, integer *ldx, real *beta, real *b, integer *
 	ldb);
-extern /* Subroutine */ int slarhs_(char *path, char *xtype, char *uplo, char *trans, 
+
+/* slarhs.c */
+F2CSUB slarhs_(char *path, char *xtype, char *uplo, char *trans, 
 	 integer *m, integer *n, integer *kl, integer *ku, integer *nrhs, 
 	real *a, integer *lda, real *x, integer *ldx, real *b, integer *ldb, 
 	integer *iseed, integer *info);
-extern /* Subroutine */ int slatb4_(char *path, integer *imat, integer *m, integer *
+
+/* slatb4.c */
+F2CSUB slatb4_(char *path, integer *imat, integer *m, integer *
 	n, char *type__, integer *kl, integer *ku, real *anorm, integer *mode, 
 	 real *cndnum, char *dist);
-extern /* Subroutine */ int slatb5_(char *path, integer *imat, integer *n, char *
+
+/* slatb5.c */
+F2CSUB slatb5_(char *path, integer *imat, integer *n, char *
 	type__, integer *kl, integer *ku, real *anorm, integer *mode, real *
 	cndnum, char *dist);
-extern /* Subroutine */ int slattb_(integer *imat, char *uplo, char *trans, char *
+
+/* slattb.c */
+F2CSUB slattb_(integer *imat, char *uplo, char *trans, char *
 	diag, integer *iseed, integer *n, integer *kd, real *ab, integer *
 	ldab, real *b, real *work, integer *info);
-extern /* Subroutine */ int slattp_(integer *imat, char *uplo, char *trans, char *
+
+/* slattp.c */
+F2CSUB slattp_(integer *imat, char *uplo, char *trans, char *
 	diag, integer *iseed, integer *n, real *a, real *b, real *work, 
 	integer *info);
-extern /* Subroutine */ int slattr_(integer *imat, char *uplo, char *trans, char *
+
+/* slattr.c */
+F2CSUB slattr_(integer *imat, char *uplo, char *trans, char *
 	diag, integer *iseed, integer *n, real *a, integer *lda, real *b, 
 	real *work, integer *info);
-extern /* Subroutine */ int slavsp_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* slavsp.c */
+F2CSUB slavsp_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, real *a, integer *ipiv, real *b, integer *ldb, integer 
 	*info);
-extern /* Subroutine */ int slavsy_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* slavsy.c */
+F2CSUB slavsy_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, real *a, integer *lda, integer *ipiv, real *b, integer 
 	*ldb, integer *info);
-extern /* Subroutine */ int slqt01_(integer *m, integer *n, real *a, real *af, real *
+
+/* slqt01.c */
+F2CSUB slqt01_(integer *m, integer *n, real *a, real *af, real *
 	q, real *l, integer *lda, real *tau, real *work, integer *lwork, real 
 	*rwork, real *result);
-extern /* Subroutine */ int slqt02_(integer *m, integer *n, integer *k, real *a, 
+
+/* slqt02.c */
+F2CSUB slqt02_(integer *m, integer *n, integer *k, real *a, 
 	real *af, real *q, real *l, integer *lda, real *tau, real *work, 
 	integer *lwork, real *rwork, real *result);
-extern /* Subroutine */ int slqt03_(integer *m, integer *n, integer *k, real *af, 
+
+/* slqt03.c */
+F2CSUB slqt03_(integer *m, integer *n, integer *k, real *af, 
 	real *c__, real *cc, real *q, integer *lda, real *tau, real *work, 
 	integer *lwork, real *rwork, real *result);
-extern /* Subroutine */ int spbt01_(char *uplo, integer *n, integer *kd, real *a, 
+
+/* spbt01.c */
+F2CSUB spbt01_(char *uplo, integer *n, integer *kd, real *a, 
 	integer *lda, real *afac, integer *ldafac, real *rwork, real *resid);
-extern /* Subroutine */ int spbt02_(char *uplo, integer *n, integer *kd, integer *
+
+/* spbt02.c */
+F2CSUB spbt02_(char *uplo, integer *n, integer *kd, integer *
 	nrhs, real *a, integer *lda, real *x, integer *ldx, real *b, integer *
 	ldb, real *rwork, real *resid);
-extern /* Subroutine */ int spbt05_(char *uplo, integer *n, integer *kd, integer *
+
+/* spbt05.c */
+F2CSUB spbt05_(char *uplo, integer *n, integer *kd, integer *
 	nrhs, real *ab, integer *ldab, real *b, integer *ldb, real *x, 
 	integer *ldx, real *xact, integer *ldxact, real *ferr, real *berr, 
 	real *reslts);
-extern /* Subroutine */ int spot01_(char *uplo, integer *n, real *a, integer *lda, 
+
+/* spot01.c */
+F2CSUB spot01_(char *uplo, integer *n, real *a, integer *lda, 
 	real *afac, integer *ldafac, real *rwork, real *resid);
-extern /* Subroutine */ int spot02_(char *uplo, integer *n, integer *nrhs, real *a, 
+
+/* spot02.c */
+F2CSUB spot02_(char *uplo, integer *n, integer *nrhs, real *a, 
 	integer *lda, real *x, integer *ldx, real *b, integer *ldb, real *
 	rwork, real *resid);
-extern /* Subroutine */ int spot03_(char *uplo, integer *n, real *a, integer *lda, 
+
+/* spot03.c */
+F2CSUB spot03_(char *uplo, integer *n, real *a, integer *lda, 
 	real *ainv, integer *ldainv, real *work, integer *ldwork, real *rwork, 
 	 real *rcond, real *resid);
-extern /* Subroutine */ int spot05_(char *uplo, integer *n, integer *nrhs, real *a, 
+
+/* spot05.c */
+F2CSUB spot05_(char *uplo, integer *n, integer *nrhs, real *a, 
 	integer *lda, real *b, integer *ldb, real *x, integer *ldx, real *
 	xact, integer *ldxact, real *ferr, real *berr, real *reslts);
-extern /* Subroutine */ int sppt01_(char *uplo, integer *n, real *a, real *afac, 
+
+/* sppt01.c */
+F2CSUB sppt01_(char *uplo, integer *n, real *a, real *afac, 
 	real *rwork, real *resid);
-extern /* Subroutine */ int sppt02_(char *uplo, integer *n, integer *nrhs, real *a, 
+
+/* sppt02.c */
+F2CSUB sppt02_(char *uplo, integer *n, integer *nrhs, real *a, 
 	real *x, integer *ldx, real *b, integer *ldb, real *rwork, real *
 	resid);
-extern /* Subroutine */ int sppt03_(char *uplo, integer *n, real *a, real *ainv, 
+
+/* sppt03.c */
+F2CSUB sppt03_(char *uplo, integer *n, real *a, real *ainv, 
 	real *work, integer *ldwork, real *rwork, real *rcond, real *resid);
-extern /* Subroutine */ int sppt05_(char *uplo, integer *n, integer *nrhs, real *ap, 
+
+/* sppt05.c */
+F2CSUB sppt05_(char *uplo, integer *n, integer *nrhs, real *ap, 
 	real *b, integer *ldb, real *x, integer *ldx, real *xact, integer *
 	ldxact, real *ferr, real *berr, real *reslts);
-extern /* Subroutine */ int spst01_(char *uplo, integer *n, real *a, integer *lda, 
+
+/* spst01.c */
+F2CSUB spst01_(char *uplo, integer *n, real *a, integer *lda, 
 	real *afac, integer *ldafac, real *perm, integer *ldperm, integer *
 	piv, real *rwork, real *resid, integer *rank);
-extern /* Subroutine */ int sptt01_(integer *n, real *d__, real *e, real *df, real *
+
+/* sptt01.c */
+F2CSUB sptt01_(integer *n, real *d__, real *e, real *df, real *
 	ef, real *work, real *resid);
-extern /* Subroutine */ int sptt02_(integer *n, integer *nrhs, real *d__, real *e, 
+
+/* sptt02.c */
+F2CSUB sptt02_(integer *n, integer *nrhs, real *d__, real *e, 
 	real *x, integer *ldx, real *b, integer *ldb, real *resid);
-extern /* Subroutine */ int sptt05_(integer *n, integer *nrhs, real *d__, real *e, 
+
+/* sptt05.c */
+F2CSUB sptt05_(integer *n, integer *nrhs, real *d__, real *e, 
 	real *b, integer *ldb, real *x, integer *ldx, real *xact, integer *
 	ldxact, real *ferr, real *berr, real *reslts);
-extern /* Subroutine */ int sqlt01_(integer *m, integer *n, real *a, real *af, real *
+
+/* sqlt01.c */
+F2CSUB sqlt01_(integer *m, integer *n, real *a, real *af, real *
 	q, real *l, integer *lda, real *tau, real *work, integer *lwork, real 
 	*rwork, real *result);
-extern /* Subroutine */ int sqlt02_(integer *m, integer *n, integer *k, real *a, 
+
+/* sqlt02.c */
+F2CSUB sqlt02_(integer *m, integer *n, integer *k, real *a, 
 	real *af, real *q, real *l, integer *lda, real *tau, real *work, 
 	integer *lwork, real *rwork, real *result);
-extern /* Subroutine */ int sqlt03_(integer *m, integer *n, integer *k, real *af, 
+
+/* sqlt03.c */
+F2CSUB sqlt03_(integer *m, integer *n, integer *k, real *af, 
 	real *c__, real *cc, real *q, integer *lda, real *tau, real *work, 
 	integer *lwork, real *rwork, real *result);
-extern doublereal sqpt01_(integer *m, integer *n, integer *k, real *a, real *af, 
+
+/* sqpt01.c */
+doublereal sqpt01_(integer *m, integer *n, integer *k, real *a, real *af, 
 	integer *lda, real *tau, integer *jpvt, real *work, integer *lwork);
-extern /* Subroutine */ int sqrt01_(integer *m, integer *n, real *a, real *af, real *
+
+/* sqrt01.c */
+F2CSUB sqrt01_(integer *m, integer *n, real *a, real *af, real *
 	q, real *r__, integer *lda, real *tau, real *work, integer *lwork, 
 	real *rwork, real *result);
-extern /* Subroutine */ int sqrt02_(integer *m, integer *n, integer *k, real *a, 
+
+/* sqrt02.c */
+F2CSUB sqrt02_(integer *m, integer *n, integer *k, real *a, 
 	real *af, real *q, real *r__, integer *lda, real *tau, real *work, 
 	integer *lwork, real *rwork, real *result);
-extern /* Subroutine */ int sqrt03_(integer *m, integer *n, integer *k, real *af, 
+
+/* sqrt03.c */
+F2CSUB sqrt03_(integer *m, integer *n, integer *k, real *af, 
 	real *c__, real *cc, real *q, integer *lda, real *tau, real *work, 
 	integer *lwork, real *rwork, real *result);
-extern doublereal sqrt11_(integer *m, integer *k, real *a, integer *lda, real *tau, 
+
+/* sqrt11.c */
+doublereal sqrt11_(integer *m, integer *k, real *a, integer *lda, real *tau, 
 	real *work, integer *lwork);
-extern doublereal sqrt12_(integer *m, integer *n, real *a, integer *lda, real *s, 
+
+/* sqrt12.c */
+doublereal sqrt12_(integer *m, integer *n, real *a, integer *lda, real *s, 
 	real *work, integer *lwork);
-extern /* Subroutine */ int sqrt13_(integer *scale, integer *m, integer *n, real *a, 
+
+/* sqrt13.c */
+F2CSUB sqrt13_(integer *scale, integer *m, integer *n, real *a, 
 	integer *lda, real *norma, integer *iseed);
-extern doublereal sqrt14_(char *trans, integer *m, integer *n, integer *nrhs, real *
+
+/* sqrt14.c */
+doublereal sqrt14_(char *trans, integer *m, integer *n, integer *nrhs, real *
 	a, integer *lda, real *x, integer *ldx, real *work, integer *lwork);
-extern /* Subroutine */ int sqrt15_(integer *scale, integer *rksel, integer *m, 
+
+/* sqrt15.c */
+F2CSUB sqrt15_(integer *scale, integer *rksel, integer *m, 
 	integer *n, integer *nrhs, real *a, integer *lda, real *b, integer *
 	ldb, real *s, integer *rank, real *norma, real *normb, integer *iseed, 
 	 real *work, integer *lwork);
-extern /* Subroutine */ int sqrt16_(char *trans, integer *m, integer *n, integer *
+
+/* sqrt16.c */
+F2CSUB sqrt16_(char *trans, integer *m, integer *n, integer *
 	nrhs, real *a, integer *lda, real *x, integer *ldx, real *b, integer *
 	ldb, real *rwork, real *resid);
-extern doublereal sqrt17_(char *trans, integer *iresid, integer *m, integer *n, 
+
+/* sqrt17.c */
+doublereal sqrt17_(char *trans, integer *iresid, integer *m, integer *n, 
 	integer *nrhs, real *a, integer *lda, real *x, integer *ldx, real *b, 
 	integer *ldb, real *c__, real *work, integer *lwork);
-extern /* Subroutine */ int srqt01_(integer *m, integer *n, real *a, real *af, real *
+
+/* srqt01.c */
+F2CSUB srqt01_(integer *m, integer *n, real *a, real *af, real *
 	q, real *r__, integer *lda, real *tau, real *work, integer *lwork, 
 	real *rwork, real *result);
-extern /* Subroutine */ int srqt02_(integer *m, integer *n, integer *k, real *a, 
+
+/* srqt02.c */
+F2CSUB srqt02_(integer *m, integer *n, integer *k, real *a, 
 	real *af, real *q, real *r__, integer *lda, real *tau, real *work, 
 	integer *lwork, real *rwork, real *result);
-extern /* Subroutine */ int srqt03_(integer *m, integer *n, integer *k, real *af, 
+
+/* srqt03.c */
+F2CSUB srqt03_(integer *m, integer *n, integer *k, real *af, 
 	real *c__, real *cc, real *q, integer *lda, real *tau, real *work, 
 	integer *lwork, real *rwork, real *result);
-extern doublereal srzt01_(integer *m, integer *n, real *a, real *af, integer *lda, 
+
+/* srzt01.c */
+doublereal srzt01_(integer *m, integer *n, real *a, real *af, integer *lda, 
 	real *tau, real *work, integer *lwork);
-extern doublereal srzt02_(integer *m, integer *n, real *af, integer *lda, real *tau, 
+
+/* srzt02.c */
+doublereal srzt02_(integer *m, integer *n, real *af, integer *lda, real *tau, 
 	real *work, integer *lwork);
-extern /* Subroutine */ int sspt01_(char *uplo, integer *n, real *a, real *afac, 
+
+/* sspt01.c */
+F2CSUB sspt01_(char *uplo, integer *n, real *a, real *afac, 
 	integer *ipiv, real *c__, integer *ldc, real *rwork, real *resid);
-extern /* Subroutine */ int ssyt01_(char *uplo, integer *n, real *a, integer *lda, 
+
+/* ssyt01.c */
+F2CSUB ssyt01_(char *uplo, integer *n, real *a, integer *lda, 
 	real *afac, integer *ldafac, integer *ipiv, real *c__, integer *ldc, 
 	real *rwork, real *resid);
-extern /* Subroutine */ int stbt02_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* stbt02.c */
+F2CSUB stbt02_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *kd, integer *nrhs, real *ab, integer *ldab, real *x, integer 
 	*ldx, real *b, integer *ldb, real *work, real *resid);
-extern /* Subroutine */ int stbt03_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* stbt03.c */
+F2CSUB stbt03_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *kd, integer *nrhs, real *ab, integer *ldab, real *scale, 
 	real *cnorm, real *tscal, real *x, integer *ldx, real *b, integer *
 	ldb, real *work, real *resid);
-extern /* Subroutine */ int stbt05_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* stbt05.c */
+F2CSUB stbt05_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *kd, integer *nrhs, real *ab, integer *ldab, real *b, integer 
 	*ldb, real *x, integer *ldx, real *xact, integer *ldxact, real *ferr, 
 	real *berr, real *reslts);
-extern /* Subroutine */ int stbt06_(real *rcond, real *rcondc, char *uplo, char *
+
+/* stbt06.c */
+F2CSUB stbt06_(real *rcond, real *rcondc, char *uplo, char *
 	diag, integer *n, integer *kd, real *ab, integer *ldab, real *work, 
 	real *rat);
-extern /* Subroutine */ int stpt01_(char *uplo, char *diag, integer *n, real *ap, 
+
+/* stpt01.c */
+F2CSUB stpt01_(char *uplo, char *diag, integer *n, real *ap, 
 	real *ainvp, real *rcond, real *work, real *resid);
-extern /* Subroutine */ int stpt02_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* stpt02.c */
+F2CSUB stpt02_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, real *ap, real *x, integer *ldx, real *b, integer *ldb, 
 	 real *work, real *resid);
-extern /* Subroutine */ int stpt03_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* stpt03.c */
+F2CSUB stpt03_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, real *ap, real *scale, real *cnorm, real *tscal, real *
 	x, integer *ldx, real *b, integer *ldb, real *work, real *resid);
-extern /* Subroutine */ int stpt05_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* stpt05.c */
+F2CSUB stpt05_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, real *ap, real *b, integer *ldb, real *x, integer *ldx, 
 	 real *xact, integer *ldxact, real *ferr, real *berr, real *reslts);
-extern /* Subroutine */ int stpt06_(real *rcond, real *rcondc, char *uplo, char *
+
+/* stpt06.c */
+F2CSUB stpt06_(real *rcond, real *rcondc, char *uplo, char *
 	diag, integer *n, real *ap, real *work, real *rat);
-extern /* Subroutine */ int strt01_(char *uplo, char *diag, integer *n, real *a, 
+
+/* strt01.c */
+F2CSUB strt01_(char *uplo, char *diag, integer *n, real *a, 
 	integer *lda, real *ainv, integer *ldainv, real *rcond, real *work, 
 	real *resid);
-extern /* Subroutine */ int strt02_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* strt02.c */
+F2CSUB strt02_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, real *a, integer *lda, real *x, integer *ldx, real *b, 
 	integer *ldb, real *work, real *resid);
-extern /* Subroutine */ int strt03_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* strt03.c */
+F2CSUB strt03_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, real *a, integer *lda, real *scale, real *cnorm, real *
 	tscal, real *x, integer *ldx, real *b, integer *ldb, real *work, real 
 	*resid);
-extern /* Subroutine */ int strt05_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* strt05.c */
+F2CSUB strt05_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, real *a, integer *lda, real *b, integer *ldb, real *x, 
 	integer *ldx, real *xact, integer *ldxact, real *ferr, real *berr, 
 	real *reslts);
-extern /* Subroutine */ int strt06_(real *rcond, real *rcondc, char *uplo, char *
+
+/* strt06.c */
+F2CSUB strt06_(real *rcond, real *rcondc, char *uplo, char *
 	diag, integer *n, real *a, integer *lda, real *work, real *rat);
-extern doublereal stzt01_(integer *m, integer *n, real *a, real *af, integer *lda, 
+
+/* stzt01.c */
+doublereal stzt01_(integer *m, integer *n, real *a, real *af, integer *lda, 
 	real *tau, real *work, integer *lwork);
-extern doublereal stzt02_(integer *m, integer *n, real *af, integer *lda, real *tau, 
+
+/* stzt02.c */
+doublereal stzt02_(integer *m, integer *n, real *af, integer *lda, real *tau, 
 	real *work, integer *lwork);
-extern /* Subroutine */ int xlaenv_(integer *ispec, integer *nvalue);
-extern /* Subroutine */ int zchkeq_(doublereal *thresh, integer *nout);
-extern /* Subroutine */ int zchkgb_(logical *dotype, integer *nm, integer *mval, 
+
+/* xerbla.c */
+F2CSUB this_xerbla_(char *srname, integer *info);
+
+/* xlaenv.c */
+F2CSUB xlaenv_(integer *ispec, integer *nvalue);
+
+/* zchkeq.c */
+F2CSUB zchkeq_(doublereal *thresh, integer *nout);
+
+/* zchkgb.c */
+F2CSUB zchkgb_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nns, integer *nsval, doublereal *thresh, logical *tsterr, 
 	doublecomplex *a, integer *la, doublecomplex *afac, integer *lafac, 
 	doublecomplex *b, doublecomplex *x, doublecomplex *xact, 
 	doublecomplex *work, doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zchkge_(logical *dotype, integer *nm, integer *mval, 
+
+/* zchkge.c */
+F2CSUB zchkge_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nns, integer *nsval, doublereal *thresh, logical *tsterr, integer *
 	nmax, doublecomplex *a, doublecomplex *afac, doublecomplex *ainv, 
 	doublecomplex *b, doublecomplex *x, doublecomplex *xact, 
 	doublecomplex *work, doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zchkgt_(logical *dotype, integer *nn, integer *nval, 
+
+/* zchkgt.c */
+F2CSUB zchkgt_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, doublereal *thresh, logical *tsterr, 
 	doublecomplex *a, doublecomplex *af, doublecomplex *b, doublecomplex *
 	x, doublecomplex *xact, doublecomplex *work, doublereal *rwork, 
 	integer *iwork, integer *nout);
-extern /* Subroutine */ int zchkhe_(logical *dotype, integer *nn, integer *nval, 
+
+/* zchkhe.c */
+F2CSUB zchkhe_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nns, integer *nsval, 
 	doublereal *thresh, logical *tsterr, integer *nmax, doublecomplex *a, 
 	doublecomplex *afac, doublecomplex *ainv, doublecomplex *b, 
 	doublecomplex *x, doublecomplex *xact, doublecomplex *work, 
 	doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zchkhp_(logical *dotype, integer *nn, integer *nval, 
+
+/* zchkhp.c */
+F2CSUB zchkhp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, doublereal *thresh, logical *tsterr, 
 	integer *nmax, doublecomplex *a, doublecomplex *afac, doublecomplex *
 	ainv, doublecomplex *b, doublecomplex *x, doublecomplex *xact, 
 	doublecomplex *work, doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zchklq_(logical *dotype, integer *nm, integer *mval, 
+
+/* zchklq.c */
+F2CSUB zchklq_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, integer *nrhs, doublereal *thresh, logical *tsterr, integer *
 	nmax, doublecomplex *a, doublecomplex *af, doublecomplex *aq, 
 	doublecomplex *al, doublecomplex *ac, doublecomplex *b, doublecomplex 
 	*x, doublecomplex *xact, doublecomplex *tau, doublecomplex *work, 
 	doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zchkpb_(logical *dotype, integer *nn, integer *nval, 
+
+/* zchkpb.c */
+F2CSUB zchkpb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nns, integer *nsval, 
 	doublereal *thresh, logical *tsterr, integer *nmax, doublecomplex *a, 
 	doublecomplex *afac, doublecomplex *ainv, doublecomplex *b, 
 	doublecomplex *x, doublecomplex *xact, doublecomplex *work, 
 	doublereal *rwork, integer *nout);
-extern /* Subroutine */ int zchkpo_(logical *dotype, integer *nn, integer *nval, 
+
+/* zchkpo.c */
+F2CSUB zchkpo_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nns, integer *nsval, 
 	doublereal *thresh, logical *tsterr, integer *nmax, doublecomplex *a, 
 	doublecomplex *afac, doublecomplex *ainv, doublecomplex *b, 
 	doublecomplex *x, doublecomplex *xact, doublecomplex *work, 
 	doublereal *rwork, integer *nout);
-extern /* Subroutine */ int zchkpp_(logical *dotype, integer *nn, integer *nval, 
+
+/* zchkpp.c */
+F2CSUB zchkpp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, doublereal *thresh, logical *tsterr, 
 	integer *nmax, doublecomplex *a, doublecomplex *afac, doublecomplex *
 	ainv, doublecomplex *b, doublecomplex *x, doublecomplex *xact, 
 	doublecomplex *work, doublereal *rwork, integer *nout);
-extern /* Subroutine */ int zchkps_(logical *dotype, integer *nn, integer *nval, 
+
+/* zchkps.c */
+F2CSUB zchkps_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nrank, integer *rankval, 
 	doublereal *thresh, logical *tsterr, integer *nmax, doublecomplex *a, 
 	doublecomplex *afac, doublecomplex *perm, integer *piv, doublecomplex 
 	*work, doublereal *rwork, integer *nout);
-extern /* Subroutine */ int zchkpt_(logical *dotype, integer *nn, integer *nval, 
+
+/* zchkpt.c */
+F2CSUB zchkpt_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, doublereal *thresh, logical *tsterr, 
 	doublecomplex *a, doublereal *d__, doublecomplex *e, doublecomplex *b, 
 	 doublecomplex *x, doublecomplex *xact, doublecomplex *work, 
 	doublereal *rwork, integer *nout);
-extern /* Subroutine */ int zchkq3_(logical *dotype, integer *nm, integer *mval, 
+
+/* zchkq3.c */
+F2CSUB zchkq3_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, doublereal *thresh, doublecomplex *a, doublecomplex *copya, 
 	doublereal *s, doublereal *copys, doublecomplex *tau, doublecomplex *
 	work, doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zchkql_(logical *dotype, integer *nm, integer *mval, 
+
+/* zchkql.c */
+F2CSUB zchkql_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, integer *nrhs, doublereal *thresh, logical *tsterr, integer *
 	nmax, doublecomplex *a, doublecomplex *af, doublecomplex *aq, 
 	doublecomplex *al, doublecomplex *ac, doublecomplex *b, doublecomplex 
 	*x, doublecomplex *xact, doublecomplex *tau, doublecomplex *work, 
 	doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zchkqp_(logical *dotype, integer *nm, integer *mval, 
+
+/* zchkqp.c */
+F2CSUB zchkqp_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, doublereal *thresh, logical *tsterr, 
 	doublecomplex *a, doublecomplex *copya, doublereal *s, doublereal *
 	copys, doublecomplex *tau, doublecomplex *work, doublereal *rwork, 
 	integer *iwork, integer *nout);
-extern /* Subroutine */ int zchkqr_(logical *dotype, integer *nm, integer *mval, 
+
+/* zchkqr.c */
+F2CSUB zchkqr_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, integer *nrhs, doublereal *thresh, logical *tsterr, integer *
 	nmax, doublecomplex *a, doublecomplex *af, doublecomplex *aq, 
 	doublecomplex *ar, doublecomplex *ac, doublecomplex *b, doublecomplex 
 	*x, doublecomplex *xact, doublecomplex *tau, doublecomplex *work, 
 	doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zchkrq_(logical *dotype, integer *nm, integer *mval, 
+
+/* Main program */ int MAIN__(void);
+
+/* zchkrq.c */
+F2CSUB zchkrq_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nnb, integer *nbval, integer *
 	nxval, integer *nrhs, doublereal *thresh, logical *tsterr, integer *
 	nmax, doublecomplex *a, doublecomplex *af, doublecomplex *aq, 
 	doublecomplex *ar, doublecomplex *ac, doublecomplex *b, doublecomplex 
 	*x, doublecomplex *xact, doublecomplex *tau, doublecomplex *work, 
 	doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zchksp_(logical *dotype, integer *nn, integer *nval, 
+
+/* zchksp.c */
+F2CSUB zchksp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, doublereal *thresh, logical *tsterr, 
 	integer *nmax, doublecomplex *a, doublecomplex *afac, doublecomplex *
 	ainv, doublecomplex *b, doublecomplex *x, doublecomplex *xact, 
 	doublecomplex *work, doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zchksy_(logical *dotype, integer *nn, integer *nval, 
+
+/* zchksy.c */
+F2CSUB zchksy_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nns, integer *nsval, 
 	doublereal *thresh, logical *tsterr, integer *nmax, doublecomplex *a, 
 	doublecomplex *afac, doublecomplex *ainv, doublecomplex *b, 
 	doublecomplex *x, doublecomplex *xact, doublecomplex *work, 
 	doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zchktb_(logical *dotype, integer *nn, integer *nval, 
+
+/* zchktb.c */
+F2CSUB zchktb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, doublereal *thresh, logical *tsterr, 
 	integer *nmax, doublecomplex *ab, doublecomplex *ainv, doublecomplex *
 	b, doublecomplex *x, doublecomplex *xact, doublecomplex *work, 
 	doublereal *rwork, integer *nout);
-extern /* Subroutine */ int zchktp_(logical *dotype, integer *nn, integer *nval, 
+
+/* zchktp.c */
+F2CSUB zchktp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, doublereal *thresh, logical *tsterr, 
 	integer *nmax, doublecomplex *ap, doublecomplex *ainvp, doublecomplex 
 	*b, doublecomplex *x, doublecomplex *xact, doublecomplex *work, 
 	doublereal *rwork, integer *nout);
-extern /* Subroutine */ int zchktr_(logical *dotype, integer *nn, integer *nval, 
+
+/* zchktr.c */
+F2CSUB zchktr_(logical *dotype, integer *nn, integer *nval, 
 	integer *nnb, integer *nbval, integer *nns, integer *nsval, 
 	doublereal *thresh, logical *tsterr, integer *nmax, doublecomplex *a, 
 	doublecomplex *ainv, doublecomplex *b, doublecomplex *x, 
 	doublecomplex *xact, doublecomplex *work, doublereal *rwork, integer *
 	nout);
-extern /* Subroutine */ int zchktz_(logical *dotype, integer *nm, integer *mval, 
+
+/* zchktz.c */
+F2CSUB zchktz_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, doublereal *thresh, logical *tsterr, 
 	doublecomplex *a, doublecomplex *copya, doublereal *s, doublereal *
 	copys, doublecomplex *tau, doublecomplex *work, doublereal *rwork, 
 	integer *nout);
-extern /* Subroutine */ int zdrvab_(logical *dotype, integer *nm, integer *mval, 
+
+/* zdrvab.c */
+F2CSUB zdrvab_(logical *dotype, integer *nm, integer *mval, 
 	integer *nns, integer *nsval, doublereal *thresh, integer *nmax, 
 	doublecomplex *a, doublecomplex *afac, doublecomplex *b, 
 	doublecomplex *x, doublecomplex *work, doublereal *rwork, complex *
 	swork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zdrvac_(logical *dotype, integer *nm, integer *mval, 
+
+/* zdrvac.c */
+F2CSUB zdrvac_(logical *dotype, integer *nm, integer *mval, 
 	integer *nns, integer *nsval, doublereal *thresh, integer *nmax, 
 	doublecomplex *a, doublecomplex *afac, doublecomplex *b, 
 	doublecomplex *x, doublecomplex *work, doublereal *rwork, complex *
 	swork, integer *nout);
-extern /* Subroutine */ int zdrvgb_(logical *dotype, integer *nn, integer *nval, 
+
+/* zdrvgb.c */
+F2CSUB zdrvgb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, doublecomplex *a, 
 	integer *la, doublecomplex *afb, integer *lafb, doublecomplex *asav, 
 	doublecomplex *b, doublecomplex *bsav, doublecomplex *x, 
 	doublecomplex *xact, doublereal *s, doublecomplex *work, doublereal *
 	rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zdrvgb_(logical *dotype, integer *nn, integer *nval, 
+
+/* zdrvgbx.c */
+F2CSUB zdrvgb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, doublecomplex *a, 
 	integer *la, doublecomplex *afb, integer *lafb, doublecomplex *asav, 
 	doublecomplex *b, doublecomplex *bsav, doublecomplex *x, 
 	doublecomplex *xact, doublereal *s, doublecomplex *work, doublereal *
 	rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zdrvge_(logical *dotype, integer *nn, integer *nval, 
+
+/* zdrvge.c */
+F2CSUB zdrvge_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, integer *nmax, 
 	doublecomplex *a, doublecomplex *afac, doublecomplex *asav, 
 	doublecomplex *b, doublecomplex *bsav, doublecomplex *x, 
 	doublecomplex *xact, doublereal *s, doublecomplex *work, doublereal *
 	rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zdrvge_(logical *dotype, integer *nn, integer *nval, 
+
+/* zdrvgex.c */
+F2CSUB zdrvge_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, integer *nmax, 
 	doublecomplex *a, doublecomplex *afac, doublecomplex *asav, 
 	doublecomplex *b, doublecomplex *bsav, doublecomplex *x, 
 	doublecomplex *xact, doublereal *s, doublecomplex *work, doublereal *
 	rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zdrvgt_(logical *dotype, integer *nn, integer *nval, 
+
+/* zdrvgt.c */
+F2CSUB zdrvgt_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, doublecomplex *a, 
 	doublecomplex *af, doublecomplex *b, doublecomplex *x, doublecomplex *
 	xact, doublecomplex *work, doublereal *rwork, integer *iwork, integer 
 	*nout);
-extern /* Subroutine */ int zdrvhe_(logical *dotype, integer *nn, integer *nval, 
+
+/* zdrvhe.c */
+F2CSUB zdrvhe_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, integer *nmax, 
 	doublecomplex *a, doublecomplex *afac, doublecomplex *ainv, 
 	doublecomplex *b, doublecomplex *x, doublecomplex *xact, 
 	doublecomplex *work, doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zdrvhp_(logical *dotype, integer *nn, integer *nval, 
+
+/* zdrvhp.c */
+F2CSUB zdrvhp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, integer *nmax, 
 	doublecomplex *a, doublecomplex *afac, doublecomplex *ainv, 
 	doublecomplex *b, doublecomplex *x, doublecomplex *xact, 
 	doublecomplex *work, doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zdrvls_(logical *dotype, integer *nm, integer *mval, 
+
+/* zdrvls.c */
+F2CSUB zdrvls_(logical *dotype, integer *nm, integer *mval, 
 	integer *nn, integer *nval, integer *nns, integer *nsval, integer *
 	nnb, integer *nbval, integer *nxval, doublereal *thresh, logical *
 	tsterr, doublecomplex *a, doublecomplex *copya, doublecomplex *b, 
 	doublecomplex *copyb, doublecomplex *c__, doublereal *s, doublereal *
 	copys, doublecomplex *work, doublereal *rwork, integer *iwork, 
 	integer *nout);
-extern /* Subroutine */ int zdrvpb_(logical *dotype, integer *nn, integer *nval, 
+
+/* zdrvpb.c */
+F2CSUB zdrvpb_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, integer *nmax, 
 	doublecomplex *a, doublecomplex *afac, doublecomplex *asav, 
 	doublecomplex *b, doublecomplex *bsav, doublecomplex *x, 
 	doublecomplex *xact, doublereal *s, doublecomplex *work, doublereal *
 	rwork, integer *nout);
-extern /* Subroutine */ int zdrvpo_(logical *dotype, integer *nn, integer *nval, 
+
+/* zdrvpo.c */
+F2CSUB zdrvpo_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, integer *nmax, 
 	doublecomplex *a, doublecomplex *afac, doublecomplex *asav, 
 	doublecomplex *b, doublecomplex *bsav, doublecomplex *x, 
 	doublecomplex *xact, doublereal *s, doublecomplex *work, doublereal *
 	rwork, integer *nout);
-extern /* Subroutine */ int zdrvpo_(logical *dotype, integer *nn, integer *nval, 
+
+/* zdrvpox.c */
+F2CSUB zdrvpo_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, integer *nmax, 
 	doublecomplex *a, doublecomplex *afac, doublecomplex *asav, 
 	doublecomplex *b, doublecomplex *bsav, doublecomplex *x, 
 	doublecomplex *xact, doublereal *s, doublecomplex *work, doublereal *
 	rwork, integer *nout);
-extern /* Subroutine */ int zdrvpp_(logical *dotype, integer *nn, integer *nval, 
+
+/* zdrvpp.c */
+F2CSUB zdrvpp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, integer *nmax, 
 	doublecomplex *a, doublecomplex *afac, doublecomplex *asav, 
 	doublecomplex *b, doublecomplex *bsav, doublecomplex *x, 
 	doublecomplex *xact, doublereal *s, doublecomplex *work, doublereal *
 	rwork, integer *nout);
-extern /* Subroutine */ int zdrvpt_(logical *dotype, integer *nn, integer *nval, 
+
+/* zdrvpt.c */
+F2CSUB zdrvpt_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, doublecomplex *a, 
 	doublereal *d__, doublecomplex *e, doublecomplex *b, doublecomplex *x, 
 	 doublecomplex *xact, doublecomplex *work, doublereal *rwork, integer 
 	*nout);
-extern /* Subroutine */ int zdrvrf1_(integer *nout, integer *nn, integer *nval, 
+
+/* zdrvrf1.c */
+F2CSUB zdrvrf1_(integer *nout, integer *nn, integer *nval, 
 	doublereal *thresh, doublecomplex *a, integer *lda, doublecomplex *
 	arf, doublereal *work);
-extern /* Subroutine */ int zdrvrf2_(integer *nout, integer *nn, integer *nval, 
+
+/* zdrvrf2.c */
+F2CSUB zdrvrf2_(integer *nout, integer *nn, integer *nval, 
 	doublecomplex *a, integer *lda, doublecomplex *arf, doublecomplex *ap, 
 	 doublecomplex *asav);
-extern /* Subroutine */ int zdrvrf3_(integer *nout, integer *nn, integer *nval, 
+
+/* zdrvrf3.c */
+F2CSUB zdrvrf3_(integer *nout, integer *nn, integer *nval, 
 	doublereal *thresh, doublecomplex *a, integer *lda, doublecomplex *
 	arf, doublecomplex *b1, doublecomplex *b2, doublereal *
 	d_work_zlange__, doublecomplex *z_work_zgeqrf__, doublecomplex *tau);
-extern /* Subroutine */ int zdrvrf4_(integer *nout, integer *nn, integer *nval, 
+
+/* zdrvrf4.c */
+F2CSUB zdrvrf4_(integer *nout, integer *nn, integer *nval, 
 	doublereal *thresh, doublecomplex *c1, doublecomplex *c2, integer *
 	ldc, doublecomplex *crf, doublecomplex *a, integer *lda, doublereal *
 	d_work_zlange__);
-extern /* Subroutine */ int zdrvrfp_(integer *nout, integer *nn, integer *nval, 
+
+/* zdrvrfp.c */
+F2CSUB zdrvrfp_(integer *nout, integer *nn, integer *nval, 
 	integer *nns, integer *nsval, integer *nnt, integer *ntval, 
 	doublereal *thresh, doublecomplex *a, doublecomplex *asav, 
 	doublecomplex *afac, doublecomplex *ainv, doublecomplex *b, 
@@ -1661,360 +2653,595 @@ extern /* Subroutine */ int zdrvrfp_(integer *nout, integer *nn, integer *nval,
 	z_work_zpot02__, doublecomplex *z_work_zpot03__, doublereal *
 	d_work_zlatms__, doublereal *d_work_zlanhe__, doublereal *
 	d_work_zpot02__, doublereal *d_work_zpot03__);
-extern /* Subroutine */ int zdrvsp_(logical *dotype, integer *nn, integer *nval, 
+
+/* zdrvsp.c */
+F2CSUB zdrvsp_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, integer *nmax, 
 	doublecomplex *a, doublecomplex *afac, doublecomplex *ainv, 
 	doublecomplex *b, doublecomplex *x, doublecomplex *xact, 
 	doublecomplex *work, doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zdrvsy_(logical *dotype, integer *nn, integer *nval, 
+
+/* zdrvsy.c */
+F2CSUB zdrvsy_(logical *dotype, integer *nn, integer *nval, 
 	integer *nrhs, doublereal *thresh, logical *tsterr, integer *nmax, 
 	doublecomplex *a, doublecomplex *afac, doublecomplex *ainv, 
 	doublecomplex *b, doublecomplex *x, doublecomplex *xact, 
 	doublecomplex *work, doublereal *rwork, integer *iwork, integer *nout);
-extern /* Subroutine */ int zebchvxx_(doublereal *thresh, char *path);
-extern /* Subroutine */ int zerrab_(integer *nunit);
-extern /* Subroutine */ int zerrac_(integer *nunit);
-extern /* Subroutine */ int zerrge_(char *path, integer *nunit);
-extern /* Subroutine */ int zerrge_(char *path, integer *nunit);
-extern /* Subroutine */ int zerrgt_(char *path, integer *nunit);
-extern /* Subroutine */ int zerrhe_(char *path, integer *nunit);
-extern /* Subroutine */ int zerrlq_(char *path, integer *nunit);
-extern /* Subroutine */ int zerrls_(char *path, integer *nunit);
-extern /* Subroutine */ int zerrpo_(char *path, integer *nunit);
-extern /* Subroutine */ int zerrpo_(char *path, integer *nunit);
-extern /* Subroutine */ int zerrps_(char *path, integer *nunit);
-extern /* Subroutine */ int zerrql_(char *path, integer *nunit);
-extern /* Subroutine */ int zerrqp_(char *path, integer *nunit);
-extern /* Subroutine */ int zerrqr_(char *path, integer *nunit);
-extern /* Subroutine */ int zerrrfp_(integer *nunit);
-extern /* Subroutine */ int zerrrq_(char *path, integer *nunit);
-extern /* Subroutine */ int zerrsy_(char *path, integer *nunit);
-extern /* Subroutine */ int zerrtr_(char *path, integer *nunit);
-extern /* Subroutine */ int zerrtz_(char *path, integer *nunit);
-extern /* Subroutine */ int zerrvx_(char *path, integer *nunit);
-extern /* Subroutine */ int zgbt01_(integer *m, integer *n, integer *kl, integer *ku, 
+
+/* zebchvxx.c */
+F2CSUB zebchvxx_(doublereal *thresh, char *path);
+
+/* zerrab.c */
+F2CSUB zerrab_(integer *nunit);
+
+/* zerrac.c */
+F2CSUB zerrac_(integer *nunit);
+
+/* zerrge.c */
+F2CSUB zerrge_(char *path, integer *nunit);
+
+/* zerrgex.c */
+F2CSUB zerrge_(char *path, integer *nunit);
+
+/* zerrgt.c */
+F2CSUB zerrgt_(char *path, integer *nunit);
+
+/* zerrhe.c */
+F2CSUB zerrhe_(char *path, integer *nunit);
+
+/* zerrlq.c */
+F2CSUB zerrlq_(char *path, integer *nunit);
+
+/* zerrls.c */
+F2CSUB zerrls_(char *path, integer *nunit);
+
+/* zerrpo.c */
+F2CSUB zerrpo_(char *path, integer *nunit);
+
+/* zerrpox.c */
+F2CSUB zerrpo_(char *path, integer *nunit);
+
+/* zerrps.c */
+F2CSUB zerrps_(char *path, integer *nunit);
+
+/* zerrql.c */
+F2CSUB zerrql_(char *path, integer *nunit);
+
+/* zerrqp.c */
+F2CSUB zerrqp_(char *path, integer *nunit);
+
+/* zerrqr.c */
+F2CSUB zerrqr_(char *path, integer *nunit);
+
+/* zerrrfp.c */
+F2CSUB zerrrfp_(integer *nunit);
+
+/* zerrrq.c */
+F2CSUB zerrrq_(char *path, integer *nunit);
+
+/* zerrsy.c */
+F2CSUB zerrsy_(char *path, integer *nunit);
+
+/* zerrtr.c */
+F2CSUB zerrtr_(char *path, integer *nunit);
+
+/* zerrtz.c */
+F2CSUB zerrtz_(char *path, integer *nunit);
+
+/* zerrvx.c */
+F2CSUB zerrvx_(char *path, integer *nunit);
+
+/* zgbt01.c */
+F2CSUB zgbt01_(integer *m, integer *n, integer *kl, integer *ku, 
 	 doublecomplex *a, integer *lda, doublecomplex *afac, integer *ldafac, 
 	 integer *ipiv, doublecomplex *work, doublereal *resid);
-extern /* Subroutine */ int zgbt02_(char *trans, integer *m, integer *n, integer *kl, 
+
+/* zgbt02.c */
+F2CSUB zgbt02_(char *trans, integer *m, integer *n, integer *kl, 
 	 integer *ku, integer *nrhs, doublecomplex *a, integer *lda, 
 	doublecomplex *x, integer *ldx, doublecomplex *b, integer *ldb, 
 	doublereal *resid);
-extern /* Subroutine */ int zgbt05_(char *trans, integer *n, integer *kl, integer *
+
+/* zgbt05.c */
+F2CSUB zgbt05_(char *trans, integer *n, integer *kl, integer *
 	ku, integer *nrhs, doublecomplex *ab, integer *ldab, doublecomplex *b, 
 	 integer *ldb, doublecomplex *x, integer *ldx, doublecomplex *xact, 
 	integer *ldxact, doublereal *ferr, doublereal *berr, doublereal *
 	reslts);
-extern /* Subroutine */ int zgelqs_(integer *m, integer *n, integer *nrhs, 
+
+/* zgelqs.c */
+F2CSUB zgelqs_(integer *m, integer *n, integer *nrhs, 
 	doublecomplex *a, integer *lda, doublecomplex *tau, doublecomplex *b, 
 	integer *ldb, doublecomplex *work, integer *lwork, integer *info);
-extern logical zgennd_(integer *m, integer *n, doublecomplex *a, integer *lda);
-extern /* Subroutine */ int zgeqls_(integer *m, integer *n, integer *nrhs, 
+
+/* zgennd.c */
+logical zgennd_(integer *m, integer *n, doublecomplex *a, integer *lda);
+
+/* zgeqls.c */
+F2CSUB zgeqls_(integer *m, integer *n, integer *nrhs, 
 	doublecomplex *a, integer *lda, doublecomplex *tau, doublecomplex *b, 
 	integer *ldb, doublecomplex *work, integer *lwork, integer *info);
-extern /* Subroutine */ int zgeqrs_(integer *m, integer *n, integer *nrhs, 
+
+/* zgeqrs.c */
+F2CSUB zgeqrs_(integer *m, integer *n, integer *nrhs, 
 	doublecomplex *a, integer *lda, doublecomplex *tau, doublecomplex *b, 
 	integer *ldb, doublecomplex *work, integer *lwork, integer *info);
-extern /* Subroutine */ int zgerqs_(integer *m, integer *n, integer *nrhs, 
+
+/* zgerqs.c */
+F2CSUB zgerqs_(integer *m, integer *n, integer *nrhs, 
 	doublecomplex *a, integer *lda, doublecomplex *tau, doublecomplex *b, 
 	integer *ldb, doublecomplex *work, integer *lwork, integer *info);
-extern /* Subroutine */ int zget01_(integer *m, integer *n, doublecomplex *a, 
+
+/* zget01.c */
+F2CSUB zget01_(integer *m, integer *n, doublecomplex *a, 
 	integer *lda, doublecomplex *afac, integer *ldafac, integer *ipiv, 
 	doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int zget02_(char *trans, integer *m, integer *n, integer *
+
+/* zget02.c */
+F2CSUB zget02_(char *trans, integer *m, integer *n, integer *
 	nrhs, doublecomplex *a, integer *lda, doublecomplex *x, integer *ldx, 
 	doublecomplex *b, integer *ldb, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int zget03_(integer *n, doublecomplex *a, integer *lda, 
+
+/* zget03.c */
+F2CSUB zget03_(integer *n, doublecomplex *a, integer *lda, 
 	doublecomplex *ainv, integer *ldainv, doublecomplex *work, integer *
 	ldwork, doublereal *rwork, doublereal *rcond, doublereal *resid);
-extern /* Subroutine */ int zget04_(integer *n, integer *nrhs, doublecomplex *x, 
+
+/* zget04.c */
+F2CSUB zget04_(integer *n, integer *nrhs, doublecomplex *x, 
 	integer *ldx, doublecomplex *xact, integer *ldxact, doublereal *rcond, 
 	 doublereal *resid);
-extern /* Subroutine */ int zget07_(char *trans, integer *n, integer *nrhs, 
+
+/* zget07.c */
+F2CSUB zget07_(char *trans, integer *n, integer *nrhs, 
 	doublecomplex *a, integer *lda, doublecomplex *b, integer *ldb, 
 	doublecomplex *x, integer *ldx, doublecomplex *xact, integer *ldxact, 
 	doublereal *ferr, logical *chkferr, doublereal *berr, doublereal *
 	reslts);
-extern /* Subroutine */ int zget08_(char *trans, integer *m, integer *n, integer *
+
+/* zget08.c */
+F2CSUB zget08_(char *trans, integer *m, integer *n, integer *
 	nrhs, doublecomplex *a, integer *lda, doublecomplex *x, integer *ldx, 
 	doublecomplex *b, integer *ldb, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int zgtt01_(integer *n, doublecomplex *dl, doublecomplex *
+
+/* zgtt01.c */
+F2CSUB zgtt01_(integer *n, doublecomplex *dl, doublecomplex *
 	d__, doublecomplex *du, doublecomplex *dlf, doublecomplex *df, 
 	doublecomplex *duf, doublecomplex *du2, integer *ipiv, doublecomplex *
 	work, integer *ldwork, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int zgtt02_(char *trans, integer *n, integer *nrhs, 
+
+/* zgtt02.c */
+F2CSUB zgtt02_(char *trans, integer *n, integer *nrhs, 
 	doublecomplex *dl, doublecomplex *d__, doublecomplex *du, 
 	doublecomplex *x, integer *ldx, doublecomplex *b, integer *ldb, 
 	doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int zgtt05_(char *trans, integer *n, integer *nrhs, 
+
+/* zgtt05.c */
+F2CSUB zgtt05_(char *trans, integer *n, integer *nrhs, 
 	doublecomplex *dl, doublecomplex *d__, doublecomplex *du, 
 	doublecomplex *b, integer *ldb, doublecomplex *x, integer *ldx, 
 	doublecomplex *xact, integer *ldxact, doublereal *ferr, doublereal *
 	berr, doublereal *reslts);
-extern /* Subroutine */ int zhet01_(char *uplo, integer *n, doublecomplex *a, 
+
+/* zhet01.c */
+F2CSUB zhet01_(char *uplo, integer *n, doublecomplex *a, 
 	integer *lda, doublecomplex *afac, integer *ldafac, integer *ipiv, 
 	doublecomplex *c__, integer *ldc, doublereal *rwork, doublereal *
 	resid);
-extern /* Subroutine */ int zhpt01_(char *uplo, integer *n, doublecomplex *a, 
+
+/* zhpt01.c */
+F2CSUB zhpt01_(char *uplo, integer *n, doublecomplex *a, 
 	doublecomplex *afac, integer *ipiv, doublecomplex *c__, integer *ldc, 
 	doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int zlahilb_(integer *n, integer *nrhs, doublecomplex *a, 
+
+/* zlahilb.c */
+F2CSUB zlahilb_(integer *n, integer *nrhs, doublecomplex *a, 
 	integer *lda, doublecomplex *x, integer *ldx, doublecomplex *b, 
 	integer *ldb, doublereal *work, integer *info, char *path);
-extern /* Subroutine */ int zlaipd_(integer *n, doublecomplex *a, integer *inda, 
+
+/* zlaipd.c */
+F2CSUB zlaipd_(integer *n, doublecomplex *a, integer *inda, 
 	integer *vinda);
-extern /* Subroutine */ int zlaptm_(char *uplo, integer *n, integer *nrhs, 
+
+/* zlaptm.c */
+F2CSUB zlaptm_(char *uplo, integer *n, integer *nrhs, 
 	doublereal *alpha, doublereal *d__, doublecomplex *e, doublecomplex *
 	x, integer *ldx, doublereal *beta, doublecomplex *b, integer *ldb);
-extern /* Subroutine */ int zlarhs_(char *path, char *xtype, char *uplo, char *trans, 
+
+/* zlarhs.c */
+F2CSUB zlarhs_(char *path, char *xtype, char *uplo, char *trans, 
 	 integer *m, integer *n, integer *kl, integer *ku, integer *nrhs, 
 	doublecomplex *a, integer *lda, doublecomplex *x, integer *ldx, 
 	doublecomplex *b, integer *ldb, integer *iseed, integer *info);
-extern /* Subroutine */ int zlatb4_(char *path, integer *imat, integer *m, integer *
+
+/* zlatb4.c */
+F2CSUB zlatb4_(char *path, integer *imat, integer *m, integer *
 	n, char *type__, integer *kl, integer *ku, doublereal *anorm, integer 
 	*mode, doublereal *cndnum, char *dist);
-extern /* Subroutine */ int zlatb5_(char *path, integer *imat, integer *n, char *
+
+/* zlatb5.c */
+F2CSUB zlatb5_(char *path, integer *imat, integer *n, char *
 	type__, integer *kl, integer *ku, doublereal *anorm, integer *mode, 
 	doublereal *cndnum, char *dist);
-extern /* Subroutine */ int zlatsp_(char *uplo, integer *n, doublecomplex *x, 
+
+/* zlatsp.c */
+F2CSUB zlatsp_(char *uplo, integer *n, doublecomplex *x, 
 	integer *iseed);
-extern /* Subroutine */ int zlatsy_(char *uplo, integer *n, doublecomplex *x, 
+
+/* zlatsy.c */
+F2CSUB zlatsy_(char *uplo, integer *n, doublecomplex *x, 
 	integer *ldx, integer *iseed);
-extern /* Subroutine */ int zlattb_(integer *imat, char *uplo, char *trans, char *
+
+/* zlattb.c */
+F2CSUB zlattb_(integer *imat, char *uplo, char *trans, char *
 	diag, integer *iseed, integer *n, integer *kd, doublecomplex *ab, 
 	integer *ldab, doublecomplex *b, doublecomplex *work, doublereal *
 	rwork, integer *info);
-extern /* Subroutine */ int zlattp_(integer *imat, char *uplo, char *trans, char *
+
+/* zlattp.c */
+F2CSUB zlattp_(integer *imat, char *uplo, char *trans, char *
 	diag, integer *iseed, integer *n, doublecomplex *ap, doublecomplex *b, 
 	 doublecomplex *work, doublereal *rwork, integer *info);
-extern /* Subroutine */ int zlattr_(integer *imat, char *uplo, char *trans, char *
+
+/* zlattr.c */
+F2CSUB zlattr_(integer *imat, char *uplo, char *trans, char *
 	diag, integer *iseed, integer *n, doublecomplex *a, integer *lda, 
 	doublecomplex *b, doublecomplex *work, doublereal *rwork, integer *
 	info);
-extern /* Subroutine */ int zlavhe_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* zlavhe.c */
+F2CSUB zlavhe_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, doublecomplex *a, integer *lda, integer *ipiv, 
 	doublecomplex *b, integer *ldb, integer *info);
-extern /* Subroutine */ int zlavhp_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* zlavhp.c */
+F2CSUB zlavhp_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, doublecomplex *a, integer *ipiv, doublecomplex *b, 
 	integer *ldb, integer *info);
-extern /* Subroutine */ int zlavsp_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* zlavsp.c */
+F2CSUB zlavsp_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, doublecomplex *a, integer *ipiv, doublecomplex *b, 
 	integer *ldb, integer *info);
-extern /* Subroutine */ int zlavsy_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* zlavsy.c */
+F2CSUB zlavsy_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, doublecomplex *a, integer *lda, integer *ipiv, 
 	doublecomplex *b, integer *ldb, integer *info);
-extern /* Subroutine */ int zlqt01_(integer *m, integer *n, doublecomplex *a, 
+
+/* zlqt01.c */
+F2CSUB zlqt01_(integer *m, integer *n, doublecomplex *a, 
 	doublecomplex *af, doublecomplex *q, doublecomplex *l, integer *lda, 
 	doublecomplex *tau, doublecomplex *work, integer *lwork, doublereal *
 	rwork, doublereal *result);
-extern /* Subroutine */ int zlqt02_(integer *m, integer *n, integer *k, 
+
+/* zlqt02.c */
+F2CSUB zlqt02_(integer *m, integer *n, integer *k, 
 	doublecomplex *a, doublecomplex *af, doublecomplex *q, doublecomplex *
 	l, integer *lda, doublecomplex *tau, doublecomplex *work, integer *
 	lwork, doublereal *rwork, doublereal *result);
-extern /* Subroutine */ int zlqt03_(integer *m, integer *n, integer *k, 
+
+/* zlqt03.c */
+F2CSUB zlqt03_(integer *m, integer *n, integer *k, 
 	doublecomplex *af, doublecomplex *c__, doublecomplex *cc, 
 	doublecomplex *q, integer *lda, doublecomplex *tau, doublecomplex *
 	work, integer *lwork, doublereal *rwork, doublereal *result);
-extern /* Subroutine */ int zpbt01_(char *uplo, integer *n, integer *kd, 
+
+/* zpbt01.c */
+F2CSUB zpbt01_(char *uplo, integer *n, integer *kd, 
 	doublecomplex *a, integer *lda, doublecomplex *afac, integer *ldafac, 
 	doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int zpbt02_(char *uplo, integer *n, integer *kd, integer *
+
+/* zpbt02.c */
+F2CSUB zpbt02_(char *uplo, integer *n, integer *kd, integer *
 	nrhs, doublecomplex *a, integer *lda, doublecomplex *x, integer *ldx, 
 	doublecomplex *b, integer *ldb, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int zpbt05_(char *uplo, integer *n, integer *kd, integer *
+
+/* zpbt05.c */
+F2CSUB zpbt05_(char *uplo, integer *n, integer *kd, integer *
 	nrhs, doublecomplex *ab, integer *ldab, doublecomplex *b, integer *
 	ldb, doublecomplex *x, integer *ldx, doublecomplex *xact, integer *
 	ldxact, doublereal *ferr, doublereal *berr, doublereal *reslts);
-extern /* Subroutine */ int zpot01_(char *uplo, integer *n, doublecomplex *a, 
+
+/* zpot01.c */
+F2CSUB zpot01_(char *uplo, integer *n, doublecomplex *a, 
 	integer *lda, doublecomplex *afac, integer *ldafac, doublereal *rwork, 
 	 doublereal *resid);
-extern /* Subroutine */ int zpot02_(char *uplo, integer *n, integer *nrhs, 
+
+/* zpot02.c */
+F2CSUB zpot02_(char *uplo, integer *n, integer *nrhs, 
 	doublecomplex *a, integer *lda, doublecomplex *x, integer *ldx, 
 	doublecomplex *b, integer *ldb, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int zpot03_(char *uplo, integer *n, doublecomplex *a, 
+
+/* zpot03.c */
+F2CSUB zpot03_(char *uplo, integer *n, doublecomplex *a, 
 	integer *lda, doublecomplex *ainv, integer *ldainv, doublecomplex *
 	work, integer *ldwork, doublereal *rwork, doublereal *rcond, 
 	doublereal *resid);
-extern /* Subroutine */ int zpot05_(char *uplo, integer *n, integer *nrhs, 
+
+/* zpot05.c */
+F2CSUB zpot05_(char *uplo, integer *n, integer *nrhs, 
 	doublecomplex *a, integer *lda, doublecomplex *b, integer *ldb, 
 	doublecomplex *x, integer *ldx, doublecomplex *xact, integer *ldxact, 
 	doublereal *ferr, doublereal *berr, doublereal *reslts);
-extern /* Subroutine */ int zpot06_(char *uplo, integer *n, integer *nrhs, 
+
+/* zpot06.c */
+F2CSUB zpot06_(char *uplo, integer *n, integer *nrhs, 
 	doublecomplex *a, integer *lda, doublecomplex *x, integer *ldx, 
 	doublecomplex *b, integer *ldb, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int zppt01_(char *uplo, integer *n, doublecomplex *a, 
+
+/* zppt01.c */
+F2CSUB zppt01_(char *uplo, integer *n, doublecomplex *a, 
 	doublecomplex *afac, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int zppt02_(char *uplo, integer *n, integer *nrhs, 
+
+/* zppt02.c */
+F2CSUB zppt02_(char *uplo, integer *n, integer *nrhs, 
 	doublecomplex *a, doublecomplex *x, integer *ldx, doublecomplex *b, 
 	integer *ldb, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int zppt03_(char *uplo, integer *n, doublecomplex *a, 
+
+/* zppt03.c */
+F2CSUB zppt03_(char *uplo, integer *n, doublecomplex *a, 
 	doublecomplex *ainv, doublecomplex *work, integer *ldwork, doublereal 
 	*rwork, doublereal *rcond, doublereal *resid);
-extern /* Subroutine */ int zppt05_(char *uplo, integer *n, integer *nrhs, 
+
+/* zppt05.c */
+F2CSUB zppt05_(char *uplo, integer *n, integer *nrhs, 
 	doublecomplex *ap, doublecomplex *b, integer *ldb, doublecomplex *x, 
 	integer *ldx, doublecomplex *xact, integer *ldxact, doublereal *ferr, 
 	doublereal *berr, doublereal *reslts);
-extern /* Subroutine */ int zpst01_(char *uplo, integer *n, doublecomplex *a, 
+
+/* zpst01.c */
+F2CSUB zpst01_(char *uplo, integer *n, doublecomplex *a, 
 	integer *lda, doublecomplex *afac, integer *ldafac, doublecomplex *
 	perm, integer *ldperm, integer *piv, doublereal *rwork, doublereal *
 	resid, integer *rank);
-extern /* Subroutine */ int zptt01_(integer *n, doublereal *d__, doublecomplex *e, 
+
+/* zptt01.c */
+F2CSUB zptt01_(integer *n, doublereal *d__, doublecomplex *e, 
 	doublereal *df, doublecomplex *ef, doublecomplex *work, doublereal *
 	resid);
-extern /* Subroutine */ int zptt02_(char *uplo, integer *n, integer *nrhs, 
+
+/* zptt02.c */
+F2CSUB zptt02_(char *uplo, integer *n, integer *nrhs, 
 	doublereal *d__, doublecomplex *e, doublecomplex *x, integer *ldx, 
 	doublecomplex *b, integer *ldb, doublereal *resid);
-extern /* Subroutine */ int zptt05_(integer *n, integer *nrhs, doublereal *d__, 
+
+/* zptt05.c */
+F2CSUB zptt05_(integer *n, integer *nrhs, doublereal *d__, 
 	doublecomplex *e, doublecomplex *b, integer *ldb, doublecomplex *x, 
 	integer *ldx, doublecomplex *xact, integer *ldxact, doublereal *ferr, 
 	doublereal *berr, doublereal *reslts);
-extern /* Subroutine */ int zqlt01_(integer *m, integer *n, doublecomplex *a, 
+
+/* zqlt01.c */
+F2CSUB zqlt01_(integer *m, integer *n, doublecomplex *a, 
 	doublecomplex *af, doublecomplex *q, doublecomplex *l, integer *lda, 
 	doublecomplex *tau, doublecomplex *work, integer *lwork, doublereal *
 	rwork, doublereal *result);
-extern /* Subroutine */ int zqlt02_(integer *m, integer *n, integer *k, 
+
+/* zqlt02.c */
+F2CSUB zqlt02_(integer *m, integer *n, integer *k, 
 	doublecomplex *a, doublecomplex *af, doublecomplex *q, doublecomplex *
 	l, integer *lda, doublecomplex *tau, doublecomplex *work, integer *
 	lwork, doublereal *rwork, doublereal *result);
-extern /* Subroutine */ int zqlt03_(integer *m, integer *n, integer *k, 
+
+/* zqlt03.c */
+F2CSUB zqlt03_(integer *m, integer *n, integer *k, 
 	doublecomplex *af, doublecomplex *c__, doublecomplex *cc, 
 	doublecomplex *q, integer *lda, doublecomplex *tau, doublecomplex *
 	work, integer *lwork, doublereal *rwork, doublereal *result);
-extern doublereal zqpt01_(integer *m, integer *n, integer *k, doublecomplex *a, 
+
+/* zqpt01.c */
+doublereal zqpt01_(integer *m, integer *n, integer *k, doublecomplex *a, 
 	doublecomplex *af, integer *lda, doublecomplex *tau, integer *jpvt, 
 	doublecomplex *work, integer *lwork);
-extern /* Subroutine */ int zqrt01_(integer *m, integer *n, doublecomplex *a, 
+
+/* zqrt01.c */
+F2CSUB zqrt01_(integer *m, integer *n, doublecomplex *a, 
 	doublecomplex *af, doublecomplex *q, doublecomplex *r__, integer *lda, 
 	 doublecomplex *tau, doublecomplex *work, integer *lwork, doublereal *
 	rwork, doublereal *result);
-extern /* Subroutine */ int zqrt02_(integer *m, integer *n, integer *k, 
+
+/* zqrt02.c */
+F2CSUB zqrt02_(integer *m, integer *n, integer *k, 
 	doublecomplex *a, doublecomplex *af, doublecomplex *q, doublecomplex *
 	r__, integer *lda, doublecomplex *tau, doublecomplex *work, integer *
 	lwork, doublereal *rwork, doublereal *result);
-extern /* Subroutine */ int zqrt03_(integer *m, integer *n, integer *k, 
+
+/* zqrt03.c */
+F2CSUB zqrt03_(integer *m, integer *n, integer *k, 
 	doublecomplex *af, doublecomplex *c__, doublecomplex *cc, 
 	doublecomplex *q, integer *lda, doublecomplex *tau, doublecomplex *
 	work, integer *lwork, doublereal *rwork, doublereal *result);
-extern doublereal zqrt11_(integer *m, integer *k, doublecomplex *a, integer *lda, 
+
+/* zqrt11.c */
+doublereal zqrt11_(integer *m, integer *k, doublecomplex *a, integer *lda, 
 	doublecomplex *tau, doublecomplex *work, integer *lwork);
-extern doublereal zqrt12_(integer *m, integer *n, doublecomplex *a, integer *lda, 
+
+/* zqrt12.c */
+doublereal zqrt12_(integer *m, integer *n, doublecomplex *a, integer *lda, 
 	doublereal *s, doublecomplex *work, integer *lwork, doublereal *rwork);
-extern /* Subroutine */ int zqrt13_(integer *scale, integer *m, integer *n, 
+
+/* zqrt13.c */
+F2CSUB zqrt13_(integer *scale, integer *m, integer *n, 
 	doublecomplex *a, integer *lda, doublereal *norma, integer *iseed);
-extern doublereal zqrt14_(char *trans, integer *m, integer *n, integer *nrhs, 
+
+/* zqrt14.c */
+doublereal zqrt14_(char *trans, integer *m, integer *n, integer *nrhs, 
 	doublecomplex *a, integer *lda, doublecomplex *x, integer *ldx, 
 	doublecomplex *work, integer *lwork);
-extern /* Subroutine */ int zqrt15_(integer *scale, integer *rksel, integer *m, 
+
+/* zqrt15.c */
+F2CSUB zqrt15_(integer *scale, integer *rksel, integer *m, 
 	integer *n, integer *nrhs, doublecomplex *a, integer *lda, 
 	doublecomplex *b, integer *ldb, doublereal *s, integer *rank, 
 	doublereal *norma, doublereal *normb, integer *iseed, doublecomplex *
 	work, integer *lwork);
-extern /* Subroutine */ int zqrt16_(char *trans, integer *m, integer *n, integer *
+
+/* zqrt16.c */
+F2CSUB zqrt16_(char *trans, integer *m, integer *n, integer *
 	nrhs, doublecomplex *a, integer *lda, doublecomplex *x, integer *ldx, 
 	doublecomplex *b, integer *ldb, doublereal *rwork, doublereal *resid);
-extern doublereal zqrt17_(char *trans, integer *iresid, integer *m, integer *n, 
+
+/* zqrt17.c */
+doublereal zqrt17_(char *trans, integer *iresid, integer *m, integer *n, 
 	integer *nrhs, doublecomplex *a, integer *lda, doublecomplex *x, 
 	integer *ldx, doublecomplex *b, integer *ldb, doublecomplex *c__, 
 	doublecomplex *work, integer *lwork);
-extern /* Subroutine */ int zrqt01_(integer *m, integer *n, doublecomplex *a, 
+
+/* zrqt01.c */
+F2CSUB zrqt01_(integer *m, integer *n, doublecomplex *a, 
 	doublecomplex *af, doublecomplex *q, doublecomplex *r__, integer *lda, 
 	 doublecomplex *tau, doublecomplex *work, integer *lwork, doublereal *
 	rwork, doublereal *result);
-extern /* Subroutine */ int zrqt02_(integer *m, integer *n, integer *k, 
+
+/* zrqt02.c */
+F2CSUB zrqt02_(integer *m, integer *n, integer *k, 
 	doublecomplex *a, doublecomplex *af, doublecomplex *q, doublecomplex *
 	r__, integer *lda, doublecomplex *tau, doublecomplex *work, integer *
 	lwork, doublereal *rwork, doublereal *result);
-extern /* Subroutine */ int zrqt03_(integer *m, integer *n, integer *k, 
+
+/* zrqt03.c */
+F2CSUB zrqt03_(integer *m, integer *n, integer *k, 
 	doublecomplex *af, doublecomplex *c__, doublecomplex *cc, 
 	doublecomplex *q, integer *lda, doublecomplex *tau, doublecomplex *
 	work, integer *lwork, doublereal *rwork, doublereal *result);
-extern doublereal zrzt01_(integer *m, integer *n, doublecomplex *a, doublecomplex *
+
+/* zrzt01.c */
+doublereal zrzt01_(integer *m, integer *n, doublecomplex *a, doublecomplex *
 	af, integer *lda, doublecomplex *tau, doublecomplex *work, integer *
 	lwork);
-extern doublereal zrzt02_(integer *m, integer *n, doublecomplex *af, integer *lda, 
+
+/* zrzt02.c */
+doublereal zrzt02_(integer *m, integer *n, doublecomplex *af, integer *lda, 
 	doublecomplex *tau, doublecomplex *work, integer *lwork);
-extern /* Subroutine */ int zsbmv_(char *uplo, integer *n, integer *k, doublecomplex 
+
+/* zsbmv.c */
+F2CSUB zsbmv_(char *uplo, integer *n, integer *k, doublecomplex 
 	*alpha, doublecomplex *a, integer *lda, doublecomplex *x, integer *
 	incx, doublecomplex *beta, doublecomplex *y, integer *incy);
-extern /* Subroutine */ int zspt01_(char *uplo, integer *n, doublecomplex *a, 
+
+/* zspt01.c */
+F2CSUB zspt01_(char *uplo, integer *n, doublecomplex *a, 
 	doublecomplex *afac, integer *ipiv, doublecomplex *c__, integer *ldc, 
 	doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int zspt02_(char *uplo, integer *n, integer *nrhs, 
+
+/* zspt02.c */
+F2CSUB zspt02_(char *uplo, integer *n, integer *nrhs, 
 	doublecomplex *a, doublecomplex *x, integer *ldx, doublecomplex *b, 
 	integer *ldb, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int zspt03_(char *uplo, integer *n, doublecomplex *a, 
+
+/* zspt03.c */
+F2CSUB zspt03_(char *uplo, integer *n, doublecomplex *a, 
 	doublecomplex *ainv, doublecomplex *work, integer *ldw, doublereal *
 	rwork, doublereal *rcond, doublereal *resid);
-extern /* Subroutine */ int zsyt01_(char *uplo, integer *n, doublecomplex *a, 
+
+/* zsyt01.c */
+F2CSUB zsyt01_(char *uplo, integer *n, doublecomplex *a, 
 	integer *lda, doublecomplex *afac, integer *ldafac, integer *ipiv, 
 	doublecomplex *c__, integer *ldc, doublereal *rwork, doublereal *
 	resid);
-extern /* Subroutine */ int zsyt02_(char *uplo, integer *n, integer *nrhs, 
+
+/* zsyt02.c */
+F2CSUB zsyt02_(char *uplo, integer *n, integer *nrhs, 
 	doublecomplex *a, integer *lda, doublecomplex *x, integer *ldx, 
 	doublecomplex *b, integer *ldb, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int zsyt03_(char *uplo, integer *n, doublecomplex *a, 
+
+/* zsyt03.c */
+F2CSUB zsyt03_(char *uplo, integer *n, doublecomplex *a, 
 	integer *lda, doublecomplex *ainv, integer *ldainv, doublecomplex *
 	work, integer *ldwork, doublereal *rwork, doublereal *rcond, 
 	doublereal *resid);
-extern /* Subroutine */ int ztbt02_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* ztbt02.c */
+F2CSUB ztbt02_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *kd, integer *nrhs, doublecomplex *ab, integer *ldab, 
 	doublecomplex *x, integer *ldx, doublecomplex *b, integer *ldb, 
 	doublecomplex *work, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int ztbt03_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* ztbt03.c */
+F2CSUB ztbt03_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *kd, integer *nrhs, doublecomplex *ab, integer *ldab, 
 	doublereal *scale, doublereal *cnorm, doublereal *tscal, 
 	doublecomplex *x, integer *ldx, doublecomplex *b, integer *ldb, 
 	doublecomplex *work, doublereal *resid);
-extern /* Subroutine */ int ztbt05_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* ztbt05.c */
+F2CSUB ztbt05_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *kd, integer *nrhs, doublecomplex *ab, integer *ldab, 
 	doublecomplex *b, integer *ldb, doublecomplex *x, integer *ldx, 
 	doublecomplex *xact, integer *ldxact, doublereal *ferr, doublereal *
 	berr, doublereal *reslts);
-extern /* Subroutine */ int ztbt06_(doublereal *rcond, doublereal *rcondc, char *
+
+/* ztbt06.c */
+F2CSUB ztbt06_(doublereal *rcond, doublereal *rcondc, char *
 	uplo, char *diag, integer *n, integer *kd, doublecomplex *ab, integer 
 	*ldab, doublereal *rwork, doublereal *rat);
-extern /* Subroutine */ int ztpt01_(char *uplo, char *diag, integer *n, 
+
+/* ztpt01.c */
+F2CSUB ztpt01_(char *uplo, char *diag, integer *n, 
 	doublecomplex *ap, doublecomplex *ainvp, doublereal *rcond, 
 	doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int ztpt02_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* ztpt02.c */
+F2CSUB ztpt02_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, doublecomplex *ap, doublecomplex *x, integer *ldx, 
 	doublecomplex *b, integer *ldb, doublecomplex *work, doublereal *
 	rwork, doublereal *resid);
-extern /* Subroutine */ int ztpt03_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* ztpt03.c */
+F2CSUB ztpt03_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, doublecomplex *ap, doublereal *scale, doublereal *
 	cnorm, doublereal *tscal, doublecomplex *x, integer *ldx, 
 	doublecomplex *b, integer *ldb, doublecomplex *work, doublereal *
 	resid);
-extern /* Subroutine */ int ztpt05_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* ztpt05.c */
+F2CSUB ztpt05_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, doublecomplex *ap, doublecomplex *b, integer *ldb, 
 	doublecomplex *x, integer *ldx, doublecomplex *xact, integer *ldxact, 
 	doublereal *ferr, doublereal *berr, doublereal *reslts);
-extern /* Subroutine */ int ztpt06_(doublereal *rcond, doublereal *rcondc, char *
+
+/* ztpt06.c */
+F2CSUB ztpt06_(doublereal *rcond, doublereal *rcondc, char *
 	uplo, char *diag, integer *n, doublecomplex *ap, doublereal *rwork, 
 	doublereal *rat);
-extern /* Subroutine */ int ztrt01_(char *uplo, char *diag, integer *n, 
+
+/* ztrt01.c */
+F2CSUB ztrt01_(char *uplo, char *diag, integer *n, 
 	doublecomplex *a, integer *lda, doublecomplex *ainv, integer *ldainv, 
 	doublereal *rcond, doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int ztrt02_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* ztrt02.c */
+F2CSUB ztrt02_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, doublecomplex *a, integer *lda, doublecomplex *x, 
 	integer *ldx, doublecomplex *b, integer *ldb, doublecomplex *work, 
 	doublereal *rwork, doublereal *resid);
-extern /* Subroutine */ int ztrt03_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* ztrt03.c */
+F2CSUB ztrt03_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, doublecomplex *a, integer *lda, doublereal *scale, 
 	doublereal *cnorm, doublereal *tscal, doublecomplex *x, integer *ldx, 
 	doublecomplex *b, integer *ldb, doublecomplex *work, doublereal *
 	resid);
-extern /* Subroutine */ int ztrt05_(char *uplo, char *trans, char *diag, integer *n, 
+
+/* ztrt05.c */
+F2CSUB ztrt05_(char *uplo, char *trans, char *diag, integer *n, 
 	integer *nrhs, doublecomplex *a, integer *lda, doublecomplex *b, 
 	integer *ldb, doublecomplex *x, integer *ldx, doublecomplex *xact, 
 	integer *ldxact, doublereal *ferr, doublereal *berr, doublereal *
 	reslts);
-extern /* Subroutine */ int ztrt06_(doublereal *rcond, doublereal *rcondc, char *
+
+/* ztrt06.c */
+F2CSUB ztrt06_(doublereal *rcond, doublereal *rcondc, char *
 	uplo, char *diag, integer *n, doublecomplex *a, integer *lda, 
 	doublereal *rwork, doublereal *rat);
-extern doublereal ztzt01_(integer *m, integer *n, doublecomplex *a, doublecomplex *
+
+/* ztzt01.c */
+doublereal ztzt01_(integer *m, integer *n, doublecomplex *a, doublecomplex *
 	af, integer *lda, doublecomplex *tau, doublecomplex *work, integer *
 	lwork);
-extern doublereal ztzt02_(integer *m, integer *n, doublecomplex *af, integer *lda, 
+
+/* ztzt02.c */
+doublereal ztzt02_(integer *m, integer *n, doublecomplex *af, integer *lda, 
 	doublecomplex *tau, doublecomplex *work, integer *lwork);
 
-#endif
