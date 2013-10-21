@@ -1,7 +1,7 @@
 #ifndef CBLAPACK_LAPACK_H
 #define CBLAPACK_LAPACK_H
 
-#include <f2c.h>
+#include <f2c_types.h>
 #ifndef F2CSUB
 #define F2CSUB int
 #endif
