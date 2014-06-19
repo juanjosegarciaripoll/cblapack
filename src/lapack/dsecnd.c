@@ -1,18 +1,10 @@
 #include "f2c.h"
 #include "blaswrap.h"
-#include <sys/times.h>
-#include <sys/types.h>
-#include <time.h>
 
-#ifndef CLK_TCK
-#define CLK_TCK 60
-#endif
+extern doublereal second_();
 
 doublereal dsecnd_()
 {
-  struct tms rusage;
-
-  times(&rusage);
-  return (doublereal)(rusage.tms_utime) / CLK_TCK;
+  return second_();
 
 } /* dsecnd_ */
