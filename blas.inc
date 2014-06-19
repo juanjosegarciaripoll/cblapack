@@ -21,11 +21,7 @@ BLAS1 = src/blas/isamax.c src/blas/sasum.c src/blas/saxpy.c	\
 	src/blas/izamax.c src/blas/zaxpy.c src/blas/zcopy.c	\
 	src/blas/zdotc.c src/blas/zdotu.c src/blas/zdscal.c	\
 	src/blas/zrotg.c src/blas/zscal.c src/blas/zswap.c	\
-	src/blas/zdrot.c src/blas/isamax.c src/blas/sasum.c	\
-	src/blas/saxpy.c src/blas/scopy.c src/blas/snrm2.c	\
-	src/blas/sscal.c src/blas/idamax.c src/blas/dasum.c	\
-	src/blas/daxpy.c src/blas/dcopy.c src/blas/dnrm2.c	\
-	src/blas/dscal.c
+	src/blas/zdrot.c
 
 BLAS2 = src/blas/sgemv.c src/blas/sgbmv.c src/blas/ssymv.c	\
 	src/blas/ssbmv.c src/blas/sspmv.c src/blas/strmv.c	\
