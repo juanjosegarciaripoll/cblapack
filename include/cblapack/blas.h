@@ -1,7 +1,11 @@
 #ifndef CBBLAS_BLAS_H
 #define CBBLAS_BLAS_H
 
+#ifdef _MSC_VER
+#include <f2c_types_win.h>
+#else
 #include <f2c_types.h>
+#endif
 #ifndef F2CSUB
 #define F2CSUB int
 #endif
