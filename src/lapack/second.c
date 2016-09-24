@@ -1,7 +1,7 @@
 #include "f2c.h"
 #include <time.h>
 
-#ifdef _MSC_VER
+#if defined(_MSC_VER) || defined(__MINGW32__)
 
 doublereal second_()
 {
@@ -9,7 +9,7 @@ doublereal second_()
 }
 #endif
 
-#if !defined(_MSC_VER)
+#if !defined(_MSC_VER) && !defined(__MINGW32__)
 #include <sys/times.h>
 #include <sys/types.h>
 
