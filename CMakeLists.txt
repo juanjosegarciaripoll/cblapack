@@ -1,0 +1,689 @@
+cmake_minimum_required(VERSION 3.10)
+
+# Find our extra modules
+set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/Modules)
+
+# set the project name
+project(cblapack
+  VERSION 20.10.22
+  DESCRIPTION "CBLAPACK - BLAS and LAPACK in C"
+  LANGUAGES C)
+
+find_package(f2c REQUIRED)
+
+##################################################
+#
+# F2C99 compiled BLAS and LAPACK libraries
+#
+
+set(CBLAPACK_HEADER_FILES
+  include/cblapack.h include/cblapack/blas.h
+  include/cblapack/cblas.h include/cblapack/clapack.h
+  )
+
+set(ALLBLAS_SOURCES src/blas/xerbla.c src/blas/xerbla_array.c
+  src/blas/lsame.c)
+
+set(BLAS1_SOURCES src/blas/isamax.c src/blas/sasum.c src/blas/saxpy.c
+  src/blas/scopy.c src/blas/sdot.c src/blas/snrm2.c src/blas/srot.c
+  src/blas/srotg.c src/blas/sscal.c src/blas/sswap.c src/blas/sdsdot.c
+  src/blas/srotmg.c src/blas/srotm.c src/blas/scabs1.c
+  src/blas/scasum.c src/blas/scnrm2.c src/blas/icamax.c
+  src/blas/caxpy.c src/blas/ccopy.c src/blas/cdotc.c src/blas/cdotu.c
+  src/blas/csscal.c src/blas/crotg.c src/blas/cscal.c src/blas/cswap.c
+  src/blas/csrot.c src/blas/idamax.c src/blas/dasum.c src/blas/daxpy.c
+  src/blas/dcopy.c src/blas/ddot.c src/blas/dnrm2.c src/blas/drot.c
+  src/blas/drotg.c src/blas/dscal.c src/blas/dsdot.c src/blas/dswap.c
+  src/blas/drotmg.c src/blas/drotm.c src/blas/dcabs1.c
+  src/blas/dzasum.c src/blas/dznrm2.c src/blas/izamax.c
+  src/blas/zaxpy.c src/blas/zcopy.c src/blas/zdotc.c src/blas/zdotu.c
+  src/blas/zdscal.c src/blas/zrotg.c src/blas/zscal.c src/blas/zswap.c
+  src/blas/zdrot.c)
+
+set(BLAS2_SOURCES src/blas/sgemv.c src/blas/sgbmv.c src/blas/ssymv.c
+  src/blas/ssbmv.c src/blas/sspmv.c src/blas/strmv.c src/blas/stbmv.c
+  src/blas/stpmv.c src/blas/strsv.c src/blas/stbsv.c src/blas/stpsv.c
+  src/blas/sger.c src/blas/ssyr.c src/blas/sspr.c src/blas/ssyr2.c
+  src/blas/sspr2.c src/blas/cgemv.c src/blas/cgbmv.c src/blas/chemv.c
+  src/blas/chbmv.c src/blas/chpmv.c src/blas/ctrmv.c src/blas/ctbmv.c
+  src/blas/ctpmv.c src/blas/ctrsv.c src/blas/ctbsv.c src/blas/ctpsv.c
+  src/blas/cgerc.c src/blas/cgeru.c src/blas/cher.c src/blas/chpr.c
+  src/blas/cher2.c src/blas/chpr2.c src/blas/dgemv.c src/blas/dgbmv.c
+  src/blas/dsymv.c src/blas/dsbmv.c src/blas/dspmv.c src/blas/dtrmv.c
+  src/blas/dtbmv.c src/blas/dtpmv.c src/blas/dtrsv.c src/blas/dtbsv.c
+  src/blas/dtpsv.c src/blas/dger.c src/blas/dsyr.c src/blas/dspr.c
+  src/blas/dsyr2.c src/blas/dspr2.c src/blas/zgemv.c src/blas/zgbmv.c
+  src/blas/zhemv.c src/blas/zhbmv.c src/blas/zhpmv.c src/blas/ztrmv.c
+  src/blas/ztbmv.c src/blas/ztpmv.c src/blas/ztrsv.c src/blas/ztbsv.c
+  src/blas/ztpsv.c src/blas/zgerc.c src/blas/zgeru.c src/blas/zher.c
+  src/blas/zhpr.c src/blas/zher2.c src/blas/zhpr2.c)
+
+set(BLAS3_SOURCES src/blas/sgemm.c src/blas/ssymm.c src/blas/ssyrk.c
+  src/blas/ssyr2k.c src/blas/strmm.c src/blas/strsm.c src/blas/cgemm.c
+  src/blas/csymm.c src/blas/csyrk.c src/blas/csyr2k.c src/blas/ctrmm.c
+  src/blas/ctrsm.c src/blas/chemm.c src/blas/cherk.c src/blas/cher2k.c
+  src/blas/dgemm.c src/blas/dsymm.c src/blas/dsyrk.c src/blas/dsyr2k.c
+  src/blas/dtrmm.c src/blas/dtrsm.c src/blas/zgemm.c src/blas/zsymm.c
+  src/blas/zsyrk.c src/blas/zsyr2k.c src/blas/ztrmm.c src/blas/ztrsm.c
+  src/blas/zhemm.c src/blas/zherk.c src/blas/zher2k.c)
+
+set(BLAS_SOURCES ${BLAS_COMMON} ${BLAS_S_SOURCES}
+  ${BLAS_C_SOURCES} ${BLAS_D_SOURCES} ${BLAS_Z_SOURCES})
+
+set(CBLAS_SOURCES src/cblas/cblas_caxpy.c src/cblas/cblas_ccopy.c
+  src/cblas/cblas_cdotc_sub.c src/cblas/cblas_cdotu_sub.c
+  src/cblas/cblas_cgbmv.c src/cblas/cblas_cgemm.c
+  src/cblas/cblas_cgemv.c src/cblas/cblas_cgerc.c
+  src/cblas/cblas_cgeru.c src/cblas/cblas_chbmv.c
+  src/cblas/cblas_chemm.c src/cblas/cblas_chemv.c
+  src/cblas/cblas_cher.c src/cblas/cblas_cher2.c
+  src/cblas/cblas_cher2k.c src/cblas/cblas_cherk.c
+  src/cblas/cblas_chpmv.c src/cblas/cblas_chpr.c
+  src/cblas/cblas_chpr2.c src/cblas/cblas_cscal.c
+  src/cblas/cblas_csscal.c src/cblas/cblas_cswap.c
+  src/cblas/cblas_csymm.c src/cblas/cblas_csyr2k.c
+  src/cblas/cblas_csyrk.c src/cblas/cblas_ctbmv.c
+  src/cblas/cblas_ctbsv.c src/cblas/cblas_ctpmv.c
+  src/cblas/cblas_ctpsv.c src/cblas/cblas_ctrmm.c
+  src/cblas/cblas_ctrmv.c src/cblas/cblas_ctrsm.c
+  src/cblas/cblas_ctrsv.c src/cblas/cblas_dasum.c
+  src/cblas/cblas_daxpy.c src/cblas/cblas_dcopy.c
+  src/cblas/cblas_ddot.c src/cblas/cblas_dgbmv.c
+  src/cblas/cblas_dgemm.c src/cblas/cblas_dgemv.c
+  src/cblas/cblas_dger.c src/cblas/cblas_dnrm2.c
+  src/cblas/cblas_drot.c src/cblas/cblas_drotg.c
+  src/cblas/cblas_drotm.c src/cblas/cblas_drotmg.c
+  src/cblas/cblas_dsbmv.c src/cblas/cblas_dscal.c
+  src/cblas/cblas_dsdot.c src/cblas/cblas_dspmv.c
+  src/cblas/cblas_dspr.c src/cblas/cblas_dspr2.c
+  src/cblas/cblas_dswap.c src/cblas/cblas_dsymm.c
+  src/cblas/cblas_dsymv.c src/cblas/cblas_dsyr.c
+  src/cblas/cblas_dsyr2.c src/cblas/cblas_dsyr2k.c
+  src/cblas/cblas_dsyrk.c src/cblas/cblas_dtbmv.c
+  src/cblas/cblas_dtbsv.c src/cblas/cblas_dtpmv.c
+  src/cblas/cblas_dtpsv.c src/cblas/cblas_dtrmm.c
+  src/cblas/cblas_dtrmv.c src/cblas/cblas_dtrsm.c
+  src/cblas/cblas_dtrsv.c src/cblas/cblas_dzasum.c
+  src/cblas/cblas_dznrm2.c src/cblas/cblas_globals.c
+  src/cblas/cblas_icamax.c src/cblas/cblas_idamax.c
+  src/cblas/cblas_isamax.c src/cblas/cblas_izamax.c
+  src/cblas/cblas_sasum.c src/cblas/cblas_saxpy.c
+  src/cblas/cblas_scasum.c src/cblas/cblas_scnrm2.c
+  src/cblas/cblas_scopy.c src/cblas/cblas_sdot.c
+  src/cblas/cblas_sdsdot.c src/cblas/cblas_sgbmv.c
+  src/cblas/cblas_sgemm.c src/cblas/cblas_sgemv.c
+  src/cblas/cblas_sger.c src/cblas/cblas_snrm2.c
+  src/cblas/cblas_srot.c src/cblas/cblas_srotg.c
+  src/cblas/cblas_srotm.c src/cblas/cblas_srotmg.c
+  src/cblas/cblas_ssbmv.c src/cblas/cblas_sscal.c
+  src/cblas/cblas_sspmv.c src/cblas/cblas_sspr.c
+  src/cblas/cblas_sspr2.c src/cblas/cblas_sswap.c
+  src/cblas/cblas_ssymm.c src/cblas/cblas_ssymv.c
+  src/cblas/cblas_ssyr.c src/cblas/cblas_ssyr2.c
+  src/cblas/cblas_ssyr2k.c src/cblas/cblas_ssyrk.c
+  src/cblas/cblas_stbmv.c src/cblas/cblas_stbsv.c
+  src/cblas/cblas_stpmv.c src/cblas/cblas_stpsv.c
+  src/cblas/cblas_strmm.c src/cblas/cblas_strmv.c
+  src/cblas/cblas_strsm.c src/cblas/cblas_strsv.c
+  src/cblas/cblas_xerbla.c src/cblas/cblas_zaxpy.c
+  src/cblas/cblas_zcopy.c src/cblas/cblas_zdotc_sub.c
+  src/cblas/cblas_zdotu_sub.c src/cblas/cblas_zdscal.c
+  src/cblas/cblas_zgbmv.c src/cblas/cblas_zgemm.c
+  src/cblas/cblas_zgemv.c src/cblas/cblas_zgerc.c
+  src/cblas/cblas_zgeru.c src/cblas/cblas_zhbmv.c
+  src/cblas/cblas_zhemm.c src/cblas/cblas_zhemv.c
+  src/cblas/cblas_zher.c src/cblas/cblas_zher2.c
+  src/cblas/cblas_zher2k.c src/cblas/cblas_zherk.c
+  src/cblas/cblas_zhpmv.c src/cblas/cblas_zhpr.c
+  src/cblas/cblas_zhpr2.c src/cblas/cblas_zscal.c
+  src/cblas/cblas_zswap.c src/cblas/cblas_zsymm.c
+  src/cblas/cblas_zsyr2k.c src/cblas/cblas_zsyrk.c
+  src/cblas/cblas_ztbmv.c src/cblas/cblas_ztbsv.c
+  src/cblas/cblas_ztpmv.c src/cblas/cblas_ztpsv.c
+  src/cblas/cblas_ztrmm.c src/cblas/cblas_ztrmv.c
+  src/cblas/cblas_ztrsm.c src/cblas/cblas_ztrsv.c)
+
+set(LAPACK_COMMON_SOURCES src/lapack/maxloc.c src/lapack/ilaenv.c
+  src/lapack/ieeeck.c src/lapack/lsamen.c src/lapack/iparmq.c
+  src/lapack/ilaprec.c src/lapack/ilatrans.c src/lapack/ilauplo.c
+  src/lapack/iladiag.c src/lapack/chla_transtype.c
+  src/lapack/ilaver.c)
+
+set(LAPACK_SCAUX_SOURCES src/lapack/sbdsdc.c src/lapack/sbdsqr.c
+  src/lapack/sdisna.c src/lapack/slabad.c src/lapack/slacpy.c
+  src/lapack/sladiv.c src/lapack/slae2.c src/lapack/slaebz.c
+  src/lapack/slaed0.c src/lapack/slaed1.c src/lapack/slaed2.c
+  src/lapack/slaed3.c src/lapack/slaed4.c src/lapack/slaed5.c
+  src/lapack/slaed6.c src/lapack/slaed7.c src/lapack/slaed8.c
+  src/lapack/slaed9.c src/lapack/slaeda.c src/lapack/slaev2.c
+  src/lapack/slagtf.c src/lapack/slagts.c src/lapack/slamrg.c
+  src/lapack/slanst.c src/lapack/slapy2.c src/lapack/slapy3.c
+  src/lapack/slarnv.c src/lapack/slarra.c src/lapack/slarrb.c
+  src/lapack/slarrc.c src/lapack/slarrd.c src/lapack/slarre.c
+  src/lapack/slarrf.c src/lapack/slarrj.c src/lapack/slarrk.c
+  src/lapack/slarrr.c src/lapack/slaneg.c src/lapack/slartg.c
+  src/lapack/slaruv.c src/lapack/slas2.c src/lapack/slascl.c
+  src/lapack/slasd0.c src/lapack/slasd1.c src/lapack/slasd2.c
+  src/lapack/slasd3.c src/lapack/slasd4.c src/lapack/slasd5.c
+  src/lapack/slasd6.c src/lapack/slasd7.c src/lapack/slasd8.c
+  src/lapack/slasda.c src/lapack/slasdq.c src/lapack/slasdt.c
+  src/lapack/slaset.c src/lapack/slasq1.c src/lapack/slasq2.c
+  src/lapack/slasq3.c src/lapack/slasq4.c src/lapack/slasq5.c
+  src/lapack/slasq6.c src/lapack/slasr.c src/lapack/slasrt.c
+  src/lapack/slassq.c src/lapack/slasv2.c src/lapack/spttrf.c
+  src/lapack/sstebz.c src/lapack/sstedc.c src/lapack/ssteqr.c
+  src/lapack/ssterf.c src/lapack/slaisnan.c src/lapack/sisnan.c
+  src/lapack/slamch.c src/lapack/second.c)
+
+set(LAPACK_DZAUX_SOURCES src/lapack/dbdsdc.c src/lapack/dbdsqr.c
+  src/lapack/ddisna.c src/lapack/dlabad.c src/lapack/dlacpy.c
+  src/lapack/dladiv.c src/lapack/dlae2.c src/lapack/dlaebz.c
+  src/lapack/dlaed0.c src/lapack/dlaed1.c src/lapack/dlaed2.c
+  src/lapack/dlaed3.c src/lapack/dlaed4.c src/lapack/dlaed5.c
+  src/lapack/dlaed6.c src/lapack/dlaed7.c src/lapack/dlaed8.c
+  src/lapack/dlaed9.c src/lapack/dlaeda.c src/lapack/dlaev2.c
+  src/lapack/dlagtf.c src/lapack/dlagts.c src/lapack/dlamrg.c
+  src/lapack/dlanst.c src/lapack/dlapy2.c src/lapack/dlapy3.c
+  src/lapack/dlarnv.c src/lapack/dlarra.c src/lapack/dlarrb.c
+  src/lapack/dlarrc.c src/lapack/dlarrd.c src/lapack/dlarre.c
+  src/lapack/dlarrf.c src/lapack/dlarrj.c src/lapack/dlarrk.c
+  src/lapack/dlarrr.c src/lapack/dlaneg.c src/lapack/dlartg.c
+  src/lapack/dlaruv.c src/lapack/dlas2.c src/lapack/dlascl.c
+  src/lapack/dlasd0.c src/lapack/dlasd1.c src/lapack/dlasd2.c
+  src/lapack/dlasd3.c src/lapack/dlasd4.c src/lapack/dlasd5.c
+  src/lapack/dlasd6.c src/lapack/dlasd7.c src/lapack/dlasd8.c
+  src/lapack/dlasda.c src/lapack/dlasdq.c src/lapack/dlasdt.c
+  src/lapack/dlaset.c src/lapack/dlasq1.c src/lapack/dlasq2.c
+  src/lapack/dlasq3.c src/lapack/dlasq4.c src/lapack/dlasq5.c
+  src/lapack/dlasq6.c src/lapack/dlasr.c src/lapack/dlasrt.c
+  src/lapack/dlassq.c src/lapack/dlasv2.c src/lapack/dpttrf.c
+  src/lapack/dstebz.c src/lapack/dstedc.c src/lapack/dsteqr.c
+  src/lapack/dsterf.c src/lapack/dlaisnan.c src/lapack/disnan.c
+  src/lapack/dlamch.c src/lapack/dsecnd.c)
+
+set(LAPACK_S_SOURCES src/lapack/sgbbrd.c src/lapack/sgbcon.c
+  src/lapack/sgbequ.c src/lapack/sgbrfs.c src/lapack/sgbsv.c
+  src/lapack/sgbsvx.c src/lapack/sgbtf2.c src/lapack/sgbtrf.c
+  src/lapack/sgbtrs.c src/lapack/sgebak.c src/lapack/sgebal.c
+  src/lapack/sgebd2.c src/lapack/sgebrd.c src/lapack/sgecon.c
+  src/lapack/sgeequ.c src/lapack/sgees.c src/lapack/sgeesx.c
+  src/lapack/sgeev.c src/lapack/sgeevx.c src/lapack/sgegs.c
+  src/lapack/sgegv.c src/lapack/sgehd2.c src/lapack/sgehrd.c
+  src/lapack/sgelq2.c src/lapack/sgelqf.c src/lapack/sgels.c
+  src/lapack/sgelsd.c src/lapack/sgelss.c src/lapack/sgelsx.c
+  src/lapack/sgelsy.c src/lapack/sgeql2.c src/lapack/sgeqlf.c
+  src/lapack/sgeqp3.c src/lapack/sgeqpf.c src/lapack/sgeqr2.c
+  src/lapack/sgeqrf.c src/lapack/sgerfs.c src/lapack/sgerq2.c
+  src/lapack/sgerqf.c src/lapack/sgesc2.c src/lapack/sgesdd.c
+  src/lapack/sgesv.c src/lapack/sgesvd.c src/lapack/sgesvx.c
+  src/lapack/sgetc2.c src/lapack/sgetf2.c src/lapack/sgetrf.c
+  src/lapack/sgetri.c src/lapack/sgetrs.c src/lapack/sggbak.c
+  src/lapack/sggbal.c src/lapack/sgges.c src/lapack/sggesx.c
+  src/lapack/sggev.c src/lapack/sggevx.c src/lapack/sggglm.c
+  src/lapack/sgghrd.c src/lapack/sgglse.c src/lapack/sggqrf.c
+  src/lapack/sggrqf.c src/lapack/sggsvd.c src/lapack/sggsvp.c
+  src/lapack/sgtcon.c src/lapack/sgtrfs.c src/lapack/sgtsv.c
+  src/lapack/sgtsvx.c src/lapack/sgttrf.c src/lapack/sgttrs.c
+  src/lapack/sgtts2.c src/lapack/shgeqz.c src/lapack/shsein.c
+  src/lapack/shseqr.c src/lapack/slabrd.c src/lapack/slacon.c
+  src/lapack/slacn2.c src/lapack/slaein.c src/lapack/slaexc.c
+  src/lapack/slag2.c src/lapack/slags2.c src/lapack/slagtm.c
+  src/lapack/slagv2.c src/lapack/slahqr.c src/lapack/slahrd.c
+  src/lapack/slahr2.c src/lapack/slaic1.c src/lapack/slaln2.c
+  src/lapack/slals0.c src/lapack/slalsa.c src/lapack/slalsd.c
+  src/lapack/slangb.c src/lapack/slange.c src/lapack/slangt.c
+  src/lapack/slanhs.c src/lapack/slansb.c src/lapack/slansp.c
+  src/lapack/slansy.c src/lapack/slantb.c src/lapack/slantp.c
+  src/lapack/slantr.c src/lapack/slanv2.c src/lapack/slapll.c
+  src/lapack/slapmt.c src/lapack/slaqgb.c src/lapack/slaqge.c
+  src/lapack/slaqp2.c src/lapack/slaqps.c src/lapack/slaqsb.c
+  src/lapack/slaqsp.c src/lapack/slaqsy.c src/lapack/slaqr0.c
+  src/lapack/slaqr1.c src/lapack/slaqr2.c src/lapack/slaqr3.c
+  src/lapack/slaqr4.c src/lapack/slaqr5.c src/lapack/slaqtr.c
+  src/lapack/slar1v.c src/lapack/slar2v.c src/lapack/ilaslr.c
+  src/lapack/ilaslc.c src/lapack/slarf.c src/lapack/slarfb.c
+  src/lapack/slarfg.c src/lapack/slarft.c src/lapack/slarfx.c
+  src/lapack/slargv.c src/lapack/slarrv.c src/lapack/slartv.c
+  src/lapack/slarfp.c src/lapack/slarz.c src/lapack/slarzb.c
+  src/lapack/slarzt.c src/lapack/slaswp.c src/lapack/slasy2.c
+  src/lapack/slasyf.c src/lapack/slatbs.c src/lapack/slatdf.c
+  src/lapack/slatps.c src/lapack/slatrd.c src/lapack/slatrs.c
+  src/lapack/slatrz.c src/lapack/slatzm.c src/lapack/slauu2.c
+  src/lapack/slauum.c src/lapack/sopgtr.c src/lapack/sopmtr.c
+  src/lapack/sorg2l.c src/lapack/sorg2r.c src/lapack/sorgbr.c
+  src/lapack/sorghr.c src/lapack/sorgl2.c src/lapack/sorglq.c
+  src/lapack/sorgql.c src/lapack/sorgqr.c src/lapack/sorgr2.c
+  src/lapack/sorgrq.c src/lapack/sorgtr.c src/lapack/sorm2l.c
+  src/lapack/sorm2r.c src/lapack/sormbr.c src/lapack/sormhr.c
+  src/lapack/sorml2.c src/lapack/sormlq.c src/lapack/sormql.c
+  src/lapack/sormqr.c src/lapack/sormr2.c src/lapack/sormr3.c
+  src/lapack/sormrq.c src/lapack/sormrz.c src/lapack/sormtr.c
+  src/lapack/spbcon.c src/lapack/spbequ.c src/lapack/spbrfs.c
+  src/lapack/spbstf.c src/lapack/spbsv.c src/lapack/spbsvx.c
+  src/lapack/spbtf2.c src/lapack/spbtrf.c src/lapack/spbtrs.c
+  src/lapack/spocon.c src/lapack/spoequ.c src/lapack/sporfs.c
+  src/lapack/sposv.c src/lapack/sposvx.c src/lapack/spotf2.c
+  src/lapack/spotrf.c src/lapack/spotri.c src/lapack/spotrs.c
+  src/lapack/spstrf.c src/lapack/spstf2.c src/lapack/sppcon.c
+  src/lapack/sppequ.c src/lapack/spprfs.c src/lapack/sppsv.c
+  src/lapack/sppsvx.c src/lapack/spptrf.c src/lapack/spptri.c
+  src/lapack/spptrs.c src/lapack/sptcon.c src/lapack/spteqr.c
+  src/lapack/sptrfs.c src/lapack/sptsv.c src/lapack/sptsvx.c
+  src/lapack/spttrs.c src/lapack/sptts2.c src/lapack/srscl.c
+  src/lapack/ssbev.c src/lapack/ssbevd.c src/lapack/ssbevx.c
+  src/lapack/ssbgst.c src/lapack/ssbgv.c src/lapack/ssbgvd.c
+  src/lapack/ssbgvx.c src/lapack/ssbtrd.c src/lapack/sspcon.c
+  src/lapack/sspev.c src/lapack/sspevd.c src/lapack/sspevx.c
+  src/lapack/sspgst.c src/lapack/sspgv.c src/lapack/sspgvd.c
+  src/lapack/sspgvx.c src/lapack/ssprfs.c src/lapack/sspsv.c
+  src/lapack/sspsvx.c src/lapack/ssptrd.c src/lapack/ssptrf.c
+  src/lapack/ssptri.c src/lapack/ssptrs.c src/lapack/sstegr.c
+  src/lapack/sstein.c src/lapack/sstev.c src/lapack/sstevd.c
+  src/lapack/sstevr.c src/lapack/sstevx.c src/lapack/ssycon.c
+  src/lapack/ssyev.c src/lapack/ssyevd.c src/lapack/ssyevr.c
+  src/lapack/ssyevx.c src/lapack/ssygs2.c src/lapack/ssygst.c
+  src/lapack/ssygv.c src/lapack/ssygvd.c src/lapack/ssygvx.c
+  src/lapack/ssyrfs.c src/lapack/ssysv.c src/lapack/ssysvx.c
+  src/lapack/ssytd2.c src/lapack/ssytf2.c src/lapack/ssytrd.c
+  src/lapack/ssytrf.c src/lapack/ssytri.c src/lapack/ssytrs.c
+  src/lapack/stbcon.c src/lapack/stbrfs.c src/lapack/stbtrs.c
+  src/lapack/stgevc.c src/lapack/stgex2.c src/lapack/stgexc.c
+  src/lapack/stgsen.c src/lapack/stgsja.c src/lapack/stgsna.c
+  src/lapack/stgsy2.c src/lapack/stgsyl.c src/lapack/stpcon.c
+  src/lapack/stprfs.c src/lapack/stptri.c src/lapack/stptrs.c
+  src/lapack/strcon.c src/lapack/strevc.c src/lapack/strexc.c
+  src/lapack/strrfs.c src/lapack/strsen.c src/lapack/strsna.c
+  src/lapack/strsyl.c src/lapack/strti2.c src/lapack/strtri.c
+  src/lapack/strtrs.c src/lapack/stzrqf.c src/lapack/stzrzf.c
+  src/lapack/sstemr.c src/lapack/slansf.c src/lapack/spftrf.c
+  src/lapack/spftri.c src/lapack/spftrs.c src/lapack/ssfrk.c
+  src/lapack/stfsm.c src/lapack/stftri.c src/lapack/stfttp.c
+  src/lapack/stfttr.c src/lapack/stpttf.c src/lapack/stpttr.c
+  src/lapack/strttf.c src/lapack/strttp.c src/lapack/sgejsv.c
+  src/lapack/sgesvj.c src/lapack/sgsvj0.c src/lapack/sgsvj1.c
+  src/lapack/sgeequb.c src/lapack/ssyequb.c src/lapack/spoequb.c
+  src/lapack/sgbequb.c)
+
+set(LAPACK_C_SOURCES src/lapack/cbdsqr.c src/lapack/cgbbrd.c
+  src/lapack/cgbcon.c src/lapack/cgbequ.c src/lapack/cgbrfs.c
+  src/lapack/cgbsv.c src/lapack/cgbsvx.c src/lapack/cgbtf2.c
+  src/lapack/cgbtrf.c src/lapack/cgbtrs.c src/lapack/cgebak.c
+  src/lapack/cgebal.c src/lapack/cgebd2.c src/lapack/cgebrd.c
+  src/lapack/cgecon.c src/lapack/cgeequ.c src/lapack/cgees.c
+  src/lapack/cgeesx.c src/lapack/cgeev.c src/lapack/cgeevx.c
+  src/lapack/cgegs.c src/lapack/cgegv.c src/lapack/cgehd2.c
+  src/lapack/cgehrd.c src/lapack/cgelq2.c src/lapack/cgelqf.c
+  src/lapack/cgels.c src/lapack/cgelsd.c src/lapack/cgelss.c
+  src/lapack/cgelsx.c src/lapack/cgelsy.c src/lapack/cgeql2.c
+  src/lapack/cgeqlf.c src/lapack/cgeqp3.c src/lapack/cgeqpf.c
+  src/lapack/cgeqr2.c src/lapack/cgeqrf.c src/lapack/cgerfs.c
+  src/lapack/cgerq2.c src/lapack/cgerqf.c src/lapack/cgesc2.c
+  src/lapack/cgesdd.c src/lapack/cgesv.c src/lapack/cgesvd.c
+  src/lapack/cgesvx.c src/lapack/cgetc2.c src/lapack/cgetf2.c
+  src/lapack/cgetrf.c src/lapack/cgetri.c src/lapack/cgetrs.c
+  src/lapack/cggbak.c src/lapack/cggbal.c src/lapack/cgges.c
+  src/lapack/cggesx.c src/lapack/cggev.c src/lapack/cggevx.c
+  src/lapack/cggglm.c src/lapack/cgghrd.c src/lapack/cgglse.c
+  src/lapack/cggqrf.c src/lapack/cggrqf.c src/lapack/cggsvd.c
+  src/lapack/cggsvp.c src/lapack/cgtcon.c src/lapack/cgtrfs.c
+  src/lapack/cgtsv.c src/lapack/cgtsvx.c src/lapack/cgttrf.c
+  src/lapack/cgttrs.c src/lapack/cgtts2.c src/lapack/chbev.c
+  src/lapack/chbevd.c src/lapack/chbevx.c src/lapack/chbgst.c
+  src/lapack/chbgv.c src/lapack/chbgvd.c src/lapack/chbgvx.c
+  src/lapack/chbtrd.c src/lapack/checon.c src/lapack/cheev.c
+  src/lapack/cheevd.c src/lapack/cheevr.c src/lapack/cheevx.c
+  src/lapack/chegs2.c src/lapack/chegst.c src/lapack/chegv.c
+  src/lapack/chegvd.c src/lapack/chegvx.c src/lapack/cherfs.c
+  src/lapack/chesv.c src/lapack/chesvx.c src/lapack/chetd2.c
+  src/lapack/chetf2.c src/lapack/chetrd.c src/lapack/chetrf.c
+  src/lapack/chetri.c src/lapack/chetrs.c src/lapack/chgeqz.c
+  src/lapack/chpcon.c src/lapack/chpev.c src/lapack/chpevd.c
+  src/lapack/chpevx.c src/lapack/chpgst.c src/lapack/chpgv.c
+  src/lapack/chpgvd.c src/lapack/chpgvx.c src/lapack/chprfs.c
+  src/lapack/chpsv.c src/lapack/chpsvx.c src/lapack/chptrd.c
+  src/lapack/chptrf.c src/lapack/chptri.c src/lapack/chptrs.c
+  src/lapack/chsein.c src/lapack/chseqr.c src/lapack/clabrd.c
+  src/lapack/clacgv.c src/lapack/clacon.c src/lapack/clacn2.c
+  src/lapack/clacp2.c src/lapack/clacpy.c src/lapack/clacrm.c
+  src/lapack/clacrt.c src/lapack/cladiv.c src/lapack/claed0.c
+  src/lapack/claed7.c src/lapack/claed8.c src/lapack/claein.c
+  src/lapack/claesy.c src/lapack/claev2.c src/lapack/clags2.c
+  src/lapack/clagtm.c src/lapack/clahef.c src/lapack/clahqr.c
+  src/lapack/clahrd.c src/lapack/clahr2.c src/lapack/claic1.c
+  src/lapack/clals0.c src/lapack/clalsa.c src/lapack/clalsd.c
+  src/lapack/clangb.c src/lapack/clange.c src/lapack/clangt.c
+  src/lapack/clanhb.c src/lapack/clanhe.c src/lapack/clanhp.c
+  src/lapack/clanhs.c src/lapack/clanht.c src/lapack/clansb.c
+  src/lapack/clansp.c src/lapack/clansy.c src/lapack/clantb.c
+  src/lapack/clantp.c src/lapack/clantr.c src/lapack/clapll.c
+  src/lapack/clapmt.c src/lapack/clarcm.c src/lapack/claqgb.c
+  src/lapack/claqge.c src/lapack/claqhb.c src/lapack/claqhe.c
+  src/lapack/claqhp.c src/lapack/claqp2.c src/lapack/claqps.c
+  src/lapack/claqsb.c src/lapack/claqr0.c src/lapack/claqr1.c
+  src/lapack/claqr2.c src/lapack/claqr3.c src/lapack/claqr4.c
+  src/lapack/claqr5.c src/lapack/claqsp.c src/lapack/claqsy.c
+  src/lapack/clar1v.c src/lapack/clar2v.c src/lapack/ilaclr.c
+  src/lapack/ilaclc.c src/lapack/clarf.c src/lapack/clarfb.c
+  src/lapack/clarfg.c src/lapack/clarft.c src/lapack/clarfp.c
+  src/lapack/clarfx.c src/lapack/clargv.c src/lapack/clarnv.c
+  src/lapack/clarrv.c src/lapack/clartg.c src/lapack/clartv.c
+  src/lapack/clarz.c src/lapack/clarzb.c src/lapack/clarzt.c
+  src/lapack/clascl.c src/lapack/claset.c src/lapack/clasr.c
+  src/lapack/classq.c src/lapack/claswp.c src/lapack/clasyf.c
+  src/lapack/clatbs.c src/lapack/clatdf.c src/lapack/clatps.c
+  src/lapack/clatrd.c src/lapack/clatrs.c src/lapack/clatrz.c
+  src/lapack/clatzm.c src/lapack/clauu2.c src/lapack/clauum.c
+  src/lapack/cpbcon.c src/lapack/cpbequ.c src/lapack/cpbrfs.c
+  src/lapack/cpbstf.c src/lapack/cpbsv.c src/lapack/cpbsvx.c
+  src/lapack/cpbtf2.c src/lapack/cpbtrf.c src/lapack/cpbtrs.c
+  src/lapack/cpocon.c src/lapack/cpoequ.c src/lapack/cporfs.c
+  src/lapack/cposv.c src/lapack/cposvx.c src/lapack/cpotf2.c
+  src/lapack/cpotrf.c src/lapack/cpotri.c src/lapack/cpotrs.c
+  src/lapack/cpstrf.c src/lapack/cpstf2.c src/lapack/cppcon.c
+  src/lapack/cppequ.c src/lapack/cpprfs.c src/lapack/cppsv.c
+  src/lapack/cppsvx.c src/lapack/cpptrf.c src/lapack/cpptri.c
+  src/lapack/cpptrs.c src/lapack/cptcon.c src/lapack/cpteqr.c
+  src/lapack/cptrfs.c src/lapack/cptsv.c src/lapack/cptsvx.c
+  src/lapack/cpttrf.c src/lapack/cpttrs.c src/lapack/cptts2.c
+  src/lapack/crot.c src/lapack/cspcon.c src/lapack/cspmv.c
+  src/lapack/cspr.c src/lapack/csprfs.c src/lapack/cspsv.c
+  src/lapack/cspsvx.c src/lapack/csptrf.c src/lapack/csptri.c
+  src/lapack/csptrs.c src/lapack/csrscl.c src/lapack/cstedc.c
+  src/lapack/cstegr.c src/lapack/cstein.c src/lapack/csteqr.c
+  src/lapack/csycon.c src/lapack/csymv.c src/lapack/csyr.c
+  src/lapack/csyrfs.c src/lapack/csysv.c src/lapack/csysvx.c
+  src/lapack/csytf2.c src/lapack/csytrf.c src/lapack/csytri.c
+  src/lapack/csytrs.c src/lapack/ctbcon.c src/lapack/ctbrfs.c
+  src/lapack/ctbtrs.c src/lapack/ctgevc.c src/lapack/ctgex2.c
+  src/lapack/ctgexc.c src/lapack/ctgsen.c src/lapack/ctgsja.c
+  src/lapack/ctgsna.c src/lapack/ctgsy2.c src/lapack/ctgsyl.c
+  src/lapack/ctpcon.c src/lapack/ctprfs.c src/lapack/ctptri.c
+  src/lapack/ctptrs.c src/lapack/ctrcon.c src/lapack/ctrevc.c
+  src/lapack/ctrexc.c src/lapack/ctrrfs.c src/lapack/ctrsen.c
+  src/lapack/ctrsna.c src/lapack/ctrsyl.c src/lapack/ctrti2.c
+  src/lapack/ctrtri.c src/lapack/ctrtrs.c src/lapack/ctzrqf.c
+  src/lapack/ctzrzf.c src/lapack/cung2l.c src/lapack/cung2r.c
+  src/lapack/cungbr.c src/lapack/cunghr.c src/lapack/cungl2.c
+  src/lapack/cunglq.c src/lapack/cungql.c src/lapack/cungqr.c
+  src/lapack/cungr2.c src/lapack/cungrq.c src/lapack/cungtr.c
+  src/lapack/cunm2l.c src/lapack/cunm2r.c src/lapack/cunmbr.c
+  src/lapack/cunmhr.c src/lapack/cunml2.c src/lapack/cunmlq.c
+  src/lapack/cunmql.c src/lapack/cunmqr.c src/lapack/cunmr2.c
+  src/lapack/cunmr3.c src/lapack/cunmrq.c src/lapack/cunmrz.c
+  src/lapack/cunmtr.c src/lapack/cupgtr.c src/lapack/cupmtr.c
+  src/lapack/icmax1.c src/lapack/scsum1.c src/lapack/cstemr.c
+  src/lapack/chfrk.c src/lapack/ctfttp.c src/lapack/clanhf.c
+  src/lapack/cpftrf.c src/lapack/cpftri.c src/lapack/cpftrs.c
+  src/lapack/ctfsm.c src/lapack/ctftri.c src/lapack/ctfttr.c
+  src/lapack/ctpttf.c src/lapack/ctpttr.c src/lapack/ctrttf.c
+  src/lapack/ctrttp.c src/lapack/cgeequb.c src/lapack/cgbequb.c
+  src/lapack/csyequb.c src/lapack/cpoequb.c src/lapack/cheequb.c)
+
+set(LAPACK_D_SOURCES src/lapack/dgbbrd.c src/lapack/dgbcon.c
+  src/lapack/dgbequ.c src/lapack/dgbrfs.c src/lapack/dgbsv.c
+  src/lapack/dgbsvx.c src/lapack/dgbtf2.c src/lapack/dgbtrf.c
+  src/lapack/dgbtrs.c src/lapack/dgebak.c src/lapack/dgebal.c
+  src/lapack/dgebd2.c src/lapack/dgebrd.c src/lapack/dgecon.c
+  src/lapack/dgeequ.c src/lapack/dgees.c src/lapack/dgeesx.c
+  src/lapack/dgeev.c src/lapack/dgeevx.c src/lapack/dgegs.c
+  src/lapack/dgegv.c src/lapack/dgehd2.c src/lapack/dgehrd.c
+  src/lapack/dgelq2.c src/lapack/dgelqf.c src/lapack/dgels.c
+  src/lapack/dgelsd.c src/lapack/dgelss.c src/lapack/dgelsx.c
+  src/lapack/dgelsy.c src/lapack/dgeql2.c src/lapack/dgeqlf.c
+  src/lapack/dgeqp3.c src/lapack/dgeqpf.c src/lapack/dgeqr2.c
+  src/lapack/dgeqrf.c src/lapack/dgerfs.c src/lapack/dgerq2.c
+  src/lapack/dgerqf.c src/lapack/dgesc2.c src/lapack/dgesdd.c
+  src/lapack/dgesv.c src/lapack/dgesvd.c src/lapack/dgesvx.c
+  src/lapack/dgetc2.c src/lapack/dgetf2.c src/lapack/dgetrf.c
+  src/lapack/dgetri.c src/lapack/dgetrs.c src/lapack/dggbak.c
+  src/lapack/dggbal.c src/lapack/dgges.c src/lapack/dggesx.c
+  src/lapack/dggev.c src/lapack/dggevx.c src/lapack/dggglm.c
+  src/lapack/dgghrd.c src/lapack/dgglse.c src/lapack/dggqrf.c
+  src/lapack/dggrqf.c src/lapack/dggsvd.c src/lapack/dggsvp.c
+  src/lapack/dgtcon.c src/lapack/dgtrfs.c src/lapack/dgtsv.c
+  src/lapack/dgtsvx.c src/lapack/dgttrf.c src/lapack/dgttrs.c
+  src/lapack/dgtts2.c src/lapack/dhgeqz.c src/lapack/dhsein.c
+  src/lapack/dhseqr.c src/lapack/dlabrd.c src/lapack/dlacon.c
+  src/lapack/dlacn2.c src/lapack/dlaein.c src/lapack/dlaexc.c
+  src/lapack/dlag2.c src/lapack/dlags2.c src/lapack/dlagtm.c
+  src/lapack/dlagv2.c src/lapack/dlahqr.c src/lapack/dlahrd.c
+  src/lapack/dlahr2.c src/lapack/dlaic1.c src/lapack/dlaln2.c
+  src/lapack/dlals0.c src/lapack/dlalsa.c src/lapack/dlalsd.c
+  src/lapack/dlangb.c src/lapack/dlange.c src/lapack/dlangt.c
+  src/lapack/dlanhs.c src/lapack/dlansb.c src/lapack/dlansp.c
+  src/lapack/dlansy.c src/lapack/dlantb.c src/lapack/dlantp.c
+  src/lapack/dlantr.c src/lapack/dlanv2.c src/lapack/dlapll.c
+  src/lapack/dlapmt.c src/lapack/dlaqgb.c src/lapack/dlaqge.c
+  src/lapack/dlaqp2.c src/lapack/dlaqps.c src/lapack/dlaqsb.c
+  src/lapack/dlaqsp.c src/lapack/dlaqsy.c src/lapack/dlaqr0.c
+  src/lapack/dlaqr1.c src/lapack/dlaqr2.c src/lapack/dlaqr3.c
+  src/lapack/dlaqr4.c src/lapack/dlaqr5.c src/lapack/dlaqtr.c
+  src/lapack/dlar1v.c src/lapack/dlar2v.c src/lapack/iladlr.c
+  src/lapack/iladlc.c src/lapack/dlarf.c src/lapack/dlarfb.c
+  src/lapack/dlarfg.c src/lapack/dlarft.c src/lapack/dlarfx.c
+  src/lapack/dlargv.c src/lapack/dlarrv.c src/lapack/dlartv.c
+  src/lapack/dlarfp.c src/lapack/dlarz.c src/lapack/dlarzb.c
+  src/lapack/dlarzt.c src/lapack/dlaswp.c src/lapack/dlasy2.c
+  src/lapack/dlasyf.c src/lapack/dlatbs.c src/lapack/dlatdf.c
+  src/lapack/dlatps.c src/lapack/dlatrd.c src/lapack/dlatrs.c
+  src/lapack/dlatrz.c src/lapack/dlatzm.c src/lapack/dlauu2.c
+  src/lapack/dlauum.c src/lapack/dopgtr.c src/lapack/dopmtr.c
+  src/lapack/dorg2l.c src/lapack/dorg2r.c src/lapack/dorgbr.c
+  src/lapack/dorghr.c src/lapack/dorgl2.c src/lapack/dorglq.c
+  src/lapack/dorgql.c src/lapack/dorgqr.c src/lapack/dorgr2.c
+  src/lapack/dorgrq.c src/lapack/dorgtr.c src/lapack/dorm2l.c
+  src/lapack/dorm2r.c src/lapack/dormbr.c src/lapack/dormhr.c
+  src/lapack/dorml2.c src/lapack/dormlq.c src/lapack/dormql.c
+  src/lapack/dormqr.c src/lapack/dormr2.c src/lapack/dormr3.c
+  src/lapack/dormrq.c src/lapack/dormrz.c src/lapack/dormtr.c
+  src/lapack/dpbcon.c src/lapack/dpbequ.c src/lapack/dpbrfs.c
+  src/lapack/dpbstf.c src/lapack/dpbsv.c src/lapack/dpbsvx.c
+  src/lapack/dpbtf2.c src/lapack/dpbtrf.c src/lapack/dpbtrs.c
+  src/lapack/dpocon.c src/lapack/dpoequ.c src/lapack/dporfs.c
+  src/lapack/dposv.c src/lapack/dposvx.c src/lapack/dpotf2.c
+  src/lapack/dpotrf.c src/lapack/dpotri.c src/lapack/dpotrs.c
+  src/lapack/dpstrf.c src/lapack/dpstf2.c src/lapack/dppcon.c
+  src/lapack/dppequ.c src/lapack/dpprfs.c src/lapack/dppsv.c
+  src/lapack/dppsvx.c src/lapack/dpptrf.c src/lapack/dpptri.c
+  src/lapack/dpptrs.c src/lapack/dptcon.c src/lapack/dpteqr.c
+  src/lapack/dptrfs.c src/lapack/dptsv.c src/lapack/dptsvx.c
+  src/lapack/dpttrs.c src/lapack/dptts2.c src/lapack/drscl.c
+  src/lapack/dsbev.c src/lapack/dsbevd.c src/lapack/dsbevx.c
+  src/lapack/dsbgst.c src/lapack/dsbgv.c src/lapack/dsbgvd.c
+  src/lapack/dsbgvx.c src/lapack/dsbtrd.c src/lapack/dspcon.c
+  src/lapack/dspev.c src/lapack/dspevd.c src/lapack/dspevx.c
+  src/lapack/dspgst.c src/lapack/dspgv.c src/lapack/dspgvd.c
+  src/lapack/dspgvx.c src/lapack/dsprfs.c src/lapack/dspsv.c
+  src/lapack/dspsvx.c src/lapack/dsptrd.c src/lapack/dsptrf.c
+  src/lapack/dsptri.c src/lapack/dsptrs.c src/lapack/dstegr.c
+  src/lapack/dstein.c src/lapack/dstev.c src/lapack/dstevd.c
+  src/lapack/dstevr.c src/lapack/dstevx.c src/lapack/dsycon.c
+  src/lapack/dsyev.c src/lapack/dsyevd.c src/lapack/dsyevr.c
+  src/lapack/dsyevx.c src/lapack/dsygs2.c src/lapack/dsygst.c
+  src/lapack/dsygv.c src/lapack/dsygvd.c src/lapack/dsygvx.c
+  src/lapack/dsyrfs.c src/lapack/dsysv.c src/lapack/dsysvx.c
+  src/lapack/dsytd2.c src/lapack/dsytf2.c src/lapack/dsytrd.c
+  src/lapack/dsytrf.c src/lapack/dsytri.c src/lapack/dsytrs.c
+  src/lapack/dtbcon.c src/lapack/dtbrfs.c src/lapack/dtbtrs.c
+  src/lapack/dtgevc.c src/lapack/dtgex2.c src/lapack/dtgexc.c
+  src/lapack/dtgsen.c src/lapack/dtgsja.c src/lapack/dtgsna.c
+  src/lapack/dtgsy2.c src/lapack/dtgsyl.c src/lapack/dtpcon.c
+  src/lapack/dtprfs.c src/lapack/dtptri.c src/lapack/dtptrs.c
+  src/lapack/dtrcon.c src/lapack/dtrevc.c src/lapack/dtrexc.c
+  src/lapack/dtrrfs.c src/lapack/dtrsen.c src/lapack/dtrsna.c
+  src/lapack/dtrsyl.c src/lapack/dtrti2.c src/lapack/dtrtri.c
+  src/lapack/dtrtrs.c src/lapack/dtzrqf.c src/lapack/dtzrzf.c
+  src/lapack/dstemr.c src/lapack/dsgesv.c src/lapack/dsposv.c
+  src/lapack/dlag2s.c src/lapack/slag2d.c src/lapack/dlat2s.c
+  src/lapack/dlansf.c src/lapack/dpftrf.c src/lapack/dpftri.c
+  src/lapack/dpftrs.c src/lapack/dsfrk.c src/lapack/dtfsm.c
+  src/lapack/dtftri.c src/lapack/dtfttp.c src/lapack/dtfttr.c
+  src/lapack/dtpttf.c src/lapack/dtpttr.c src/lapack/dtrttf.c
+  src/lapack/dtrttp.c src/lapack/dgejsv.c src/lapack/dgesvj.c
+  src/lapack/dgsvj0.c src/lapack/dgsvj1.c src/lapack/dgeequb.c
+  src/lapack/dsyequb.c src/lapack/dpoequb.c src/lapack/dgbequb.c)
+
+set(LAPACK_Z_SOURCES src/lapack/zbdsqr.c src/lapack/zgbbrd.c
+  src/lapack/zgbcon.c src/lapack/zgbequ.c src/lapack/zgbrfs.c
+  src/lapack/zgbsv.c src/lapack/zgbsvx.c src/lapack/zgbtf2.c
+  src/lapack/zgbtrf.c src/lapack/zgbtrs.c src/lapack/zgebak.c
+  src/lapack/zgebal.c src/lapack/zgebd2.c src/lapack/zgebrd.c
+  src/lapack/zgecon.c src/lapack/zgeequ.c src/lapack/zgees.c
+  src/lapack/zgeesx.c src/lapack/zgeev.c src/lapack/zgeevx.c
+  src/lapack/zgegs.c src/lapack/zgegv.c src/lapack/zgehd2.c
+  src/lapack/zgehrd.c src/lapack/zgelq2.c src/lapack/zgelqf.c
+  src/lapack/zgels.c src/lapack/zgelsd.c src/lapack/zgelss.c
+  src/lapack/zgelsx.c src/lapack/zgelsy.c src/lapack/zgeql2.c
+  src/lapack/zgeqlf.c src/lapack/zgeqp3.c src/lapack/zgeqpf.c
+  src/lapack/zgeqr2.c src/lapack/zgeqrf.c src/lapack/zgerfs.c
+  src/lapack/zgerq2.c src/lapack/zgerqf.c src/lapack/zgesc2.c
+  src/lapack/zgesdd.c src/lapack/zgesv.c src/lapack/zgesvd.c
+  src/lapack/zgesvx.c src/lapack/zgetc2.c src/lapack/zgetf2.c
+  src/lapack/zgetrf.c src/lapack/zgetri.c src/lapack/zgetrs.c
+  src/lapack/zggbak.c src/lapack/zggbal.c src/lapack/zgges.c
+  src/lapack/zggesx.c src/lapack/zggev.c src/lapack/zggevx.c
+  src/lapack/zggglm.c src/lapack/zgghrd.c src/lapack/zgglse.c
+  src/lapack/zggqrf.c src/lapack/zggrqf.c src/lapack/zggsvd.c
+  src/lapack/zggsvp.c src/lapack/zgtcon.c src/lapack/zgtrfs.c
+  src/lapack/zgtsv.c src/lapack/zgtsvx.c src/lapack/zgttrf.c
+  src/lapack/zgttrs.c src/lapack/zgtts2.c src/lapack/zhbev.c
+  src/lapack/zhbevd.c src/lapack/zhbevx.c src/lapack/zhbgst.c
+  src/lapack/zhbgv.c src/lapack/zhbgvd.c src/lapack/zhbgvx.c
+  src/lapack/zhbtrd.c src/lapack/zhecon.c src/lapack/zheev.c
+  src/lapack/zheevd.c src/lapack/zheevr.c src/lapack/zheevx.c
+  src/lapack/zhegs2.c src/lapack/zhegst.c src/lapack/zhegv.c
+  src/lapack/zhegvd.c src/lapack/zhegvx.c src/lapack/zherfs.c
+  src/lapack/zhesv.c src/lapack/zhesvx.c src/lapack/zhetd2.c
+  src/lapack/zhetf2.c src/lapack/zhetrd.c src/lapack/zhetrf.c
+  src/lapack/zhetri.c src/lapack/zhetrs.c src/lapack/zhgeqz.c
+  src/lapack/zhpcon.c src/lapack/zhpev.c src/lapack/zhpevd.c
+  src/lapack/zhpevx.c src/lapack/zhpgst.c src/lapack/zhpgv.c
+  src/lapack/zhpgvd.c src/lapack/zhpgvx.c src/lapack/zhprfs.c
+  src/lapack/zhpsv.c src/lapack/zhpsvx.c src/lapack/zhptrd.c
+  src/lapack/zhptrf.c src/lapack/zhptri.c src/lapack/zhptrs.c
+  src/lapack/zhsein.c src/lapack/zhseqr.c src/lapack/zlabrd.c
+  src/lapack/zlacgv.c src/lapack/zlacon.c src/lapack/zlacn2.c
+  src/lapack/zlacp2.c src/lapack/zlacpy.c src/lapack/zlacrm.c
+  src/lapack/zlacrt.c src/lapack/zladiv.c src/lapack/zlaed0.c
+  src/lapack/zlaed7.c src/lapack/zlaed8.c src/lapack/zlaein.c
+  src/lapack/zlaesy.c src/lapack/zlaev2.c src/lapack/zlags2.c
+  src/lapack/zlagtm.c src/lapack/zlahef.c src/lapack/zlahqr.c
+  src/lapack/zlahrd.c src/lapack/zlahr2.c src/lapack/zlaic1.c
+  src/lapack/zlals0.c src/lapack/zlalsa.c src/lapack/zlalsd.c
+  src/lapack/zlangb.c src/lapack/zlange.c src/lapack/zlangt.c
+  src/lapack/zlanhb.c src/lapack/zlanhe.c src/lapack/zlanhp.c
+  src/lapack/zlanhs.c src/lapack/zlanht.c src/lapack/zlansb.c
+  src/lapack/zlansp.c src/lapack/zlansy.c src/lapack/zlantb.c
+  src/lapack/zlantp.c src/lapack/zlantr.c src/lapack/zlapll.c
+  src/lapack/zlapmt.c src/lapack/zlaqgb.c src/lapack/zlaqge.c
+  src/lapack/zlaqhb.c src/lapack/zlaqhe.c src/lapack/zlaqhp.c
+  src/lapack/zlaqp2.c src/lapack/zlaqps.c src/lapack/zlaqsb.c
+  src/lapack/zlaqr0.c src/lapack/zlaqr1.c src/lapack/zlaqr2.c
+  src/lapack/zlaqr3.c src/lapack/zlaqr4.c src/lapack/zlaqr5.c
+  src/lapack/zlaqsp.c src/lapack/zlaqsy.c src/lapack/zlar1v.c
+  src/lapack/zlar2v.c src/lapack/ilazlr.c src/lapack/ilazlc.c
+  src/lapack/zlarcm.c src/lapack/zlarf.c src/lapack/zlarfb.c
+  src/lapack/zlarfg.c src/lapack/zlarft.c src/lapack/zlarfp.c
+  src/lapack/zlarfx.c src/lapack/zlargv.c src/lapack/zlarnv.c
+  src/lapack/zlarrv.c src/lapack/zlartg.c src/lapack/zlartv.c
+  src/lapack/zlarz.c src/lapack/zlarzb.c src/lapack/zlarzt.c
+  src/lapack/zlascl.c src/lapack/zlaset.c src/lapack/zlasr.c
+  src/lapack/zlassq.c src/lapack/zlaswp.c src/lapack/zlasyf.c
+  src/lapack/zlatbs.c src/lapack/zlatdf.c src/lapack/zlatps.c
+  src/lapack/zlatrd.c src/lapack/zlatrs.c src/lapack/zlatrz.c
+  src/lapack/zlatzm.c src/lapack/zlauu2.c src/lapack/zlauum.c
+  src/lapack/zpbcon.c src/lapack/zpbequ.c src/lapack/zpbrfs.c
+  src/lapack/zpbstf.c src/lapack/zpbsv.c src/lapack/zpbsvx.c
+  src/lapack/zpbtf2.c src/lapack/zpbtrf.c src/lapack/zpbtrs.c
+  src/lapack/zpocon.c src/lapack/zpoequ.c src/lapack/zporfs.c
+  src/lapack/zposv.c src/lapack/zposvx.c src/lapack/zpotf2.c
+  src/lapack/zpotrf.c src/lapack/zpotri.c src/lapack/zpotrs.c
+  src/lapack/zpstrf.c src/lapack/zpstf2.c src/lapack/zppcon.c
+  src/lapack/zppequ.c src/lapack/zpprfs.c src/lapack/zppsv.c
+  src/lapack/zppsvx.c src/lapack/zpptrf.c src/lapack/zpptri.c
+  src/lapack/zpptrs.c src/lapack/zptcon.c src/lapack/zpteqr.c
+  src/lapack/zptrfs.c src/lapack/zptsv.c src/lapack/zptsvx.c
+  src/lapack/zpttrf.c src/lapack/zpttrs.c src/lapack/zptts2.c
+  src/lapack/zrot.c src/lapack/zspcon.c src/lapack/zspmv.c
+  src/lapack/zspr.c src/lapack/zsprfs.c src/lapack/zspsv.c
+  src/lapack/zspsvx.c src/lapack/zsptrf.c src/lapack/zsptri.c
+  src/lapack/zsptrs.c src/lapack/zdrscl.c src/lapack/zstedc.c
+  src/lapack/zstegr.c src/lapack/zstein.c src/lapack/zsteqr.c
+  src/lapack/zsycon.c src/lapack/zsymv.c src/lapack/zsyr.c
+  src/lapack/zsyrfs.c src/lapack/zsysv.c src/lapack/zsysvx.c
+  src/lapack/zsytf2.c src/lapack/zsytrf.c src/lapack/zsytri.c
+  src/lapack/zsytrs.c src/lapack/ztbcon.c src/lapack/ztbrfs.c
+  src/lapack/ztbtrs.c src/lapack/ztgevc.c src/lapack/ztgex2.c
+  src/lapack/ztgexc.c src/lapack/ztgsen.c src/lapack/ztgsja.c
+  src/lapack/ztgsna.c src/lapack/ztgsy2.c src/lapack/ztgsyl.c
+  src/lapack/ztpcon.c src/lapack/ztprfs.c src/lapack/ztptri.c
+  src/lapack/ztptrs.c src/lapack/ztrcon.c src/lapack/ztrevc.c
+  src/lapack/ztrexc.c src/lapack/ztrrfs.c src/lapack/ztrsen.c
+  src/lapack/ztrsna.c src/lapack/ztrsyl.c src/lapack/ztrti2.c
+  src/lapack/ztrtri.c src/lapack/ztrtrs.c src/lapack/ztzrqf.c
+  src/lapack/ztzrzf.c src/lapack/zung2l.c src/lapack/zung2r.c
+  src/lapack/zungbr.c src/lapack/zunghr.c src/lapack/zungl2.c
+  src/lapack/zunglq.c src/lapack/zungql.c src/lapack/zungqr.c
+  src/lapack/zungr2.c src/lapack/zungrq.c src/lapack/zungtr.c
+  src/lapack/zunm2l.c src/lapack/zunm2r.c src/lapack/zunmbr.c
+  src/lapack/zunmhr.c src/lapack/zunml2.c src/lapack/zunmlq.c
+  src/lapack/zunmql.c src/lapack/zunmqr.c src/lapack/zunmr2.c
+  src/lapack/zunmr3.c src/lapack/zunmrq.c src/lapack/zunmrz.c
+  src/lapack/zunmtr.c src/lapack/zupgtr.c src/lapack/zupmtr.c
+  src/lapack/izmax1.c src/lapack/dzsum1.c src/lapack/zstemr.c
+  src/lapack/zcgesv.c src/lapack/zcposv.c src/lapack/zlag2c.c
+  src/lapack/clag2z.c src/lapack/zlat2c.c src/lapack/zhfrk.c
+  src/lapack/ztfttp.c src/lapack/zlanhf.c src/lapack/zpftrf.c
+  src/lapack/zpftri.c src/lapack/zpftrs.c src/lapack/ztfsm.c
+  src/lapack/ztftri.c src/lapack/ztfttr.c src/lapack/ztpttf.c
+  src/lapack/ztpttr.c src/lapack/ztrttf.c src/lapack/ztrttp.c
+  src/lapack/zgeequb.c src/lapack/zgbequb.c src/lapack/zsyequb.c
+  src/lapack/zpoequb.c src/lapack/zheequb.c)
+
+set(LAPACK_SOURCES ${LAPACK_COMMON_SOURCES} ${LAPACK_SCAUX_SOURCES}
+  ${LAPACK_DZAUX_SOURCES} ${LAPACK_S_SOURCES} ${LAPACK_C_SOURCES}
+  ${LAPACK_D_SOURCES} ${LAPACK_Z_SOURCES})
+
+add_library(cblapack STATIC
+  ${BLAS_SOURCES} ${CBLAS_SOURCES} ${LAPACK_SOURCES}
+  ${CBLAPACK_HEADER_FILES}
+  )
+
+target_include_directories(cblapack
+  PUBLIC
+    $<INSTALL_INTERFACE:include>
+    $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+  )
+
+target_compile_features(cblapack PUBLIC c_std_99)
+
+target_link_libraries(cblapack f2c::f77)
+
+
+############################################################
+#
+# INSTALLATION
+#
+include(GNUInstallDirs)
+install(TARGETS cblapack
+  EXPORT cblapackConfig
+  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+  )
+install(FILES ${CBLAPACK_HEADER_FILES}
+  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+  )
+
+include(CMakePackageConfigHelpers)
+write_basic_package_version_file(
+  ${CMAKE_BINARY_DIR}/cblapackConfigVersion.cmake
+  VERSION ${PACKAGE_VERSION}
+  COMPATIBILITY AnyNewerVersion
+  )
+install(EXPORT cblapackConfig
+  DESTINATION "${CMAKE_INSTALL_DATADIR}/cmake/cblapack"
+  )
+install(FILES ${CMAKE_BINARY_DIR}/cblapackConfigVersion.cmake
+  DESTINATION "${CMAKE_INSTALL_DATADIR}/cmake/cblapack"
+  )
